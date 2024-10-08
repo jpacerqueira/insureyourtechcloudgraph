@@ -1,9 +1,10 @@
 #
 FROM neo4j:latest
 #
-run ls $HOME
 
-EXPOSE map[7473/tcp:{} 7474/tcp:{} 7687/tcp:{}]
+EXPOSE 7473/tcp
+EXPOSE 7474/tcp
+EXPOSE 7687/tcp
 
 ENTRYPOINT ["tini" "-g" "--" "/startup/docker-entrypoint.sh"]
 
