@@ -1,5 +1,5 @@
 #
 FROM neo4j:latest
 #
-run ls $HOME/neo4j
+run ls $HOME
 #
