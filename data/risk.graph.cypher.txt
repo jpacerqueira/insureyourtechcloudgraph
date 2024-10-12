@@ -24,7 +24,7 @@ CREATE
   (a)-[:CONNECTED_RISK {name: 'RISK_Ratio=100'}]->(b),
   (b)-[:CONNECTED_RISK {name: 'RISK_Ratio=300'}]->(j),
   (j)-[:CONNECTED_RISK {name: 'RISK_Ratio=600'}]->(n),
-  (n)-[:CONNECTED_RISK {name: 'RISK_Ratio=890'}]->(o),
+  (n)-[:CONNECTED_RISK {name: 'RISK_Ratio=890'}]->(f),
   (c)-[:CONNECTED_RISK {name: 'RISK_Ratio=100'}]->(d),
   (d)-[:CONNECTED_RISK {name: 'RISK_Ratio=300'}]->(i),
   (e)-[:CONNECTED_RISK {name: 'RISK_Ratio=100'}]->(f),
