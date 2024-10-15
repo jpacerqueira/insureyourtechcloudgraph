@@ -1,8 +1,8 @@
 // clean
 MATCH (n) DETACH DELETE n;
 
-// Create 25 nodes (vertices) labeled TECHNOLOGY_PROVIDER
-// Create 42 edges (relationships) labeled CONNECTED_RISK
+// Create 26 nodes (vertices) labeled TECHNOLOGY_PROVIDER
+// Create 44 edges (relationships) labeled CONNECTED_RISK
 CREATE
   (a:TECHNOLOGY_PROVIDER {name: 'AMAZON_AWS'}),
   (b:TECHNOLOGY_PROVIDER {name: 'AMAZON_CLOUDFRONT'}),
