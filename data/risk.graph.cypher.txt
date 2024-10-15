@@ -67,5 +67,6 @@ CREATE
   (p)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(n),
   (q)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(o),
   (q)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(p),
+  (u)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(z),
   (x)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(z);
 
