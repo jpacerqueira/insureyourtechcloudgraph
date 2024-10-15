@@ -28,6 +28,9 @@ CREATE
   (v:TECHNOLOGY_PROVIDER {name: 'DB2_TRANSACTIONS-SALES_OCI_EU_WEST1'}),
   (x:TECHNOLOGY_PROVIDER {name: 'VIDEOCONTENT_CONTENTVIDEODISTRIBUTION_AKAMAI_EU_WEST1'}),
   (z:TECHNOLOGY_PROVIDER {name: 'SPORTSFLIX_APP_WEB_VIDEO_WEBSITE_HOSTED_IN_AMAZON_EU_WEST1'}),
+  (y:TECHNOLOGY_PROVIDER {name: 'ISP3_CUSTOMER_IPS_3'}),
+  (aa:TECHNOLOGY_PROVIDER {name: 'MOBILE_IPHONE15PRO_CUSTOMER'}),
+  (q)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(p),
   (a)-[:CONNECTED_RISK {name: 'RISK_Ratio=100'}]->(b),
   (a)-[:CONNECTED_RISK {name: 'RISK_Ratio=100'}]->(r),
   (a)-[:CONNECTED_RISK {name: 'RISK_Ratio=100'}]->(z),
@@ -68,5 +71,7 @@ CREATE
   (q)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(o),
   (q)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(p),
   (u)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(z),
-  (x)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(z);
+  (x)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(z),
+  (z)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(y),
+  (y)-[:CONNECTED_RISK {name: 'RISK_Ratio=280'}]->(aa);
 
