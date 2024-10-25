@@ -21,4 +21,4 @@ time.sleep(2)
 # Close the browser
 driver.quit()
 
-print("Driver test done!")
+print("Google Chrome browser version : " + str(driver.capabilities['version']) " - Driver test done!")
