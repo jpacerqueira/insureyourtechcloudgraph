@@ -68,4 +68,3 @@ def app():
 
 if __name__ == "app":
     app
-    return
