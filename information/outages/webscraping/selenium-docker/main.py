@@ -62,5 +62,5 @@ if all_tables_data:
 # Close the browser
 driver.quit()
 
-print("Google Chrome browser version : " + str(driver.capabilities['version']) + " - Scraping complete. Data saved to table_data.csv.")
+print("Google Chrome browser version : " + str(driver.capabilities) + " - Scraping complete. Data saved to table_data.csv.")
 
