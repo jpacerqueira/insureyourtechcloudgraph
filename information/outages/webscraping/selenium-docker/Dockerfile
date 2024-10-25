@@ -7,6 +7,7 @@ RUN apt-get install -y tar gconf-service libasound2 libatk1.0-0 libcairo2 libcup
 # Install Chrome
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
+RUN google-chrome --version
 
 #download and install mozilla driver
 #RUN cd /tmp/ ; wget -O geckodriver.tar.gz  "https://github.com/mozilla/geckodriver/releases/download/v0.35.0/geckodriver-v0.35.0-linux-aarch64.tar.gz" ; tar -xvzf /tmp/geckodriver.tar.gz  -C /opt/ ; chmod 755 /opt/geckodriver ; ln -fs /opt/geckodriver /usr/bin/geckodriver ; ln -fs /opt/geckodriver /usr/local/bin/geckodriver 
