@@ -67,4 +67,5 @@ def app():
     return
 
 if __name__ == "app":
-    app.run()
+    app
+    return
