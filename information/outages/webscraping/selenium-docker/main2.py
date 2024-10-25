@@ -63,3 +63,7 @@ def app():
 
   print("Google Chrome browser version : " + str(driver.capabilities) + " - Scraping complete. Data saved to table_data.csv.")
 
+  return
+
+if __name__ == "app":
+  app
