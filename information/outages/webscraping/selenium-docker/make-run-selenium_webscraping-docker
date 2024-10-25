@@ -1,2 +1,2 @@
 docker build -t selenium_webscraping:latest .
-docker run -name selenium_webscraper  --rm -p 5019:5000 selenium_webscraping:latest
+docker run --name selenium_webscraper  --rm -p 5019:5000 selenium_webscraping:latest
