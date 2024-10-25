@@ -58,7 +58,7 @@ for index, table in enumerate(tables):
 # Convert to a DataFrame (only for the first table, modify for all tables)
 if all_tables_data:
     df = pd.DataFrame(all_tables_data[0])
-    df.to_csv('table_data.csv', index=False)
+    df.to_csv('output/table_data.csv', index=False)
 
 # Close the browser
 driver.quit()
