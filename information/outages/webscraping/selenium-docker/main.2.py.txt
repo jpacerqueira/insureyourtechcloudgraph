@@ -22,7 +22,7 @@ def app():
     # Close the browser
     driver.quit()
 
-    print("Google Chrome browser version : " + str(driver.capabilities['version']) " - Driver test done!")
+    print("Google Chrome browser version : " + str(driver.capabilities['version']) + " - Driver test done!")
 
 
     return
