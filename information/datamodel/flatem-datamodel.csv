@@ -1,0 +1,2 @@
+service_provider,service_name,database_id(10000000000001),service_sla(99.9999%-for-60min8hday365),annual-outageminutes,expected-services-minutes(365*24*60=525600),service-direct-b2c(1-yes-0-no),percent-mins-down-onagreed-sla,likelihood-tobreak-mins%servicedown365days,riskcoef-perservice
+oci,autonomousdb_21c,10000000000002,99.9990,180,525600,1,180/180,180/525600=,0.0003333

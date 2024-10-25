@@ -1,0 +1,3 @@
+docker build -t selenium_webscraping:latest .
+#docker run --rm -p <yourPORT>:5000 <imagename>
+docker run --rm -p 5019:5000 selenium_webscraping:latest
