@@ -30,4 +30,4 @@ WORKDIR ${APP_HOME}
 #copy local files
 COPY . . 
 
-CMD exec gunicorn --bind :${PORT} --workers 1 --threads 8 main:app # app:app
+CMD exec gunicorn --bind :${PORT} --workers 1 --threads 8 app:app # main:app
