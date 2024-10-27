@@ -36,28 +36,22 @@ print(driver.page_source)
 
 
 # extract all the product containers
-products = driver.find_elements(By.CSS_SELECTOR, ".product")
+zones = driver.find_elements(By.CLASS_NAME, "table status-table table-bordered table-striped fixed-status-header")
 
 # declare an empty list to collect the extracted data
 extracted_products = []
 
 # loop through the product containers
-for product in products:
+for zone in zones:
 
     # extract the elements into a dictionary using the CSS selector
-    product_data = {
-        "name": product.find_element(By.CSS_SELECTOR, ".product-name").text,
-        "price": product.find_element(By.CSS_SELECTOR, ".price").text,
-        "URL": product.find_element(
-            By.CSS_SELECTOR, ".woocommerce-LoopProduct-link"
-        ).get_attribute("href"),
-        "image": product.find_element(By.CSS_SELECTOR, ".product-image").get_attribute(
-            "src"
-        ),
+    data_zone_product_status = {
+        "data-zone-name": zone.find_element(By.CLASS_NAME, "data-zone-name").text,
+        "status-table-head": zone.find_element(By.CLASS_NAME, "status-table-head").text,
     }
 
     # append the extracted data to the extracted_product list
-    extracted_products.append(product_data)
+    extracted_products.append(data_zone_product_status)
 
 # print the extracted data
 print(extracted_products)
