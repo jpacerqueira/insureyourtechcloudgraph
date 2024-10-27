@@ -33,7 +33,10 @@ time.sleep(3)
 
 # output the full-page HTML
 print(driver.page_source)
-
+#save source
+filepage = open("output/azure_status_page.txt", "w")
+print(driver.page_source,file=filepage)
+filepage.close()
 
 # extract all the product containers
 zones = driver.find_elements(By.CLASS_NAME, "table status-table table-bordered table-striped fixed-status-header")
