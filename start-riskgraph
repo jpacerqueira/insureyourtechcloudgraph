@@ -12,4 +12,3 @@ docker run \
     insureyourtechcloud/cloudriskgraph:latest 
 #    insureyourtechcloud/cloudriskgraph:0.0.1 
 #    neo4j:latest
-#    

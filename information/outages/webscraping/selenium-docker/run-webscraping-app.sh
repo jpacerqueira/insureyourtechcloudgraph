@@ -1,2 +1,7 @@
+#!/bin/sh
+# This script builds the local docker container witn sellenium and Google-Chrome browser deploys container in local docker and webscrapes a local container
+#
 docker build -t selenium_webscraping:latest .
+#
 docker run --name selenium_webscraper  --rm -p 5019:5000 --mount type=bind,source="$(pwd)"/output,target=/app/output/  selenium_webscraping:latest
+#
