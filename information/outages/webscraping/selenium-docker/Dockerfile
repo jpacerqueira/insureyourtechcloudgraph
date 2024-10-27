@@ -31,5 +31,5 @@ WORKDIR ${APP_HOME}
 COPY . . 
 
 #CMD exec gunicorn --bind :${PORT} --workers 1  main:app
-#CMD ["python", "./main.py"]
-CMD cd /app ; python scraper.py ; sleep infinity
+#CMD cd /app ; python scraper.py ; sleep infinity
+CMD cd /app ; python azure_status_scraper.py ; sleep infinity
