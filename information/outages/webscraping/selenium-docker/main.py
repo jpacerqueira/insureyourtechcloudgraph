@@ -22,7 +22,7 @@ def app():
   driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()),options=options)
 
   # Navigate to the website
-  url = 'https://azure.status.microsoft/en-gb/status/history' 
+  url = "https://azure.status.microsoft/en-gb/status/history" 
   driver.get(url)
 
   # Allow the page to load completely
@@ -32,17 +32,6 @@ def app():
   # Adjust the XPath or selector to the specific table
   tables = driver.find_elements(By.TAG_NAME, 'table')  # Find all tables
 
-  ########## DUMMMY FILES ################
-  TESTDATA = StringIO("""col1,col2,col3
-    1,4.4,99
-    2,4.5,200
-    3,4.7,65
-    4,3.2,140
-    """)
-
-  df = pd.read_csv(TESTDATA, sep=";")
-  df.to_csv('output/dummy_data.csv', index=False)
-  ########## DUMMMY FILES ################
 
   # Iterate over the tables and extract data
   all_tables_data = []
@@ -78,4 +67,4 @@ def app():
   return
 
 if __name__ == "app":
-  app
+  app()

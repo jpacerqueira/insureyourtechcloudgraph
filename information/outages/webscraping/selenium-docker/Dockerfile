@@ -30,4 +30,6 @@ WORKDIR ${APP_HOME}
 #copy local files
 COPY . . 
 
-CMD exec gunicorn --bind :${PORT} --workers 1  main:app # main:app
+#CMD exec gunicorn --bind :${PORT} --workers 1  main:app
+#CMD ["python", "./main.py"]
+CMD cd /app ; python scraper.py ; sleep infinity
