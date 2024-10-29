@@ -49,7 +49,7 @@ llm = load_llm(llm_name, logger=logger, config={"ollama_base_url": ollama_base_u
 
 
 def main():
-    st.header("📄Chat with your pdf file")
+    st.header("📄Extract Cloud Outage information from your pdf source file")
 
     # upload a your pdf file
     pdf = st.file_uploader("Upload your PDF", type="pdf")
@@ -84,7 +84,7 @@ def main():
         )
 
         # Accept user questions/query
-        query = st.text_input("Ask questions about related your upload pdf file")
+        query = st.text_input("Request outage information from your upload pdf file - Ask Questions? ")
 
         if query:
             stream_handler = StreamHandler(st.empty())
