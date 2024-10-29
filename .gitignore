@@ -11,3 +11,6 @@ CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
 .idea/**
+genai-information-retrieval-stack/embedding_model/**
+genai-information-retrieval-stack/embedding_model/models--sentence-transformers--all-MiniLM-L6-v2/*
+genai-information-retrieval-stack/data/**

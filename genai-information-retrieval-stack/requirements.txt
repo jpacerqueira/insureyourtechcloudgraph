@@ -1,0 +1,9 @@
+openai
+python-dotenv
+wikipedia
+tiktoken
+neo4j
+streamlit
+sentence_transformers
+Pillow
+PyPDF2
