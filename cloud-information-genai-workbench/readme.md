@@ -44,6 +44,26 @@ docker compose down
 ```
 
 # Applications
+
+## Demo Workbench
+### Cloud-Risk Applications with Gen.AI to
+Obtain information about cloud services and outages
+enrich core cloud risk engine with customer tailored information
+
+---
+
+##  App 3 pdf-bot  
+
+UI: http://localhost:8503  
+DB client: http://localhost:7474
+
+- import from PDF files Cloud services information
+- Load high ranked cloud outage information from documents (regardless of tags) to support the ticket generation feature of App 3.
+
+![](images/pdf_bot_outage_extract.png)
+
+---
+
 ## App 1 - Support Agent Bot  
 
 UI: http://localhost:8501  
@@ -52,7 +72,7 @@ DB client: http://localhost:7474
 - answer support question based on recent entries
 - provide summarized answers with sources
 - demonstrate difference between 
-    - RAG Disabled (pure LLM reponse)
+    - RAG Disabled (pure LLM response)
     - RAG Enabled (vector + knowledge graph context)
 - allow to generate a high quality support ticket for the current conversation based on the style of highly rated questions in the database.
 
@@ -79,3 +99,5 @@ DB client: http://localhost:7474
 
 ![](.github/media/app2-ui-1.png)  
 ![](.github/media/app2-model.png)
+
+
