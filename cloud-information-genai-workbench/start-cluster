@@ -3,5 +3,8 @@
 # docker ps -qaf name=neo4j
 #docker compose up --build --force-recreate
 
-docker compose up --build
+docker compose down
+docker system prune -f
+docker volume prune -f
+docker compose up --build --force-recreate
 
