@@ -1,0 +1,6 @@
+database_key_id(10000000000001),service_name,service_provider,service_type_b2c_or_b2b(1-yes-0-no),"customer_service_up_hours( 8h day, 12h day, 24h day)","customer_service_anual_days_daily_or_weekly_or_weekends(365,261,104)",service_sla(99.9999%-for-60min*24h_365days),webscraper_annual_period_service_down_per_year_in_minutes,annual_service_minutes_up(365*24*60=525600),expected_by_sla_annual_service_minutes_up(365*24*60=525600),expected_annual_service_minutes_down,expected_percentage_mins_down_on_agreed_sla,actual_percentage_mins_down_on_agreed_sla,gap_time_percent_between_SLA_down_actual_down,riskcoef-per_service_from_gap_expected_actual_time_down,service_sla_usage_percentage,Connected_RISK_0_999
+10000000000002,autonomousdb_21c,oci,0,24,365,99.9,180,525600,525074.4,525.6,0.100%,0.03%,0.07%,-0.07%,34.25%,997.66
+10000000000003,autonomousdb_21c,oci,0,24,365,99.99,180,525600,525547.44,52.56,0.010%,0.03%,-0.02%,0.02%,342.47%,995.48
+10000000000004,autonomousdb_21c,oci,0,24,365,99.999,180,525600,525594.744,5.256,0.001%,0.03%,-0.03%,0.03%,3424.66%,964.78
+10000000000005,autonomousdb_21c,oci,0,12,365,98,180,262800,257544,5256,2.000%,0.07%,1.93%,-1.93%,3.42%,978.99
+10000000000006,autonomousdb_21c,oci,0,12,365,99.9,180,262800,262537.2,262.8,0.100%,0.07%,0.03%,-0.03%,68.49%,997.32

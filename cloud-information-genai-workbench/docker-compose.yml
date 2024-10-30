@@ -23,7 +23,7 @@ services:
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
       - LLM=${LLM-llama3.2}
     healthcheck:
-      test: [ "CMD-SHELL", "wget --no-verbose --tries=1 --spider localhost:11434 || exit 1" ]
+      test: [ "CMD-SHELL", "wget --no-verbose --tries=3 --spider http://localhost:11434 || exit 1" ]
       interval: 55s
       timeout: 5s
       retries: 3
