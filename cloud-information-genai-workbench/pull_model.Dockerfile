@@ -8,6 +8,7 @@ WORKDIR /root
 
 # Set the HOME environment variable explicitly
 ENV HOME /root
+ENV LLM ""
 
 # just using as a client - never as a server
 COPY --from=ollama /bin/ollama ./bin/ollama
