@@ -9,7 +9,10 @@ while [ "$(ollama list | grep 'NAME')" == "" ]; do
   sleep 1
 done
 
+#ollama pull llama2
+#ollama pull phi3
 
-ollama pull llama2
 ollama pull llama3.2
+
+ollama list
 
