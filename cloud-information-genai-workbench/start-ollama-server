@@ -1,0 +1,8 @@
+!/bin/bash
+#
+##
+# use client server mode
+ollama serve
+#
+#ollama run llama3.2
+#

@@ -1,20 +1,29 @@
 services:
 
-  llm:
-    image: ollama/ollama:latest
-    profiles: ["linux"]
-    ports:
-      - 11434:11434
-    networks:
-      - net
-
   pull-model:
     image: genai-stack/pull-model:latest
     build:
       dockerfile: pull_model.Dockerfile
     environment:
-      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://0.0.0.0:11434} # host.docker.internal:11434}
-      - LLM
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
+      - LLM=${LLM-llama3.2}
+    networks:
+      - net
+    depends_on:
+      database:
+        condition: service_healthy
+      ollama-llm:
+        condition: service_completed_successfully
+
+  ollama-llm:
+    image: ollama/ollama:latest
+    build:
+      dockerfile: ollama.Dockerfile
+    ports:
+      - 11434:11434
+    environment:
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
+      - LLM=${LLM-llama3.2}
     networks:
       - net
 

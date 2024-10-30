@@ -3,6 +3,12 @@
 FROM ollama/ollama:latest AS ollama
 FROM babashka/babashka:latest
 
+# Set the working directory to /root
+WORKDIR /root
+
+# Set the HOME environment variable explicitly
+ENV HOME /root
+
 # just using as a client - never as a server
 COPY --from=ollama /bin/ollama ./bin/ollama
 
