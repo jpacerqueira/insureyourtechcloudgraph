@@ -9,10 +9,10 @@ while [ "$(ollama list | grep 'NAME')" == "" ]; do
   sleep 1
 done
 
-#ollama pull llama2
-#ollama pull phi3
+DEFAULT_LLM=llama3.2
+LLM=${LLM:=DEFAULT_LLM}
 
-ollama pull llama3.2
+ollama pull $LLM
 
 ollama list
 
