@@ -2,13 +2,12 @@
 
 FROM ollama/ollama:latest AS ollama
 
-COPY ./run-ollama.sh /tmp/run-ollama.sh
+COPY ./run-ollama_llm.sh /root/run-ollama_llm.sh
 
-WORKDIR /tmp
+WORKDIR /root
 
-RUN chmod +x run-ollama.sh \
-    && ./run-ollama.sh
+RUN chmod +x run-ollama_llm.sh \
+    && ./run-ollama_llm.sh
 
 EXPOSE 11434
-
 

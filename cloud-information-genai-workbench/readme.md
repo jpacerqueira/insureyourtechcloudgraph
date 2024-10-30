@@ -20,11 +20,12 @@ part of the stack when running with the Linus profile: `run docker compose up --
 
 **Windows**  
 Not supported by Ollama, so Windows users need to generate a OpenAI API key and configure the stack to use `gpt-3.5` or `gpt-4` in the `.env` file.
+
 # Develop
 
-**Lazy script starts everything
+**Lazy script starts everything**
 ```
-bash -x start-cluster
+bash -x workbench-start-cluster
 ```
 
 **To start everything**
