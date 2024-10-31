@@ -65,7 +65,7 @@ services:
       - NEO4J_USERNAME=${NEO4J_USERNAME-neo4j}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://0.0.0.0:11434} # host.docker.internal:11434}
-      - EMBEDDING_MODEL=${EMBEDDING_MODEL-ollama} # sentence_transformer}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL-sentence_transformer} # ollama} #
       - LANGCHAIN_ENDPOINT=${LANGCHAIN_ENDPOINT-"https://api.smith.langchain.com"}
       - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2-false}
       - LANGCHAIN_PROJECT=${LANGCHAIN_PROJECT}
@@ -101,7 +101,7 @@ services:
 #      - OPENAI_API_KEY=${OPENAI_API_KEY}
 #      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://0.0.0.0:11434} # host.docker.internal:11434}
 #      - LLM=${LLM-llama2}
-#      - EMBEDDING_MODEL=${EMBEDDING_MODEL-ollama} # sentence_transformer}
+#      - EMBEDDING_MODEL=${EMBEDDING_MODEL-sentence_transformer} # ollama} #
 #      - LANGCHAIN_ENDPOINT=${LANGCHAIN_ENDPOINT-"https://api.smith.langchain.com"}
 #      - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2-false}
 #      - LANGCHAIN_PROJECT=${LANGCHAIN_PROJECT}
@@ -134,7 +134,7 @@ services:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://0.0.0.0:11434} # host.docker.internal:11434}
       - LLM=${LLM-llama2}
-      - EMBEDDING_MODEL=${EMBEDDING_MODEL-ollama} # sentence_transformer}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL-sentence_transformer} # ollama} #
       - LANGCHAIN_ENDPOINT=${LANGCHAIN_ENDPOINT-"https://api.smith.langchain.com"}
       - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2-false}
       - LANGCHAIN_PROJECT=${LANGCHAIN_PROJECT}
