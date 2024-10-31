@@ -8,7 +8,7 @@ services:
       - 11434:11434
     environment:
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
-      - LLM=${LLM-llama3.2}
+      - LLM=${LLM-llama2}
 #    healthcheck:
 #      test: [ "CMD-SHELL", "wget --no-verbose --tries=3 --spider http://localhost:11434 && exit 0 || exit 1" ]
 #      interval: 55s
@@ -47,7 +47,7 @@ services:
 #      dockerfile: pull_model.Dockerfile
 #    environment:
 #      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
-#      - LLM=${LLM-llama3.2}
+#      - LLM=${LLM-llama2}
 #    networks:
 #      - net
 #    depends_on:
@@ -65,7 +65,7 @@ services:
       - NEO4J_USERNAME=${NEO4J_USERNAME-neo4j}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://0.0.0.0:11434} # host.docker.internal:11434}
-      - EMBEDDING_MODEL=${EMBEDDING_MODEL-sentence_transformer}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL-ollama} # sentence_transformer}
       - LANGCHAIN_ENDPOINT=${LANGCHAIN_ENDPOINT-"https://api.smith.langchain.com"}
       - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2-false}
       - LANGCHAIN_PROJECT=${LANGCHAIN_PROJECT}
@@ -100,8 +100,8 @@ services:
 #      - NEO4J_USERNAME=${NEO4J_USERNAME-neo4j}
 #      - OPENAI_API_KEY=${OPENAI_API_KEY}
 #      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://0.0.0.0:11434} # host.docker.internal:11434}
-#      - LLM=${LLM-llama3.2}
-#      - EMBEDDING_MODEL=${EMBEDDING_MODEL-sentence_transformer}
+#      - LLM=${LLM-llama2}
+#      - EMBEDDING_MODEL=${EMBEDDING_MODEL-ollama} # sentence_transformer}
 #      - LANGCHAIN_ENDPOINT=${LANGCHAIN_ENDPOINT-"https://api.smith.langchain.com"}
 #      - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2-false}
 #      - LANGCHAIN_PROJECT=${LANGCHAIN_PROJECT}
@@ -133,8 +133,8 @@ services:
       - NEO4J_USERNAME=${NEO4J_USERNAME-neo4j}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://0.0.0.0:11434} # host.docker.internal:11434}
-      - LLM=${LLM-llama3.2}
-      - EMBEDDING_MODEL=${EMBEDDING_MODEL-sentence_transformer}
+      - LLM=${LLM-llama2}
+      - EMBEDDING_MODEL=${EMBEDDING_MODEL-ollama} # sentence_transformer}
       - LANGCHAIN_ENDPOINT=${LANGCHAIN_ENDPOINT-"https://api.smith.langchain.com"}
       - LANGCHAIN_TRACING_V2=${LANGCHAIN_TRACING_V2-false}
       - LANGCHAIN_PROJECT=${LANGCHAIN_PROJECT}
