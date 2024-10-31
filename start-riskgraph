@@ -2,13 +2,14 @@
 docker rm cloudriskgraph
 docker run \
     --name cloudriskgraph \
-    -p7474:7474 -p7687:7687 \
+    -p17474:7474 -p17687:7687 \
     -d \
     -v $HOME/neo4j/data:/data \
     -v $HOME/neo4j/logs:/logs \
     -v $HOME/neo4j/import:/var/lib/neo4j/import \
     -v $HOME/neo4j/plugins:/plugins \
     --env NEO4J_AUTH=neo4j/insureyourtech.cloud \
-    insureyourtechcloud/cloudriskgraph:latest 
+    neo4j:latest
+#    insureyourtechcloud/cloudriskgraph:latest 
 #    insureyourtechcloud/cloudriskgraph:0.0.1 
 #    neo4j:latest
