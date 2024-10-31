@@ -1,7 +1,7 @@
 #/bin/bash env
-docker rm cloudriskgraph
+docker rm cloudriskgraph_customer_b2c
 docker run \
-    --name cloudriskgraph \
+    --name cloudriskgraph_customer_b2c \
     -p17474:7474 -p17687:7687 \
     -d \
     -v $HOME/neo4j/data:/data \

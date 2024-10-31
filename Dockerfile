@@ -1,5 +1,5 @@
 #
-FROM neo4j:latest
+FROM neo4j:5.11
 #
 
 EXPOSE 7473/tcp
