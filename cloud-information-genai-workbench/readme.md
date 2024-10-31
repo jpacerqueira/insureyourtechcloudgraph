@@ -59,7 +59,8 @@ enrich core cloud risk engine with customer tailored information
 
 ---
 
-##  App 3 pdf-bot  
+##  Workbench - App 3 pdf-bot  
+
 
 UI: http://localhost:8503  
 DB client: http://localhost:7474
@@ -68,10 +69,27 @@ DB client: http://localhost:7474
 - Load high ranked cloud outage information from documents (regardless of tags) to support the ticket generation feature of App 3.
 
 ![](images/pdf_bot_outage_extract.png)
+![](images/workbench-pdf_bot-extract-v2.png)
+![](images/workbench-Vector-pdf-extract-neo4j.png)
+
+--- 
+
+##  workbench - App 2 Loader
+
+UI: http://localhost:8502  
+DB client: http://localhost:7474
+
+- import recent SO data for certain tags into a KG
+- embed questions and answers and store in vector index
+- UI: choose tags, run import, see progress, some stats of data in the database
+- Load high ranked questions (regardless of tags) to support the ticket generation feature of App 1.
+
+![](.github/media/app2-ui-1.png)  
+![](.github/media/app2-model.png)
 
 ---
 
-## App 1 - Support Agent Bot  
+## Workbench - App 1 - Support Agent Bot   - tbh
 
 UI: http://localhost:8501  
 DB client: http://localhost:7474
@@ -91,20 +109,3 @@ DB client: http://localhost:7474
 
 ![](.github/media/app1-ticket.png)  
 *(UI of the auto generated support ticket draft)*
-
---- 
-
-##  App 2 Loader
-
-UI: http://localhost:8502  
-DB client: http://localhost:7474
-
-- import recent SO data for certain tags into a KG
-- embed questions and answers and store in vector index
-- UI: choose tags, run import, see progress, some stats of data in the database
-- Load high ranked questions (regardless of tags) to support the ticket generation feature of App 1.
-
-![](.github/media/app2-ui-1.png)  
-![](.github/media/app2-model.png)
-
-
