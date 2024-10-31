@@ -79,11 +79,13 @@ DB client: http://localhost:7474
 UI: http://localhost:8502  
 DB client: http://localhost:7474
 
-- import recent SO data for certain tags into a KG
+- import recent Search Engine data about Outages
+- SO data for certain tags into a KG
 - embed questions and answers and store in vector index
 - UI: choose tags, run import, see progress, some stats of data in the database
 - Load high ranked questions (regardless of tags) to support the ticket generation feature of App 1.
 
+![](images/workbench-loader-topic-search-v1.png)
 ![](.github/media/app2-ui-1.png)  
 ![](.github/media/app2-model.png)
 
