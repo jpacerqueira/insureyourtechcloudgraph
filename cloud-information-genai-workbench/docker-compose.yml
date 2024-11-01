@@ -9,11 +9,11 @@ services:
     environment:
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
       - LLM=${LLM-llama2}
-#    healthcheck:
-#      test: [ "CMD-SHELL", "wget --no-verbose --tries=3 --spider http://localhost:11434 && exit 0 || exit 1" ]
-#      interval: 55s
-#      timeout: 5s
-#      retries: 3
+    healthcheck:
+      test: [ "CMD-SHELL", "curl --fail http://localhost:11434 || exit 1" ]
+      interval: 59s
+      timeout: 3s
+      retries: 5
     networks:
       - net
 
@@ -30,9 +30,9 @@ services:
       - NEO4J_db_tx__log_rotation_retention__policy=false
     healthcheck:
         test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider localhost:7474 || exit 1"]
-        interval: 55s
-        timeout: 5s
-        retries: 3
+        interval: 59s
+        timeout: 3s
+        retries: 5
     networks:
       - net
     depends_on:

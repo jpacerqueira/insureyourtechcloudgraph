@@ -8,6 +8,8 @@ WORKDIR /root
 
 RUN chmod +x run-ollama_llm.sh \
     && ./run-ollama_llm.sh
+    && sleep infinity
 
 EXPOSE 11434
 
+HEALTHCHECK CMD curl --fail http://localhost:11434
