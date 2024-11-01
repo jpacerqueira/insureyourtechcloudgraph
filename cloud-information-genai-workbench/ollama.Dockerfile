@@ -11,3 +11,5 @@ RUN chmod +x run-ollama_llm.sh \
     && sleep 5
 
 EXPOSE 11434
+
+HEALTHCHECK CMD curl --fail http://localhost:11434
