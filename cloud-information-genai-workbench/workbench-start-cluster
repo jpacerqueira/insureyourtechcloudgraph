@@ -3,8 +3,15 @@
 # docker ps -qaf name=neo4j
 #docker compose up --build --force-recreate
 
+FORCE_RECREATE="${1:-0}" # 1 or 0
+
 docker compose down
 docker system prune -f
 docker volume prune -f
-docker compose up --build --force-recreate
+
+if [[ "$FORCE_RECREATE" == "0" ]]; then
+   docker compose up --build
+else
+   docker compose up --build --force-recreate
+fi
 
