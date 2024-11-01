@@ -8,6 +8,6 @@ WORKDIR /root
 
 RUN chmod +x run-ollama_llm.sh \
     && ./run-ollama_llm.sh \
-    && sleep infinity
+    && sleep 5
 
 EXPOSE 11434
