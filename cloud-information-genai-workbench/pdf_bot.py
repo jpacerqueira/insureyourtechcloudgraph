@@ -86,7 +86,7 @@ def main():
         # Accept user questions/query
         query = st.text_input("Request outage information from your upload pdf file " + "\n" +
                               "- Ask Questions? e.g. " + "\n" +
-                              "- What Azure Cloud Services are here identified? ")
+                              "- From the loaded pdf, What Azure Cloud Services are here identified and what outages the service had? ")
 
         if query:
             stream_handler = StreamHandler(st.empty())

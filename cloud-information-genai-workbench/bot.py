@@ -174,8 +174,8 @@ def generate_ticket():
 
     Return example:
     ---
-    Title: How do I use the Neo4j Python driver?
-    Question: I'm trying to connect to Neo4j using the Python driver, but I'm getting an error.
+    Title: What recent Azure Key Vault issues and outages have been reported?
+    Question: I'm trying to connect to to Azure Key Vault, and getteing an error, is there any outage to this service in Azure Europe West region?.
     ---
     """
     # we need jinja2 since the questions themselves contain curly braces

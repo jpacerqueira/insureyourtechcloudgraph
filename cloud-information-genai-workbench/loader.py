@@ -98,7 +98,7 @@ def insert_so_data(data: dict) -> None:
 # Streamlit
 def get_tag() -> str:
     input_text = st.text_input(
-        "Which tag questions do you want to import?", value="neo4j"
+        "Which Outage services - tag questions do you want to import?", value="Azure Key Vault issues"
     )
     return input_text
 
