@@ -10,7 +10,7 @@ RUN chmod +x run-ollama_llm.sh
 
 EXPOSE 11434
 
-HEALTHCHECK --interval=10m --timeout=30s --retries=5 CMD ollama list || exit 1 # exit 1 is the response code for the healthcheck 0 - success 1 - unhealthy 2 - reserved
+HEALTHCHECK --interval=20s --timeout=30s --retries=5 CMD ollama list || exit 1 # exit 1 is the response code for the healthcheck 0 - success 1 - unhealthy 2 - reserved
 
 RUN chmod +x run-ollama_llm.sh \
     && ./run-ollama_llm.sh \
