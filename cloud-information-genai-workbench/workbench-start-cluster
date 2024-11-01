@@ -20,7 +20,7 @@ elif [[ "$BUILD_METHOD" == "3" ]]; then
    docker compose down
    docker system prune -f
    docker volume prune -f
-   docker compose up --build
+   docker compose up --build --force-recreate
 else
    docker compose ps
 fi
