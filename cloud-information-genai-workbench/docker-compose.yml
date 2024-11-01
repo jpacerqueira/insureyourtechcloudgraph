@@ -4,16 +4,20 @@ services:
     image: ollama/ollama:latest
     build:
       dockerfile: ollama.Dockerfile
+    restart: unless-stopped
+    volumes:
+      - "./ollamadata:/root/.ollama"   # Persist data and models
     ports:
       - 11434:11434
     environment:
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
       - LLM=${LLM-llama3.2}
     healthcheck:
-      test: [ "CMD-SHELL", "curl --fail http://localhost:11434 || exit 2 " ] ## exit 1 is the response code for the healthcheck 0 - success 1 - unhealthy 2 - reserved
-      interval: 1m
-      timeout: 3s
-      retries: 3
+      test: ["CMD", "ollama", "list"]  # Check if Ollama is responding
+      interval: 10s                    # Run the health check every 10 seconds
+      timeout: 30s                     # Timeout for the health check is 30 seconds
+      retries: 5                       # Retry 5 times before marking it as unhealthy
+      start_period: 10s                # Wait 10 seconds before starting health checks
     networks:
       - net
 
