@@ -14,7 +14,7 @@ services:
       - LLM=${LLM-llama3.2}
     healthcheck:
       test: ["CMD", "ollama", "list"]  # Check if Ollama is responding
-      interval: 10s                    # Run the health check every 10 seconds
+      interval: 20m                    # Run the health check every 10 seconds
       timeout: 30s                     # Timeout for the health check is 30 seconds
       retries: 5                       # Retry 5 times before marking it as unhealthy
       start_period: 10s                # Wait 10 seconds before starting health checks
@@ -34,7 +34,7 @@ services:
       - NEO4J_db_tx__log_rotation_retention__policy=false
     healthcheck:
         test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider localhost:7474 || exit 1"]
-        interval: 1m
+        interval: 20m
         timeout: 3s
         retries: 3
     networks:

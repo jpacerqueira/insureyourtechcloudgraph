@@ -14,3 +14,4 @@ CMakeUserPresets.json
 cloud-information-genai-workbench/embedding_model/**
 cloud-information-genai-workbench/embedding_model/models--sentence-transformers--all-MiniLM-L6-v2/*
 cloud-information-genai-workbench/data/**
+cloud-information-genai-workbench/ollamadata/**
