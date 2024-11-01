@@ -25,7 +25,7 @@ Not supported by Ollama, so Windows users need to generate a OpenAI API key and 
 
 **Lazy script starts everything**
 ```
-bash -x workbench-start-cluster
+bash -x workbench-start-cluster 1 
 ```
 
 **To start everything**

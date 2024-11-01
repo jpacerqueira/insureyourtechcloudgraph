@@ -1,17 +1,27 @@
 #!/bin/bash
-# docker run -d --name neo4j -e NEO4J_AUTH=neo4j/password -p 7687:7687 -p 7474:7474 neo4j:latest
-# docker ps -qaf name=neo4j
-#docker compose up --build --force-recreate
+# 
+# BUILD_METHOD = 
+# BUILD_METHOD = 1  - docker compose up
+# BUILD_METHOD = 2  - docker compose up --build
+# BUILD_METHOD = 3  - docker compose up --build --force-recreate
+# BUILD_METHOD =    - docker compose ps
 
-FORCE_RECREATE="${1:-0}" # 1 or 0
+BUILD_METHOD="${1:-0}" # 1 or 0
 
-docker compose down
-docker system prune -f
-docker volume prune -f
-
-if [[ "$FORCE_RECREATE" == "0" ]]; then
+if [[ "$BUILD_METHOD" == "1" ]]; then
+   docker compose down
+   docker compose up
+elif [[ "$BUILD_METHOD" == "2" ]]; then
+   docker compose down
+   docker system prune -f
+   docker volume prune -f
+   docker compose up --build
+elif [[ "$BUILD_METHOD" == "3" ]]; then
+   docker compose down
+   docker system prune -f
+   docker volume prune -f
    docker compose up --build
 else
-   docker compose up --build --force-recreate
+   docker compose ps
 fi
 
