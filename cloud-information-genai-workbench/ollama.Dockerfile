@@ -6,10 +6,12 @@ COPY ./run-ollama_llm.sh /root/run-ollama_llm.sh
 
 WORKDIR /root
 
-RUN chmod +x run-ollama_llm.sh \
-    && ./run-ollama_llm.sh \
-    && sleep 5
+RUN chmod +x run-ollama_llm.sh
 
 EXPOSE 11434
 
 HEALTHCHECK CMD curl --fail http://localhost:11434
+
+RUN chmod +x run-ollama_llm.sh \
+    && ./run-ollama_llm.sh \
+    && sleep 5
