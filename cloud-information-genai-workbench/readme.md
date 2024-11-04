@@ -68,7 +68,7 @@ DB client: http://localhost:7474
 - import from PDF files Cloud services information
 - Load high ranked cloud outage information from documents (regardless of tags) to support the ticket generation feature of App 3.
 
-![](images/pdf_bot_outage_extract.png)
+![](images/pdf_bot_outage_extract_v1.png)
 ![](images/workbench-pdf_bot-extract-v2.png)
 ![](images/workbench-Vector-pdf-extract-neo4j.png)
 
