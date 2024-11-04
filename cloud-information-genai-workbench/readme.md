@@ -103,6 +103,7 @@ DB client: http://localhost:7474
     - RAG Enabled (vector + knowledge graph context)
 - allow to generate a high quality support ticket for the current conversation based on the style of highly rated questions in the database.
 
+![](images/bot-1_output-v1.png)
 ![](.github/media/app1-rag-selector.png)  
 *(Chat input + RAG mode selector)*
 
