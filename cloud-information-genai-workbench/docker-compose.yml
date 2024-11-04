@@ -55,6 +55,7 @@ services:
       - LLM=${LLM-llama2}
     networks:
       - net
+    tty: true
     depends_on:
       database:
         condition: service_healthy
