@@ -16,6 +16,8 @@ Customer B2C Sample Graph - overly simplified
  
 ### Cloud Information Workbench - GenAi supported collection about Cloud Risk Outages
 
+Neo4J - client risk Graph : http://localhost:17474
+
 ```
 cd cloud-information-genai-workbench
 ```
