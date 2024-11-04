@@ -3,6 +3,6 @@
 curl http://localhost:11434/api/chat -d '{
   "model": "llama3.2",
   "messages": [
-    { "role": "user", "content": "What recent information about Azure Cloud Outages do you have?" }
+    { "role": "user", "temperature": "0",  "content": "What recent information about Azure Cloud Outages do you have?" }
   ]
 }'
