@@ -1,10 +1,10 @@
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.embeddings import OllamaEmbeddings, SentenceTransformerEmbeddings
-from langchain.chat_models import ChatOpenAI, ChatOllama
-from langchain.vectorstores.neo4j_vector import Neo4jVector
-from langchain.chains import RetrievalQAWithSourcesChain
-from langchain.chains.qa_with_sources import load_qa_with_sources_chain
-from langchain.prompts.chat import (
+from langchain_community.embeddings.openai import OpenAIEmbeddings
+from langchain_community.embeddings import OllamaEmbeddings, SentenceTransformerEmbeddings
+from langchain_community.chat_models import ChatOpenAI, ChatOllama
+from langchain_community.vectorstores.neo4j_vector import Neo4jVector
+from langchain_community.chains import RetrievalQAWithSourcesChain
+from langchain_community.chains.qa_with_sources import load_qa_with_sources_chain
+from langchain_community.prompts.chat import (
     ChatPromptTemplate,
     SystemMessagePromptTemplate,
     HumanMessagePromptTemplate,
