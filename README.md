@@ -1,5 +1,5 @@
 # insureyourtechcloudgraph
-A Cloud Risk - Caqlculation engine for B2B amnd B2C usage
+A Cloud Risk - Calculation engine for B2B amnd B2C usage
 Public B2C graph in Neo4J - a Graph approach to technology risks and outages
 Has Webscraping and automation supported by Gen.AI stack , LLMS, RAGs, Vectors of search , uses Ollama and Llama3.2 on prototype
 
