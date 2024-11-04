@@ -42,21 +42,22 @@ services:
     depends_on:
       ollama-llm:
         condition: service_healthy
-  #  depends_on:
-  #    - ollama-llm
 
-#  pull-model:
-#    image: genai-stack/pull-model:latest
-#    build:
-#      dockerfile: pull_model.Dockerfile
-#    environment:
-#      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
-#      - LLM=${LLM-llama2}
-#    networks:
-#      - net
-#    depends_on:
-#      database:
-#        condition: service_healthy
+  pull-model:
+    image: genai-stack/pull-model:latest
+    build:
+      dockerfile: pull_model.Dockerfile
+    restart: unless-stopped
+    volumes:
+      - "./ollamapull:/root/.ollama"   # Persist data and models
+    environment:
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
+      - LLM=${LLM-llama2}
+    networks:
+      - net
+    depends_on:
+      database:
+        condition: service_healthy
 
   loader:
     build:
@@ -82,8 +83,8 @@ services:
         condition: service_healthy
       ollama-llm:
         condition: service_healthy
-#      pull-model:
-#        condition: service_completed_successfully
+      pull-model:
+        condition: service_completed_successfully
     ports:
       - 8081:8080
       - 8502:8502
@@ -119,8 +120,8 @@ services:
         condition: service_healthy
       ollama-llm:
         condition: service_healthy
-#      pull-model:
-#        condition: service_completed_successfully
+      pull-model:
+        condition: service_completed_successfully
     x-develop:
       watch:
         - action: rebuild
@@ -153,8 +154,8 @@ services:
         condition: service_healthy
       ollama-llm:
          condition: service_healthy
-#      pull-model:
-#        condition: service_completed_successfully
+      pull-model:
+        condition: service_completed_successfully
     x-develop:
       watch:
         - action: rebuild
