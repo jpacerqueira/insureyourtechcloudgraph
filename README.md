@@ -4,6 +4,9 @@ Public B2C graph in Neo4J - a Graph approach to technology risks and outages
 Has Webscraping and automation supported by Gen.AI stack , LLMS, RAGs, Vectors of search , uses Ollama and Llama3.2 on prototype
 
 ## Customer B2C Graph - Cloud risk 
+
+Neo4J - client risk Graph : http://localhost:17474
+
 Create with make
 
 ```
@@ -15,8 +18,6 @@ Customer B2C Sample Graph - overly simplified
 ![cloud risk example](images/riskgraph.png)
  
 ### Cloud Information Workbench - GenAi supported collection about Cloud Risk Outages
-
-Neo4J - client risk Graph : http://localhost:17474
 
 ```
 cd cloud-information-genai-workbench
