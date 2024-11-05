@@ -117,7 +117,7 @@ def get_pages():
 
 def render_page():
 
-    datamodel_image = Image.open("loader_images/datamodel.png")
+    datamodel_image = Image.open("images/datamodel.png")
 
     # Streamlit app starts here
     st.title("Workbench App_2")
