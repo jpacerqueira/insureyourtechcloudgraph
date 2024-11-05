@@ -101,6 +101,10 @@ def chat_input():
 
 
 def display_chat():
+    # Streamlit app starts here
+    st.title("Workbench App_1")
+    st.header(" BOT Cloud Outage Support BOT")
+
     # Session state
     if "generated" not in st.session_state:
         st.session_state[f"generated"] = []

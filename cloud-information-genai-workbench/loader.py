@@ -116,8 +116,12 @@ def get_pages():
 
 
 def render_page():
-    datamodel_image = Image.open("./images/datamodel.png")
-    st.header("StackOverflow Loader")
+
+    datamodel_image = Image.open("loader_images/datamodel.png")
+
+    # Streamlit app starts here
+    st.title("Workbench App_2")
+    st.header("LOAD - StackOverflow information Loader")
     st.subheader("Choose StackOverflow tags to load into Neo4j")
     st.caption("Go to http://localhost:7474/ to explore the graph.")
 

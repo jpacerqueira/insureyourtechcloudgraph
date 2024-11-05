@@ -15,7 +15,7 @@ RUN pip install --upgrade -r requirements.txt
 COPY loader.py .
 COPY utils.py .
 COPY chains.py .
-COPY images/datamodel.png ./images
+COPY loader_images/ ./images
 
 EXPOSE 8502
 

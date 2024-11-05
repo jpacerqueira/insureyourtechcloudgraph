@@ -49,7 +49,9 @@ llm = load_llm(llm_name, logger=logger, config={"ollama_base_url": ollama_base_u
 
 
 def main():
-    st.header("📄Extract Cloud Outage information from your pdf source file")
+    # Streamlit app starts here
+    st.title("Workbench App_3")
+    st.header(" PDF_BOT - 📄Extract Cloud Outage information from your pdf source file")
 
     # upload a your pdf file
     pdf = st.file_uploader("Upload your PDF", type="pdf")
