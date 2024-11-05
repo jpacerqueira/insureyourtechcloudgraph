@@ -12,7 +12,7 @@ COPY requirements.txt .
 
 RUN pip install --upgrade -r requirements.txt
 
-COPY pdf_bot.py .
+COPY pdf_cloud_outage_bot.py .
 COPY utils.py .
 COPY chains.py .
 
