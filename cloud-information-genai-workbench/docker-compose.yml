@@ -52,7 +52,7 @@ services:
 #      - "./ollamapull:/root/.ollama"   # Persist data and models
 #    environment:
 #      - HOME=${HOME-/root/}
-#      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://host.docker.internal:11434}
+#      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://ollama-llm:11434} # host.docker.internal:11434}
 #      - LLM=${LLM-llama2}
 #    networks:
 #      - net
