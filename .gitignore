@@ -17,3 +17,4 @@ cloud-information-genai-workbench/data/**
 cloud-information-genai-workbench/ollamadata/**
 cloud-information-genai-workbench/ollamapull/**
 cloud-information-genai-workbench/pdf-outages/*.pdf
+information/pdf-outages/*.pdf
