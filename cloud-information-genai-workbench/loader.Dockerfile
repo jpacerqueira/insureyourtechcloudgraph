@@ -12,7 +12,7 @@ COPY requirements.txt .
 
 RUN pip install --upgrade -r requirements.txt
 
-COPY cloud_outage_loader.py .
+COPY loader.py .
 COPY utils.py .
 COPY chains.py .
 COPY images/datamodel.png ./images

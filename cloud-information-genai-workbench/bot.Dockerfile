@@ -12,7 +12,7 @@ COPY requirements.txt .
 
 RUN pip install --upgrade -r requirements.txt
 
-COPY cloud_outage_bot.py .
+COPY bot.py .
 COPY utils.py .
 COPY chains.py .
 
