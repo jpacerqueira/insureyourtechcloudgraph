@@ -1,15 +1,16 @@
-database_key_id(10000000000001),service_name,service_provider,region_or_global,service_type_b2c_or_b2b(1-yes-0-no),"customer_service_up_hours( 8h day, 12h day, 24h day)","customer_service_anual_days_daily_or_weekly_or_weekends(365,261,104)",service_sla(99.9999%-for-60min*24h_365days),webscraper_annual_period_service_down_per_year_in_minutes,annual_service_minutes_up(365*24*60=525600),expected_by_sla_annual_service_minutes_up(365*24*60=525600),expected_annual_service_minutes_down,"service_debit_credit_anual_sla_minutes(positive_credit , negative debit more than sla)",expected_percentage_mins_down_on_agreed_sla,actual_percentage_total_mins_down_from_webscraping,actual_percentage_mins_down_on_agreed_sla,gap_time_percent_between_SLA_down_actual_down,riskcoef-per_service_from_gap_expected_actual_time_down,service_sla_usage_percentage,SLA_Connected_RISK_0_999,USAGE_Connected_RISK_0_999
-10000000000001,anycast_cloudflare,cloudflare,global,1,24,365,99.999,240,525600,525594.744,5.256,-234.74,0.001%,0.05%,0.05%,-0.04%,0.04%,4566.21%,998.53,998.09
-10000000000002,autonomousdb_21c,oci,global,0,24,365,99.9,360,525600,525074.4,525.6,165.60,0.100%,0.07%,0.07%,0.03%,-0.03%,68.49%,997.32,997.63
-10000000000003,autonomousdb_21c,oci,global,0,24,365,99.99,360,525600,525547.44,52.56,-307.44,0.010%,0.07%,0.07%,-0.06%,0.06%,684.93%,998.22,997.63
-10000000000004,autonomousdb_21c,oci,global,0,24,365,99.97,360,525600,525442.32,157.68,-202.32,0.030%,0.07%,0.07%,-0.04%,0.04%,228.31%,998.02,997.63
-10000000000005,autonomousdb_21c,oci,global,0,12,365,98.88,360,262800,259856.64,2943.36,"2,583.36",1.120%,0.14%,0.14%,0.98%,-0.98%,12.23%,986.44,996.26
-10000000000006,aws_lambda,amazon,global,0,24,365,99.95,400,525600,525337.2,262.8,-137.20,0.050%,0.08%,0.08%,-0.03%,0.03%,152.21%,997.74,997.48
-10000000000007,aws_cloudfront,amazon,global,1,24,365,99.95,380,525600,525337.2,262.8,-117.20,0.050%,0.07%,0.07%,-0.02%,0.02%,144.60%,997.78,997.56
-10000000000008,salesforce_saas,amazon,global,1,24,365,99.95,360,525600,525337.2,262.8,-97.20,0.050%,0.07%,0.07%,-0.02%,0.02%,136.99%,997.82,997.63
-10000000000009,powerbi_app,azure,global,1,24,365,99.99,370,525600,525547.44,52.56,-317.44,0.010%,0.07%,0.07%,-0.06%,0.06%,703.96%,998.20,997.59
-10000000000010,azure_cdn,azure,global,1,24,365,99.999,240,525600,525594.744,5.256,-234.74,0.001%,0.05%,0.05%,-0.04%,0.04%,4566.21%,998.53,998.09
-10000000000011,bigquery,gcp,global,1,24,365,99.99,370,525600,525547.44,52.56,-317.44,0.010%,0.07%,0.07%,-0.06%,0.06%,703.96%,998.20,997.59
-10000000000012,google_cloud_and_media_cdn,gcp,global,1,24,365,99.999,235,525600,525594.744,5.256,-229.74,0.001%,0.04%,0.04%,-0.04%,0.04%,4471.08%,998.54,998.11
-10000000000013,autonomousdb_21c,oci,eu_west1,1,24,365,99.99,375,525600,525547.44,52.56,-322.44,0.010%,0.07%,0.07%,-0.06%,0.06%,713.47%,998.19,997.57
-10000000000014,autonomousdb_21c,oci,eu_north1,1,24,365,99.99,375,525600,525547.44,52.56,-322.44,0.010%,0.07%,0.07%,-0.06%,0.06%,713.47%,998.19,997.57
+database_key_id(10000000000001),service_name,service_provider,region_or_global,service_type_b2c_or_b2b(1-yes-0-no),"customer_service_up_hours( 8h day, 12h day, 24h day)","customer_service_anual_days_daily_or_weekly_or_weekends(365,261,104)",service_sla(99.9999%-for-60min*24h_365days),webscraper_annual_period_service_down_per_year_in_minutes,annual_service_minutes_up(365*24*60=525600),expected_by_sla_annual_service_minutes_up(365*24*60=525600),expected_annual_service_minutes_down,"service_debit_credit_anual_sla_minutes(positive_credit , negative debit more than sla)",expected_percentage_mins_down_on_agreed_sla,actual_percentage_total_mins_down_from_webscraping,actual_percentage_mins_down_on_agreed_sla,gap_time_percent_between_SLA_down_actual_down,riskcoef-per_service_from_gap_expected_actual_time_down,service_sla_usage_percentage,SLA_Deviation_Connected_RISK_0_999,USAGE_Connected_RISK_0_999
+10000000000001,anycast_cloudflare,cloudflare,global,1,24,365,99.999,240,525600,525594.744,5.256,-234.74,0.001%,0.05%,0.05%,-0.04%,0.04%,4566.21%,952.92,998.09
+10000000000002,autonomousdb_21c,oci,global,0,24,365,99.95,360,525600,525337.2,262.8,-97.20,0.050%,0.07%,0.07%,-0.02%,0.02%,136.99%,996.45,997.63
+10000000000003,autonomousdb_21c,oci,global,0,24,365,99.99,360,525600,525547.44,52.56,-307.44,0.010%,0.07%,0.07%,-0.06%,0.06%,684.93%,991.37,997.63
+10000000000004,autonomousdb_21c,oci,global,0,24,365,99.97,360,525600,525442.32,157.68,-202.32,0.030%,0.07%,0.07%,-0.04%,0.04%,228.31%,995.74,997.63
+10000000000005,autonomousdb_21c,oci,global,0,12,365,98.88,360,262800,259856.64,2943.36,"2,583.36",1.120%,0.14%,0.14%,0.98%,-0.98%,12.23%,986.32,996.26
+10000000000006,aws_lambda,amazon,global,0,24,365,99.95,400,525600,525337.2,262.8,-137.20,0.050%,0.08%,0.08%,-0.03%,0.03%,152.21%,996.22,997.48
+10000000000007,aws_cloudfront,amazon,global,1,24,365,99.95,380,525600,525337.2,262.8,-117.20,0.050%,0.07%,0.07%,-0.02%,0.02%,144.60%,996.33,997.56
+10000000000008,salesforce_saas,amazon,global,1,24,365,99.95,360,525600,525337.2,262.8,-97.20,0.050%,0.07%,0.07%,-0.02%,0.02%,136.99%,996.45,997.63
+10000000000009,powerbi_app,azure,global,1,24,365,99.99,370,525600,525547.44,52.56,-317.44,0.010%,0.07%,0.07%,-0.06%,0.06%,703.96%,991.16,997.59
+10000000000010,azure_cdn,azure,global,1,24,365,99.999,240,525600,525594.744,5.256,-234.74,0.001%,0.05%,0.05%,-0.04%,0.04%,4566.21%,952.92,998.09
+10000000000011,bigquery,gcp,global,1,24,365,99.99,370,525600,525547.44,52.56,-317.44,0.010%,0.07%,0.07%,-0.06%,0.06%,703.96%,991.16,997.59
+10000000000012,google_cloud_and_media_cdn,gcp,global,1,24,365,99.999,235,525600,525594.744,5.256,-229.74,0.001%,0.04%,0.04%,-0.04%,0.04%,4471.08%,953.88,998.11
+10000000000013,autonomousdb_21c,oci,eu_west1,1,24,365,99.99,375,525600,525547.44,52.56,-322.44,0.010%,0.07%,0.07%,-0.06%,0.06%,713.47%,991.06,997.57
+10000000000014,autonomousdb_21c,oci,eu_north1,1,24,365,99.99,375,525600,525547.44,52.56,-322.44,0.010%,0.07%,0.07%,-0.06%,0.06%,713.47%,991.06,997.57
+,,,,,,,,,,,,,,,,,,,999.00,999.00
