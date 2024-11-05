@@ -59,7 +59,7 @@ enrich core cloud risk engine with customer tailored information
 
 ---
 
-##  Workbench - App 3 pdf-bot  
+##  Workbench - App 3 pdf-cloud_outage-bot  - External information Loader from pdf files 
 
 
 UI: http://localhost:8503  
@@ -74,7 +74,7 @@ DB client: http://localhost:7474
 
 --- 
 
-##  workbench - App 2 Loader
+##  workbench - App 2 - cloud_outage_loader - Information Loader
 
 UI: http://localhost:8502  
 DB client: http://localhost:7474
@@ -91,7 +91,7 @@ DB client: http://localhost:7474
 
 ---
 
-## Workbench - App 1 - Support Agent Bot   - tbh
+## Workbench - App 1 -  cloud_outage_bot - Support Agent
 
 UI: http://localhost:8501  
 DB client: http://localhost:7474

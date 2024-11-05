@@ -95,8 +95,8 @@ services:
         - action: rebuild
           path: .
           ignore:
-            - bot.py
-            - pdf_bot.py
+            - cloud_outage_bot.py
+            - pdf_cloud_outage_bot.py
 
   bot:
     build:
@@ -129,8 +129,8 @@ services:
         - action: rebuild
           path: .
           ignore:
-            - loader.py
-            - pdf_bot.py
+            - cloud_outage_loader.py
+            - pdf_cloud_outage_bot.py
     ports:
       - 8501:8501
 
@@ -163,8 +163,8 @@ services:
         - action: rebuild
           path: .
           ignore:
-            - loader.py
-            - bot.py
+            - cloud_outage_loader.py
+            - cloud_outage_bot.py
     ports:
       - 8503:8503
 
