@@ -25,6 +25,18 @@ cd cloud-information-genai-workbench
 
 ---
 
+##  Workbench - App 1 bot  
+
+
+UI: http://localhost:8501  
+
+- Use Ollama LLm to search for Outages about cloud services
+- In example search about AlloyDB outages in GCP cloud
+
+![cloud risk information extraction with pdf-v1-bot](images/bot_app1_workbench.png)
+
+---
+
 ##  Workbench - App 3 pdf-bot  
 
 

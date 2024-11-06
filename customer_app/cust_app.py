@@ -49,9 +49,9 @@ password = st.text_input("Password", type="password")
 driver = init_neo4j_connection(uri, user, password)
 
 # Insert record form
-st.header("Insert your ")
-st.header("TECHNOLOGY_SOLUTION's by")
-st.header("by TECHNOLOGY_PROVIDER's")
+st.header("Insert ")
+st.subheader(" for - TECHNOLOGY_PROVIDER ")
+st.subheader(" the - TECHNOLOGY_SOLUTION ")
 node_type = st.text_input("Node Type", "TECHNOLOGY_SOLUTION")
 properties = {}
 
