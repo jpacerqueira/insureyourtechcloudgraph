@@ -45,7 +45,7 @@ username = os.getenv("NEO4J_USERNAME")
 password = os.getenv("NEO4J_PASSWORD")
 
 # Initialize Neo4j connection
-uri = st.text_input("Neo4j URI", "neo4j://cloudriskgraph.insureyourtech.cloud:17687")
+uri = st.text_input("Neo4j URI", "bolt://cloudriskgraph.insureyourtech.cloud:17687" ) # "neo4j://cloudriskgraph.insureyourtech.cloud:17687")
 user = st.text_input("Username", "neo4j")
 password = st.text_input("Password", type="password")
 driver = init_neo4j_connection(uri, user, password)
@@ -74,11 +74,11 @@ st.header("Explore Records")
 st.caption("Go to http://cloudriskgraph.insureyourtech.cloud:17474/  - Explore your cloud services risk graph.")
 
 # Fetch node labels for selection
-labels = fetch_labels(driver)
-selected_label = st.selectbox("Select Node Type", labels)
+#labels = fetch_labels(driver)
+#selected_label = st.selectbox("Select Node Type", labels)
 
 # Fetch and display nodes of the selected type
-if selected_label:
-    nodes = fetch_nodes_by_label(driver, selected_label)
-    for node in nodes:
-        st.write(node)
+#if selected_label:
+#    nodes = fetch_nodes_by_label(driver, selected_label)
+#    for node in nodes:
+#        st.write(node)
