@@ -1,6 +1,7 @@
-# Wokrbench - Cloud information Extraction- Supported by GenAI APP Stack
-This GenAI application stack will be enough to extra ct information about cloud outages
-Using our own GenAI application with support of Neo4J.
+# Workbench Apps 
+## - Cloud information Extraction Supported by GenAI APPs
+Th2 3 Apps with GenAI enable information collection about cloud outages
+Using our own GenAI application with support of Neo4J we can accelerate information collection about Cloud service Outages.
 
 # Configure
 
