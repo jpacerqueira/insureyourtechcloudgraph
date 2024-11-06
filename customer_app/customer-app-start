@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#!/bin/bash
+#
+# BUILD_METHOD =
+# BUILD_METHOD = 1  - docker compose up
+# BUILD_METHOD = 2  - docker compose up --build
+# BUILD_METHOD = 3  - docker compose up --build --force-recreate
+# BUILD_METHOD =    - docker compose ps
+
+BUILD_METHOD="${1:-0}" # 1 or 0
+
+if [[ "$BUILD_METHOD" == "1" ]]; then
+   docker compose down
+   docker compose up --build
+else
+   docker compose ps
+fi

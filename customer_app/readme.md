@@ -1,5 +1,11 @@
 # Customer Application
 
+
+**Lazy Customer App starts everything**
+```
+bash -x customer-app-start 1 
+```
+
 **To start it**
 ```
 docker compose up
