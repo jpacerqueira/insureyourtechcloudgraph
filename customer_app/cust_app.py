@@ -33,7 +33,9 @@ def fetch_nodes_by_label(driver, label):
         return [record["n"] for record in result]
 
 # Streamlit app starts here
-st.title("Customer Submission App")
+st.title("Cloud Risk ")
+st.header("Customer Submission App")
+st.subheader("Calculate - cloud risk via inserting services manually")
 
 #Obtain Environment Variables
 load_dotenv(".env")
