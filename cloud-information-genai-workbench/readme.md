@@ -1,7 +1,7 @@
 # Workbench Apps 
-## - Cloud information Extraction Supported by GenAI APPs
-Th2 3 Apps with GenAI enable information collection about cloud outages
-Using our own GenAI application with support of Neo4J we can accelerate information collection about Cloud service Outages.
+## Cloud information Extraction Supported by Gen.AI APPs
+These 3 Apps allow us to information collection about cloud outages
+Using our own GenAI application with support of Neo4J and LLM RAG we can accelerate information collection about Cloud service outages
 
 # Configure
 
