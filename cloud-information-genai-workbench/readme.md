@@ -1,7 +1,6 @@
-# GenAI Stack
-This GenAI application stack will get you started building your
-own GenAI application in no time.  
-The demo applications can serve as inspiration or as a starting point.
+# Wokrbench - Cloud information Extraction- Supported by GenAI APP Stack
+This GenAI application stack will be enough to extra ct information about cloud outages
+Using our own GenAI application with support of Neo4J.
 
 # Configure
 
