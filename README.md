@@ -50,6 +50,7 @@ DB client: http://localhost:7474
 - Load high ranked cloud outages information
 - Extract from PDF to Neo4J Vector information
 
+![cloud_risk_pdf_extracts](images/workbench_app_3_outage_GCP_vertexai.png)
 ![cloud risk information extraction with pdf-v1-bot](images/pdf_bot_outage_extract_v1.png)
 ![neo4j_cloud risk information extraction with pdf-bot](images/extraction_to_neo4j_bot_pdf_bot.png)
 	
