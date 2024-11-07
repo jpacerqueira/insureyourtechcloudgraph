@@ -106,7 +106,9 @@ DB client: http://localhost:7474
 
 ![](images/bot-1_output-v1.png)
 ![](.github/media/app1-rag-selector.png)  
+
 *(Chat input + RAG mode selector)*
+![cloud risk app 1 rag_outage search2](images/workbench_app1_rag_enabled.png)
 
 ![](.github/media/app1-generate.png)  
 *(CTA to auto generate support ticket draft)*
