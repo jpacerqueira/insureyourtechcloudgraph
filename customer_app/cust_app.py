@@ -50,8 +50,12 @@ user = st.text_input("Username", "neo4j")
 password = st.text_input("Password", type="password")
 driver = init_neo4j_connection(uri, user, password)
 
+# Interactive data selection
+st.header("Explore All Cloud Risk Graph - Records")
+st.caption("Go to http://cloudriskgraph.insureyourtech.cloud:17474/  - Explore your cloud services risk graph.")
+
 # Insert record form
-st.header("Insert ")
+st.header("New Cloud Risk Assesment - Insert detailed information")
 st.subheader(" for - TECHNOLOGY_PROVIDER ")
 st.subheader(" the - TECHNOLOGY_SOLUTION ")
 node_type = st.text_input("Node Type", "TECHNOLOGY_SOLUTION")
@@ -71,6 +75,8 @@ if st.button("Insert Record"):
 
 
 # VIEW Results -  from Application - Customer
+# Insert record form
+st.header("View your Cloud Risk Graphs")
 list_options = ["CURRENT_Cloud_RISK_ASSESMENT_v3", "Cloud_RISK_ASSESMENT_2", "Cloud_RISK_ASSESMENT_1"]
 
 cloud_risk_list = st.query_params.get("cloud risk - assesments list", None)
@@ -89,9 +95,7 @@ else:
         )
 
 
-# Interactive data selection
-st.header("Explore All Cloud Risk Graph - Records")
-st.caption("Go to http://cloudriskgraph.insureyourtech.cloud:17474/  - Explore your cloud services risk graph.")
+
 
 # Fetch node labels for selection
 #labels = fetch_labels(driver)
