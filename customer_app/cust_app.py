@@ -51,7 +51,7 @@ password = st.text_input("Password", type="password")
 driver = init_neo4j_connection(uri, user, password)
 
 # Insert record form
-st.header("New Cloud Risk - Insurance Risk Meajurement")
+st.header("New Cloud Risk - Insurance Risk Measurement")
 st.subheader("Insert detailed information")
 st.subheader(" for - TECHNOLOGY_PROVIDER ")
 st.subheader(" the - TECHNOLOGY_SOLUTION ")
