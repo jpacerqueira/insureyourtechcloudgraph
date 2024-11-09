@@ -21,7 +21,8 @@ docker compose up --build
 
 UI: http://localhost:8504  
 
-- Customer Submission Application 
+- Customer Submission Application
+- New Cloud Risk - Insurance Risk Meajurement
 - Manually insert information about cloud usage to calculate your cloud risk graph
 - 
-![customer submission cloud risk information](images/customer_submission_App4.png)
+![customer submission cloud risk information](images/Customer_App4_-_Insurance_Risk_Meajurement.png)
