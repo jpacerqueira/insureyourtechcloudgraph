@@ -55,7 +55,8 @@ st.header("Explore All Cloud Risk Graph - Records")
 st.caption("Go to http://cloudriskgraph.insureyourtech.cloud:17474/  - Explore your cloud services risk graph.")
 
 # Insert record form
-st.header("New Cloud Risk Assesment - Insert detailed information")
+st.header("New Cloud Risk ")
+st.subheader("Insert detailed information")
 st.subheader(" for - TECHNOLOGY_PROVIDER ")
 st.subheader(" the - TECHNOLOGY_SOLUTION ")
 node_type = st.text_input("Node Type", "TECHNOLOGY_SOLUTION")
