@@ -69,8 +69,28 @@ if st.button("Insert Record"):
     record = insert_record(driver, node_type, properties)
     st.success(f"Record inserted: {record}")
 
+
+# VIEW Results -  from Application - Customer
+list_options = ["CURRENT_Cloud_RISK_ASSESMENT_v3", "Cloud_RISK_ASSESMENT_2", "Cloud_RISK_ASSESMENT_1"]
+
+cloud_risk_list = st.query_params.get("cloud risk - assesments list", None)
+
+if cloud_risk_list:
+    f"## {cloud_risk_list} is a great choice! "
+    st.image(f"https://placehold.co/200x100?text={cloud_risk_list}", caption=f"{cloud_risk_list}!")
+
+else:
+    selection = st.selectbox("Select:", list_options, index=None)
+    if selection:
+        st.link_button(
+            f"See Cloud Risk Graph - {selection}",
+            url=f"http://cloudriskgraph.insureyourtech.cloud:17474/",
+            use_container_width=True
+        )
+
+
 # Interactive data selection
-st.header("Explore Records")
+st.header("Explore All Cloud Risk Graph - Records")
 st.caption("Go to http://cloudriskgraph.insureyourtech.cloud:17474/  - Explore your cloud services risk graph.")
 
 # Fetch node labels for selection
