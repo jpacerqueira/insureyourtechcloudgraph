@@ -1,0 +1,23 @@
+#/bin/bash env
+#
+echo "Open Local"
+echo " --> Customer App"
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://cloudriskgraph.insureyourtech.cloud:8504/'
+#
+echo "Customer - Risk Graph - Database"
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://cloudriskgraph.insureyourtech.cloud:17474/browser/'
+#
+echo "Workbench - App 1 - Question BOT About Outages"
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://cloudriskgraph.insureyourtech.cloud:8501/'
+#
+echo "Workbench - App 2 - Search Internet - Load VectorGraph"
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://cloudriskgraph.insureyourtech.cloud:8502/'
+#
+echo "Workbench - App 3 - External information Loader from pdf files"
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://cloudriskgraph.insureyourtech.cloud:8503/'
+#
+echo "VectorGraph - Risk - Database"
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://cloudriskgraph.insureyourtech.cloud:7474/browser/'
+#
+echo "All open in FIREFOX - macos OS X "
+#

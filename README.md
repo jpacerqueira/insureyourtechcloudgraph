@@ -23,15 +23,19 @@ UI: http://localhost:8504
 
 
 
-## Customer B2C Graph - Cloud risk 
+## Customer - Cloud Risk Assesment App - B2C - Customer Cloud Risk Graph 
 
-Neo4J - client risk Graph : http://localhost:17474
 
-Create with make
+Client Risk Graph - New Cloud Risk Assesment : http://localhost:8504
+
+
+launch services
 
 ```
-make riskgraph
+make all
+bash -x open-all-applications
 ```
+
 
 Customer B2C Sample Graph - overly simplified
 
