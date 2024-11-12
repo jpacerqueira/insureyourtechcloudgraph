@@ -19,5 +19,8 @@ echo "Workbench - App 3 - External information Loader from pdf files"
 echo "VectorGraph - Risk - Database"
 /usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://cloudriskgraph.insureyourtech.cloud:7474/browser/'
 #
+echo "Cloud Risk - Simulation Website"
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox customer_app/CloudRisk.Simulation.html
+#
 echo "All open in FIREFOX - macos OS X "
 #

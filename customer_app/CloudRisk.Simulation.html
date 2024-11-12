@@ -14,7 +14,7 @@
         }
         .container {
             width: 90%;
-            max-width: 800px;
+            max-width: 1100px;
         }
         .variable-pair {
             display: flex;
@@ -45,7 +45,7 @@
 <body>
 
 <div class="container">
-    <h1>Choose Options for Variable Pairs</h1>
+    <h1>Measure Cloud.Risk via inserting Cloud Vendor/Services pair you use </h1>
 
     <!-- Buttons to add or remove pairs -->
     <div class="controls">
@@ -114,7 +114,7 @@
 
         // Create label and dropdown for variable 1
         variablePairDiv.innerHTML += `
-            <label for="variable1_${pairNumber}">Pair ${pairNumber} - Variable 1:</label>
+            <label for="variable1_${pairNumber}"> pair ${pairNumber} Cloud Vendor </label>
             <select id="variable1_${pairNumber}">
                 <option value="">Select an option</option>
                 ${dropdownOptions1}
@@ -123,7 +123,7 @@
 
         // Create label and dropdown for variable 2
         variablePairDiv.innerHTML += `
-            <label for="variable2_${pairNumber}">Pair ${pairNumber} - Variable 2:</label>
+            <label for="variable2_${pairNumber}"> ${pairNumber} Cloud Service </label>
             <select id="variable2_${pairNumber}">
                 <option value="">Select an option</option>
                 ${dropdownOptions2}
