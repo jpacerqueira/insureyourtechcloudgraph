@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudRisk.Simulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+        }
+        .variable-pair {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .variable-pair label {
+            flex: 1;
+            font-weight: bold;
+        }
+        select {
+            flex: 2;
+            padding: 5px;
+            font-size: 14px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .controls {
+            margin: 10px 0;
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Choose Options for Variable Pairs</h1>
+
+    <!-- Buttons to add or remove pairs -->
+    <div class="controls">
+        <button onclick="addVariablePair()">+</button>
+        <button onclick="removeVariablePair()">-</button>
+    </div>
+
+    <!-- Container to hold dynamically generated variable pairs -->
+    <div id="variableContainer"></div>
+
+    <!-- Button to Submit Selected Values -->
+    <button onclick="submitData()">Submit Data</button>
+
+    <!-- Div to Display Submission Result -->
+    <div id="result"></div>
+</div>
+
+<script>
+    // Different options for each variable - Cloud and its Services
+
+    const optionsForVariable1 = ["AWS", "GCP", "Azure", "IBM", "OCI"];
+    const optionsForVariable2 = ["AWS_Lambda", "BigQuery", "PowerBI_App", "IBM_InformationSever" ,"AutonomousDB21C"];
+
+
+    // Variables to track number of pairs
+    let pairCount = 4; // start with 4 pairs
+    const maxPairs = 85;
+
+    // Function to create dropdown options for a given array of options
+    function createDropdownOptions(options) {
+        return options.map(option => `<option value="${option}">${option}</option>`).join("");
+    }
+
+    // Generate dropdown options
+    const dropdownOptions1 = createDropdownOptions(optionsForVariable1);
+    const dropdownOptions2 = createDropdownOptions(optionsForVariable2);
+
+    // Function to add a variable pair
+    function addVariablePair() {
+        if (pairCount < maxPairs) {
+            pairCount++;
+            renderVariablePair(pairCount);
+        } else {
+            alert("Maximum number of pairs reached.");
+        }
+    }
+
+    // Function to remove the last variable pair
+    function removeVariablePair() {
+        if (pairCount > 1) {
+            document.getElementById(`variablePair_${pairCount}`).remove();
+            pairCount--;
+        } else {
+            alert("Cannot have less than 1 pair.");
+        }
+    }
+
+    // Function to render a variable pair
+    function renderVariablePair(pairNumber) {
+        const container = document.getElementById("variableContainer");
+
+        // Create a div to hold each pair of variables
+        const variablePairDiv = document.createElement("div");
+        variablePairDiv.className = "variable-pair";
+        variablePairDiv.id = `variablePair_${pairNumber}`;
+
+        // Create label and dropdown for variable 1
+        variablePairDiv.innerHTML += `
+            <label for="variable1_${pairNumber}">Pair ${pairNumber} - Variable 1:</label>
+            <select id="variable1_${pairNumber}">
+                <option value="">Select an option</option>
+                ${dropdownOptions1}
+            </select>
+        `;
+
+        // Create label and dropdown for variable 2
+        variablePairDiv.innerHTML += `
+            <label for="variable2_${pairNumber}">Pair ${pairNumber} - Variable 2:</label>
+            <select id="variable2_${pairNumber}">
+                <option value="">Select an option</option>
+                ${dropdownOptions2}
+            </select>
+        `;
+
+        // Append the pair to the container
+        container.appendChild(variablePairDiv);
+    }
+
+    // Initialize with 4 variable pairs
+    function initializeVariablePairs() {
+        for (let i = 1; i <= pairCount; i++) {
+            renderVariablePair(i);
+        }
+    }
+
+    // Function to gather selected values and submit as JSON
+    function submitData() {
+        const data = [];
+
+        // Loop through each pair and gather selected values
+        for (let i = 1; i <= pairCount; i++) {
+            const variable1 = document.getElementById(`variable1_${i}`).value;
+            const variable2 = document.getElementById(`variable2_${i}`).value;
+
+            // Only include pairs where both variables are selected
+            if (variable1 && variable2) {
+                data.push({
+                    pair: i,
+                    variable1: variable1,
+                    variable2: variable2
+                });
+            }
+        }
+
+        // JSON payload
+        const payload = JSON.stringify(data);
+
+        // Send JSON payload as POST request
+        fetch("https://yourserver.com/api/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: payload
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Display submission result
+            document.getElementById("result").innerText = "Data submitted successfully!";
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            document.getElementById("result").innerText = "An error occurred. Please try again.";
+        });
+    }
+
+    // Initialize the variable pairs on page load
+    window.onload = initializeVariablePairs;
+</script>
+
+</body>
+</html>
