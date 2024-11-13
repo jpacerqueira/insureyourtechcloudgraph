@@ -14,7 +14,7 @@
         }
         .container {
             width: 90%;
-            max-width: 1100px;
+            max-width: 1300px;
         }
         .variable-pair {
             display: flex;
@@ -115,7 +115,7 @@
 
         // Create label and dropdown for variable 1
         variablePairDiv.innerHTML += `
-            <label for="variable1_${pairNumber}"> 📄 pair ${pairNumber} Cloud Vendor </label>
+            <label for="variable1_${pairNumber}"> 📄 ${pairNumber} Cloud Vendor v1 </label>
             <select id="variable1_${pairNumber}">
                 <option value="">Select an option</option>
                 ${dropdownOptions1}
@@ -124,7 +124,7 @@
 
         // Create label and dropdown for variable 2
         variablePairDiv.innerHTML += `
-            <label for="variable2_${pairNumber}"> 📄 ${pairNumber} Cloud Service </label>
+            <label for="variable2_${pairNumber}"> 📄 ${pairNumber} Cloud Service v2 </label>
             <select id="variable2_${pairNumber}">
                 <option value="">Select an option</option>
                 ${dropdownOptions2}
