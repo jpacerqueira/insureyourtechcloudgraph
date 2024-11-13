@@ -56,8 +56,7 @@
         <input type="text" id="projectName" placeholder="Defaults to Company Name if blank">
     </div>
 
-    <h1>Measure your Cloud.Risk via inserting Cloud Vendor and Service pairs </h1>
-    <a href="https://workspace-preview.neo4j.io/workspace/query?ntid=google-oauth2%7C100793316574048247943">' click below   -    Measure your Cloud.Risk via inserting Cloud Vendor and Service pairs   ' </a>
+    <h2>Measure your Cloud.Risk via inserting Cloud Vendor and Service pairs </h2>
 
     <!-- Buttons to add or remove pairs -->
     <div class="controls">
@@ -73,6 +72,10 @@
 
     <!-- Div to Display Submission Result -->
     <div id="result"></div>
+
+    <!-- Link to Authorized users to see detailed results of your submission - Cloud.Risk.Graph your Measured Cloud.Risk RATIO -->
+    <a href="https://workspace-preview.neo4j.io/workspace/query?ntid=google-oauth2%7C100793316574048247943">'Cloud.Risk.Graph your Measured Cloud.Risk RATIO for Cloud Vendor and Service pairs'</a>
+
 </div>
 
 <script>
@@ -193,7 +196,7 @@
         console.log("Payload to be submitted:", payload);
 
         // Send JSON payload as POST request
-        fetch("https://yourserver.com/api/submit", {
+        fetch("https://cloudriskgraph.b2c.insureyourtech.cloud/api/submit/cloudriskgraph/measure/new", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
