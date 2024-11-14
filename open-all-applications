@@ -4,6 +4,9 @@ echo "Open Local"
 echo " --> Customer App"
 /usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:8504' # 'http://cloudriskgraph.insureyourtech.cloud:8504/'
 #
+echo " --> OLLAMA model"
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:11434/' # 'http://cloudriskgraph.insureyourtech.cloud:11434/'
+#
 echo "Customer - Risk Graph - Database"
 /usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:17474/browser/' # 'http://cloudriskgraph.insureyourtech.cloud:17474/browser/'
 #
