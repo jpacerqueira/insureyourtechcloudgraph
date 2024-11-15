@@ -2,13 +2,13 @@ import os
 
 import streamlit as st
 from streamlit.logger import get_logger
-from langchain.callbacks.base import BaseCallbackHandler
+from langchain_community.callbacks.base import BaseCallbackHandler
 from langchain.prompts.chat import (
     ChatPromptTemplate,
     SystemMessagePromptTemplate,
     HumanMessagePromptTemplate,
 )
-from langchain.graphs import Neo4jGraph
+from langchain_community.graphs import Neo4jGraph
 from dotenv import load_dotenv
 from utils import (
     extract_title_and_question,

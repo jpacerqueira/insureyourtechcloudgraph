@@ -5,3 +5,5 @@ urllib3==1.26.16
 pandas==2.2.3
 chromedriver-binary==132.0.6794.2.0
 webdriver-manager==4.0.2
+fpdf==1.7.2
+beautifulsoup4==4.12.3

@@ -1,6 +1,7 @@
 FROM python:3.12-bookworm
 
-RUN apt-get update 
+RUN apt-get update
+RUN pip install --upgrade pip 
 RUN apt-get install -y tar gconf-service libasound2 libatk1.0-0 libcairo2 libcups2 libfontconfig1 libgdk-pixbuf2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libxss1 fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils
 
 #download and install chrome
@@ -31,5 +32,6 @@ WORKDIR ${APP_HOME}
 COPY . . 
 
 #CMD exec gunicorn --bind :${PORT} --workers 1  main:app
-#CMD cd /app ; python scraper.py ; sleep infinity
-CMD cd /app ; python azure_status_scraper.py ; sleep infinity
+#CMD cd /app ; python scraper_dummy.py ; sleep infinity
+#CMD cd /app ; python scraper_url_to_pdf.py ; sleep infinity
+CMD cd /app ; python scraper_azure_url_to_pdf.py ; sleep infinity

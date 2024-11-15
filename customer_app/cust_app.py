@@ -45,7 +45,7 @@ username = os.getenv("NEO4J_USERNAME")
 password = os.getenv("NEO4J_PASSWORD")
 
 # Initialize Neo4j connection
-uri = st.text_input("Neo4j URI", "bolt://cloudriskgraph.insureyourtech.cloud:17687" ) # "neo4j://cloudriskgraph.insureyourtech.cloud:17687")
+uri = st.text_input("Neo4j URI", "bolt://localhost:17687" ) # "neo4j://cloudriskgraph.insureyourtech.cloud:17687")
 user = st.text_input("Username", "neo4j")
 password = st.text_input("Password", type="password")
 driver = init_neo4j_connection(uri, user, password)

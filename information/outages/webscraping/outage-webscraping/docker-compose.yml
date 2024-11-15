@@ -1,0 +1,24 @@
+services:
+
+  outage_webscraper:
+    build:
+      dockerfile: outage_webscraper.Dockerfile
+    environment:
+      - URL_SCRAPER=${URL_SCRAPER-https://azure.status.microsoft/en-gb/status/history/}
+      - OUTPUT_FILE=${OUTPUT_FILE-output/Azure_Status_History.pdf}
+    volumes:
+      - "./ouput/:/app/output/"   # Persist output files
+    networks:
+      - net
+    x-develop:
+      watch:
+        - action: rebuild
+          path: .
+          ignore:
+            - azure_status_scraper.py
+            - scraper_dummy.py
+    ports:
+      - 5019:5000
+
+networks:
+  net:
