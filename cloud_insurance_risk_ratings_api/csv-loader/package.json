@@ -1,11 +1,19 @@
 {
-    "name": "csv-injector",
-    "description": "description",
-    "authors": "author",
+    "name": "csv-loader",
     "version": "1.0.0",
-    "main": "pathToMain",
+    "description": "A service to inject CSV data into a PostgreSQL database",
+    "main": "inject.js",
+    "scripts": {
+      "start": "node inject.js"
+    },
     "dependencies": {
-        "pg": "^8.13.1",
-        "csv-parser": "^3.0.0"
-    }
-}
+      "dotenv": "^16.4.5",
+      "pg": "^8.10.0",
+      "csv-parser": "^3.0.0"
+    },
+    "engines": {
+      "node": ">=14.0.0"
+    },
+    "author": "FuelBigData.com",
+    "license": "MIT"
+  }

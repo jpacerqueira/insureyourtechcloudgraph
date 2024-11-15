@@ -2,7 +2,7 @@
 FROM node:20
 
 # Set the working directory in the container
-WORKDIR /csv-loader
+WORKDIR /app
 
 # Install necessary dependencies
 COPY package*.json ./

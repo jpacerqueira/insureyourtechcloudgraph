@@ -1,3 +1,4 @@
+const dotenv = require('dotenv');
 const fs = require('fs');
 const { Pool } = require('pg');
 const csv = require('csv-parser');
