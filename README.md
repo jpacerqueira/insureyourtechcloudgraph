@@ -1,7 +1,7 @@
 # InsureYourTech.Cloud 
 
-- A Cloud Risk - Calculation engine
-- 
+## A Cloud Risk - Calculation engine
+
 - - Insurance Risk Meajurement via graph analysis
 - Customer Submission
   - Includes a customer Insurance Risk Meajurement App capable to calculate a cloud risk depending on requested technologies by a customer submission
