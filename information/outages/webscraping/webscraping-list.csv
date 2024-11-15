@@ -1,4 +1,4 @@
-cloud vendor,cloud services,outages website,live status,external outage detection,information level(1,2,3,4,5)
-Azure,https://azure.status.microsoft/en-gb/,https://azure.status.microsoft/en-gb/status/history/,https://azure.status.microsoft/en-gb/status/,https://downdetector.co.uk/status/azure-microsoft-azure-cloud/,"1,2,3"
-AWS,https://health.aws.amazon.com/health/status,https://aws.amazon.com/premiumsupport/technology/pes/,https://health.aws.amazon.com/health/status,https://repost.aws/knowledge-center/aws-service-status,"1,2,3"
-GCP,https://status.cloud.google.com/summary,https://status.cloud.google.com/summary,https://status.cloud.google.com/,https://downdetector.co.uk/status/gcp-google-cloud/,"1,2,3"
+cloud vendor,cloud services,outages website,live status,other status,external outage detection,information level(1_2_3_4_5)
+Azure,https://azure.status.microsoft/en-gb/,https://azure.status.microsoft/en-gb/status/history/,https://azure.status.microsoft/en-gb/status/,,https://downdetector.co.uk/status/azure-microsoft-azure-cloud/,"1,2,3"
+AWS,https://health.aws.amazon.com/health/status,https://aws.amazon.com/premiumsupport/technology/pes/,https://health.aws.amazon.com/health/status,https://repost.aws/knowledge-center/aws-service-status,https://downdetector.co.uk/status/aws-amazon-web-services/,"1,2,3"
+GCP,https://status.cloud.google.com/summary,https://status.cloud.google.com/summary,https://status.cloud.google.com/,,https://downdetector.co.uk/status/gcp-google-cloud/,"1,2,3"
