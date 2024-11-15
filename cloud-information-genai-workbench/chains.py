@@ -1,7 +1,9 @@
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.embeddings import OllamaEmbeddings, SentenceTransformerEmbeddings
-from langchain.chat_models import ChatOpenAI, ChatOllama
-from langchain.vectorstores.neo4j_vector import Neo4jVector
+from langchain_community.embeddings.openai import OpenAIEmbeddings
+from langchain_community.embeddings import OllamaEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.chat_models import ChatOpenAI
+from langchain_ollama import ChatOllama
+from langchain_community.vectorstores.neo4j_vector import Neo4jVector
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain.chains.qa_with_sources import load_qa_with_sources_chain
 from langchain.prompts.chat import (
@@ -9,7 +11,7 @@ from langchain.prompts.chat import (
     SystemMessagePromptTemplate,
     HumanMessagePromptTemplate,
 )
-from typing import List, Any
+from typing import List, Any, Dict, Optional
 from utils import BaseLogger
 
 
@@ -25,11 +27,12 @@ def load_embedding_model(embedding_model_name: str, logger=BaseLogger(), config=
         dimension = 1536
         logger.info("Embedding: Using OpenAI")
     else:
-        embeddings = SentenceTransformerEmbeddings(
-            model_name="all-MiniLM-L6-v2", cache_folder="/embedding_model"
+        embeddings = HuggingFaceEmbeddings(
+            model_name="all-MiniLM-L6-v2", 
+            cache_folder="/embedding_model"
         )
         dimension = 384
-        logger.info("Embedding: Using SentenceTransformer")
+        logger.info("Embedding: Using HuggingFace")
     return embeddings, dimension
 
 
@@ -47,9 +50,9 @@ def load_llm(llm_name: str, logger=BaseLogger(), config={}):
             base_url=config["ollama_base_url"],
             model=llm_name,
             streaming=True,
-            top_k=10,  # A higher value (100) will give more diverse answers, while a lower value (10) will be more conservative.
-            top_p=0.3,  # Higher value (0.95) will lead to more diverse text, while a lower value (0.5) will generate more focused text.
-            num_ctx=3072,  # Sets the size of the context window used to generate the next token.
+            top_k=10, # A higher value (100) will give more diverse answers, while a lower value (10) will be more conservative.
+            top_p=0.3, # Higher value (0.95) will lead to more diverse text, while a lower value (0.5) will generate more focused text.
+            num_ctx=3072, # Sets the size of the context window used to generate the next token.
         )
     logger.info("LLM: Using GPT-3.5")
     return ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo", streaming=True)
