@@ -1,7 +1,6 @@
 CREATE DATABASE cloud_service_risk_ratings;
  \c cloud_service_risk_ratings;
 CREATE SCHEMA cloud_service_risk_ratings;
-create user dbusername with encrypted password 'dbpassword';
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cloud_service_risk_ratings TO dbusername;
 GRANT USAGE ON SCHEMA cloud_service_risk_ratings TO dbusername; 
 CREATE TABLE cloud_service_risk_ratings.cloud_service_risk_ratings (
