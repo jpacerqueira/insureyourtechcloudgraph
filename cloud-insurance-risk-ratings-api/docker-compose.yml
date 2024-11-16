@@ -2,7 +2,7 @@
 services:
   
   postgres-db:
-    image: postgres:16
+    image: postgres:latest
     container_name: postgres-db
     environment:
       POSTGRES_USER: dbusername
