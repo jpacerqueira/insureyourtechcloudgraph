@@ -2,9 +2,9 @@
     "name": "csv-loader",
     "version": "1.0.0",
     "description": "A service to inject CSV data into a PostgreSQL database",
-    "main": "inject.js",
+    "main": "data-loader.js",
     "scripts": {
-      "start": "node inject.js"
+      "start": "node data-loader.js"
     },
     "dependencies": {
       "dotenv": "^16.4.5",
