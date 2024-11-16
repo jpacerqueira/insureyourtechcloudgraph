@@ -49,7 +49,7 @@ function insertData(rows, callback) {
           return `'${val}'`; // Wrap each value in single quotes for SQL
         }).join(', ');
 
-        const query = `INSERT INTO cloud_service_risk_ratings (${columns}) VALUES (${values})`;
+        const query = `INSERT cloud_service_risk_ratings.cloud_service_risk_ratings (${columns}) VALUES (${values})`;
         return client.query(query);
       });
 
