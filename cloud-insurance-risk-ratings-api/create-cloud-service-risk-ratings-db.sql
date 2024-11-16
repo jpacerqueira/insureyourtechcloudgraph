@@ -9,7 +9,7 @@ CREATE TABLE cloud_service_risk_ratings (
     customer_service_type_b2c_or_b2b_1_yes_0_no text,
     customer_service_up_hours_8h_day_12h_day_24h_day text,
     customer_service_anual_days_daily_or_weekly_or_weekends_365_261_104 text,
-    service_sla_0.99.9999_for_60min*_times_24h_365days text,
+    service_sla_0_99_9999_for_60min_times_24h_365days text,
     webscraper_annual_period_service_down_per_year_in_minutes text,
     annual_service_minutes_up_365_24_60_equals_525600 text,
     expected_by_sla_annual_service_minutes_up_365_times_24_60_equals_525600 text,
