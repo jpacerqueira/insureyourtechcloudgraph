@@ -42,3 +42,9 @@ To get the risk ratings for a specific cloud provider and metric, you can make a
 curl http://localhost:8000/cloud-insurance-risk-ratings/risk-ratings/aws/outages
 ```
 
+An Example of the CSV data can be found in the `csv-loader` directory.
+
+```bash
+ head -n 29 ../information/datamodel/cloud-risk-datamodel-services-sla-outage.csv > data/cloud_service_risk_ratings.csv
+ docker compose up --build
+```
