@@ -2,7 +2,8 @@ CREATE DATABASE cloud_service_risk_ratings;
  \c cloud_service_risk_ratings;
 CREATE SCHEMA cloud_service_risk_ratings;
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cloud_service_risk_ratings TO dbusername;
-GRANT USAGE ON SCHEMA cloud_service_risk_ratings TO dbusername; 
+GRANT USAGE ON SCHEMA cloud_service_risk_ratings TO dbusername;
+SET cloud_service_risk_ratings TO cloud_service_risk_ratings;
 CREATE TABLE cloud_service_risk_ratings.cloud_service_risk_ratings (
     database_key_id_10000000000001 text,
     service_name text,
