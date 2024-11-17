@@ -53,3 +53,5 @@ INSERT INTO cloud_service_risk_ratings.cloud_service_risk_ratings
  
  SELECT * FROM cloud_service_risk_ratings.cloud_service_risk_ratings;
  
+ \dt+;
+ select * from pg_tables;
