@@ -17,7 +17,7 @@ services:
       - backend
     restart: unless-stopped
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -d postgres || exit 0" ]
+      test: [ "CMD-SHELL", "pg_isready -d $$POSTGRES_DB -U $$POSTGRES_USER" ]
       interval: 20s
       timeout: 4s
       retries: 2
@@ -40,7 +40,7 @@ services:
       postgres-db:
         condition: service_healthy
     volumes:
-      - ./node-postgres-api:/node-postgres-api
+      - ./node-api:/node-api
     working_dir: /app
     command: "npm start" # You can modify this if you're using a custom start script
     restart: unless-stopped
