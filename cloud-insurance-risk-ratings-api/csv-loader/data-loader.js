@@ -1,4 +1,5 @@
 const dotenv = require('dotenv');
+dotenv.config();
 const fs = require('fs');
 const { Pool } = require('pg');
 const csv = require('csv-parser');
@@ -50,7 +51,7 @@ function insertData(rows, callback) {
           return `'${val}'`; // Wrap each value in single quotes for SQL
         }).join(', ');
 
-        const query = `SET schema '${process.env.DB_SCHEMA}';  INSERT INTO cloud_service_risk_ratings (${columns}) VALUES (${values}) ; `;
+        const query = `SET schema '${process.env.DB_SCHEMA}';  INSERT INTO '${process.env.DB_SCHEMA}'.cloud_service_risk_ratings (${columns}) VALUES (${values}) ; `;
         return client.query(query);
       });
 
