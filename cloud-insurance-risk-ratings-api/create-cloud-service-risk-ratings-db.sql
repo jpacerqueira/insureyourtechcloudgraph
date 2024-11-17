@@ -3,7 +3,7 @@ CREATE DATABASE cloud_service_risk_ratings;
 CREATE SCHEMA cloud_service_risk_ratings;
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cloud_service_risk_ratings TO dbusername;
 GRANT USAGE ON SCHEMA cloud_service_risk_ratings TO dbusername;
-CREATE TABLE cloud_service_risk_ratings.cloud_service_risk_ratings (
+CREATE TABLE cloud_service_risk_ratings (
     database_key_id_10000000000001 text,
     service_name text,
     service_provider text,
@@ -47,11 +47,11 @@ SELECT table_schema, table_name, column_name, column_default, is_nullable
     WHERE table_schema = 'cloud_service_risk_ratings'
     ORDER BY table_schema, table_name, ordinal_position;
 
-INSERT INTO cloud_service_risk_ratings.cloud_service_risk_ratings 
+INSERT INTO cloud_service_risk_ratings 
 (database_key_id_10000000000001, service_name, service_provider, region_or_global, service_load_at_customer_low_medium_high_very_high_1_2_3_4, customer_service_type_b2c_or_b2b_1_yes_0_no, customer_service_up_hours_8h_day_12h_day_24h_day, customer_service_anual_days_daily_or_weekly_or_weekends_365_261, service_sla_0_99_9999_for_60min_times_24h_365days, webscraper_annual_period_service_down_per_year_in_minutes, annual_service_minutes_up_365_24_60_equals_525600, expected_by_sla_annual_service_minutes_up_365_times_24_60_equal, expected_annual_service_minutes_down, service_debit_credit_anual_sla_minutes_in_positive_credit_or_ne, expected_percentage_mins_down_on_agreed_sla, actual_percentage_total_mins_down_from_webscraping, actual_percentage_mins_down_on_agreed_sla, gap_time_percent_between_SLA_down_actual_down, riskcoef_per_service_from_gap_expected_actual_time_down, service_sla_usage_percentage, Service_traffic_coef_by_percent_down, SLA_Deviation_Connected_RISK_0_999, USAGE_Connected_RISK_0_999, NOTES)
  VALUES ('10000000000000', 'autonomousdb_21c', 'oci', 'global', '3', '0', '24', '365', '99.99', '360', '525600.000', '525547.440', '52.560', '-307.440', '0.01%', '0.07%', '0.07%', '-0.06%', '0.06%', '684.93%', '0.05%', '991.373', '997.118', '') ;
  
- SELECT * FROM cloud_service_risk_ratings.cloud_service_risk_ratings;
+SELECT * FROM cloud_service_risk_ratings;
  
 --\dt+; 
 SELECT * FROM pg_tables;
