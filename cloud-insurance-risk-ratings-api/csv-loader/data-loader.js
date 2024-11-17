@@ -33,10 +33,16 @@ function loadCSV(filePath, callback) {
 }
 
 function insertData(rows, callback) {
-  pool.connect(function (err, client, release) {
+  // Add sleep helper function
+  const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+  // Make this an async function
+  pool.connect(async function (err, client, release) {
     if (err) {
       return callback(err); // Error connecting to DB
     }
+    
+    await sleep(2*1000); // sleep for 2s/2000ms
 
     client.query('BEGIN', function (err) {
       if (err) {
@@ -51,8 +57,8 @@ function insertData(rows, callback) {
           return `'${val}'`; // Wrap each value in single quotes for SQL
         }).join(', ');
 
-        /*const query = `INSERT INTO ${process.env.DB_SCHEMA}.cloud_service_risk_ratings (${columns}) VALUES (${values}) `;*/
-        const query = `INSERT INTO cloud_service_risk_ratings (${columns}) VALUES (${values}) `;
+        const query = `INSERT INTO ${process.env.DB_SCHEMA}.cloud_service_risk_ratings (${columns}) VALUES (${values}) `;
+        /*const query = `INSERT INTO cloud_service_risk_ratings (${columns}) VALUES (${values}) `;*/
         return client.query(query);
       });
 

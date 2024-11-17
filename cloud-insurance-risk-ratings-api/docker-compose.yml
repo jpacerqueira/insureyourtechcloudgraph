@@ -33,6 +33,7 @@ services:
       - DB_USER=dbusername
       - DB_PASSWORD=dbpassword
       - DB_NAME=cloud-service-risk-ratings
+      - DB_SCHEMA=cloud_service_risk_ratings
       - PORT=3000
     ports:
       - "3000:3000" # Expose API to port 3000
@@ -57,6 +58,7 @@ services:
       - DB_USER=dbusername
       - DB_PASSWORD=dbpassword
       - DB_NAME=cloud-service-risk-ratings
+      - DB_SCHEMA=cloud_service_risk_ratings
     volumes:
       - ./csv-loader:/csv-loader
       - ./data:/data
