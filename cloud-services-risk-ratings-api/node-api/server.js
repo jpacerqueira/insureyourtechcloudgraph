@@ -1,5 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
+
 // Load environment variables
 dotenv.config({ path: '.env' });
 
@@ -8,6 +10,12 @@ const freemiumRiskRatingsRouter = require('./routes/FreemiumCloudRiskRatings');
 
 const app = express();
 app.use(express.json());
+app.use(cors({
+  origin: ['http://localhost:8000', 'https://your-production-domain.com'], // Specify allowed origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+  credentials: false // true // Enable credentials (if needed)
+}));
 
 // API Routes
 app.use('/cloud-services-risk-ratings/risk-ratings', riskRatingsRouter);

@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 
 import streamlit as st
 from neo4j import GraphDatabase
+from flask import Flask
+from flask_cors import CORS
 
 
 # Initialize the Neo4j connection
@@ -104,3 +106,12 @@ st.caption("Go to http://cloudriskgraph.insureyourtech.cloud:17474/  - Explore y
 #    nodes = fetch_nodes_by_label(driver, selected_label)
 #    for node in nodes:
 #        st.write(node)
+
+app = Flask(__name__)
+CORS(app, resources={
+    r"/*": {
+        "origins": ["http://localhost:8504", "https://your-production-domain.com"],
+        "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Authorization"]
+    }
+})
