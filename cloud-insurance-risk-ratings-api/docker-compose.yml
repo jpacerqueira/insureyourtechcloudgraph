@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: cloud-service-risk-ratings
+      POSTGRES_DB: cloud_service_risk_ratings
     ports:
       - "5432:5432" # Expose DB to port 5432
     volumes:
@@ -32,7 +32,7 @@ services:
       - DB_PORT=5432
       - DB_USER=postgres
       - DB_PASSWORD=password
-      - DB_NAME=cloud-service-risk-ratings
+      - DB_NAME=cloud_service_risk_ratings
       - PORT=3000
     ports:
       - "3000:3000" # Expose API to port 3000
@@ -58,7 +58,7 @@ services:
       - DB_PORT=5432
       - DB_USER=postgres
       - DB_PASSWORD=password
-      - DB_NAME=cloud-service-risk-ratings
+      - DB_NAME=cloud_service_risk_ratings
     volumes:
       - ./csv-loader:/csv-loader
       - ./data:/data

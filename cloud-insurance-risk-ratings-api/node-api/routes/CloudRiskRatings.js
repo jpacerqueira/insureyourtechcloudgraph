@@ -7,7 +7,7 @@ const db = require('../config/db');
 router.get('/list/all', async function (req, res) {
     try {
         const connection = await db.connect();
-        db.query(`SELECT * FROM "${process.env.DB_NAME}"."service_risk_ratings" `)
+        db.query(`SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings `)
             .then(function ([rows]) {
                 res.status(200).json(rows);
         })
@@ -27,7 +27,7 @@ router.get('/fetch/id/:id', async function (req, res, next) {
     try {
         const connection = await db.connect();
         var id = req.params.id;
-        db.query(`SELECT * FROM "${process.env.DB_NAME}"."service_risk_ratings" WHERE database_key_id_10000000000001 = ${id} `)
+        db.query(`SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings WHERE database_key_id_10000000000001 = ${id} `)
             .then(function ([rows]) {
                 if (rows.length > 0) {
                     res.status(200).json(rows[0]);
