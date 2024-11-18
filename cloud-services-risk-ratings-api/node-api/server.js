@@ -11,7 +11,7 @@ app.use(express.json());
 
 // API Routes
 app.use('/cloud-services-risk-ratings/risk-ratings', riskRatingsRouter);
-app.use('/cloud-services-risk-ratings/risk-ratings/freemium', freemiumRiskRatingsRouter);
+app.use('/cloud-services-risk-ratings/risk-ratings-freemium', freemiumRiskRatingsRouter);
 
 // Start the server
 const PORT = process.env.PORT || 8000;
