@@ -10,32 +10,41 @@ grant all on schema "cloud_service_risk_ratings" to postgres;
 grant all on all tables in schema "cloud_service_risk_ratings" to postgres;
 grant all on all sequences in schema "cloud_service_risk_ratings" to postgres;
 
+--
+-- Create the service_risk_ratings table
+--
 CREATE TABLE cloud_service_risk_ratings.service_risk_ratings (
-    database_key_id_10000000000001 text,
+    database_key_id int,
     service_name text,
     service_provider text,
-    region_or_global text,
+    global_or_by_regions text,
+    region text,
+    availability_zone text,
     service_load_at_customer_low_medium_high_very_high_1_2_3_4 text,
     customer_service_type_b2c_or_b2b_1_yes_0_no text,
     customer_service_up_hours_8h_day_12h_day_24h_day text,
-    customer_service_anual_days_daily_or_weekly_or_weekends_365_261 text,
-    service_sla_0_99_9999_for_60min_times_24h_365days text,
+    customer_service_anual_days_daily_or_weekly_or_weekends_365_261_104 text,
+    service_sla_0_99_9999_for_60min_times_24h_365days text ,
     webscraper_annual_period_service_down_per_year_in_minutes text,
     annual_service_minutes_up_365_24_60_equals_525600 text,
-    expected_by_sla_annual_service_minutes_up_365_times_24_60_equal text,
+    expected_by_sla_annual_service_minutes_up_365_times_24_60_equals_525600 text,
     expected_annual_service_minutes_down text,
-    service_debit_credit_anual_sla_minutes_in_positive_credit_or_ne text,
+    service_debit_credit_anual_sla_minutes_in_positive_credit_or_negative_debit_more_than_sla text,
     expected_percentage_mins_down_on_agreed_sla text,
     actual_percentage_total_mins_down_from_webscraping text,
     actual_percentage_mins_down_on_agreed_sla text,
     gap_time_percent_between_SLA_down_actual_down text,
     riskcoef_per_service_from_gap_expected_actual_time_down text,
     service_sla_usage_percentage text,
-    Service_traffic_coef_by_percent_down text,
-    SLA_Deviation_Connected_RISK_0_999 text ,
-    USAGE_Connected_RISK_0_999 text,
-    NOTES text
+    service_traffic_coef_by_percent_down text,
+    sla_deviation_connected_risk_0_999 text,
+    usage_connected_risk_0_999 text,
+    remarks_outage_genai text,
+    public_locationa_and_status_genai text,
+    outages_other_impacted_services_genai text,
+    notes text
 );
+
 
 --
 -- Truncated variable names
