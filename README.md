@@ -11,7 +11,7 @@
   - Has Webscraping for automation information collection -  its is by Gen.AI stack , LLMs Vector(RAGs) of automatic info search 
   - - uses Ollama and Llama3.2 on prototype, custom model in construction
 
-##  Customer Submission - Insurance Risk Meajurement
+##  Customer Submission - Insurance Risk Meajurement with Risk.Graph
 
 UI: http://localhost:8504  
 
