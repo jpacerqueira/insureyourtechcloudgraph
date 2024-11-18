@@ -33,9 +33,9 @@ services:
       - DB_USER=postgres
       - DB_PASSWORD=password
       - DB_NAME=cloud_service_risk_ratings
-      - PORT=3000
+      - PORT=8000
     ports:
-      - "3000:3000" # Expose API to port 3000
+      - "8000:8000" # Expose API to port 8000
     depends_on:
       postgres-db:
         condition: service_healthy
