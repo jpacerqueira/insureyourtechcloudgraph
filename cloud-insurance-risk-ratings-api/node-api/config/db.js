@@ -13,4 +13,15 @@ const pool = new Pool({
     connectionTimeoutMillis: 2000, // Timeout after 2 seconds if no connection
 });
 
+pool.on('error', (err, client) => {
+    console.error('Unexpected error on idle client', err)
+    process.exit(-1)
+  })
+
+  pool.connect((err, connection) => {
+      if (err) throw err;
+      console.log('Database is connected successfully !');
+      connection.release();
+  }); 
+
 module.exports = pool;
