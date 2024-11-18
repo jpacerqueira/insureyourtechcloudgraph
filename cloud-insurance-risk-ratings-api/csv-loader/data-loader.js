@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-dotenv.config();
+dotenv.config({ path: '.env' });
 const fs = require('fs');
 const { Pool } = require('pg');
 const csv = require('csv-parser');
@@ -10,8 +10,13 @@ const pool = new Pool({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  schema: process.env.DB_SCHEMA,
   port: process.env.DB_PORT,
+  schema: process.env.DB_NAME,
+  search_path: process.env.DB_NAME,
+  max: 100,
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 2000,
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: true } : false,
 });
 
 function loadCSV(filePath, callback) {
@@ -33,10 +38,16 @@ function loadCSV(filePath, callback) {
 }
 
 function insertData(rows, callback) {
-  pool.connect(function (err, client, release) {
+  // Add sleep helper function
+  const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+  // Make this an async function
+  pool.connect(async function (err, client, release) {
     if (err) {
       return callback(err); // Error connecting to DB
     }
+    
+    await sleep(2*1000); // sleep for 2s/2000ms
 
     client.query('BEGIN', function (err) {
       if (err) {
@@ -51,7 +62,8 @@ function insertData(rows, callback) {
           return `'${val}'`; // Wrap each value in single quotes for SQL
         }).join(', ');
 
-        const query = `INSERT INTO ${process.env.DB_SCHEMA}.cloud_service_risk_ratings (${columns}) VALUES (${values}) `;
+        const query = `INSERT INTO "cloud_service_risk_ratings"."service_risk_ratings" (${columns}) VALUES (${values}) `;
+        /*const query = `INSERT INTO cloud_service_risk_ratings (${columns}) VALUES (${values}) `;*/
         return client.query(query);
       });
 
@@ -90,4 +102,12 @@ function main(filePath) {
 
 // Execute the main function with the provided CSV file path
 const filePath = process.argv[2]; // Get the CSV file path from command-line arguments
+
+//validate variables
+const DB_HOST = process.env.DB_HOST || 'postgres-db'; // localhost
+const DB_PORT = process.env.DB_PORT || 5432;
+const DB_USER = process.env.DB_USER || 'dbusername';
+const DB_PASSWORD = process.env.DB_PASSWORD || 'dbpassword';
+const DB_NAME = process.env.DB_NAME || 'cloud_service_risk_ratings';
+
 main(filePath);

@@ -42,6 +42,8 @@ services:
     volumes:
       - ./node-api:/node-api
     working_dir: /app
+    networks:
+      - backend
     command: "npm start" # You can modify this if you're using a custom start script
     restart: unless-stopped
 
