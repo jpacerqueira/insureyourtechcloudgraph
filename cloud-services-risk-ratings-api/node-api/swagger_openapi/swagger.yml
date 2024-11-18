@@ -1,0 +1,167 @@
+openapi: 3.0.0
+info:
+  title: Cloud Services Risk Ratings API
+  description: API for retrieving cloud services risk ratings and related information
+  version: 1.0.0
+
+servers:
+  - url: /api/v1
+
+paths:
+  /list/all/services:
+    get:
+      summary: Get all risk ratings
+      description: Retrieves a list of all cloud service risk ratings (limited to 100000 records)
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BasicRiskRating'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /free-tier/fetch/service/id/{id}:
+    get:
+      summary: Get risk rating by ID
+      description: Retrieves detailed risk rating information for a specific service by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DetailedRiskRating'
+        '404':
+          description: Risk rating not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /free-tier/fetch/service/service_provider/{service_provider}:
+    get:
+      summary: Get risk rating by service provider
+      description: Retrieves detailed risk rating information for a specific service provider
+      parameters:
+        - name: service_provider
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DetailedRiskRating'
+        '404':
+          description: Risk rating not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /free-tier/fetch/service/service_name/{service_name}:
+    get:
+      summary: Get risk rating by service name
+      description: Retrieves detailed risk rating information for a specific service name
+      parameters:
+        - name: service_name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DetailedRiskRating'
+        '404':
+          description: Risk rating not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    BasicRiskRating:
+      type: object
+      properties:
+        database_key_id:
+          type: string
+        service_name:
+          type: string
+        service_provider:
+          type: string
+        region_or_global:
+          type: string
+        remarks_outage_genai:
+          type: string
+
+    DetailedRiskRating:
+      type: object
+      properties:
+        database_key_id:
+          type: string
+        service_name:
+          type: string
+        service_provider:
+          type: string
+        region_or_global:
+          type: string
+        webscraper_annual_period_service_down_per_year_in_minutes:
+          type: number
+        expected_percentage_mins_down_on_agreed_sla:
+          type: number
+        actual_percentage_total_mins_down_from_webscraping:
+          type: number
+        service_sla_usage_percentage:
+          type: number
+        sla_deviation_connected_risk_0_999:
+          type: number
+        usage_connected_risk_0_999:
+          type: number
+        remarks_outage_genai:
+          type: string
+
+    Error:
+      type: object
+      properties:
+        error:
+          type: string

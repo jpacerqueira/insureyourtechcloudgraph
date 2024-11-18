@@ -58,10 +58,10 @@ function insertData(rows, callback) {
       }
 
       // Iterate over each row in the CSV and insert it into the database
-      let insertPromises = rows.map(function (row) {
+      let insertPromises = rows.map(function (row, index) {
         const columns = Object.keys(row).join(', ');
-        const values = Object.values(row).map(function (val) {
-          return `'${val}'`; // Wrap each value in single quotes for SQL
+        const values = Object.values(row).map(function (val, index) {
+          return index === 0 ? `${val}` : `'${val}'`; // Typecast first value as bigint
         }).join(', ');
 
         const query = `INSERT INTO "${process.env.DB_NAME}".service_risk_ratings (${columns}) VALUES (${values}) `;

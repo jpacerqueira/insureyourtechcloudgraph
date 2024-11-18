@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config({ path: '.env' });
 
 const riskRatingsRouter = require('./routes/CloudRiskRatings');
+const freeTierRiskRatingsRouter = require('./routes/FreeTierCloudRiskRatings');
 
 const app = express();
 app.use(express.json());

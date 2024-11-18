@@ -81,8 +81,13 @@
 <script>
     // Different options for each variable - Cloud and its Services
 
-    const optionsForVariable1 = ["AWS", "GCP", "Azure", "IBM", "OCI"];
-    const optionsForVariable2 = ["AWS_Lambda", "BigQuery", "PowerBI_App", "IBM_InformationSever" ,"AutonomousDB21C"];
+    const optionsForVariable1 = ["aws", "gcp", "azure", "ibm", "oci", "snowflake", "salesforce", "mongodb", "cloudflare", "akamai"];
+    const optionsForVariable2 = ["AWS Lambda", "Google Cloud BigQuery", "PowerBI APP", "Snowflake" ,"Salesforce", "AutonomousDB21C", "OCI AutonomousDB21C",
+     "MongoDb Atlas", "Google Cloud Spanner", "Google Cloud SQL", "Google Cloud Bigtable", "Google Cloud Memorystore", "Google Cloud Filestore", "Google Cloud Bigtable", 
+     "Google Cloud Memorystore", "Google Cloud Filestore", "AWS Aurora", "AWS RDS", "AWS ElastiCache", "AWS ElasticTranscoder",
+      "AWS CloudSearch", "AWS CloudFormation", "AWS CloudWatch", "AWS CloudTrail", "AWS CloudSearch", "AWS CloudFormation", "AWS CloudWatch", "AWS CloudTrail",
+    "Databricks", "AWS Redshift", "AWS ElasticTranscoder", "AWS CloudSearch", "AWS CloudFormation", "AWS CloudWatch", "AWS CloudTrail", "AWS CloudSearch", "AWS CloudFormation", "AWS CloudWatch", "AWS CloudTrail",
+    "Databricks", "AWS Elastic MapReduce", "AWS Elastic MapReduce Serverless"];
 
 
     // Variables to track number of pairs
@@ -157,7 +162,7 @@
     }
 
     // Function to gather selected values and submit as JSON
-    function submitData() {
+    async function submitData() {
         // Get values of Company Name and Project Name
         const companyName = document.getElementById("companyName").value.trim();
         const projectName = document.getElementById("projectName").value.trim() || companyName;
@@ -174,44 +179,61 @@
             variablePairs: []
         };
 
+        // Create table structure
+        let tableHTML = `
+            <table border="1" style="margin-top: 20px; width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th>Cloud Service</th>
+                        <th>Risk Rating</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>`;
+
         // Loop through each pair and gather selected values
         for (let i = 1; i <= pairCount; i++) {
             const variable1 = document.getElementById(`variable1_${i}`).value;
             const variable2 = document.getElementById(`variable2_${i}`).value;
 
-            // Only include pairs where both variables are selected
+            // Only process pairs where both variables are selected
             if (variable1 && variable2) {
                 data.variablePairs.push({
                     pair: i,
                     variable1: variable1,
                     variable2: variable2
                 });
+
+                try {
+                    const response = await fetch(`http://localhost:8000/cloud-services-risk-ratings/risk-ratings/free-tier/fetch/service/service_name/${variable2}`);
+                    const riskData = await response.json();
+                    
+                    // Add row to table
+                    tableHTML += `
+                        <tr>
+                            <td>${variable2}</td>
+                            <td>${riskData.riskRating || 'N/A'}</td>
+                            <td>${riskData.details || 'No details available'}</td>
+                        </tr>`;
+                } catch (error) {
+                    console.error(`Error fetching data for ${variable2}:`, error);
+                    tableHTML += `
+                        <tr>
+                            <td>${variable2}</td>
+                            <td colspan="2">Error fetching data</td>
+                        </tr>`;
+                }
             }
         }
 
-        // JSON payload
-        const payload = JSON.stringify(data);
+        tableHTML += `
+                </tbody>
+            </table>`;
 
-        // Print the payload to the console
-        console.log("Payload to be submitted:", payload);
-
-        // Send JSON payload as POST request
-        fetch("https://cloudriskgraph.b2c.insureyourtech.cloud/api/submit/cloudriskgraph/measure/new", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: payload
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Display submission result
-            document.getElementById("result").innerText = "Cloud.Risk - submitted successfully!";
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            document.getElementById("result").innerText = "An error occurred. Please try again.";
-        });
+        // Display the results table
+        document.getElementById("result").innerHTML = `
+            <h3>Cloud.Risk Results:</h3>
+            ${tableHTML}`;
     }
 
     // Initialize the variable pairs on page load

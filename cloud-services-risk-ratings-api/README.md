@@ -47,7 +47,7 @@ curl -X GET http://localhost:8000/cloud-services-risk-ratings/risk-ratings/provi
 An Example of the CSV data can be found in the `csv-loader` directory.
 
 ```bash
- head -n 29 ../information/datamodel/cloud-risk-datamodel-services-sla-outage.csv > data/cloud_service_risk_ratings.csv
+ head -n 77 ../information/datamodel/cloud-risk-datamodel-services-above-sla-outage.csv > data/cloud_service_risk_ratings.csv
  docker compose up --build
 ```
 
