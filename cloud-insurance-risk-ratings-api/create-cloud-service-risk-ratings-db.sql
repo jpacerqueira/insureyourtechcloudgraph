@@ -55,3 +55,13 @@ INSERT INTO cloud_service_risk_ratings.service_risk_ratings
  VALUES ('10000000000000', 'autonomousdb_21c', 'oci', 'global', '3', '0', '24', '365', '99.99', '360', '525600.000', '525547.440', '52.560', '-307.440', '0.01%', '0.07%', '0.07%', '-0.06%', '0.06%', '684.93%', '0.05%', '991.373', '997.118', '') ;
  
 SELECT * FROM cloud_service_risk_ratings.service_risk_ratings;
+
+
+ \c cloud_service_risk_ratings;
+grant all on database cloud_service_risk_ratings to dbusername;
+grant all on schema "public" to dbusername;
+grant all on all tables in schema "public" to dbusername;
+grant all on all sequences in schema "public" to dbusername;
+grant all on schema "cloud_service_risk_ratings" to dbusername;
+grant all on all tables in schema "cloud_service_risk_ratings" to dbusername;
+grant all on all sequences in schema "cloud_service_risk_ratings" to dbusername;
