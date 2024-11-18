@@ -88,6 +88,7 @@ def main():
         # Accept user questions/query
         query = st.text_input("Request outage information from your upload pdf file " + "\n" +
                               "- Ask Questions? e.g. " + "\n" +
+                              "- resume the outage in text , how long was the incident and what services got impacted? " + "\n" +
                               "- From pdf, What AWS services had outage,  how long was the outage, when was the outage?  ")
 
         if query:

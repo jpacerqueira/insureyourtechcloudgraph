@@ -1,4 +1,10 @@
-cloud vendor,cloud services,outages website,live status,other status,external outage detection,information level(1_2_3_4_5)
-Azure,https://azure.status.microsoft/en-gb/,https://azure.status.microsoft/en-gb/status/history/,https://azure.status.microsoft/en-gb/status/,,https://downdetector.co.uk/status/azure-microsoft-azure-cloud/,"1,2,3"
-AWS,https://health.aws.amazon.com/health/status,https://aws.amazon.com/premiumsupport/technology/pes/,https://health.aws.amazon.com/health/status,https://repost.aws/knowledge-center/aws-service-status,https://downdetector.co.uk/status/aws-amazon-web-services/,"1,2,3"
-GCP,https://status.cloud.google.com/summary,https://status.cloud.google.com/summary,https://status.cloud.google.com/,,https://downdetector.co.uk/status/gcp-google-cloud/,"1,2,3"
+cloud vendor,cloud services,outages history website,live status,other status 1,incident reports,external outage detection 1,external outage detection 2,external outage detection 3 - example usage,information level(1_2_3_4_5)
+Azure,https://azure.status.microsoft/en-gb/,https://azure.status.microsoft/en-gb/status/history/,https://azure.status.microsoft/en-gb/status/,,,https://downdetector.co.uk/status/azure-microsoft-azure-cloud/,,,"1,2,3"
+AWS,https://health.aws.amazon.com/health/status,https://aws.amazon.com/premiumsupport/technology/pes/,https://health.aws.amazon.com/health/status,https://repost.aws/knowledge-center/aws-service-status,,https://downdetector.co.uk/status/aws-amazon-web-services/,https://isdown.app/status/aws,https://isdown.app/status/aws/aws-lambda,"1,2,3"
+GCP,https://status.cloud.google.com/summary,https://status.cloud.google.com/summary,https://status.cloud.google.com/,,,https://downdetector.co.uk/status/gcp-google-cloud/,,,"1,2,3"
+IBM,https://cloud.ibm.com/status,,,,https://cloud.ibm.com/status/incident-reports,,,,
+OCI,https://ocistatus.oraclecloud.com/#/,https://ocistatus.oraclecloud.com/#/history,,,,,,,
+CloudFlare,https://www.cloudflarestatus.com/,,,,,,,,
+Akamai,https://www.akamaistatus.com/,,,,,,,,
+MongoDB,https://status.mongodb.com/,https://status.mongodb.com/history,,,,,,,
+Snowflake,https://status.snowflake.com/,https://status.snowflake.com/history,,,,,,,
