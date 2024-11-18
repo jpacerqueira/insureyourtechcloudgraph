@@ -39,7 +39,9 @@ CREATE TABLE service_risk_ratings (
 -- postgres-db  | CREATE TABLE
 --
 
-SELECT table_schema, table_name, column_name, column_default, is_nullable 
+SELECT session_user, current_database();
+
+SELECT table_catalog, table_schema, table_name, column_name, column_default, is_nullable 
     FROM information_schema.columns 
     WHERE table_schema like '%'
     ORDER BY table_schema, table_name, ordinal_position;

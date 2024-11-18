@@ -6,6 +6,8 @@ const pool = new Pool({
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
+    schema: process.env.DB_NAME,
+    search_path: process.env.DB_NAME,
     port: process.env.DB_PORT,
     max: 10,
     idleTimeoutMillis: 30000,
