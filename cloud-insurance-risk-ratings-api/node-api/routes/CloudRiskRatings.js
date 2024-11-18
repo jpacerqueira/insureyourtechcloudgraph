@@ -4,30 +4,34 @@ const db = require('../config/db');
 
 // Get all risk ratings
 router.get('/list/all', async function (req, res) {
+    let connection;
     try {
-        const connection = await db.connect();
-        const [rows] = await db.query(`SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings`);
+        connection = await db.connect();
+        const [rows] = await connection.query(`SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings`);
         
         if (rows.length > 0) {
             res.status(200).json(rows.slice(0, 100000)); // limit to 100000 rows
         } else {
             res.status(200).json([]);
         }
-        
-        connection.release();
     } catch (err) {
         console.error('Database connection error:', err.message);
         res.status(500).json({ error: 'Failed to retrieve risk ratings' });
+    } finally {
+        if (connection) {
+            connection.release();
+        }
     }
 });
 
 // Get a specific risk rating by ID
 router.get('/fetch/id/:id', async function (req, res, next) {
+    let connection;
     try {
-        const connection = await db.connect();
+        connection = await db.connect();
         var id = req.params.id;
-        const [rows] = await db.query(
-            `SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings WHERE database_key_id_10000000000001 = '${id}'`
+        const [rows] = await connection.query(
+            `SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings WHERE database_key_id_10000000000001 = '${id}'`,
         );
         
         if (rows.length > 0) {
@@ -35,11 +39,13 @@ router.get('/fetch/id/:id', async function (req, res, next) {
         } else {
             res.status(404).json({ error: 'Risk rating not found' });
         }
-        
-        connection.release();
     } catch (err) {
-        console.error(err);
+        console.error('Database connection error:', err);
         res.status(500).json({ error: 'Failed to retrieve risk rating' });
+    } finally {
+        if (connection) {
+            connection.release();
+        }
     }
 });
 
