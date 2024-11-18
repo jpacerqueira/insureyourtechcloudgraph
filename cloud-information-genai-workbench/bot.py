@@ -2,7 +2,7 @@ import os
 
 import streamlit as st
 from streamlit.logger import get_logger
-from langchain_community.callbacks.base import BaseCallbackHandler
+from langchain.callbacks.base import BaseCallbackHandler
 from langchain.prompts.chat import (
     ChatPromptTemplate,
     SystemMessagePromptTemplate,
