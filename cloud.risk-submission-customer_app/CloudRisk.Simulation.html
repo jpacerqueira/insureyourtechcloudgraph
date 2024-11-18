@@ -205,7 +205,17 @@
                 });
 
                 try {
-                    const response = await fetch(`http://localhost:8000/cloud-services-risk-ratings/risk-ratings/free-tier/fetch/service/service_name/${variable2}`);
+                    const response = await fetch(
+                        `http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${variable2}`,
+                        {
+                            method: 'GET',
+                            headers: {
+                                'Accept': 'application/json',
+                                'Content-Type': 'application/json'
+                            },
+                            mode: 'cors' // Enable CORS for cross-origin requests
+                        }
+                    );
                     const riskData = await response.json();
                     
                     // Add row to table

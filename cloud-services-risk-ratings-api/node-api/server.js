@@ -4,13 +4,14 @@ const dotenv = require('dotenv');
 dotenv.config({ path: '.env' });
 
 const riskRatingsRouter = require('./routes/CloudRiskRatings');
-const freeTierRiskRatingsRouter = require('./routes/FreeTierCloudRiskRatings');
+const freemiumRiskRatingsRouter = require('./routes/FreemiumCloudRiskRatings');
 
 const app = express();
 app.use(express.json());
 
 // API Routes
 app.use('/cloud-services-risk-ratings/risk-ratings', riskRatingsRouter);
+app.use('/cloud-services-risk-ratings/risk-ratings-freemium', freemiumRiskRatingsRouter);
 
 // Start the server
 const PORT = process.env.PORT || 8000;
