@@ -7,11 +7,14 @@ router.get('/list/all', async function (req, res) {
     let connection;
     try {
         connection = await db.connect();
-        const [rows] = await connection.query(`SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings`,
-
+        const result = await connection.query(
+            `SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings`
         );
         
-        if (rows.length > 0) {
+        // Handle result based on the database library's return format
+        const rows = Array.isArray(result) ? result[0] : result.rows;
+        
+        if (rows && rows.length > 0) {
             res.status(200).json(rows.slice(0, 100000)); // limit to 100000 rows
         } else {
             res.status(200).json([]);
@@ -32,11 +35,14 @@ router.get('/fetch/id/:id', async function (req, res, next) {
     try {
         connection = await db.connect();
         var id = req.params.id;
-        const [rows] = await connection.query(
-            `SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings WHERE database_key_id_10000000000001 = '${id}'`,
+        const result = await connection.query(
+            `SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings WHERE database_key_id_10000000000001 = '${id}'`
         );
 
-        if (rows.length > 0) {
+        // Handle result based on the database library's return format
+        const rows = Array.isArray(result) ? result[0] : result.rows;
+
+        if (rows && rows.length > 0) {
             res.status(200).json(rows[0]);
         } else {
             res.status(404).json({ error: 'Risk rating not found' });
