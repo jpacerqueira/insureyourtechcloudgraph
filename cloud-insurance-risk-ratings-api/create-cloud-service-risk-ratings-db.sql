@@ -1,14 +1,14 @@
 CREATE DATABASE cloud_service_risk_ratings;
  \c cloud_service_risk_ratings;
 CREATE SCHEMA cloud_service_risk_ratings;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cloud_service_risk_ratings TO dbusername;
-grant all on database cloud_service_risk_ratings to dbusername;
-grant all on schema "public" to dbusername;
-grant all on all tables in schema "public" to dbusername;
-grant all on all sequences in schema "public" to dbusername;
-grant all on schema "cloud_service_risk_ratings" to dbusername;
-grant all on all tables in schema "cloud_service_risk_ratings" to dbusername;
-grant all on all sequences in schema "cloud_service_risk_ratings" to dbusername;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cloud_service_risk_ratings TO postgres;
+grant all on database cloud_service_risk_ratings to postgres;
+grant all on schema "public" to postgres;
+grant all on all tables in schema "public" to postgres;
+grant all on all sequences in schema "public" to postgres;
+grant all on schema "cloud_service_risk_ratings" to postgres;
+grant all on all tables in schema "cloud_service_risk_ratings" to postgres;
+grant all on all sequences in schema "cloud_service_risk_ratings" to postgres;
 
 CREATE TABLE cloud_service_risk_ratings.service_risk_ratings (
     database_key_id_10000000000001 text,
@@ -42,7 +42,7 @@ CREATE TABLE cloud_service_risk_ratings.service_risk_ratings (
 --
 -- postgres-db  | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/create_database.sql
 -- postgres-db  | CREATE DATABASE
--- postgres-db  | You are now connected to database "cloud_service_risk_ratings" as user "dbusername".
+-- postgres-db  | You are now connected to database "cloud_service_risk_ratings" as user "postgres".
 -- postgres-db  | psql:/docker-entrypoint-initdb.d/create_database.sql:28: NOTICE:  identifier "customer_service_anual_days_daily_or_weekly_or_weekends_365_261_104" will be truncated to "customer_service_anual_days_daily_or_weekly_or_weekends_365_261"
 -- postgres-db  | psql:/docker-entrypoint-initdb.d/create_database.sql:28: NOTICE:  identifier "expected_by_sla_annual_service_minutes_up_365_times_24_60_equals_525600" will be truncated to "expected_by_sla_annual_service_minutes_up_365_times_24_60_equal"
 -- postgres-db  | psql:/docker-entrypoint-initdb.d/create_database.sql:28: NOTICE:  identifier "service_debit_credit_anual_sla_minutes_in_positive_credit_or_negative_debit_more_than_sla" will be truncated to "service_debit_credit_anual_sla_minutes_in_positive_credit_or_ne"
