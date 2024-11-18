@@ -11,6 +11,7 @@
   - Has Webscraping for automation information collection -  its is by Gen.AI stack , LLMs Vector(RAGs) of automatic info search 
   - - uses Ollama and Llama3.2 on prototype, custom model in construction
 
+
 ##  Customer Submission - via Submission Portal - Fremium example
 
 Portal Fremium Submission: https://insureyourtech.cloud/cloudrisk-simulation
@@ -20,7 +21,9 @@ Portal Fremium Submission: https://insureyourtech.cloud/cloudrisk-simulation
 - 
 ![customer submission Application Fremium](images/Customer_Submission_Via_Fremium_Portal.png)
 
-##  Customer Submission - Insurance Risk Meajurement
+
+##  Customer Submission - Insurance Risk Meajurement with Risk.Graph
+
 
 UI: http://localhost:8504  
 
