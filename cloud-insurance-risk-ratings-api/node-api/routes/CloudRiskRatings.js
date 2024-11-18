@@ -7,7 +7,7 @@ const db = require('../config/db');
 router.get('/list/all', function (req, res) {
     db.query(`SELECT * FROM service_risk_ratings `)
         .then(function ([rows]) {
-            res.json(rows);
+            res.status(200).json(rows);
         })
         .catch(function (err) {
             console.error(err);
@@ -21,7 +21,7 @@ router.get('/fetch/id/:id', function (req, res, next) {
     db.query(`SELECT * FROM service_risk_ratings WHERE database_key_id_10000000000001 = ${id} `)
         .then(function ([rows]) {
             if (rows.length > 0) {
-                res.json(rows[0]);
+                res.status(200).json(rows[0]);
             } else {
                 res.status(404).json({ error: 'Risk rating not found' });
             }
