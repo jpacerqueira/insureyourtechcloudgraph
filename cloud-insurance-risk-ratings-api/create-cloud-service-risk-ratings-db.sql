@@ -1,6 +1,15 @@
 CREATE DATABASE cloud_service_risk_ratings;
-CREATE SCHEMA cloud_service_risk_ratings;
  \c cloud_service_risk_ratings;
+CREATE SCHEMA cloud_service_risk_ratings;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cloud_service_risk_ratings TO dbusername;
+grant all on database cloud_service_risk_ratings to dbusername;
+grant all on schema "public" to dbusername;
+grant all on all tables in schema "public" to dbusername;
+grant all on all sequences in schema "public" to dbusername;
+grant all on schema "cloud_service_risk_ratings" to dbusername;
+grant all on all tables in schema "cloud_service_risk_ratings" to dbusername;
+grant all on all sequences in schema "cloud_service_risk_ratings" to dbusername;
+
 CREATE TABLE cloud_service_risk_ratings.service_risk_ratings (
     database_key_id_10000000000001 text,
     service_name text,
@@ -55,12 +64,3 @@ INSERT INTO service_risk_ratings
  
 SELECT * FROM service_risk_ratings;
 
- \c cloud_service_risk_ratings;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cloud_service_risk_ratings TO dbusername;
-grant all on database cloud_service_risk_ratings to dbusername;
-grant all on schema "public" to dbusername;
-grant all on all tables in schema "public" to dbusername;
-grant all on all sequences in schema "public" to dbusername;
-grant all on schema "cloud_service_risk_ratings" to dbusername;
-grant all on all tables in schema "cloud_service_risk_ratings" to dbusername;
-grant all on all sequences in schema "cloud_service_risk_ratings" to dbusername;
