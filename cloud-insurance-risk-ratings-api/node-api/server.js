@@ -1,7 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 // Load environment variables
-dotenv.config();
+dotenv.config({ path: '.env' });
 
 const riskRatingsRouter = require('./routes/CloudRiskRatings');
 
