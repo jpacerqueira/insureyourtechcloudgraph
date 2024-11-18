@@ -47,6 +47,8 @@ function insertData(rows, callback) {
       return callback(err); // Error connecting to DB
     }
     
+    console.log(await pool.query('SELECT NOW()'));
+    console.log(await pool.query('select current_schema;'));
     await sleep(2*1000); // sleep for 2s/2000ms
 
     client.query('BEGIN', function (err) {
@@ -62,7 +64,7 @@ function insertData(rows, callback) {
           return `'${val}'`; // Wrap each value in single quotes for SQL
         }).join(', ');
 
-        const query = `INSERT INTO "cloud_service_risk_ratings"."service_risk_ratings" (${columns}) VALUES (${values}) `;
+        const query = `INSERT INTO service_risk_ratings (${columns}) VALUES (${values}) `;
         /*const query = `INSERT INTO cloud_service_risk_ratings (${columns}) VALUES (${values}) `;*/
         return client.query(query);
       });
