@@ -7,7 +7,7 @@ const db = require('../config/db');
 router.get('/list/all', function (req, res) {
     const schema_set = `SET search_path TO '${process.env.DB_SCHEMA}' `;
     db.query(schema_set);
-    db.query(`SELECT * FROM service_risk_ratings `)
+    db.query(`SELECT * FROM '${process.env.DB_SCHEMA}'.service_risk_ratings `)
         .then(function ([rows]) {
             res.json(rows);
         })
@@ -22,7 +22,7 @@ router.get('/id=:id', function (req, res) {
     const schema_set = `SET search_path TO '${process.env.DB_SCHEMA}' `;
     db.query(schema_set);
     const { id } = req.params;
-    db.query(`SELECT * FROM service_risk_ratings WHERE database_key_id_10000000000001 = ? `, [id])
+    db.query(`SELECT * FROM '${process.env.DB_SCHEMA}'.service_risk_ratings WHERE database_key_id_10000000000001 = ? `, [id])
         .then(function ([rows]) {
             if (rows.length > 0) {
                 res.json(rows[0]);
