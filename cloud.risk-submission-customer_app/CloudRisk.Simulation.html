@@ -196,7 +196,6 @@
             const variable1 = document.getElementById(`variable1_${i}`).value;
             const variable2 = document.getElementById(`variable2_${i}`).value;
 
-            // Only process pairs where both variables are selected
             if (variable1 && variable2) {
                 data.variablePairs.push({
                     pair: i,
@@ -211,14 +210,19 @@
                             method: 'GET',
                             headers: {
                                 'Accept': 'application/json',
-                                'Content-Type': 'application/json'
+                                'Content-Type': 'application/json',
                             },
-                            mode: 'cors' // Enable CORS for cross-origin requests
+                            mode: 'cors',
+                            credentials: 'include'
                         }
                     );
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    
                     const riskData = await response.json();
                     
-                    // Add row to table
                     tableHTML += `
                         <tr>
                             <td>${variable2}</td>
@@ -230,7 +234,7 @@
                     tableHTML += `
                         <tr>
                             <td>${variable2}</td>
-                            <td colspan="2">Error fetching data</td>
+                            <td colspan="2">Error: ${error.message || 'Failed to fetch data'}</td>
                         </tr>`;
                 }
             }
