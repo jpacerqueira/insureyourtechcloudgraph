@@ -64,7 +64,7 @@ function insertData(rows, callback) {
           return `'${val}'`; // Wrap each value in single quotes for SQL
         }).join(', ');
 
-        const query = `INSERT INTO service_risk_ratings (${columns}) VALUES (${values}) `;
+        const query = `INSERT INTO '${process.env.DB_NAME}'.service_risk_ratings (${columns}) VALUES (${values}) `;
         /*const query = `INSERT INTO cloud_service_risk_ratings (${columns}) VALUES (${values}) `;*/
         return client.query(query);
       });
