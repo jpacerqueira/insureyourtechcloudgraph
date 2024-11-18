@@ -8,7 +8,8 @@ router.get('/list/all/services', async function (req, res) {
     try {
         connection = await db.connect();
         const result = await connection.query(
-            `SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings`
+            `SELECT database_key_id, service_name, service_provider, region_or_global, remarks_outage_genai
+              FROM "${process.env.DB_NAME}".service_risk_ratings`
         );
         
         // Handle result based on the database library's return format
@@ -30,13 +31,17 @@ router.get('/list/all/services', async function (req, res) {
 });
 
 // Get a specific risk rating by ID
-router.get('/fetch/service/id/:id', async function (req, res, next) {
+router.get('/free-tier/fetch/service/id/:id', async function (req, res, next) {
     let connection;
     try {
         connection = await db.connect();
         var id = req.params.id;
         const result = await connection.query(
-            `SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings WHERE database_key_id_10000000000001 = '${id}'`
+            `SELECT database_key_id, service_name, service_provider, region_or_global,
+            webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
+            actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage,
+            sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, remarks_outage_genai 
+               FROM "${process.env.DB_NAME}".service_risk_ratings WHERE database_key_id = '${id}'`
         );
 
         // Handle result based on the database library's return format
@@ -58,13 +63,17 @@ router.get('/fetch/service/id/:id', async function (req, res, next) {
 });
 
 // Get a specific risk rating by service_provider
-router.get('/fetch/service/service_provider/:service_provider', async function (req, res, next) {
+router.get('/free-tier/fetch/service/service_provider/:service_provider', async function (req, res, next) {
     let connection;
     try {
         connection = await db.connect();
         var service_provider = req.params.service_provider;
         const result = await connection.query(
-            `SELECT * FROM "${process.env.DB_NAME}".service_risk_ratings WHERE service_provider = '${service_provider}'`
+            `SELECT database_key_id, service_name, service_provider, region_or_global,
+            webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
+            actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage,
+            sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, remarks_outage_genai  
+            FROM "${process.env.DB_NAME}".service_risk_ratings WHERE service_provider = '${service_provider}'`
         );
 
         // Handle result based on the database library's return format
@@ -86,7 +95,7 @@ router.get('/fetch/service/service_provider/:service_provider', async function (
 });
 
 // Get a specific risk rating by service_name
-router.get('/fetch/service/service_name/:service_name', async function (req, res, next) {
+router.get('/free-tier/fetch/service/service_name/:service_name', async function (req, res, next) {
     let connection;
     try {
         connection = await db.connect();
