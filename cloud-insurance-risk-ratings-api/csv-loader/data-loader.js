@@ -13,6 +13,10 @@ const pool = new Pool({
   port: process.env.DB_PORT,
   schema: process.env.DB_NAME,
   search_path: process.env.DB_NAME,
+  max: 100,
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 2000,
+  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: true } : false,
 });
 
 function loadCSV(filePath, callback) {
@@ -58,7 +62,7 @@ function insertData(rows, callback) {
           return `'${val}'`; // Wrap each value in single quotes for SQL
         }).join(', ');
 
-        const query = `INSERT INTO service_risk_ratings (${columns}) VALUES (${values}) `;
+        const query = `INSERT INTO "cloud_service_risk_ratings"."service_risk_ratings" (${columns}) VALUES (${values}) `;
         /*const query = `INSERT INTO cloud_service_risk_ratings (${columns}) VALUES (${values}) `;*/
         return client.query(query);
       });

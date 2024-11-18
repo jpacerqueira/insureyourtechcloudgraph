@@ -9,7 +9,7 @@ const pool = new Pool({
     schema: process.env.DB_NAME,
     search_path: process.env.DB_NAME,
     port: process.env.DB_PORT,
-    max: 10,
+    max: 100,
     idleTimeoutMillis: 30000,
     connectionTimeoutMillis: 2000,
     ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: true } : false,

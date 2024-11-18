@@ -48,3 +48,9 @@ An Example of the CSV data can be found in the `csv-loader` directory.
  head -n 29 ../information/datamodel/cloud-risk-datamodel-services-sla-outage.csv > data/cloud_service_risk_ratings.csv
  docker compose up --build
 ```
+
+To rebuild the API without running it, use the following command, option 3:
+
+```bash
+ bash -x build-api-cluster 3
+```
