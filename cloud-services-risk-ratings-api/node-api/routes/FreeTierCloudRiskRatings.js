@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../config/db');
 
 // Get all risk ratings
-router.get('/list/all/services', async function (req, res) {
+router.get('/free-tier/list/all/services', async function (req, res) {
     let connection;
     try {
         connection = await db.connect();

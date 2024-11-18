@@ -3,8 +3,8 @@ const dotenv = require('dotenv');
 // Load environment variables
 dotenv.config({ path: '.env' });
 
-const riskRatingsRouter = require('./routes/CloudRiskRatings');
 const freeTierRiskRatingsRouter = require('./routes/FreeTierCloudRiskRatings');
+const riskRatingsRouter = require('./routes/CloudRiskRatings');
 
 const app = express();
 app.use(express.json());
