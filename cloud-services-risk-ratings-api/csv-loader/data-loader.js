@@ -47,7 +47,7 @@ function insertData(rows, callback) {
       return callback(err); // Error connecting to DB
     }
     
-    console.log(await pool.query('SELECT NOW()'));
+    /*console.log(await pool.query('SELECT NOW()'));*/
     console.log(await pool.query('select current_schema;'));
     await sleep(2*1000); // sleep for 2s/2000ms
 

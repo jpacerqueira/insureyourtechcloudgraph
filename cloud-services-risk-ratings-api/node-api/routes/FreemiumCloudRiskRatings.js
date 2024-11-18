@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../config/db');
 
 // Get all risk ratings
-router.get('/free-tier/list/all/services', async function (req, res) {
+router.get('/freemium/list/all/services', async function (req, res) {
     let connection;
     try {
         connection = await db.connect();
@@ -31,7 +31,7 @@ router.get('/free-tier/list/all/services', async function (req, res) {
 });
 
 // Get a specific risk rating by ID
-router.get('/free-tier/fetch/service/id/:id', async function (req, res, next) {
+router.get('/freemium/fetch/service/id/:id', async function (req, res, next) {
     let connection;
     try {
         connection = await db.connect();
@@ -63,7 +63,7 @@ router.get('/free-tier/fetch/service/id/:id', async function (req, res, next) {
 });
 
 // Get a specific risk rating by service_provider
-router.get('/free-tier/fetch/service/service_provider/:service_provider', async function (req, res, next) {
+router.get('/freemium/fetch/service/service_provider/:service_provider', async function (req, res, next) {
     let connection;
     try {
         connection = await db.connect();
@@ -95,7 +95,7 @@ router.get('/free-tier/fetch/service/service_provider/:service_provider', async 
 });
 
 // Get a specific risk rating by service_name
-router.get('/free-tier/fetch/service/service_name/:service_name', async function (req, res, next) {
+router.get('/freemium/fetch/service/service_name/:service_name', async function (req, res, next) {
     let connection;
     try {
         connection = await db.connect();

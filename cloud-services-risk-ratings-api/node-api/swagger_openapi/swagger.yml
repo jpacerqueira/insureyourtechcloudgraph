@@ -8,7 +8,7 @@ servers:
   - url: /api/v1
 
 paths:
-  /cloud-services-risk-ratings/risk-ratings/free-tier/list/all/services:
+  /cloud-services-risk-ratings/risk-ratings/freemium/list/all/services:
     get:
       summary: Get all risk ratings
       description: Retrieves a list of all cloud service risk ratings (limited to 100000 records)
@@ -28,7 +28,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /cloud-services-risk-ratings/risk-ratings/free-tier/fetch/service/id/{id}:
+  /cloud-services-risk-ratings/risk-ratings/freemium/fetch/service/id/{id}:
     get:
       summary: Get risk rating by ID
       description: Retrieves detailed risk rating information for a specific service by ID
@@ -58,7 +58,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /cloud-services-risk-ratings/risk-ratings/free-tier/fetch/service/service_provider/{service_provider}:
+  /cloud-services-risk-ratings/risk-ratings/freemium/fetch/service/service_provider/{service_provider}:
     get:
       summary: Get risk rating by service provider
       description: Retrieves detailed risk rating information for a specific service provider
@@ -88,7 +88,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /cloud-services-risk-ratings/risk-ratings/free-tier/fetch/service/service_name/{service_name}:
+  /cloud-services-risk-ratings/risk-ratings/freemium/fetch/service/service_name/{service_name}:
     get:
       summary: Get risk rating by service name
       description: Retrieves detailed risk rating information for a specific service name

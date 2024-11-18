@@ -205,7 +205,7 @@
                 });
 
                 try {
-                    const response = await fetch(`http://localhost:8000/cloud-services-risk-ratings/risk-ratings/free-tier/fetch/service/service_name/${variable2}`);
+                    const response = await fetch(`http://localhost:8000/cloud-services-risk-ratings/risk-ratings/freemium/fetch/service/service_name/${variable2}`);
                     const riskData = await response.json();
                     
                     // Add row to table
