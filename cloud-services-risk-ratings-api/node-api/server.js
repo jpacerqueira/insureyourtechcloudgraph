@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 // API Routes
-app.use('/api/risk-ratings', riskRatingsRouter);
+app.use('/cloud-services-risk-ratings/risk-ratings', riskRatingsRouter);
 
 // Start the server
 const PORT = process.env.PORT || 3000;

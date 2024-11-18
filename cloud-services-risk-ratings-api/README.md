@@ -16,9 +16,9 @@ To run the API, navigate to the root directory and run `docker compose up`. This
 
 The API has the following endpoints:
 
-- `GET /cloud-insurance-risk-ratings/risk-ratings`: Get the risk ratings for all cloud providers.
-- `GET /cloud-insurance-risk-ratings/risk-ratings/{provider}`: Get the risk ratings for a specific cloud provider.
-- `GET /cloud-insurance-risk-ratings/risk-ratings/{provider}/{metric}`: Get the risk ratings for a specific cloud provider and metric.
+- `GET /cloud-services-risk-ratings/risk-ratings`: Get the risk ratings for all cloud providers.
+- `GET /cloud-services-risk-ratings/risk-ratings/{provider}`: Get the risk ratings for a specific cloud provider.
+- `GET /cloud-services-risk-ratings/risk-ratings/{provider}/{metric}`: Get the risk ratings for a specific cloud provider and metric.
 
 
 ## Example Usage
@@ -26,20 +26,20 @@ The API has the following endpoints:
 To get the risk ratings for all cloud providers, you can make a GET request to the `/risk-ratings` endpoint.
 
 ```bash
-curl http://localhost:3000/cloud-insurance-risk-ratings/risk-ratings
+curl http://localhost:3000/cloud-services-risk-ratings/risk-ratings
     ``` 
 
-To get the risk ratings for a specific cloud provider, you can make a GET request to the `/cloud-insurance-risk-ratings/risk-ratings/{provider}` endpoint.
+To get the risk ratings for a specific cloud provider, you can make a GET request to the `/cloud-services-risk-ratings/risk-ratings/{provider}` endpoint.
 
 ```bash
-curl http://localhost:8000/cloud-insurance-risk-ratings/risk-ratings/aws
+curl http://localhost:8000/cloud-services-risk-ratings/risk-ratings/aws
 ```
 
 
 To get the risk ratings for a specific cloud provider and metric, you can make a GET request to the `/risk-ratings/{provider}/{metric}` endpoint.
 
 ```bash
-curl http://localhost:3000/cloud-insurance-risk-ratings/risk-ratings/aws/outages
+curl http://localhost:3000/cloud-services-risk-ratings/risk-ratings/aws/outages
 ```
 
 An Example of the CSV data can be found in the `csv-loader` directory.
@@ -64,7 +64,7 @@ Example of the CSV data can be found in the `csv-loader` directory.
 Example Output
 
 ```bash
-curl http://localhost:3000/cloud-insurance-risk-ratings/fetch/id/10000000000001
+curl http://localhost:3000/cloud-services-risk-ratings/fetch/id/10000000000001
 ```
 
 ```bash
