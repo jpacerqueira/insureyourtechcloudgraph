@@ -8,20 +8,32 @@ const pool = new Pool({
     database: process.env.DB_NAME,
     schema: process.env.DB_SCHEMA,
     port: process.env.DB_PORT,
-    max: 10, // Maximum number of connections
-    idleTimeoutMillis: 30000, // Close idle clients after 30 seconds
-    connectionTimeoutMillis: 2000, // Timeout after 2 seconds if no connection
+    max: 10,
+    idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 2000,
+    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: true } : false,
 });
 
+// Improve error handling with async/await
 pool.on('error', (err, client) => {
-    console.error('Unexpected error on idle client', err)
-    process.exit(-1)
-  })
+    console.error('Unexpected error on idle client', err);
+    if (process.env.NODE_ENV !== 'production') {
+        process.exit(-1);
+    }
+});
 
-  pool.connect((err, connection) => {
-      if (err) throw err;
-      console.log('Database is connected successfully !');
-      connection.release();
-  }); 
+// Use async/await for initial connection test
+const testConnection = async () => {
+    try {
+        const connection = await pool.connect();
+        console.log('Database connected successfully!');
+        connection.release();
+    } catch (err) {
+        console.error('Database connection error:', err.message);
+        throw err;
+    }
+};
+
+testConnection();
 
 module.exports = pool;
