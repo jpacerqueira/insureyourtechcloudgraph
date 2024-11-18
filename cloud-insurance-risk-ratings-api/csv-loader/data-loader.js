@@ -96,4 +96,12 @@ function main(filePath) {
 
 // Execute the main function with the provided CSV file path
 const filePath = process.argv[2]; // Get the CSV file path from command-line arguments
+
+//validate variables
+const DB_HOST = process.env.DB_HOST || 'postgres-db'; // localhost
+const DB_PORT = process.env.DB_PORT || 5432;
+const DB_USER = process.env.DB_USER || 'dbusername';
+const DB_PASSWORD = process.env.DB_PASSWORD || 'dbpassword';
+const DB_NAME = process.env.DB_NAME || 'cloud_service_risk_ratings';
+
 main(filePath);
