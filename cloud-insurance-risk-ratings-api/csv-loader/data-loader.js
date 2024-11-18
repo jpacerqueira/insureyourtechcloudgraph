@@ -10,7 +10,6 @@ const pool = new Pool({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  schema: process.env.DB_SCHEMA,
   port: process.env.DB_PORT,
 });
 
@@ -57,10 +56,7 @@ function insertData(rows, callback) {
           return `'${val}'`; // Wrap each value in single quotes for SQL
         }).join(', ');
 
-        const schema_set = `SET search_path TO '${process.env.DB_SCHEMA}' `;
-        client.query(schema_set);
-
-        const query = `INSERT INTO '${process.env.DB_SCHEMA}'.service_risk_ratings (${columns}) VALUES (${values}) `;
+        const query = `INSERT INTO service_risk_ratings (${columns}) VALUES (${values}) `;
         /*const query = `INSERT INTO cloud_service_risk_ratings (${columns}) VALUES (${values}) `;*/
         return client.query(query);
       });
