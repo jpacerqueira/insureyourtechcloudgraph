@@ -61,7 +61,7 @@ function insertData(rows, callback) {
       let insertPromises = rows.map(function (row, index) {
         const columns = Object.keys(row).join(', ');
         const values = Object.values(row).map(function (val, index) {
-          return index === 0 ? `'${val}'::bigint` : `'${val}'`; // Typecast first value as bigint
+          return index === 0 ? `${val}` : `'${val}'`; // Typecast first value as bigint
         }).join(', ');
 
         const query = `INSERT INTO "${process.env.DB_NAME}".service_risk_ratings (${columns}) VALUES (${values}) `;
