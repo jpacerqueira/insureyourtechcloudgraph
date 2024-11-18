@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: cloud_service_risk_ratings
+      POSTGRES_DB: xx_cloud_service_risk_ratings
     ports:
       - "5432:5432" # Expose DB to port 5432
     volumes:

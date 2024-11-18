@@ -1,4 +1,4 @@
-CREATE DATABASE cloud_service_risk_ratings;
+CREATE DATABASE cloud_service_risk_ratings; -- from docker-c
  \c cloud_service_risk_ratings;
 CREATE SCHEMA cloud_service_risk_ratings;
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cloud_service_risk_ratings TO postgres;
