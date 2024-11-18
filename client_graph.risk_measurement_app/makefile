@@ -11,4 +11,3 @@ customer_app:
 workbench_apps:
 	sleep 1
         cd cloud-information-genai-workbench ; bash -x workbench-start-cluster 1 
-

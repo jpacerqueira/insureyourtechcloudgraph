@@ -27,11 +27,12 @@ UI: http://localhost:8504
 
 
 Client Risk Graph - New Cloud Risk Assesment : http://localhost:8504
-
+Cloid Risk Measurement APP - Supported by Neo4J Risk.Graph
 
 launch services
 
 ```
+cd client_graph.risk_measurement_app
 make all
 bash -x open-all-applications
 ```
