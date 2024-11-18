@@ -16,10 +16,81 @@ database_key_id,service_name,service_provider,global_or_by_regions,region,availa
 10000000000014,Azure functions,azure,global,,,4,1,24,365,99.999,2280,525600.000,525594.744,5.256,-2274.744,0.00%,0.43%,0.43%,-0.43%,0.43%,43379.00%,0.43%,561.300,985.999,2 days down,,,
 10000000000015,powerbi_app,azure,global,,,1,1,24,365,99.991,7268,525600.000,525552.696,47.304,-7220.696,0.01%,1.38%,1.38%,-1.37%,1.37%,15364.45%,0.35%,831.605,967.918,5 days down,,,
 10000000000016,azure_cdn,azure,global,,,4,1,24,365,99.999,2280,525600.000,525594.744,5.256,-2274.744,0.00%,0.43%,0.43%,-0.43%,0.43%,43379.00%,0.43%,561.300,985.999,2 days down,,,
-10000000000017,Storage Accounts,azure,global,,,4,1,24,365,99.990,2280,525600.000,525547.440,52.560,-2227.440,0.01%,0.43%,0.43%,-0.42%,0.42%,4337.90%,0.43%,951.231,985.999,2 days down,,,"An Azure storage account contains all of your Azure Storage data objects: blobs, files, queues, and tables. The storage account provides a unique namespace for your Azure Storage data that's accessible from anywhere in the world over HTTP or HTTPS. Data in your storage account is durable and highly available, secure, and massively scalable"
+10000000000017,Storage Accounts,azure,global,,,4,1,24,365,99.990,2280,525600.000,525547.440,52.560,-2227.440,0.01%,0.43%,0.43%,-0.42%,0.42%,4337.90%,0.43%,951.231,985.999,2 days down,,,"An Azure storage account contains all of your Azure Storage data objects: blobs, files, queues, and tables. The storage account provides a unique namespace for your Azure Storage data that is accessible from anywhere in the world over HTTP or HTTPS. Data in your storage account is durable and highly available, secure, and massively scalable"
 10000000000018,Azure Kubernetes Service (AKS),azure,global,,,4,1,24,365,99.500,4320,525600.000,522972.000,2628.000,-1692.000,0.50%,0.82%,0.82%,-0.32%,0.32%,164.38%,0.82%,984.152,974.367,3 days down,,,
-10000000000019,Dedicated Storage Instance,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
-
+10000000000019,Dedicated Storage Instance,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000020,Data Engine (previously SQL Query),ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000021,Data Product Hub,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000022,Databases,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000023,Databases for DataStax,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000024,Databases for EDB,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000025,Databases for Elasticsearch,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000026,Databases for etcd,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000027,Databases for MongoDB,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000028,Databases for MySQL,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
 Asia Pacific
 All active
 Europe
@@ -28,8 +99,7 @@ North America
 All active
 South America
 All active",,
-10000000000020,Data Engine (previously SQL Query),ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
-
+10000000000029,Databases for PostgreSQL,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
 Asia Pacific
 All active
 Europe
@@ -38,8 +108,7 @@ North America
 All active
 South America
 All active",,
-10000000000021,Data Product Hub,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
-
+10000000000030,Databases for Redis,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
 Asia Pacific
 All active
 Europe
@@ -48,8 +117,7 @@ North America
 All active
 South America
 All active",,
-10000000000022,Databases,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
-
+10000000000031,DataStage,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
 Asia Pacific
 All active
 Europe
@@ -58,8 +126,7 @@ North America
 All active
 South America
 All active",,
-10000000000023,Databases for DataStax,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
-
+10000000000032,Db2,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
 Asia Pacific
 All active
 Europe
@@ -68,10 +135,300 @@ North America
 All active
 South America
 All active",,
-10000000000024,Databases for EDB,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
-
+10000000000033,Db2 Warehouse,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
 Asia Pacific
 All active
 Europe
 All active
 North America
+All active
+South America
+All active",,
+10000000000034,watsonx BI Assistant,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
+Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000035,Dedicated Storage Instance,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
+Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000036,Functions,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
+Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000037,Cloud Object Storage,ibm,global,,,4,1,24,365,99.990,120,525600.000,525547.440,52.560,-67.440,0.01%,0.02%,0.02%,-0.01%,0.01%,228.31%,0.02%,996.391,998.316,,"Public location status
+Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000038,Red Hat OpenShift on IBM Cloud,ibm,global,,,4,1,24,365,99.500,2400,525600.000,522972.000,2628.000,228.000,0.50%,0.46%,0.46%,0.04%,-0.04%,91.32%,0.46%,988.531,985.315,,"Public location status
+Asia Pacific
+All active
+Europe
+All active
+North America
+All active
+South America
+All active",,
+10000000000039,Apigee					,gcp,global,,,4,1,24,365,99.990,320,525600.000,525547.440,52.560,-267.440,0.01%,0.06%,0.06%,-0.05%,0.05%,608.83%,0.06%,992.210,997.175,0 days 5h20 down,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000040,Google BigQuery							,gcp,global,,,4,1,24,365,99.990,320,525600.000,525547.440,52.560,-267.440,0.01%,0.06%,0.06%,-0.05%,0.05%,608.83%,0.06%,992.210,997.175,0 days 5h20 down,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000041,AlloyDB for PostgreSQL,gcp,global,,,4,1,24,365,99.990,320,525600.000,525547.440,52.560,-267.440,0.01%,0.06%,0.06%,-0.05%,0.05%,608.83%,0.06%,992.210,997.175,0 days 5h20 down,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000042,Google Cloud Dataproc,gcp,global,,,4,1,24,365,99.990,320,525600.000,525547.440,52.560,-267.440,0.01%,0.06%,0.06%,-0.05%,0.05%,608.83%,0.06%,992.210,997.175,0 days 5h20 down,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000043,Google Cloud Dataflow,gcp,global,,,4,1,24,365,99.990,320,525600.000,525547.440,52.560,-267.440,0.01%,0.06%,0.06%,-0.05%,0.05%,608.83%,0.06%,992.210,997.175,0 days 5h20 down,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000044,Google Cloud Storage,gcp,global,,,4,1,24,365,99.990,320,525600.000,525547.440,52.560,-267.440,0.01%,0.06%,0.06%,-0.05%,0.05%,608.83%,0.06%,992.210,997.175,0 days 5h20 down,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000045,google_cloud_and_media_cdn,gcp,global,,,4,1,24,365,99.999,320,525600.000,525594.744,5.256,-314.744,0.00%,0.06%,0.06%,-0.06%,0.06%,6088.28%,0.06%,937.560,997.175,0 days 5h20 down,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000046,Google Kubernetes Engine,gcp,global,,,4,1,24,365,99.500,2400,525600.000,522972.000,2628.000,228.000,0.50%,0.46%,0.46%,0.04%,-0.04%,91.32%,0.46%,988.531,985.315,2 days down,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000047,Amazon API Gateway,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000048,Amazon Bedrock,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000049,Amazon CloudFront,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000050,Amazon CloudWatch Application Insights,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000051,Amazon CodeGuru Profiler,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000052,Amazon DataZone,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000053,Amazon DocumentDB,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000054,Amazon DynamoDB,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000055,Amazon EC2 Instance Connect,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000056,Amazon Elastic Compute Cloud,aws,global,,,4,0,24,365,99.950,411,525600.000,525337.200,262.800,-148.200,0.05%,0.08%,0.08%,-0.03%,0.03%,156.39%,0.08%,996.157,996.656,0 days 6h51 down,,,
+10000000000057,Amazon Elastic Container Service,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000058,Amazon Elastic File System,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000059,Amazon Elastic Load Balancing,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000060,Amazon Elastic MapReduce,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000061,Amazon ElastiCache,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000062,Amazon EMR Serverless,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,
+10000000000063,Amazon FinSpace,aws,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,"Amazon FinSpace (Canada-Central)
+Amazon FinSpace (Frankfurt)
+Amazon FinSpace (Ireland)
+Amazon FinSpace (London)
+Amazon FinSpace (N. Virginia)
+Amazon FinSpace (Ohio)
+Amazon FinSpace (Singapore)
+Amazon FinSpace (Sydney)
+Amazon FinSpace (Tokyo)",,
+10000000000064,Amazon QuickSight,aws,global,,,4,0,24,365,99.950,108,525600.000,525337.200,262.800,154.800,0.05%,0.02%,0.02%,0.03%,-0.03%,41.10%,0.02%,997.885,998.384,0 days 1h48 down,,,
+10000000000065,AWS Lambda,aws,global,,,4,0,24,365,99.950,415,525600.000,525337.200,262.800,-152.200,0.05%,0.08%,0.08%,-0.03%,0.03%,157.91%,0.08%,996.134,996.634,0 day 7h15 down,"AWS Lambda (Bahrain)
+AWS Lambda (Calgary)
+AWS Lambda (Canada-Central)
+AWS Lambda (Cape Town)
+AWS Lambda (Frankfurt)
+AWS Lambda (Hong Kong)
+AWS Lambda (Hyderabad)
+AWS Lambda (Ireland)
+AWS Lambda (Jakarta)
+AWS Lambda (London)
+AWS Lambda (Malaysia)
+AWS Lambda (Melbourne)
+AWS Lambda (Milan)
+AWS Lambda (Mumbai)
+AWS Lambda (N. California)
+AWS Lambda (N. Virginia)
+AWS Lambda (Ohio)
+AWS Lambda (Oregon)
+AWS Lambda (Osaka)
+AWS Lambda (Paris)
+AWS Lambda (Sao Paulo)
+AWS Lambda (Seoul)
+AWS Lambda (Singapore)
+AWS Lambda (Spain)
+AWS Lambda (Stockholm)
+AWS Lambda (Sydney)
+AWS Lambda (Tel Aviv)
+AWS Lambda (Tokyo)
+AWS Lambda (UAE)
+AWS Lambda (Zurich)","From external analysis  https://isdown.app/status/aws/aws-lambda
+
+AWS Lambda outage history
+IsDown has tracked 9 incidents for AWS Lambda since started monitoring AWS status in May 2020.
+* 		
+Oct 07
+2024
+
+Increased API Error Rates - Ohio
+about 1 month ago · lasted 34 minutes
+
+We are investigating Increased API Error Rates for Multiple services in the US-EAST-2 Region. More details
+
+* 		
+Sep 11
+2024
+Increased Error Rates - Milan
+2 months ago · lasted 41 minutes
+
+We are investigating increased error rates for multiple services in the EU-SOUTH-1 Region. We are actively engaged and will provide more information as soon as we have it. More details
+
+* 		
+Jul 30
+2024
+Increased API Error Rates - N. Virginia
+4 months ago · lasted about 6 hours
+We are seeing increased error rates and latencies for some service APIs within the US-EAST-1 region. More details
+* 		May
+2020
+...Is Down started monitoring AWS status We have tracked and collected 9 incidents for AWS Lambda since started monitoring AWS status",
+10000000000066,aws_cloudfront,aws,global,,,4,1,24,365,99.950,380,525600.000,525337.200,262.800,-117.200,0.05%,0.07%,0.07%,-0.02%,0.02%,144.60%,0.07%,996.334,996.833,,,,
+10000000000067,AWS Step Functions,aws,global,,,4,1,24,365,99.500,360,525600.000,522972.000,2628.000,2268.000,0.50%,0.07%,0.07%,0.43%,-0.43%,13.70%,0.07%,993.184,996.947,,,,
+10000000000068,s3,aws,global,,,4,1,24,365,99.500,360,525600.000,522972.000,2628.000,2268.000,0.50%,0.07%,0.07%,0.43%,-0.43%,13.70%,0.07%,993.184,996.947,,,,
+10000000000069,Amazon Elastic Kubernetes Service,aws,global,,,4,1,24,365,99.500,2400,525600.000,522972.000,2628.000,228.000,0.50%,0.46%,0.46%,0.04%,-0.04%,91.32%,0.46%,988.531,985.315,,"Amazon Elastic Kubernetes Service (Bahrain)
+Amazon Elastic Kubernetes Service (Calgary)
+Amazon Elastic Kubernetes Service (Canada-Central)
+Amazon Elastic Kubernetes Service (Cape Town)
+Amazon Elastic Kubernetes Service (Frankfurt)
+Amazon Elastic Kubernetes Service (Hong Kong)
+Amazon Elastic Kubernetes Service (Hyderabad)
+Amazon Elastic Kubernetes Service (Ireland)
+Amazon Elastic Kubernetes Service (Jakarta)
+Amazon Elastic Kubernetes Service (London)
+Amazon Elastic Kubernetes Service (Malaysia)
+Amazon Elastic Kubernetes Service (Melbourne)
+Amazon Elastic Kubernetes Service (Milan)
+Amazon Elastic Kubernetes Service (Mumbai)
+Amazon Elastic Kubernetes Service (N. California)
+Amazon Elastic Kubernetes Service (N. Virginia)
+Amazon Elastic Kubernetes Service (Ohio)
+Amazon Elastic Kubernetes Service (Oregon)
+Amazon Elastic Kubernetes Service (Osaka)
+Amazon Elastic Kubernetes Service (Paris)
+Amazon Elastic Kubernetes Service (Sao Paulo)
+Amazon Elastic Kubernetes Service (Seoul)
+Amazon Elastic Kubernetes Service (Singapore)
+Amazon Elastic Kubernetes Service (Spain)
+Amazon Elastic Kubernetes Service (Stockholm)
+Amazon Elastic Kubernetes Service (Sydney)
+Amazon Elastic Kubernetes Service (Tel Aviv)
+Amazon Elastic Kubernetes Service (Tokyo)
+Amazon Elastic Kubernetes Service (UAE)
+Amazon Elastic Kubernetes Service (Zurich)",,
+10000000000070,Salesforce SaaS,salesforce,global,,,1,1,24,365,99.950,360,525600.000,525337.200,262.800,-97.200,0.05%,0.07%,0.07%,-0.02%,0.02%,136.99%,0.02%,996.448,997.460,,,,
+10000000000071,Snowflake on AWS,snowflake,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,"Current Snowflake Status
+All Systems Operational
+Amazon Web Services Regions
+ AWS - US West (Oregon)
+Operational
+ AWS - GovCloud (US-West)
+Operational
+ AWS - Canada (Central)
+Operational
+ AWS - US East (Ohio)
+Operational
+ AWS - US East (N. Virginia)
+Operational
+ AWS - GovCloud (US-East)
+Operational
+ AWS GovCloud - DoD
+Operational
+ AWS - South America (São Paulo)
+Operational
+ AWS - Europe (Ireland)
+Operational
+ AWS - Europe (London)
+Operational
+ AWS - Europe (Paris)
+Operational
+ AWS - Europe (Zürich)
+Operational
+ AWS - Europe (Frankfurt)
+Operational
+ AWS - Europe (Stockholm)
+Operational
+ AWS - Asia Pacific (Mumbai)
+Operational
+ AWS - Asia Pacific (Singapore)
+Operational
+ AWS - Asia Pacific (Jakarta)
+Operational
+ AWS - Asia Pacific (Seoul)
+Operational
+ AWS - Asia Pacific (Sydney)
+Operational
+ AWS - Asia Pacific (Osaka)
+Operational
+ AWS - Asia Pacific (Tokyo)
+Operational
+Microsoft Azure Regions
+ Azure - West US 2 (Washington)
+Operational
+ Azure - South Central US (Texas)
+Operational
+ Azure - Central US (Iowa)
+Operational
+ Azure - Canada Central (Toronto)
+Operational
+ Azure - East US 2 (Virginia)
+Operational
+ Azure - US Gov (Virginia)
+Operational
+ Azure - North Europe (Ireland)
+Operational
+ Azure - UK South (London)
+Operational
+ Azure - West Europe (Netherlands)
+Operational
+ Azure - Switzerland North (Zürich)
+Operational
+ Azure - UAE North (Dubai)
+Operational
+ Azure - Central India (Pune)
+Operational
+ Azure - Southeast Asia (Singapore)
+Operational
+ Azure - Japan East (Tokyo, Saitama)
+Operational
+ Azure - Australia East (New South Wales)
+Operational
+Google Cloud Platform Regions
+ GCP - US Central 1 (Iowa)
+Operational
+ GCP - US East 4 (N. Virginia)
+Operational
+ GCP - Europe West 2 (London)
+Operational
+ GCP - Europe West 4 (Eemshaven)
+Operational
+ GCP - Europe West 3 (Frankfurt)
+Operational
+Past Incidents",,
+10000000000072,Snowflake on AWS,snowflake,regional,AWS - Europe (Ireland),,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,"AWS - Europe (Ireland)
+Snowflake Data Warehouse (Database)
+Operational
+Snowpipe (Data Ingestion)
+Operational
+Replication
+Operational
+Snowsight
+Operational",,
+10000000000073,Snowflake on Azure,snowflake,regional,Azure - West Europe (Netherlands),,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,"Azure - West Europe (Netherlands)
+Snowflake Data Warehouse (Database)
+Operational
+Snowpipe (Data Ingestion)
+Operational
+Replication
+Operational
+Snowsight
+Operational",,
+10000000000074,Snowflake on GCP,snowflake,global,GCP - Europe West 3 (Frankfurt),,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,"GCP - Europe West 3 (Frankfurt)
+Snowflake Data Warehouse (Database)
+Operational
+Snowpipe (Data Ingestion)
+Operational
+Replication
+Operational
+Snowsight
+Operational",,
+10000000000075,MongoDB Atlas,mongodb,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,,,
