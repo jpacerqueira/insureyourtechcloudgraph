@@ -16,8 +16,8 @@ const PORT = process.env.PORT || 3000;
 const DB_HOST = process.env.DB_HOST || 'postgres-db'; // localhost
 const DB_PORT = process.env.DB_PORT || 5432;
 const DB_USER = process.env.DB_USER || 'dbusername';
-const DB_PASSWORD = process.env.DB_PASSWORD || 'dbpassword';
-const DB_NAME = process.env.DB_NAME || 'cloud_service_risk_ratings';
+const DB_PASSWORD = process.env.DB_PASSWORD || 'password';
+const DB_NAME = process.env.DB_NAME || 'cloud-service-risk-ratings';
 
 app.listen(PORT, function () {
     console.log(`Server is running on http://localhost:${PORT}`);

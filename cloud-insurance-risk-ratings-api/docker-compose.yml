@@ -5,8 +5,8 @@ services:
     image: postgres:latest
     container_name: postgres-db
     environment:
-      POSTGRES_USER: dbusername
-      POSTGRES_PASSWORD: dbpassword
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
       POSTGRES_DB: cloud-service-risk-ratings
     ports:
       - "5432:5432" # Expose DB to port 5432
@@ -30,8 +30,8 @@ services:
     environment:
       - DB_HOST=postgres-db
       - DB_PORT=5432
-      - DB_USER=dbusername
-      - DB_PASSWORD=dbpassword
+      - DB_USER=postgres
+      - DB_PASSWORD=password
       - DB_NAME=cloud-service-risk-ratings
       - PORT=3000
     ports:
@@ -56,8 +56,8 @@ services:
     environment:
       - DB_HOST=postgres-db
       - DB_PORT=5432
-      - DB_USER=dbusername
-      - DB_PASSWORD=dbpassword
+      - DB_USER=postgres
+      - DB_PASSWORD=password
       - DB_NAME=cloud-service-risk-ratings
     volumes:
       - ./csv-loader:/csv-loader

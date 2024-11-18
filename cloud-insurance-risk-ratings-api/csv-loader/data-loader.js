@@ -47,6 +47,8 @@ function insertData(rows, callback) {
       return callback(err); // Error connecting to DB
     }
     
+    console.log(await pool.query('SELECT NOW()'));
+    console.log(await pool.query('select current_schema;'));
     await sleep(2*1000); // sleep for 2s/2000ms
 
     client.query('BEGIN', function (err) {
@@ -62,7 +64,7 @@ function insertData(rows, callback) {
           return `'${val}'`; // Wrap each value in single quotes for SQL
         }).join(', ');
 
-        const query = `INSERT INTO "cloud_service_risk_ratings"."service_risk_ratings" (${columns}) VALUES (${values}) `;
+        const query = `INSERT INTO "${process.env.DB_NAME}"."service_risk_ratings" (${columns}) VALUES (${values}) `;
         /*const query = `INSERT INTO cloud_service_risk_ratings (${columns}) VALUES (${values}) `;*/
         return client.query(query);
       });
@@ -106,8 +108,8 @@ const filePath = process.argv[2]; // Get the CSV file path from command-line arg
 //validate variables
 const DB_HOST = process.env.DB_HOST || 'postgres-db'; // localhost
 const DB_PORT = process.env.DB_PORT || 5432;
-const DB_USER = process.env.DB_USER || 'dbusername';
-const DB_PASSWORD = process.env.DB_PASSWORD || 'dbpassword';
-const DB_NAME = process.env.DB_NAME || 'cloud_service_risk_ratings';
+const DB_USER = process.env.DB_USER || 'postgres';
+const DB_PASSWORD = process.env.DB_PASSWORD || 'password';
+const DB_NAME = process.env.DB_NAME || 'cloud-service-risk-ratings';
 
 main(filePath);

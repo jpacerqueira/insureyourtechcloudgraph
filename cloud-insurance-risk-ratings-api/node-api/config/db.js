@@ -27,6 +27,8 @@ pool.on('error', (err, client) => {
 const testConnection = async () => {
     try {
         const connection = await pool.connect();
+        console.log(await pool.query('SELECT NOW()'));
+        console.log(await pool.query('select current_schema;'));
         console.log('Database connected successfully!');
         connection.release();
     } catch (err) {
