@@ -235,7 +235,15 @@ North America
 All active
 South America
 All active",,
-10000000000041,Google Cloud VertexAI,Google Cloud GCP,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,,
+10000000000041,Google Cloud VertexAI,Google Cloud GCP,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,"Lllama3.2-B Outage Analysis  
+- About last AWS EMR Outage -
+ in 
+context, According to the text, the following Google Cloud services (GCP products) experienced outages:
+1. Vertex Al Online Prediction
+2. Dialogflow CX
+3. Agent Assist
+The outage began on June 12, 2024, at 12:06 US/Pacific Time and ended on June 12, 2024, at 15:59
+US/Pacific Time, which lasted for approximately 3 hours and 53 minutes.",,,
 10000000000042,Google Cloud Apigee                                        ,Google Cloud GCP,global,,,4,1,24,365,99.990,320,525600.000,525547.440,52.560,-267.440,0.01%,0.06%,0.06%,-0.05%,0.05%,608.83%,0.06%,992.210,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
 10000000000043,Google Cloud BigQuery,Google Cloud GCP,global,,,4,1,24,365,99.990,320,525600.000,525547.440,52.560,-267.440,0.01%,0.06%,0.06%,-0.05%,0.05%,608.83%,0.06%,992.210,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
 10000000000044,AlloyDB for PostgreSQL,Google Cloud GCP,global,,,4,1,24,365,99.990,320,525600.000,525547.440,52.560,-267.440,0.01%,0.06%,0.06%,-0.05%,0.05%,608.83%,0.06%,992.210,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
@@ -254,7 +262,7 @@ All active",,
 10000000000057,Amazon DynamoDB,Amazon AWS,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,,
 10000000000058,Amazon EC2 Instance Connect,Amazon AWS,global,,,4,0,24,365,99.950,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,,,,
 10000000000059,Amazon Elastic Compute Cloud,Amazon AWS,global,,,4,0,24,365,99.950,411,525600.000,525337.200,262.800,-148.200,0.05%,0.08%,0.08%,-0.03%,0.03%,156.39%,0.08%,996.157,996.656,0 days 6h51 down,"Lllama3.2-B Outage Analysis  
-- About last AWS EMR Outage -
+- About last AWS EC2 Outage -
  in 
 context, I extract some information about AWS services that experienced outages. Here are the details:
 1. Amazon Elastic Compute Cloud (EC2): No specific outage mentioned in the provided text.
