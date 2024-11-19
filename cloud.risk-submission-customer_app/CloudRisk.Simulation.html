@@ -16,7 +16,7 @@
         }
         .container {
             width: 90%;
-            max-width: 1700px;
+            max-width: 1900px;
             background-color: #353b48;  /* Slightly lighter grey for container */
             padding: 2rem;
             border-radius: 10px;
@@ -160,49 +160,19 @@
         "IBM Databases","IBM Databases for DataStax","IBM Databases for EDB",
         "IBM Databases for Elasticsearch","IBM Databases for etcd","IBM Databases for MongoDB",
         "IBM Databases for MySQL","IBM Databases for PostgreSQL","IBM Databases for Redis",
-        "IBM DataStage","IBM Db2","IBM Db2 Warehouse",
-        "IBM watsonx BI Assistant",
-        "IBM Dedicated Storage Instance",
-        "IBM Functions",
-        "IBM Cloud Object Storage",
-        "IBM Kubernetes",
+        "IBM DataStage","IBM Db2","IBM Db2 Warehouse","IBM watsonx BI Assistant",
+        "IBM Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Kubernetes",
         "Red Hat OpenShift on IBM Cloud",
-        "Google Cloud VertexAI",
-        "Google Cloud Apigee",                                        
-        "Google Cloud BigQuery",
-        "AlloyDB for PostgreSQL",
-        "Google Cloud Dataproc",
-        "Google Cloud Dataflow",
-        "Google Cloud Storage",
-        "Google Cloud And Media CDN",
+        "Google Cloud VertexAI","Google Cloud Apigee","Google Cloud BigQuery","AlloyDB for PostgreSQL",
+        "Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud And Media CDN",
         "Google Kubernetes Engine (GKE)", 
-        "Amazon API Gateway",
-        "Amazon Bedrock",
-        "Amazon CloudFront",
-        "Amazon CloudWatch Application Insights",
-        "Amazon CodeGuru Profiler",
-        "Amazon DataZone",
-        "Amazon DocumentDB",
-        "Amazon DynamoDB",
-        "Amazon EC2 Instance Connect",
-        "Amazon Elastic Compute Cloud",
-        "Amazon Elastic Container Service",
-        "Amazon Elastic File System",
-        "Amazon Elastic Load Balancing",
-        "Amazon Elastic MapReduce",
-        "Amazon ElastiCache",
-        "Amazon EMR Serverless",
-        "Amazon FinSpace",
-        "Amazon QuickSight",
-        "Amazon AWS Lambda",
-        "Amazon AWS CloudFront",
-        "Amazon AWS Step Functions",
-        "Amazon s3",
-        "Amazon Elastic Kubernetes Service",
+        "Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon DataZone",
+        "Amazon DocumentDB","Amazon DynamoDB","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
+        "Amazon Elastic File System","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
+        "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
+        "Amazon AWS Step Functions","Amazon s3","Amazon Elastic Kubernetes Service",
         "Salesforce SaaS",
-        "Snowflake on AWS",
-        "Snowflake on Azure",
-        "Snowflake on GCP",
+        "Snowflake on AWS","Snowflake on Azure","Snowflake on GCP",
         "MongoDB Atlas",
         "Databricks",
         "Salesforce SaaS",
@@ -304,6 +274,8 @@
                 <thead>
                     <tr>
                         <th>Cloud Service</th>
+                        <th>Global or by Region</th>
+                        <th>Region</th>
                         <th>SLA Usage %</th>
                         <th>Traffic Coef %</th>
                         <th>SLA Deviation Risk Rating</th>
@@ -367,6 +339,8 @@
                     tableHTML += `
                         <tr>
                             <td>${variable2}</td>
+                            <td>${variable3}</td>
+                            <td>${riskData.region}</td>
                             <td>${riskData.service_sla_usage_percentage || 'N/A'}</td>
                             <td>${riskData.service_traffic_coef_by_percent_down || 'N/A'}</td>
                             <td>${riskData.sla_deviation_connected_risk_0_999|| 'N/A'}</td>
