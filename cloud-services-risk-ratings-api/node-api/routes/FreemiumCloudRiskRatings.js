@@ -39,8 +39,8 @@ router.get('/freemium/fetch/service/id/:id', async function (req, res, next) {
         const result = await connection.query(
             `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region,
             webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
-            actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage,
-            sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, remarks_outage_genai 
+            actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage, service_traffic_coef_by_percent_down,
+            sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, annual_outage_time_days_hours_mins, remarks_outage_genai 
                FROM "${process.env.DB_NAME}".service_risk_ratings WHERE database_key_id = '${id}'`
         );
 
@@ -71,8 +71,8 @@ router.get('/freemium/fetch/service/service_provider/:service_provider', async f
         const result = await connection.query(
             `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region,
             webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
-            actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage,
-            sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, remarks_outage_genai  
+            actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage, service_traffic_coef_by_percent_down,
+            sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, annual_outage_time_days_hours_mins, remarks_outage_genai  
             FROM "${process.env.DB_NAME}".service_risk_ratings WHERE service_provider = '${service_provider}'`
         );
 
@@ -103,8 +103,8 @@ router.get('/freemium/fetch/service/service_name/:service_name', async function 
         const result = await connection.query(
             `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region,
             webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
-            actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage,
-            sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, remarks_outage_genai 
+            actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage, service_traffic_coef_by_percent_down,
+            sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, annual_outage_time_days_hours_mins, remarks_outage_genai 
             FROM "${process.env.DB_NAME}".service_risk_ratings WHERE service_name = '${service_name}'`
         );
 
