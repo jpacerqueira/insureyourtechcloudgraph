@@ -3,6 +3,7 @@ import requests
 from dotenv import load_dotenv
 import json
 import re
+import time
 
 import streamlit as st
 from neo4j import GraphDatabase
@@ -11,9 +12,22 @@ from flask_cors import CORS
 
 
 # Initialize the Neo4j connection
-def init_neo4j_connection(uri, user, password):
-    driver = GraphDatabase.driver(uri, auth=(user, password))
-    return driver
+def init_neo4j_connection(uri, user, password, max_retries=3):
+    retry_count = 0
+    while retry_count < max_retries:
+        try:
+            driver = GraphDatabase.driver(uri, auth=(user, password))
+            # Verify connection
+            with driver.session() as session:
+                session.run("MATCH (n) RETURN count(n) LIMIT 1")
+            return driver
+        except Exception as e:
+            retry_count += 1
+            st.warning(f"Attempt {retry_count}: Unable to connect to Neo4j. Retrying... ({str(e)})")
+            time.sleep(2)  # Wait 2 seconds before retrying
+    
+    st.error(f"Failed to connect to Neo4j after {max_retries} attempts. Please check your connection settings.")
+    return None
 
 # Neo4j insert function
 def insert_record(driver, node_type, properties):
@@ -65,7 +79,7 @@ st.markdown("""
     <style>
     /* Set page width */
     .block-container {
-        max-width: 1200px;
+        max-width: 1400px;
         padding-top: 2rem;
         padding-right: 2rem;
         padding-left: 2rem;
@@ -88,12 +102,15 @@ st.markdown("""
 load_dotenv(".env")
 
 # Replace the connection input fields with environment variables
-uri = os.getenv("NEO4J_URI", "bolt://0.0.0.0:17687")
+uri = os.getenv("NEO4J_URI", "neo4j://0.0.0.0:17687") # TODO: change to bolt://customer.risk.graph.neo4j:17687
 user = os.getenv("NEO4J_USERNAME", "neo4j")
 password = os.getenv("NEO4J_PASSWORD", "password")
 
 # Initialize Neo4j connection using environment variables
 driver = init_neo4j_connection(uri, user, password)
+if not driver:
+    st.error("Unable to establish connection to Neo4j. Please check your configuration.")
+    st.stop()
 
 # Replace the existing form section with new cloud risk assessment form
 st.subheader("New Cloud Risk Assessment")
@@ -272,8 +289,11 @@ CORS(app, resources={
             "https://customerportal.cloudriskgraph.insureyourtech.cloud",
             "http://cloudriskgraph.insureyourtech.cloud:17474",
             "https://cloudriskgraph.insureyourtech.cloud:17474",
+            "http://customer.risk.graph.neo4j:17474",
+            "bolt://customer.risk.graph.neo4j:17687"
             "http://0.0.0.0:17474",
             "bolt://0.0.0.0:17687",
+            "neo4j://0.0.0.0:17687"
 
         ],
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
