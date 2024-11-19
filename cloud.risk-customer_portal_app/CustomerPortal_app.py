@@ -25,9 +25,12 @@ def init_neo4j_connection(uri, user, password, max_retries=3):
             retry_count += 1
             st.warning(f"Attempt {retry_count}: Unable to connect to Neo4j. Retrying... ({str(e)})")
             time.sleep(2)  # Wait 2 seconds before retrying
+    # TODO: remove this when connection works
+    #st.error(f"Failed to connect to Neo4j after {max_retries} attempts. Please check your connection settings.")
+    #return None
+    driver = GraphDatabase.driver(uri, auth=(user, password))
+    return driver
     
-    st.error(f"Failed to connect to Neo4j after {max_retries} attempts. Please check your connection settings.")
-    return None
 
 # Neo4j insert function
 def insert_record(driver, node_type, properties):
