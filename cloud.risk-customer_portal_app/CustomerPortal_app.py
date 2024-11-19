@@ -79,7 +79,7 @@ st.markdown("""
     <style>
     /* Set page width */
     .block-container {
-        max-width: 1200px;
+        max-width: 1400px;
         padding-top: 2rem;
         padding-right: 2rem;
         padding-left: 2rem;
@@ -102,7 +102,7 @@ st.markdown("""
 load_dotenv(".env")
 
 # Replace the connection input fields with environment variables
-uri = os.getenv("NEO4J_URI", "bolt://customer.risk.graph.neo4j:17687")
+uri = os.getenv("NEO4J_URI", "neo4j://0.0.0.0:17687") # TODO: change to bolt://customer.risk.graph.neo4j:17687
 user = os.getenv("NEO4J_USERNAME", "neo4j")
 password = os.getenv("NEO4J_PASSWORD", "password")
 
@@ -293,6 +293,7 @@ CORS(app, resources={
             "bolt://customer.risk.graph.neo4j:17687"
             "http://0.0.0.0:17474",
             "bolt://0.0.0.0:17687",
+            "neo4j://0.0.0.0:17687"
 
         ],
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
