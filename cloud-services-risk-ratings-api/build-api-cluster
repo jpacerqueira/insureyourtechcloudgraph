@@ -20,6 +20,8 @@ elif [[ "$BUILD_METHOD" == "3" ]]; then
    docker compose down
    docker system prune -f
    docker volume prune -f
+   echo "populate database"
+   head -n 1500 ../information/datamodel/cloud-risk-datamodel-services-above-sla-outage.csv > data/cloud_service_risk_ratings.csv
    docker compose up --build --force-recreate
 else
    docker compose ps

@@ -18,7 +18,8 @@ Portal Fremium Submission: https://insureyourtech.cloud/cloudrisk-simulation
 
 - Customer Submission Application
 - Manually insert information about cloud usage to calculate your Cloud.Risk and SLA.Risk 
-- 
+- e.g. AWS EMR and Google VertexAI , with GenAI Outage information
+-
 ![customer submission Application Fremium](images/Customer_Submission_Via_Fremium_Portal.png)
 
 

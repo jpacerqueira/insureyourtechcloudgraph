@@ -12,7 +12,19 @@ BUILD_METHOD="${1:-0}" # 1 or 0
 
 if [[ "$BUILD_METHOD" == "1" ]]; then
    docker compose down
+   docker compose up 
+else
+   docker compose ps
+fi
+if [[ "$BUILD_METHOD" == "2" ]]; then
+   docker compose down
    docker compose up --build
+else
+   docker compose ps
+fi
+if [[ "$BUILD_METHOD" == "3" ]]; then
+   docker compose down
+   docker compose up --build --force-recreate
 else
    docker compose ps
 fi
