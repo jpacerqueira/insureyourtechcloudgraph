@@ -105,7 +105,7 @@ st.markdown("""
 load_dotenv(".env")
 
 # Replace the connection input fields with environment variables
-uri = os.getenv("NEO4J_URI", "bolt://customer.risk.graph.neo4j:17687") # TODO: changed from "bolt://0.0.0.0:17687"
+uri = os.getenv("NEO4J_URI", "bolt://0.0.0.0:7687") # TODO: changed from "bolt://customer.risk.graph.neo4j:17687"
 user = os.getenv("NEO4J_USERNAME", "neo4j")
 password = os.getenv("NEO4J_PASSWORD", "password")
 
