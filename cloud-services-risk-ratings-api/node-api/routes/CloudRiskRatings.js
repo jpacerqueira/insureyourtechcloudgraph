@@ -71,7 +71,7 @@ router.get('/fetch/service/service_provider/:service_provider', async function (
         const rows = Array.isArray(result) ? result[0] : result.rows;
 
         if (rows && rows.length > 0) {
-            res.status(200).json(rows[0]);
+            res.status(200).json(rows.slice(0, 100000)); // limit to 100000 rows
         } else {
             res.status(404).json({ error: 'Risk rating not found' });
         }
@@ -99,7 +99,7 @@ router.get('/fetch/service/service_name/:service_name', async function (req, res
         const rows = Array.isArray(result) ? result[0] : result.rows;
 
         if (rows && rows.length > 0) {
-            res.status(200).json(rows[0]);
+            res.status(200).json(rows.slice(0, 100000)); // limit to 100000 rows
         } else {
             res.status(404).json({ error: 'Risk rating not found' });
         }

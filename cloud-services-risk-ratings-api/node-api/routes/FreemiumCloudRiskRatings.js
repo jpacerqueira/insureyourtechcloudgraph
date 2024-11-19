@@ -62,7 +62,7 @@ router.get('/freemium/fetch/service/id/:id', async function (req, res, next) {
     }
 });
 
-// Get a specific risk rating by service_provider
+// Get all specific risk rating by service_provider
 router.get('/freemium/fetch/service/service_provider/:service_provider', async function (req, res, next) {
     let connection;
     try {
@@ -80,7 +80,7 @@ router.get('/freemium/fetch/service/service_provider/:service_provider', async f
         const rows = Array.isArray(result) ? result[0] : result.rows;
 
         if (rows && rows.length > 0) {
-            res.status(200).json(rows[0]);
+            res.status(200).json(rows.slice(0, 100000)); // limit to 100000 rows
         } else {
             res.status(404).json({ error: 'Risk rating not found' });
         }
@@ -112,7 +112,7 @@ router.get('/freemium/fetch/service/service_name/:service_name', async function 
         const rows = Array.isArray(result) ? result[0] : result.rows;
 
         if (rows && rows.length > 0) {
-            res.status(200).json(rows[0]);
+            res.status(200).json(rows.slice(0, 100000)); // limit to 100000 rows
         } else {
             res.status(404).json({ error: 'Risk rating not found' });
         }
