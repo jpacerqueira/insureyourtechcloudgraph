@@ -21,6 +21,12 @@ Portal Fremium Submission: https://insureyourtech.cloud/cloudrisk-simulation
 - 
 ![customer submission Application Fremium](images/Customer_Submission_Via_Fremium_Portal.png)
 
+- Customer Submission Application
+- Manually insert information about cloud usage to calculate your Cloud.Risk and SLA.Risk 
+- e.g. Azure Storage Accounts , with GenAI Outage information
+
+![customer submission Application Fremium with GenAI Outage information](images/Customer-Fremium-Submission-With-GenAI-Outage_information-augmented.png)
+
 
 ##  Customer Submission - Insurance Risk Meajurement with Risk.Graph
 
