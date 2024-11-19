@@ -1,0 +1,17 @@
+// clean
+MATCH (n) DETACH DELETE n;
+
+// Create nn nodes (vertices) labeled TECHNOLOGY_PROVIDER
+// Create mm edges (relationships) labeled CONNECTED_RISK
+// Create a customer node
+// Create a technology provider node
+// Create a technology solution node
+// Create a technology service node
+// Create a customer has office relationship
+// Create a technology provider has service relationship
+// Create a technology solution has service relationship
+// Create a customer uses service relationship
+//
+CREATE
+  (cust:CUSTOMER_NAME {name: 'SPORTSFLIX'}),
+  (a:TECHNOLOGY_PROVIDER {name: 'AMAZON_AWS'});

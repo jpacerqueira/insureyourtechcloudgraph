@@ -2,6 +2,7 @@ import os
 import requests
 from dotenv import load_dotenv
 import json
+import re
 
 import streamlit as st
 from neo4j import GraphDatabase
@@ -46,6 +47,15 @@ def fetch_cloud_risk_data(service_name, region_type):
         st.error(f"Error fetching cloud risk data: {str(e)}")
         return None
 
+# Add sanitize function for Cypher node IDs
+def sanitize_cypher_identifier(text):
+    # Remove special characters and spaces, keep alphanumeric and underscore
+    sanitized = re.sub(r'[^a-zA-Z0-9_]', '_', text)
+    # Ensure it doesn't start with a number
+    if sanitized[0].isdigit():
+        sanitized = 'n' + sanitized
+    return sanitized
+
 # Streamlit app starts here
 st.title("Cloud.Risk ")
 st.header("Customer Portal App")
@@ -56,10 +66,10 @@ st.markdown("""
     /* Set page width */
     .block-container {
         max-width: 1200px;
-        padding-top: 1rem;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        padding-bottom: 1rem;
+        padding-top: 2rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-bottom: 2rem;
     }
     
     /* Change the color of selected items in multiselect */
@@ -78,16 +88,16 @@ st.markdown("""
 load_dotenv(".env")
 
 # Replace the connection input fields with environment variables
-uri = os.getenv("NEO4J_URI", "bolt://localhost:17687")
+uri = os.getenv("NEO4J_URI", "bolt://0.0.0.0:17687")
 user = os.getenv("NEO4J_USERNAME", "neo4j")
-password = os.getenv("NEO4J_PASSWORD")
+password = os.getenv("NEO4J_PASSWORD", "password")
 
 # Initialize Neo4j connection using environment variables
 driver = init_neo4j_connection(uri, user, password)
 
 # Replace the existing form section with new cloud risk assessment form
 st.subheader("New Cloud Risk Assessment")
-st.subheader("Cloud Service Risk Analysis")
+st.subheader("Cloud.Risk.Graph - Analysis")
 
 # Define services dictionary before using it
 services = {
@@ -96,10 +106,10 @@ services = {
         "Amazon Elastic File System","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
         "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
         "Amazon AWS Step Functions","Amazon s3","Amazon Elastic Kubernetes Service"],
-    "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Apigee","Google Cloud BigQuery","AlloyDB for PostgreSQL",
+    "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Apigee API","Google Cloud BigQuery","AlloyDB for PostgreSQL",
         "Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud And Media CDN",
         "Google Kubernetes Engine (GKE)"],
-    "Microsoft Azure": ["Azure Batch","Azure functions","PowerBi App","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)"],
+    "Microsoft Azure": ["Azure Batch","Azure functions","Azure PowerBi App","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)"],
     "IBM Cloud": ["IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
         "IBM Databases","IBM Databases for DataStax","IBM Databases for EDB",
         "IBM Databases for Elasticsearch","IBM Databases for etcd","IBM Databases for MongoDB",
@@ -111,14 +121,15 @@ services = {
     "Snowflake": ["Snowflake on AWS","Snowflake on Azure","Snowflake on GCP"],
     "Databricks": ["Databricks","Workspace", "MLflow", "Delta Lake"],
     "Salesforce": ["Salesforce SaaS","Sales Cloud", "Service Cloud", "Marketing Cloud"],
-    "MongoDB": [ "MongoDB Atlas"],
-    "Cloudflare": ["AnyCast CloudFlare","CDN CloudFlare", "DNS", "DDoS Protection"],
-    "Akamai": ["CDN Akamai", "Edge Computing", "Security"]
+    "MongoDB": [ "MongoDB Atlas", "MongoDB Atlas Search"],
+    "Cloudflare": ["AnyCast CloudFlare","CDN CloudFlare", "Cloudflare DNS", "Cloudflare DDoS Protection"],
+    "Akamai": ["CDN Akamai", "Edge Computing Akamai", "Security Akamai"],
+    "Macrometa": ["CDN Macrometa", "Edge Computing Macrometa"]
 }
 
 # Company details
 company_name = st.text_input("Company Name (required)")
-project_name = st.text_input("Project Name (optional)", value=company_name)
+project_name = st.text_input("Project Name (optional)", value="Project by "+company_name)
 
 # Cloud service selection - modified to accept multiple vendors
 cloud_vendors = ["Amazon AWS", "Google Cloud GCP", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", 
@@ -140,6 +151,55 @@ if st.button("Analyze Cloud Risk"):
     if company_name and selected_services and region_type:
         st.subheader("Risk Analysis Results")
         
+        # Generate Cypher query with sanitized identifiers
+        company_id = sanitize_cypher_identifier(company_name)
+        cypher_query = f"CREATE (cust_{company_id}:CUSTOMER_NAME {{name: '{company_name}'}})\n"
+        
+        # Create vendor nodes with sanitized IDs
+        for vendor in selected_vendors:
+            vendor_id = sanitize_cypher_identifier(vendor)
+            cypher_query += f"CREATE ({vendor_id}:TECHNOLOGY_PROVIDER {{name: '{vendor}'}})\n"
+        
+        # Create service nodes and relationships with sanitized IDs
+        for service in selected_services:
+            service_id = sanitize_cypher_identifier(service)
+            risk_data = fetch_cloud_risk_data(service, region_type)
+            
+            if risk_data:
+                # Create service node
+                cypher_query += f"""
+CREATE ({service_id}:TECHNOLOGY_SERVICE {{
+    name: '{service}',
+    sla_usage: '{risk_data.get('service_sla_usage_percentage', 0.0)}',
+    sla_deviation_risk: '{risk_data.get('sla_deviation_connected_risk_0_999', 0.0)}',
+    traffic_coefficient: '{risk_data.get('service_traffic_coef_by_percent_down', 0.0)}',
+    usage_risk: '{risk_data.get('usage_connected_risk_0_999', 0.0)}'
+}})
+"""
+                # Find vendor for this service
+                for vendor, vendor_services in services.items():
+                    if service in vendor_services:
+                        vendor_id = sanitize_cypher_identifier(vendor)
+                        # Create relationships with sanitized IDs
+                        cypher_query += f"""
+CREATE (cust_{company_id})-[:CUSTOMER_USES_SERVICE]->({service_id})
+CREATE ({vendor_id})-[:CONNECTED_RISK {{
+    sla_usage: '{risk_data.get('service_sla_usage_percentage', 0.0)}',
+    sla_deviation_risk: '{risk_data.get('sla_deviation_connected_risk_0_999', 0.0)}',
+    traffic_coefficient: '{risk_data.get('service_traffic_coef_by_percent_down', 0.0)}',
+    usage_risk: '{risk_data.get('usage_connected_risk_0_999', 0.0)}'
+}}]->({service_id})
+"""
+        
+        # Save Cypher query to file
+        output_path = "neo4j_customer_submission/Cloud.Risk.Graph.CustomerApp.txt"
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        with open(output_path, "w") as f:
+            f.write(cypher_query)
+            
+        st.success(f"Generated Cypher query saved to {output_path}")
+        
+        # Continue with existing risk analysis display
         for service in selected_services:
             st.write(f"Analysis for {service}")
             risk_data = fetch_cloud_risk_data(service, region_type)
@@ -160,9 +220,13 @@ if st.button("Analyze Cloud Risk"):
         st.warning("Please fill in all required fields")
 
 # VIEW Results -  from Application - Customer
-# Insert record form
 st.header("View your Cloud Risk Graphs")
-list_options = ["CURRENT_Cloud_RISK_Meajurement_v3", "Cloud_RISK_Meajurement_2", "Cloud_RISK_Meajurement_1"]
+
+# Get list of files from neo4j_customer_submission folder
+submission_folder = "neo4j_customer_submission"
+list_options = []
+if os.path.exists(submission_folder):
+    list_options = [f for f in os.listdir(submission_folder) if f.endswith('.txt')]
 
 cloud_risk_list = st.query_params.get("cloud risk - assesments list", None)
 
@@ -173,31 +237,56 @@ if cloud_risk_list:
 else:
     selection = st.selectbox("Select:", list_options, index=None)
     if selection:
-        st.link_button(
-            f"See Cloud Risk Graph - {selection}",
-            url=f"http://cloudriskgraph.insureyourtech.cloud:17474/",
-            use_container_width=True
-        )
+        # Read the Cypher query from the selected file
+        file_path = os.path.join(submission_folder, selection)
+        try:
+            with open(file_path, 'r') as f:
+                cypher_query = f.read()
+                
+            # Execute the Cypher query using the Neo4j driver
+            with driver.session() as session:
+                try:
+                    result = session.run(cypher_query)
+                    st.success(f"Successfully uploaded graph data for {selection}")
+                except Exception as e:
+                    st.error(f"Error executing Cypher query: {str(e)}")
+                
+            st.link_button(
+                f"View Your Cloud Risk Graph - {selection}",
+                url=f"http://localhost:17474/", # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
+                use_container_width=True
+            )
+        except Exception as e:
+            st.error(f"Error reading file: {str(e)}")
 
 # Interactive Explore Graph Risk data
 st.subheader("Explore All Cloud Risk Graph - Records")
-st.caption("Go to http://cloudriskgraph.insureyourtech.cloud:17474/  - Explore your cloud services risk graph.")
+st.caption("Go to http://localhost:17474/  - Explore your cloud services risk graph.") # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
 
-# Fetch node labels for selection
-#labels = fetch_labels(driver)
-#selected_label = st.selectbox("Select Node Type", labels)
-
-# Fetch and display nodes of the selected type
-#if selected_label:
-#    nodes = fetch_nodes_by_label(driver, selected_label)
-#    for node in nodes:
-#        st.write(node)
-
+# Flask API
 app = Flask(__name__)
 CORS(app, resources={
     r"/*": {
-        "origins": ["http://localhost:8504", "https://CustomerPortal.cloudriskgraph.insureyourtech.cloud"],
+        "origins": [
+            "http://localhost:8504",
+            "https://customerportal.cloudriskgraph.insureyourtech.cloud",
+            "http://cloudriskgraph.insureyourtech.cloud:17474",
+            "https://cloudriskgraph.insureyourtech.cloud:17474",
+            "http://0.0.0.0:17474",
+            "bolt://0.0.0.0:17687",
+
+        ],
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-        "allow_headers": ["Content-Type", "Authorization"]
+        "allow_headers": ["Content-Type", "Authorization", "Access-Control-Allow-Origin"],
+        "expose_headers": ["Access-Control-Allow-Origin"],
+        "supports_credentials": True
     }
 })
+
+# Add these decorators to handle CORS preflight requests
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    return response
