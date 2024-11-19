@@ -118,7 +118,7 @@
         <input type="text" id="projectName" placeholder="Defaults to Company Name if blank">
     </div>
 
-    <h2>Measure your Cloud.Risk via inserting Cloud Vendor and Service pairs </h2>
+    <h2>Measure your Cloud.Risk via inserting Cloud Vendor, Service, and Region Selection</h2>
 
     <!-- Buttons to add or remove pairs -->
     <div class="controls">
@@ -151,18 +151,69 @@
 <script>
     // Different options for each variable - Cloud and its Services
 
-    const optionsForVariable1 = ["aws", "gcp", "azure", "ibm", "oci", "snowflake", "salesforce", "mongodb", "cloudflare", "akamai"];
-    const optionsForVariable2 = ["AWS Lambda", "Google Cloud BigQuery", "PowerBi App", "Storage Accounts", "Snowflake on AWS" , "Snowflake on GCP", "Snowflake on Azure" ,"Salesforce SaaS", "AutonomousDB21C", "OCI AutonomousDB21C",
-     "MongoDb Atlas", "Google Cloud Spanner", "Google Cloud SQL", "Google Cloud Bigtable", "Google Cloud Memorystore", "Google Cloud Filestore", "Google Cloud Bigtable", 
-     "Google Cloud Memorystore", "Google Cloud Filestore", "AWS Aurora", "AWS RDS", "AWS ElastiCache", "AWS ElasticTranscoder",
-      "AWS CloudSearch", "AWS CloudFormation", "AWS CloudWatch", "AWS CloudTrail", "AWS CloudSearch", "AWS CloudFormation", "AWS CloudWatch", "AWS CloudTrail",
-    "Databricks", "AWS Redshift", "AWS ElasticTranscoder", "AWS CloudSearch", "AWS CloudFormation", "AWS CloudWatch", "AWS CloudTrail", "AWS CloudSearch", 
-    "AWS CloudFormation", "AWS CloudWatch", "AWS CloudTrail", "Databricks", "AWS Elastic MapReduce", "AWS Elastic MapReduce Serverless"];
+    const optionsForVariable1 = ["Amazon AWS", "Google Cloud GCP", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai"];
+    const optionsForVariable2 = ["AnyCast CloudFlare","CDN CloudFlare","CDN Akamai",
+        "Oracle AutonomousDB 21c","autonomousdb_21c","Object Storage OIC","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)",
+        "Azure SQL Managed Instance","Azure Cosmos DB","Azure Database for PostgreSQL","Azure Database for MySQL",
+        "Azure Batch","Azure functions","PowerBi App","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)",
+        "IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
+        "IBM Databases","IBM Databases for DataStax","IBM Databases for EDB",
+        "IBM Databases for Elasticsearch","IBM Databases for etcd","IBM Databases for MongoDB",
+        "IBM Databases for MySQL","IBM Databases for PostgreSQL","IBM Databases for Redis",
+        "IBM DataStage","IBM Db2","IBM Db2 Warehouse",
+        "IBM watsonx BI Assistant",
+        "IBM Dedicated Storage Instance",
+        "IBM Functions",
+        "IBM Cloud Object Storage",
+        "IBM Kubernetes",
+        "Red Hat OpenShift on IBM Cloud",
+        "Google Cloud VertexAI",
+        "Google Cloud Apigee",                                        
+        "Google Cloud BigQuery",
+        "AlloyDB for PostgreSQL",
+        "Google Cloud Dataproc",
+        "Google Cloud Dataflow",
+        "Google Cloud Storage",
+        "Google Cloud And Media CDN",
+        "Google Kubernetes Engine (GKE)", 
+        "Amazon API Gateway",
+        "Amazon Bedrock",
+        "Amazon CloudFront",
+        "Amazon CloudWatch Application Insights",
+        "Amazon CodeGuru Profiler",
+        "Amazon DataZone",
+        "Amazon DocumentDB",
+        "Amazon DynamoDB",
+        "Amazon EC2 Instance Connect",
+        "Amazon Elastic Compute Cloud",
+        "Amazon Elastic Container Service",
+        "Amazon Elastic File System",
+        "Amazon Elastic Load Balancing",
+        "Amazon Elastic MapReduce",
+        "Amazon ElastiCache",
+        "Amazon EMR Serverless",
+        "Amazon FinSpace",
+        "Amazon QuickSight",
+        "Amazon AWS Lambda",
+        "Amazon AWS CloudFront",
+        "Amazon AWS Step Functions",
+        "Amazon s3",
+        "Amazon Elastic Kubernetes Service",
+        "Salesforce SaaS",
+        "Snowflake on AWS",
+        "Snowflake on Azure",
+        "Snowflake on GCP",
+        "MongoDB Atlas",
+        "Databricks",
+        "Salesforce SaaS",
+    ];
 
+    // Add new options for regions
+    const optionsForVariable3 = ["global", "regional"];
 
-    // Variables to track number of pairs
-    let pairCount = 4; // start with 4 pairs
-    const maxPairs = 85;
+    // Update variable tracking
+    let trioCount = 4; // start with 4 trios
+    const maxTrios = 85;
 
     // Function to create dropdown options for a given array of options
     function createDropdownOptions(options) {
@@ -172,72 +223,70 @@
     // Generate dropdown options
     const dropdownOptions1 = createDropdownOptions(optionsForVariable1);
     const dropdownOptions2 = createDropdownOptions(optionsForVariable2);
+    const dropdownOptions3 = createDropdownOptions(optionsForVariable3);
 
-    // Function to add a variable pair
+    // Update functions to handle trios
     function addVariablePair() {
-        if (pairCount < maxPairs) {
-            pairCount++;
-            renderVariablePair(pairCount);
+        if (trioCount < maxTrios) {
+            trioCount++;
+            renderVariableTrio(trioCount);
         } else {
-            alert("Maximum number of pairs reached.");
+            alert("Maximum number of trios reached.");
         }
     }
 
-    // Function to remove the last variable pair
     function removeVariablePair() {
-        if (pairCount > 1) {
-            document.getElementById(`variablePair_${pairCount}`).remove();
-            pairCount--;
+        if (trioCount > 1) {
+            document.getElementById(`variableTrio_${trioCount}`).remove();
+            trioCount--;
         } else {
-            alert("Cannot have less than 1 pair.");
+            alert("Cannot have less than 1 trio.");
         }
     }
 
-    // Function to render a variable pair
-    function renderVariablePair(pairNumber) {
+    // New function to render a variable trio
+    function renderVariableTrio(trioNumber) {
         const container = document.getElementById("variableContainer");
 
-        // Create a div to hold each pair of variables
-        const variablePairDiv = document.createElement("div");
-        variablePairDiv.className = "variable-pair";
-        variablePairDiv.id = `variablePair_${pairNumber}`;
+        const variableTrioDiv = document.createElement("div");
+        variableTrioDiv.className = "variable-pair"; // keep same class for styling
+        variableTrioDiv.id = `variableTrio_${trioNumber}`;
 
-        // Create label and dropdown for variable 1
-        variablePairDiv.innerHTML += `
-            <label for="variable1_${pairNumber}">Pair ${pairNumber} - Variable 1:</label>
-            <select id="variable1_${pairNumber}">
-                <option value="">Select an option</option>
+        variableTrioDiv.innerHTML = `
+            <label for="variable1_${trioNumber}">Set ${trioNumber} - Cloud Vendor:</label>
+            <select id="variable1_${trioNumber}">
+                <option value="">Select a vendor</option>
                 ${dropdownOptions1}
             </select>
-        `;
 
-        // Create label and dropdown for variable 2
-        variablePairDiv.innerHTML += `
-            <label for="variable2_${pairNumber}">Pair ${pairNumber} - Variable 2:</label>
-            <select id="variable2_${pairNumber}">
-                <option value="">Select an option</option>
+            <label for="variable2_${trioNumber}">Service:</label>
+            <select id="variable2_${trioNumber}">
+                <option value="">Select a service</option>
                 ${dropdownOptions2}
+            </select>
+
+            <label for="variable3_${trioNumber}">Region:</label>
+            <select id="variable3_${trioNumber}">
+                <option value="">Select a region</option>
+                ${dropdownOptions3}
             </select>
         `;
 
-        // Append the pair to the container
-        container.appendChild(variablePairDiv);
+        container.appendChild(variableTrioDiv);
     }
 
-    // Initialize with 4 variable pairs
+    // Update initialization
     function initializeVariablePairs() {
-        for (let i = 1; i <= pairCount; i++) {
-            renderVariablePair(i);
+        for (let i = 1; i <= trioCount; i++) {
+            renderVariableTrio(i);
         }
     }
 
-    // Function to gather selected values and submit as JSON
+    // Update submit function to handle trios
     async function submitData() {
-        // Get values of Company Name and Project Name
         const companyName = document.getElementById("companyName").value.trim();
         const projectName = document.getElementById("projectName").value.trim() || companyName;
 
-        // Ensure Company Name is provided
         if (!companyName) {
             alert("Company Name is required.");
             return;
@@ -246,7 +295,7 @@
         const data = {
             companyName: companyName,
             projectName: projectName,
-            variablePairs: []
+            variableTrios: []
         };
 
         // Create table structure
@@ -278,22 +327,26 @@
                 </ul>
             </div>`;
 
-        // Loop through each pair and gather selected values
-        for (let i = 1; i <= pairCount; i++) {
+        // Update the loop to handle trios
+        for (let i = 1; i <= trioCount; i++) {
             const variable1 = document.getElementById(`variable1_${i}`).value;
             const variable2 = document.getElementById(`variable2_${i}`).value;
+            const variable3 = document.getElementById(`variable3_${i}`).value;
 
-            if (variable1 && variable2) {
-                data.variablePairs.push({
-                    pair: i,
-                    variable1: variable1,
-                    variable2: variable2
+            if (variable1 && variable2 && variable3) {
+                data.variableTrios.push({
+                    set: i,
+                    vendor: variable1,
+                    service: variable2,
+                    region: variable3
                 });
 
                 try {
                     const response = await fetch(
-                       // `https://CloudRiskAPI.InsureYourTech.Cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${variable2}`,
-                       `http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${variable2}`,
+                        // CloudRiskAPI.InsureYourTech.Cloud
+                        // `https://CloudRiskAPI.InsureYourTech.Cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${variable2}/global_or_by_regions/${variable3}`,
+                        // Localhost
+                        `http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${variable2}/global_or_by_regions/${variable3}`,
                         {
                             method: 'GET',
                             headers: {
