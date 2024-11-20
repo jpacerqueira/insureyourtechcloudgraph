@@ -74,8 +74,8 @@ def sanitize_cypher_identifier(text):
     return sanitized
 
 # Streamlit app starts here
-st.title("Cloud.Risk ")
-st.header("Customer Portal App")
+st.title("Cloud.Risk Graph - Customer Portal")
+st.header("Customer Submission App")
 
 # Add custom CSS to modify multiselect colors and page width
 st.markdown("""
@@ -126,8 +126,8 @@ services = {
         "Amazon Elastic File System","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
         "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
         "Amazon AWS Step Functions","Amazon s3","Amazon Elastic Kubernetes Service"],
-    "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Apigee API","Google Cloud BigQuery","AlloyDB for PostgreSQL",
-        "Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud And Media CDN",
+    "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Apigee API","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL",
+        "Google Cloud SQL","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud And Media CDN",
         "Google Kubernetes Engine (GKE)"],
     "Microsoft Azure": ["Azure Batch","Azure functions","Azure PowerBi App","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)"],
     "IBM Cloud": ["IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
@@ -212,7 +212,7 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
 """
         
         # Save Cypher query to file
-        output_path = "neo4j_customer_submission/Cloud.Risk.Graph.CustomerApp.txt"
+        output_path = "neo4j_customer_submission/New_-_Cloud.Risk.Graph_-_Submission.graph"
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         with open(output_path, "w") as f:
             f.write(cypher_query)
@@ -246,7 +246,7 @@ st.header("View your Cloud Risk Graphs")
 submission_folder = "neo4j_customer_submission"
 list_options = []
 if os.path.exists(submission_folder):
-    list_options = [f for f in os.listdir(submission_folder) if f.endswith('.txt')]
+    list_options = [f for f in os.listdir(submission_folder) if f.endswith('.graph')]
 
 cloud_risk_list = st.query_params.get("cloud risk - assesments list", None)
 
