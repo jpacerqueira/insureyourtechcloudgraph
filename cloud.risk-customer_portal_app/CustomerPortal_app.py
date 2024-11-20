@@ -273,7 +273,7 @@ else:
                 
             st.link_button(
                 f"View Your Cloud Risk Graph - {selection}",
-                url=f"http://localhost:7474/", # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
+                url=f"http://localhost:17474/", # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
                 use_container_width=True
             )
         except Exception as e:
@@ -281,7 +281,7 @@ else:
 
 # Interactive Explore Graph Risk data
 st.subheader("Explore All Cloud Risk Graph - Records")
-st.caption("Go to http://localhost:7474/  - Explore your Cloud Services Cloud.Risk.Graph . with Neo4J Browser") # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
+st.caption("Go to http://localhost:17474/  - Explore your Cloud Services Cloud.Risk.Graph . with Neo4J Browser") # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
 
 # Flask API
 app = Flask(__name__)
