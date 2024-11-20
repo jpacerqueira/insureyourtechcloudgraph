@@ -105,7 +105,7 @@ st.markdown("""
 load_dotenv(".env")
 
 # Replace the connection input fields with environment variables
-uri = os.getenv("NEO4J_URI", "bolt://0.0.0.0:7687") # TODO: changed from "bolt://customer.risk.graph.neo4j:17687"
+uri = os.getenv("NEO4J_URI", "neo4j://customer_graph:7687") # TODO: changed from "bolt://customer.risk.graph.neo4j:17687"
 user = os.getenv("NEO4J_USERNAME", "neo4j")
 password = os.getenv("NEO4J_PASSWORD", "password")
 
@@ -293,8 +293,8 @@ CORS(app, resources={
             "http://cloudriskgraph.insureyourtech.cloud:7474",
             "https://cloudriskgraph.insureyourtech.cloud:7474",
             "http://customer.risk.graph.neo4j:7474",
-            "bolt://customer.risk.graph.neo4j:7687",
-            "neo4j://customer.risk.graph.neo4j:7687",
+            "neo4j://customer_graph:7687",
+            "bolt://customer_graph:7687",
             "http://0.0.0.0:7474",
             "bolt://0.0.0.0:7687",
             "neo4j://0.0.0.0:7687"
