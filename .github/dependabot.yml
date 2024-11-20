@@ -8,7 +8,7 @@
 
 version: 2
 updates:
-  - package-ecosystem: "npm, composer, docker, gitsubmodule, github-actions, pip, terraform," # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm" # "npm, composer, docker, gitsubmodule, github-actions, pip, terraform," # See documentation for possible values
+    directory: "cloud-services-risk-ratings-api/node-api/" # ./package.json  # Location of package manifests
     schedule:
       interval: "weekly"
