@@ -212,7 +212,7 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
 """
         
         # Save Cypher query to file
-        output_path = "neo4j_customer_submission/Cloud.Risk.Graph.CustomerApp.txt"
+        output_path = "neo4j_customer_submission/New_-_Cloud.Risk.Graph_-_Submission.txt"
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         with open(output_path, "w") as f:
             f.write(cypher_query)
@@ -246,7 +246,7 @@ st.header("View your Cloud Risk Graphs")
 submission_folder = "neo4j_customer_submission"
 list_options = []
 if os.path.exists(submission_folder):
-    list_options = [f for f in os.listdir(submission_folder) if f.endswith('.txt')]
+    list_options = [f for f in os.listdir(submission_folder) if f.endswith('.graph')]
 
 cloud_risk_list = st.query_params.get("cloud risk - assesments list", None)
 
