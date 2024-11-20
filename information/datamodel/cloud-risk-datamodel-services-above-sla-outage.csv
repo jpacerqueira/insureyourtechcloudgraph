@@ -863,36 +863,42 @@ Operational",,
 10000000000093,Databricks,Databricks,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
 10000000000094,Databricks,Databricks,regional,Azure Databricks - UK South,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
 10000000000095,Databricks,Databricks,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000096,Salesforce SaaS,Salesforce,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000097,Salesforce SaaS,Salesforce,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000098,Salesforce SaaS,Salesforce,regional,Azure Databricks - UK South,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000099,Salesforce SaaS,Salesforce,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000100,MongoDB Atlas,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000096,Databricks Workspace,Databricks,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000097,Databricks Mlflow,Databricks,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000098,Databricks Notebooks,Databricks,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000099,Salesforce SaaS,Salesforce,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000100,Salesforce SaaS,Salesforce,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000101,Salesforce SaaS,Salesforce,regional,Azure Databricks - UK South,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000102,Salesforce SaaS,Salesforce,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000103,Salesforce Service Cloud,Salesforce,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000104,Salesforce Sales Cloud,Salesforce,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000105,Salesforce Marketing Cloud,Salesforce,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000106,MongoDB Atlas,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000101,MongoDB Atlas Search,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000107,MongoDB Atlas Search,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000102,MongoDB Atlas Vector Search,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000108,MongoDB Atlas Vector Search,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000103,MongoDB Atlas Stream Processing,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000109,MongoDB Atlas Stream Processing,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000104,MongoDB Atlas BI Connector,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000110,MongoDB Atlas BI Connector,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000105,MongoDB Atlas SQL,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000111,MongoDB Atlas SQL,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
