@@ -488,7 +488,193 @@ Operational
  GCP - Europe West 3 (Frankfurt)
 Operational
 Past Incidents",,
-10000000000084,Snowflake on AWS,Snowflake,regional,AWS - Europe (Ireland),,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,"AWS - Europe (Ireland)
+10000000000084,Snowflake on Azure,Snowflake,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,"Current Snowflake Status
+
+
+All Systems Operational
+
+
+
+Amazon Web Services Regions
+ AWS - US West (Oregon)
+Operational
+ AWS - GovCloud (US-West)
+Operational
+ AWS - Canada (Central)
+Operational
+ AWS - US East (Ohio)
+Operational
+ AWS - US East (N. Virginia)
+Operational
+ AWS - GovCloud (US-East)
+Operational
+ AWS GovCloud - DoD
+Operational
+ AWS - South America (São Paulo)
+Operational
+ AWS - Europe (Ireland)
+Operational
+ AWS - Europe (London)
+Operational
+ AWS - Europe (Paris)
+Operational
+ AWS - Europe (Zürich)
+Operational
+ AWS - Europe (Frankfurt)
+Operational
+ AWS - Europe (Stockholm)
+Operational
+ AWS - Asia Pacific (Mumbai)
+Operational
+ AWS - Asia Pacific (Singapore)
+Operational
+ AWS - Asia Pacific (Jakarta)
+Operational
+ AWS - Asia Pacific (Seoul)
+Operational
+ AWS - Asia Pacific (Sydney)
+Operational
+ AWS - Asia Pacific (Osaka)
+Operational
+ AWS - Asia Pacific (Tokyo)
+Operational
+Microsoft Azure Regions
+ Azure - West US 2 (Washington)
+Operational
+ Azure - South Central US (Texas)
+Operational
+ Azure - Central US (Iowa)
+Operational
+ Azure - Canada Central (Toronto)
+Operational
+ Azure - East US 2 (Virginia)
+Operational
+ Azure - US Gov (Virginia)
+Operational
+ Azure - North Europe (Ireland)
+Operational
+ Azure - UK South (London)
+Operational
+ Azure - West Europe (Netherlands)
+Operational
+ Azure - Switzerland North (Zürich)
+Operational
+ Azure - UAE North (Dubai)
+Operational
+ Azure - Central India (Pune)
+Operational
+ Azure - Southeast Asia (Singapore)
+Operational
+ Azure - Japan East (Tokyo, Saitama)
+Operational
+ Azure - Australia East (New South Wales)
+Operational
+Google Cloud Platform Regions
+ GCP - US Central 1 (Iowa)
+Operational
+ GCP - US East 4 (N. Virginia)
+Operational
+ GCP - Europe West 2 (London)
+Operational
+ GCP - Europe West 4 (Eemshaven)
+Operational
+ GCP - Europe West 3 (Frankfurt)
+Operational
+Past Incidents",,
+10000000000085,Snowflake on GCP,Snowflake,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,"Current Snowflake Status
+
+
+All Systems Operational
+
+
+
+Amazon Web Services Regions
+ AWS - US West (Oregon)
+Operational
+ AWS - GovCloud (US-West)
+Operational
+ AWS - Canada (Central)
+Operational
+ AWS - US East (Ohio)
+Operational
+ AWS - US East (N. Virginia)
+Operational
+ AWS - GovCloud (US-East)
+Operational
+ AWS GovCloud - DoD
+Operational
+ AWS - South America (São Paulo)
+Operational
+ AWS - Europe (Ireland)
+Operational
+ AWS - Europe (London)
+Operational
+ AWS - Europe (Paris)
+Operational
+ AWS - Europe (Zürich)
+Operational
+ AWS - Europe (Frankfurt)
+Operational
+ AWS - Europe (Stockholm)
+Operational
+ AWS - Asia Pacific (Mumbai)
+Operational
+ AWS - Asia Pacific (Singapore)
+Operational
+ AWS - Asia Pacific (Jakarta)
+Operational
+ AWS - Asia Pacific (Seoul)
+Operational
+ AWS - Asia Pacific (Sydney)
+Operational
+ AWS - Asia Pacific (Osaka)
+Operational
+ AWS - Asia Pacific (Tokyo)
+Operational
+Microsoft Azure Regions
+ Azure - West US 2 (Washington)
+Operational
+ Azure - South Central US (Texas)
+Operational
+ Azure - Central US (Iowa)
+Operational
+ Azure - Canada Central (Toronto)
+Operational
+ Azure - East US 2 (Virginia)
+Operational
+ Azure - US Gov (Virginia)
+Operational
+ Azure - North Europe (Ireland)
+Operational
+ Azure - UK South (London)
+Operational
+ Azure - West Europe (Netherlands)
+Operational
+ Azure - Switzerland North (Zürich)
+Operational
+ Azure - UAE North (Dubai)
+Operational
+ Azure - Central India (Pune)
+Operational
+ Azure - Southeast Asia (Singapore)
+Operational
+ Azure - Japan East (Tokyo, Saitama)
+Operational
+ Azure - Australia East (New South Wales)
+Operational
+Google Cloud Platform Regions
+ GCP - US Central 1 (Iowa)
+Operational
+ GCP - US East 4 (N. Virginia)
+Operational
+ GCP - Europe West 2 (London)
+Operational
+ GCP - Europe West 4 (Eemshaven)
+Operational
+ GCP - Europe West 3 (Frankfurt)
+Operational
+Past Incidents",,
+10000000000086,Snowflake on AWS,Snowflake,regional,AWS - Europe (Ireland),,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,"AWS - Europe (Ireland)
 Snowflake Data Warehouse (Database)
 Operational
 Snowpipe (Data Ingestion)
@@ -497,7 +683,7 @@ Replication
 Operational
 Snowsight
 Operational",,
-10000000000085,Snowflake on Azure,Snowflake,regional,Azure - West Europe (Netherlands),,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,"Azure - West Europe (Netherlands)
+10000000000087,Snowflake on Azure,Snowflake,regional,Azure - West Europe (Netherlands),,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,"Azure - West Europe (Netherlands)
 Snowflake Data Warehouse (Database)
 Operational
 Snowpipe (Data Ingestion)
@@ -506,7 +692,7 @@ Replication
 Operational
 Snowsight
 Operational",,
-10000000000086,Snowflake on GCP,Snowflake,global,GCP - Europe West 3 (Frankfurt),,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,"GCP - Europe West 3 (Frankfurt)
+10000000000088,Snowflake on GCP,Snowflake,global,GCP - Europe West 3 (Frankfurt),,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,"GCP - Europe West 3 (Frankfurt)
 Snowflake Data Warehouse (Database)
 Operational
 Snowpipe (Data Ingestion)
@@ -515,40 +701,40 @@ Replication
 Operational
 Snowsight
 Operational",,
-10000000000087,Databricks,Databricks,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000088,Databricks,Databricks,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000089,Databricks,Databricks,regional,Azure Databricks - UK South,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000090,Databricks,Databricks,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000091,Salesforce SaaS,Salesforce,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000092,Salesforce SaaS,Salesforce,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000093,Salesforce SaaS,Salesforce,regional,Azure Databricks - UK South,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000094,Salesforce SaaS,Salesforce,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
-10000000000095,MongoDB Atlas,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000089,Databricks,Databricks,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000090,Databricks,Databricks,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000091,Databricks,Databricks,regional,Azure Databricks - UK South,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000092,Databricks,Databricks,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000093,Salesforce SaaS,Salesforce,global,,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000094,Salesforce SaaS,Salesforce,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000095,Salesforce SaaS,Salesforce,regional,Azure Databricks - UK South,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000096,Salesforce SaaS,Salesforce,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.991,375,525600.000,525552.696,47.304,-327.696,0.01%,0.07%,0.07%,-0.06%,0.06%,792.74%,0.07%,990.278,996.862,,,,,
+10000000000097,MongoDB Atlas,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000096,MongoDB Atlas Search,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000098,MongoDB Atlas Search,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000097,MongoDB Atlas Vector Search,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000099,MongoDB Atlas Vector Search,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000098,MongoDB Atlas Stream Processing,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000100,MongoDB Atlas Stream Processing,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000099,MongoDB Atlas BI Connector,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000101,MongoDB Atlas BI Connector,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000100,MongoDB Atlas SQL,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000102,MongoDB Atlas SQL,MongoDB,global,,,4,1,24,365,99.991,1532,525600.000,525552.696,47.304,-1484.696,0.01%,0.29%,0.29%,-0.28%,0.28%,3238.63%,0.29%,963.644,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.

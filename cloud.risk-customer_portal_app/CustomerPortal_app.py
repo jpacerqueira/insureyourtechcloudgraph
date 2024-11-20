@@ -105,7 +105,7 @@ st.markdown("""
 load_dotenv(".env")
 
 # Replace the connection input fields with environment variables
-uri = os.getenv("NEO4J_URI", "bolt://0.0.0.0:7687") # TODO: changed from "bolt://customer.risk.graph.neo4j:17687"
+uri = os.getenv("NEO4J_URI", "neo4j://customer_graph:7687") # TODO: changed from "bolt://customer.risk.graph.neo4j:17687"
 user = os.getenv("NEO4J_USERNAME", "neo4j")
 password = os.getenv("NEO4J_PASSWORD", "password")
 
@@ -273,7 +273,7 @@ else:
                 
             st.link_button(
                 f"View Your Cloud Risk Graph - {selection}",
-                url=f"http://localhost:17474/", # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
+                url=f"http://localhost:7474/", # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
                 use_container_width=True
             )
         except Exception as e:
@@ -281,7 +281,7 @@ else:
 
 # Interactive Explore Graph Risk data
 st.subheader("Explore All Cloud Risk Graph - Records")
-st.caption("Go to http://localhost:17474/  - Explore your Cloud Services Cloud.Risk.Graph . with Neo4J Browser") # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
+st.caption("Go to http://localhost:7474/  - Explore your Cloud Services Cloud.Risk.Graph . with Neo4J Browser") # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
 
 # Flask API
 app = Flask(__name__)
@@ -290,14 +290,14 @@ CORS(app, resources={
         "origins": [
             "http://localhost:8504",
             "https://customerportal.cloudriskgraph.insureyourtech.cloud",
-            "http://cloudriskgraph.insureyourtech.cloud:17474",
-            "https://cloudriskgraph.insureyourtech.cloud:17474",
-            "http://customer.risk.graph.neo4j:17474",
-            "bolt://customer.risk.graph.neo4j:17687",
-            "neo4j://customer.risk.graph.neo4j:17687",
-            "http://0.0.0.0:17474",
-            "bolt://0.0.0.0:17687",
-            "neo4j://0.0.0.0:17687"
+            "http://cloudriskgraph.insureyourtech.cloud:7474",
+            "https://cloudriskgraph.insureyourtech.cloud:7474",
+            "http://customer.risk.graph.neo4j:7474",
+            "neo4j://customer_graph:7687",
+            "bolt://customer_graph:7687",
+            "http://0.0.0.0:7474",
+            "bolt://0.0.0.0:7687",
+            "neo4j://0.0.0.0:7687"
         ],
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization", "Access-Control-Allow-Origin"],
