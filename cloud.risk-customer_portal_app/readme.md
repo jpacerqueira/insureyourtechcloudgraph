@@ -21,8 +21,13 @@ docker compose up --build
 
 UI: http://localhost:8504  
 
-- Customer Submission Application
+- Customer Portal - Submission Application
 - New Cloud Risk - Insurance Risk Measurement
 - Manually insert information about cloud usage to calculate your cloud risk graph
 - 
-![customer submission cloud risk information](images/Customer_App4_-_Insurance_Risk_Measurement.png)
+![customer submission cloud risk information 1](images/CustomerPortal_SubmissionAnalysis-1.png)
+![customer submission cloud risk information 2](images/CustomerPortal_SubmissionAnalysis-2.png)
+![customer submission cloud risk information 3](images/CustomerPortal_SubmissionAnalysis-3.png)
+-
+- Obtain risk ratings for your cloud service usage - from your Cloud.Risk.Graph - 
+![customer submission cloud risk information - graph](images/Customer_App4_-_Insurance_Risk_Measurement.png)
