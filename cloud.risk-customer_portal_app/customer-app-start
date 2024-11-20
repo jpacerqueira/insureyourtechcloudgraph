@@ -24,6 +24,9 @@ else
 fi
 if [[ "$BUILD_METHOD" == "3" ]]; then
    docker compose down
+   docker compose rm -sfv # just remove containers and volumes of the compose project
+   #docker system prune -f
+   #docker volume prune -f
    docker compose up --build --force-recreate
 else
    docker compose ps
