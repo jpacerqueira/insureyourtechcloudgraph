@@ -1,0 +1,2 @@
+// clean
+MATCH (n) DETACH DELETE n;
