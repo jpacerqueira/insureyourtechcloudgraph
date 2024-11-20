@@ -126,7 +126,7 @@ services = {
         "Amazon Elastic File System","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
         "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
         "Amazon AWS Step Functions","Amazon s3","Amazon Elastic Kubernetes Service"],
-    "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Apigee API","Google Cloud BigQuery","AlloyDB for PostgreSQL",
+    "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Apigee API","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL",
         "Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud And Media CDN",
         "Google Kubernetes Engine (GKE)"],
     "Microsoft Azure": ["Azure Batch","Azure functions","Azure PowerBi App","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)"],
