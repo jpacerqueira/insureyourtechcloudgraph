@@ -212,7 +212,7 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
 """
         
         # Save Cypher query to file
-        output_path = "neo4j_customer_submission/New_-_Cloud.Risk.Graph_-_Submission.txt"
+        output_path = "neo4j_customer_submission/New_-_Cloud.Risk.Graph_-_Submission.graph"
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         with open(output_path, "w") as f:
             f.write(cypher_query)
