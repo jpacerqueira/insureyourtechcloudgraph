@@ -74,8 +74,8 @@ def sanitize_cypher_identifier(text):
     return sanitized
 
 # Streamlit app starts here
-st.title("Cloud.Risk ")
-st.header("Customer Portal App")
+st.title("Cloud.Risk Graph - Customer Portal")
+st.header("Customer Submission App")
 
 # Add custom CSS to modify multiselect colors and page width
 st.markdown("""
