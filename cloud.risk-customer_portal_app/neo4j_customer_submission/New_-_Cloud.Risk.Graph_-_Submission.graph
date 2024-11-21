@@ -2,8 +2,8 @@
 CREATE (cust_FUEL_DATA_SCIENCE_BIGDATA___LIMITED:CUSTOMER_NAME {
     name: 'FUEL DATA SCIENCE BIGDATA . LIMITED',
     project_name: 'Project by FUEL DATA SCIENCE BIGDATA . LIMITED',
-    median_sla_usage: '152.21',
-    median_sla_deviation: '994.75',
+    median_sla_usage_percentage: '152.21',
+    median_sla_deviation_risk: '994.75',
     median_traffic_coefficient: '0.08',
     median_usage_risk: '996.72'
     })
