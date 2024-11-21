@@ -259,8 +259,8 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
 CREATE (cust_{company_id}:CUSTOMER_NAME {{
     name: '{company_name}',
     project_name: '{project_name}',
-    median_sla_usage: '{median_sla_usage:.2f}',
-    median_sla_deviation: '{median_sla_deviation:.2f}',
+    median_sla_usage_percentage: '{median_sla_usage:.2f}',
+    median_sla_deviation_risk: '{median_sla_deviation:.2f}',
     median_traffic_coefficient: '{median_traffic_coef:.2f}',
     median_usage_risk: '{median_usage_risk:.2f}'
     }})
@@ -271,8 +271,8 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
 CREATE (cust_{company_id}:CUSTOMER_NAME {{
     name: '{company_name}',
     project_name: '{project_name}',
-    median_sla_usage: '0.0',
-    median_sla_deviation: '0.0',
+    median_sla_usage_percentage: '0.0',
+    median_sla_deviation_risk: '0.0',
     median_traffic_coefficient: '0.0',
     median_usage_risk: '0.0'
     }})
