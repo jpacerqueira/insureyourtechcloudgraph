@@ -139,7 +139,7 @@ services = {
         "Red Hat OpenShift on IBM Cloud"],
     "Oracle Cloud OCI": ["Oracle AutonomousDB 21c","autonomousdb_21c","Object Storage OIC","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)"],
     "Snowflake": ["Snowflake on AWS","Snowflake on Azure","Snowflake on GCP"],
-    "Databricks": ["Databricks","Databricks Workspace", "Databricks MLflow", "Databricks Notebooks"],
+    "Databricks": ["Databricks SaaS","Databricks Workspace", "Databricks Mlflow", "Databricks Notebooks"],
     "Salesforce": ["Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud"],
     "MongoDB": [ "MongoDB Atlas", "MongoDB Atlas Search"],
     "Cloudflare": ["AnyCast CloudFlare","CDN CloudFlare", "Cloudflare DNS", "Cloudflare DDoS Protection"],
@@ -154,14 +154,16 @@ project_name = st.text_input("Project Name (optional)", value="Project by "+comp
 # Cloud service selection - modified to accept multiple vendors
 cloud_vendors = ["Amazon AWS", "Google Cloud GCP", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", 
                 "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai"]
-selected_vendors = st.multiselect("Select Cloud Vendors (up to 6)", cloud_vendors, max_selections=6)
+max_vendor_selections = 12
+selected_vendors = st.multiselect("Select Cloud Vendors (up to 6)", cloud_vendors, max_selections=max_vendor_selections) 
 
 # Service selection based on vendors - modified to show services for all selected vendors
 all_available_services = []
 for vendor in selected_vendors:
     all_available_services.extend(services.get(vendor, []))
 
-selected_services = st.multiselect("Select Services (up to 50)", all_available_services, max_selections=50)
+max_service_selections = 250
+selected_services = st.multiselect("Select Services (up to 50)", all_available_services, max_selections=max_service_selections)
 
 # Region type selection
 region_type = st.selectbox("Select Region Type", ["global", "regional"])
