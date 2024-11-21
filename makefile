@@ -1,13 +1,13 @@
-all: riskgraph customer_app workbench_apps backend_server
+all: config_where_am_I_running backend_server customer_app workbench_apps riskgraph
 
 config_where_am_I_running:
 	whoami
         pwd
         ls -listarh
 
-riskgraph:
-	sleep 1
- 	# client_graph.risk_measurement_app ; bash -x start-riskgraph
+backend_server:
+     sleep 1
+     cd cloud-services-risk-ratings-api ; bash -x build-api-cluster 3
 
 customer_app:
 	sleep 1
@@ -18,7 +18,8 @@ workbench_apps:
         # cloud-information-genai-workbench ; bash -x workbench-start-cluster 1 
         echo "workbench-apps skips from build"
 
-backend_server:
-     sleep 1
-     cd cloud-services-risk-ratings-api ; bash -x build-api-cluster 3
+riskgraph:
+        sleep 1
+        # client_graph.risk_measurement_app ; bash -x start-riskgraph
+        echo "riskgraph skips from build"
 
