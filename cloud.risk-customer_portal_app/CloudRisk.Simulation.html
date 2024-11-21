@@ -174,8 +174,8 @@
         "Salesforce SaaS",
         "Snowflake on AWS","Snowflake on Azure","Snowflake on GCP",
         "MongoDB Atlas","MongoDB Atlas Search",
-        "Databricks",
-        "Salesforce SaaS",
+        "Databricks","Databricks Workspace", "Databricks MLflow", "Databricks Notebooks",
+        "Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud"
     ];
 
     // Add new options for regions
@@ -276,6 +276,8 @@
                         <th>Cloud Service</th>
                         <th>Global or by Region</th>
                         <th>Region</th>
+                        <th>Webscrapper Annual Period Service Down Per Year in Minutes</th>
+                        <th>SLA of the Cloud Service</th>
                         <th>SLA Usage %</th>
                         <th>Traffic Coef %</th>
                         <th>SLA Deviation Risk Rating</th>
@@ -291,6 +293,8 @@
             <div style="margin-top: 20px; padding: 15px; background-color: #2c3039; border-radius: 5px;">
                 <h3 style="color: #74b9ff; margin-bottom: 10px;">Understanding the Cloud.Risk Ratings: Based on SLA and Traffic Coef.</h3>
                 <ul style="list-style-type: none; padding-left: 0;">
+                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Webscrapper Annual Period Service Down Per Year in Minutes:</strong> Measures the total minutes the Service was down or degraded Year-to-Date.</li>
+                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA of the Cloud Service:</strong> The SLA of the Cloud Service. A value of 99% means the Service is usable 100% of its time, is 99% time garanteed up, and only up to 1% time down under Cloud Service Vender promissed SLA.</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA Usage %:</strong> Measures the percentage of SLA the Service has used Year-to-date . A value of 100% means the Service has used 100% of its SLA .</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Traffic Coef %:</strong> Measures the percentage of time the Service was down or degraded Year-to-Date. A value of 0% means the service was never down or degraded. A value of 100% means the service was always down or degraded.</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA Deviation Risk Rating:</strong> Indicates Risk based on SLA discrepancies. Measures the likelihood of service level agreement deviations (0.0-999.0, where higher values indicate greater risk).</li>
@@ -341,6 +345,8 @@
                             <td>${variable2}</td>
                             <td>${variable3}</td>
                             <td>${riskData.region}</td>
+                            <td>${riskData.webscraper_annual_period_service_down_per_year_in_minutes || 'N/A'}</td>
+                            <td>${riskData.service_sla_0_99_9999_for_60min_times_24h_365days || 'N/A'}</td>
                             <td>${riskData.service_sla_usage_percentage || 'N/A'}</td>
                             <td>${riskData.service_traffic_coef_by_percent_down || 'N/A'}</td>
                             <td>${riskData.sla_deviation_connected_risk_0_999|| 'N/A'}</td>

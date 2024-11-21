@@ -139,8 +139,8 @@ services = {
         "Red Hat OpenShift on IBM Cloud"],
     "Oracle Cloud OCI": ["Oracle AutonomousDB 21c","autonomousdb_21c","Object Storage OIC","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)"],
     "Snowflake": ["Snowflake on AWS","Snowflake on Azure","Snowflake on GCP"],
-    "Databricks": ["Databricks","Workspace", "MLflow", "Delta Lake"],
-    "Salesforce": ["Salesforce SaaS","Sales Cloud", "Service Cloud", "Marketing Cloud"],
+    "Databricks": ["Databricks","Databricks Workspace", "Databricks MLflow", "Databricks Notebooks"],
+    "Salesforce": ["Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud"],
     "MongoDB": [ "MongoDB Atlas", "MongoDB Atlas Search"],
     "Cloudflare": ["AnyCast CloudFlare","CDN CloudFlare", "Cloudflare DNS", "Cloudflare DDoS Protection"],
     "Akamai": ["CDN Akamai", "Edge Computing Akamai", "Security Akamai"],
@@ -171,9 +171,21 @@ if st.button("Analyze Cloud Risk"):
     if company_name and selected_services and region_type:
         st.subheader("Risk Analysis Results")
         
+        # Initialize lists to store values for median calculation
+        sla_usage_values = []
+        sla_deviation_values = []
+        traffic_coef_values = []
+        usage_risk_values = []
+        
+        # Clean company name
+        company_name = company_name.replace('\'', '.')
+        # Clean project name
+        project_name = project_name.replace('\'', '.')
         # Generate Cypher query with sanitized identifiers
         company_id = sanitize_cypher_identifier(company_name)
-        cypher_query = f"CREATE (cust_{company_id}:CUSTOMER_NAME {{name: '{company_name}'}})\n"
+        cypher_query = ""
+        # Create customer node
+        # moved to end of script to allow for median calculation
         
         # Create vendor nodes with sanitized IDs
         for vendor in selected_vendors:
@@ -186,6 +198,18 @@ if st.button("Analyze Cloud Risk"):
             risk_data = fetch_cloud_risk_data(service, region_type)
             
             if risk_data:
+                # Convert to float and remove % and ,
+                sla_usage = float(risk_data.get('service_sla_usage_percentage', 0.0).rstrip('%').replace(',', '.'))
+                sla_deviation = float(risk_data.get('sla_deviation_connected_risk_0_999', 0.0).rstrip('%').replace(',', '.'))
+                traffic_coef = float(risk_data.get('service_traffic_coef_by_percent_down', 0.0).rstrip('%').replace(',', '.'))
+                usage_risk = float(risk_data.get('usage_connected_risk_0_999', 0.0).rstrip('%').replace(',', '.'))
+                
+                # Append values to lists
+                sla_usage_values.append(sla_usage)
+                sla_deviation_values.append(sla_deviation)
+                traffic_coef_values.append(traffic_coef)
+                usage_risk_values.append(usage_risk)
+                
                 # Create service node
                 cypher_query += f"""
 CREATE ({service_id}:TECHNOLOGY_SERVICE {{
@@ -193,7 +217,9 @@ CREATE ({service_id}:TECHNOLOGY_SERVICE {{
     sla_usage: '{risk_data.get('service_sla_usage_percentage', 0.0)}',
     sla_deviation_risk: '{risk_data.get('sla_deviation_connected_risk_0_999', 0.0)}',
     traffic_coefficient: '{risk_data.get('service_traffic_coef_by_percent_down', 0.0)}',
-    usage_risk: '{risk_data.get('usage_connected_risk_0_999', 0.0)}'
+    usage_risk: '{risk_data.get('usage_connected_risk_0_999', 0.0)}',
+    annual_downtime_minutes: '{risk_data.get('webscraper_annual_period_service_down_per_year_in_minutes', 0.0)}',
+    service_sla: '{risk_data.get('service_sla_0_99_9999_for_60min_times_24h_365days', 0.0)}'
 }})
 """
                 # Find vendor for this service
@@ -211,6 +237,48 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
 }}]->({service_id})
 """
         
+        # Replace the mean calculation section with median calculation
+        if sla_usage_values and sla_deviation_values and traffic_coef_values and usage_risk_values:
+            # Calculate medians
+            median_sla_usage = sorted(sla_usage_values)[len(sla_usage_values)//2]
+            median_sla_deviation = sorted(sla_deviation_values)[len(sla_deviation_values)//2]
+            median_traffic_coef = sorted(traffic_coef_values)[len(traffic_coef_values)//2]
+            median_usage_risk = sorted(usage_risk_values)[len(usage_risk_values)//2]
+            
+            st.subheader("Overall Risk Analysis Summary")
+            col1, col2 = st.columns(2)
+            with col1:
+                st.metric("Median SLA Usage %", f"{median_sla_usage:.2f}")
+                st.metric("Median SLA Deviation Risk", f"{median_sla_deviation:.2f}")
+            with col2:
+                st.metric("Median Traffic Coefficient %", f"{median_traffic_coef:.2f}")
+                st.metric("Median Usage Risk Rating", f"{median_usage_risk:.2f}")
+            
+            # Create the customer node with median values
+            cypher_query =    f"""
+CREATE (cust_{company_id}:CUSTOMER_NAME {{
+    name: '{company_name}',
+    project_name: '{project_name}',
+    median_sla_usage: '{median_sla_usage:.2f}',
+    median_sla_deviation: '{median_sla_deviation:.2f}',
+    median_traffic_coefficient: '{median_traffic_coef:.2f}',
+    median_usage_risk: '{median_usage_risk:.2f}'
+    }})
+""" + cypher_query
+        else:
+            # Create customer node with default median values
+            cypher_query =  f"""
+CREATE (cust_{company_id}:CUSTOMER_NAME {{
+    name: '{company_name}',
+    project_name: '{project_name}',
+    median_sla_usage: '0.0',
+    median_sla_deviation: '0.0',
+    median_traffic_coefficient: '0.0',
+    median_usage_risk: '0.0'
+    }})
+""" + cypher_query
+
+
         # Save Cypher query to file
         output_path = "neo4j_customer_submission/New_-_Cloud.Risk.Graph_-_Submission.graph"
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -224,7 +292,7 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
             st.write(f"Analysis for {service}")
             risk_data = fetch_cloud_risk_data(service, region_type)
             if risk_data:
-                col1, col2 = st.columns(2)
+                col1, col2, col3 = st.columns(3)
                 
                 with col1:
                     st.metric("SLA Usage %", risk_data.get("service_sla_usage_percentage", "N/A"))
@@ -234,6 +302,10 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                     st.metric("Traffic Coefficient %", risk_data.get("service_traffic_coef_by_percent_down", "N/A"))
                     st.metric("Usage Risk Rating", risk_data.get("usage_connected_risk_0_999", "N/A"))
                 
+                with col3:
+                    st.metric("Annual Downtime (minutes)", risk_data.get("webscraper_annual_period_service_down_per_year_in_minutes", "N/A"))
+                    st.metric("Service SLA (99.9999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A"))
+
                 st.text_area(f"AI Analysis - {service}", risk_data.get("remarks_outage_genai", "No analysis available"), height=100)
                 st.divider()
     else:
