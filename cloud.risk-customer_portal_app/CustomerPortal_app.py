@@ -277,10 +277,10 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                 st.write(f"### {vendor} Median Metrics")
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.metric("Median SLA Usage %", f"{vendor_median_sla_usage:.2f}")
+                    st.metric("Median SLA Usage %", f"{vendor_median_sla_usage:.2f}%")
                     st.metric("Median SLA Deviation Risk", f"{vendor_median_sla_deviation:.2f}")
                 with col2:
-                    st.metric("Median Traffic Coefficient %", f"{vendor_median_traffic_coef:.2f}")
+                    st.metric("Median Traffic Coefficient %", f"{vendor_median_traffic_coef:.2f}%")
                     st.metric("Median Usage Risk Rating", f"{vendor_median_usage_risk:.2f}")
                 
                 # Update vendor node creation in Cypher query
@@ -303,10 +303,10 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
             st.subheader("Overall Cloud Risk Analysis")
             col1, col2 = st.columns(2)
             with col1:
-                st.metric("Median SLA Usage %", f"{customer_median_sla_usage:.2f}")
+                st.metric("Median SLA Usage %", f"{customer_median_sla_usage:.2f}%")
                 st.metric("Median SLA Deviation Risk", f"{customer_median_sla_deviation:.2f}")
             with col2:
-                st.metric("Median Traffic Coefficient %", f"{customer_median_traffic_coef:.2f}")
+                st.metric("Median Traffic Coefficient %", f"{customer_median_traffic_coef:.2f}%")
                 st.metric("Median Usage Risk Rating", f"{customer_median_usage_risk:.2f}")
             
             # Create the customer node with median values
