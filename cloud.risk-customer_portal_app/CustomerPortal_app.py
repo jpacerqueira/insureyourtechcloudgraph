@@ -223,7 +223,9 @@ CREATE ({service_id}:TECHNOLOGY_SERVICE {{
     sla_usage: '{risk_data.get('service_sla_usage_percentage', 0.0)}',
     sla_deviation_risk: '{risk_data.get('sla_deviation_connected_risk_0_999', 0.0)}',
     traffic_coefficient: '{risk_data.get('service_traffic_coef_by_percent_down', 0.0)}',
-    usage_risk: '{risk_data.get('usage_connected_risk_0_999', 0.0)}'
+    usage_risk: '{risk_data.get('usage_connected_risk_0_999', 0.0)}',
+    annual_downtime_minutes: '{risk_data.get('webscraper_annual_period_service_down_per_year_in_minutes', 0.0)}',
+    service_sla: '{risk_data.get('service_sla_0_99_9999_for_60min_times_24h_365days', 0.0)}'
 }})
 """
                 # Find vendor for this service
@@ -242,7 +244,7 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
 """
         
         # Replace the mean calculation section with median calculation
-        if valid_services_count > 0:
+        if sla_usage_values and sla_deviation_values and traffic_coef_values and usage_risk_values:
             # Calculate medians
             median_sla_usage = sorted(sla_usage_values)[len(sla_usage_values)//2]
             median_sla_deviation = sorted(sla_deviation_values)[len(sla_deviation_values)//2]
@@ -281,7 +283,7 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
             st.write(f"Analysis for {service}")
             risk_data = fetch_cloud_risk_data(service, region_type)
             if risk_data:
-                col1, col2 = st.columns(2)
+                col1, col2, col3 = st.columns(3)
                 
                 with col1:
                     st.metric("SLA Usage %", risk_data.get("service_sla_usage_percentage", "N/A"))
@@ -291,6 +293,10 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                     st.metric("Traffic Coefficient %", risk_data.get("service_traffic_coef_by_percent_down", "N/A"))
                     st.metric("Usage Risk Rating", risk_data.get("usage_connected_risk_0_999", "N/A"))
                 
+                with col3:
+                    st.metric("Annual Downtime (minutes)", risk_data.get("webscraper_annual_period_service_down_per_year_in_minutes", "N/A"))
+                    st.metric("Service SLA (99.9999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A"))
+
                 st.text_area(f"AI Analysis - {service}", risk_data.get("remarks_outage_genai", "No analysis available"), height=100)
                 st.divider()
     else:
