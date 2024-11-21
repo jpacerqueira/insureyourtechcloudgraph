@@ -183,15 +183,9 @@ if st.button("Analyze Cloud Risk"):
         project_name = project_name.replace('\'', '.')
         # Generate Cypher query with sanitized identifiers
         company_id = sanitize_cypher_identifier(company_name)
-        cypher_query = f"""CREATE (cust_{company_id}:CUSTOMER_NAME {{
-            name: '{company_name}',
-            project_name: '{project_name}',
-            median_sla_usage: 0,
-            median_sla_deviation: 0,
-            median_traffic_coefficient: 0,
-            median_usage_risk: 0
-        }})
-"""
+        cypher_query = ""
+        # Create customer node
+        # moved to end of script to allow for median calculation
         
         # Create vendor nodes with sanitized IDs
         for vendor in selected_vendors:
@@ -260,15 +254,30 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                 st.metric("Median Traffic Coefficient %", f"{median_traffic_coef:.2f}")
                 st.metric("Median Usage Risk Rating", f"{median_usage_risk:.2f}")
             
-            # Update the customer node with median values
-            cypher_query = cypher_query.replace(
-                f"CREATE (cust_{company_id}:CUSTOMER_NAME {{",
-                f"""CREATE (cust_{company_id}:CUSTOMER_NAME {{
-                    median_sla_usage: {median_sla_usage:.2f},
-                    median_sla_deviation: {median_sla_deviation:.2f},
-                    median_traffic_coefficient: {median_traffic_coef:.2f},
-                    median_usage_risk: {median_usage_risk:.2f},"""
-            )
+            # Create the customer node with median values
+            cypher_query =    f"""
+CREATE (cust_{company_id}:CUSTOMER_NAME {{
+    name: '{company_name}',
+    project_name: '{project_name}',
+    median_sla_usage: '{median_sla_usage:.2f}',
+    median_sla_deviation: '{median_sla_deviation:.2f}',
+    median_traffic_coefficient: '{median_traffic_coef:.2f}',
+    median_usage_risk: '{median_usage_risk:.2f}'
+    }})
+""" + cypher_query
+        else:
+            # Create customer node with default median values
+            cypher_query =  f"""
+CREATE (cust_{company_id}:CUSTOMER_NAME {{
+    name: '{company_name}',
+    project_name: '{project_name}',
+    median_sla_usage: '0.0',
+    median_sla_deviation: '0.0',
+    median_traffic_coefficient: '0.0',
+    median_usage_risk: '0.0'
+    }})
+""" + cypher_query
+
 
         # Save Cypher query to file
         output_path = "neo4j_customer_submission/New_-_Cloud.Risk.Graph_-_Submission.graph"
