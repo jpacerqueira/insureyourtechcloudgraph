@@ -128,7 +128,7 @@ services = {
         "Amazon AWS Step Functions","Amazon s3","Amazon Elastic Kubernetes Service"],
     "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Apigee API","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL",
         "Google Cloud SQL","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud And Media CDN",
-        "Google Kubernetes Engine (GKE)"],
+        "Google Cloud Looker Studio Pro","Google Kubernetes Engine (GKE)"],
     "Microsoft Azure": ["Azure Batch","Azure functions","Azure PowerBi App","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)"],
     "IBM Cloud": ["IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
         "IBM Databases","IBM Databases for DataStax","IBM Databases for EDB",
@@ -154,16 +154,16 @@ project_name = st.text_input("Project Name (optional)", value="Project by "+comp
 # Cloud service selection - modified to accept multiple vendors
 cloud_vendors = ["Amazon AWS", "Google Cloud GCP", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", 
                 "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai"]
-max_vendor_selections = 12
-selected_vendors = st.multiselect("Select Cloud Vendors (up to 6)", cloud_vendors, max_selections=max_vendor_selections) 
+max_vendor_selections = 10
+selected_vendors = st.multiselect("Select Cloud Vendors (up to 10)", cloud_vendors, max_selections=max_vendor_selections) 
 
 # Service selection based on vendors - modified to show services for all selected vendors
 all_available_services = []
 for vendor in selected_vendors:
     all_available_services.extend(services.get(vendor, []))
 
-max_service_selections = 250
-selected_services = st.multiselect("Select Services (up to 50)", all_available_services, max_selections=max_service_selections)
+max_service_selections = 100
+selected_services = st.multiselect("Select Services (up to 100)", all_available_services, max_selections=max_service_selections)
 
 # Region type selection
 region_type = st.selectbox("Select Region Type", ["global", "regional"])
@@ -216,7 +216,8 @@ CREATE ({service_id}:TECHNOLOGY_SERVICE {{
     traffic_coefficient: '{risk_data.get('service_traffic_coef_by_percent_down', 0.0)}',
     usage_risk: '{risk_data.get('usage_connected_risk_0_999', 0.0)}',
     annual_downtime_minutes: '{risk_data.get('webscraper_annual_period_service_down_per_year_in_minutes', 0.0)}',
-    service_sla: '{risk_data.get('service_sla_0_99_9999_for_60min_times_24h_365days', 0.0)}'
+    service_sla: '{risk_data.get('service_sla_0_99_9999_for_60min_times_24h_365days', 0.0)}',
+    percentage_service_credit_back: '{risk_data.get('percentage_service_credit_back', 0.0)}'
 }})
 """
                 # Find vendor for this service
@@ -372,6 +373,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                 with col3:
                     st.metric("Annual Downtime (minutes)", risk_data.get("webscraper_annual_period_service_down_per_year_in_minutes", "N/A"))
                     st.metric("Service SLA (99.9999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A"))
+                    st.metric("Service Credit Back (%)", risk_data.get("percentage_service_credit_back", "N/A"))
 
                 st.text_area(f"AI Analysis - {service}", risk_data.get("remarks_outage_genai", "No analysis available"), height=100)
                 st.divider()
