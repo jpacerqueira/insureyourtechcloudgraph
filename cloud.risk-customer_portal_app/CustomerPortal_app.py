@@ -139,7 +139,7 @@ services = {
         "Red Hat OpenShift on IBM Cloud"],
     "Oracle Cloud OCI": ["Oracle AutonomousDB 21c","autonomousdb_21c","Object Storage OIC","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)"],
     "Snowflake": ["Snowflake on AWS","Snowflake on Azure","Snowflake on GCP"],
-    "Databricks": ["Databricks","Databricks Workspace", "Databricks MLflow", "Databricks Notebooks"],
+    "Databricks": ["Databricks SaaS","Databricks Workspace", "Databricks Mlflow", "Databricks Notebooks"],
     "Salesforce": ["Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud"],
     "MongoDB": [ "MongoDB Atlas", "MongoDB Atlas Search"],
     "Cloudflare": ["AnyCast CloudFlare","CDN CloudFlare", "Cloudflare DNS", "Cloudflare DDoS Protection"],
@@ -154,14 +154,16 @@ project_name = st.text_input("Project Name (optional)", value="Project by "+comp
 # Cloud service selection - modified to accept multiple vendors
 cloud_vendors = ["Amazon AWS", "Google Cloud GCP", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", 
                 "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai"]
-selected_vendors = st.multiselect("Select Cloud Vendors (up to 6)", cloud_vendors, max_selections=6)
+max_vendor_selections = 12
+selected_vendors = st.multiselect("Select Cloud Vendors (up to 6)", cloud_vendors, max_selections=max_vendor_selections) 
 
 # Service selection based on vendors - modified to show services for all selected vendors
 all_available_services = []
 for vendor in selected_vendors:
     all_available_services.extend(services.get(vendor, []))
 
-selected_services = st.multiselect("Select Services (up to 50)", all_available_services, max_selections=50)
+max_service_selections = 250
+selected_services = st.multiselect("Select Services (up to 50)", all_available_services, max_selections=max_service_selections)
 
 # Region type selection
 region_type = st.selectbox("Select Region Type", ["global", "regional"])
@@ -172,10 +174,10 @@ if st.button("Analyze Cloud Risk"):
         st.subheader("Risk Analysis Results")
         
         # Initialize lists to store values for median calculation
-        sla_usage_values = []
-        sla_deviation_values = []
-        traffic_coef_values = []
-        usage_risk_values = []
+        customer_sla_usage_values = []
+        customer_sla_deviation_values = []
+        customer_traffic_coef_values = []
+        customer_usage_risk_values = []
         
         # Clean company name
         company_name = company_name.replace('\'', '.')
@@ -186,12 +188,7 @@ if st.button("Analyze Cloud Risk"):
         cypher_query = ""
         # Create customer node
         # moved to end of script to allow for median calculation
-        
-        # Create vendor nodes with sanitized IDs
-        for vendor in selected_vendors:
-            vendor_id = sanitize_cypher_identifier(vendor)
-            cypher_query += f"CREATE ({vendor_id}:TECHNOLOGY_PROVIDER {{name: '{vendor}'}})\n"
-        
+            
         # Create service nodes and relationships with sanitized IDs
         for service in selected_services:
             service_id = sanitize_cypher_identifier(service)
@@ -205,10 +202,10 @@ if st.button("Analyze Cloud Risk"):
                 usage_risk = float(risk_data.get('usage_connected_risk_0_999', 0.0).rstrip('%').replace(',', '.'))
                 
                 # Append values to lists
-                sla_usage_values.append(sla_usage)
-                sla_deviation_values.append(sla_deviation)
-                traffic_coef_values.append(traffic_coef)
-                usage_risk_values.append(usage_risk)
+                customer_sla_usage_values.append(sla_usage)
+                customer_sla_deviation_values.append(sla_deviation)
+                customer_traffic_coef_values.append(traffic_coef)
+                customer_usage_risk_values.append(usage_risk)
                 
                 # Create service node
                 cypher_query += f"""
@@ -236,36 +233,107 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
     usage_risk: '{risk_data.get('usage_connected_risk_0_999', 0.0)}'
 }}]->({service_id})
 """
+
+        # Initialize dictionaries to store values per vendor
+        vendor_metrics = {vendor: {
+            'sla_usage': [],
+            'sla_deviation': [],
+            'traffic_coef': [],
+            'usage_risk': []
+        } for vendor in selected_vendors}
         
-        # Replace the mean calculation section with median calculation
-        if sla_usage_values and sla_deviation_values and traffic_coef_values and usage_risk_values:
+        # Collect metrics per vendor
+        for service in selected_services:
+            risk_data = fetch_cloud_risk_data(service, region_type)
+            if risk_data:
+                # Find vendor for this service
+                for vendor, vendor_services in services.items():
+                    if service in vendor_services and vendor in selected_vendors:
+                        # Convert to float and remove % and ,
+                        sla_usage = float(risk_data.get('service_sla_usage_percentage', 0.0).rstrip('%').replace(',', '.'))
+                        sla_deviation = float(risk_data.get('sla_deviation_connected_risk_0_999', 0.0).rstrip('%').replace(',', '.'))
+                        traffic_coef = float(risk_data.get('service_traffic_coef_by_percent_down', 0.0).rstrip('%').replace(',', '.'))
+                        usage_risk = float(risk_data.get('usage_connected_risk_0_999', 0.0).rstrip('%').replace(',', '.'))
+                        
+                        vendor_metrics[vendor]['sla_usage'].append(sla_usage)
+                        vendor_metrics[vendor]['sla_deviation'].append(sla_deviation)
+                        vendor_metrics[vendor]['traffic_coef'].append(traffic_coef)
+                        vendor_metrics[vendor]['usage_risk'].append(usage_risk)
+        
+        # Calculate and display vendor medians
+        st.subheader("Vendor-specific Risk Analysis")
+        for vendor in selected_vendors:
+            metrics = vendor_metrics[vendor]
+            if any(metrics.values()):  # If there's any data for this vendor
+                vendor_id = sanitize_cypher_identifier(vendor)
+                
+                # Calculate medians
+                vendor_median_sla_usage = sorted(metrics['sla_usage'])[len(metrics['sla_usage'])//2] if metrics['sla_usage'] else 0.0
+                vendor_median_sla_deviation = sorted(metrics['sla_deviation'])[len(metrics['sla_deviation'])//2] if metrics['sla_deviation'] else 0.0
+                vendor_median_traffic_coef = sorted(metrics['traffic_coef'])[len(metrics['traffic_coef'])//2] if metrics['traffic_coef'] else 0.0
+                vendor_median_usage_risk = sorted(metrics['usage_risk'])[len(metrics['usage_risk'])//2] if metrics['usage_risk'] else 0.0
+                
+                # Display vendor metrics
+                st.write(f"### {vendor} Median Metrics")
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.metric("Median SLA Usage %", f"{vendor_median_sla_usage:.2f}")
+                    st.metric("Median SLA Deviation Risk", f"{vendor_median_sla_deviation:.2f}")
+                with col2:
+                    st.metric("Median Traffic Coefficient %", f"{vendor_median_traffic_coef:.2f}")
+                    st.metric("Median Usage Risk Rating", f"{vendor_median_usage_risk:.2f}")
+                
+                # Update vendor node creation in Cypher query
+                cypher_query = f"""CREATE ({vendor_id}:TECHNOLOGY_PROVIDER {{
+                    name: '{vendor}',
+                    vendor_median_sla_usage_percentage: '{vendor_median_sla_usage:.2f}',
+                    vendor_median_sla_deviation_risk: '{vendor_median_sla_deviation:.2f}',
+                    vendor_median_traffic_coefficient: '{vendor_median_traffic_coef:.2f}',
+                    vendor_median_usage_risk: '{vendor_median_usage_risk:.2f}'
+                }})\n""" + cypher_query
+                # Replace the mean calculation section with median calculation
+        if customer_sla_usage_values and customer_sla_deviation_values and customer_traffic_coef_values and customer_usage_risk_values:
             # Calculate medians
-            median_sla_usage = sorted(sla_usage_values)[len(sla_usage_values)//2]
-            median_sla_deviation = sorted(sla_deviation_values)[len(sla_deviation_values)//2]
-            median_traffic_coef = sorted(traffic_coef_values)[len(traffic_coef_values)//2]
-            median_usage_risk = sorted(usage_risk_values)[len(usage_risk_values)//2]
-            
-            st.subheader("Overall Risk Analysis Summary")
+            customer_median_sla_usage = sorted(customer_sla_usage_values)[len(customer_sla_usage_values)//2]
+            customer_median_sla_deviation = sorted(customer_sla_deviation_values)[len(customer_sla_deviation_values)//2]
+            customer_median_traffic_coef = sorted(customer_traffic_coef_values)[len(customer_traffic_coef_values)//2]
+            customer_median_usage_risk = sorted(customer_usage_risk_values)[len(customer_usage_risk_values)//2]
+
+            st.subheader("Customer Summary")           
+            st.subheader("Overall Cloud Risk Analysis")
             col1, col2 = st.columns(2)
             with col1:
-                st.metric("Median SLA Usage %", f"{median_sla_usage:.2f}")
-                st.metric("Median SLA Deviation Risk", f"{median_sla_deviation:.2f}")
+                st.metric("Median SLA Usage %", f"{customer_median_sla_usage:.2f}")
+                st.metric("Median SLA Deviation Risk", f"{customer_median_sla_deviation:.2f}")
             with col2:
-                st.metric("Median Traffic Coefficient %", f"{median_traffic_coef:.2f}")
-                st.metric("Median Usage Risk Rating", f"{median_usage_risk:.2f}")
+                st.metric("Median Traffic Coefficient %", f"{customer_median_traffic_coef:.2f}")
+                st.metric("Median Usage Risk Rating", f"{customer_median_usage_risk:.2f}")
             
             # Create the customer node with median values
             cypher_query =    f"""
 CREATE (cust_{company_id}:CUSTOMER_NAME {{
     name: '{company_name}',
     project_name: '{project_name}',
-    median_sla_usage_percentage: '{median_sla_usage:.2f}',
-    median_sla_deviation_risk: '{median_sla_deviation:.2f}',
-    median_traffic_coefficient: '{median_traffic_coef:.2f}',
-    median_usage_risk: '{median_usage_risk:.2f}'
+    median_sla_usage_percentage: '{customer_median_sla_usage:.2f}',
+    median_sla_deviation_risk: '{customer_median_sla_deviation:.2f}',
+    median_traffic_coefficient: '{customer_median_traffic_coef:.2f}',
+    median_usage_risk: '{customer_median_usage_risk:.2f}'
     }})
 """ + cypher_query
+            # Create vendor nodes with sanitized IDs
+            # Logic above is done
         else:
+            # Create vendor nodes with sanitized IDs
+            for vendor in selected_vendors:
+                vendor_id = sanitize_cypher_identifier(vendor)
+                cypher_query = f"""CREATE ({vendor_id}:TECHNOLOGY_PROVIDER {{name: '{vendor}',
+                  vendor_median_sla_usage_percentage: '0.0',
+                  vendor_median_sla_deviation_risk: '0.0',
+                  vendor_median_traffic_coefficient: '0.0',
+                  vendor_median_usage_risk: '0.0'
+                  }})
+                  """ + cypher_query
+            # 
             # Create customer node with default median values
             cypher_query =  f"""
 CREATE (cust_{company_id}:CUSTOMER_NAME {{
@@ -277,8 +345,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
     median_usage_risk: '0.0'
     }})
 """ + cypher_query
-
-
+            
         # Save Cypher query to file
         output_path = "neo4j_customer_submission/New_-_Cloud.Risk.Graph_-_Submission.graph"
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
