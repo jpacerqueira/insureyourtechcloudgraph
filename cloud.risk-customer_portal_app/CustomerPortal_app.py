@@ -377,13 +377,13 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
         st.header("Individual Cloud Services Risk Analysis")
         st.subheader("by Cloud Services")
 
-        # Add a single toggle button for all services
-        show_all = st.button("Show/Hide All Services Analysis")
-        
         # Store the toggle state in session state if it doesn't exist
         if 'expand_all' not in st.session_state:
-            st.session_state.expand_all = True
-        
+            st.session_state.expand_all = False
+
+        # Add a single toggle button for all services
+        #show_all = st.button("Show/Hide All Services Analysis") # TODO: change to "Show/Hide All Services Analysis" when ready
+        show_all = True
         # Update the state when button is clicked
         if show_all:
             st.session_state.expand_all = not st.session_state.expand_all
@@ -421,7 +421,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                         st.metric("By SLA Expected Annual Downtime (minutes)", risk_data.get("expected_annual_service_minutes_down", "N/A"))
                     
                     with col4:
-                        st.metric("Service SLA (99.99999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A"))
+                        st.metric("Service SLA (99.99999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A") +"%")
                         st.metric("Service Credit Back (%)", str(risk_data.get("percentage_service_credit_back", "N/A"))+"%")
                         st.metric("Monthly Credit Back max. per $1.000 ", "$"+str(estimated_cloud_services_credit_money_back))
                         st.caption(warning_max_credit_back)
@@ -430,6 +430,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                     st.divider()
     else:
         st.warning("Please fill in all required fields")
+   
 
 # VIEW Results -  from Application - Customer
 st.header("View your Cloud Risk Graphs")
