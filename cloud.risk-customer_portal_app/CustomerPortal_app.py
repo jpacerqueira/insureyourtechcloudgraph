@@ -375,8 +375,8 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                 col1, col2, col3, col4 = st.columns(4)
 
                 # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
-                # Formula: when SLA usage is 100% or more, then the credit back is XXX%-100% of the SLA usage
-                estimated_cloud_services_credit_back_money_back = 0.0 if float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%')) <= 100 else (float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%'))-100)/100*float(risk_data.get("percentage_service_credit_back", 0.0).rstrip('%'))/100*1000
+                # Formula: when SLA usage is 100% or more, then the credit back is XXX%-100% of the SLA usage , divide by 12 for monthy approach
+                estimated_cloud_services_credit_money_back = 0.0 if float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%')) <= 100 else (float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%'))-100)/100*float(risk_data.get("percentage_service_credit_back", 0.0).rstrip('%'))/100*1000
 
                 with col1:
                     st.metric("SLA Usage %", risk_data.get("service_sla_usage_percentage", "N/A"))
@@ -393,7 +393,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                 with col4:
                     st.metric("Service SLA (99.99999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A"))
                     st.metric("Service Credit Back (%)", str(risk_data.get("percentage_service_credit_back", "N/A"))+"%")
-                    st.metric("Estimated max. - Cloud Service -  Credit Back per $$1.000", "$"+str(estimated_cloud_services_credit_back_money_back))
+                    st.metric("Monthly Credit Back per $$1.000 ", "$"+str(estimated_cloud_services_credit_money_back))
                 
                 st.text_area(f"AI Analysis - {service}", risk_data.get("remarks_outage_genai", "No analysis available"), height=100)
                 st.divider()
