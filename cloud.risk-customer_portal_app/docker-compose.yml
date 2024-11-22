@@ -22,7 +22,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway" #"host.docker.internal:172.17.0.1"
     ports:
-      - 8504:8504
+      - 8185:8185
     volumes:
       - ./neo4j_customer_submission:/app/neo4j_customer_submission
 

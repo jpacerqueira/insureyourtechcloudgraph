@@ -5,7 +5,7 @@ GCP,https://status.cloud.google.com/summary,https://status.cloud.google.com/summ
 IBM,https://cloud.ibm.com/status,,,,https://cloud.ibm.com/status/incident-reports,,,,
 OCI,https://ocistatus.oraclecloud.com/#/,https://ocistatus.oraclecloud.com/#/history,,,,,,,
 CloudFlare,https://www.cloudflarestatus.com/,,,,,,,,
-Akamai,https://www.akamaistatus.com/,https://www.akamaistatus.com/,,,,,,,
+Akamai,https://www.akamaistatus.com/,https://www.akamaistatus.com/,,,,https://www.cdnperf.com/cdn-provider/akamai-cdn/,,,
 MongoDB,https://status.mongodb.com/,https://status.mongodb.com/history,,,,,,,
 Snowflake,https://status.snowflake.com/,https://status.snowflake.com/history,,,,,,,
 Databricks,https://status.databricks.com/,https://docs.databricks.com/en/resources/status.html,,,,,,,

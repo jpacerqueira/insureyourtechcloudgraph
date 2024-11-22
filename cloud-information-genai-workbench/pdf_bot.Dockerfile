@@ -16,6 +16,8 @@ COPY pdf_bot.py .
 COPY utils.py .
 COPY chains.py .
 
+COPY pdf_bot_usebatch/   ./pdf_bot_usebatch
+
 EXPOSE 8503
 
 HEALTHCHECK CMD curl --fail http://localhost:8503/_stcore/health
