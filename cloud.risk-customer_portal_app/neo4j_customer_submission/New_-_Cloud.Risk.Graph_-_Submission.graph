@@ -13,7 +13,8 @@ CREATE (Databricks:TECHNOLOGY_PROVIDER {
                     vendor_median_sla_deviation_risk: '991.06',
                     vendor_median_traffic_coefficient: '0.07%',
                     vendor_median_usage_risk: '996.86',
-                    vendor_median_service_sla: '99.99%'
+                    vendor_median_service_sla: '99.99%',
+                    vendor_median_annual_downtime: '375.00'
                 })
 CREATE (MongoDB:TECHNOLOGY_PROVIDER {
                     name: 'MongoDB',
@@ -21,7 +22,8 @@ CREATE (MongoDB:TECHNOLOGY_PROVIDER {
                     vendor_median_sla_deviation_risk: '966.87',
                     vendor_median_traffic_coefficient: '0.29%',
                     vendor_median_usage_risk: '990.26',
-                    vendor_median_service_sla: '99.99%'
+                    vendor_median_service_sla: '99.99%',
+                    vendor_median_annual_downtime: '1532.00'
                 })
 CREATE (Salesforce:TECHNOLOGY_PROVIDER {
                     name: 'Salesforce',
@@ -29,7 +31,8 @@ CREATE (Salesforce:TECHNOLOGY_PROVIDER {
                     vendor_median_sla_deviation_risk: '991.06',
                     vendor_median_traffic_coefficient: '0.07%',
                     vendor_median_usage_risk: '996.86',
-                    vendor_median_service_sla: '99.99%'
+                    vendor_median_service_sla: '99.99%',
+                    vendor_median_annual_downtime: '375.00'
                 })
 CREATE (Snowflake:TECHNOLOGY_PROVIDER {
                     name: 'Snowflake',
@@ -37,7 +40,8 @@ CREATE (Snowflake:TECHNOLOGY_PROVIDER {
                     vendor_median_sla_deviation_risk: '991.06',
                     vendor_median_traffic_coefficient: '0.07%',
                     vendor_median_usage_risk: '996.86',
-                    vendor_median_service_sla: '99.99%'
+                    vendor_median_service_sla: '99.99%',
+                    vendor_median_annual_downtime: '375.00'
                 })
 CREATE (Cloudflare:TECHNOLOGY_PROVIDER {
                     name: 'Cloudflare',
@@ -45,7 +49,8 @@ CREATE (Cloudflare:TECHNOLOGY_PROVIDER {
                     vendor_median_sla_deviation_risk: '903.96',
                     vendor_median_traffic_coefficient: '0.00%',
                     vendor_median_usage_risk: '998.97',
-                    vendor_median_service_sla: '100.00%'
+                    vendor_median_service_sla: '100.00%',
+                    vendor_median_annual_downtime: '5.00'
                 })
 CREATE (Akamai:TECHNOLOGY_PROVIDER {
                     name: 'Akamai',
@@ -53,7 +58,8 @@ CREATE (Akamai:TECHNOLOGY_PROVIDER {
                     vendor_median_sla_deviation_risk: '884.95',
                     vendor_median_traffic_coefficient: '0.00%',
                     vendor_median_usage_risk: '998.97',
-                    vendor_median_service_sla: '100.00%'
+                    vendor_median_service_sla: '100.00%',
+                    vendor_median_annual_downtime: '6.00'
                 })
 CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
                     name: 'Microsoft Azure',
@@ -61,7 +67,8 @@ CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
                     vendor_median_sla_deviation_risk: '951.23',
                     vendor_median_traffic_coefficient: '0.43%',
                     vendor_median_usage_risk: '986.00',
-                    vendor_median_service_sla: '99.99%'
+                    vendor_median_service_sla: '99.99%',
+                    vendor_median_annual_downtime: '2280.00'
                 })
 CREATE (Google_Cloud_GCP:TECHNOLOGY_PROVIDER {
                     name: 'Google Cloud GCP',
@@ -69,7 +76,8 @@ CREATE (Google_Cloud_GCP:TECHNOLOGY_PROVIDER {
                     vendor_median_sla_deviation_risk: '996.22',
                     vendor_median_traffic_coefficient: '0.08%',
                     vendor_median_usage_risk: '996.72',
-                    vendor_median_service_sla: '99.95%'
+                    vendor_median_service_sla: '99.95%',
+                    vendor_median_annual_downtime: '400.00'
                 })
 CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
                     name: 'Amazon AWS',
@@ -77,7 +85,8 @@ CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
                     vendor_median_sla_deviation_risk: '996.48',
                     vendor_median_traffic_coefficient: '0.08%',
                     vendor_median_usage_risk: '996.72',
-                    vendor_median_service_sla: '99.90%'
+                    vendor_median_service_sla: '99.90%',
+                    vendor_median_annual_downtime: '400.00'
                 })
 
 CREATE (Amazon_API_Gateway:TECHNOLOGY_SERVICE {
