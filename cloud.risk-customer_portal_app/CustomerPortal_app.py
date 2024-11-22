@@ -376,7 +376,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
 
                 # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
                 # Formula: when SLA usage is 100% or more, then the credit back is XXX%-100% of the SLA usage
-                estimated_cloud_services_credit_back_money_back = 0.0 if float(risk_data.get("service_sla_usage_percentage", 0.0)) <= 100 else (float(risk_data.get("service_sla_usage_percentage", 0.0))-100)/100*float(risk_data.get("percentage_service_credit_back", 0.0))/100*1000
+                estimated_cloud_services_credit_back_money_back = 0.0 if float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%')) <= 100 else (float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%'))-100)/100*float(risk_data.get("percentage_service_credit_back", 0.0).rstrip('%'))/100*1000
 
                 with col1:
                     st.metric("SLA Usage %", risk_data.get("service_sla_usage_percentage", "N/A"))
