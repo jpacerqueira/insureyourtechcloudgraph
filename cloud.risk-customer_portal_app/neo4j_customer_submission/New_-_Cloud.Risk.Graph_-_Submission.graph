@@ -2,8 +2,8 @@
 CREATE (cust_Company__BeautifulAI_by_Alla_s_Hotsur:CUSTOMER_NAME {
     name: 'Company  BeautifulAI by Alla.s Hotsur',
     project_name: 'Project by Company  BeautifulAI by Alla.s Hotsur',
-    median_sla_usage_percentage: '175.42%',
-    median_sla_deviation_risk: '995.87',
+    median_sla_usage_percentage: '125.00%',
+    median_sla_deviation_risk: '996.36',
     median_traffic_coefficient: '0.08%',
     median_usage_risk: '996.72'
     })
@@ -11,18 +11,18 @@ CREATE (Oracle_Cloud_OCI:TECHNOLOGY_PROVIDER {
                     name: 'Oracle Cloud OCI',
                     vendor_median_sla_usage_percentage: '68.49%',
                     vendor_median_sla_deviation_risk: '996.63',
-                    vendor_median_traffic_coefficient: '0.05%',
-                    vendor_median_usage_risk: '997.12',
+                    vendor_median_traffic_coefficient: '0.03%',
+                    vendor_median_usage_risk: '997.29',
                     vendor_median_service_sla: '99.90%',
                     vendor_median_annual_downtime: '360.00'
                 })
 CREATE (Salesforce:TECHNOLOGY_PROVIDER {
                     name: 'Salesforce',
-                    vendor_median_sla_usage_percentage: '713.47%',
-                    vendor_median_sla_deviation_risk: '991.06',
+                    vendor_median_sla_usage_percentage: '71.35%',
+                    vendor_median_sla_deviation_risk: '996.58',
                     vendor_median_traffic_coefficient: '0.07%',
                     vendor_median_usage_risk: '996.86',
-                    vendor_median_service_sla: '99.99%',
+                    vendor_median_service_sla: '99.90%',
                     vendor_median_annual_downtime: '375.00'
                 })
 CREATE (MongoDB:TECHNOLOGY_PROVIDER {
@@ -54,11 +54,11 @@ CREATE (Akamai:TECHNOLOGY_PROVIDER {
                 })
 CREATE (Databricks:TECHNOLOGY_PROVIDER {
                     name: 'Databricks',
-                    vendor_median_sla_usage_percentage: '713.47%',
-                    vendor_median_sla_deviation_risk: '991.06',
+                    vendor_median_sla_usage_percentage: '142.69%',
+                    vendor_median_sla_deviation_risk: '996.36',
                     vendor_median_traffic_coefficient: '0.07%',
                     vendor_median_usage_risk: '996.86',
-                    vendor_median_service_sla: '99.99%',
+                    vendor_median_service_sla: '99.95%',
                     vendor_median_annual_downtime: '375.00'
                 })
 CREATE (Snowflake:TECHNOLOGY_PROVIDER {
@@ -955,76 +955,76 @@ CREATE (Snowflake)-[:CONNECTED_RISK {
 
 CREATE (Databricks_SaaS:TECHNOLOGY_SERVICE {
     name: 'Databricks SaaS',
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '142.69%',
+    sla_deviation_risk: '996.362',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862',
     annual_downtime_minutes: '375',
-    service_sla: '99.99000',
+    service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
 CREATE (cust_Company__BeautifulAI_by_Alla_s_Hotsur)-[:CUSTOMER_USES_SERVICE]->(Databricks_SaaS)
 CREATE (Databricks)-[:CONNECTED_RISK {
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '142.69%',
+    sla_deviation_risk: '996.362',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862'
 }]->(Databricks_SaaS)
 
 CREATE (Databricks_Workspace:TECHNOLOGY_SERVICE {
     name: 'Databricks Workspace',
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '142.69%',
+    sla_deviation_risk: '996.362',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862',
     annual_downtime_minutes: '375',
-    service_sla: '99.99000',
+    service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
 CREATE (cust_Company__BeautifulAI_by_Alla_s_Hotsur)-[:CUSTOMER_USES_SERVICE]->(Databricks_Workspace)
 CREATE (Databricks)-[:CONNECTED_RISK {
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '142.69%',
+    sla_deviation_risk: '996.362',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862'
 }]->(Databricks_Workspace)
 
 CREATE (Databricks_Mlflow:TECHNOLOGY_SERVICE {
     name: 'Databricks Mlflow',
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '142.69%',
+    sla_deviation_risk: '996.362',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862',
     annual_downtime_minutes: '375',
-    service_sla: '99.99000',
+    service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
 CREATE (cust_Company__BeautifulAI_by_Alla_s_Hotsur)-[:CUSTOMER_USES_SERVICE]->(Databricks_Mlflow)
 CREATE (Databricks)-[:CONNECTED_RISK {
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '142.69%',
+    sla_deviation_risk: '996.362',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862'
 }]->(Databricks_Mlflow)
 
 CREATE (Databricks_Notebooks:TECHNOLOGY_SERVICE {
     name: 'Databricks Notebooks',
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '142.69%',
+    sla_deviation_risk: '996.362',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862',
     annual_downtime_minutes: '375',
-    service_sla: '99.99000',
+    service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
 CREATE (cust_Company__BeautifulAI_by_Alla_s_Hotsur)-[:CUSTOMER_USES_SERVICE]->(Databricks_Notebooks)
 CREATE (Databricks)-[:CONNECTED_RISK {
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '142.69%',
+    sla_deviation_risk: '996.362',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862'
 }]->(Databricks_Notebooks)
@@ -1221,57 +1221,57 @@ CREATE (Salesforce)-[:CONNECTED_RISK {
 
 CREATE (Salesforce_Sales_Cloud:TECHNOLOGY_SERVICE {
     name: 'Salesforce Sales Cloud',
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '71.35%',
+    sla_deviation_risk: '996.575',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862',
     annual_downtime_minutes: '375',
-    service_sla: '99.99000',
+    service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
 CREATE (cust_Company__BeautifulAI_by_Alla_s_Hotsur)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Sales_Cloud)
 CREATE (Salesforce)-[:CONNECTED_RISK {
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '71.35%',
+    sla_deviation_risk: '996.575',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862'
 }]->(Salesforce_Sales_Cloud)
 
 CREATE (Salesforce_Service_Cloud:TECHNOLOGY_SERVICE {
     name: 'Salesforce Service Cloud',
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '71.35%',
+    sla_deviation_risk: '996.575',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862',
     annual_downtime_minutes: '375',
-    service_sla: '99.99000',
+    service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
 CREATE (cust_Company__BeautifulAI_by_Alla_s_Hotsur)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Service_Cloud)
 CREATE (Salesforce)-[:CONNECTED_RISK {
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '71.35%',
+    sla_deviation_risk: '996.575',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862'
 }]->(Salesforce_Service_Cloud)
 
 CREATE (Salesforce_Marketing_Cloud:TECHNOLOGY_SERVICE {
     name: 'Salesforce Marketing Cloud',
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '71.35%',
+    sla_deviation_risk: '996.575',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862',
     annual_downtime_minutes: '375',
-    service_sla: '99.99000',
+    service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
 CREATE (cust_Company__BeautifulAI_by_Alla_s_Hotsur)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Marketing_Cloud)
 CREATE (Salesforce)-[:CONNECTED_RISK {
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
+    sla_usage: '71.35%',
+    sla_deviation_risk: '996.575',
     traffic_coefficient: '0.07%',
     usage_risk: '996.862'
 }]->(Salesforce_Marketing_Cloud)
@@ -1280,8 +1280,8 @@ CREATE (Oracle_AutonomousDB_21c:TECHNOLOGY_SERVICE {
     name: 'Oracle AutonomousDB 21c',
     sla_usage: '68.49%',
     sla_deviation_risk: '996.633',
-    traffic_coefficient: '0.05%',
-    usage_risk: '997.118',
+    traffic_coefficient: '0.03%',
+    usage_risk: '997.289',
     annual_downtime_minutes: '360',
     service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
@@ -1291,44 +1291,6 @@ CREATE (cust_Company__BeautifulAI_by_Alla_s_Hotsur)-[:CUSTOMER_USES_SERVICE]->(O
 CREATE (Oracle_Cloud_OCI)-[:CONNECTED_RISK {
     sla_usage: '68.49%',
     sla_deviation_risk: '996.633',
-    traffic_coefficient: '0.05%',
-    usage_risk: '997.118'
+    traffic_coefficient: '0.03%',
+    usage_risk: '997.289'
 }]->(Oracle_AutonomousDB_21c)
-
-CREATE (autonomousdb_21c:TECHNOLOGY_SERVICE {
-    name: 'autonomousdb_21c',
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.05%',
-    usage_risk: '997.040',
-    annual_downtime_minutes: '375',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_Company__BeautifulAI_by_Alla_s_Hotsur)-[:CUSTOMER_USES_SERVICE]->(autonomousdb_21c)
-CREATE (Oracle_Cloud_OCI)-[:CONNECTED_RISK {
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.05%',
-    usage_risk: '997.040'
-}]->(autonomousdb_21c)
-
-CREATE (Object_Storage_OIC:TECHNOLOGY_SERVICE {
-    name: 'Object Storage OIC',
-    sla_usage: '22.83%',
-    sla_deviation_risk: '997.545',
-    traffic_coefficient: '0.02%',
-    usage_risk: '998.316',
-    annual_downtime_minutes: '120',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_Company__BeautifulAI_by_Alla_s_Hotsur)-[:CUSTOMER_USES_SERVICE]->(Object_Storage_OIC)
-CREATE (Oracle_Cloud_OCI)-[:CONNECTED_RISK {
-    sla_usage: '22.83%',
-    sla_deviation_risk: '997.545',
-    traffic_coefficient: '0.02%',
-    usage_risk: '998.316'
-}]->(Object_Storage_OIC)
