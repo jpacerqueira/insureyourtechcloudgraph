@@ -401,7 +401,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                 with col4:
                     st.metric("Service SLA (99.99999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A"))
                     st.metric("Service Credit Back (%)", str(risk_data.get("percentage_service_credit_back", "N/A"))+"%")
-                    st.metric("Monthly Credit Back max. per $$1.000 ", "$"+str(estimated_cloud_services_credit_money_back))
+                    st.metric("Monthly Credit Back max. per $1.000 ", "$"+str(estimated_cloud_services_credit_money_back))
                     st.caption(warning_max_credit_back)
                 
                 st.text_area(f"AI Analysis - {service}", risk_data.get("remarks_outage_genai", "No analysis available"), height=100)
