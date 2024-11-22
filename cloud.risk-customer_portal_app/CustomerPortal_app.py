@@ -362,7 +362,9 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
             f.write(cypher_query)
 
         st.success(f"Generated Cypher query saved to {output_path}")
+        st.divider()
 
+        st.sheader("Individual Cloud Services Risk Analysis")
         st.subheader("by Cloud Services")
 
         # Continue with existing risk analysis display
