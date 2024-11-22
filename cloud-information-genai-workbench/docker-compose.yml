@@ -198,8 +198,8 @@ services:
         condition: service_healthy
       ollama-llm:
          condition: service_healthy
-      pdf_bot:
-        condition: service_healthy
+      #pdf_bot:
+      #  condition: service_healthy
     x-develop:
       watch:
         - action: rebuild
