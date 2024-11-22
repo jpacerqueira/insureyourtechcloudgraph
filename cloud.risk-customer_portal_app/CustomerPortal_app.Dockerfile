@@ -15,8 +15,8 @@ RUN pip install --upgrade -r requirements.txt
 
 COPY CustomerPortal_app.py .
 
-EXPOSE 8504
+EXPOSE 8185
 
-HEALTHCHECK CMD curl --fail http://localhost:8504/_stcore/health
+HEALTHCHECK CMD curl --fail http://localhost:8185/_stcore/health
 
-ENTRYPOINT ["streamlit", "run", "CustomerPortal_app.py", "--server.port=8504", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "CustomerPortal_app.py", "--server.port=8185", "--server.address=0.0.0.0"]

@@ -2,7 +2,7 @@
 #
 echo "Open Local"
 echo " --> Customer App"
-/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:8504' # 'http://cloudriskgraph.insureyourtech.cloud:8504/'
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:8185' # 'http://cloudriskgraph.insureyourtech.cloud:8185/'
 #
 echo " --> OLLAMA model"
 /usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:11434/' # 'http://cloudriskgraph.insureyourtech.cloud:11434/'
@@ -18,6 +18,10 @@ echo "Workbench - App 2 - Search Internet - Load VectorGraph"
 #
 echo "Workbench - App 3 - External information Loader from pdf files"
 /usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:8503' # 'http://cloudriskgraph.insureyourtech.cloud:8503/'
+#
+echo "Workbench - App 4 - Batch External information Loader from folder with pdf files"
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:8504' # 'http://cloudriskgraph.insureyourtech.cloud:8504/'
+#
 #
 echo "VectorGraph - Risk - Database"
 /usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:7474/browser/' #  'http://cloudriskgraph.insureyourtech.cloud:7474/browser/'

@@ -176,6 +176,8 @@ if st.button("Analyze Cloud Risk"):
         customer_sla_deviation_values = []
         customer_traffic_coef_values = []
         customer_usage_risk_values = []
+        customer_service_sla_values = []
+        customer_annual_downtime_values = []
         
         # Clean company name
         company_name = company_name.replace('\'', '.')
@@ -204,6 +206,12 @@ if st.button("Analyze Cloud Risk"):
                 customer_sla_deviation_values.append(sla_deviation)
                 customer_traffic_coef_values.append(traffic_coef)
                 customer_usage_risk_values.append(usage_risk)
+                
+                # Add these lines to collect new metrics
+                service_sla = float(risk_data.get('service_sla_0_99_9999_for_60min_times_24h_365days', 0.0).rstrip('%').replace(',', '.'))
+                annual_downtime = float(risk_data.get('webscraper_annual_period_service_down_per_year_in_minutes', 0.0))
+                customer_service_sla_values.append(service_sla)
+                customer_annual_downtime_values.append(annual_downtime)
                 
                 # Create service node
                 cypher_query += f"""
@@ -317,30 +325,35 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
             customer_median_sla_deviation = sorted(customer_sla_deviation_values)[len(customer_sla_deviation_values)//2]
             customer_median_traffic_coef = sorted(customer_traffic_coef_values)[len(customer_traffic_coef_values)//2]
             customer_median_usage_risk = sorted(customer_usage_risk_values)[len(customer_usage_risk_values)//2]
+            customer_median_service_sla = sorted(customer_service_sla_values)[len(customer_service_sla_values)//2]
+            customer_median_annual_downtime = sorted(customer_annual_downtime_values)[len(customer_annual_downtime_values)//2]
 
             st.header("Customer Summary")           
             st.subheader("Overall Cloud Risk Analysis")
-            col1, col2 = st.columns(2)
+            col1, col2, col3 = st.columns(3)
             with col1:
                 st.metric("Median SLA Usage %", f"{customer_median_sla_usage:.2f}%")
                 st.metric("Median SLA Deviation Risk", f"{customer_median_sla_deviation:.2f}")
             with col2:
                 st.metric("Median Traffic Coefficient %", f"{customer_median_traffic_coef:.2f}%")
                 st.metric("Median Usage Risk Rating", f"{customer_median_usage_risk:.2f}")
-            
-            # Create the customer node with median values
-            cypher_query =    f"""
+            with col3:
+                st.metric("Median Service SLA %", f"{customer_median_service_sla:.2f}%")
+                st.metric("Median Annual Downtime (minutes)", f"{customer_median_annual_downtime:.2f}")
+
+            # Update customer node creation with new median values
+            cypher_query = f"""
 CREATE (cust_{company_id}:CUSTOMER_NAME {{
     name: '{company_name}',
     project_name: '{project_name}',
     median_sla_usage_percentage: '{customer_median_sla_usage:.2f}%',
     median_sla_deviation_risk: '{customer_median_sla_deviation:.2f}',
     median_traffic_coefficient: '{customer_median_traffic_coef:.2f}%',
-    median_usage_risk: '{customer_median_usage_risk:.2f}'
+    median_usage_risk: '{customer_median_usage_risk:.2f}',
+    median_service_sla: '{customer_median_service_sla:.2f}%',
+    median_annual_downtime: '{customer_median_annual_downtime:.2f}'
     }})
 """ + cypher_query
-            # Create vendor nodes with sanitized IDs
-            # Logic above is done
         else:
             # Create vendor nodes with sanitized IDs
             for vendor in selected_vendors:

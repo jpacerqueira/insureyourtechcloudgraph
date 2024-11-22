@@ -1,74 +1,20 @@
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING:CUSTOMER_NAME {
-    name: 'FUEL DATASCIENCE BIGDATA LIMITED - B2B - ASSESMENT MULTICLOUD - CUSTOMER INVESTMENT BANKING',
-    project_name: 'Project by FUEL DATASCIENCE BIGDATA LIMITED - B2B - ASSESMENT MULTICLOUD - CUSTOMER INVESTMENT BANKING',
-    median_sla_usage_percentage: '125.00%',
-    median_sla_deviation_risk: '996.42',
+CREATE (cust_Fu:CUSTOMER_NAME {
+    name: 'Fu',
+    project_name: 'Project by Fu',
+    median_sla_usage_percentage: '121.77%',
+    median_sla_deviation_risk: '996.48',
     median_traffic_coefficient: '0.08%',
     median_usage_risk: '996.72'
     })
-CREATE (Oracle_Cloud_OCI:TECHNOLOGY_PROVIDER {
-                    name: 'Oracle Cloud OCI',
-                    vendor_median_sla_usage_percentage: '71.35%',
-                    vendor_median_sla_deviation_risk: '996.63',
-                    vendor_median_traffic_coefficient: '0.07%',
-                    vendor_median_usage_risk: '997.29',
-                    vendor_median_service_sla: '99.90%',
-                    vendor_median_annual_downtime: '375.00'
-                })
-CREATE (Snowflake:TECHNOLOGY_PROVIDER {
-                    name: 'Snowflake',
-                    vendor_median_sla_usage_percentage: '713.47%',
-                    vendor_median_sla_deviation_risk: '991.06',
-                    vendor_median_traffic_coefficient: '0.07%',
-                    vendor_median_usage_risk: '996.86',
-                    vendor_median_service_sla: '99.99%',
-                    vendor_median_annual_downtime: '375.00'
-                })
-CREATE (Databricks:TECHNOLOGY_PROVIDER {
-                    name: 'Databricks',
-                    vendor_median_sla_usage_percentage: '142.69%',
-                    vendor_median_sla_deviation_risk: '996.36',
-                    vendor_median_traffic_coefficient: '0.07%',
-                    vendor_median_usage_risk: '996.86',
+CREATE (Google_Cloud_GCP:TECHNOLOGY_PROVIDER {
+                    name: 'Google Cloud GCP',
+                    vendor_median_sla_usage_percentage: '152.21%',
+                    vendor_median_sla_deviation_risk: '996.22',
+                    vendor_median_traffic_coefficient: '0.08%',
+                    vendor_median_usage_risk: '996.72',
                     vendor_median_service_sla: '99.95%',
-                    vendor_median_annual_downtime: '375.00'
-                })
-CREATE (Salesforce:TECHNOLOGY_PROVIDER {
-                    name: 'Salesforce',
-                    vendor_median_sla_usage_percentage: '71.35%',
-                    vendor_median_sla_deviation_risk: '996.58',
-                    vendor_median_traffic_coefficient: '0.07%',
-                    vendor_median_usage_risk: '996.86',
-                    vendor_median_service_sla: '99.90%',
-                    vendor_median_annual_downtime: '375.00'
-                })
-CREATE (MongoDB:TECHNOLOGY_PROVIDER {
-                    name: 'MongoDB',
-                    vendor_median_sla_usage_percentage: '2914.76%',
-                    vendor_median_sla_deviation_risk: '966.87',
-                    vendor_median_traffic_coefficient: '0.29%',
-                    vendor_median_usage_risk: '990.26',
-                    vendor_median_service_sla: '99.99%',
-                    vendor_median_annual_downtime: '1532.00'
-                })
-CREATE (Cloudflare:TECHNOLOGY_PROVIDER {
-                    name: 'Cloudflare',
-                    vendor_median_sla_usage_percentage: '8751.90%',
-                    vendor_median_sla_deviation_risk: '911.56',
-                    vendor_median_traffic_coefficient: '0.00%',
-                    vendor_median_usage_risk: '998.97',
-                    vendor_median_service_sla: '100.00%',
-                    vendor_median_annual_downtime: '4.60'
-                })
-CREATE (Akamai:TECHNOLOGY_PROVIDER {
-                    name: 'Akamai',
-                    vendor_median_sla_usage_percentage: '8751.90%',
-                    vendor_median_sla_deviation_risk: '911.56',
-                    vendor_median_traffic_coefficient: '0.00%',
-                    vendor_median_usage_risk: '998.97',
-                    vendor_median_service_sla: '100.00%',
-                    vendor_median_annual_downtime: '4.60'
+                    vendor_median_annual_downtime: '400.00'
                 })
 CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
                     name: 'Microsoft Azure',
@@ -78,15 +24,6 @@ CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
                     vendor_median_usage_risk: '986.00',
                     vendor_median_service_sla: '99.99%',
                     vendor_median_annual_downtime: '2280.00'
-                })
-CREATE (Google_Cloud_GCP:TECHNOLOGY_PROVIDER {
-                    name: 'Google Cloud GCP',
-                    vendor_median_sla_usage_percentage: '152.21%',
-                    vendor_median_sla_deviation_risk: '996.22',
-                    vendor_median_traffic_coefficient: '0.08%',
-                    vendor_median_usage_risk: '996.72',
-                    vendor_median_service_sla: '99.95%',
-                    vendor_median_annual_downtime: '400.00'
                 })
 CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
                     name: 'Amazon AWS',
@@ -109,7 +46,7 @@ CREATE (Amazon_API_Gateway:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_API_Gateway)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_API_Gateway)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '76.10%',
     sla_deviation_risk: '996.480',
@@ -128,7 +65,7 @@ CREATE (Amazon_Bedrock:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_Bedrock)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_Bedrock)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '76.10%',
     sla_deviation_risk: '996.480',
@@ -147,7 +84,7 @@ CREATE (Amazon_CloudFront:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_CloudFront)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_CloudFront)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '76.10%',
     sla_deviation_risk: '996.480',
@@ -166,7 +103,7 @@ CREATE (Amazon_CloudWatch_Application_Insights:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_CloudWatch_Application_Insights)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_CloudWatch_Application_Insights)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '76.10%',
     sla_deviation_risk: '996.480',
@@ -185,7 +122,7 @@ CREATE (Amazon_CodeGuru_Profiler:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_CodeGuru_Profiler)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_CodeGuru_Profiler)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '76.10%',
     sla_deviation_risk: '996.480',
@@ -204,7 +141,7 @@ CREATE (Amazon_DataZone:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_DataZone)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_DataZone)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '76.10%',
     sla_deviation_risk: '996.480',
@@ -223,7 +160,7 @@ CREATE (Amazon_DocumentDB:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_DocumentDB)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_DocumentDB)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '76.10%',
     sla_deviation_risk: '996.480',
@@ -242,7 +179,7 @@ CREATE (Amazon_DynamoDB:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_DynamoDB)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_DynamoDB)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '76.10%',
     sla_deviation_risk: '996.480',
@@ -250,290 +187,119 @@ CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     usage_risk: '996.719'
 }]->(Amazon_DynamoDB)
 
-CREATE (Amazon_EC2_Instance_Connect:TECHNOLOGY_SERVICE {
-    name: 'Amazon EC2 Instance Connect',
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719',
-    annual_downtime_minutes: '400',
-    service_sla: '99.90000',
+CREATE (Google_Cloud_Dataproc:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud Dataproc',
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175',
+    annual_downtime_minutes: '320.00',
+    service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_EC2_Instance_Connect)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719'
-}]->(Amazon_EC2_Instance_Connect)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Dataproc)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175'
+}]->(Google_Cloud_Dataproc)
 
-CREATE (Amazon_Elastic_Compute_Cloud:TECHNOLOGY_SERVICE {
-    name: 'Amazon Elastic Compute Cloud',
-    sla_usage: '78.20%',
-    sla_deviation_risk: '996.439',
-    traffic_coefficient: '0.07820%',
-    usage_risk: '996.656',
-    annual_downtime_minutes: '411.00',
-    service_sla: '99.90000',
+CREATE (Google_Cloud_Compute_Engine:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud Compute Engine',
+    sla_usage: '175.42%',
+    sla_deviation_risk: '995.872',
+    traffic_coefficient: '0.08771%',
+    usage_risk: '996.371',
+    annual_downtime_minutes: '461.00',
+    service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Compute_Cloud)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '78.20%',
-    sla_deviation_risk: '996.439',
-    traffic_coefficient: '0.07820%',
-    usage_risk: '996.656'
-}]->(Amazon_Elastic_Compute_Cloud)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Compute_Engine)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '175.42%',
+    sla_deviation_risk: '995.872',
+    traffic_coefficient: '0.08771%',
+    usage_risk: '996.371'
+}]->(Google_Cloud_Compute_Engine)
 
-CREATE (Amazon_Elastic_Container_Service:TECHNOLOGY_SERVICE {
-    name: 'Amazon Elastic Container Service',
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719',
-    annual_downtime_minutes: '400',
-    service_sla: '99.90000',
+CREATE (Google_Cloud_SQL:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud SQL',
+    sla_usage: '175.42%',
+    sla_deviation_risk: '995.872',
+    traffic_coefficient: '0.08771%',
+    usage_risk: '996.371',
+    annual_downtime_minutes: '461.00',
+    service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Container_Service)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719'
-}]->(Amazon_Elastic_Container_Service)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_SQL)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '175.42%',
+    sla_deviation_risk: '995.872',
+    traffic_coefficient: '0.08771%',
+    usage_risk: '996.371'
+}]->(Google_Cloud_SQL)
 
-CREATE (Amazon_Elastic_File_System:TECHNOLOGY_SERVICE {
-    name: 'Amazon Elastic File System',
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719',
-    annual_downtime_minutes: '400',
-    service_sla: '99.90000',
+CREATE (AlloyDB_for_PostgreSQL:TECHNOLOGY_SERVICE {
+    name: 'AlloyDB for PostgreSQL',
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175',
+    annual_downtime_minutes: '320.00',
+    service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_File_System)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719'
-}]->(Amazon_Elastic_File_System)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(AlloyDB_for_PostgreSQL)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175'
+}]->(AlloyDB_for_PostgreSQL)
 
-CREATE (Amazon_Elastic_Load_Balancing:TECHNOLOGY_SERVICE {
-    name: 'Amazon Elastic Load Balancing',
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719',
-    annual_downtime_minutes: '400',
-    service_sla: '99.90000',
+CREATE (Google_Cloud_BigQuery:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud BigQuery',
+    sla_usage: '175.42%',
+    sla_deviation_risk: '995.872',
+    traffic_coefficient: '0.08771%',
+    usage_risk: '996.371',
+    annual_downtime_minutes: '461.00',
+    service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Load_Balancing)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719'
-}]->(Amazon_Elastic_Load_Balancing)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_BigQuery)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '175.42%',
+    sla_deviation_risk: '995.872',
+    traffic_coefficient: '0.08771%',
+    usage_risk: '996.371'
+}]->(Google_Cloud_BigQuery)
 
-CREATE (Amazon_Elastic_MapReduce:TECHNOLOGY_SERVICE {
-    name: 'Amazon Elastic MapReduce',
-    sla_usage: '125.00%',
-    sla_deviation_risk: '995.504',
-    traffic_coefficient: '0.12500%',
-    usage_risk: '995.254',
-    annual_downtime_minutes: '657.00',
-    service_sla: '99.90000',
+CREATE (Google_Cloud_Run:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud Run',
+    sla_usage: '175.42%',
+    sla_deviation_risk: '995.872',
+    traffic_coefficient: '0.08771%',
+    usage_risk: '996.371',
+    annual_downtime_minutes: '461.00',
+    service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_MapReduce)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '125.00%',
-    sla_deviation_risk: '995.504',
-    traffic_coefficient: '0.12500%',
-    usage_risk: '995.254'
-}]->(Amazon_Elastic_MapReduce)
-
-CREATE (Amazon_ElastiCache:TECHNOLOGY_SERVICE {
-    name: 'Amazon ElastiCache',
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719',
-    annual_downtime_minutes: '400',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_ElastiCache)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719'
-}]->(Amazon_ElastiCache)
-
-CREATE (Amazon_EMR_Serverless:TECHNOLOGY_SERVICE {
-    name: 'Amazon EMR Serverless',
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719',
-    annual_downtime_minutes: '400',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_EMR_Serverless)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719'
-}]->(Amazon_EMR_Serverless)
-
-CREATE (Amazon_FinSpace:TECHNOLOGY_SERVICE {
-    name: 'Amazon FinSpace',
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719',
-    annual_downtime_minutes: '400',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_FinSpace)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '76.10%',
-    sla_deviation_risk: '996.480',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719'
-}]->(Amazon_FinSpace)
-
-CREATE (Amazon_QuickSight:TECHNOLOGY_SERVICE {
-    name: 'Amazon QuickSight',
-    sla_usage: '20.55%',
-    sla_deviation_risk: '997.590',
-    traffic_coefficient: '0.02055%',
-    usage_risk: '998.384',
-    annual_downtime_minutes: '108.00',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_QuickSight)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '20.55%',
-    sla_deviation_risk: '997.590',
-    traffic_coefficient: '0.02055%',
-    usage_risk: '998.384'
-}]->(Amazon_QuickSight)
-
-CREATE (Amazon_AWS_Lambda:TECHNOLOGY_SERVICE {
-    name: 'Amazon AWS Lambda',
-    sla_usage: '78.96%',
-    sla_deviation_risk: '996.423',
-    traffic_coefficient: '0.07896%',
-    usage_risk: '996.634',
-    annual_downtime_minutes: '415.00',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Lambda)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '78.96%',
-    sla_deviation_risk: '996.423',
-    traffic_coefficient: '0.07896%',
-    usage_risk: '996.634'
-}]->(Amazon_AWS_Lambda)
-
-CREATE (Amazon_AWS_CloudFront:TECHNOLOGY_SERVICE {
-    name: 'Amazon AWS CloudFront',
-    sla_usage: '72.30%',
-    sla_deviation_risk: '996.556',
-    traffic_coefficient: '0.07230%',
-    usage_risk: '996.833',
-    annual_downtime_minutes: '380',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_CloudFront)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '72.30%',
-    sla_deviation_risk: '996.556',
-    traffic_coefficient: '0.07230%',
-    usage_risk: '996.833'
-}]->(Amazon_AWS_CloudFront)
-
-CREATE (Amazon_AWS_Step_Functions:TECHNOLOGY_SERVICE {
-    name: 'Amazon AWS Step Functions',
-    sla_usage: '68.49%',
-    sla_deviation_risk: '996.633',
-    traffic_coefficient: '0.06849%',
-    usage_risk: '996.947',
-    annual_downtime_minutes: '360.00',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Step_Functions)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '68.49%',
-    sla_deviation_risk: '996.633',
-    traffic_coefficient: '0.06849%',
-    usage_risk: '996.947'
-}]->(Amazon_AWS_Step_Functions)
-
-CREATE (Amazon_s3:TECHNOLOGY_SERVICE {
-    name: 'Amazon s3',
-    sla_usage: '68.49%',
-    sla_deviation_risk: '996.633',
-    traffic_coefficient: '0.06849%',
-    usage_risk: '996.947',
-    annual_downtime_minutes: '360.00',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_s3)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '68.49%',
-    sla_deviation_risk: '996.633',
-    traffic_coefficient: '0.06849%',
-    usage_risk: '996.947'
-}]->(Amazon_s3)
-
-CREATE (Amazon_Elastic_Kubernetes_Service:TECHNOLOGY_SERVICE {
-    name: 'Amazon Elastic Kubernetes Service',
-    sla_usage: '456.62%',
-    sla_deviation_risk: '988.878',
-    traffic_coefficient: '0.45662%',
-    usage_risk: '985.315',
-    annual_downtime_minutes: '2400.00',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Kubernetes_Service)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '456.62%',
-    sla_deviation_risk: '988.878',
-    traffic_coefficient: '0.45662%',
-    usage_risk: '985.315'
-}]->(Amazon_Elastic_Kubernetes_Service)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Run)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '175.42%',
+    sla_deviation_risk: '995.872',
+    traffic_coefficient: '0.08771%',
+    usage_risk: '996.371'
+}]->(Google_Cloud_Run)
 
 CREATE (Google_Cloud_Apigee_API:TECHNOLOGY_SERVICE {
     name: 'Google Cloud Apigee API',
@@ -546,7 +312,7 @@ CREATE (Google_Cloud_Apigee_API:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Apigee_API)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Apigee_API)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '175.42%',
     sla_deviation_risk: '995.872',
@@ -565,7 +331,7 @@ CREATE (Google_Cloud_VertexAI:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_VertexAI)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_VertexAI)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -573,214 +339,252 @@ CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     usage_risk: '996.719'
 }]->(Google_Cloud_VertexAI)
 
-CREATE (Google_Cloud_Run:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud Run',
-    sla_usage: '175.42%',
-    sla_deviation_risk: '995.872',
-    traffic_coefficient: '0.08771%',
-    usage_risk: '996.371',
-    annual_downtime_minutes: '461.00',
-    service_sla: '99.95000',
+CREATE (Azure_Kubernetes_Service__AKS_:TECHNOLOGY_SERVICE {
+    name: 'Azure Kubernetes Service (AKS)',
+    sla_usage: '8219.18%',
+    sla_deviation_risk: '908.580',
+    traffic_coefficient: '0.82192%',
+    usage_risk: '974.367',
+    annual_downtime_minutes: '4320.00',
+    service_sla: '99.99000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Run)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '175.42%',
-    sla_deviation_risk: '995.872',
-    traffic_coefficient: '0.08771%',
-    usage_risk: '996.371'
-}]->(Google_Cloud_Run)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Azure_Kubernetes_Service__AKS_)
+CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
+    sla_usage: '8219.18%',
+    sla_deviation_risk: '908.580',
+    traffic_coefficient: '0.82192%',
+    usage_risk: '974.367'
+}]->(Azure_Kubernetes_Service__AKS_)
 
-CREATE (Google_Cloud_BigQuery:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud BigQuery',
-    sla_usage: '175.42%',
-    sla_deviation_risk: '995.872',
-    traffic_coefficient: '0.08771%',
-    usage_risk: '996.371',
-    annual_downtime_minutes: '461.00',
-    service_sla: '99.95000',
+CREATE (Azure_Storage_Accounts:TECHNOLOGY_SERVICE {
+    name: 'Azure Storage Accounts',
+    sla_usage: '4337.90%',
+    sla_deviation_risk: '951.231',
+    traffic_coefficient: '0.43379%',
+    usage_risk: '985.999',
+    annual_downtime_minutes: '2280.00',
+    service_sla: '99.99000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_BigQuery)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '175.42%',
-    sla_deviation_risk: '995.872',
-    traffic_coefficient: '0.08771%',
-    usage_risk: '996.371'
-}]->(Google_Cloud_BigQuery)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Azure_Storage_Accounts)
+CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
+    sla_usage: '4337.90%',
+    sla_deviation_risk: '951.231',
+    traffic_coefficient: '0.43379%',
+    usage_risk: '985.999'
+}]->(Azure_Storage_Accounts)
 
-CREATE (AlloyDB_for_PostgreSQL:TECHNOLOGY_SERVICE {
-    name: 'AlloyDB for PostgreSQL',
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175',
-    annual_downtime_minutes: '320.00',
-    service_sla: '99.95000',
+CREATE (Azure_CDN:TECHNOLOGY_SERVICE {
+    name: 'Azure CDN',
+    sla_usage: '4337.90%',
+    sla_deviation_risk: '951.231',
+    traffic_coefficient: '0.43379%',
+    usage_risk: '985.999',
+    annual_downtime_minutes: '2280.00',
+    service_sla: '99.99000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(AlloyDB_for_PostgreSQL)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175'
-}]->(AlloyDB_for_PostgreSQL)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Azure_CDN)
+CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
+    sla_usage: '4337.90%',
+    sla_deviation_risk: '951.231',
+    traffic_coefficient: '0.43379%',
+    usage_risk: '985.999'
+}]->(Azure_CDN)
 
-CREATE (Google_Cloud_SQL:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud SQL',
-    sla_usage: '175.42%',
-    sla_deviation_risk: '995.872',
-    traffic_coefficient: '0.08771%',
-    usage_risk: '996.371',
-    annual_downtime_minutes: '461.00',
-    service_sla: '99.95000',
+CREATE (Amazon_EC2_Instance_Connect:TECHNOLOGY_SERVICE {
+    name: 'Amazon EC2 Instance Connect',
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719',
+    annual_downtime_minutes: '400',
+    service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_SQL)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '175.42%',
-    sla_deviation_risk: '995.872',
-    traffic_coefficient: '0.08771%',
-    usage_risk: '996.371'
-}]->(Google_Cloud_SQL)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_EC2_Instance_Connect)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719'
+}]->(Amazon_EC2_Instance_Connect)
 
-CREATE (Google_Cloud_Compute_Engine:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud Compute Engine',
-    sla_usage: '175.42%',
-    sla_deviation_risk: '995.872',
-    traffic_coefficient: '0.08771%',
-    usage_risk: '996.371',
-    annual_downtime_minutes: '461.00',
-    service_sla: '99.95000',
+CREATE (Amazon_Elastic_Compute_Cloud:TECHNOLOGY_SERVICE {
+    name: 'Amazon Elastic Compute Cloud',
+    sla_usage: '78.20%',
+    sla_deviation_risk: '996.439',
+    traffic_coefficient: '0.07820%',
+    usage_risk: '996.656',
+    annual_downtime_minutes: '411.00',
+    service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Compute_Engine)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '175.42%',
-    sla_deviation_risk: '995.872',
-    traffic_coefficient: '0.08771%',
-    usage_risk: '996.371'
-}]->(Google_Cloud_Compute_Engine)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Compute_Cloud)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '78.20%',
+    sla_deviation_risk: '996.439',
+    traffic_coefficient: '0.07820%',
+    usage_risk: '996.656'
+}]->(Amazon_Elastic_Compute_Cloud)
 
-CREATE (Google_Cloud_Dataproc:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud Dataproc',
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175',
-    annual_downtime_minutes: '320.00',
-    service_sla: '99.95000',
+CREATE (Amazon_Elastic_Container_Service:TECHNOLOGY_SERVICE {
+    name: 'Amazon Elastic Container Service',
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719',
+    annual_downtime_minutes: '400',
+    service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Dataproc)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175'
-}]->(Google_Cloud_Dataproc)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Container_Service)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719'
+}]->(Amazon_Elastic_Container_Service)
 
-CREATE (Google_Cloud_Dataflow:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud Dataflow',
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175',
-    annual_downtime_minutes: '320.00',
-    service_sla: '99.95000',
+CREATE (Amazon_Elastic_File_System:TECHNOLOGY_SERVICE {
+    name: 'Amazon Elastic File System',
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719',
+    annual_downtime_minutes: '400',
+    service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Dataflow)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175'
-}]->(Google_Cloud_Dataflow)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_File_System)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719'
+}]->(Amazon_Elastic_File_System)
 
-CREATE (Google_Cloud_Storage:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud Storage',
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175',
-    annual_downtime_minutes: '320.00',
-    service_sla: '99.95000',
+CREATE (Amazon_AWS_CloudFront:TECHNOLOGY_SERVICE {
+    name: 'Amazon AWS CloudFront',
+    sla_usage: '72.30%',
+    sla_deviation_risk: '996.556',
+    traffic_coefficient: '0.07230%',
+    usage_risk: '996.833',
+    annual_downtime_minutes: '380',
+    service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Storage)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175'
-}]->(Google_Cloud_Storage)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_CloudFront)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '72.30%',
+    sla_deviation_risk: '996.556',
+    traffic_coefficient: '0.07230%',
+    usage_risk: '996.833'
+}]->(Amazon_AWS_CloudFront)
 
-CREATE (Google_Cloud_And_Media_CDN:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud And Media CDN',
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175',
-    annual_downtime_minutes: '320.00',
-    service_sla: '99.95000',
+CREATE (Amazon_AWS_Lambda:TECHNOLOGY_SERVICE {
+    name: 'Amazon AWS Lambda',
+    sla_usage: '78.96%',
+    sla_deviation_risk: '996.423',
+    traffic_coefficient: '0.07896%',
+    usage_risk: '996.634',
+    annual_downtime_minutes: '415.00',
+    service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_And_Media_CDN)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175'
-}]->(Google_Cloud_And_Media_CDN)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Lambda)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '78.96%',
+    sla_deviation_risk: '996.423',
+    traffic_coefficient: '0.07896%',
+    usage_risk: '996.634'
+}]->(Amazon_AWS_Lambda)
 
-CREATE (Google_Cloud_Looker_Studio_Pro:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud Looker Studio Pro',
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175',
-    annual_downtime_minutes: '320.00',
-    service_sla: '99.95000',
+CREATE (Amazon_QuickSight:TECHNOLOGY_SERVICE {
+    name: 'Amazon QuickSight',
+    sla_usage: '20.55%',
+    sla_deviation_risk: '997.590',
+    traffic_coefficient: '0.02055%',
+    usage_risk: '998.384',
+    annual_downtime_minutes: '108.00',
+    service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Looker_Studio_Pro)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175'
-}]->(Google_Cloud_Looker_Studio_Pro)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_QuickSight)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '20.55%',
+    sla_deviation_risk: '997.590',
+    traffic_coefficient: '0.02055%',
+    usage_risk: '998.384'
+}]->(Amazon_QuickSight)
 
-CREATE (Google_Kubernetes_Engine__GKE_:TECHNOLOGY_SERVICE {
-    name: 'Google Kubernetes Engine (GKE)',
-    sla_usage: '913.24%',
-    sla_deviation_risk: '984.816',
+CREATE (Amazon_AWS_Step_Functions:TECHNOLOGY_SERVICE {
+    name: 'Amazon AWS Step Functions',
+    sla_usage: '68.49%',
+    sla_deviation_risk: '996.633',
+    traffic_coefficient: '0.06849%',
+    usage_risk: '996.947',
+    annual_downtime_minutes: '360.00',
+    service_sla: '99.90000',
+    percentage_service_credit_back: '10.000'
+})
+
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Step_Functions)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '68.49%',
+    sla_deviation_risk: '996.633',
+    traffic_coefficient: '0.06849%',
+    usage_risk: '996.947'
+}]->(Amazon_AWS_Step_Functions)
+
+CREATE (Amazon_s3:TECHNOLOGY_SERVICE {
+    name: 'Amazon s3',
+    sla_usage: '68.49%',
+    sla_deviation_risk: '996.633',
+    traffic_coefficient: '0.06849%',
+    usage_risk: '996.947',
+    annual_downtime_minutes: '360.00',
+    service_sla: '99.90000',
+    percentage_service_credit_back: '10.000'
+})
+
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_s3)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '68.49%',
+    sla_deviation_risk: '996.633',
+    traffic_coefficient: '0.06849%',
+    usage_risk: '996.947'
+}]->(Amazon_s3)
+
+CREATE (Amazon_Elastic_Kubernetes_Service:TECHNOLOGY_SERVICE {
+    name: 'Amazon Elastic Kubernetes Service',
+    sla_usage: '456.62%',
+    sla_deviation_risk: '988.878',
     traffic_coefficient: '0.45662%',
     usage_risk: '985.315',
     annual_downtime_minutes: '2400.00',
-    service_sla: '99.95000',
+    service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Google_Kubernetes_Engine__GKE_)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '913.24%',
-    sla_deviation_risk: '984.816',
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Kubernetes_Service)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '456.62%',
+    sla_deviation_risk: '988.878',
     traffic_coefficient: '0.45662%',
     usage_risk: '985.315'
-}]->(Google_Kubernetes_Engine__GKE_)
+}]->(Amazon_Elastic_Kubernetes_Service)
 
 CREATE (Azure_Batch:TECHNOLOGY_SERVICE {
     name: 'Azure Batch',
@@ -793,13 +597,32 @@ CREATE (Azure_Batch:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Azure_Batch)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Azure_Batch)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
     traffic_coefficient: '0.43379%',
     usage_risk: '985.999'
 }]->(Azure_Batch)
+
+CREATE (Amazon_FinSpace:TECHNOLOGY_SERVICE {
+    name: 'Amazon FinSpace',
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719',
+    annual_downtime_minutes: '400',
+    service_sla: '99.90000',
+    percentage_service_credit_back: '10.000'
+})
+
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_FinSpace)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719'
+}]->(Amazon_FinSpace)
 
 CREATE (Azure_functions:TECHNOLOGY_SERVICE {
     name: 'Azure functions',
@@ -812,7 +635,7 @@ CREATE (Azure_functions:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Azure_functions)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Azure_functions)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -831,7 +654,7 @@ CREATE (Azure_PowerBi_App:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Azure_PowerBi_App)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Azure_PowerBi_App)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '13828.01%',
     sla_deviation_risk: '846.944',
@@ -839,515 +662,173 @@ CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     usage_risk: '967.918'
 }]->(Azure_PowerBi_App)
 
-CREATE (Azure_CDN:TECHNOLOGY_SERVICE {
-    name: 'Azure CDN',
-    sla_usage: '4337.90%',
-    sla_deviation_risk: '951.231',
-    traffic_coefficient: '0.43379%',
-    usage_risk: '985.999',
-    annual_downtime_minutes: '2280.00',
-    service_sla: '99.99000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Azure_CDN)
-CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
-    sla_usage: '4337.90%',
-    sla_deviation_risk: '951.231',
-    traffic_coefficient: '0.43379%',
-    usage_risk: '985.999'
-}]->(Azure_CDN)
-
-CREATE (Azure_Storage_Accounts:TECHNOLOGY_SERVICE {
-    name: 'Azure Storage Accounts',
-    sla_usage: '4337.90%',
-    sla_deviation_risk: '951.231',
-    traffic_coefficient: '0.43379%',
-    usage_risk: '985.999',
-    annual_downtime_minutes: '2280.00',
-    service_sla: '99.99000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Azure_Storage_Accounts)
-CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
-    sla_usage: '4337.90%',
-    sla_deviation_risk: '951.231',
-    traffic_coefficient: '0.43379%',
-    usage_risk: '985.999'
-}]->(Azure_Storage_Accounts)
-
-CREATE (Azure_Kubernetes_Service__AKS_:TECHNOLOGY_SERVICE {
-    name: 'Azure Kubernetes Service (AKS)',
-    sla_usage: '8219.18%',
-    sla_deviation_risk: '908.580',
-    traffic_coefficient: '0.82192%',
-    usage_risk: '974.367',
-    annual_downtime_minutes: '4320.00',
-    service_sla: '99.99000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Azure_Kubernetes_Service__AKS_)
-CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
-    sla_usage: '8219.18%',
-    sla_deviation_risk: '908.580',
-    traffic_coefficient: '0.82192%',
-    usage_risk: '974.367'
-}]->(Azure_Kubernetes_Service__AKS_)
-
-CREATE (CDN_Akamai:TECHNOLOGY_SERVICE {
-    name: 'CDN Akamai',
-    sla_usage: '8561.64%',
-    sla_deviation_risk: '913.461',
-    traffic_coefficient: '0.00086%',
-    usage_risk: '998.974',
-    annual_downtime_minutes: '4.50',
-    service_sla: '99.99999',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(CDN_Akamai)
-CREATE (Akamai)-[:CONNECTED_RISK {
-    sla_usage: '8561.64%',
-    sla_deviation_risk: '913.461',
-    traffic_coefficient: '0.00086%',
-    usage_risk: '998.974'
-}]->(CDN_Akamai)
-
-CREATE (Edge_Computing_Akamai:TECHNOLOGY_SERVICE {
-    name: 'Edge Computing Akamai',
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974',
-    annual_downtime_minutes: '4.60',
-    service_sla: '99.99999',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Edge_Computing_Akamai)
-CREATE (Akamai)-[:CONNECTED_RISK {
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974'
-}]->(Edge_Computing_Akamai)
-
-CREATE (Security_Akamai:TECHNOLOGY_SERVICE {
-    name: 'Security Akamai',
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974',
-    annual_downtime_minutes: '4.60',
-    service_sla: '99.99999',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Security_Akamai)
-CREATE (Akamai)-[:CONNECTED_RISK {
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974'
-}]->(Security_Akamai)
-
-CREATE (AnyCast_CloudFlare:TECHNOLOGY_SERVICE {
-    name: 'AnyCast CloudFlare',
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974',
-    annual_downtime_minutes: '4.60',
-    service_sla: '99.99999',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(AnyCast_CloudFlare)
-CREATE (Cloudflare)-[:CONNECTED_RISK {
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974'
-}]->(AnyCast_CloudFlare)
-
-CREATE (CDN_CloudFlare:TECHNOLOGY_SERVICE {
-    name: 'CDN CloudFlare',
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974',
-    annual_downtime_minutes: '4.60',
-    service_sla: '99.99999',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(CDN_CloudFlare)
-CREATE (Cloudflare)-[:CONNECTED_RISK {
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974'
-}]->(CDN_CloudFlare)
-
-CREATE (Cloudflare_DNS:TECHNOLOGY_SERVICE {
-    name: 'Cloudflare DNS',
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974',
-    annual_downtime_minutes: '4.60',
-    service_sla: '99.99999',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Cloudflare_DNS)
-CREATE (Cloudflare)-[:CONNECTED_RISK {
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974'
-}]->(Cloudflare_DNS)
-
-CREATE (Cloudflare_DDoS_Protection:TECHNOLOGY_SERVICE {
-    name: 'Cloudflare DDoS Protection',
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974',
-    annual_downtime_minutes: '4.60',
-    service_sla: '99.99999',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Cloudflare_DDoS_Protection)
-CREATE (Cloudflare)-[:CONNECTED_RISK {
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974'
-}]->(Cloudflare_DDoS_Protection)
-
-CREATE (MongoDB_Atlas:TECHNOLOGY_SERVICE {
-    name: 'MongoDB Atlas',
-    sla_usage: '2914.76%',
-    sla_deviation_risk: '966.870',
-    traffic_coefficient: '0.29148%',
-    usage_risk: '990.264',
-    annual_downtime_minutes: '1532.00',
-    service_sla: '99.99000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas)
-CREATE (MongoDB)-[:CONNECTED_RISK {
-    sla_usage: '2914.76%',
-    sla_deviation_risk: '966.870',
-    traffic_coefficient: '0.29148%',
-    usage_risk: '990.264'
-}]->(MongoDB_Atlas)
-
-CREATE (MongoDB_Atlas_Search:TECHNOLOGY_SERVICE {
-    name: 'MongoDB Atlas Search',
-    sla_usage: '2914.76%',
-    sla_deviation_risk: '966.870',
-    traffic_coefficient: '0.29148%',
-    usage_risk: '990.264',
-    annual_downtime_minutes: '1532.00',
-    service_sla: '99.99000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_Search)
-CREATE (MongoDB)-[:CONNECTED_RISK {
-    sla_usage: '2914.76%',
-    sla_deviation_risk: '966.870',
-    traffic_coefficient: '0.29148%',
-    usage_risk: '990.264'
-}]->(MongoDB_Atlas_Search)
-
-CREATE (Salesforce_SaaS:TECHNOLOGY_SERVICE {
-    name: 'Salesforce SaaS',
-    sla_usage: '684.93%',
-    sla_deviation_risk: '991.373',
-    traffic_coefficient: '0.01712%',
-    usage_risk: '997.460',
-    annual_downtime_minutes: '360',
-    service_sla: '99.99000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Salesforce_SaaS)
-CREATE (Salesforce)-[:CONNECTED_RISK {
-    sla_usage: '684.93%',
-    sla_deviation_risk: '991.373',
-    traffic_coefficient: '0.01712%',
-    usage_risk: '997.460'
-}]->(Salesforce_SaaS)
-
-CREATE (Salesforce_Sales_Cloud:TECHNOLOGY_SERVICE {
-    name: 'Salesforce Sales Cloud',
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Sales_Cloud)
-CREATE (Salesforce)-[:CONNECTED_RISK {
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Salesforce_Sales_Cloud)
-
-CREATE (Salesforce_Service_Cloud:TECHNOLOGY_SERVICE {
-    name: 'Salesforce Service Cloud',
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Service_Cloud)
-CREATE (Salesforce)-[:CONNECTED_RISK {
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Salesforce_Service_Cloud)
-
-CREATE (Salesforce_Marketing_Cloud:TECHNOLOGY_SERVICE {
-    name: 'Salesforce Marketing Cloud',
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Marketing_Cloud)
-CREATE (Salesforce)-[:CONNECTED_RISK {
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Salesforce_Marketing_Cloud)
-
-CREATE (Databricks_SaaS:TECHNOLOGY_SERVICE {
-    name: 'Databricks SaaS',
-    sla_usage: '142.69%',
-    sla_deviation_risk: '996.362',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
+CREATE (Google_Cloud_Dataflow:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud Dataflow',
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175',
+    annual_downtime_minutes: '320.00',
     service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Databricks_SaaS)
-CREATE (Databricks)-[:CONNECTED_RISK {
-    sla_usage: '142.69%',
-    sla_deviation_risk: '996.362',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Databricks_SaaS)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Dataflow)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175'
+}]->(Google_Cloud_Dataflow)
 
-CREATE (Databricks_Workspace:TECHNOLOGY_SERVICE {
-    name: 'Databricks Workspace',
-    sla_usage: '142.69%',
-    sla_deviation_risk: '996.362',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
+CREATE (Google_Cloud_Storage:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud Storage',
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175',
+    annual_downtime_minutes: '320.00',
     service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Databricks_Workspace)
-CREATE (Databricks)-[:CONNECTED_RISK {
-    sla_usage: '142.69%',
-    sla_deviation_risk: '996.362',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Databricks_Workspace)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Storage)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175'
+}]->(Google_Cloud_Storage)
 
-CREATE (Databricks_Mlflow:TECHNOLOGY_SERVICE {
-    name: 'Databricks Mlflow',
-    sla_usage: '142.69%',
-    sla_deviation_risk: '996.362',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
+CREATE (Google_Cloud_And_Media_CDN:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud And Media CDN',
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175',
+    annual_downtime_minutes: '320.00',
     service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Databricks_Mlflow)
-CREATE (Databricks)-[:CONNECTED_RISK {
-    sla_usage: '142.69%',
-    sla_deviation_risk: '996.362',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Databricks_Mlflow)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_And_Media_CDN)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175'
+}]->(Google_Cloud_And_Media_CDN)
 
-CREATE (Databricks_Notebooks:TECHNOLOGY_SERVICE {
-    name: 'Databricks Notebooks',
-    sla_usage: '142.69%',
-    sla_deviation_risk: '996.362',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
+CREATE (Google_Cloud_Looker_Studio_Pro:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud Looker Studio Pro',
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175',
+    annual_downtime_minutes: '320.00',
     service_sla: '99.95000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Databricks_Notebooks)
-CREATE (Databricks)-[:CONNECTED_RISK {
-    sla_usage: '142.69%',
-    sla_deviation_risk: '996.362',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Databricks_Notebooks)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Looker_Studio_Pro)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175'
+}]->(Google_Cloud_Looker_Studio_Pro)
 
-CREATE (Snowflake_on_AWS:TECHNOLOGY_SERVICE {
-    name: 'Snowflake on AWS',
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
-    service_sla: '99.99000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Snowflake_on_AWS)
-CREATE (Snowflake)-[:CONNECTED_RISK {
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Snowflake_on_AWS)
-
-CREATE (Snowflake_on_GCP:TECHNOLOGY_SERVICE {
-    name: 'Snowflake on GCP',
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
-    service_sla: '99.99000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Snowflake_on_GCP)
-CREATE (Snowflake)-[:CONNECTED_RISK {
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Snowflake_on_GCP)
-
-CREATE (Snowflake_on_Azure:TECHNOLOGY_SERVICE {
-    name: 'Snowflake on Azure',
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
-    service_sla: '99.99000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Snowflake_on_Azure)
-CREATE (Snowflake)-[:CONNECTED_RISK {
-    sla_usage: '713.47%',
-    sla_deviation_risk: '991.060',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Snowflake_on_Azure)
-
-CREATE (Oracle_AutonomousDB_21c:TECHNOLOGY_SERVICE {
-    name: 'Oracle AutonomousDB 21c',
-    sla_usage: '68.49%',
-    sla_deviation_risk: '996.633',
-    traffic_coefficient: '0.03425%',
-    usage_risk: '997.289',
-    annual_downtime_minutes: '360',
+CREATE (Amazon_EMR_Serverless:TECHNOLOGY_SERVICE {
+    name: 'Amazon EMR Serverless',
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719',
+    annual_downtime_minutes: '400',
     service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Oracle_AutonomousDB_21c)
-CREATE (Oracle_Cloud_OCI)-[:CONNECTED_RISK {
-    sla_usage: '68.49%',
-    sla_deviation_risk: '996.633',
-    traffic_coefficient: '0.03425%',
-    usage_risk: '997.289'
-}]->(Oracle_AutonomousDB_21c)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_EMR_Serverless)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719'
+}]->(Amazon_EMR_Serverless)
 
-CREATE (Object_Storage_OCI:TECHNOLOGY_SERVICE {
-    name: 'Object Storage OCI',
-    sla_usage: '22.83%',
-    sla_deviation_risk: '997.545',
-    traffic_coefficient: '0.02283%',
-    usage_risk: '998.316',
-    annual_downtime_minutes: '120.00',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Object_Storage_OCI)
-CREATE (Oracle_Cloud_OCI)-[:CONNECTED_RISK {
-    sla_usage: '22.83%',
-    sla_deviation_risk: '997.545',
-    traffic_coefficient: '0.02283%',
-    usage_risk: '998.316'
-}]->(Object_Storage_OCI)
-
-CREATE (Oracle_Big_Data_Service:TECHNOLOGY_SERVICE {
-    name: 'Oracle_Big_Data_Service',
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Oracle_Big_Data_Service)
-CREATE (Oracle_Cloud_OCI)-[:CONNECTED_RISK {
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Oracle_Big_Data_Service)
-
-CREATE (Oracle_Kubernetes_Service__OKE_:TECHNOLOGY_SERVICE {
-    name: 'Oracle Kubernetes Service (OKE)',
-    sla_usage: '456.62%',
-    sla_deviation_risk: '988.878',
+CREATE (Google_Kubernetes_Engine__GKE_:TECHNOLOGY_SERVICE {
+    name: 'Google Kubernetes Engine (GKE)',
+    sla_usage: '913.24%',
+    sla_deviation_risk: '984.816',
     traffic_coefficient: '0.45662%',
     usage_risk: '985.315',
     annual_downtime_minutes: '2400.00',
+    service_sla: '99.95000',
+    percentage_service_credit_back: '10.000'
+})
+
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Google_Kubernetes_Engine__GKE_)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '913.24%',
+    sla_deviation_risk: '984.816',
+    traffic_coefficient: '0.45662%',
+    usage_risk: '985.315'
+}]->(Google_Kubernetes_Engine__GKE_)
+
+CREATE (Amazon_ElastiCache:TECHNOLOGY_SERVICE {
+    name: 'Amazon ElastiCache',
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719',
+    annual_downtime_minutes: '400',
     service_sla: '99.90000',
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_FUEL_DATASCIENCE_BIGDATA_LIMITED___B2B___ASSESMENT_MULTICLOUD___CUSTOMER_INVESTMENT_BANKING)-[:CUSTOMER_USES_SERVICE]->(Oracle_Kubernetes_Service__OKE_)
-CREATE (Oracle_Cloud_OCI)-[:CONNECTED_RISK {
-    sla_usage: '456.62%',
-    sla_deviation_risk: '988.878',
-    traffic_coefficient: '0.45662%',
-    usage_risk: '985.315'
-}]->(Oracle_Kubernetes_Service__OKE_)
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_ElastiCache)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719'
+}]->(Amazon_ElastiCache)
+
+CREATE (Amazon_Elastic_MapReduce:TECHNOLOGY_SERVICE {
+    name: 'Amazon Elastic MapReduce',
+    sla_usage: '125.00%',
+    sla_deviation_risk: '995.504',
+    traffic_coefficient: '0.12500%',
+    usage_risk: '995.254',
+    annual_downtime_minutes: '657.00',
+    service_sla: '99.90000',
+    percentage_service_credit_back: '10.000'
+})
+
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_MapReduce)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '125.00%',
+    sla_deviation_risk: '995.504',
+    traffic_coefficient: '0.12500%',
+    usage_risk: '995.254'
+}]->(Amazon_Elastic_MapReduce)
+
+CREATE (Amazon_Elastic_Load_Balancing:TECHNOLOGY_SERVICE {
+    name: 'Amazon Elastic Load Balancing',
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719',
+    annual_downtime_minutes: '400',
+    service_sla: '99.90000',
+    percentage_service_credit_back: '10.000'
+})
+
+CREATE (cust_Fu)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Load_Balancing)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '76.10%',
+    sla_deviation_risk: '996.480',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719'
+}]->(Amazon_Elastic_Load_Balancing)
