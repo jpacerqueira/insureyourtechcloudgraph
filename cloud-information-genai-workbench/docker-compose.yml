@@ -169,6 +169,8 @@ services:
           ignore:
             - loader.py
             - bot.py
+            - pdf_bot_v2.py
+            - pdf_bot_usebatch.py
     ports:
       - 8503:8503
 
@@ -205,6 +207,7 @@ services:
           ignore:
             - loader.py
             - bot.py
+            - pdf_bot.py
     ports:
       - 8504:8504
 

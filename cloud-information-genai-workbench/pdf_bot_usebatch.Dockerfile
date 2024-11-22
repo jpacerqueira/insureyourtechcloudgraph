@@ -12,7 +12,7 @@ COPY requirements.txt .
 
 RUN pip install --upgrade -r requirements.txt
 
-COPY pdf_bot.py .
+COPY pdf_bot_v2.py .
 COPY utils.py .
 COPY chains.py .
 COPY pdf_bot_usebatch.py .
