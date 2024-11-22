@@ -383,7 +383,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
 
         # Add a single toggle button for all services
         show_all = False
-        show_all = st.button("Show/Hide All Services Analysis")
+        # show_all = st.button("Show/Hide All Services Analysis") # TODO: change to "Show/Hide All Services Analysis" when ready
         # Update the state when button is clicked
         if show_all:
             st.session_state.expand_all = not st.session_state.expand_all

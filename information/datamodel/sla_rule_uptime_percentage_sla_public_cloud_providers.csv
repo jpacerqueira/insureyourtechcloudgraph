@@ -219,7 +219,7 @@ Service Level Credit Calculation:
     For example, if a customer has a Monthly Availability Percentage of 99.4%, they will receive 1 x Average Daily Snowflake Credits.
 
 Let me know if you have any further questions!",
-10000000000024,Salesforce,global,99.99000,Monthly Uptime Percentage,,,0,,,https://techdocs.akamai.com/sla/docs/getting-started,,
+10000000000024,Salesforce,global,99.90000,Monthly Uptime Percentage,,,0,,,https://techdocs.akamai.com/sla/docs/getting-started,,
 10000000000025,Akamai,global,99.99999,Custom SLA via API Metrics,10.00,,,,,," - Llama3.2b - 
 Here's a summary of the SLA (Service Level Agreement) policy by Cloudflare:
 
@@ -247,3 +247,4 @@ Other Key Points:
 Let me know if you have any specific questions about this document!",
 10000000000026,Cloudflare,global,99.99999,Custom SLA via API Metrics,10.00,,,,,https://www.cloudflare.com/en-gb/enterprise-support-sla/,,
 10000000000027,Macrometa,global,99.99999,Custom SLA via API Metrics,10.00,,,,,,,
+10000000000028,Databricks,,99.90000,Custom SLA via API Metrics,10.00,,,,,https://www.databricks.com/support,,
