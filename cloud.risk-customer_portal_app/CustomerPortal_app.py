@@ -13,23 +13,21 @@ from flask_cors import CORS
 
 # Initialize the Neo4j connection
 def init_neo4j_connection(uri, user, password, max_retries=3):
-    driver = GraphDatabase.driver(uri, auth=(user, password))
-    return driver
     # TODO: remove this when connection works    
-    #retry_count = 0
-    #while retry_count < max_retries:
-    #    try:
-    #        driver = GraphDatabase.driver(uri, auth=(user, password))
-    #        # Verify connection
-    #        with driver.session() as session:
-    #            session.run("MATCH (n) RETURN count(n) LIMIT 1")
-    #        return driver
-    #    except Exception as e:
-    #        retry_count += 1
-    #        st.warning(f"Attempt {retry_count}: Unable to connect to Neo4j. Retrying... ({str(e)})")
-    #        time.sleep(2)  # Wait 2 seconds before retrying
-    #st.error(f"Failed to connect to Neo4j after {max_retries} attempts. Please check your connection settings.")
-    #return None
+    retry_count = 0
+    while retry_count < max_retries:
+        try:
+            driver = GraphDatabase.driver(uri, auth=(user, password))
+            # Verify connection
+            with driver.session() as session:
+                session.run("MATCH (n) RETURN count(n) LIMIT 1")
+            return driver
+        except Exception as e:
+            retry_count += 1
+            st.warning(f"Attempt {retry_count}: Unable to connect to Neo4j. Retrying... ({str(e)})")
+            time.sleep(2)  # Wait 2 seconds before retrying
+    st.error(f"Failed to connect to Neo4j after {max_retries} attempts. Please check your connection settings.")
+    return None
 
 
 # Neo4j insert function
@@ -128,7 +126,7 @@ services = {
         "Amazon AWS Step Functions","Amazon s3","Amazon Elastic Kubernetes Service"],
     "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Apigee API","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL",
         "Google Cloud SQL","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud And Media CDN",
-        "Google Kubernetes Engine (GKE)"],
+        "Google Cloud Looker Studio Pro","Google Kubernetes Engine (GKE)"],
     "Microsoft Azure": ["Azure Batch","Azure functions","Azure PowerBi App","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)"],
     "IBM Cloud": ["IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
         "IBM Databases","IBM Databases for DataStax","IBM Databases for EDB",
@@ -154,16 +152,16 @@ project_name = st.text_input("Project Name (optional)", value="Project by "+comp
 # Cloud service selection - modified to accept multiple vendors
 cloud_vendors = ["Amazon AWS", "Google Cloud GCP", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", 
                 "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai"]
-max_vendor_selections = 12
-selected_vendors = st.multiselect("Select Cloud Vendors (up to 6)", cloud_vendors, max_selections=max_vendor_selections) 
+max_vendor_selections = 10
+selected_vendors = st.multiselect("Select Cloud Vendors (up to 10)", cloud_vendors, max_selections=max_vendor_selections) 
 
 # Service selection based on vendors - modified to show services for all selected vendors
 all_available_services = []
 for vendor in selected_vendors:
     all_available_services.extend(services.get(vendor, []))
 
-max_service_selections = 250
-selected_services = st.multiselect("Select Services (up to 50)", all_available_services, max_selections=max_service_selections)
+max_service_selections = 100
+selected_services = st.multiselect("Select Services (up to 100)", all_available_services, max_selections=max_service_selections)
 
 # Region type selection
 region_type = st.selectbox("Select Region Type", ["global", "regional"])
@@ -171,7 +169,7 @@ region_type = st.selectbox("Select Region Type", ["global", "regional"])
 # Analyze Cloud Risk - modified to handle multiple services
 if st.button("Analyze Cloud Risk"):
     if company_name and selected_services and region_type:
-        st.subheader("Risk Analysis Results")
+        st.header("Risk Analysis Results")
         
         # Initialize lists to store values for median calculation
         customer_sla_usage_values = []
@@ -216,7 +214,8 @@ CREATE ({service_id}:TECHNOLOGY_SERVICE {{
     traffic_coefficient: '{risk_data.get('service_traffic_coef_by_percent_down', 0.0)}',
     usage_risk: '{risk_data.get('usage_connected_risk_0_999', 0.0)}',
     annual_downtime_minutes: '{risk_data.get('webscraper_annual_period_service_down_per_year_in_minutes', 0.0)}',
-    service_sla: '{risk_data.get('service_sla_0_99_9999_for_60min_times_24h_365days', 0.0)}'
+    service_sla: '{risk_data.get('service_sla_0_99_9999_for_60min_times_24h_365days', 0.0)}',
+    percentage_service_credit_back: '{risk_data.get('percentage_service_credit_back', 0.0)}'
 }})
 """
                 # Find vendor for this service
@@ -239,7 +238,8 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
             'sla_usage': [],
             'sla_deviation': [],
             'traffic_coef': [],
-            'usage_risk': []
+            'usage_risk': [],
+            'service_sla': []
         } for vendor in selected_vendors}
         
         # Collect metrics per vendor
@@ -254,6 +254,9 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                         sla_deviation = float(risk_data.get('sla_deviation_connected_risk_0_999', 0.0).rstrip('%').replace(',', '.'))
                         traffic_coef = float(risk_data.get('service_traffic_coef_by_percent_down', 0.0).rstrip('%').replace(',', '.'))
                         usage_risk = float(risk_data.get('usage_connected_risk_0_999', 0.0).rstrip('%').replace(',', '.'))
+                        # Add service_sla to vendor metrics
+                        service_sla = float(risk_data.get('service_sla_0_99_9999_for_60min_times_24h_365days', 0.0).rstrip('%').replace(',', '.'))
+                        vendor_metrics[vendor].setdefault('service_sla', []).append(service_sla)
                         
                         vendor_metrics[vendor]['sla_usage'].append(sla_usage)
                         vendor_metrics[vendor]['sla_deviation'].append(sla_deviation)
@@ -261,13 +264,15 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                         vendor_metrics[vendor]['usage_risk'].append(usage_risk)
         
         # Calculate and display vendor medians
-        st.subheader("Vendor-specific Risk Analysis")
+        st.divider()
+        st.subheader("by Cloud Vendor")
         for vendor in selected_vendors:
             metrics = vendor_metrics[vendor]
             if any(metrics.values()):  # If there's any data for this vendor
                 vendor_id = sanitize_cypher_identifier(vendor)
                 
-                # Calculate medians
+                # Calculate medians including service_sla
+                vendor_median_sla = sorted(metrics['service_sla'])[len(metrics['service_sla'])//2] if metrics['service_sla'] else 0.0
                 vendor_median_sla_usage = sorted(metrics['sla_usage'])[len(metrics['sla_usage'])//2] if metrics['sla_usage'] else 0.0
                 vendor_median_sla_deviation = sorted(metrics['sla_deviation'])[len(metrics['sla_deviation'])//2] if metrics['sla_deviation'] else 0.0
                 vendor_median_traffic_coef = sorted(metrics['traffic_coef'])[len(metrics['traffic_coef'])//2] if metrics['traffic_coef'] else 0.0
@@ -275,23 +280,27 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                 
                 # Display vendor metrics
                 st.write(f"### {vendor} Median Metrics")
-                col1, col2 = st.columns(2)
+                col1, col2, col3 = st.columns(3)  # Changed to 3 columns
                 with col1:
-                    st.metric("Median SLA Usage %", f"{vendor_median_sla_usage:.2f}")
+                    st.metric("Median SLA Usage %", f"{vendor_median_sla_usage:.2f}%")
                     st.metric("Median SLA Deviation Risk", f"{vendor_median_sla_deviation:.2f}")
                 with col2:
-                    st.metric("Median Traffic Coefficient %", f"{vendor_median_traffic_coef:.2f}")
+                    st.metric("Median Traffic Coefficient %", f"{vendor_median_traffic_coef:.2f}%")
                     st.metric("Median Usage Risk Rating", f"{vendor_median_usage_risk:.2f}")
-                
+                with col3:
+                    st.metric("Median Service SLA %", f"{vendor_median_sla:.2f}%")
+                st.divider()
+
                 # Update vendor node creation in Cypher query
                 cypher_query = f"""CREATE ({vendor_id}:TECHNOLOGY_PROVIDER {{
                     name: '{vendor}',
-                    vendor_median_sla_usage_percentage: '{vendor_median_sla_usage:.2f}',
+                    vendor_median_sla_usage_percentage: '{vendor_median_sla_usage:.2f}%',
                     vendor_median_sla_deviation_risk: '{vendor_median_sla_deviation:.2f}',
-                    vendor_median_traffic_coefficient: '{vendor_median_traffic_coef:.2f}',
-                    vendor_median_usage_risk: '{vendor_median_usage_risk:.2f}'
+                    vendor_median_traffic_coefficient: '{vendor_median_traffic_coef:.2f}%',
+                    vendor_median_usage_risk: '{vendor_median_usage_risk:.2f}',
+                    vendor_median_service_sla: '{vendor_median_sla:.2f}%'
                 }})\n""" + cypher_query
-                # Replace the mean calculation section with median calculation
+
         if customer_sla_usage_values and customer_sla_deviation_values and customer_traffic_coef_values and customer_usage_risk_values:
             # Calculate medians
             customer_median_sla_usage = sorted(customer_sla_usage_values)[len(customer_sla_usage_values)//2]
@@ -299,14 +308,14 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
             customer_median_traffic_coef = sorted(customer_traffic_coef_values)[len(customer_traffic_coef_values)//2]
             customer_median_usage_risk = sorted(customer_usage_risk_values)[len(customer_usage_risk_values)//2]
 
-            st.subheader("Customer Summary")           
+            st.header("Customer Summary")           
             st.subheader("Overall Cloud Risk Analysis")
             col1, col2 = st.columns(2)
             with col1:
-                st.metric("Median SLA Usage %", f"{customer_median_sla_usage:.2f}")
+                st.metric("Median SLA Usage %", f"{customer_median_sla_usage:.2f}%")
                 st.metric("Median SLA Deviation Risk", f"{customer_median_sla_deviation:.2f}")
             with col2:
-                st.metric("Median Traffic Coefficient %", f"{customer_median_traffic_coef:.2f}")
+                st.metric("Median Traffic Coefficient %", f"{customer_median_traffic_coef:.2f}%")
                 st.metric("Median Usage Risk Rating", f"{customer_median_usage_risk:.2f}")
             
             # Create the customer node with median values
@@ -314,9 +323,9 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
 CREATE (cust_{company_id}:CUSTOMER_NAME {{
     name: '{company_name}',
     project_name: '{project_name}',
-    median_sla_usage_percentage: '{customer_median_sla_usage:.2f}',
+    median_sla_usage_percentage: '{customer_median_sla_usage:.2f}%',
     median_sla_deviation_risk: '{customer_median_sla_deviation:.2f}',
-    median_traffic_coefficient: '{customer_median_traffic_coef:.2f}',
+    median_traffic_coefficient: '{customer_median_traffic_coef:.2f}%',
     median_usage_risk: '{customer_median_usage_risk:.2f}'
     }})
 """ + cypher_query
@@ -351,16 +360,24 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         with open(output_path, "w") as f:
             f.write(cypher_query)
-            
+
         st.success(f"Generated Cypher query saved to {output_path}")
-        
+        st.divider()
+
+        st.header("Individual Cloud Services Risk Analysis")
+        st.subheader("by Cloud Services")
+
         # Continue with existing risk analysis display
         for service in selected_services:
-            st.write(f"Analysis for {service}")
+            st.write(f"Risk Analysis for {service}")
             risk_data = fetch_cloud_risk_data(service, region_type)
             if risk_data:
-                col1, col2, col3 = st.columns(3)
-                
+                col1, col2, col3, col4 = st.columns(4)
+
+                # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
+                # Formula: when SLA usage is 100% or more, then the credit back is XXX%-100% of the SLA usage
+                estimated_cloud_services_credit_back_money_back = 0.0 if float(risk_data.get("service_sla_usage_percentage", 0.0)) <= 100 else (float(risk_data.get("service_sla_usage_percentage", 0.0))-100)/100*float(risk_data.get("percentage_service_credit_back", 0.0))/100*1000
+
                 with col1:
                     st.metric("SLA Usage %", risk_data.get("service_sla_usage_percentage", "N/A"))
                     st.metric("SLA Deviation Risk", risk_data.get("sla_deviation_connected_risk_0_999", "N/A"))
@@ -371,8 +388,13 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                 
                 with col3:
                     st.metric("Annual Downtime (minutes)", risk_data.get("webscraper_annual_period_service_down_per_year_in_minutes", "N/A"))
-                    st.metric("Service SLA (99.9999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A"))
-
+                    st.metric("By SLA Expected Annual Downtime (minutes)", risk_data.get("expected_annual_service_minutes_down", "N/A"))
+                
+                with col4:
+                    st.metric("Service SLA (99.99999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A"))
+                    st.metric("Service Credit Back (%)", str(risk_data.get("percentage_service_credit_back", "N/A"))+"%")
+                    st.metric("Estimated max. - Cloud Service -  Credit Back per $$1.000", "$"+str(estimated_cloud_services_credit_back_money_back))
+                
                 st.text_area(f"AI Analysis - {service}", risk_data.get("remarks_outage_genai", "No analysis available"), height=100)
                 st.divider()
     else:

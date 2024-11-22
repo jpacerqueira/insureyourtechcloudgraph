@@ -165,7 +165,7 @@
         "Red Hat OpenShift on IBM Cloud",
         "Google Cloud VertexAI","Google Cloud Apigee","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL",
         "Google Cloud SQL","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud And Media CDN",
-        "Google Kubernetes Engine (GKE)", 
+        "Google Cloud Looker Studio Pro","Google Kubernetes Engine (GKE)", 
         "Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon DataZone",
         "Amazon DocumentDB","Amazon DynamoDB","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
         "Amazon Elastic File System","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
@@ -278,6 +278,7 @@
                         <th>Region</th>
                         <th>Webscrapper Annual Period Service Down Per Year in Minutes</th>
                         <th>SLA of the Cloud Service</th>
+                        <th>Service Credit Back (%)</th>
                         <th>SLA Usage %</th>
                         <th>Traffic Coef %</th>
                         <th>SLA Deviation Risk Rating</th>
@@ -295,6 +296,7 @@
                 <ul style="list-style-type: none; padding-left: 0;">
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Webscrapper Annual Period Service Down Per Year in Minutes:</strong> Measures the total minutes the Service was down or degraded Year-to-Date.</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA of the Cloud Service:</strong> The SLA of the Cloud Service. A value of 99% means the Service is usable 100% of its time, is 99% time garanteed up, and only up to 1% time down under Cloud Service Vender promissed SLA.</li>
+                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Service Credit Back (%):</strong> Measures the percentage credit back the cloud vendor gives in credit , if SLA the Service has not been meet monthly or Year-to-date . A value of 10% means the Service provider, if requested, will give 10% credit back.</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA Usage %:</strong> Measures the percentage of SLA the Service has used Year-to-date . A value of 100% means the Service has used 100% of its SLA .</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Traffic Coef %:</strong> Measures the percentage of time the Service was down or degraded Year-to-Date. A value of 0% means the service was never down or degraded. A value of 100% means the service was always down or degraded.</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA Deviation Risk Rating:</strong> Indicates Risk based on SLA discrepancies. Measures the likelihood of service level agreement deviations (0.0-999.0, where higher values indicate greater risk).</li>
@@ -347,6 +349,7 @@
                             <td>${riskData.region}</td>
                             <td>${riskData.webscraper_annual_period_service_down_per_year_in_minutes || 'N/A'}</td>
                             <td>${riskData.service_sla_0_99_9999_for_60min_times_24h_365days || 'N/A'}</td>
+                            <td>${riskData.percentage_service_credit_back || 'N/A'}</td>
                             <td>${riskData.service_sla_usage_percentage || 'N/A'}</td>
                             <td>${riskData.service_traffic_coef_by_percent_down || 'N/A'}</td>
                             <td>${riskData.sla_deviation_connected_risk_0_999|| 'N/A'}</td>

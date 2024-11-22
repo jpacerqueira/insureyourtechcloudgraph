@@ -3,7 +3,7 @@ docker stop cloudriskgraph_customer_b2c
 docker rm cloudriskgraph_customer_b2c
 docker run \
     --name cloudriskgraph_customer_b2c \
-    -p17474:7474 -p17687:7687 \
+    -p37474:7474 -p37687:7687 \
     -d \
     -v $HOME/neo4j/data:/data \
     -v $HOME/neo4j/logs:/logs \
