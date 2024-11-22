@@ -45,7 +45,16 @@ class StreamHandler(BaseCallbackHandler):
         self.container.markdown(self.text)
 
 
-llm = load_llm(llm_name, logger=logger, config={"ollama_base_url": ollama_base_url})
+llm = load_llm(
+    llm_name, 
+    logger=logger, 
+    config={
+        "ollama_base_url": ollama_base_url,
+        "format": "json",
+        "temperature": 0.7,
+        "model": llm_name,
+    }
+)
 
 
 def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, output_dir=None):
@@ -73,21 +82,27 @@ def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, outpu
     )
     
     qa = RetrievalQA.from_chain_type(
-        llm=llm, chain_type="stuff", retriever=vectorstore.as_retriever()
+        llm=llm,
+        chain_type="stuff",
+        retriever=vectorstore.as_retriever(),
+        return_source_documents=True
     )
     
     # Enhance query with cloud vendor if specified
     enhanced_query = f"For {cloud_vendor} apply this query: {query}" if cloud_vendor else f"For all cloud vendors {cloud_vendor} apply this query: {query}"
     logger.info(f"In pdf_path: {pdf_path} - running query: {enhanced_query}")
-    response = qa.run(enhanced_query)
-    
-    if save_output and output_dir:
-        output_path = os.path.join(output_dir, os.path.splitext(os.path.basename(pdf_path))[0] + ".txt")
-        os.makedirs(output_dir, exist_ok=True)
-        with open(output_path, "w") as f:
-            f.write(response)
-    
-    return response
+    try:
+        response = qa.run(enhanced_query)
+        logger.info(f"In pdf_path: {pdf_path} - response: {response}")    
+        if save_output and output_dir:
+            output_path = os.path.join(output_dir, os.path.splitext(os.path.basename(pdf_path))[0] + ".txt")
+            os.makedirs(output_dir, exist_ok=True)
+            with open(output_path, "w") as f:
+                f.write(response)
+            return response
+    except TypeError as e:
+        logger.error(f"Error processing query: {e}")
+        return "I encountered an error processing your query. Please try rephrasing your question."
 
 def process_folder(input_folder, query, cloud_vendor="", output_folder="pdf_bot_usebatch"):
     """Process all PDFs in a folder"""
