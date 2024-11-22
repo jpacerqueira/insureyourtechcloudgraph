@@ -239,7 +239,8 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
             'sla_deviation': [],
             'traffic_coef': [],
             'usage_risk': [],
-            'service_sla': []
+            'service_sla': [],
+            'annual_downtime': []
         } for vendor in selected_vendors}
         
         # Collect metrics per vendor
@@ -249,6 +250,10 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                 # Find vendor for this service
                 for vendor, vendor_services in services.items():
                     if service in vendor_services and vendor in selected_vendors:
+                        # Add annual downtime to vendor metrics
+                        annual_downtime = float(risk_data.get('webscraper_annual_period_service_down_per_year_in_minutes', 0.0))
+                        vendor_metrics[vendor].setdefault('annual_downtime', []).append(annual_downtime)
+                        
                         # Convert to float and remove % and ,
                         sla_usage = float(risk_data.get('service_sla_usage_percentage', 0.0).rstrip('%').replace(',', '.'))
                         sla_deviation = float(risk_data.get('sla_deviation_connected_risk_0_999', 0.0).rstrip('%').replace(',', '.'))
@@ -268,8 +273,11 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
         st.subheader("by Cloud Vendor")
         for vendor in selected_vendors:
             metrics = vendor_metrics[vendor]
-            if any(metrics.values()):  # If there's any data for this vendor
+            if any(metrics.values()):
                 vendor_id = sanitize_cypher_identifier(vendor)
+                
+                # Calculate medians including annual downtime
+                vendor_median_annual_downtime = sorted(metrics['annual_downtime'])[len(metrics['annual_downtime'])//2] if metrics['annual_downtime'] else 0.0
                 
                 # Calculate medians including service_sla
                 vendor_median_sla = sorted(metrics['service_sla'])[len(metrics['service_sla'])//2] if metrics['service_sla'] else 0.0
@@ -279,8 +287,8 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                 vendor_median_usage_risk = sorted(metrics['usage_risk'])[len(metrics['usage_risk'])//2] if metrics['usage_risk'] else 0.0
                 
                 # Display vendor metrics
-                st.write(f"### {vendor} Median Metrics")
-                col1, col2, col3 = st.columns(3)  # Changed to 3 columns
+                st.write(f"### {vendor} Metrics")
+                col1, col2, col3 = st.columns(3)
                 with col1:
                     st.metric("Median SLA Usage %", f"{vendor_median_sla_usage:.2f}%")
                     st.metric("Median SLA Deviation Risk", f"{vendor_median_sla_deviation:.2f}")
@@ -289,16 +297,18 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                     st.metric("Median Usage Risk Rating", f"{vendor_median_usage_risk:.2f}")
                 with col3:
                     st.metric("Median Service SLA %", f"{vendor_median_sla:.2f}%")
+                    st.metric("Median Annual Downtime (minutes)", f"{vendor_median_annual_downtime:.2f}")
                 st.divider()
 
-                # Update vendor node creation in Cypher query
+                # Update vendor node creation in Cypher query to include annual downtime
                 cypher_query = f"""CREATE ({vendor_id}:TECHNOLOGY_PROVIDER {{
                     name: '{vendor}',
                     vendor_median_sla_usage_percentage: '{vendor_median_sla_usage:.2f}%',
                     vendor_median_sla_deviation_risk: '{vendor_median_sla_deviation:.2f}',
                     vendor_median_traffic_coefficient: '{vendor_median_traffic_coef:.2f}%',
                     vendor_median_usage_risk: '{vendor_median_usage_risk:.2f}',
-                    vendor_median_service_sla: '{vendor_median_sla:.2f}%'
+                    vendor_median_service_sla: '{vendor_median_sla:.2f}%',
+                    vendor_median_annual_downtime: '{vendor_median_annual_downtime:.2f}'
                 }})\n""" + cypher_query
 
         if customer_sla_usage_values and customer_sla_deviation_values and customer_traffic_coef_values and customer_usage_risk_values:
@@ -367,47 +377,60 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
         st.header("Individual Cloud Services Risk Analysis")
         st.subheader("by Cloud Services")
 
+        # Store the toggle state in session state if it doesn't exist
+        if 'expand_all' not in st.session_state:
+            st.session_state.expand_all = True
+
+        # Add a single toggle button for all services
+        #show_all = st.button("Show/Hide All Services Analysis") # TODO: change to "Show/Hide All Services Analysis" when ready
+        show_all = False
+        # Update the state when button is clicked
+        if show_all:
+            st.session_state.expand_all = not st.session_state.expand_all
+
         # Continue with existing risk analysis display
         for service in selected_services:
-            st.write(f"Risk Analysis for {service}")
-            risk_data = fetch_cloud_risk_data(service, region_type)
-            if risk_data:
-                col1, col2, col3, col4 = st.columns(4)
+            # Use the session state to control expansion
+            with st.expander(f"Risk Analysis for {service}", expanded=st.session_state.expand_all):
+                risk_data = fetch_cloud_risk_data(service, region_type)
+                if risk_data:
+                    col1, col2, col3, col4 = st.columns(4)
 
-                # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
-                # Formula: when SLA usage is 100% or more, then the credit back is XXX%-100% of the SLA usage , divide by 12 for monthy approach
-                estimated_cloud_services_credit_money_back = 0.0 if float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%')) <= 100 else (float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%'))-100)/100*float(risk_data.get("percentage_service_credit_back", 0.0).rstrip('%'))/100*1000
-                estimated_cloud_services_credit_money_back = round(estimated_cloud_services_credit_money_back, 2)
-                # Limit the credit back to 1000.00 per month
-                # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
-                # Open question: what is the max. credit back per month?
-                # TODO: add 1000 to the formula when ready (ASK_CUSTOMER_HOW_MUCH=1000)
-                # Set Warning if max. credit back was above 1000.00 per month
-                warning_max_credit_back = "**Warning: Max. credit back was above 1000.00 per month**" if estimated_cloud_services_credit_money_back > 1000.00 else ""
-                estimated_cloud_services_credit_money_back = estimated_cloud_services_credit_money_back if estimated_cloud_services_credit_money_back < 1000.00 else 1000.00
+                    # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
+                    # Formula: when SLA usage is 100% or more, then the credit back is XXX%-100% of the SLA usage , divide by 12 for monthy approach
+                    estimated_cloud_services_credit_money_back = 0.0 if float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%')) <= 100 else (float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%'))-100)/100*float(risk_data.get("percentage_service_credit_back", 0.0).rstrip('%'))/100*1000
+                    estimated_cloud_services_credit_money_back = round(estimated_cloud_services_credit_money_back, 2)
+                    # Limit the credit back to 1000.00 per month
+                    # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
+                    # Open question: what is the max. credit back per month?
+                    # TODO: add 1000 to the formula when ready (ASK_CUSTOMER_HOW_MUCH=1000)
+                    # Set Warning if max. credit back was above 1000.00 per month
+                    warning_max_credit_back = "**Warning: Max. credit back was above 1000.00 per month**" if estimated_cloud_services_credit_money_back > 1000.00 else ""
+                    estimated_cloud_services_credit_money_back = estimated_cloud_services_credit_money_back if estimated_cloud_services_credit_money_back < 1000.00 else 1000.00
 
-                with col1:
-                    st.metric("SLA Usage %", risk_data.get("service_sla_usage_percentage", "N/A"))
-                    st.metric("SLA Deviation Risk", risk_data.get("sla_deviation_connected_risk_0_999", "N/A"))
-                
-                with col2:
-                    st.metric("Traffic Coefficient %", risk_data.get("service_traffic_coef_by_percent_down", "N/A"))
-                    st.metric("Usage Risk Rating", risk_data.get("usage_connected_risk_0_999", "N/A"))
-                
-                with col3:
-                    st.metric("Annual Downtime (minutes)", risk_data.get("webscraper_annual_period_service_down_per_year_in_minutes", "N/A"))
-                    st.metric("By SLA Expected Annual Downtime (minutes)", risk_data.get("expected_annual_service_minutes_down", "N/A"))
-                
-                with col4:
-                    st.metric("Service SLA (99.99999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A"))
-                    st.metric("Service Credit Back (%)", str(risk_data.get("percentage_service_credit_back", "N/A"))+"%")
-                    st.metric("Monthly Credit Back max. per $1.000 ", "$"+str(estimated_cloud_services_credit_money_back))
-                    st.caption(warning_max_credit_back)
-                
-                st.text_area(f"AI Analysis - {service}", risk_data.get("remarks_outage_genai", "No analysis available"), height=100)
-                st.divider()
+                    with col1:
+                        st.metric("SLA Usage %", risk_data.get("service_sla_usage_percentage", "N/A"))
+                        st.metric("SLA Deviation Risk", risk_data.get("sla_deviation_connected_risk_0_999", "N/A"))
+                    
+                    with col2:
+                        st.metric("Traffic Coefficient %", risk_data.get("service_traffic_coef_by_percent_down", "N/A"))
+                        st.metric("Usage Risk Rating", risk_data.get("usage_connected_risk_0_999", "N/A"))
+                    
+                    with col3:
+                        st.metric("Annual Downtime (minutes)", risk_data.get("webscraper_annual_period_service_down_per_year_in_minutes", "N/A"))
+                        st.metric("By SLA Expected Annual Downtime (minutes)", risk_data.get("expected_annual_service_minutes_down", "N/A"))
+                    
+                    with col4:
+                        st.metric("Service SLA (99.99999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A") +"%")
+                        st.metric("Service Credit Back (%)", str(risk_data.get("percentage_service_credit_back", "N/A"))+"%")
+                        st.metric("Monthly Credit Back max. per $1.000 ", "$"+str(estimated_cloud_services_credit_money_back))
+                        st.caption(warning_max_credit_back)
+                    
+                    st.text_area(f"AI Analysis - {service}", risk_data.get("remarks_outage_genai", "No analysis available"), height=100)
+                    st.divider()
     else:
         st.warning("Please fill in all required fields")
+   
 
 # VIEW Results -  from Application - Customer
 st.header("View your Cloud Risk Graphs")
