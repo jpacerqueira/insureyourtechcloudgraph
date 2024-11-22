@@ -1,6 +1,6 @@
-sla_rule_could_provider_key_id,cloud_providername,region,sla,sla_type,percentage_service_credit_back,list_supported_services_by_sla,sla_information_website,sla_pdf_resume_win_genai
-10000000000000,,,,,,,,
-10000000000001,Microsoft Azure,global,99.990,Monthly Uptime Percentage,10.000,"Azure Active Directory (AAD), Microsoft Entra ID, Azure Active Directory B2C, Azure Application Insights,Azure Blob Storage,Azure Cosmos DB,Azure Data Factory,Azure DevOps,Azure Functions,Azure Kubernetes Service (AKS),Azure Load Balancer,Azure Relay,Azure Storage (including Blob, File, Queue, and Table)",https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services?lang=1,""" - Llama3.2b - 
+sla_rule_could_provider_key_id,cloud_providername,region,sla,sla_type,percentage_service_credit_back,service_level_credict_units,applies_tier,applies_error_rating_thresold_percentace,list_supported_services_by_sla,sla_information_website,sla_pdf_resume_win_genai,sla_for_dummies
+10000000000000,BAD CLOUD EXAMPLE,global,99.99999,,,,0,,,,,https://totaluptime.com/cloud-service-level-agreement-expectations/#:~:text=SLA%20Uptime%20Metrics&text=The%20industry%20standard%20is%20five%209's%2C%20or%2099.999%25%20availability.
+10000000000001,Microsoft Azure,global,99.99000,Monthly Uptime Percentage,10.00,,0,,"Azure Active Directory (AAD), Microsoft Entra ID, Azure Active Directory B2C, Azure Application Insights,Azure Blob Storage,Azure Cosmos DB,Azure Data Factory,Azure DevOps,Azure Functions,Azure Kubernetes Service (AKS),Azure Load Balancer,Azure Relay,Azure Storage (including Blob, File, Queue, and Table)",https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services?lang=1,""" - Llama3.2b - 
 
 I'll try to summarize the Service Level Agreements (SLAs) for various Azure services, but please note that this is not an exhaustive list and some details might be missing.
 
@@ -35,8 +35,8 @@ Azure Services with SLAs:
 
 Please note that these SLAs are subject to change and might not be comprehensive for all Azure services. Additionally, some services may have additional SLAs or requirements.
 
-If you're looking for a more detailed and up-to-date list of Azure SLAs, I recommend checking the official Microsoft documentation: Azure Service Level Agreement"""
-10000000000002,Microsoft Azure,global,99.900,Monthly Uptime Percentage,25.000,"Azure Active Directory (AAD), Microsoft Entra ID, Azure Active Directory B2C",https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services?lang=1,""" - Llama3.2b - 
+If you're looking for a more detailed and up-to-date list of Azure SLAs, I recommend checking the official Microsoft documentation: Azure Service Level Agreement""",
+10000000000002,Microsoft Azure,global,99.99999,Monthly Uptime Percentage,25.00,,0,,"Azure Active Directory (AAD), Microsoft Entra ID, Azure Active Directory B2C",https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services?lang=1,""" - Llama3.2b - 
 
 I'll try to summarize the Service Level Agreements (SLAs) for various Azure services, but please note that this is not an exhaustive list and some details might be missing.
 
@@ -71,10 +71,10 @@ Azure Services with SLAs:
 
 Please note that these SLAs are subject to change and might not be comprehensive for all Azure services. Additionally, some services may have additional SLAs or requirements.
 
-If you're looking for a more detailed and up-to-date list of Azure SLAs, I recommend checking the official Microsoft documentation: Azure Service Level Agreement"""
-10000000000003,Microsoft Azure,global,99.000,Monthly Uptime Percentage,50.000,"Azure Active Directory (AAD), Microsoft Entra ID, Azure Active Directory B2C",,
-10000000000004,Microsoft Azure,global,95.000,Monthly Uptime Percentage,100.000,"Azure Active Directory (AAD), Microsoft Entra ID, Azure Active Directory B2C",,
-10000000000005,Google Cloud GCP,global,99.950,Monthly Uptime Percentage,10.000,,https://cloud.google.com/terms/sla?hl=en,""" - Llama3.2b - 
+If you're looking for a more detailed and up-to-date list of Azure SLAs, I recommend checking the official Microsoft documentation: Azure Service Level Agreement""",
+10000000000003,Microsoft Azure,global,99.00000,Monthly Uptime Percentage,50.00,,0,,"Azure Active Directory (AAD), Microsoft Entra ID, Azure Active Directory B2C",,,
+10000000000004,Microsoft Azure,global,95.00000,Monthly Uptime Percentage,100.00,,0,,"Azure Active Directory (AAD), Microsoft Entra ID, Azure Active Directory B2C",,,
+10000000000005,Google Cloud GCP,global,99.95000,Monthly Uptime Percentage,10.00,,0,,,https://cloud.google.com/terms/sla?hl=en,""" - Llama3.2b - 
 
 I'll try to summarize the Service Level Agreements (SLAs) for various Google Cloud services, but please note that this is not an exhaustive list and some details might be missing.
 Cloud Run Service Level Agreement (SLA)
@@ -136,7 +136,114 @@ The maximum aggregate number of Financial Credits issued by Google to Customer f
 SLA Exclusions
 The SLA does not apply to any: (a) features or services designated pre-general availability (unless otherwise set forth in the associated Documentation), (b) features or services excluded from the SLA (in the associated Documentation), or (c) errors: (i) caused by factors outside of Google’s reasonable control; (ii) that resulted from Customer’s software or hardware or third party software or hardware, or both; (iii) that resulted from abuses or other behaviors that violate the Agreement; or (iv) that resulted from quotas applied by the system or listed in the Admin Console.
 
-Previous versions (Last modified November 18, 2024)"
-10000000000006,Google Cloud GCP,global,99.000,Monthly Uptime Percentage,25.000,,,
-10000000000007,Google Cloud GCP,global,95.000,Monthly Uptime Percentage,50.000,,,
-10000000000008,,,,,,,,
+Previous versions (Last modified November 18, 2024)",
+10000000000006,Google Cloud GCP,global,99.00000,Monthly Uptime Percentage,25.00,,0,,,https://cloud.google.com/terms/sla?hl=en,,
+10000000000007,Google Cloud GCP,global,95.00000,Monthly Uptime Percentage,50.00,,0,,,https://cloud.google.com/terms/sla?hl=en,,
+10000000000008,Amazon AWS,global,99.95000,Monthly Uptime Percentage,10.00,,0,,,https://aws.amazon.com/legal/service-level-agreements/?aws-sla-cards.sort-by=item.additionalFields.serviceNameLower&aws-sla-cards.sort-order=asc&awsf.tech-category-filter=*all,,
+10000000000009,Amazon AWS,global,99.00000,Monthly Uptime Percentage,25.00,,0,,,https://aws.amazon.com/legal/service-level-agreements/?aws-sla-cards.sort-by=item.additionalFields.serviceNameLower&aws-sla-cards.sort-order=asc&awsf.tech-category-filter=*all,,
+10000000000010,Amazon AWS,global,95.00000,Monthly Uptime Percentage,100.00,,0,,,https://aws.amazon.com/legal/service-level-agreements/?aws-sla-cards.sort-by=item.additionalFields.serviceNameLower&aws-sla-cards.sort-order=asc&awsf.tech-category-filter=*all,,
+10000000000011,IBM Cloud,global,99.95000,Monthly Uptime Percentage,10.00,,1,,,https://cloud.ibm.com/docs/overview?topic=overview-slas,,
+10000000000012,IBM Cloud,global,99.00000,Monthly Uptime Percentage,25.00,,1,,,https://cloud.ibm.com/docs/overview?topic=overview-slas,,
+10000000000013,IBM Cloud,global,95.00000,Monthly Uptime Percentage,100.00,,1,,,https://cloud.ibm.com/docs/overview?topic=overview-slas,,
+10000000000014,Oracle Cloud OCI,global,99.90000,Monthly Uptime Percentage,10.00,,0,,,https://www.oracle.com/uk/cloud/sla/,,
+10000000000015,Oracle Cloud OCI,global,99.50000,Monthly Uptime Percentage,25.00,,0,,,https://www.oracle.com/uk/cloud/sla/,,
+10000000000016,Oracle Cloud OCI,global,95.00000,Monthly Uptime Percentage,100.00,,0,,,https://www.oracle.com/uk/cloud/sla/,,
+10000000000017,MongoDB,global,99.99500,Monthly Uptime Percentage,10.00,,0,,,https://www.mongodb.com/legal/sla/cloud/atlas-database,,
+10000000000018,MongoDB,global,99.00000,Monthly Uptime Percentage,25.00,,0,,,,,
+10000000000019,MongoDB,global,95.00000,Monthly Uptime Percentage,100.00,,0,,,,,
+10000000000020,Snowflake,global,99.99000,Custom SLA Error Percentage Rate on Monthly Uptime,10.00,1,1,10,,https://www.snowflake.com/legal/support-policy-and-service-level-agreement/," - Llama3.2b - 
+
+Here are the SLA levels and tiers from Snowflake, along with the Service Level Credit calculation:
+
+SLA Levels and Tiers:
+
+    Under 99.99% but greater than or equal to 99.0%: 10% Error Rate Threshold, 1 x Average Daily Snowflake Credits
+    Under 99.9% but greater than or equal to 99.0%: 1% Error Rate Threshold, 1 x Average Daily Snowflake Credits
+    Under 95.0% but greater than or equal to 95.0%: 1% Error Rate Threshold, 3 x Average Daily Snowflake Credits
+    Under 95.0%: 1% Error Rate Threshold, 7 x Average Daily Snowflake Credits
+
+Service Level Credit Calculation:
+
+    The number of Service Level Credits is calculated based on the Monthly Availability Percentage and Error Rate Threshold.
+    For example, if a customer has a Monthly Availability Percentage of 99.4%, they will receive 1 x Average Daily Snowflake Credits.
+
+Let me know if you have any further questions!",
+10000000000021,Snowflake,global,99.90000,Custom SLA Error Percentage Rate on Monthly Uptime,10.00,1,1,1,,https://www.snowflake.com/legal/support-policy-and-service-level-agreement/," - Llama3.2b - 
+
+Here are the SLA levels and tiers from Snowflake, along with the Service Level Credit calculation:
+
+SLA Levels and Tiers:
+
+    Under 99.99% but greater than or equal to 99.0%: 10% Error Rate Threshold, 1 x Average Daily Snowflake Credits
+    Under 99.9% but greater than or equal to 99.0%: 1% Error Rate Threshold, 1 x Average Daily Snowflake Credits
+    Under 95.0% but greater than or equal to 95.0%: 1% Error Rate Threshold, 3 x Average Daily Snowflake Credits
+    Under 95.0%: 1% Error Rate Threshold, 7 x Average Daily Snowflake Credits
+
+Service Level Credit Calculation:
+
+    The number of Service Level Credits is calculated based on the Monthly Availability Percentage and Error Rate Threshold.
+    For example, if a customer has a Monthly Availability Percentage of 99.4%, they will receive 1 x Average Daily Snowflake Credits.
+
+Let me know if you have any further questions!",
+10000000000022,Snowflake,global,99.00000,Custom SLA Error Percentage Rate on Monthly Uptime,30.00,3,1,1,,," - Llama3.2b - 
+
+Here are the SLA levels and tiers from Snowflake, along with the Service Level Credit calculation:
+
+SLA Levels and Tiers:
+
+    Under 99.99% but greater than or equal to 99.0%: 10% Error Rate Threshold, 1 x Average Daily Snowflake Credits
+    Under 99.9% but greater than or equal to 99.0%: 1% Error Rate Threshold, 1 x Average Daily Snowflake Credits
+    Under 95.0% but greater than or equal to 95.0%: 1% Error Rate Threshold, 3 x Average Daily Snowflake Credits
+    Under 95.0%: 1% Error Rate Threshold, 7 x Average Daily Snowflake Credits
+
+Service Level Credit Calculation:
+
+    The number of Service Level Credits is calculated based on the Monthly Availability Percentage and Error Rate Threshold.
+    For example, if a customer has a Monthly Availability Percentage of 99.4%, they will receive 1 x Average Daily Snowflake Credits.
+
+Let me know if you have any further questions!",
+10000000000023,Snowflake,global,95.00000,Custom SLA Error Percentage Rate on Monthly Uptime,70.00,7,1,1,,," - Llama3.2b - 
+
+Here are the SLA levels and tiers from Snowflake, along with the Service Level Credit calculation:
+
+SLA Levels and Tiers:
+
+    Under 99.99% but greater than or equal to 99.0%: 10% Error Rate Threshold, 1 x Average Daily Snowflake Credits
+    Under 99.9% but greater than or equal to 99.0%: 1% Error Rate Threshold, 1 x Average Daily Snowflake Credits
+    Under 95.0% but greater than or equal to 95.0%: 1% Error Rate Threshold, 3 x Average Daily Snowflake Credits
+    Under 95.0%: 1% Error Rate Threshold, 7 x Average Daily Snowflake Credits
+
+Service Level Credit Calculation:
+
+    The number of Service Level Credits is calculated based on the Monthly Availability Percentage and Error Rate Threshold.
+    For example, if a customer has a Monthly Availability Percentage of 99.4%, they will receive 1 x Average Daily Snowflake Credits.
+
+Let me know if you have any further questions!",
+10000000000024,Salesforce,global,99.99000,Monthly Uptime Percentage,,,0,,,https://techdocs.akamai.com/sla/docs/getting-started,,
+10000000000025,Akamai,global,99.99999,Custom SLA via API Metrics,10.00,,,,,," - Llama3.2b - 
+Here's a summary of the SLA (Service Level Agreement) policy by Cloudflare:
+
+Key Points:
+
+    Service Level Commitments: Cloudflare promises to serve Customer Content measurably faster than Customer's websites would serve Customer Content without use of the Service, with 100% uptime globally.
+    Penalties for Non-Compliance: If the Service fails to meet its service level commitments, Customer will receive a credit from Cloudflare (Service Credit).
+    Claim Process: To be eligible to submit a Claim, Customer must first notify Cloudflare of the specific Incident and provide notice of its intention to submit a Claim within 5 business days.
+    Requirements for Claims: Customer must provide reasonable details and sufficient evidence to support any Claim, including:
+        Detailed descriptions of an Incident
+        Duration of such Incident
+        Network traceroutes
+        URL(s) affected
+        Any steps taken or attempts made by Customer to resolve the Incident
+    Exclusions from SLA: The SLA does not apply to performance or availability issues caused by:
+        Events outside of Cloudflare's control (e.g., hardware, software, connectivity issues)
+        Corrupted Customer Content
+        Acts or omissions of Customer, its employees, agents, contractors, or vendors
+
+Other Key Points:
+
+    The SLA is subject to change, and Cloudflare may modify or terminate it at any time.
+    Cloudflare will use all information reasonably available to it to validate a Claim and make a good faith judgment on whether a Service Credit applies.
+
+Let me know if you have any specific questions about this document!",
+10000000000026,Cloudflare,global,99.99999,Custom SLA via API Metrics,10.00,,,,,https://www.cloudflare.com/en-gb/enterprise-support-sla/,,
+10000000000027,Macrometa,global,99.99999,Custom SLA via API Metrics,10.00,,,,,,,
