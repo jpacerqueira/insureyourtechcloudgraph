@@ -169,7 +169,7 @@ region_type = st.selectbox("Select Region Type", ["global", "regional"])
 # Analyze Cloud Risk - modified to handle multiple services
 if st.button("Analyze Cloud Risk"):
     if company_name and selected_services and region_type:
-        st.subheader("Risk Analysis Results")
+        st.header("Risk Analysis Results")
         
         # Initialize lists to store values for median calculation
         customer_sla_usage_values = []
@@ -265,7 +265,7 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
         
         # Calculate and display vendor medians
         st.divider()
-        st.header("Cloud Vendor Risk Analysis")
+        st.subheader("by Cloud Vendor")
         for vendor in selected_vendors:
             metrics = vendor_metrics[vendor]
             if any(metrics.values()):  # If there's any data for this vendor
@@ -363,11 +363,11 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
 
         st.success(f"Generated Cypher query saved to {output_path}")
 
-        st.header("Individual Cloud Services Risk Analysis")
+        st.subheader("by Cloud Services")
 
         # Continue with existing risk analysis display
         for service in selected_services:
-            st.subheader(f"Cloud Service Risk Analysis for {service}")
+            st.write(f"Risk Analysis for {service}")
             risk_data = fetch_cloud_risk_data(service, region_type)
             if risk_data:
                 col1, col2, col3, col4 = st.columns(4)
