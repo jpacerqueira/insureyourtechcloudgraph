@@ -239,7 +239,8 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
             'sla_deviation': [],
             'traffic_coef': [],
             'usage_risk': [],
-            'service_sla': []
+            'service_sla': [],
+            'annual_downtime': []
         } for vendor in selected_vendors}
         
         # Collect metrics per vendor
@@ -249,6 +250,10 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                 # Find vendor for this service
                 for vendor, vendor_services in services.items():
                     if service in vendor_services and vendor in selected_vendors:
+                        # Add annual downtime to vendor metrics
+                        annual_downtime = float(risk_data.get('webscraper_annual_period_service_down_per_year_in_minutes', 0.0))
+                        vendor_metrics[vendor].setdefault('annual_downtime', []).append(annual_downtime)
+                        
                         # Convert to float and remove % and ,
                         sla_usage = float(risk_data.get('service_sla_usage_percentage', 0.0).rstrip('%').replace(',', '.'))
                         sla_deviation = float(risk_data.get('sla_deviation_connected_risk_0_999', 0.0).rstrip('%').replace(',', '.'))
@@ -268,8 +273,11 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
         st.subheader("by Cloud Vendor")
         for vendor in selected_vendors:
             metrics = vendor_metrics[vendor]
-            if any(metrics.values()):  # If there's any data for this vendor
+            if any(metrics.values()):
                 vendor_id = sanitize_cypher_identifier(vendor)
+                
+                # Calculate medians including annual downtime
+                vendor_median_annual_downtime = sorted(metrics['annual_downtime'])[len(metrics['annual_downtime'])//2] if metrics['annual_downtime'] else 0.0
                 
                 # Calculate medians including service_sla
                 vendor_median_sla = sorted(metrics['service_sla'])[len(metrics['service_sla'])//2] if metrics['service_sla'] else 0.0
@@ -279,8 +287,8 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                 vendor_median_usage_risk = sorted(metrics['usage_risk'])[len(metrics['usage_risk'])//2] if metrics['usage_risk'] else 0.0
                 
                 # Display vendor metrics
-                st.write(f"### {vendor} Median Metrics")
-                col1, col2, col3 = st.columns(3)  # Changed to 3 columns
+                st.write(f"### {vendor} Metrics")
+                col1, col2, col3 = st.columns(3)
                 with col1:
                     st.metric("Median SLA Usage %", f"{vendor_median_sla_usage:.2f}%")
                     st.metric("Median SLA Deviation Risk", f"{vendor_median_sla_deviation:.2f}")
@@ -289,16 +297,18 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                     st.metric("Median Usage Risk Rating", f"{vendor_median_usage_risk:.2f}")
                 with col3:
                     st.metric("Median Service SLA %", f"{vendor_median_sla:.2f}%")
+                    st.metric("Median Annual Downtime (minutes)", f"{vendor_median_annual_downtime:.2f}")
                 st.divider()
 
-                # Update vendor node creation in Cypher query
+                # Update vendor node creation in Cypher query to include annual downtime
                 cypher_query = f"""CREATE ({vendor_id}:TECHNOLOGY_PROVIDER {{
                     name: '{vendor}',
                     vendor_median_sla_usage_percentage: '{vendor_median_sla_usage:.2f}%',
                     vendor_median_sla_deviation_risk: '{vendor_median_sla_deviation:.2f}',
                     vendor_median_traffic_coefficient: '{vendor_median_traffic_coef:.2f}%',
                     vendor_median_usage_risk: '{vendor_median_usage_risk:.2f}',
-                    vendor_median_service_sla: '{vendor_median_sla:.2f}%'
+                    vendor_median_service_sla: '{vendor_median_sla:.2f}%',
+                    vendor_median_annual_downtime: '{vendor_median_annual_downtime:.2f}'
                 }})\n""" + cypher_query
 
         if customer_sla_usage_values and customer_sla_deviation_values and customer_traffic_coef_values and customer_usage_risk_values:
