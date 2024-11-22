@@ -265,7 +265,7 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
         
         # Calculate and display vendor medians
         st.divider()
-        st.subheader("Cloud Vendor Risk Analysis")
+        st.header("Cloud Vendor Risk Analysis")
         for vendor in selected_vendors:
             metrics = vendor_metrics[vendor]
             if any(metrics.values()):  # If there's any data for this vendor
@@ -308,7 +308,7 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
             customer_median_traffic_coef = sorted(customer_traffic_coef_values)[len(customer_traffic_coef_values)//2]
             customer_median_usage_risk = sorted(customer_usage_risk_values)[len(customer_usage_risk_values)//2]
 
-            st.subheader("Customer Summary")           
+            st.header("Customer Summary")           
             st.subheader("Overall Cloud Risk Analysis")
             col1, col2 = st.columns(2)
             with col1:
@@ -360,14 +360,14 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         with open(output_path, "w") as f:
             f.write(cypher_query)
-            
+
         st.success(f"Generated Cypher query saved to {output_path}")
-        
-        st.subheader("Cloud Services Risk Analysis")
+
+        st.header("Individual Cloud Services Risk Analysis")
 
         # Continue with existing risk analysis display
         for service in selected_services:
-            st.write(f"Cloud Service Risk Analysis for {service}")
+            st.subheader(f"Cloud Service Risk Analysis for {service}")
             risk_data = fetch_cloud_risk_data(service, region_type)
             if risk_data:
                 col1, col2, col3, col4 = st.columns(4)
