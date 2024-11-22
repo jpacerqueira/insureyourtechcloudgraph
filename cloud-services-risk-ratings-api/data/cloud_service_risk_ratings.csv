@@ -244,7 +244,7 @@ North America
 All active
 South America
 All active",,
-10000000000050,Google Cloud VertexAI,Google Cloud GCP,global,,,4,0,24,365,99.95001,10.000,400,525600.000,525337.253,262.747,-137.253,0.05%,0.08%,0.08%,-0.03%,0.03%,152.24%,0.08%,996.219,996.719,,"Lllama3.2-B Outage Analysis  
+10000000000050,Google Cloud VertexAI,Google Cloud GCP,global,,,4,0,24,365,99.95000,10.000,400,525600.000,525337.200,262.800,-137.200,0.05%,0.08%,0.08%,-0.03%,0.03%,152.21%,0.08%,996.220,996.719,,"Lllama3.2-B Outage Analysis  
 - About last Google Cloud VertexAI Outage -
  in 
 context, According to the text, the following Google Cloud services (GCP products) experienced outages:
@@ -253,7 +253,7 @@ context, According to the text, the following Google Cloud services (GCP product
 3. Agent Assist
 The outage began on June 12, 2024, at 12:06 US/Pacific Time and ended on June 12, 2024, at 15:59
 US/Pacific Time, which lasted for approximately 3 hours and 53 minutes.",,,
-10000000000051,Google Cloud Apigee API,Google Cloud GCP,global,,,4,1,24,365,99.95001,10.000,461,525600.000,525337.253,262.747,-198.253,0.05%,0.09%,0.09%,-0.04%,0.04%,175.45%,0.09%,995.872,996.371,0 days 7h41 down,"Lllama3.2-B Outage Analysis  
+10000000000051,Google Cloud Apigee API,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,461,525600.000,525337.200,262.800,-198.200,0.05%,0.09%,0.09%,-0.04%,0.04%,175.42%,0.09%,995.872,996.371,0 days 7h41 down,"Lllama3.2-B Outage Analysis  
 - About last Google Cloud Apigee API Outage -
  in context,
 Here is a summary of the outage:
@@ -285,7 +285,7 @@ Google Cloud Storage
 Duration of Outage
 
 The outage lasted from 16:20 to 18:24 US/Pacific Time, which is approximately 2 hours and 3 minutes.",Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
-10000000000052,Google Cloud Run,Google Cloud GCP,global,,,4,1,24,365,99.95001,10.000,461,525600.000,525337.253,262.747,-198.253,0.05%,0.09%,0.09%,-0.04%,0.04%,175.45%,0.09%,995.872,996.371,0 days 7h41 down,"Lllama3.2-B Outage Analysis  
+10000000000052,Google Cloud Run,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,461,525600.000,525337.200,262.800,-198.200,0.05%,0.09%,0.09%,-0.04%,0.04%,175.42%,0.09%,995.872,996.371,0 days 7h41 down,"Lllama3.2-B Outage Analysis  
 - About last Google Cloud Run Outage -
  in context,
 Here is a summary of the outage:
@@ -317,7 +317,7 @@ Google Cloud Storage
 Duration of Outage
 
 The outage lasted from 16:20 to 18:24 US/Pacific Time, which is approximately 2 hours and 3 minutes.",,,
-10000000000053,Google Cloud BigQuery,Google Cloud GCP,global,,,4,1,24,365,99.95001,10.000,461,525600.000,525337.253,262.747,-198.253,0.05%,0.09%,0.09%,-0.04%,0.04%,175.45%,0.09%,995.872,996.371,0 days 7h41 down,"Lllama3.2-B Outage Analysis  
+10000000000053,Google Cloud BigQuery,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,461,525600.000,525337.200,262.800,-198.200,0.05%,0.09%,0.09%,-0.04%,0.04%,175.42%,0.09%,995.872,996.371,0 days 7h41 down,"Lllama3.2-B Outage Analysis  
 - About last Google Cloud BigQuery Outage -
  in context,
 Here is a summary of the outage:
@@ -349,8 +349,8 @@ Google Cloud Storage
 Duration of Outage
 
 The outage lasted from 16:20 to 18:24 US/Pacific Time, which is approximately 2 hours and 3 minutes.",Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
-10000000000054,AlloyDB for PostgreSQL,Google Cloud GCP,global,,,4,1,24,365,99.95001,10.000,320,525600.000,525337.253,262.747,-57.253,0.05%,0.06%,0.06%,-0.01%,0.01%,121.79%,0.06%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
-10000000000055,Google Cloud SQL,Google Cloud GCP,global,,,4,1,24,365,99.95001,10.000,461,525600.000,525337.253,262.747,-198.253,0.05%,0.09%,0.09%,-0.04%,0.04%,175.45%,0.09%,995.872,996.371,0 days 7h41 down,"Lllama3.2-B Outage Analysis  
+10000000000054,AlloyDB for PostgreSQL,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01%,0.01%,121.77%,0.06%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000055,Google Cloud SQL,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,461,525600.000,525337.200,262.800,-198.200,0.05%,0.09%,0.09%,-0.04%,0.04%,175.42%,0.09%,995.872,996.371,0 days 7h41 down,"Lllama3.2-B Outage Analysis  
 - About last Google Cloud SQL Outage -
  in context,
 Here is a summary of the outage:
@@ -382,7 +382,7 @@ Google Cloud Storage
 Duration of Outage
 
 The outage lasted from 16:20 to 18:24 US/Pacific Time, which is approximately 2 hours and 3 minutes.",,,
-10000000000056,Google Cloud Compute Engine,Google Cloud GCP,global,,,4,1,24,365,99.95001,10.000,461,525600.000,525337.253,262.747,-198.253,0.05%,0.09%,0.09%,-0.04%,0.04%,175.45%,0.09%,995.872,996.371,0 days 7h41 down,"Lllama3.2-B Outage Analysis  
+10000000000056,Google Cloud Compute Engine,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,461,525600.000,525337.200,262.800,-198.200,0.05%,0.09%,0.09%,-0.04%,0.04%,175.42%,0.09%,995.872,996.371,0 days 7h41 down,"Lllama3.2-B Outage Analysis  
 - About last Google Cloud SQL Outage -
  in context,
 Here is a summary of the outage:
@@ -414,12 +414,12 @@ Google Cloud Storage
 Duration of Outage
 
 The outage lasted from 16:20 to 18:24 US/Pacific Time, which is approximately 2 hours and 3 minutes.",,,
-10000000000057,Google Cloud Dataproc,Google Cloud GCP,global,,,4,1,24,365,99.59001,10.000,320,525600.000,523445.093,2154.907,1834.907,0.41%,0.06%,0.06%,0.35%,-0.35%,14.85%,0.06%,994.148,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
-10000000000058,Google Cloud Dataflow,Google Cloud GCP,global,,,4,1,24,365,99.95001,10.000,320,525600.000,525337.253,262.747,-57.253,0.05%,0.06%,0.06%,-0.01%,0.01%,121.79%,0.06%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
-10000000000059,Google Cloud Looker Studio Pro,Google Cloud GCP,global,,,4,1,24,365,99.95001,10.000,320,525600.000,525337.253,262.747,-57.253,0.05%,0.06%,0.06%,-0.01%,0.01%,121.79%,0.06%,996.676,997.175,0 days 5h20 down,,,,
-10000000000060,Google Cloud Storage,Google Cloud GCP,global,,,4,1,24,365,99.95001,10.000,320,525600.000,525337.253,262.747,-57.253,0.05%,0.06%,0.06%,-0.01%,0.01%,121.79%,0.06%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
-10000000000061,Google Cloud And Media CDN,Google Cloud GCP,global,,,4,1,24,365,99.95001,10.000,320,525600.000,525337.253,262.747,-57.253,0.05%,0.06%,0.06%,-0.01%,0.01%,121.79%,0.06%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
-10000000000062,Google Kubernetes Engine (GKE),Google Cloud GCP,global,,,4,1,24,365,99.95001,10.000,2400,525600.000,525337.253,262.747,-2137.253,0.05%,0.46%,0.46%,-0.41%,0.41%,913.42%,0.46%,984.814,985.315,2 days down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000057,Google Cloud Dataproc,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01%,0.01%,121.77%,0.06%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000058,Google Cloud Dataflow,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01%,0.01%,121.77%,0.06%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000059,Google Cloud Looker Studio Pro,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01%,0.01%,121.77%,0.06%,996.676,997.175,0 days 5h20 down,,,,
+10000000000060,Google Cloud Storage,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01%,0.01%,121.77%,0.06%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000061,Google Cloud And Media CDN,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01%,0.01%,121.77%,0.06%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000062,Google Kubernetes Engine (GKE),Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,2400,525600.000,525337.200,262.800,-2137.200,0.05%,0.46%,0.46%,-0.41%,0.41%,913.24%,0.46%,984.816,985.315,2 days down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
 10000000000063,Amazon API Gateway,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02%,-0.02%,76.10%,0.08%,996.480,996.719,,,,,
 10000000000064,Amazon Bedrock,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02%,-0.02%,76.10%,0.08%,996.480,996.719,,,,,
 10000000000065,Amazon CloudFront,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02%,-0.02%,76.10%,0.08%,996.480,996.719,,,,,
@@ -553,8 +553,8 @@ Amazon Elastic Kubernetes Service (Tel Aviv)
 Amazon Elastic Kubernetes Service (Tokyo)
 Amazon Elastic Kubernetes Service (UAE)
 Amazon Elastic Kubernetes Service (Zurich)",,
-10000000000086,Salesforce SaaS,Salesforce,global,,,1,1,24,365,99.99001,10.000,360,525600.000,525547.493,52.507,-307.493,0.01%,0.07%,0.07%,-0.06%,0.06%,685.62%,0.02%,991.367,997.460,,,,,
-10000000000087,Snowflake on AWS,Snowflake,global,,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,"Current Snowflake Status
+10000000000086,Salesforce SaaS,Salesforce,global,,,1,1,24,365,99.99000,10.000,360,525600.000,525547.440,52.560,-307.440,0.01%,0.07%,0.07%,-0.06%,0.06%,684.93%,0.02%,991.373,997.460,,,,,
+10000000000087,Snowflake on AWS,Snowflake,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,"Current Snowflake Status
 
 
 All Systems Operational
@@ -647,7 +647,7 @@ Operational
  GCP - Europe West 3 (Frankfurt)
 Operational
 Past Incidents",,
-10000000000088,Snowflake on Azure,Snowflake,global,,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,"Current Snowflake Status
+10000000000088,Snowflake on Azure,Snowflake,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,"Current Snowflake Status
 
 
 All Systems Operational
@@ -740,7 +740,7 @@ Operational
  GCP - Europe West 3 (Frankfurt)
 Operational
 Past Incidents",,
-10000000000089,Snowflake on GCP,Snowflake,global,,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,"Current Snowflake Status
+10000000000089,Snowflake on GCP,Snowflake,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,"Current Snowflake Status
 
 
 All Systems Operational
@@ -833,7 +833,7 @@ Operational
  GCP - Europe West 3 (Frankfurt)
 Operational
 Past Incidents",,
-10000000000090,Snowflake on AWS,Snowflake,regional,AWS - Europe (Ireland),,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,"AWS - Europe (Ireland)
+10000000000090,Snowflake on AWS,Snowflake,regional,AWS - Europe (Ireland),,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,"AWS - Europe (Ireland)
 Snowflake Data Warehouse (Database)
 Operational
 Snowpipe (Data Ingestion)
@@ -842,7 +842,7 @@ Replication
 Operational
 Snowsight
 Operational",,
-10000000000091,Snowflake on Azure,Snowflake,regional,Azure - West Europe (Netherlands),,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,"Azure - West Europe (Netherlands)
+10000000000091,Snowflake on Azure,Snowflake,regional,Azure - West Europe (Netherlands),,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,"Azure - West Europe (Netherlands)
 Snowflake Data Warehouse (Database)
 Operational
 Snowpipe (Data Ingestion)
@@ -851,7 +851,7 @@ Replication
 Operational
 Snowsight
 Operational",,
-10000000000092,Snowflake on GCP,Snowflake,global,GCP - Europe West 3 (Frankfurt),,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,"GCP - Europe West 3 (Frankfurt)
+10000000000092,Snowflake on GCP,Snowflake,global,GCP - Europe West 3 (Frankfurt),,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,"GCP - Europe West 3 (Frankfurt)
 Snowflake Data Warehouse (Database)
 Operational
 Snowpipe (Data Ingestion)
@@ -860,46 +860,46 @@ Replication
 Operational
 Snowsight
 Operational",,
-10000000000093,Databricks SaaS,Databricks,global,,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000094,Databricks SaaS,Databricks,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000095,Databricks SaaS,Databricks,regional,Azure Databricks - UK South,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000096,Databricks SaaS,Databricks,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000097,Databricks Workspace,Databricks,global,,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000098,Databricks Mlflow,Databricks,global,,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000099,Databricks Notebooks,Databricks,global,,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000100,Salesforce SaaS,Salesforce,global,,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000101,Salesforce SaaS,Salesforce,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000102,Salesforce SaaS,Salesforce,regional,Azure Databricks - UK South,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000103,Salesforce SaaS,Salesforce,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000104,Salesforce Service Cloud,Salesforce,global,,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000105,Salesforce Sales Cloud,Salesforce,global,,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000106,Salesforce Marketing Cloud,Salesforce,global,,,4,1,24,365,99.99001,10.000,375,525600.000,525547.493,52.507,-322.493,0.01%,0.07%,0.07%,-0.06%,0.06%,714.18%,0.07%,991.053,996.862,,,,,
-10000000000107,MongoDB Atlas,MongoDB,global,,,4,1,24,365,99.99001,10.000,1532,525600.000,525547.493,52.507,-1479.493,0.01%,0.29%,0.29%,-0.28%,0.28%,2917.68%,0.29%,966.841,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000093,Databricks SaaS,Databricks,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000094,Databricks SaaS,Databricks,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000095,Databricks SaaS,Databricks,regional,Azure Databricks - UK South,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000096,Databricks SaaS,Databricks,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000097,Databricks Workspace,Databricks,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000098,Databricks Mlflow,Databricks,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000099,Databricks Notebooks,Databricks,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000100,Salesforce SaaS,Salesforce,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000101,Salesforce SaaS,Salesforce,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000102,Salesforce SaaS,Salesforce,regional,Azure Databricks - UK South,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000103,Salesforce SaaS,Salesforce,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000104,Salesforce Service Cloud,Salesforce,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000105,Salesforce Sales Cloud,Salesforce,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000106,Salesforce Marketing Cloud,Salesforce,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06%,0.06%,713.47%,0.07%,991.060,996.862,,,,,
+10000000000107,MongoDB Atlas,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28%,0.28%,2914.76%,0.29%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000108,MongoDB Atlas Search,MongoDB,global,,,4,1,24,365,99.99001,10.000,1532,525600.000,525547.493,52.507,-1479.493,0.01%,0.29%,0.29%,-0.28%,0.28%,2917.68%,0.29%,966.841,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000108,MongoDB Atlas Search,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28%,0.28%,2914.76%,0.29%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000109,MongoDB Atlas Vector Search,MongoDB,global,,,4,1,24,365,99.99001,10.000,1532,525600.000,525547.493,52.507,-1479.493,0.01%,0.29%,0.29%,-0.28%,0.28%,2917.68%,0.29%,966.841,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000109,MongoDB Atlas Vector Search,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28%,0.28%,2914.76%,0.29%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000110,MongoDB Atlas Stream Processing,MongoDB,global,,,4,1,24,365,99.99001,10.000,1532,525600.000,525547.493,52.507,-1479.493,0.01%,0.29%,0.29%,-0.28%,0.28%,2917.68%,0.29%,966.841,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000110,MongoDB Atlas Stream Processing,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28%,0.28%,2914.76%,0.29%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000111,MongoDB Atlas BI Connector,MongoDB,global,,,4,1,24,365,99.99001,10.000,1532,525600.000,525547.493,52.507,-1479.493,0.01%,0.29%,0.29%,-0.28%,0.28%,2917.68%,0.29%,966.841,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000111,MongoDB Atlas BI Connector,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28%,0.28%,2914.76%,0.29%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000112,MongoDB Atlas SQL,MongoDB,global,,,4,1,24,365,99.99001,10.000,1532,525600.000,525547.493,52.507,-1479.493,0.01%,0.29%,0.29%,-0.28%,0.28%,2917.68%,0.29%,966.841,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000112,MongoDB Atlas SQL,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28%,0.28%,2914.76%,0.29%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
