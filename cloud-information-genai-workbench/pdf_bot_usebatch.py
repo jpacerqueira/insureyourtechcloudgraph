@@ -4,7 +4,7 @@ import streamlit as st
 from pdf_bot import process_pdf_query, process_folder
 
 
-def main(input_folder="pdf_bot_usebatch"):
+def main(input_folder="./pdf_bot_usebatch"):
     st.title("Workbench App_4")
     st.header(f"PDF_BOT_BATCHMODE - 📄Extract Cloud Outage information from your pdf source folder {input_folder} (batch mode)")
     st.warning(f"This is a batch mode, it will process all the pdf files in the folder and save the output in the same folder {input_folder}")

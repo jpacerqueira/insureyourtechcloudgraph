@@ -92,3 +92,4 @@ DB client: http://localhost:7474
 ![cloud risk information extraction with pdf-v1-bot](images/pdf_bot_outage_extract_v1.png)
 ![neo4j_cloud risk information extraction with pdf-bot](images/extraction_to_neo4j_bot_pdf_bot.png)
 	
+

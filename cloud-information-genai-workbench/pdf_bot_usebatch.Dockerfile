@@ -19,8 +19,8 @@ COPY pdf_bot_usebatch.py .
 
 COPY pdf_bot_usebatch/   ./pdf_bot_usebatch
 
-# Run the script when the container starts
-CMD ["python", "pdf_bot_usebatch.py"]
+# Run the script when the container starts - via streamlit entrypoint
+# CMD ["python", "pdf_bot_usebatch.py"]
 
 EXPOSE 8504
 
