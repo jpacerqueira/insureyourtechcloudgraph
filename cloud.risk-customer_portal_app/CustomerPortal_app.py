@@ -135,7 +135,7 @@ services = {
         "IBM DataStage","IBM Db2","IBM Db2 Warehouse","IBM watsonx BI Assistant",
         "IBM Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Kubernetes",
         "Red Hat OpenShift on IBM Cloud"],
-    "Oracle Cloud OCI": ["Oracle AutonomousDB 21c","autonomousdb_21c","Object Storage OIC","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)"],
+    "Oracle Cloud OCI": ["Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)"],
     "Snowflake": ["Snowflake on AWS","Snowflake on Azure","Snowflake on GCP"],
     "Databricks": ["Databricks SaaS","Databricks Workspace", "Databricks Mlflow", "Databricks Notebooks"],
     "Salesforce": ["Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud"],
