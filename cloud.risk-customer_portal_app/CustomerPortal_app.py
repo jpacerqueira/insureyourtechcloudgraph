@@ -126,7 +126,7 @@ services = {
         "Amazon AWS Step Functions","Amazon s3","Amazon Elastic Kubernetes Service"],
     "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Apigee API","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL",
         "Google Cloud SQL","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud And Media CDN",
-        "Google Cloud Looker Studio Pro","Google Kubernetes Engine (GKE)"],
+        "Google Cloud DataStudio", "Google Cloud Datalab" ,"Google Cloud Looker Studio Pro","Google Kubernetes Engine (GKE)"],
     "Microsoft Azure": ["Azure Batch","Azure functions","Azure PowerBi App","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)"],
     "IBM Cloud": ["IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
         "IBM Databases","IBM Databases for DataStax","IBM Databases for EDB",
@@ -419,7 +419,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                     # TODO: add 1000 to the formula when ready (ASK_CUSTOMER_HOW_MUCH=1000)
                     # Set Warning if max. credit back was above 1000.00 per month
                     warning_max_credit_back = "**Warning: Max. credit back was above 1000.00 per month**" if estimated_cloud_services_credit_money_back > 1000.00 else ""
-                    estimated_cloud_services_credit_money_back = estimated_cloud_services_credit_money_back if estimated_cloud_services_credit_money_back < 1000.00 else 1000.00
+                    estimated_cloud_services_credit_money_back = min(estimated_cloud_services_credit_money_back, 1000.00)
 
                     with col1:
                         st.metric("SLA Usage %", risk_data.get("service_sla_usage_percentage", "N/A"))

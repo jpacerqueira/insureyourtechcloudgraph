@@ -416,20 +416,22 @@ Duration of Outage
 The outage lasted from 16:20 to 18:24 US/Pacific Time, which is approximately 2 hours and 3 minutes.",,,
 10000000000057,Google Cloud Dataproc,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320.00,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01088%,0.01088%,121.77%,0.06088%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
 10000000000058,Google Cloud Dataflow,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320.00,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01088%,0.01088%,121.77%,0.06088%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
-10000000000059,Google Cloud Looker Studio Pro,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320.00,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01088%,0.01088%,121.77%,0.06088%,996.676,997.175,0 days 5h20 down,,,,
-10000000000060,Google Cloud Storage,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320.00,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01088%,0.01088%,121.77%,0.06088%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
-10000000000061,Google Cloud And Media CDN,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320.00,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01088%,0.01088%,121.77%,0.06088%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
-10000000000062,Google Kubernetes Engine (GKE),Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,2400.00,525600.000,525337.200,262.800,-2137.200,0.05%,0.46%,0.46%,-0.40662%,0.40662%,913.24%,0.45662%,984.816,985.315,2 days down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
-10000000000063,Amazon API Gateway,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000064,Amazon Bedrock,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000065,Amazon CloudFront,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000066,Amazon CloudWatch Application Insights,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000067,Amazon CodeGuru Profiler,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000068,Amazon DataZone,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000069,Amazon DocumentDB,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000070,Amazon DynamoDB,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000071,Amazon EC2 Instance Connect,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000072,Amazon Elastic Compute Cloud,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,411.00,525600.000,525074.400,525.600,114.600,0.10%,0.08%,0.08%,0.02180%,-0.02180%,78.20%,0.07820%,996.439,996.656,0 days 6h51 down,"Lllama3.2-B Outage Analysis  
+10000000000059,Google Cloud DataStudio,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,220.00,525600.000,525337.200,262.800,42.800,0.05%,0.04%,0.04%,0.00814%,-0.00814%,83.71%,0.04186%,997.246,997.746,0 days 2h40 down,,,,
+10000000000060,Google Cloud Datalab,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,220.00,525600.000,525337.200,262.800,42.800,0.05%,0.04%,0.04%,0.00814%,-0.00814%,83.71%,0.04186%,997.246,997.746,0 days 2h40 dow0,,,,
+10000000000061,Google Cloud Looker Studio Pro,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,220.00,525600.000,525337.200,262.800,42.800,0.05%,0.04%,0.04%,0.00814%,-0.00814%,83.71%,0.04186%,997.246,997.746,0 days 2h40 down,,,,
+10000000000062,Google Cloud Storage,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320.00,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01088%,0.01088%,121.77%,0.06088%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000063,Google Cloud And Media CDN,Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,320.00,525600.000,525337.200,262.800,-57.200,0.05%,0.06%,0.06%,-0.01088%,0.01088%,121.77%,0.06088%,996.676,997.175,0 days 5h20 down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000064,Google Kubernetes Engine (GKE),Google Cloud GCP,global,,,4,1,24,365,99.95000,10.000,2400.00,525600.000,525337.200,262.800,-2137.200,0.05%,0.46%,0.46%,-0.40662%,0.40662%,913.24%,0.45662%,984.816,985.315,2 days down,,Americas (regions)	Europe (regions)	Asia Pacific (regions)	Middle East (regions)	Africa (regions)	Multi-regions	Global,,
+10000000000065,Amazon API Gateway,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000066,Amazon Bedrock,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000067,Amazon CloudFront,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000068,Amazon CloudWatch Application Insights,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000069,Amazon CodeGuru Profiler,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000070,Amazon DataZone,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000071,Amazon DocumentDB,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000072,Amazon DynamoDB,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000073,Amazon EC2 Instance Connect,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000074,Amazon Elastic Compute Cloud,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,411.00,525600.000,525074.400,525.600,114.600,0.10%,0.08%,0.08%,0.02180%,-0.02180%,78.20%,0.07820%,996.439,996.656,0 days 6h51 down,"Lllama3.2-B Outage Analysis  
 - About last Amazon Elastic Compute Cloud EC2 Outage -
  in 
 context, I extract some information about AWS services that experienced outages. Here are the details:
@@ -446,10 +448,10 @@ context, I extract some information about AWS services that experienced outages.
 PM PDT to 2:15:32 PM PDT). This outage was related to increased latencies and errors.
 • Outage from September 11 to September 11, 2024, for approximately 1 hour and 37 minutes (from 1:34:44 PM PDT to 2:12:00 PM PDT). This outage was related to increased error rates.
 Please note that this is not an exhaustive list of all AWS services that experienced outages, as the provided text only shows a limited selection of services.",,,
-10000000000073,Amazon Elastic Container Service,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000074,Amazon Elastic File System,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000075,Amazon Elastic Load Balancing,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000076,Amazon Elastic MapReduce,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,657.00,525600.000,525074.400,525.600,-131.400,0.10%,0.13%,0.13%,-0.02500%,0.02500%,125.00%,0.12500%,995.504,995.254,0 days 11h15 down,"Lllama3.2-B Outage Analysis  
+10000000000075,Amazon Elastic Container Service,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000076,Amazon Elastic File System,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000077,Amazon Elastic Load Balancing,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000078,Amazon Elastic MapReduce,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,657.00,525600.000,525074.400,525.600,-131.400,0.10%,0.13%,0.13%,-0.02500%,0.02500%,125.00%,0.12500%,995.504,995.254,0 days 11h15 down,"Lllama3.2-B Outage Analysis  
 - About last AWS EMR Outage -
  in 
 context, on the provided text, I found some information about AWS service outages. Here are the details:
@@ -471,9 +473,9 @@ context, on the provided text, I found some information about AWS service outage
 • Outage: November 10
 • Time of outage: 7:55 AM - 10:13 AM (PST) = 2 hours 18 minutes
 Please note that this is not an exhaustive list, and there may be other AWS services with outages that are not mentioned in the provided text.",,,
-10000000000077,Amazon ElastiCache,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000078,Amazon EMR Serverless,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000079,Amazon FinSpace,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,"Amazon FinSpace (Canada-Central)
+10000000000079,Amazon ElastiCache,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000080,Amazon EMR Serverless,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000081,Amazon FinSpace,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,"Amazon FinSpace (Canada-Central)
 Amazon FinSpace (Frankfurt)
 Amazon FinSpace (Ireland)
 Amazon FinSpace (London)
@@ -482,8 +484,8 @@ Amazon FinSpace (Ohio)
 Amazon FinSpace (Singapore)
 Amazon FinSpace (Sydney)
 Amazon FinSpace (Tokyo)",,
-10000000000080,Amazon QuickSight,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,108.00,525600.000,525074.400,525.600,417.600,0.10%,0.02%,0.02%,0.07945%,-0.07945%,20.55%,0.02055%,997.590,998.384,0 days 1h48 down,,,,
-10000000000081,Amazon AWS Lambda,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,415.00,525600.000,525074.400,525.600,110.600,0.10%,0.08%,0.08%,0.02104%,-0.02104%,78.96%,0.07896%,996.423,996.634,0 day 7h15 down,,"AWS Lambda (Bahrain)
+10000000000082,Amazon QuickSight,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,108.00,525600.000,525074.400,525.600,417.600,0.10%,0.02%,0.02%,0.07945%,-0.07945%,20.55%,0.02055%,997.590,998.384,0 days 1h48 down,,,,
+10000000000083,Amazon AWS Lambda,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,415.00,525600.000,525074.400,525.600,110.600,0.10%,0.08%,0.08%,0.02104%,-0.02104%,78.96%,0.07896%,996.423,996.634,0 day 7h15 down,,"AWS Lambda (Bahrain)
 AWS Lambda (Calgary)
 AWS Lambda (Canada-Central)
 AWS Lambda (Cape Town)
@@ -520,10 +522,10 @@ OutageWebSite has tracked 9 incidents for AWS Lambda since started monitoring AW
 * 		 Sep 11 2024  Increased Error Rates - Milan 2 months ago · lasted 41 minutes  We are investigating increased error rates for multiple services in the EU-SOUTH-1 Region. We are actively engaged and will provide more information as soon as we have it. More details   
 * 		 Jul 30 2024  Increased API Error Rates - N. Virginia 4 months ago · lasted about 6 hours  We are seeing increased error rates and latencies for some service APIs within the US-EAST-1 region. More details   
 * 		May 2020 ...    OutageWebSite started monitoring AWS status  We have tracked and collected 9 incidents for AWS Lambda since started monitoring AWS status",
-10000000000082,Amazon AWS CloudFront,Amazon AWS,global,,,4,1,24,365,99.90000,10.000,380,525600.000,525074.400,525.600,145.600,0.10%,0.07%,0.07%,0.02770%,-0.02770%,72.30%,0.07230%,996.556,996.833,,,,,
-10000000000083,Amazon AWS Step Functions,Amazon AWS,global,,,4,1,24,365,99.90000,10.000,360.00,525600.000,525074.400,525.600,165.600,0.10%,0.07%,0.07%,0.03151%,-0.03151%,68.49%,0.06849%,996.633,996.947,,,,,
-10000000000084,Amazon s3,Amazon AWS,global,,,4,1,24,365,99.90000,10.000,360.00,525600.000,525074.400,525.600,165.600,0.10%,0.07%,0.07%,0.03151%,-0.03151%,68.49%,0.06849%,996.633,996.947,,,,,
-10000000000085,Amazon Elastic Kubernetes Service,Amazon AWS,global,,,4,1,24,365,99.90000,10.000,2400.00,525600.000,525074.400,525.600,-1874.400,0.10%,0.46%,0.46%,-0.35662%,0.35662%,456.62%,0.45662%,988.878,985.315,,,"Amazon Elastic Kubernetes Service (Bahrain)
+10000000000084,Amazon AWS CloudFront,Amazon AWS,global,,,4,1,24,365,99.90000,10.000,380,525600.000,525074.400,525.600,145.600,0.10%,0.07%,0.07%,0.02770%,-0.02770%,72.30%,0.07230%,996.556,996.833,,,,,
+10000000000085,Amazon AWS Step Functions,Amazon AWS,global,,,4,1,24,365,99.90000,10.000,360.00,525600.000,525074.400,525.600,165.600,0.10%,0.07%,0.07%,0.03151%,-0.03151%,68.49%,0.06849%,996.633,996.947,,,,,
+10000000000086,Amazon s3,Amazon AWS,global,,,4,1,24,365,99.90000,10.000,360.00,525600.000,525074.400,525.600,165.600,0.10%,0.07%,0.07%,0.03151%,-0.03151%,68.49%,0.06849%,996.633,996.947,,,,,
+10000000000087,Amazon Elastic Kubernetes Service,Amazon AWS,global,,,4,1,24,365,99.90000,10.000,2400.00,525600.000,525074.400,525.600,-1874.400,0.10%,0.46%,0.46%,-0.35662%,0.35662%,456.62%,0.45662%,988.878,985.315,,,"Amazon Elastic Kubernetes Service (Bahrain)
 Amazon Elastic Kubernetes Service (Calgary)
 Amazon Elastic Kubernetes Service (Canada-Central)
 Amazon Elastic Kubernetes Service (Cape Town)
@@ -553,8 +555,8 @@ Amazon Elastic Kubernetes Service (Tel Aviv)
 Amazon Elastic Kubernetes Service (Tokyo)
 Amazon Elastic Kubernetes Service (UAE)
 Amazon Elastic Kubernetes Service (Zurich)",,
-10000000000086,Salesforce SaaS,Salesforce,global,,,1,1,24,365,99.99000,10.000,360,525600.000,525547.440,52.560,-307.440,0.01%,0.07%,0.07%,-0.05849%,0.05849%,684.93%,0.01712%,991.373,997.460,,,,,
-10000000000087,Snowflake on AWS,Snowflake,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06135%,0.06135%,713.47%,0.07135%,991.060,996.862,,,"Current Snowflake Status
+10000000000088,Salesforce SaaS,Salesforce,global,,,1,1,24,365,99.99000,10.000,360,525600.000,525547.440,52.560,-307.440,0.01%,0.07%,0.07%,-0.05849%,0.05849%,684.93%,0.01712%,991.373,997.460,,,,,
+10000000000089,Snowflake on AWS,Snowflake,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06135%,0.06135%,713.47%,0.07135%,991.060,996.862,,,"Current Snowflake Status
 
 
 All Systems Operational
@@ -647,7 +649,7 @@ Operational
  GCP - Europe West 3 (Frankfurt)
 Operational
 Past Incidents",,
-10000000000088,Snowflake on Azure,Snowflake,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06135%,0.06135%,713.47%,0.07135%,991.060,996.862,,,"Current Snowflake Status
+10000000000090,Snowflake on Azure,Snowflake,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06135%,0.06135%,713.47%,0.07135%,991.060,996.862,,,"Current Snowflake Status
 
 
 All Systems Operational
@@ -740,7 +742,7 @@ Operational
  GCP - Europe West 3 (Frankfurt)
 Operational
 Past Incidents",,
-10000000000089,Snowflake on GCP,Snowflake,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06135%,0.06135%,713.47%,0.07135%,991.060,996.862,,,"Current Snowflake Status
+10000000000091,Snowflake on GCP,Snowflake,global,,,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06135%,0.06135%,713.47%,0.07135%,991.060,996.862,,,"Current Snowflake Status
 
 
 All Systems Operational
@@ -833,7 +835,7 @@ Operational
  GCP - Europe West 3 (Frankfurt)
 Operational
 Past Incidents",,
-10000000000090,Snowflake on AWS,Snowflake,regional,AWS - Europe (Ireland),,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06135%,0.06135%,713.47%,0.07135%,991.060,996.862,,,"AWS - Europe (Ireland)
+10000000000092,Snowflake on AWS,Snowflake,regional,AWS - Europe (Ireland),,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06135%,0.06135%,713.47%,0.07135%,991.060,996.862,,,"AWS - Europe (Ireland)
 Snowflake Data Warehouse (Database)
 Operational
 Snowpipe (Data Ingestion)
@@ -842,7 +844,7 @@ Replication
 Operational
 Snowsight
 Operational",,
-10000000000091,Snowflake on Azure,Snowflake,regional,Azure - West Europe (Netherlands),,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06135%,0.06135%,713.47%,0.07135%,991.060,996.862,,,"Azure - West Europe (Netherlands)
+10000000000093,Snowflake on Azure,Snowflake,regional,Azure - West Europe (Netherlands),,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06135%,0.06135%,713.47%,0.07135%,991.060,996.862,,,"Azure - West Europe (Netherlands)
 Snowflake Data Warehouse (Database)
 Operational
 Snowpipe (Data Ingestion)
@@ -851,7 +853,7 @@ Replication
 Operational
 Snowsight
 Operational",,
-10000000000092,Snowflake on GCP,Snowflake,global,GCP - Europe West 3 (Frankfurt),,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06135%,0.06135%,713.47%,0.07135%,991.060,996.862,,,"GCP - Europe West 3 (Frankfurt)
+10000000000094,Snowflake on GCP,Snowflake,global,GCP - Europe West 3 (Frankfurt),,4,1,24,365,99.99000,10.000,375,525600.000,525547.440,52.560,-322.440,0.01%,0.07%,0.07%,-0.06135%,0.06135%,713.47%,0.07135%,991.060,996.862,,,"GCP - Europe West 3 (Frankfurt)
 Snowflake Data Warehouse (Database)
 Operational
 Snowpipe (Data Ingestion)
@@ -860,46 +862,46 @@ Replication
 Operational
 Snowsight
 Operational",,
-10000000000093,Databricks SaaS,Databricks,global,,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
-10000000000094,Databricks SaaS,Databricks,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
-10000000000095,Databricks SaaS,Databricks,regional,Azure Databricks - UK South,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
-10000000000096,Databricks SaaS,Databricks,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
-10000000000097,Databricks Workspace,Databricks,global,,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
-10000000000098,Databricks Mlflow,Databricks,global,,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
-10000000000099,Databricks Notebooks,Databricks,global,,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
-10000000000100,Salesforce SaaS,Salesforce,global,,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
-10000000000101,Salesforce SaaS,Salesforce,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
-10000000000102,Salesforce SaaS,Salesforce,regional,Azure Databricks - UK South,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
-10000000000103,Salesforce SaaS,Salesforce,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
-10000000000104,Salesforce Service Cloud,Salesforce,global,,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
-10000000000105,Salesforce Sales Cloud,Salesforce,global,,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
-10000000000106,Salesforce Marketing Cloud,Salesforce,global,,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
-10000000000107,MongoDB Atlas,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532.00,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28148%,0.28148%,2914.76%,0.29148%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000095,Databricks SaaS,Databricks,global,,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
+10000000000096,Databricks SaaS,Databricks,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
+10000000000097,Databricks SaaS,Databricks,regional,Azure Databricks - UK South,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
+10000000000098,Databricks SaaS,Databricks,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
+10000000000099,Databricks Workspace,Databricks,global,,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
+10000000000100,Databricks Mlflow,Databricks,global,,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
+10000000000101,Databricks Notebooks,Databricks,global,,,4,1,24,365,99.95000,10.000,375,525600.000,525337.200,262.800,-112.200,0.05%,0.07%,0.07%,-0.02135%,0.02135%,142.69%,0.07135%,996.362,996.862,,,,,
+10000000000102,Salesforce SaaS,Salesforce,global,,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
+10000000000103,Salesforce SaaS,Salesforce,regional,AWS - Europe - Eu West 1,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
+10000000000104,Salesforce SaaS,Salesforce,regional,Azure Databricks - UK South,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
+10000000000105,Salesforce SaaS,Salesforce,regional,GCP - Europe - EU-West-1,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
+10000000000106,Salesforce Service Cloud,Salesforce,global,,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
+10000000000107,Salesforce Sales Cloud,Salesforce,global,,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
+10000000000108,Salesforce Marketing Cloud,Salesforce,global,,,4,1,24,365,99.90000,10.000,375,525600.000,525074.400,525.600,150.600,0.10%,0.07%,0.07%,0.02865%,-0.02865%,71.35%,0.07135%,996.575,996.862,,,,,
+10000000000109,MongoDB Atlas,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532.00,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28148%,0.28148%,2914.76%,0.29148%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000108,MongoDB Atlas Search,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532.00,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28148%,0.28148%,2914.76%,0.29148%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000110,MongoDB Atlas Search,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532.00,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28148%,0.28148%,2914.76%,0.29148%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000109,MongoDB Atlas Vector Search,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532.00,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28148%,0.28148%,2914.76%,0.29148%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000111,MongoDB Atlas Vector Search,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532.00,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28148%,0.28148%,2914.76%,0.29148%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000110,MongoDB Atlas Stream Processing,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532.00,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28148%,0.28148%,2914.76%,0.29148%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000112,MongoDB Atlas Stream Processing,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532.00,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28148%,0.28148%,2914.76%,0.29148%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000111,MongoDB Atlas BI Connector,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532.00,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28148%,0.28148%,2914.76%,0.29148%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000113,MongoDB Atlas BI Connector,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532.00,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28148%,0.28148%,2914.76%,0.29148%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.
 As for the number of users affected or the severity of the outage, there is no information provided in the text. However, it does mention that the issue was identified and a fix is being implemented, which suggests that the impact was likely limited to the specific services or features affected (in this case, MongoDB Atlas App Services and Device Sync).",,,
-10000000000112,MongoDB Atlas SQL,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532.00,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28148%,0.28148%,2914.76%,0.29148%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
+10000000000114,MongoDB Atlas SQL,MongoDB,global,,,4,1,24,365,99.99000,10.000,1532.00,525600.000,525547.440,52.560,-1479.440,0.01%,0.29%,0.29%,-0.28148%,0.28148%,2914.76%,0.29148%,966.870,990.264,1 days 1h32 down,"Lllama3.2-B Outage Analysis  
 - About last MongoDB Atlas Outage -
  in 
 context, on the provided text, According to the text, it appears that MongoDB Cloud was impacted for approximately 2 months. The exact duration is not specified. It s referenced on a 20th September 2024 report.

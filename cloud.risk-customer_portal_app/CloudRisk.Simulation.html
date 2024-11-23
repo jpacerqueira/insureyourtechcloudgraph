@@ -132,6 +132,34 @@
             background-color: #2c3039;
             border-radius: 5px;
         }
+
+        .metric .ai-analysis-content {
+            max-height: 20px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            position: relative;
+            margin-top: 10px;
+        }
+
+        .metric .ai-analysis-content.expanded {
+            max-height: 1000px; /* or any height that would accommodate your content */
+        }
+
+        .expand-button {
+            background: none;
+            border: none;
+            color: #74b9ff;
+            cursor: pointer;
+            padding: 5px;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .expand-button:hover {
+            color: #0984e3;
+            transform: none;
+            background: none;
+        }
     </style>
 </head>
 <body>
@@ -195,7 +223,7 @@
         "Red Hat OpenShift on IBM Cloud",
         "Google Cloud VertexAI","Google Cloud Apigee","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL",
         "Google Cloud SQL","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud And Media CDN",
-        "Google Cloud Looker Studio Pro","Google Kubernetes Engine (GKE)", 
+        "Google Cloud DataStudio","Google Cloud Datalab","Google Cloud Looker Studio Pro","Google Kubernetes Engine (GKE)", 
         "Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon DataZone",
         "Amazon DocumentDB","Amazon DynamoDB","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
         "Amazon Elastic File System","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
@@ -484,6 +512,106 @@
                 </div>`;
             vendorContainer.innerHTML += vendorHTML;
         });
+    }
+
+    function addServiceAnalysis(service, riskData) {
+        const servicesContainer = document.getElementById("services-analysis");
+        
+        // Create service analysis section
+        const serviceSection = document.createElement("div");
+        serviceSection.className = "vendor-section";
+        
+        // Calculate estimated credit money back
+        let estimatedCreditBack = 0.0;
+        const slaUsage = parseFloat(riskData.service_sla_usage_percentage);
+        const creditBackPercentage = parseFloat(riskData.percentage_service_credit_back || 0);
+        if (slaUsage > 100) {
+            estimatedCreditBack = ((slaUsage - 100) / 100) * (creditBackPercentage / 100) * 1000;
+            estimatedCreditBack = Math.min(Math.round(estimatedCreditBack * 100) / 100, 1000);
+        }
+
+        // Warning message for max credit back
+        const warningMessage = estimatedCreditBack >= 1000 ? 
+            "<div style='color: #ff6b6b; margin-top: 5px;'>Warning: Max. credit back was above 1000.00 per month</div>" : "";
+
+        // Format AI Analysis text with line breaks
+        const aiAnalysis = riskData.remarks_outage_genai
+            ? riskData.remarks_outage_genai.split('\n').join('<br>')
+            : 'No analysis available';
+
+        serviceSection.innerHTML = `
+            <h3>Risk Analysis for ${service}</h3>
+            <div class="metrics-grid">
+                <div class="metric-column">
+                    <div class="metric">
+                        <h4>SLA Usage %</h4>
+                        <div class="value">${riskData.service_sla_usage_percentage}</div>
+                    </div>
+                    <div class="metric">
+                        <h4>SLA Deviation Risk</h4>
+                        <div class="value">${riskData.sla_deviation_connected_risk_0_999}</div>
+                    </div>
+                </div>
+                <div class="metric-column">
+                    <div class="metric">
+                        <h4>Traffic Coefficient %</h4>
+                        <div class="value">${riskData.service_traffic_coef_by_percent_down}</div>
+                    </div>
+                    <div class="metric">
+                        <h4>Usage Risk Rating</h4>
+                        <div class="value">${riskData.usage_connected_risk_0_999}</div>
+                    </div>
+                </div>
+                <div class="metric-column">
+                    <div class="metric">
+                        <h4>Annual Downtime (minutes)</h4>
+                        <div class="value">${riskData.webscraper_annual_period_service_down_per_year_in_minutes}</div>
+                    </div>
+                    <div class="metric">
+                        <h4>Expected Annual Downtime (minutes)</h4>
+                        <div class="value">${riskData.expected_annual_service_minutes_down}</div>
+                    </div>
+                </div>
+                <div class="metric-column">
+                    <div class="metric">
+                        <h4>Service SLA (99.99999%)</h4>
+                        <div class="value">${riskData.service_sla_0_99_9999_for_60min_times_24h_365days}%</div>
+                    </div>
+                    <div class="metric">
+                        <h4>Service Credit Back (%)</h4>
+                        <div class="value">${riskData.percentage_service_credit_back}%</div>
+                    </div>
+                    <div class="metric">
+                        <h4>Monthly Credit Back max. per $1,000</h4>
+                        <div class="value">$${estimatedCreditBack}</div>
+                        ${warningMessage}
+                    </div>
+                </div>
+            </div>
+            <div class="metric" style="margin-top: 20px;">
+                <h4>AI Analysis</h4>
+                <div class="ai-analysis-content" id="analysis-${service.replace(/\s+/g, '-')}">
+                    <div class="value" style="white-space: pre-line;">${aiAnalysis}</div>
+                </div>
+                <button class="expand-button" onclick="toggleAnalysis('${service.replace(/\s+/g, '-')}')">Show More</button>
+            </div>
+        `;
+
+        servicesContainer.appendChild(serviceSection);
+    }
+
+    // Add this function to handle the expansion
+    function toggleAnalysis(serviceId) {
+        const content = document.getElementById(`analysis-${serviceId}`);
+        const button = content.nextElementSibling;
+        
+        if (content.classList.contains('expanded')) {
+            content.classList.remove('expanded');
+            button.textContent = 'Show More';
+        } else {
+            content.classList.add('expanded');
+            button.textContent = 'Show Less';
+        }
     }
 
     // Initialize the variable pairs on page load
