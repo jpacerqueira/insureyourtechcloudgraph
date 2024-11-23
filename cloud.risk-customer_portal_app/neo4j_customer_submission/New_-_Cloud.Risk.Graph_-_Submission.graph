@@ -1,23 +1,14 @@
 
-CREATE (cust_Tanmoy_s_QubConsulting:CUSTOMER_NAME {
-    name: 'Tanmoy.s QubConsulting',
-    project_name: 'Project by Tanmoy.s QubConsulting',
-    median_sla_usage_percentage: '71.35%',
-    median_sla_deviation_risk: '996.58',
-    median_traffic_coefficient: '0.07%',
-    median_usage_risk: '996.86',
-    median_service_sla: '99.90%',
-    median_annual_downtime: '375.00'
+CREATE (cust_Alla_s_Beautiful_Company_of_AI_Solutions:CUSTOMER_NAME {
+    name: 'Alla.s Beautiful Company of AI Solutions',
+    project_name: 'Project by Alla.s Beautiful Company of AI Solutions',
+    median_sla_usage_percentage: '13828.01%',
+    median_sla_deviation_risk: '997.59',
+    median_traffic_coefficient: '0.35%',
+    median_usage_risk: '998.38',
+    median_service_sla: '99.99%',
+    median_annual_downtime: '7268.00'
     })
-CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
-                    name: 'Amazon AWS',
-                    vendor_median_sla_usage_percentage: '20.55%',
-                    vendor_median_sla_deviation_risk: '997.59',
-                    vendor_median_traffic_coefficient: '0.02%',
-                    vendor_median_usage_risk: '998.38',
-                    vendor_median_service_sla: '99.90%',
-                    vendor_median_annual_downtime: '108.00'
-                })
 CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
                     name: 'Microsoft Azure',
                     vendor_median_sla_usage_percentage: '13828.01%',
@@ -27,91 +18,15 @@ CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
                     vendor_median_service_sla: '99.99%',
                     vendor_median_annual_downtime: '7268.00'
                 })
-CREATE (Salesforce:TECHNOLOGY_PROVIDER {
-                    name: 'Salesforce',
-                    vendor_median_sla_usage_percentage: '71.35%',
-                    vendor_median_sla_deviation_risk: '996.58',
-                    vendor_median_traffic_coefficient: '0.07%',
-                    vendor_median_usage_risk: '996.86',
+CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
+                    name: 'Amazon AWS',
+                    vendor_median_sla_usage_percentage: '20.55%',
+                    vendor_median_sla_deviation_risk: '997.59',
+                    vendor_median_traffic_coefficient: '0.02%',
+                    vendor_median_usage_risk: '998.38',
                     vendor_median_service_sla: '99.90%',
-                    vendor_median_annual_downtime: '375.00'
+                    vendor_median_annual_downtime: '108.00'
                 })
-
-CREATE (Salesforce_SaaS:TECHNOLOGY_SERVICE {
-    name: 'Salesforce SaaS',
-    sla_usage: '684.93%',
-    sla_deviation_risk: '991.373',
-    traffic_coefficient: '0.01712%',
-    usage_risk: '997.460',
-    annual_downtime_minutes: '360',
-    service_sla: '99.99000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_Tanmoy_s_QubConsulting)-[:CUSTOMER_USES_SERVICE]->(Salesforce_SaaS)
-CREATE (Salesforce)-[:CONNECTED_RISK {
-    sla_usage: '684.93%',
-    sla_deviation_risk: '991.373',
-    traffic_coefficient: '0.01712%',
-    usage_risk: '997.460'
-}]->(Salesforce_SaaS)
-
-CREATE (Salesforce_Sales_Cloud:TECHNOLOGY_SERVICE {
-    name: 'Salesforce Sales Cloud',
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_Tanmoy_s_QubConsulting)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Sales_Cloud)
-CREATE (Salesforce)-[:CONNECTED_RISK {
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Salesforce_Sales_Cloud)
-
-CREATE (Salesforce_Service_Cloud:TECHNOLOGY_SERVICE {
-    name: 'Salesforce Service Cloud',
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_Tanmoy_s_QubConsulting)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Service_Cloud)
-CREATE (Salesforce)-[:CONNECTED_RISK {
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Salesforce_Service_Cloud)
-
-CREATE (Salesforce_Marketing_Cloud:TECHNOLOGY_SERVICE {
-    name: 'Salesforce Marketing Cloud',
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
-    service_sla: '99.90000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_Tanmoy_s_QubConsulting)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Marketing_Cloud)
-CREATE (Salesforce)-[:CONNECTED_RISK {
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Salesforce_Marketing_Cloud)
 
 CREATE (Azure_PowerBi_App:TECHNOLOGY_SERVICE {
     name: 'Azure PowerBi App',
@@ -124,7 +39,7 @@ CREATE (Azure_PowerBi_App:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_Tanmoy_s_QubConsulting)-[:CUSTOMER_USES_SERVICE]->(Azure_PowerBi_App)
+CREATE (cust_Alla_s_Beautiful_Company_of_AI_Solutions)-[:CUSTOMER_USES_SERVICE]->(Azure_PowerBi_App)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '13828.01%',
     sla_deviation_risk: '846.944',
@@ -143,7 +58,7 @@ CREATE (Amazon_QuickSight:TECHNOLOGY_SERVICE {
     percentage_service_credit_back: '10.000'
 })
 
-CREATE (cust_Tanmoy_s_QubConsulting)-[:CUSTOMER_USES_SERVICE]->(Amazon_QuickSight)
+CREATE (cust_Alla_s_Beautiful_Company_of_AI_Solutions)-[:CUSTOMER_USES_SERVICE]->(Amazon_QuickSight)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '20.55%',
     sla_deviation_risk: '997.590',

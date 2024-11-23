@@ -50,7 +50,7 @@ llm = load_llm(
     logger=logger, 
     config={
         "ollama_base_url": ollama_base_url,
-        "format": "json",
+        "format": "text",
         "temperature": 0.7,
         "model": llm_name,
     }

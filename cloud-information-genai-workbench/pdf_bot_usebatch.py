@@ -21,7 +21,7 @@ def main(input_folder="./pdf_bot_usebatch"):
     process_folder(
         input_folder=input_folder,
         query="resume the outage in text, how long was the incident and what services got impacted, what regions and availability zones where impatected, and how long was the outage ?",
-        cloud_vendor="Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB , Akamai, Cloudflare",
+        cloud_vendor="Amazon AWS and Google GCP and Microsoft Azure and  Oracle OCI and  IBM Cloud and Snowflake and Databricksa and MongoDB and Akamai and Cloudflare",
         output_folder=input_folder
     )
 
