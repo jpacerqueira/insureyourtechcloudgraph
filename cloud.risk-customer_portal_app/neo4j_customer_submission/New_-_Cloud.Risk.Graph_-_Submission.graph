@@ -2,12 +2,12 @@
 CREATE (cust_Alla_s_Beautiful_Company_of_AI_Solutions:CUSTOMER_NAME {
     name: 'Alla.s Beautiful Company of AI Solutions',
     project_name: 'Project by Alla.s Beautiful Company of AI Solutions',
-    median_sla_usage_percentage: '20.55%',
-    median_sla_deviation_risk: '997.59',
-    median_traffic_coefficient: '0.02%',
-    median_usage_risk: '998.38',
-    median_service_sla: '99.90%',
-    median_annual_downtime: '108.00'
+    median_sla_usage_percentage: '175.42%',
+    median_sla_deviation_risk: '995.87',
+    median_traffic_coefficient: '0.09%',
+    median_usage_risk: '996.37',
+    median_service_sla: '99.95%',
+    median_annual_downtime: '461.00'
     })
 CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
                     name: 'Microsoft Azure',
@@ -18,6 +18,15 @@ CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
                     vendor_median_service_sla: '99.99%',
                     vendor_median_annual_downtime: '7268.00'
                 })
+CREATE (Google_Cloud_GCP:TECHNOLOGY_PROVIDER {
+                    name: 'Google Cloud GCP',
+                    vendor_median_sla_usage_percentage: '175.42%',
+                    vendor_median_sla_deviation_risk: '995.87',
+                    vendor_median_traffic_coefficient: '0.09%',
+                    vendor_median_usage_risk: '996.37',
+                    vendor_median_service_sla: '99.95%',
+                    vendor_median_annual_downtime: '461.00'
+                })
 CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
                     name: 'Amazon AWS',
                     vendor_median_sla_usage_percentage: '20.55%',
@@ -27,6 +36,25 @@ CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
                     vendor_median_service_sla: '99.90%',
                     vendor_median_annual_downtime: '108.00'
                 })
+
+CREATE (Azure_PowerBi_App:TECHNOLOGY_SERVICE {
+    name: 'Azure PowerBi App',
+    sla_usage: '13828.01%',
+    sla_deviation_risk: '846.944',
+    traffic_coefficient: '0.34570%',
+    usage_risk: '967.918',
+    annual_downtime_minutes: '7268.00',
+    service_sla: '99.99000',
+    percentage_service_credit_back: '10.000'
+})
+
+CREATE (cust_Alla_s_Beautiful_Company_of_AI_Solutions)-[:CUSTOMER_USES_SERVICE]->(Azure_PowerBi_App)
+CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
+    sla_usage: '13828.01%',
+    sla_deviation_risk: '846.944',
+    traffic_coefficient: '0.34570%',
+    usage_risk: '967.918'
+}]->(Azure_PowerBi_App)
 
 CREATE (Amazon_QuickSight:TECHNOLOGY_SERVICE {
     name: 'Amazon QuickSight',
@@ -46,3 +74,22 @@ CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     traffic_coefficient: '0.02055%',
     usage_risk: '998.384'
 }]->(Amazon_QuickSight)
+
+CREATE (Google_Cloud_BigQuery:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud BigQuery',
+    sla_usage: '175.42%',
+    sla_deviation_risk: '995.872',
+    traffic_coefficient: '0.08771%',
+    usage_risk: '996.371',
+    annual_downtime_minutes: '461.00',
+    service_sla: '99.95000',
+    percentage_service_credit_back: '10.000'
+})
+
+CREATE (cust_Alla_s_Beautiful_Company_of_AI_Solutions)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_BigQuery)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '175.42%',
+    sla_deviation_risk: '995.872',
+    traffic_coefficient: '0.08771%',
+    usage_risk: '996.371'
+}]->(Google_Cloud_BigQuery)

@@ -393,9 +393,10 @@
 
         // Add explanation section
         const explanationHTML = `
-            <h3>Cloud.Risk Ratings Explanation:</h3>
+            <h2>Cloud.Risk Ratings</h2>
+            <h3>Understanding Cloud.Risk Ratings for Services: Based on SLA and Traffic Coef.</h3>
             <div style="margin-top: 20px; padding: 15px; background-color: #2c3039; border-radius: 5px;">
-                <h3 style="color: #74b9ff; margin-bottom: 10px;">Understanding the Cloud.Risk Ratings: Based on SLA and Traffic Coef.</h3>
+                <h3 style="color: #74b9ff; margin-bottom: 10px;">Individual Services explanation about Cloud.Risk ratings</h3>
                 <ul style="list-style-type: none; padding-left: 0;">
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Webscrapper Annual Period Service Down Per Year in Minutes:</strong> Measures the total minutes the Service was down or degraded Year-to-Date.</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA of the Cloud Service:</strong> The SLA of the Cloud Service. A value of 99% means the Service is usable 100% of its time, is 99% time garanteed up, and only up to 1% time down under Cloud Service Vender promissed SLA.</li>
@@ -605,7 +606,7 @@
                     </div>
                 </div>
             </div>
-            <div class="metric" style="margin-top: 20px;">
+            <div class="metric" style="margin-top: 30px;">
                 <h4>AI Analysis</h4>
                 <div class="ai-analysis-content" id="analysis-${service.replace(/\s+/g, '-')}">
                     <div class="value" style="white-space: pre-line;">${aiAnalysis}</div>
