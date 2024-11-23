@@ -1,7 +1,7 @@
 import os
 
 import streamlit as st
-from pdf_bot import process_pdf_query, process_folder
+from pdf_bot_v2 import process_pdf_query, process_folder
 
 
 def main(input_folder="./pdf_bot_usebatch"):
