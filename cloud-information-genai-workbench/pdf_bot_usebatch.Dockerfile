@@ -17,7 +17,8 @@ COPY utils.py .
 COPY chains.py .
 COPY pdf_bot_usebatch.py .
 
-COPY pdf_bot_usebatch/   ./pdf_bot_usebatch
+# make batch mode work faster build without copying the entire folder of *.pdf files
+COPY pdf_bot_usebatch/.ignore   ./pdf_bot_usebatch 
 
 # Run the script when the container starts - via streamlit entrypoint
 # CMD ["python", "pdf_bot_usebatch.py"]
