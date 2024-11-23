@@ -2,24 +2,24 @@ all: config_where_am_I_running backend_server customer_app workbench_apps riskgr
 
 config_where_am_I_running:
 	whoami
-        pwd
-        ls -listarh
+	pwd
+	ls -listarh
 
 backend_server:
-     sleep 1
-     cd cloud-services-risk-ratings-api ; bash -x build-api-cluster 3
+	sleep 1
+	cd cloud-services-risk-ratings-api ; bash -x build-api-cluster 3
 
 customer_app:
 	sleep 1
-        cd cloud.risk-customer_portal_app ; bash -x customer_app_start 3
+	cd cloud.risk-customer_portal_app ; bash -x customer_app_start 3
 
 workbench_apps:
 	sleep 1
-        # cloud-information-genai-workbench ; bash -x workbench-start-cluster 1 
-        echo "workbench-apps skips from build"
+	# cloud-information-genai-workbench ; bash -x workbench-start-cluster 1 
+	echo "workbench-apps skips from build"
 
 riskgraph:
-        sleep 1
-        # client_graph.risk_measurement_app ; bash -x start-riskgraph
-        echo "riskgraph skips from build"
+	sleep 1
+	# client_graph.risk_measurement_app ; bash -x start-riskgraph
+	echo "riskgraph skips from build"
 
