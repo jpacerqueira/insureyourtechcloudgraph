@@ -1,4 +1,4 @@
-FROM langchain/langchain
+FROM langchain/langchain:0.1.0
 
 WORKDIR /app
 
