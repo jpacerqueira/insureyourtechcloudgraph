@@ -75,8 +75,7 @@ def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, outpu
     qa = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type="stuff",
-        retriever=vectorstore.as_retriever(),
-        return_source_documents=True
+        retriever=vectorstore.as_retriever()
     )
     
     # Enhance query with cloud vendor if specified

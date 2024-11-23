@@ -2,12 +2,12 @@
 CREATE (cust_Alla_s_Beautiful_Company_of_AI_Solutions:CUSTOMER_NAME {
     name: 'Alla.s Beautiful Company of AI Solutions',
     project_name: 'Project by Alla.s Beautiful Company of AI Solutions',
-    median_sla_usage_percentage: '13828.01%',
+    median_sla_usage_percentage: '20.55%',
     median_sla_deviation_risk: '997.59',
-    median_traffic_coefficient: '0.35%',
+    median_traffic_coefficient: '0.02%',
     median_usage_risk: '998.38',
-    median_service_sla: '99.99%',
-    median_annual_downtime: '7268.00'
+    median_service_sla: '99.90%',
+    median_annual_downtime: '108.00'
     })
 CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
                     name: 'Microsoft Azure',
@@ -27,25 +27,6 @@ CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
                     vendor_median_service_sla: '99.90%',
                     vendor_median_annual_downtime: '108.00'
                 })
-
-CREATE (Azure_PowerBi_App:TECHNOLOGY_SERVICE {
-    name: 'Azure PowerBi App',
-    sla_usage: '13828.01%',
-    sla_deviation_risk: '846.944',
-    traffic_coefficient: '0.34570%',
-    usage_risk: '967.918',
-    annual_downtime_minutes: '7268.00',
-    service_sla: '99.99000',
-    percentage_service_credit_back: '10.000'
-})
-
-CREATE (cust_Alla_s_Beautiful_Company_of_AI_Solutions)-[:CUSTOMER_USES_SERVICE]->(Azure_PowerBi_App)
-CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
-    sla_usage: '13828.01%',
-    sla_deviation_risk: '846.944',
-    traffic_coefficient: '0.34570%',
-    usage_risk: '967.918'
-}]->(Azure_PowerBi_App)
 
 CREATE (Amazon_QuickSight:TECHNOLOGY_SERVICE {
     name: 'Amazon QuickSight',
