@@ -1,0 +1,106 @@
+I'll provide the information for each cloud provider based on the provided context. Please note that I won't have access to real-time data or specific details about ongoing incidents.
+
+**Amazon AWS:**
+
+* Resume of the outage: Not available (no mention in the context)
+* Duration of the incident: Unknown
+* Impacted services: None mentioned
+* Regions and availability zones impacted: None mentioned
+* Outage duration: Unknown
+
+**Google GCP:**
+
+* Resume of the outage: Not available (no mention in the context)
+* Duration of the incident: Unknown
+* Impacted services: None mentioned
+* Regions and availability zones impacted: None mentioned
+* Outage duration: Unknown
+
+**Microsoft Azure:**
+
+* Resume of the outage: A subset of Azure Blob Storage and Azure Data Lake Storage accounts experienced connectivity errors due to an unintentional deletion of Traffic Manager profiles.
+* Duration of the incident: Approximately 3 hours (between 00:50 UTC and 12:30 UTC on November 13, 2024)
+* Impacted services:
+	+ Azure Log Analytics
+	+ Azure Container Registry
+	+ Azure Data Lake Storage
+	+ Azure Blob Storage
+* Regions and availability zones impacted:
+	+ Australia East
+	+ Canada Central
+	+ Canada East
+	+ Central US
+	+ East US
+	+ East US 2
+	+ Japan East
+	+ South Central US
+	+ UAE North
+	+ West US
+	+ West US 2
+
+**Oracle OCI:**
+
+* Resume of the outage: Not available (no mention in the context)
+* Duration of the incident: Unknown
+* Impacted services: None mentioned
+* Regions and availability zones impacted: None mentioned
+* Outage duration: Unknown
+
+**IBM Cloud:**
+
+* Resume of the outage: Not available (no mention in the context)
+* Duration of the incident: Unknown
+* Impacted services: None mentioned
+* Regions and availability zones impacted: None mentioned
+* Outage duration: Unknown
+
+**Snowflake:**
+
+* Resume of the outage: Not available (no mention in the context)
+* Duration of the incident: Unknown
+* Impacted services: None mentioned
+* Regions and availability zones impacted: None mentioned
+* Outage duration: Unknown
+
+**Databricks:**
+
+* Resume of the outage: A subset of Databricks clusters and serverless compute resources experienced failures due to an unintentional deletion of Traffic Manager profiles.
+* Duration of the incident: Approximately 3 hours (between 00:50 UTC and 12:30 UTC on November 13, 2024)
+* Impacted services:
+	+ Databricks
+* Regions and availability zones impacted:
+	+ Australia East
+	+ Canada Central
+	+ Canada East
+	+ Central US
+	+ East US
+	+ East US 2
+	+ Japan East
+	+ South Central US
+	+ UAE North
+	+ West US
+	+ West US 2
+
+**MongoDB:**
+
+* Resume of the outage: Not available (no mention in the context)
+* Duration of the incident: Unknown
+* Impacted services: None mentioned
+* Regions and availability zones impacted: None mentioned
+* Outage duration: Unknown
+
+**Akamai:**
+
+* Resume of the outage: Not available (no mention in the context)
+* Duration of the incident: Unknown
+* Impacted services: None mentioned
+* Regions and availability zones impacted: None mentioned
+* Outage duration: Unknown
+
+**Cloudflare:**
+
+* Resume of the outage: Not available (no mention in the context)
+* Duration of the incident: Unknown
+* Impacted services: None mentioned
+* Regions and availability zones impacted: None mentioned
+* Outage duration: Unknown
