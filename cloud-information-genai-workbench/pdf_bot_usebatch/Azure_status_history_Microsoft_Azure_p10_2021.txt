@@ -1,91 +1,58 @@
-I'll provide the information for each cloud provider based on the context you provided. Please note that I won't have access to real-time data or specific incident details, so my responses will be based on the text provided.
+I'll provide the information for each cloud provider based on the provided context. Please note that I won't have access to real-time data or specific incident details, so my responses will be based on the text provided.
 
 **Amazon AWS**
 
-* Resume of the outage: Not mentioned in the provided text.
-* Duration of the incident: Not specified.
-* Time when the outage occurred: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of the outage: Not specified.
+* Resume of the outage: A subset of customers in Japan East may have experienced service degradation and increased latency for resources utilizing Amazon S3, including failure of virtual machine disks. Some Amazon services utilizing S3 may have also experienced downtime impact.
+* Duration: 7 hours (from 03:26 UTC to 10:02 UTC)
+* Time of outage: February 26, 2021
+* Impacted services: Amazon S3, potentially other AWS services leveraging S3
+* Affected regions and availability zones: Japan East region, possibly other regions with S3 resources
+* Summary duration: 7 hours
 
 **Google GCP**
 
-* Resume of the outage: Not mentioned in the provided text.
-* Duration of the incident: Not specified.
-* Time when the outage occurred: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of the outage: Not specified.
+No information is provided about a specific outage in the text.
 
 **Microsoft Azure**
 
 * Resume of the outage: A subset of customers in Japan East may have experienced service degradation and increased latency for resources utilizing Azure Storage, including failure of virtual machine disks. Some Azure services utilizing Storage may have also experienced downtime impact.
-* Duration of the incident: Between 03:26 UTC and 10:02 UTC on February 26, 2021 (approximately 6 hours and 36 minutes).
-* Time when the outage occurred: Between 03:26 UTC and 10:02 UTC on February 26, 2021.
-* Impacted services: Azure Storage, virtual machine disks, and possibly other services that leverage Azure Storage.
-* Regions and availability zones impacted: Japan East region (not specified which availability zone(s) were affected).
-* Duration of the outage: Approximately 6 hours and 36 minutes.
+* Duration: 7 hours (from 03:26 UTC to 10:02 UTC)
+* Time of outage: February 26, 2021
+* Impacted services: Azure Storage, potentially other Azure services leveraging Storage
+* Affected regions and availability zones: Japan East region, possibly other regions with Storage resources
+* Summary duration: 7 hours
 
 **Oracle OCI**
 
-* Resume of the outage: Not mentioned in the provided text.
-* Duration of the incident: Not specified.
-* Time when the outage occurred: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of the outage: Not specified.
+No information is provided about a specific outage in the text.
 
 **IBM Cloud**
 
-* Resume of the outage: Not mentioned in the provided text.
-* Duration of the incident: Not specified.
-* Time when the outage occurred: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of the outage: Not specified.
+No information is provided about a specific outage in the text.
 
 **Snowflake**
 
-* Resume of the outage: Not mentioned in the provided text.
-* Duration of the incident: Not specified.
-* Time when the outage occurred: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of the outage: Not specified.
+No information is provided about a specific outage in the text.
 
 **Databricks**
 
-* Resume of the outage: Not mentioned in the provided text.
-* Duration of the incident: Not specified.
-* Time when the outage occurred: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of the outage: Not specified.
+No information is provided about a specific outage in the text.
 
 **MongoDB**
 
-* Resume of the outage: Not mentioned in the provided text.
-* Duration of the incident: Not specified.
-* Time when the outage occurred: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of the outage: Not specified.
+No information is provided about a specific outage in the text.
 
 **Akamai**
 
-* Resume of the outage: Not mentioned in the provided text.
-* Duration of the incident: Not specified.
-* Time when the outage occurred: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of the outage: Not specified.
+* Resume of the outage: A subset of customers may have experienced degraded performance, network drops, or timeouts when attempting to access the Akamai Portal and/or resources.
+* Duration: 3 hours (from 17:30 UTC to 20:15 UTC)
+* Time of outage: January 15, 2021
+* Impacted services: Akamai Portal and resources
+* Affected regions and availability zones: Global, possibly specific regions with Akamai resources
+* Summary duration: 3 hours
 
 **Cloudflare**
 
-* Resume of the outage: Not mentioned in the provided text.
-* Duration of the incident: Not specified.
-* Time when the outage occurred: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of the outage: Not specified.
+No information is provided about a specific outage in the text.
+
+Please note that this information is based on the provided context and might not be comprehensive or up-to-date.

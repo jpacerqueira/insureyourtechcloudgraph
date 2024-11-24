@@ -1,10 +1,38 @@
-I don't have information on the specific incidents you're referring to for Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricksa, MongoDB, Akamai, or Cloudflare. The text you provided appears to be a report from Google Cloud about their own outage.
+I don't have information on the specified cloud providers (Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud) as this text appears to be a report from Google Cloud about their own service outage. The text does not provide any information on outages or incidents at these other cloud providers.
 
-If you'd like, I can help you analyze the information provided by Google Cloud and extract relevant details such as:
+However, I can tell you that the incident was:
 
-* Incident duration
-* Start and end times of the incident
-* Impacted services and features
-* Affected regions and availability zones
-
-Please let me know if there's anything else I can help with.
+* Resumed in text: Yes
+* How long was the incident in hours, minutes and seconds? 2 hours, 48 minutes
+* When was the outage? From 15:22 to 18:10 US/Pacific Time (UTC-7)
+* What services got impacted? A list of Google Cloud services is provided, including:
+	+ AlloyDB for PostgreSQL
+	+ Apigee
+	+ Backup and DR
+	+ Batch
+	+ Cloud Build
+	+ Cloud Data Fusion
+	+ Cloud Developer Tools
+	+ Cloud Filestore
+	+ Cloud Load Balancing
+	+ Cloud Machine Learning
+	+ Cloud Memorystore
+	+ Cloud NAT
+	+ Cloud Run
+	+ Cloud Workstations
+	+ Colab Enterprise
+	+ Contact Center AI Platform
+	+ Dataproc Metastore
+	+ Firebase Test Lab
+	+ Google App Engine
+	+ Google Cloud Composer
+	+ Google Cloud Dataflow
+	+ Google Cloud Dataproc
+	+ Google Cloud Deploy
+	+ Google Cloud Networking
+	+ Google Cloud SQL
+	+ Google Compute Engine (GCE)
+	+ Google Kubernetes Engine (GKE)
+	+ Hybrid Connectivity
+* What cloud provider regions and availability zones were impacted? The text does not provide specific region or zone information, but it mentions that peak loss was 3% in us-east1-c and average loss was 0.05% across all Cloud zones.
+* How long was the outage in summary? 2 hours, 48 minutes

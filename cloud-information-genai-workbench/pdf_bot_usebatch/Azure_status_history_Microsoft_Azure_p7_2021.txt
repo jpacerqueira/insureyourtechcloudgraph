@@ -1,48 +1,91 @@
-I'll provide a summary of the incident for each cloud provider. Please note that I won't have access to real-time data or the ability to execute queries on these providers' systems.
+I'll provide a general response for each cloud provider, as I don't have specific information about the incident you're referring to. Please note that I'll be using the context provided from the Azure PIRS document.
 
-**Microsoft Azure**
+**Amazon AWS**
 
-* Resume: A periodic background task in Azur e Front Door and Azur e CDN S tandar d from Microsoft caused increased latency and connection timeouts.
-* Duration: The incident lasted between 14:55 UTC and 19:50 UTC on July 12th, 2021.
-* Impacted services: Windows Virtual Desktop, Azure Front Door, and Azure CDN Standard.
-* Affected regions and availability zones:
-	+ East US metr o locations experienced peak failur e rates of approximately 70%.
-	+ Other regions were not significantly impacted.
-
-**Amazon Web Services (AWS)**
-
-* I don't have information on this incident for AWS. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting AWS during the specified time frame.
+* Resume of the outage: Unfortunately, I couldn't find any information on an outage affecting Amazon AWS.
+* Duration: Unknown
+* Time: Unknown
+* Impacted services: Unknown
+* Affected regions and availability zones: Unknown
+* Summary: No incident reported in the provided context.
 
 **Google Cloud Platform (GCP)**
 
-* I don't have information on this incident for GCP. Like AWS, the query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting GCP during the specified time frame.
+* Resume of the outage: Unfortunately, I couldn't find any information on an outage affecting Google GCP.
+* Duration: Unknown
+* Time: Unknown
+* Impacted services: Unknown
+* Affected regions and availability zones: Unknown
+* Summary: No incident reported in the provided context.
+
+**Microsoft Azure**
+
+* Resume of the outage: On July 12th, 2021, between 14:55 UTC and 19:50 UTC, a subset of customers primarily in the US and Canada experienced increased latency and connection timeouts when connecting to Azure Front Door and Azure CDN Standard from Microsoft.
+* Duration: Approximately 5 hours and 55 minutes
+* Time: July 12th, 2021, between 14:55 UTC and 19:50 UTC
+* Impacted services: Azure Front Door, Azure CDN Standard
+* Affected regions and availability zones: East US metropolitan locations (peak failure rate was approximately 70%)
+* Summary: The incident lasted for approximately 5 hours and 55 minutes.
 
 **Oracle Cloud Infrastructure (OCI)**
 
-* I don't have information on this incident for OCI. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting OCI during the specified time frame.
+* Resume of the outage: Unfortunately, I couldn't find any information on an outage affecting Oracle OCI.
+* Duration: Unknown
+* Time: Unknown
+* Impacted services: Unknown
+* Affected regions and availability zones: Unknown
+* Summary: No incident reported in the provided context.
 
 **IBM Cloud**
 
-* I don't have information on this incident for IBM Cloud. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting IBM Cloud during the specified time frame.
+* Resume of the outage: Unfortunately, I couldn't find any information on an outage affecting IBM Cloud.
+* Duration: Unknown
+* Time: Unknown
+* Impacted services: Unknown
+* Affected regions and availability zones: Unknown
+* Summary: No incident reported in the provided context.
 
 **Snowflake**
 
-* I don't have information on this incident for Snowflake. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting Snowflake during the specified time frame.
+* Resume of the outage: Unfortunately, I couldn't find any information on an outage affecting Snowflake.
+* Duration: Unknown
+* Time: Unknown
+* Impacted services: Unknown
+* Affected regions and availability zones: Unknown
+* Summary: No incident reported in the provided context.
 
 **Databricks**
 
-* I don't have information on this incident for Databricks. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting Databricks during the specified time frame.
+* Resume of the outage: Unfortunately, I couldn't find any information on an outage affecting Databricks.
+* Duration: Unknown
+* Time: Unknown
+* Impacted services: Unknown
+* Affected regions and availability zones: Unknown
+* Summary: No incident reported in the provided context.
 
 **MongoDB**
 
-* I don't have information on this incident for MongoDB. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting MongoDB during the specified time frame.
+* Resume of the outage: Unfortunately, I couldn't find any information on an outage affecting MongoDB.
+* Duration: Unknown
+* Time: Unknown
+* Impacted services: Unknown
+* Affected regions and availability zones: Unknown
+* Summary: No incident reported in the provided context.
 
 **Akamai**
 
-* I don't have information on this incident for Akamai. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting Akamai during the specified time frame.
+* Resume of the outage: Unfortunately, I couldn't find any information on an outage affecting Akamai.
+* Duration: Unknown
+* Time: Unknown
+* Impacted services: Unknown
+* Affected regions and availability zones: Unknown
+* Summary: No incident reported in the provided context.
 
 **Cloudflare**
 
-* I don't have information on this incident for Cloudflare. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting Cloudflare during the specified time frame.
-
-Please note that these providers may have had other incidents or outages during the same time frame, but I couldn't find any information on a specific incident matching the query.
+* Resume of the outage: Unfortunately, I couldn't find any information on an outage affecting Cloudflare.
+* Duration: Unknown
+* Time: Unknown
+* Impacted services: Unknown
+* Affected regions and availability zones: Unknown
+* Summary: No incident reported in the provided context.
