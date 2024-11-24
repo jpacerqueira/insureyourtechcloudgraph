@@ -1,0 +1,115 @@
+I can provide you with a general template for each cloud provider's outage report. However, please note that I don't have specific information on individual outages for these providers, as the provided text is a sample AWS service interruption log.
+
+Here are some examples of what the outage reports might look like:
+
+**Amazon Web Services (AWS)**
+
+* Incident: [Insert incident description]
+* Duration: [Insert duration in hours/minutes]
+* Start Time: [Insert start time]
+* End Time: [Insert end time]
+* Impacted Services:
+	+ [List services impacted, e.g., DynamoDB, SQS, EC2, etc.]
+* Regions/AZs Impacted:
+	+ [List regions and availability zones affected, e.g., us-west-2, eu-south-1, etc.]
+
+**Google Cloud Platform (GCP)**
+
+* Incident: [Insert incident description]
+* Duration: [Insert duration in hours/minutes]
+* Start Time: [Insert start time]
+* End Time: [Insert end time]
+* Impacted Services:
+	+ [List services impacted, e.g., Compute Engine, Storage, etc.]
+* Regions/AZs Impacted:
+	+ [List regions and availability zones affected, e.g., us-central1, eu-west2, etc.]
+
+**Microsoft Azure**
+
+* Incident: [Insert incident description]
+* Duration: [Insert duration in hours/minutes]
+* Start Time: [Insert start time]
+* End Time: [Insert end time]
+* Impacted Services:
+	+ [List services impacted, e.g., Virtual Machines, Storage, etc.]
+* Regions/AZs Impacted:
+	+ [List regions and availability zones affected, e.g., westus, eastus2, etc.]
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Incident: [Insert incident description]
+* Duration: [Insert duration in hours/minutes]
+* Start Time: [Insert start time]
+* End Time: [Insert end time]
+* Impacted Services:
+	+ [List services impacted, e.g., Compute, Storage, etc.]
+* Regions/AZs Impacted:
+	+ [List regions and availability zones affected, e.g., us-ashburn-1, eu-frankfurt-1, etc.]
+
+**IBM Cloud**
+
+* Incident: [Insert incident description]
+* Duration: [Insert duration in hours/minutes]
+* Start Time: [Insert start time]
+* End Time: [Insert end time]
+* Impacted Services:
+	+ [List services impacted, e.g., Virtual Servers, Storage, etc.]
+* Regions/AZs Impacted:
+	+ [List regions and availability zones affected, e.g., us-south, eu-de, etc.]
+
+**Snowflake**
+
+* Incident: [Insert incident description]
+* Duration: [Insert duration in hours/minutes]
+* Start Time: [Insert start time]
+* End Time: [Insert end time]
+* Impacted Services:
+	+ [List services impacted, e.g., Compute, Storage, etc.]
+* Regions/AZs Impacted:
+	+ [List regions and availability zones affected, e.g., us-east-1, eu-west-2, etc.]
+
+**Databricks**
+
+* Incident: [Insert incident description]
+* Duration: [Insert duration in hours/minutes]
+* Start Time: [Insert start time]
+* End Time: [Insert end time]
+* Impacted Services:
+	+ [List services impacted, e.g., Compute, Storage, etc.]
+* Regions/AZs Impacted:
+	+ [List regions and availability zones affected, e.g., us-east-1, eu-west-2, etc.]
+
+**MongoDB**
+
+* Incident: [Insert incident description]
+* Duration: [Insert duration in hours/minutes]
+* Start Time: [Insert start time]
+* End Time: [Insert end time]
+* Impacted Services:
+	+ [List services impacted, e.g., Atlas, Cloud Manager, etc.]
+* Regions/AZs Impacted:
+	+ [List regions and availability zones affected, e.g., us-east-1, eu-west-2, etc.]
+
+**Akamai**
+
+* Incident: [Insert incident description]
+* Duration: [Insert duration in hours/minutes]
+* Start Time: [Insert start time]
+* End Time: [Insert end time]
+* Impacted Services:
+	+ [List services impacted, e.g., Content Delivery Network (CDN), etc.]
+* Regions/AZs Impacted:
+	+ [List regions and availability zones affected, e.g., us-east-1, eu-west-2, etc.]
+
+**Cloudflare**
+
+* Incident: [Insert incident description]
+* Duration: [Insert duration in hours/minutes]
+* Start Time: [Insert start time]
+* End Time: [Insert end time]
+* Impacted Services:
+	+ [List services impacted, e.g., DNS, SSL/TLS, etc.]
+* Regions/AZs Impacted:
+	+ [List regions and availability zones affected, e.g., us-east-1, eu-west-2, etc.]
+
+Please note that these are just examples, and the actual outage reports may vary depending on the specific incident and the cloud provider's documentation.

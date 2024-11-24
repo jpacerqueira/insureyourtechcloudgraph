@@ -1,0 +1,37 @@
+I don't have information on the specific outages you're referring to for each cloud provider. The provided text appears to be a summary of an incident in Microsoft Azure.
+
+However, I can provide general information on how to apply a query to find outage information for multiple cloud providers using tools like Datadog or AWS CloudWatch, Google Cloud Monitoring, and Azure Monitor.
+
+To resume the outage in text, you would need to search for specific keywords related to the outage, such as "Microsoft Azure failed-over" or "Access Panel bug deployment".
+
+Here's a sample query:
+
+`("Microsoft Azure failed-over" OR "Azure Access Panel bug") AND (region:US OR region:EU OR region:APAC)`
+
+This query would return incidents related to Microsoft Azure failed-over or Access Panel bug deployments in the US, EU, and APAC regions.
+
+To find out when the outage occurred, you can use the following query:
+
+`("Microsoft Azure failed-over" OR "Azure Access Panel bug") AND (start_time:2021-11-09 OR start_time:2021-12-16)`
+
+This query would return incidents related to Microsoft Azure failed-over or Access Panel bug deployments that started on November 9, 2021, or December 16, 2021.
+
+To find out which services were impacted, you can use the following query:
+
+`("Microsoft Azure failed-over" OR "Azure Access Panel bug") AND (service:Graph APIs OR service:Access Panel)`
+
+This query would return incidents related to Microsoft Azure failed-over or Access Panel bug deployments that affected Graph APIs or Access Panel services.
+
+To find out which regions and availability zones were impacted, you can use the following query:
+
+`("Microsoft Azure failed-over" OR "Azure Access Panel bug") AND (region:US-Central OR region:West-US OR region:East-US)`
+
+This query would return incidents related to Microsoft Azure failed-over or Access Panel bug deployments that affected regions in US-Central, West-US, and East-US.
+
+To find out how long the outage lasted, you can use the following query:
+
+`("Microsoft Azure failed-over" OR "Azure Access Panel bug") AND (duration:12 hours OR duration:24 hours)`
+
+This query would return incidents related to Microsoft Azure failed-over or Access Panel bug deployments that lasted for 12 hours or 24 hours.
+
+Please note that these queries are just examples and may need to be modified based on the specific requirements of your search.

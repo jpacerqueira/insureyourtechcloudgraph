@@ -1,0 +1,48 @@
+I'll provide a summary of the incident for each cloud provider. Please note that I won't have access to real-time data or the ability to execute queries on these providers' systems.
+
+**Microsoft Azure**
+
+* Resume: A periodic background task in Azur e Front Door and Azur e CDN S tandar d from Microsoft caused increased latency and connection timeouts.
+* Duration: The incident lasted between 14:55 UTC and 19:50 UTC on July 12th, 2021.
+* Impacted services: Windows Virtual Desktop, Azure Front Door, and Azure CDN Standard.
+* Affected regions and availability zones:
+	+ East US metr o locations experienced peak failur e rates of approximately 70%.
+	+ Other regions were not significantly impacted.
+
+**Amazon Web Services (AWS)**
+
+* I don't have information on this incident for AWS. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting AWS during the specified time frame.
+
+**Google Cloud Platform (GCP)**
+
+* I don't have information on this incident for GCP. Like AWS, the query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting GCP during the specified time frame.
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* I don't have information on this incident for OCI. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting OCI during the specified time frame.
+
+**IBM Cloud**
+
+* I don't have information on this incident for IBM Cloud. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting IBM Cloud during the specified time frame.
+
+**Snowflake**
+
+* I don't have information on this incident for Snowflake. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting Snowflake during the specified time frame.
+
+**Databricks**
+
+* I don't have information on this incident for Databricks. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting Databricks during the specified time frame.
+
+**MongoDB**
+
+* I don't have information on this incident for MongoDB. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting MongoDB during the specified time frame.
+
+**Akamai**
+
+* I don't have information on this incident for Akamai. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting Akamai during the specified time frame.
+
+**Cloudflare**
+
+* I don't have information on this incident for Cloudflare. The query is specific to Microsoft Azure, and I couldn't find any relevant data on an outage affecting Cloudflare during the specified time frame.
+
+Please note that these providers may have had other incidents or outages during the same time frame, but I couldn't find any information on a specific incident matching the query.

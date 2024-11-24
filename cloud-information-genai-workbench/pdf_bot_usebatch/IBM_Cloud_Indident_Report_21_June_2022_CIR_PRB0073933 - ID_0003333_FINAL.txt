@@ -1,0 +1,39 @@
+I don't have the capability to execute a query across multiple cloud providers. However, I can help you analyze the provided IBM Cloud Customer Incident Report.
+
+Here's a summary of the incident:
+
+**Incident Details:**
+
+* Release Date: 21 June 2022
+* Outage Start: 21 June 2022 06:34 UTC
+* Outage End: 21 June 2022 08:06 UTC
+* Duration: 1 hour 32 minutes
+
+**Impacted Services and Regions:**
+
+The outage affected multiple IBM Cloud services, including:
+
+* AppID
+* Schematics
+* Secrets Manager
+* UI
+* Bluemix-developer-experience
+* Cloudcerts
+* Code Engine
+* Compliance
+* Continuous-delivery-pipeline
+* Virtual Private Cloud
+* Cloud App Dev Services
+* Event-notifications
+
+The outage impacted all IBM Cloud regions.
+
+**Availability Zones:**
+
+Unfortunately, the provided report does not specify which availability zones were affected. However, it's likely that the outage was region-wide, as it affected all IBM Cloud regions.
+
+**Other Cloud Providers:**
+
+As for other cloud providers, there is no information available in this specific incident report. If you're looking for similar incidents on other cloud providers, I recommend searching their respective customer incident reports or support portals.
+
+Please note that this summary only applies to the provided IBM Cloud Customer Incident Report and does not cover other cloud providers.

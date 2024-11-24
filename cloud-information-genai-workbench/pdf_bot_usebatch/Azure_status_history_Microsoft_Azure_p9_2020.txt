@@ -1,0 +1,91 @@
+I'll provide the information for each cloud provider based on the context you provided. Please note that I won't have access to real-time data or specific incident details, so my responses will be based on the text provided.
+
+**Amazon AWS**
+
+* Resume of the outage: Not mentioned in the provided text.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of the outage: Not specified.
+
+**Google GCP**
+
+* Resume of the outage: Not mentioned in the provided text.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of the outage: Not specified.
+
+**Microsoft Azure**
+
+* Resume of the outage: A subset of customers in Japan East may have experienced service degradation and increased latency for resources utilizing Azure Storage, including failure of virtual machine disks. Some Azure services utilizing Storage may have also experienced downtime impact.
+* Duration of the incident: Between 03:26 UTC and 10:02 UTC on February 26, 2021 (approximately 6 hours and 36 minutes).
+* Time when the outage occurred: Between 03:26 UTC and 10:02 UTC on February 26, 2021.
+* Impacted services: Azure Storage, virtual machine disks, and possibly other services that leverage Azure Storage.
+* Regions and availability zones impacted: Japan East region (specifically, the Tokyo region).
+* Duration of the outage: Approximately 6 hours and 36 minutes.
+
+**Oracle OCI**
+
+* Resume of the outage: Not mentioned in the provided text.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of the outage: Not specified.
+
+**IBM Cloud**
+
+* Resume of the outage: Not mentioned in the provided text.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of the outage: Not specified.
+
+**Snowflake**
+
+* Resume of the outage: Not mentioned in the provided text.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of the outage: Not specified.
+
+**Databricks**
+
+* Resume of the outage: Not mentioned in the provided text.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of the outage: Not specified.
+
+**MongoDB**
+
+* Resume of the outage: Not mentioned in the provided text.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of the outage: Not specified.
+
+**Akamai**
+
+* Resume of the outage: Not mentioned in the provided text.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of the outage: Not specified.
+
+**Cloudflare**
+
+* Resume of the outage: Not mentioned in the provided text.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of the outage: Not specified.

@@ -1,0 +1,91 @@
+I'll provide a summary of the incidents for each cloud provider based on the provided context. Please note that I might not have all the information, and some details might be missing.
+
+**Amazon AWS**
+
+* Resume of the outage: Not mentioned in the provided context.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Impact on customers: Not specified.
+
+**Google GCP**
+
+* Resume of the outage: Not mentioned in the provided context.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Impact on customers: Not specified.
+
+**Microsoft Azure**
+
+* Resume of the outage: On December 11, 2019, between 17:24 and 18:48 UTC, clients attempting to reach Azure CDN from Verizon endpoints received intermittent HTTP (5XX) errors or connection failures instead of expected content.
+* Duration of the incident: Approximately 1 hour and 24 minutes.
+* Time when the outage occurred: December 11, 2019, between 17:24 and 18:48 UTC.
+* Impacted services: Azure CDN services from Verizon endpoints.
+* Regions and availability zones impacted: Not specified.
+* Impact on customers: Customers experienced HTTP errors or connection failures.
+
+**Oracle OCI**
+
+* Resume of the outage: Not mentioned in the provided context.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Impact on customers: Not specified.
+
+**IBM Cloud**
+
+* Resume of the outage: Not mentioned in the provided context.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Impact on customers: Not specified.
+
+**Snowflake**
+
+* Resume of the outage: Not mentioned in the provided context.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Impact on customers: Not specified.
+
+**Databricks**
+
+* Resume of the outage: Not mentioned in the provided context.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Impact on customers: Not specified.
+
+**MongoDB**
+
+* Resume of the outage: Not mentioned in the provided context.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Impact on customers: Not specified.
+
+**Akamai**
+
+* Resume of the outage: On November 20, 2019, between 00:56 and 03:40 UTC, multiple services across Microsoft, including Azure, Microsoft 365, failed due to management requests.
+* Duration of the incident: Approximately 2 hours and 44 minutes.
+* Time when the outage occurred: November 20, 2019, between 00:56 and 03:40 UTC.
+* Impacted services: Multiple services across Microsoft, including Azure and Microsoft 365.
+* Regions and availability zones impacted: Not specified.
+* Impact on customers: Customers experienced service failures.
+
+**Cloudflare**
+
+* Resume of the outage: Not mentioned in the provided context.
+* Duration of the incident: Not specified.
+* Time when the outage occurred: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Impact on customers: Not specified.

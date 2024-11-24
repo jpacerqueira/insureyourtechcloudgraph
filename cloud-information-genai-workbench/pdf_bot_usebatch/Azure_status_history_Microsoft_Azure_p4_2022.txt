@@ -1,0 +1,47 @@
+I'll provide the information for each cloud provider based on the context provided. Please note that I don't have real-time access to current events or specific incident details.
+
+**Amazon AWS**
+
+* Resume of the outage: The outage affected a subset of customers in the West US 2 region, causing failures when trying to access resources hosted in the region.
+* Duration of the incident: The outage lasted for approximately 13 hours (from 02:47 UTC on August 27 to 02:00 UTC on August 28).
+* Impacted services: Storage, Virtual Machines, App Services, Application Insights, Azure Database for PostgreSQL, Azure Red Hat OpenShift, Azure Search, Azure SQL DB, Backup, Data Explorer, ExpressRoute, and NetApp Files.
+* Affected regions and availability zones: The West US 2 region was impacted, which includes multiple Availability Zones.
+
+**Google Cloud Platform (GCP)**
+
+* Note: There is no mention of a Google Cloud Platform outage in the provided context. It appears to be related to Microsoft Azure.
+
+**Microsoft Azure**
+
+* Resume of the outage: A utility power outage caused failures when trying to access resources hosted in the West US 2 region.
+* Duration of the incident: The outage lasted for approximately 13 hours (from 02:47 UTC on August 27 to 02:00 UTC on August 28).
+* Impacted services: Storage, Virtual Machines, App Services, Application Insights, Azure Database for PostgreSQL, Azure Red Hat OpenShift, Azure Search, Azure SQL DB, Backup, Data Explorer, ExpressRoute, and NetApp Files.
+* Affected regions and availability zones: The West US 2 region was impacted, which includes multiple Availability Zones.
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Note: There is no mention of an Oracle Cloud Infrastructure outage in the provided context. It appears to be related to Microsoft Azure.
+
+**IBM Cloud**
+
+* Note: There is no mention of an IBM Cloud outage in the provided context. It appears to be related to Microsoft Azure.
+
+**Snowflake**
+
+* Note: Snowflake is not mentioned as being impacted by the outage.
+
+**Databricks**
+
+* Note: Databricks is not mentioned as being impacted by the outage.
+
+**MongoDB**
+
+* Note: MongoDB is not mentioned as being impacted by the outage.
+
+**Akamai**
+
+* Note: Akamai is not mentioned as being impacted by the outage.
+
+**Cloudflare**
+
+* Note: Cloudflare is not mentioned as being impacted by the outage.

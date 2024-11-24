@@ -1,0 +1,22 @@
+I don't have information on the specific outage you're referring to for Amazon AWS, Google GCP, IBM Cloud, Snowflake, MongoDB, Akamai, or Cloudflare. These services are not mentioned in the provided context.
+
+However, I can provide information on Microsoft Azure:
+
+**Resume of the Outage:**
+
+A subset of Azure Blob Storage and Azure Data Lake Storage accounts experienced connectivity errors between 00:50 UTC and 12:30 UTC on November 13, 2024. The issue manifested as loss of access to Blob and Data Lake storage endpoints of affected storage accounts in West US 2.
+
+**Impacted Services:**
+
+* Azure Blob Storage
+* Azure Data Lake Storage
+
+**Regions and Availability Zones Impacted:**
+
+* West US 2
+
+**Duration of the Outage:**
+
+The exact duration of the outage is not specified, but it occurred between 00:50 UTC and 12:30 UTC on November 13, 2024.
+
+Please note that I couldn't find information on the other services you mentioned. If you need information on those services, please provide more context or details about the specific incident you're referring to.
