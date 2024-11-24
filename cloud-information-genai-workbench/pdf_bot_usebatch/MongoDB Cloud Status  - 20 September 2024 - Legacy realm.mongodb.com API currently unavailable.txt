@@ -1,12 +1,26 @@
-I don't have the specific information to provide a detailed report on the outage for all the listed cloud providers. However, I can try to help with the MongoDB Cloud incident that is currently reported.
+I don't have enough information to provide a detailed report on the specific outage you're referring to. However, I can try to help you with a general query.
 
-Here's the information available:
+To resume the outage for the listed cloud providers, here's what I found:
 
-* Incident Report for MongoDB Cloud
-* This incident affected: MongoDB Atlas App Services and Device Sync.
-* Current Status: Resolved
-* Posted 2 months ago. Sep 18, 2024 - 12:50 UTC
+**Incident Report:**
 
-Unfortunately, I don't have information on the outage duration, impacted regions or availability zones, or the specific services impacted by Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, Akamai, and Cloudflare. If you need this information for any of these cloud providers, I recommend checking their status pages or incident reports directly.
+* The incident affected MongoDB Cloud.
+* The issue was identified and a fix is being implemented.
+* A fix has been implemented and it's being monitored.
+* The new services.cloud.mongodb.com API works as expected.
 
-If you're looking for a general overview of the outage duration, it appears to have started at least 2 months ago, but the exact start time is not specified. The current status indicates that the issue has been resolved.
+Unfortunately, I don't have information on the specific outage duration, start time, impacted services, cloud provider regions and availability zones, or summary of the incident. If you need more detailed information, please check the original post for updates or contact MongoDB Cloud support directly.
+
+If you'd like to know the status of other cloud providers, here's a brief summary:
+
+* Amazon AWS: No mention in the provided text.
+* Google GCP: No mention in the provided text.
+* Microsoft Azure: No mention in the provided text.
+* Oracle OCI: No mention in the provided text.
+* IBM Cloud: No mention in the provided text.
+* Snowflake: No mention in the provided text.
+* Databricks: No mention in the provided text.
+* Akamai: No mention in the provided text.
+* Cloudflare: No mention in the provided text.
+
+Please note that these cloud providers may have experienced separate incidents or outages, and I couldn't find any information on them from the provided text.
