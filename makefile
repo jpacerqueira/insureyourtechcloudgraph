@@ -4,6 +4,10 @@ check:
 	whoami ; id; pwd; ls -listarh; docker ps
 	echo "make check - Warning : Has No specific - rule to make target 'check'.  just continue."
 
+distcheck:
+	whoami ; id; pwd; ls -listarh; docker ps
+	echo "make distcheck - Warning : Has No specific - rule to make target 'distcheck'.  just continue."
+
 config_where_am_I_running:
 	whoami ; id ; pwd ; ls -listarh ; docker ps
 	echo "make config_where_am_I_running - Warning : Has No specific - rule to make target 'config_where_am_I_running'.  just continue."
