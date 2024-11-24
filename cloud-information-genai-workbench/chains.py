@@ -46,7 +46,7 @@ def load_llm(llm_name: str, logger=BaseLogger(), config={}):
     elif len(llm_name):
         logger.info(f"LLM: Using Ollama: {llm_name}")
         return ChatOllama(
-            temperature=0,
+            temperature=config["temperature"],
             base_url=config["ollama_base_url"],
             model=llm_name,
             streaming=True,

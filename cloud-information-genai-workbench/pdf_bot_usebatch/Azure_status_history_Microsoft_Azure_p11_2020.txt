@@ -1,0 +1,18 @@
+I can help you with the query, but I need to clarify that I'll be applying it to Microsoft Azure only, as the other cloud providers don't seem to have a similar incident report page. Here are the results:
+
+**Microsoft Azure**
+
+* Resume of the outage: A subset of customers in East US may have experienced timeouts and latency issues when processing service management operations such as create, update, delete, for various Azure services.
+* Duration of the incident: 3 hours (between 13:30 and 16:30 UTC on May 19, 2020)
+* Time of the outage: Between 13:30 and 16:30 UTC on May 19, 2020
+* Impacted services:
+	+ Azure SQL Database
+	+ Azure SQL Database Managed Instance
+	+ Azure Database for MariaDB
+	+ Azure Database for MySQL
+	+ Azure Database for PostgreSQL
+	+ Azure Synapse Analytics services
+* Regions and availability zones impacted: East US (specifically, the region's datacenter)
+* Note: The outage was caused by an incident during a planned power maintenance activity at the datacenter.
+
+Please note that I couldn't find any information on outages for the other cloud providers you mentioned. If you'd like to apply the query to one of them, please let me know and I'll be happy to help!

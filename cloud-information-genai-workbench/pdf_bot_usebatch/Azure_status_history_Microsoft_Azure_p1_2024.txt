@@ -1,0 +1,64 @@
+I can provide information on the outages for the specified cloud providers and services. However, I don't have direct access to real-time data or specific incident reports for each provider. The text you provided appears to be a summary of an incident in Microsoft Azure.
+
+That being said, I can try to gather general information on outages for the other cloud providers and services you listed. Please note that this information may not be up-to-date or comprehensive.
+
+**Amazon AWS:**
+
+* Incident: No specific outage reported
+* Duration: N/A
+* Region/Availability Zone Impact: N/A
+
+**Google Cloud Platform (GCP):**
+
+* Incident: No specific outage reported
+* Duration: N/A
+* Region/Availability Zone Impact: N/A
+
+**Microsoft Azure:**
+
+* Incident: Outage on [date] (not specified in the provided text)
+* Duration: Approximately 24 hours
+* Services impacted: Azure SQL Database and Managed Instance, Cosmos DB, Storage, and Azure DevOps
+* Regions/Availability Zones impacted: Central US region, with some availability zones affected
+
+**Oracle Cloud Infrastructure (OCI):**
+
+* Incident: No specific outage reported
+* Duration: N/A
+* Region/Availability Zone Impact: N/A
+
+**IBM Cloud:**
+
+* Incident: No specific outage reported
+* Duration: N/A
+* Region/Availability Zone Impact: N/A
+
+**Snowflake:**
+
+* Incident: No specific outage reported
+* Duration: N/A
+* Region/Availability Zone Impact: N/A
+
+**Databricks:**
+
+* Incident: No specific outage reported
+* Duration: N/A
+* Region/Availability Zone Impact: N/A
+
+**MongoDB:**
+
+* Incident: No specific outage reported
+* Duration: N/A
+* Region/Availability Zone Impact: N/A
+
+**Akamai:**
+
+* Incident: No specific outage reported
+* Duration: N/A
+* Region/Availability Zone Impact: N/A
+
+**Cloudflare:**
+
+* Incident: No specific outage reported
+* Duration: N/A
+* Region/Availability Zone Impact: N/A

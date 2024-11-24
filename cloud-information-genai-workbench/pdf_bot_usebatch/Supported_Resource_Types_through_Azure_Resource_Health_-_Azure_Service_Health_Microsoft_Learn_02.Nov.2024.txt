@@ -1,0 +1,9 @@
+I don't have the capability to execute a query across multiple cloud providers. The provided output appears to be from Azure Resource Health, which only provides information about Microsoft Azure services.
+
+To provide an answer for all the listed cloud providers, I would need to access and analyze data from each provider's outage management systems. However, I can suggest some possible ways to obtain this information:
+
+1. Check the official websites of each cloud provider for outage notifications and incident reports.
+2. Use third-party tools or services that aggregate outage information across multiple cloud providers, such as Downdetector or OutageReport.
+3. Contact the support teams of each cloud provider directly to inquire about recent outages and their impact on specific services.
+
+If you would like, I can try to help you find some general information about recent outages in Azure Resource Health, but it will not be comprehensive across all listed providers.

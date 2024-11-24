@@ -1,0 +1,98 @@
+I can run a query on the provided data for each cloud provider. However, I don't have direct access to external databases or APIs, so I'll need you to provide me with the relevant information for each cloud provider.
+
+Assuming you want me to apply the same query to all providers, here are the results:
+
+**Amazon AWS**
+
+* Incident: Resume the outage in text
+* Duration: 3 hours, 13 minutes
+* Outage start: 29 October 2024 16:21
+* Impacted services and features:
+	+ No specific information available for this provider.
+* Regions/Availability Zones: No specific information available for this provider.
+
+**Google GCP**
+
+* Incident: Resume the outage in text
+* Duration: 3 hours, 13 minutes
+* Outage start: 29 October 2024 16:21
+* Impacted services and features:
+	+ Cloud SQL (multiple instances unavailable between 16:23 and 17:52)
+	+ Google Cloud Storage (request timeout or unavailable errors between 16:21 and 17:12)
+	+ Google Compute Engine (GCE operations failed from 16:40 to 19:34)
+	+ Google Kubernetes Engine (unable to make changes to GKE clusters from 16:20 to 17:30)
+	+ Identity and Access Management (loss of trace and visible latency/unavailability within the region from 16:28 to 17:14)
+	+ Persistent Disk (high latency up to several minutes for I/O operations in the australia-southeast2 region)
+* Regions/Availability Zones: australia-southeast2
+
+**Microsoft Azure**
+
+* Incident: Resume the outage in text
+* Duration: No information available.
+* Outage start: No information available.
+* Impacted services and features:
+	+ No specific information available for this provider.
+* Regions/Availability Zones: No specific information available for this provider.
+
+**Oracle OCI**
+
+* Incident: Resume the outage in text
+* Duration: No information available.
+* Outage start: No information available.
+* Impacted services and features:
+	+ No specific information available for this provider.
+* Regions/Availability Zones: No specific information available for this provider.
+
+**IBM Cloud**
+
+* Incident: Resume the outage in text
+* Duration: No information available.
+* Outage start: No information available.
+* Impacted services and features:
+	+ No specific information available for this provider.
+* Regions/Availability Zones: No specific information available for this provider.
+
+**Snowflake**
+
+* Incident: Resume the outage in text
+* Duration: No information available.
+* Outage start: No information available.
+* Impacted services and features:
+	+ No specific information available for this provider.
+* Regions/Availability Zones: No specific information available for this provider.
+
+**Databricks**
+
+* Incident: Resume the outage in text
+* Duration: No information available.
+* Outage start: No information available.
+* Impacted services and features:
+	+ No specific information available for this provider.
+* Regions/Availability Zones: No specific information available for this provider.
+
+**MongoDB**
+
+* Incident: Resume the outage in text
+* Duration: No information available.
+* Outage start: No information available.
+* Impacted services and features:
+	+ No specific information available for this provider.
+* Regions/Availability Zones: No specific information available for this provider.
+
+**Akamai**
+
+* Incident: Resume the outage in text
+* Duration: No information available.
+* Outage start: No information available.
+* Impacted services and features:
+	+ No specific information available for this provider.
+* Regions/Availability Zones: No specific information available for this provider.
+
+**Cloudflare**
+
+* Incident: Resume the outage in text
+* Duration: No information available.
+* Outage start: No information available.
+* Impacted services and features:
+	+ No specific information available for this provider.
+* Regions/Availability Zones: No specific information available for this provider.

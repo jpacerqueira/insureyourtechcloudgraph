@@ -1,0 +1,91 @@
+I'll provide the information for each cloud provider based on the provided context. Please note that I don't have direct access to real-time data or specific incident details, so my responses will be based on the text provided.
+
+**Amazon AWS**
+
+* Resume of outage: No specific details mentioned in the text.
+* Duration of incident: Not specified.
+* Time of outage: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of outage: Not specified.
+
+**Google GCP**
+
+* Resume of outage: No specific details mentioned in the text.
+* Duration of incident: Not specified.
+* Time of outage: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of outage: Not specified.
+
+**Microsoft Azure**
+
+* Resume of outage: A subset of customers in South Central US may have experienced issues between 12:48 and 19:10 UTC on February 28, 2020.
+* Duration of incident: Approximately 6 hours and 22 minutes.
+* Time of outage: Between 12:48 and 19:10 UTC on February 28, 2020.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: South Central US (no specific regions or availability zones mentioned).
+* Duration of outage: Approximately 6 hours and 22 minutes.
+
+**Oracle OCI**
+
+* Resume of outage: No specific details mentioned in the text.
+* Duration of incident: Not specified.
+* Time of outage: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of outage: Not specified.
+
+**IBM Cloud**
+
+* Resume of outage: No specific details mentioned in the text.
+* Duration of incident: Not specified.
+* Time of outage: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of outage: Not specified.
+
+**Snowflake**
+
+* Resume of outage: No specific details mentioned in the text.
+* Duration of incident: Not specified.
+* Time of outage: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of outage: Not specified.
+
+**Databricks**
+
+* Resume of outage: No specific details mentioned in the text.
+* Duration of incident: Not specified.
+* Time of outage: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of outage: Not specified.
+
+**MongoDB**
+
+* Resume of outage: No specific details mentioned in the text.
+* Duration of incident: Not specified.
+* Time of outage: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of outage: Not specified.
+
+**Akamai**
+
+* Resume of outage: No specific details mentioned in the text.
+* Duration of incident: Not specified.
+* Time of outage: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of outage: Not specified.
+
+**Cloudflare**
+
+* Resume of outage: No specific details mentioned in the text.
+* Duration of incident: Not specified.
+* Time of outage: Not specified.
+* Impacted services: Not specified.
+* Regions and availability zones impacted: Not specified.
+* Duration of outage: Not specified.

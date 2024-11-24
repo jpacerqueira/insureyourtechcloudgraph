@@ -1,0 +1,15 @@
+I don't have information on the specific outages you're referring to for Amazon AWS, Google GCP, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare. However, I can provide an answer based on the context provided about Microsoft Azure.
+
+**Microsoft Azure:**
+
+* The outage occurred on August 30, 2023.
+* The incident started at approximately 19:00 UTC (Coordinated Universal Time) and lasted for several hours.
+* Services impacted included:
+	+ SQL Databases with 'autofailovergroups' enabled, which were failed out of the region, incurring around eight hours of downtime prior to the failover completing.
+	+ Virtual Machines (VMs), which were offline during the incident.
+	+ Cosmos DB accounts, which experienced a delay in restoration due to the initial failure of the primary cluster.
+* Regions and availability zones impacted:
+	+ The outage affected multiple regions, including Australia East.
+	+ Availability zones within these regions were also impacted, with some zones experiencing degradation or being unavailable.
+
+Please note that I couldn't find information on the outages for the other cloud providers you mentioned. If you have specific questions about one of those services, I'll do my best to help.

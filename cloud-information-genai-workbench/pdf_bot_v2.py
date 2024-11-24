@@ -45,16 +45,7 @@ class StreamHandler(BaseCallbackHandler):
         self.container.markdown(self.text)
 
 
-llm = load_llm(
-    llm_name, 
-    logger=logger, 
-    config={
-        "ollama_base_url": ollama_base_url,
-        "format": "json",
-        "temperature": 0.7,
-        "model": llm_name,
-    }
-)
+llm = load_llm(llm_name, logger=logger, config={"ollama_base_url": ollama_base_url,"temperature": 0.7,})
 
 
 def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, output_dir=None):
@@ -84,8 +75,7 @@ def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, outpu
     qa = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type="stuff",
-        retriever=vectorstore.as_retriever(),
-        return_source_documents=True
+        retriever=vectorstore.as_retriever()
     )
     
     # Enhance query with cloud vendor if specified

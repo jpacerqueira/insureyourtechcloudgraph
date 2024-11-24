@@ -1,0 +1,33 @@
+I can provide information on the Amazon AWS outage, as the other cloud providers are not mentioned. Here's a summary of the outage:
+
+**Incident Details:**
+
+* The incident started with an EBS cluster degradation issue in the US East Region.
+* The outage affected EC2 instances and RDS databases hosted in the primary impacted Availability Zone (AZ).
+* The issue caused "stuck" volumes, leading to elevated error rates and latencies for new EBS-backed EC2 launches.
+
+**Duration of Outage:**
+
+* The outage started at an unspecified time before April 21st.
+* The outage lasted for approximately 11 hours, from the onset until Noon PM PDT on April 21st.
+* After the initial 11-hour period, the issue was partially resolved when a change to the EBS control plane API fixed the problem.
+
+**Impacted Services and Regions:**
+
+* Impacted services:
+	+ Amazon EC2 instances (EBS-backed)
+	+ Amazon RDS databases
+* Affected regions:
+	+ US East Region
+
+**Availability Zones Impacted:**
+
+* The primary impacted Availability Zone was not specified, but it is mentioned that the outage affected a single AZ.
+
+**Resolution and Recovery:**
+
+* The outage was partially resolved at 11:30 AM PDT when a change to the EBS control plane API fixed the issue.
+* After the initial resolution, customers with automatic backups turned on had the option to initiate point-in-time database restore operations for their RDS instances.
+* By April 24th, most of the affected volumes had been recovered, but some remained "stuck" due to machine failure.
+
+I couldn't find information on the Google Cloud Platform (GCP), Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare being impacted by this outage. If you need information on these services, please let me know, and I'll try to provide more details or clarify that they were not affected.

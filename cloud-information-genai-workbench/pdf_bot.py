@@ -45,7 +45,7 @@ class StreamHandler(BaseCallbackHandler):
         self.container.markdown(self.text)
 
 
-llm = load_llm(llm_name, logger=logger, config={"ollama_base_url": ollama_base_url})
+llm = load_llm(llm_name, logger=logger, config={"ollama_base_url": ollama_base_url, "temperature": 0})
 
 
 def main():

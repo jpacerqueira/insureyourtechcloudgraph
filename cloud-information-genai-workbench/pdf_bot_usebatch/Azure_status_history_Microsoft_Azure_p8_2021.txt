@@ -1,0 +1,91 @@
+I'll provide a summary of the outage for each cloud provider based on the provided context. Please note that I won't have access to real-time information or specific details about ongoing incidents.
+
+**Amazon AWS**
+
+* Resume: No specific information available.
+* Incident duration: Unknown
+* Outage start time: Unknown
+* Impacted services: None mentioned in the provided context.
+* Affected regions/availability zones: None mentioned in the provided context.
+* Duration of outage: Unknown
+
+**Google GCP**
+
+* Resume: No specific information available.
+* Incident duration: Unknown
+* Outage start time: Unknown
+* Impacted services: None mentioned in the provided context.
+* Affected regions/availability zones: None mentioned in the provided context.
+* Duration of outage: Unknown
+
+**Microsoft Azure**
+
+* Resume: A regional networking fiber cut resulted in a brief loss of connectivity to Microsoft resources. An automated failover of network traffic to an alternative fiber route mitigated the issue.
+* Incident duration: Approximately 1 hour (from 17:21 to 18:21 UTC on March 9, 2021)
+* Outage start time: 17:21 UTC on March 9, 2021
+* Impacted services: None mentioned in the provided context.
+* Affected regions/availability zones: West Europe and North Europe (specifically, the West Europe key vault service failed over to North Europe).
+* Duration of outage: Approximately 1 hour
+
+**Oracle OCI**
+
+* Resume: No specific information available.
+* Incident duration: Unknown
+* Outage start time: Unknown
+* Impacted services: None mentioned in the provided context.
+* Affected regions/availability zones: None mentioned in the provided context.
+* Duration of outage: Unknown
+
+**IBM Cloud**
+
+* Resume: No specific information available.
+* Incident duration: Unknown
+* Outage start time: Unknown
+* Impacted services: None mentioned in the provided context.
+* Affected regions/availability zones: None mentioned in the provided context.
+* Duration of outage: Unknown
+
+**Snowflake**
+
+* Resume: No specific information available.
+* Incident duration: Unknown
+* Outage start time: Unknown
+* Impacted services: None mentioned in the provided context.
+* Affected regions/availability zones: None mentioned in the provided context.
+* Duration of outage: Unknown
+
+**Databricks**
+
+* Resume: No specific information available.
+* Incident duration: Unknown
+* Outage start time: Unknown
+* Impacted services: None mentioned in the provided context.
+* Affected regions/availability zones: None mentioned in the provided context.
+* Duration of outage: Unknown
+
+**MongoDB**
+
+* Resume: No specific information available.
+* Incident duration: Unknown
+* Outage start time: Unknown
+* Impacted services: None mentioned in the provided context.
+* Affected regions/availability zones: None mentioned in the provided context.
+* Duration of outage: Unknown
+
+**Akamai**
+
+* Resume: No specific information available.
+* Incident duration: Unknown
+* Outage start time: Unknown
+* Impacted services: None mentioned in the provided context.
+* Affected regions/availability zones: None mentioned in the provided context.
+* Duration of outage: Unknown
+
+**Cloudflare**
+
+* Resume: No specific information available.
+* Incident duration: Unknown
+* Outage start time: Unknown
+* Impacted services: None mentioned in the provided context.
+* Affected regions/availability zones: None mentioned in the provided context.
+* Duration of outage: Unknown

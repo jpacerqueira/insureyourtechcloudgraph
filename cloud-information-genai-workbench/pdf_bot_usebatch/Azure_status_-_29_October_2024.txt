@@ -1,0 +1,48 @@
+I can only provide information on Microsoft Azure as the other platforms are not included in the provided context. Here's a summary of the outage based on the available information:
+
+**Outage Details:**
+
+* **Incident:** Resume of an unknown incident
+* **Duration:** Unknown
+* **Start Time:** Unknown
+* **End Time:** Unknown
+
+**Impacted Services:**
+
+* Azure Mobile Apps
+* Notification Hubs
+* Containers (Azure Container Service)
+* Apps (Azure App Service)
+* Instances (Azure Virtual Machines)
+* Storage (Azure Blob Storage, Azure File Storage)
+* Azure Kubernetes Service (AKS)
+* Azure Dev Spaces
+* Azure Red Hat OpenShift
+* Azure Cosmos DB
+* Azure SQL Database
+* Managed Instance for Apache
+* Cassandra
+* MariaDB
+* MySQL
+* PostgreSQL
+* Redis
+* SQL Server Stretch
+
+**Regions and Availability Zones Impacted:**
+
+* East US
+* East US 2
+* Central US
+* North Central US
+* South Central US
+* West Central US
+* West US
+* West US 2
+* West US 3
+* Canada East
+* Canada Central
+* Brazil South
+
+**Note:** The above information is based on the provided context and may not be comprehensive or up-to-date. If you need more specific information, I recommend contacting Microsoft Azure support for further assistance.
+
+Please note that I couldn't find any information on the duration of the outage, start time, or a detailed description of the incident. If you have access to additional resources or documentation, you may be able to gather more information about the outage.

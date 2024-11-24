@@ -1,6 +1,6 @@
 #syntax = docker/dockerfile:1.4
 
-FROM ollama/ollama:latest AS ollama
+FROM ollama/ollama:0.1.0 AS ollama
 FROM babashka/babashka:latest
 
 # Set the working directory to /root

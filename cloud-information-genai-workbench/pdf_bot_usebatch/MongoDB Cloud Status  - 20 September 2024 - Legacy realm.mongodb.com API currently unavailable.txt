@@ -1,0 +1,12 @@
+I don't have the specific information to provide a detailed report on the outage for all the listed cloud providers. However, I can try to help with the MongoDB Cloud incident that is currently reported.
+
+Here's the information available:
+
+* Incident Report for MongoDB Cloud
+* This incident affected: MongoDB Atlas App Services and Device Sync.
+* Current Status: Resolved
+* Posted 2 months ago. Sep 18, 2024 - 12:50 UTC
+
+Unfortunately, I don't have information on the outage duration, impacted regions or availability zones, or the specific services impacted by Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, Akamai, and Cloudflare. If you need this information for any of these cloud providers, I recommend checking their status pages or incident reports directly.
+
+If you're looking for a general overview of the outage duration, it appears to have started at least 2 months ago, but the exact start time is not specified. The current status indicates that the issue has been resolved.
