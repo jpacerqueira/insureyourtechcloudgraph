@@ -1,9 +1,25 @@
-I don't have the specific information to answer your question about the Azure outage. The provided context is related to an Azure outage, but it doesn't contain information about other cloud providers like Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+Based on the provided context, here is a summary of the Azure outage:
 
-However, I can suggest some possible ways to find the information you're looking for:
+**Resume of the Outage:**
 
-1. Check the status pages of these cloud providers for any outages or incidents.
-2. Search for news articles or press releases related to the outage.
-3. Look for incident reports or post-incident reviews (PIRs) on the websites of these cloud providers.
+A subset of customers experienced difficulties connecting to resources hosted in one particular Availability Zone (AZ) of the East US 2 region. This issue impacted a subset of storage and compute resources within that zone, causing Azure services with dependencies on those resources to also experience impact.
 
-If you provide me with more context or information about the specific outage you're looking for, I'll do my best to help you find the answers to your questions.
+**Duration of the Outage:**
+
+The outage lasted between 11 hours and 49 minutes (from 02:41 UTC on June 7, 2022, to 14:30 UTC on June 8, 2022).
+
+**When was the Outage:**
+
+The outage occurred between 02:41 UTC and 14:30 UTC on June 7, 2022.
+
+**Impacted Services:**
+
+The outage impacted Azure services with dependencies on resources in the affected Availability Zone. The specific services affected were not specified in the provided context.
+
+**Cloud Provider Regions and Availability Zones Impacted:**
+
+The East US 2 region was specifically mentioned as being impacted, along with one particular Availability Zone within that region.
+
+**Summary of Outage Duration:**
+
+The outage lasted approximately 11 hours and 49 minutes.

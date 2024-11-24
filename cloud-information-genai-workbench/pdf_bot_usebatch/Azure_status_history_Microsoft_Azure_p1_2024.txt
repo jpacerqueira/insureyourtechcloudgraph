@@ -1,64 +1,18 @@
-I can provide information on the outages for the specified cloud providers and services. However, I don't have direct access to real-time data or specific incident reports for each provider. The text you provided appears to be a summary of an incident in Microsoft Azure.
+I can only provide information on Microsoft Azure based on the provided context. The other cloud providers are not mentioned.
 
-That being said, I can try to gather general information on outages for the other cloud providers and services you listed. Please note that this information may not be up-to-date or comprehensive.
+Here is the resume of the outage:
 
-**Amazon AWS:**
+**Outage Details:**
 
-* Incident: No specific outage reported
-* Duration: N/A
-* Region/Availability Zone Impact: N/A
+* **Duration:** 24 hours
+* **Start Time:** Not specified, but it occurred within a minute of SQL unavailability.
+* **End Time:** Within two hours of storage recovery and three hours after that for most databases.
+* **Impacted Services:** Azure SQL Database and Managed Instance, Cosmos DB (specifically MongoDB API customers), and Azure DevOps.
 
-**Google Cloud Platform (GCP):**
+**Affected Regions and Availability Zones:**
 
-* Incident: No specific outage reported
-* Duration: N/A
-* Region/Availability Zone Impact: N/A
+* Central US region
+* Multiple availability zones within the Central US region were impacted.
 
-**Microsoft Azure:**
-
-* Incident: Outage on [date] (not specified in the provided text)
-* Duration: Approximately 24 hours
-* Services impacted: Azure SQL Database and Managed Instance, Cosmos DB, Storage, and Azure DevOps
-* Regions/Availability Zones impacted: Central US region, with some availability zones affected
-
-**Oracle Cloud Infrastructure (OCI):**
-
-* Incident: No specific outage reported
-* Duration: N/A
-* Region/Availability Zone Impact: N/A
-
-**IBM Cloud:**
-
-* Incident: No specific outage reported
-* Duration: N/A
-* Region/Availability Zone Impact: N/A
-
-**Snowflake:**
-
-* Incident: No specific outage reported
-* Duration: N/A
-* Region/Availability Zone Impact: N/A
-
-**Databricks:**
-
-* Incident: No specific outage reported
-* Duration: N/A
-* Region/Availability Zone Impact: N/A
-
-**MongoDB:**
-
-* Incident: No specific outage reported
-* Duration: N/A
-* Region/Availability Zone Impact: N/A
-
-**Akamai:**
-
-* Incident: No specific outage reported
-* Duration: N/A
-* Region/Availability Zone Impact: N/A
-
-**Cloudflare:**
-
-* Incident: No specific outage reported
-* Duration: N/A
-* Region/Availability Zone Impact: N/A
+**Summary:**
+The outage lasted approximately 24 hours, with most services becoming available within two to three hours after storage recovery. The incident was caused by a widespread regional impact due to storage availability failures in multiple availability zones within the Central US region.

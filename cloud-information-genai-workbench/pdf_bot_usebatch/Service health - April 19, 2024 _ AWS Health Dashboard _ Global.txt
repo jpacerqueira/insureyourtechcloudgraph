@@ -1,71 +1,51 @@
-I can provide you with a summary of outages for each cloud provider. However, please note that I'll need to make some assumptions as I don't have direct access to their outage databases.
+I can help you with the query. However, I need to clarify that I'll be using the AWS Health Dashboard data provided as it's a comprehensive source of information on AWS service interruptions.
+
+Here are the results for each cloud provider:
 
 **Amazon Web Services (AWS)**
 
-* Outage: [Increased API Error Rates] - July 30
-* Duration: 6 hours and 15 minutes
-* Impacted services: Multiple services
-* Regions/Availability Zones impacted: us-east-1, us-west-2
-* Summary: AWS experienced increased API error rates for multiple services, including billing console, partner central, and quicksight.
+* Outage: November 10, 2024, 07:55:00 AM PST - November 10, 2024, 10:13:00 AM PST
+* Duration: 3 hours, 18 minutes, and 0 seconds
+* Impacted services:
+	+ AWS Billing Console
+	+ Amazon Elastic Compute Cloud (mutatable VPC calls)
+* Regions impacted: ap-northeast-2
+* Availability zones impacted: None specified
 
 **Google Cloud Platform (GCP)**
 
-* I couldn't find any information on a recent outage that matches the query. If you'd like to provide more context or details, I can try to help further.
+* No outage found in the provided data.
 
 **Microsoft Azure**
 
-* Outage: [Increased Error Rates] - September 11
-* Duration: 1 hour and 37 minutes
-* Impacted services: Multiple services
-* Regions/Availability Zones impacted: eu-south-1
-* Summary: Azure experienced increased error rates for multiple services, including internet connectivity.
+* No outage found in the provided data.
 
 **Oracle Cloud Infrastructure (OCI)**
 
-* I couldn't find any information on a recent outage that matches the query. If you'd like to provide more context or details, I can try to help further.
+* No outage found in the provided data.
 
 **IBM Cloud**
 
-* Outage: [Increased API Error Rates] - August 6
-* Duration: 4 hours and 45 minutes
-* Impacted services: Multiple services
-* Regions/Availability Zones impacted: us-east-1
-* Summary: IBM Cloud experienced increased API error rates for multiple services, including elastic mapreduce.
+* No outage found in the provided data.
 
 **Snowflake**
 
-* I couldn't find any information on a recent outage that matches the query. If you'd like to provide more context or details, I can try to help further.
+* No outage found in the provided data.
 
 **Databricks**
 
-* Outage: [Increased Error Rates] - November 10
-* Duration: 2 hours and 18 minutes
-* Impacted services: Multiple services
-* Regions/Availability Zones impacted: ap-northeast-2
-* Summary: Databricks experienced increased error rates for multiple services, including billing console.
+* No outage found in the provided data.
 
 **MongoDB**
 
-* Outage: [Increased Error Rates] - February 21
-* Duration: 1 hour and 17 minutes
-* Impacted services: Multiple services
-* Regions/Availability Zones impacted: us-east-1
-* Summary: MongoDB experienced increased error rates for multiple services, including identity and access management.
+* No outage found in the provided data.
 
 **Akamai**
 
-* Outage: [Increased Error Rates] - October 29
-* Duration: 2 hours and 43 minutes
-* Impacted services: Multiple services
-* Regions/Availability Zones impacted: us-east-1
-* Summary: Akamai experienced increased error rates for multiple services, including partner central.
+* No outage found in the provided data.
 
 **Cloudflare**
 
-* Outage: [Increased Error Rates] - August 6
-* Duration: 2 hours and 45 minutes
-* Impacted services: Multiple services
-* Regions/Availability Zones impacted: us-east-1
-* Summary: Cloudflare experienced increased error rates for multiple services, including elastic mapreduce.
+* No outage found in the provided data.
 
-Please note that the information provided is based on my analysis of the available data and might not be exhaustive or up-to-date. If you need more specific information or details, I recommend checking the official outage pages of each cloud provider or contacting their support teams directly.
+Please note that I couldn't find any outages for GCP, Azure, OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare in the provided data. If you need information on these services, please provide more context or data.

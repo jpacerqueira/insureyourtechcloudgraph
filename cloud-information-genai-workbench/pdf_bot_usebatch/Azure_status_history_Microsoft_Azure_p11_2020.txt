@@ -1,20 +1,26 @@
-I can only provide information on Microsoft Azure as the context is provided. I don't have information on Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricksa, MongoDB, Akamai, or Cloudflare.
+I can only provide information on Microsoft Azure based on the provided context. I don't have information on Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare.
 
-However, based on the provided context, here's the information for Microsoft Azure:
+Here is the resume of the outage in text:
 
-**Resume of Outage:**
+**Outage Details:**
 
-* **Duration:** The outage lasted between 11:57 and 14:20 UTC on June 11, 2020, which is approximately 2 hours and 23 minutes.
-* **Start Time:** The outage started at 11:57 UTC on June 11, 2020.
-* **Impacted Services:** Storage customers in the East US region experienced connection failures when trying to access some of their resources hosted in this region. Virtual Machines with dependencies on the impacted storage resources also experienced downtime during this time.
+* **Start Time:** Between 13:30 and 16:30 UTC on May 19, 2020
+* **End Time:** Unknown (but it's mentioned that some customers may have experienced issues between 11:57 and 14:20 UTC on June 11, 2020)
+* **Duration:** Approximately 5 hours and 40 minutes (between 13:30 and 16:30 UTC on May 19, 2020) or approximately 2 hours and 23 minutes (between 11:57 and 14:20 UTC on June 11, 2020)
 
-**Affected Regions and Availability Zones:**
+**Impacted Services:**
 
-* Region: East US
-* Availability Zone: Not specified
+* Azure SQL Database
+* Azure SQL Database Managed Instance
+* Azure Database for MariaDB
+* Azure Database for MySQL
+* Azure Database for PostgreSQL
+* Azure Synapse Analytics services
 
-**Summary:**
+**Cloud Provider Regions and Availability Zones Impacted:**
 
-The outage lasted for approximately 2 hours and 23 minutes, starting at 11:57 UTC on June 11, 2020. It affected Storage customers in the East US region, causing connection failures and downtime for Virtual Machines with dependencies.
+* East US region (specifically, the region where some customer resources were hosted)
 
-Please note that I couldn't find information on other cloud providers or services, so this answer is limited to Microsoft Azure.
+Please note that I couldn't find any information on the exact duration of the outage in hours, minutes, and seconds. The provided context only mentions approximate durations.
+
+If you need more information or clarification, please let me know!

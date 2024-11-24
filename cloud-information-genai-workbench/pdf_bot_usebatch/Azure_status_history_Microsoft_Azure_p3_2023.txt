@@ -1,83 +1,22 @@
-I'll provide the information for each cloud provider based on the context you provided. Please note that I won't have access to real-time data or the most recent updates, so the information might not be comprehensive or up-to-date.
+I'll provide the information for Microsoft Azure as per the given context. I don't have information on other cloud providers.
 
-**Amazon AWS**
+**What happened?**
+Betw een 07:08 UT C and 12:43 UT C on 25 J anuar y 2023, cust omer s experienced issues with netw ork connectivity , manifesting as long
+netw ork lat ency and/or timeouts when att empting t o connect t o resour ces host ed in Azur e regions, as w ell as other Micr osoft services
+including Micr osoft 365 and P ower Platfor m. This incident also imp acted Azur e Gov ernment cloud ser vices that w ere dependent on Azur e
+public cloud. While most r egions and ser vices had r ecovered by 09:05 UT C, int ermittent p acket loss issues caused some cust omer s to
 
-* Resume of the outage: Not available in the provided context.
-* Duration of the incident: Not available in the provided context.
-* Time when the outage occurred: Not available in the provided context.
-* Impacted services: Not available in the provided context.
-* Affected regions and availability zones: Not available in the provided context.
+**Duration of the outage**
+The outage lasted from 07:08 UT C to 12:43 UT C on 25 J anuar y 2023, which is approximately 5 hours and 35 minutes.
 
-**Google GCP**
+**Affected services and regions**
+The following services were impacted:
+- Azur e regions
+- Micr osoft 365
+- P ower Platfor m
 
-* Resume of the outage: Not available in the provided context.
-* Duration of the incident: Not available in the provided context.
-* Time when the outage occurred: Not available in the provided context.
-* Impacted services: Not available in the provided context.
-* Affected regions and availability zones: Not available in the provided context.
+**Availability zones affected**
+Not specified in the given context.
 
-**Microsoft Azure**
-
-* Resume of the outage: On May 25, 2023, between 07:08 UTC and 12:43 UTC, customers experienced issues with network connectivity, manifesting as long network latency and/or timeouts when attempting to connect to resources hosted in Azure regions, as well as other Microsoft services. This incident also impacted Azure Government cloud services that were dependent on Azure public cloud.
-* Duration of the incident: Approximately 5 hours and 35 minutes.
-* Time when the outage occurred: Between 07:08 UTC and 12:43 UTC on May 25, 2023.
-* Impacted services: Azure regions, Microsoft 365, Power Platform, and other services dependent on Azure public cloud.
-* Affected regions and availability zones: Not specified in the provided context.
-
-**Oracle OCI**
-
-* Resume of the outage: Not available in the provided context.
-* Duration of the incident: Not available in the provided context.
-* Time when the outage occurred: Not available in the provided context.
-* Impacted services: Not available in the provided context.
-* Affected regions and availability zones: Not available in the provided context.
-
-**IBM Cloud**
-
-* Resume of the outage: Not available in the provided context.
-* Duration of the incident: Not available in the provided context.
-* Time when the outage occurred: Not available in the provided context.
-* Impacted services: Not available in the provided context.
-* Affected regions and availability zones: Not available in the provided context.
-
-**Snowflake**
-
-* Resume of the outage: Not available in the provided context.
-* Duration of the incident: Not available in the provided context.
-* Time when the outage occurred: Not available in the provided context.
-* Impacted services: Not available in the provided context.
-* Affected regions and availability zones: Not available in the provided context.
-
-**Databricks**
-
-* Resume of the outage: Not available in the provided context.
-* Duration of the incident: Not available in the provided context.
-* Time when the outage occurred: Not available in the provided context.
-* Impacted services: Not available in the provided context.
-* Affected regions and availability zones: Not available in the provided context.
-
-**MongoDB**
-
-* Resume of the outage: Not available in the provided context.
-* Duration of the incident: Not available in the provided context.
-* Time when the outage occurred: Not available in the provided context.
-* Impacted services: Not available in the provided context.
-* Affected regions and availability zones: Not available in the provided context.
-
-**Akamai**
-
-* Resume of the outage: Not available in the provided context.
-* Duration of the incident: Not available in the provided context.
-* Time when the outage occurred: Not available in the provided context.
-* Impacted services: Not available in the provided context.
-* Affected regions and availability zones: Not available in the provided context.
-
-**Cloudflare**
-
-* Resume of the outage: Not available in the provided context.
-* Duration of the incident: Not available in the provided context.
-* Time when the outage occurred: Not available in the provided context.
-* Impacted services: Not available in the provided context.
-* Affected regions and availability zones: Not available in the provided context.
-
-Please note that this information is based on the provided context and might not be comprehensive or up-to-date.
+**Summary of outage duration**
+The outage lasted for approximately 5 hours and 35 minutes.
