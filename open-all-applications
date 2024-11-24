@@ -1,5 +1,11 @@
 #/bin/bash env
 #
+echo "All open in FIREFOX - macos OS X "
+#
+echo "Open Local"
+echo "Cloud Risk - Simulation Website"
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox cloud.risk-customer_portal_app/CloudRisk.Simulation.html
+#
 echo "Open Local"
 echo " --> Customer App"
 /usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:8185' # 'http://cloudriskgraph.insureyourtech.cloud:8185/'
@@ -19,15 +25,13 @@ echo "Workbench - App 2 - Search Internet - Load VectorGraph"
 echo "Workbench - App 3 - External information Loader from pdf files"
 /usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:8503' # 'http://cloudriskgraph.insureyourtech.cloud:8503/'
 #
-echo "Workbench - App 4 - Batch External information Loader from folder with pdf files"
-/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:8504' # 'http://cloudriskgraph.insureyourtech.cloud:8504/'
+echo "Workbench - App 5 - External information Loader from multi-select folder with pdf files"
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:8505' # 'http://cloudriskgraph.insureyourtech.cloud:8505/'
 #
+echo "Workbench - App 4 - Batch External information Loader from folder with pdf files"
+echo "Open in browser http://localhost:8504  - to run Batch Mode, processing all PDF files in subfolder ./pdf_bot_usebatch  "
+# /usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:8504' # 'http://cloudriskgraph.insureyourtech.cloud:8504/'
 #
 echo "VectorGraph - Risk - Database"
 /usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox 'http://localhost:7474/browser/' #  'http://cloudriskgraph.insureyourtech.cloud:7474/browser/'
-#
-echo "Cloud Risk - Simulation Website"
-/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox cloud.risk-customer_portal_app/CloudRisk.Simulation.html
-#
-echo "All open in FIREFOX - macos OS X "
 #
