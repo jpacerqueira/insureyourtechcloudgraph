@@ -1,22 +1,35 @@
-I don't have information on the specific outage you're referring to for Amazon AWS, Google GCP, IBM Cloud, Snowflake, MongoDB, Akamai, or Cloudflare. These services are not mentioned in the provided context.
+I can only provide information on Microsoft Azure as the context is specific to Azure. The query you provided seems to be a generic one that applies to multiple cloud providers.
 
-However, I can provide information on Microsoft Azure:
+However, based on the provided context, here's the information about the Azure outage:
 
 **Resume of the Outage:**
 
-A subset of Azure Blob Storage and Azure Data Lake Storage accounts experienced connectivity errors between 00:50 UTC and 12:30 UTC on November 13, 2024. The issue manifested as loss of access to Blob and Data Lake storage endpoints of affected storage accounts in West US 2.
+A subset of Azure Blob Storage and Azure Data Lake Storage accounts experienced connectivity errors between 00:50 UTC and 12:30 UTC on November 13, 2024. The issue manifested as loss of access to Blob and Data Lake storage endpoints of affected storage accounts.
+
+**Duration of the Incident:**
+
+The outage lasted for approximately 11 hours and 40 minutes (7400 seconds).
 
 **Impacted Services:**
 
-* Azure Blob Storage
-* Azure Data Lake Storage
+* Azure Log Analytics
+* Azure Container Registry
 
-**Regions and Availability Zones Impacted:**
+**Cloud Provider Regions and Availability Zones Impacted:**
 
-* West US 2
+The following regions were impacted:
 
-**Duration of the Outage:**
+* East US region
+* West US region
+* Australia East region
+* Canada Central region
+* Canada East region
+* Central US region
+* Japan East region
+* South Central US region
+* UAE North region
+* West US 2 region
 
-The exact duration of the outage is not specified, but it occurred between 00:50 UTC and 12:30 UTC on November 13, 2024.
+**Summary of the Outage:**
 
-Please note that I couldn't find information on the other services you mentioned. If you need information on those services, please provide more context or details about the specific incident you're referring to.
+The outage was caused by an unintentional deletion of Azure Traffic Manager profiles for affected storage accounts. The incident was resolved after the issue was identified and addressed.

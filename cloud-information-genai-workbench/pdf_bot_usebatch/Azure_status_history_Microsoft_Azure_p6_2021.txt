@@ -1,33 +1,22 @@
-I'll try to extract relevant information from the provided text. However, please note that some details might be missing or not explicitly stated.
+I can try to help you with that query. However, I'll need to parse the text from Microsoft Azure's incident report to extract the relevant information.
 
-**Resume of Incident:**
+Here are the results:
 
-The incident occurred on December 16, 2021, between 14:00 UT C and 17:30 UT C. A subset of users in North America experienced performance issues and timeout errors with Microsoft Graph APIs.
+**Resume of the Outage:**
 
-**Duration:**
-The outage lasted approximately 7 hours and 30 minutes (450 minutes).
+The outage occurred on November 9, 2021, and lasted for approximately 3 hours and 28 minutes (208 minutes).
 
-**Impacted Services:**
-Microsoft Graph APIs
+**Services Impacted:**
+
+* Access Panel
 
 **Cloud Provider Regions and Availability Zones Impacted:**
-North America region, but the specific availability zones affected are not mentioned.
 
-**Root Cause:**
-An internal infrastructure issue led to high CPU usage, causing performance issues and timeout errors with Microsoft Graph APIs.
+* West Central US
+* The incident caused traffic to be routed from West Central US to Central US.
 
-**Mitigation:**
-Traffic was redistributed to other healthy regions in North America to mitigate the issue.
+**Summary of the Outage:**
 
-Unfortunately, I couldn't find information on the following cloud providers:
+The outage was caused by a code change that introduced an unrelated bug, which was discovered during elementary validation in the first deployment stage. To prevent further impact on customers, Azure failed over traffic from West Central US to Central US at 07:00 UT C. The incident was resolved when service fabric team developed a fix and redeployed it the following morning.
 
-* Amazon AWS
-* Google GCP
-* IBM Cloud
-* Snowflake
-* Databricks
-* MongoDB
-* Akamai
-* Cloudflare
-
-If you provide more context or details about these incidents, I'll try to help further.
+Note that this information is specific to Microsoft Azure's incident report and may not be applicable to other cloud providers or services.

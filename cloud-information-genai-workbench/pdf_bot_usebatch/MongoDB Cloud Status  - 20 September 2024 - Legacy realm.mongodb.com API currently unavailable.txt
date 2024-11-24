@@ -1,26 +1,5 @@
-I don't have enough information to provide a detailed report on the specific outage you're referring to. However, I can try to help you with a general query.
+I don't have enough information to provide a detailed answer about the specific outage you're referring to. However, I can try to help you find the relevant information.
 
-To resume the outage for the listed cloud providers, here's what I found:
+The text you provided appears to be an incident report for MongoDB Cloud, which is a cloud-based database service offered by MongoDB, Inc. The report mentions that the issue affected MongoDB Atlas App Services and Device Sync, but it does not provide information about other cloud providers or services.
 
-**Incident Report:**
-
-* The incident affected MongoDB Cloud.
-* The issue was identified and a fix is being implemented.
-* A fix has been implemented and it's being monitored.
-* The new services.cloud.mongodb.com API works as expected.
-
-Unfortunately, I don't have information on the specific outage duration, start time, impacted services, cloud provider regions and availability zones, or summary of the incident. If you need more detailed information, please check the original post for updates or contact MongoDB Cloud support directly.
-
-If you'd like to know the status of other cloud providers, here's a brief summary:
-
-* Amazon AWS: No mention in the provided text.
-* Google GCP: No mention in the provided text.
-* Microsoft Azure: No mention in the provided text.
-* Oracle OCI: No mention in the provided text.
-* IBM Cloud: No mention in the provided text.
-* Snowflake: No mention in the provided text.
-* Databricks: No mention in the provided text.
-* Akamai: No mention in the provided text.
-* Cloudflare: No mention in the provided text.
-
-Please note that these cloud providers may have experienced separate incidents or outages, and I couldn't find any information on them from the provided text.
+If you're looking for information about outages on other cloud providers, I can try to help you with that. Please let me know which specific cloud provider(s) you're interested in, and I'll do my best to find the relevant information.

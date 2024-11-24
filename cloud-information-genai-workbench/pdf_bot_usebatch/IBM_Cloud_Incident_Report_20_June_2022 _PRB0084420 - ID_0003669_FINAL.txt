@@ -1,17 +1,22 @@
-I don't have information on the specific outage you're referring to for Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, Snowflake, Databricks, MongoDB, Akamai, Cloudflare. However, I can provide general information about IBM Cloud.
+I don't have information about Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare. The incident appears to be specific to IBM Cloud.
 
-For IBM Cloud:
+Here is the information I can provide:
 
-* Incident resume: The incident was caused by a power grid utility outage that led to a series of failures in various services.
-* Duration of the incident: The outage lasted for approximately 6 hours and 51 minutes (from 03:20 to 10:11).
-* Time of the outage: The outage occurred on June 20, 2023, starting at 03:20.
+* Incident resume: On 20 June 2023 at 03:49, an outage occurred in FRA05 and EU-DE-3 data centers.
+* Duration of the incident:
+	+ Hours: 10
+	+ Minutes: 33
+	+ Seconds: 0 (approximately 10 hours and 33 minutes)
 * Impacted services:
-	+ VPC (Virtual Private Cloud) - impacted customers experienced an inability to access, manage, and provision VSIs.
-	+ SQL Query - SQL jobs/queries experienced long delays and eventually failures for all submitted jobs.
-	+ Load Balancer - data plane and control plane for Load Balancers were impacted.
-	+ Network Infrastructure - all IBM Cloud services experienced connectivity issues.
-	+ VSI (Virtual Server Instance) - impacted customers experienced an outage.
-* Impacted regions and availability zones:
-	+ Frankfurt (FRA05) Data Center - EU-DE-3 region was affected.
-	+ eu-de zone 3 (EU-DE-3)
-* Note: The incident did not affect other cloud providers' services, as it was a specific issue with IBM Cloud.
+	+ VPC
+	+ VSIs
+	+ SQL Query
+	+ Load Balancer
+	+ Network Infrastructure
+	+ Watson platform
+	+ Code Engine
+	+ Analytic Engine
+* Cloud provider regions and availability zones impacted:
+	+ FRA05 (Frankfurt, Germany)
+	+ EU-DE-3 (Europe - Frankfurt)
+* Summary: The outage lasted approximately 10 hours and 33 minutes.

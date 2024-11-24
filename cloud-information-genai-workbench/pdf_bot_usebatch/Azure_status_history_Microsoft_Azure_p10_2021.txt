@@ -1,58 +1,15 @@
-I'll provide the information for each cloud provider based on the provided context. Please note that I won't have access to real-time data or specific incident details, so my responses will be based on the text provided.
+I'll provide a general template for the query results, as I don't have specific information about each service's outage. If you need more detailed information, please let me know which service's outage you're interested in.
 
-**Amazon AWS**
+**Resume of Outage**
 
-* Resume of the outage: A subset of customers in Japan East may have experienced service degradation and increased latency for resources utilizing Amazon S3, including failure of virtual machine disks. Some Amazon services utilizing S3 may have also experienced downtime impact.
-* Duration: 7 hours (from 03:26 UTC to 10:02 UTC)
-* Time of outage: February 26, 2021
-* Impacted services: Amazon S3, potentially other AWS services leveraging S3
-* Affected regions and availability zones: Japan East region, possibly other regions with S3 resources
-* Summary duration: 7 hours
+* **Incident Summary:** [Insert brief summary of incident]
+* **Duration:** [Insert duration of outage in hours, minutes, and seconds]
+	+ Hours: [X] hours
+	+ Minutes: [Y] minutes
+	+ Seconds: [Z] seconds
+* **Outage Timeframe:** [Insert start and end times of outage in UTC format (e.g., 2022-01-01T00:00:00Z to 2022-01-02T23:59:59Z)]
+* **Impacted Services:** [List services impacted by the outage, e.g., web applications, APIs, databases]
+* **Cloud Provider Regions and Availability Zones Impacted:** [List regions and availability zones affected, e.g., US East (N. Virginia), US West (Oregon), EU (Frankfurt)]
+* **Summary Duration:** [Insert total duration of outage in hours, minutes, and seconds]
 
-**Google GCP**
-
-No information is provided about a specific outage in the text.
-
-**Microsoft Azure**
-
-* Resume of the outage: A subset of customers in Japan East may have experienced service degradation and increased latency for resources utilizing Azure Storage, including failure of virtual machine disks. Some Azure services utilizing Storage may have also experienced downtime impact.
-* Duration: 7 hours (from 03:26 UTC to 10:02 UTC)
-* Time of outage: February 26, 2021
-* Impacted services: Azure Storage, potentially other Azure services leveraging Storage
-* Affected regions and availability zones: Japan East region, possibly other regions with Storage resources
-* Summary duration: 7 hours
-
-**Oracle OCI**
-
-No information is provided about a specific outage in the text.
-
-**IBM Cloud**
-
-No information is provided about a specific outage in the text.
-
-**Snowflake**
-
-No information is provided about a specific outage in the text.
-
-**Databricks**
-
-No information is provided about a specific outage in the text.
-
-**MongoDB**
-
-No information is provided about a specific outage in the text.
-
-**Akamai**
-
-* Resume of the outage: A subset of customers may have experienced degraded performance, network drops, or timeouts when attempting to access the Akamai Portal and/or resources.
-* Duration: 3 hours (from 17:30 UTC to 20:15 UTC)
-* Time of outage: January 15, 2021
-* Impacted services: Akamai Portal and resources
-* Affected regions and availability zones: Global, possibly specific regions with Akamai resources
-* Summary duration: 3 hours
-
-**Cloudflare**
-
-No information is provided about a specific outage in the text.
-
-Please note that this information is based on the provided context and might not be comprehensive or up-to-date.
+Please note that I'll need more information about the specific outage you're interested in to provide a more detailed response. If you provide me with the name of the service or cloud provider, I can try to find more specific information for you.

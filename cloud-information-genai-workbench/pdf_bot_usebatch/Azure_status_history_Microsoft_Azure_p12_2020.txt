@@ -1,91 +1,24 @@
-I'll provide the information for each cloud provider based on the provided context. Please note that I don't have direct access to real-time data or specific incident details, so my responses will be based on the text provided.
+I'll try to extract the relevant information from the provided context. Please note that some details might be missing or not explicitly stated.
 
-**Amazon AWS**
+**Resume of Outage:**
 
-* Resume of outage: No specific details mentioned in the text.
-* Duration of incident: Not specified.
-* Time of outage: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of outage: Not specified.
+The outage occurred on February 21-22, 2020, affecting Azure customers.
 
-**Google GCP**
+**Duration:**
 
-* Resume of outage: No specific details mentioned in the text.
-* Duration of incident: Not specified.
-* Time of outage: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of outage: Not specified.
+* Total duration: approximately 8 hours and 36 minutes (from 22:17 UTC on February 21 to 00:53 UTC on February 22)
+* Partial recovery started at around 20:40 UTC, followed by full recovery at 00:53 UTC on February 22.
 
-**Microsoft Azure**
+**Impacted Services:**
 
-* Resume of outage: A subset of customers in South Central US may have experienced issues between 12:48 and 19:10 UTC on February 28, 2020.
-* Duration of incident: Approximately 6 hours and 22 minutes.
-* Time of outage: Between 12:48 and 19:10 UTC on February 28, 2020.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: South Central US (no specific regions or availability zones mentioned).
-* Duration of outage: Approximately 6 hours and 22 minutes.
+* Storage data was restored during the outage.
 
-**Oracle OCI**
+**Cloud Provider Regions and Availability Zones Impacted:**
 
-* Resume of outage: No specific details mentioned in the text.
-* Duration of incident: Not specified.
-* Time of outage: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of outage: Not specified.
+* South Central US region (no specific availability zones mentioned)
 
-**IBM Cloud**
+**Summary of Outage:**
 
-* Resume of outage: No specific details mentioned in the text.
-* Duration of incident: Not specified.
-* Time of outage: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of outage: Not specified.
+The outage lasted for approximately 8 hours and 36 minutes, affecting Azure customers in the South Central US region. The cause of the outage is not explicitly stated, but it appears to be related to a configuration issue with the network router.
 
-**Snowflake**
-
-* Resume of outage: No specific details mentioned in the text.
-* Duration of incident: Not specified.
-* Time of outage: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of outage: Not specified.
-
-**Databricks**
-
-* Resume of outage: No specific details mentioned in the text.
-* Duration of incident: Not specified.
-* Time of outage: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of outage: Not specified.
-
-**MongoDB**
-
-* Resume of outage: No specific details mentioned in the text.
-* Duration of incident: Not specified.
-* Time of outage: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of outage: Not specified.
-
-**Akamai**
-
-* Resume of outage: No specific details mentioned in the text.
-* Duration of incident: Not specified.
-* Time of outage: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of outage: Not specified.
-
-**Cloudflare**
-
-* Resume of outage: No specific details mentioned in the text.
-* Duration of incident: Not specified.
-* Time of outage: Not specified.
-* Impacted services: Not specified.
-* Regions and availability zones impacted: Not specified.
-* Duration of outage: Not specified.
+Please note that I couldn't find information on the other cloud providers you mentioned (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) as they were not mentioned in the provided context.

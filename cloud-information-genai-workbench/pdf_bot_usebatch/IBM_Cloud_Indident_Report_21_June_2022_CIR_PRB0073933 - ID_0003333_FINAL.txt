@@ -1,18 +1,24 @@
-I don't have the capability to execute a query across multiple cloud providers. However, I can help you analyze the provided IBM Cloud Customer Incident Report.
+I'll try to reconstruct the outage based on the provided context. Please note that I won't be able to apply a query directly as there is no single database or API to query across all these services.
 
-Here's a summary of the incident:
+Here's my attempt to summarize the outage:
 
-**Incident Details:**
+**Resume of the Outage:**
 
-* Release Date: 21 June 2022
-* Outage Start: 21 June 2022 06:34 UTC
-* Outage End: 21 June 2022 08:06 UTC
-* Duration: 1 hour 32 minutes
+On June 21, 2022, at 06:34 UTC, an outage occurred affecting multiple cloud providers and services. The third-party vendor made changes to their BGP configuration, causing a critical set of IP prefixes to be withdrawn. This led to a loss of network connectivity to customer origin servers.
 
-**Impacted Services and Regions:**
+**Duration of the Outage:**
 
-The outage affected multiple IBM Cloud services, including:
+The outage lasted for 1 hour and 32 minutes.
 
+**When was the Outage:**
+
+The outage started on June 21, 2022, at 06:34 UTC and ended on June 21, 2022, at 08:06 UTC.
+
+**Impacted Services:**
+
+The following services were impacted:
+
+* IBM Cloud Internet Services
 * AppID
 * Schematics
 * Secrets Manager
@@ -26,14 +32,10 @@ The outage affected multiple IBM Cloud services, including:
 * Cloud App Dev Services
 * Event-notifications
 
-The outage impacted all IBM Cloud regions.
+**Cloud Provider Regions and Availability Zones Impacted:**
 
-**Availability Zones:**
+The outage affected all IBM Cloud regions. The specific availability zones impacted are not mentioned in the provided context.
 
-Unfortunately, the provided report does not specify which availability zones were affected. However, it's likely that the outage was region-wide, as it affected all IBM Cloud regions.
+**Summary of the Outage:**
 
-**Other Cloud Providers:**
-
-As for other cloud providers, there is no information available in this specific incident report. If you're looking for similar incidents on other cloud providers, I recommend searching their respective customer incident reports or support portals.
-
-Please note that this summary only applies to the provided IBM Cloud Customer Incident Report and does not cover other cloud providers.
+A third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to an outage affecting multiple IBM Cloud services and customers across all regions. The outage was resolved after 1 hour and 32 minutes.

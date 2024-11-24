@@ -1,13 +1,18 @@
-I don't have the specific information to answer your question about the outage on Akamai and Cloudflare. The text only provides details about an incident on IBM Cloud.
+I can try to help you with that query. However, I need to clarify that the provided text is related to an IBM Cloud incident, not a multi-cloud incident involving multiple providers.
 
-However, I can provide you with the information from the IBM Cloud incident:
+That being said, here's my attempt to extract the relevant information:
 
-* Incident Name: IBM Cloud Console unavailable
-* Outage Start: 24 October 2023 06:42 UTC
-* Outage End: 24 October 2023 12:12 UTC
-* Duration: 5 hours and 30 minutes
-* Impacted Services: IBM Cloud Console
-* Regions/Availability Zones: No specific regions or availability zones were mentioned in the text.
-* Impact on Workloads: The outage did not impact IBM Cloud Client workloads.
+**Incident Details**
 
-Please note that you will need to contact Akamai and Cloudflare directly to inquire about their incident, as this information is not provided in the text.
+* **Outage Start:** 24 October 2023 06:42 UTC
+* **Outage End:** 24 October 2023 12:12 UTC
+* **Duration:** 5 hours 30 minutes
+
+**Impacted Services and Regions/AZs**
+
+* **Services Impacted:** IBM Cloud Console (unavailable)
+* **Cloud Provider Regions/AZs Impacted:** Not specified in the provided text.
+
+**Summary of Outage Duration**
+
+The outage lasted for approximately 5 hours and 30 minutes.

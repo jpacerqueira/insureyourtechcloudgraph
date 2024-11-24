@@ -1,15 +1,39 @@
-I don't have information on the specific outages you're referring to for Amazon AWS, Google GCP, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare. However, I can provide an answer based on the context provided about Microsoft Azure.
+I'll provide a summary of the outage based on the provided context. Please note that this information is specific to Microsoft Azure.
 
-**Microsoft Azure:**
+**Resume of the Outage:**
 
-* The outage occurred on August 30, 2023.
-* The incident started at approximately 19:00 UTC (Coordinated Universal Time) and lasted for several hours.
-* Services impacted included:
-	+ SQL Databases with 'autofailovergroups' enabled, which were failed out of the region, incurring around eight hours of downtime prior to the failover completing.
-	+ Virtual Machines (VMs), which were offline during the incident.
-	+ Cosmos DB accounts, which experienced a delay in restoration due to the initial failure of the primary cluster.
-* Regions and availability zones impacted:
-	+ The outage affected multiple regions, including Australia East.
-	+ Availability zones within these regions were also impacted, with some zones experiencing degradation or being unavailable.
+The outage occurred when one of the four major paths between datacenters was cut, resulting in congestive packet loss when traffic on the remaining links exceeded their capacity. This incident impacted various services across multiple regions and availability zones.
 
-Please note that I couldn't find information on the outages for the other cloud providers you mentioned. If you have specific questions about one of those services, I'll do my best to help.
+**Duration of the Outage:**
+
+* The outage lasted for approximately 8 hours.
+* Recovery began around 16:30 UTC, but full mitigation was declared at 19:00 UTC.
+
+**Impacted Services:**
+
+* Azure App Services
+* Azure Application Insights
+* Azure Data Explorer
+* Azure Database for MySQL
+* Azure Databricks (also experienced impact in North Europe)
+* Azure Digital Twins
+* Azure HDInsight
+* Azure Kubernetes Service
+* Azure Log Analytics
+* Azure NetApp Files
+* Azure Resource Graph
+* Azure Site Recovery
+* Azure Service Bus
+* Azure SQL DB
+* Azure Storage
+* Azure Virtual Machines
+* Subsets of Microsoft 365, Microsoft Power Platform, and Microsoft Sentinel services
+
+**Impacted Regions and Availability Zones:**
+
+* The outage affected multiple regions, including South Africa.
+* Specific availability zones were impacted, but the exact details are not provided in the context.
+
+**Summary:**
+
+The incident lasted for approximately 8 hours, with recovery beginning around 16:30 UTC. Full mitigation was declared at 19:00 UTC. The outage impacted various services across multiple regions and availability zones, including Azure App Services, Azure Database for MySQL, Azure Databricks, and others.

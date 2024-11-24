@@ -1,12 +1,18 @@
-I don't have the specific information to apply this query to all the listed cloud providers. However, I can provide you with the information for Google Cloud Platform (GCP) as it is provided in the context.
+I don't have information on the specified list of cloud providers (Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) as the context provided only discusses Google Cloud Platform. The outage was related to Google Cloud Platform services such as Vertex AI Online Prediction, Dialogflow CX, and Agent Assist.
 
-For Google Cloud Platform:
+However, I can provide information on the Google Cloud Platform outage:
 
-* Resume the outage: Not applicable
-* How long was the incident in hours minutes and seconds? 3 hours and 53 minutes
-* When was the outage? The outage began at 2024-06-12 12:06 US/Pacific Time (UTC-7) and ended at 2024-06-12 15:59 US/Pacific Time (UTC-7)
-* What services got impacted? Agent Assist, Cloud Machine Learning, Dialogflow CX, and Vertex AI Online Prediction
-* What cloud provider regions and availability zones were impacted? The following regions were affected:
+* Resume of the outage: Elevated error rates in multiple regions for Google Cloud Platform services including Vertex AI Online Prediction, Dialogflow CX, and Agent Assist.
+* Duration of the incident:
+	+ Hours: 3
+	+ Minutes: 53
+	+ Seconds: Not specified
+* When was the outage: The incident began on June 12, 2024, at 12:06 US/Pacific Time and ended on June 12, 2024, at 15:59 US/Pacific Time.
+* Impacted services:
+	+ Vertex AI Online Prediction
+	+ Dialogflow CX
+	+ Agent Assist
+* Cloud provider regions impacted:
 	+ asia-southeast1
 	+ europe-west3
 	+ europe-west4
@@ -15,5 +21,5 @@ For Google Cloud Platform:
 	+ us-west1
 	+ northamerica-northeast1
 	+ us-east4
-
-Note that the information for other cloud providers is not provided in the context. If you need this information, I recommend checking the respective cloud provider's status page or support website for more details.
+* Availability zones impacted: Not specified in the provided context.
+* Summary duration of the outage: The incident lasted for 3 hours and 53 minutes.
