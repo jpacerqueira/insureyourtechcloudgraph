@@ -1,36 +1,19 @@
-I don't have the specific information to apply a query across multiple cloud providers. However, I can provide you with the details from the Google Cloud incident report that matches your request.
+I don't have the specific information to apply this query to all the listed cloud providers. However, I can provide you with the information for Google Cloud Platform (GCP) as it is provided in the context.
 
-**Resume of the Incident:**
+For Google Cloud Platform:
 
-On June 12, 2024, at 12:06 US/Pacific Time, an outage occurred in Google Cloud Platform (GCP) affecting several services. The outage impacted:
+* Resume the outage: Not applicable
+* How long was the incident in hours minutes and seconds? 3 hours and 53 minutes
+* When was the outage? The outage began at 2024-06-12 12:06 US/Pacific Time (UTC-7) and ended at 2024-06-12 15:59 US/Pacific Time (UTC-7)
+* What services got impacted? Agent Assist, Cloud Machine Learning, Dialogflow CX, and Vertex AI Online Prediction
+* What cloud provider regions and availability zones were impacted? The following regions were affected:
+	+ asia-southeast1
+	+ europe-west3
+	+ europe-west4
+	+ us-central1
+	+ us-east1
+	+ us-west1
+	+ northamerica-northeast1
+	+ us-east4
 
-* Agent Assist
-* Dialogflow CX
-* Vertex AI Online Prediction
-
-The incident lasted for 3 hours and 53 minutes.
-
-**Affected Regions and Availability Zones:**
-
-The following regions were affected:
-
-* asia-southeast1
-* europe-west3
-* europe-west4
-* us-central1
-* us-east1
-* us-west1
-* northamerica-northeast1
-* us-east4
-
-However, the report does not provide information on specific availability zones.
-
-**Root Cause:**
-
-The root cause of the outage was a novel form of user request to the GenerateContent API triggering intermittent segmentation faults in the Vertex Serving Prediction API servers. This caused an affected server to restart after a segfault, and load balancers sent user queries to other healthy API servers until the affected server returned to service.
-
-**Remediation and Prevention:**
-
-Google engineers identified the root cause of the segmentation fault and developed a fix, which they started progressively rolling out on June 12, 2024. However, I couldn't find information on how long it took for the outage to be fully resolved or if there were any further details on the remediation process.
-
-Please note that this incident report only provides information specific to Google Cloud Platform and does not cover other cloud providers like Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+Note that the information for other cloud providers is not provided in the context. If you need this information, I recommend checking the respective cloud provider's status page or support website for more details.

@@ -1,9 +1,12 @@
-I don't have information on outages for all of these cloud providers. However, I can provide some information based on the text you provided earlier.
+I don't have the specific information to apply this query to all the listed cloud providers. However, I can try to help with Microsoft Azure as it is the only one that has been provided in the context.
 
-**Microsoft Azure:**
+For Microsoft Azure:
 
-* Outage duration: The incident started between 09:24 and 11:15 UTC on July 1, 2020, and was fully mitigated by 08:45 UTC.
-* Impacted services: Azur e SQL Datab ase, Azur e SQL Data Warehouse/S ynapse Analy tics, Azur e Datab ase for MySQL, Azur e Datab ase for P ostgreSQL, and Azur e Datab ase for MariaDB in Japan East.
-* Regions/Availability Zones impacted: The incident affected multiple regions, but the specific regions and availability zones were not specified.
+* Resume of the outage: A subset of customers using Azure SQL Database, Azure SQL Data Warehouse/Synapse Analytics, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Database for MariaDB in Japan East may have experienced service connection failures or possible timeouts.
+* Duration of the incident: 54 minutes
+* When was the outage: Between 02:26 am and 03:40 am UTC on July 4, 2020
+* Impacted services: DevOps services
+* Affected cloud provider regions and availability zones: Japan East region (no specific availability zone mentioned)
+* Summary of impact: The incident caused connectivity errors to DevOps services, with some instances taking up to 30 minutes to recover. The DNS resolution issues were fully auto-mitigated across all regions within 54 minutes.
 
-**Note:** I couldn't find any information on outages for Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare in the provided text. If you need information on these providers, please provide more context or information.
+Please note that I couldn't find information on the other cloud providers (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, and MongoDB) as they were not mentioned in the context provided. If you have any additional information or context, I'd be happy to try and help further.

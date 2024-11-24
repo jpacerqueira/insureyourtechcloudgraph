@@ -1,37 +1,33 @@
-I don't have information on the specific outages you're referring to for each cloud provider. The provided text appears to be a summary of an incident in Microsoft Azure.
+I'll try to extract relevant information from the provided text. However, please note that some details might be missing or not explicitly stated.
 
-However, I can provide general information on how to apply a query to find outage information for multiple cloud providers using tools like Datadog or AWS CloudWatch, Google Cloud Monitoring, and Azure Monitor.
+**Resume of Incident:**
 
-To resume the outage in text, you would need to search for specific keywords related to the outage, such as "Microsoft Azure failed-over" or "Access Panel bug deployment".
+The incident occurred on December 16, 2021, between 14:00 UT C and 17:30 UT C. A subset of users in North America experienced performance issues and timeout errors with Microsoft Graph APIs.
 
-Here's a sample query:
+**Duration:**
+The outage lasted approximately 7 hours and 30 minutes (450 minutes).
 
-`("Microsoft Azure failed-over" OR "Azure Access Panel bug") AND (region:US OR region:EU OR region:APAC)`
+**Impacted Services:**
+Microsoft Graph APIs
 
-This query would return incidents related to Microsoft Azure failed-over or Access Panel bug deployments in the US, EU, and APAC regions.
+**Cloud Provider Regions and Availability Zones Impacted:**
+North America region, but the specific availability zones affected are not mentioned.
 
-To find out when the outage occurred, you can use the following query:
+**Root Cause:**
+An internal infrastructure issue led to high CPU usage, causing performance issues and timeout errors with Microsoft Graph APIs.
 
-`("Microsoft Azure failed-over" OR "Azure Access Panel bug") AND (start_time:2021-11-09 OR start_time:2021-12-16)`
+**Mitigation:**
+Traffic was redistributed to other healthy regions in North America to mitigate the issue.
 
-This query would return incidents related to Microsoft Azure failed-over or Access Panel bug deployments that started on November 9, 2021, or December 16, 2021.
+Unfortunately, I couldn't find information on the following cloud providers:
 
-To find out which services were impacted, you can use the following query:
+* Amazon AWS
+* Google GCP
+* IBM Cloud
+* Snowflake
+* Databricks
+* MongoDB
+* Akamai
+* Cloudflare
 
-`("Microsoft Azure failed-over" OR "Azure Access Panel bug") AND (service:Graph APIs OR service:Access Panel)`
-
-This query would return incidents related to Microsoft Azure failed-over or Access Panel bug deployments that affected Graph APIs or Access Panel services.
-
-To find out which regions and availability zones were impacted, you can use the following query:
-
-`("Microsoft Azure failed-over" OR "Azure Access Panel bug") AND (region:US-Central OR region:West-US OR region:East-US)`
-
-This query would return incidents related to Microsoft Azure failed-over or Access Panel bug deployments that affected regions in US-Central, West-US, and East-US.
-
-To find out how long the outage lasted, you can use the following query:
-
-`("Microsoft Azure failed-over" OR "Azure Access Panel bug") AND (duration:12 hours OR duration:24 hours)`
-
-This query would return incidents related to Microsoft Azure failed-over or Access Panel bug deployments that lasted for 12 hours or 24 hours.
-
-Please note that these queries are just examples and may need to be modified based on the specific requirements of your search.
+If you provide more context or details about these incidents, I'll try to help further.

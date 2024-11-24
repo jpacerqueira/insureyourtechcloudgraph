@@ -1,10 +1,12 @@
 all: config_where_am_I_running backend_server customer_app workbench_apps riskgraph
 
+check:
+	whoami ; id; pwd; ls -listarh; docker ps
+	echo "make check - Warning : Has No specific - rule to make target 'check'.  just continue."
+
 config_where_am_I_running:
-	whoami
-	id
-	pwd
-	ls -listarh
+	whoami ; id ; pwd ; ls -listarh ; docker ps
+	echo "make config_where_am_I_running - Warning : Has No specific - rule to make target 'config_where_am_I_running'.  just continue."
 
 backend_server:
 	sleep 1
