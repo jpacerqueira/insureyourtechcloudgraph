@@ -102,8 +102,8 @@ def process_folder(input_folder, query, cloud_vendor="", output_folder="pdf_bot_
             process_pdf_query(pdf_path, query, cloud_vendor, True, output_folder)
 
 def main():
-    st.title("Workbench App_3")
-    st.header("PDF_BOT - 📄Extract Cloud Outage information from your pdf source files")
+    st.title("Workbench App_5")
+    st.header("PDF_BOT_V2 - 📄Extract Cloud Outage information from your configururable source folder with pdf files")
 
     # Add cloud vendor selection
     cloud_vendor = st.selectbox(

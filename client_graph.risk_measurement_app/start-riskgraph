@@ -11,6 +11,7 @@ docker run \
     -v $HOME/neo4j/plugins:/plugins \
     --env NEO4J_AUTH=neo4j/insureyourtech.cloud \
     neo4j:5.25.1-community
+docker ps
 #    insureyourtechcloud/cloudriskgraph:latest 
 #    insureyourtechcloud/cloudriskgraph:0.0.1 
 #    neo4j:latest

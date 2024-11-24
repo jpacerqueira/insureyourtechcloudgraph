@@ -4,6 +4,7 @@
 # BUILD_METHOD = 1  - docker compose up
 # BUILD_METHOD = 2  - docker compose up --build
 # BUILD_METHOD = 3  - docker compose up --build --force-recreate
+# BUILD_METHOD = 4  - docker compose up -d --build --force-recreate
 # BUILD_METHOD =    - docker compose ps
 
 BUILD_METHOD="${1:-0}" # 1 or 0
@@ -22,6 +23,13 @@ elif [[ "$BUILD_METHOD" == "3" ]]; then
    #docker system prune -f
    #docker volume prune -f
    docker compose up --build --force-recreate
+elif [[ "$BUILD_METHOD" == "4" ]]; then
+   docker compose down
+   docker compose rm -sfv # just remove containers and volumes of the compose project
+   #docker system prune -f
+   #docker volume prune -f
+   docker compose up -d --build --force-recreate > /dev/null 2>&1
+   echo "Workbench App , built! Now, wait 10 seconds for the database to be ready."
 else
    docker compose ps
 fi
