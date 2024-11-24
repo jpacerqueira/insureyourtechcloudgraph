@@ -2,6 +2,7 @@ all: config_where_am_I_running backend_server customer_app workbench_apps riskgr
 
 config_where_am_I_running:
 	whoami
+	id
 	pwd
 	ls -listarh
 
