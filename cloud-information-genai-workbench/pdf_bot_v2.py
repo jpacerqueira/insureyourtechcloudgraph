@@ -94,12 +94,17 @@ def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, outpu
         logger.error(f"Error processing query: {e}")
         return "I encountered an error processing your query. Please try rephrasing your question."
 
-def process_folder(input_folder, query, cloud_vendor="", output_folder="pdf_bot_usebatch"):
+def process_folder(input_folder, query, cloud_vendor="", output_folder="pdf_bot_usebatch", mark_processed=False):
     """Process all PDFs in a folder"""
     for filename in os.listdir(input_folder):
         if filename.lower().endswith('.pdf'):
             pdf_path = os.path.join(input_folder, filename)
             process_pdf_query(pdf_path, query, cloud_vendor, True, output_folder)
+            # Add file renaming when mark_processed is True
+            if mark_processed:
+                new_filename = filename + ".PROCESSED"
+                new_path = os.path.join(input_folder, new_filename)
+                os.rename(pdf_path, new_path)
 
 def main():
     st.title("Workbench App_5")
