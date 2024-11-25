@@ -22,7 +22,8 @@ def main(input_folder="./pdf_bot_usebatch"):
         input_folder=input_folder,
         query="Resume the one or more outages indentified in text, how long was the incident, when was the outage, and what services got impacted in what regions and availability zones? Also, what services had outage, what was the root cause of the outage, how long was the outage , when was the outaged started, its duration in days, hours and minutes,  what was the services downtime period, and when was it marked as resolved ? Also, remove Cloud Vendors not identified in the text. Also, remove Apostrophes, include all full words, no abreviations in text response.",
         cloud_vendor="the Cloud Providers identified in the text being one or many of them, Amazon AWS and/or Google GCP and/or Microsoft Azure and/or  Oracle OCI and/ro  IBM Cloud and/or Snowflake and/or Databricksa and/or MongoDB and/or Akamai and/or Cloudflare",
-        output_folder=input_folder  
+        output_folder=input_folder,
+        mark_processed=True  
     )
 
 if __name__ == "__main__":
