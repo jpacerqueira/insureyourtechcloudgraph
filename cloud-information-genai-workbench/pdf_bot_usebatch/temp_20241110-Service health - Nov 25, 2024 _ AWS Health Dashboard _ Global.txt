@@ -1,0 +1,26 @@
+Based on the provided context, I'll attempt to answer your query. Please note that this is a manual analysis of the provided data, and there might be some limitations or inaccuracies.
+
+**Incident Details**
+
+* Incident Name: Increased API errors rates for mutatable VPC calls
+* Duration: November 6, 2024, 3:42:30 AM (PST) - November 10, 2024, 7:55:00 AM (PST)
+* Region: ap-northeast-2
+* Availability Zone: Not specified
+
+**Affected Services and Regions**
+
+* Amazon Elastic Compute Cloud (EC2): ap-northeast-2
+* AWS Management Console: ap-northeast-2
+* No other services are explicitly mentioned as being affected in this region.
+
+**Outage Details**
+
+* Start Time: November 6, 2024, 3:42:30 AM (PST)
+* End Time: November 10, 2024, 7:55:00 AM (PST)
+* Duration: approximately 4 days and 12 hours
+
+**Resolved Event**
+
+* The incident was marked as resolved on November 10, 2024, at 7:55:00 AM (PST).
+
+Please note that the provided data does not include information about other regions or availability zones being affected by this incident. If you need more detailed information, please let me know and I'll try to help further.
