@@ -1,19 +1,17 @@
-I can only provide information on Microsoft Azure based on the provided context. I don't have information on other cloud providers.
+Based on the provided text, I will resume the outages for Microsoft Azure.
 
-Here is the resume of the outage:
+**Outage 1:**
+- Incident Duration: 4 hours and 15 minutes
+- Outage Start Time: Between 09:24 UTC on July 1, 2020, and 11:15 UTC on July 1, 2020
+- Impacted Services: Azure SQL Database, Azure SQL Data Warehouse/Synapse Analytics, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Database for MariaDB in Japan East region
+- Root Cause: Connections to Azure SQL Database and related data services go through a load-balanced set of front-end nodes (Gateways) that provide directory lookup services and reroute incoming connections to the intended backend nodes hosting the database. One of the SQL Gateway clusters became unhealthy, causing an intermittent impact on login availability.
+- Downtime Period: 4 hours
+- Resolution Time: Not specified
 
-**Outage Details:**
-
-* **Duration:** The incident lasted between 09:24 and 11:15 UTC on July 1, 2020, which is approximately 2 hours and 51 minutes.
-* **Start Time:** The outage started at 09:24 UTC on July 1, 2020.
-* **Impacted Services:** Azure SQL Database, Azure SQL Data Warehouse/Synapse Analytics, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Database for MariaDB in Japan East may have experienced service connection failures or possible timeouts.
-
-**Affected Regions and Availability Zones:**
-
-* Region: Japan East
-* Availability Zone: Not specified
-
-**Summary:**
-The outage lasted approximately 2 hours and 51 minutes, starting at 09:24 UTC on July 1, 2020. It affected several Azure services in the Japan East region, including SQL Database and Synapse Analytics.
-
-I don't have information on other cloud providers or the specific details of their outages. If you're looking for information on a different provider, please let me know and I'll do my best to help.
+**Outage 2:**
+- Incident Duration: 14 hours
+- Outage Start Time: Between 02:26 am UTC on July 4, 2020, and 03:40 am UTC on July 4, 2020
+- Impacted Services: Azure DevOps in multiple regions
+- Root Cause: An inadvertent error with a configuration change in the backend service caused the outage.
+- Downtime Period: 14 hours
+- Resolution Time: Not specified

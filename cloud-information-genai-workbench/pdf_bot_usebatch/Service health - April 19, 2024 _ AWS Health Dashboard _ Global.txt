@@ -1,51 +1,124 @@
-I can help you with the query. However, I need to clarify that I'll be using the AWS Health Dashboard data provided as it's a comprehensive source of information on AWS service interruptions.
+I can only apply this query to Amazon AWS as per the given context.
 
-Here are the results for each cloud provider:
+Here are the outages identified for Amazon AWS:
 
-**Amazon Web Services (AWS)**
+1. [Increased API Error Rates] - August 15
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 7 hours and 13 minutes
+	* Start time: 12:50 PM PDT
+	* End time: 2:03 AM PDT (next day)
+	* Downtime period: 7 hours and 13 minutes
+	* Marked as resolved: Not specified
 
-* Outage: November 10, 2024, 07:55:00 AM PST - November 10, 2024, 10:13:00 AM PST
-* Duration: 3 hours, 18 minutes, and 0 seconds
-* Impacted services:
-	+ AWS Billing Console
-	+ Amazon Elastic Compute Cloud (mutatable VPC calls)
-* Regions impacted: ap-northeast-2
-* Availability zones impacted: None specified
+2. [Increased API Error Rates] - July 30
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 9 hours and 12 minutes
+	* Start time: 3:40 PM PDT
+	* End time: 1:52 AM PDT (next day)
+	* Downtime period: 9 hours and 12 minutes
+	* Marked as resolved: Not specified
 
-**Google Cloud Platform (GCP)**
+3. [Increased API Error Rates] - July 12
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 2 hours and 29 minutes
+	* Start time: 7:46 AM PDT
+	* End time: 10:15 AM PDT
+	* Downtime period: 2 hours and 29 minutes
+	* Marked as resolved: Not specified
 
-* No outage found in the provided data.
+4. [Increased API Error Rates] - November 10
+	* Region: ap-northeast-2
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 3 hours and 13 minutes
+	* Start time: 7:55 AM PST
+	* End time: 11:08 AM PST
+	* Downtime period: 3 hours and 13 minutes
+	* Marked as resolved: Not specified
 
-**Microsoft Azure**
+5. [Increased API Error Rates] - October 29
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: AWS Partner Central
+	* Root cause: Not specified
+	* Duration: 2 hours and 33 minutes
+	* Start time: 4:13 AM PDT
+	* End time: 6:46 AM PDT
+	* Downtime period: 2 hours and 33 minutes
+	* Marked as resolved: Not specified
 
-* No outage found in the provided data.
+6. [Increased API Error Rates] - October 25
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: AWS QuickSight
+	* Root cause: Not specified
+	* Duration: 2 hours and 48 minutes
+	* Start time: 9:56 AM PDT
+	* End time: 12:44 PM PDT
+	* Downtime period: 2 hours and 48 minutes
+	* Marked as resolved: Not specified
 
-**Oracle Cloud Infrastructure (OCI)**
+7. [Increased API Error Rates] - October 22
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: AWS Management Console
+	* Root cause: Not specified
+	* Duration: 2 hours and 27 minutes
+	* Start time: 12:48 PM PDT
+	* End time: 3:15 PM PDT
+	* Downtime period: 2 hours and 27 minutes
+	* Marked as resolved: Not specified
 
-* No outage found in the provided data.
+8. [Increased API Error Rates] - October 7
+	* Region: us-east-2
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 6 hours and 12 minutes
+	* Start time: 12:46 PM PDT
+	* End time: 7:58 PM PDT
+	* Downtime period: 6 hours and 12 minutes
+	* Marked as resolved: Not specified
 
-**IBM Cloud**
+9. [Increased API Error Rates] - September 26
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 2 hours and 46 minutes
+	* Start time: 11:33 AM PDT
+	* End time: 2:19 PM PDT
+	* Downtime period: 2 hours and 46 minutes
+	* Marked as resolved: Not specified
 
-* No outage found in the provided data.
+10. [Increased API Error Rates] - September 25
+	* Region: us-west-2
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 1 hour and 45 minutes
+	* Start time: 2:05 PM PDT
+	* End time: 4:50 PM PDT
+	* Downtime period: 1 hour and 45 minutes
+	* Marked as resolved: Not specified
 
-**Snowflake**
-
-* No outage found in the provided data.
-
-**Databricks**
-
-* No outage found in the provided data.
-
-**MongoDB**
-
-* No outage found in the provided data.
-
-**Akamai**
-
-* No outage found in the provided data.
-
-**Cloudflare**
-
-* No outage found in the provided data.
-
-Please note that I couldn't find any outages for GCP, Azure, OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare in the provided data. If you need information on these services, please provide more context or data.
+11. [Increased API Error Rates] - September 11
+	* Region: eu-south-1
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 2 hours and 37 minutes
+	* Start time: 1:34 PM PDT
+	* End time: 4:11 AM PDT (next day)
+	* Downtime period: 2 hours and 37 minutes
+	* Marked as resolved: Not specified

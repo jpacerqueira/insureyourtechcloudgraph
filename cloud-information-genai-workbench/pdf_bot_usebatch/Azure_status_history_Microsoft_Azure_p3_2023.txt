@@ -1,22 +1,41 @@
-I'll provide the information for Microsoft Azure as per the given context. I don't have information on other cloud providers.
+Here is the summary of outages for the specified cloud providers:
 
-**What happened?**
-Betw een 07:08 UT C and 12:43 UT C on 25 J anuar y 2023, cust omer s experienced issues with netw ork connectivity , manifesting as long
-netw ork lat ency and/or timeouts when att empting t o connect t o resour ces host ed in Azur e regions, as w ell as other Micr osoft services
-including Micr osoft 365 and P ower Platfor m. This incident also imp acted Azur e Gov ernment cloud ser vices that w ere dependent on Azur e
-public cloud. While most r egions and ser vices had r ecovered by 09:05 UT C, int ermittent p acket loss issues caused some cust omer s to
+**Microsoft Azure**
 
-**Duration of the outage**
-The outage lasted from 07:08 UT C to 12:43 UT C on 25 J anuar y 2023, which is approximately 5 hours and 35 minutes.
+* Outage: Betw een 07:08 UTC and 12:43 UTC on 25 January 2023
+* Duration: 5 hours and 35 minutes
+* Affected services: Network connectivity, Microsoft 365, Power Platform, Azure Government cloud services
+* Root cause: Intermittent packet loss issues
+* Start time: 07:08 UTC
+* Downtime period: 12:43 UTC - 09:05 UTC (5 hours and 38 minutes)
+* Marked as resolved: 09:05 UTC
 
-**Affected services and regions**
-The following services were impacted:
-- Azur e regions
-- Micr osoft 365
-- P ower Platfor m
+**Microsoft Azure**
 
-**Availability zones affected**
-Not specified in the given context.
+* Outage: Betw een 00:42 UTC on 2 November 2022 and 05:55 UTC on 3 November 2022
+* Duration: 3 days, 13 hours, and 13 minutes
+* Affected services: Application Gateway, Bastion, Container Apps, Datab ase Services (MySQL - Flexible Server, Postgres - Flexible Server), ExpressRoute, HDInsight, Open AI, SQL Managed Instance, Stream Analytics, VMwar e
+* Root cause: Unknown
+* Start time: 00:42 UTC on 2 November 2022
+* Downtime period: 05:55 UTC on 3 November 2022 - unknown (exact duration not specified)
+* Marked as resolved: unknown
 
-**Summary of outage duration**
-The outage lasted for approximately 5 hours and 35 minutes.
+**Microsoft Azure**
+
+* Outage: Betw een 20:19 UTC on 7 February 2023 and 04:30 UTC on 9 February 2023
+* Duration: 2 days, 8 hours, and 11 minutes
+* Affected services: Subset of customers with workloads hosted in Southeast Asia and East Asia regions
+* Root cause: Cooling failure in one Availability Zone (AZ) in Southeast Asia
+* Start time: 20:19 UTC on 7 February 2023
+* Downtime period: 04:30 UTC on 9 February 2023 - unknown (exact duration not specified)
+* Marked as resolved: 04:30 UTC on 9 February 2023
+
+**Microsoft Azure**
+
+* Outage: Betw een 09:44 and 13:10 UTC on 18 January 2023
+* Duration: 3 hours and 26 minutes
+* Affected services: Subset of customers using Storage services in West Europe, including Azure Application Insights, Azure Automation, Azure Container Registry, Azure Database for MySQL, Azure Database for PostgreSQL, Azure Red Hat OpenShift, Azure Search, Azure SQL Database, and Azure Virtual Machines (VMs)
+* Root cause: Planned power maintenance
+* Start time: 09:44 UTC on 18 January 2023
+* Downtime period: unknown (exact duration not specified)
+* Marked as resolved: unknown

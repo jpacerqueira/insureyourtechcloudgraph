@@ -1,26 +1,43 @@
-I can only provide information on Microsoft Azure based on the provided context. I don't have information on Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare.
+Here are the outages identified in the text for the specified cloud providers:
 
-Here is the resume of the outage in text:
+**Microsoft Azure**
 
-**Outage Details:**
+* Outage: Between 13:30 and 16:30 UTC on May 19, 2020
+* Duration: Approximately 3 hours and 30 minutes (3.5 hours)
+* Affected Services: Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services in East US region.
+* Root Cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to a breaker.
+* Start Time: 13:30 UTC on May 19, 2020
+* Downtime Period: The downtime period was not specified.
+* Resolution Time: Not specified.
 
-* **Start Time:** Between 13:30 and 16:30 UTC on May 19, 2020
-* **End Time:** Unknown (but it's mentioned that some customers may have experienced issues between 11:57 and 14:20 UTC on June 11, 2020)
-* **Duration:** Approximately 5 hours and 40 minutes (between 13:30 and 16:30 UTC on May 19, 2020) or approximately 2 hours and 23 minutes (between 11:57 and 14:20 UTC on June 11, 2020)
+**Azure (again, as it's mentioned multiple times)**
 
-**Impacted Services:**
+* Outage: Between 07:45 and 16:57 UTC on June 4, 2020
+* Duration: Approximately 9 hours and 12 minutes (9.2 hours)
+* Affected Services: Azure Resource Manager (ARM) services across all Public Azure regions.
+* Root Cause: Engineer determined that an incident occurred during the deployment of certain service-based resources via ARM.
+* Start Time: 07:45 UTC on June 4, 2020
+* Downtime Period: The downtime period was not specified.
+* Resolution Time: Not specified.
 
-* Azure SQL Database
-* Azure SQL Database Managed Instance
-* Azure Database for MariaDB
-* Azure Database for MySQL
-* Azure Database for PostgreSQL
-* Azure Synapse Analytics services
+**Azure (again, as it's mentioned multiple times)**
 
-**Cloud Provider Regions and Availability Zones Impacted:**
+* Outage: Between 11:57 and 14:20 UTC on June 11, 2020
+* Duration: Approximately 2 hours and 23 minutes (2.38 hours)
+* Affected Services: Storage customers in East US region who experienced connection failures when trying to access some of their resources hosted in this region.
+* Root Cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to a breaker.
+* Start Time: 11:57 UTC on June 11, 2020
+* Downtime Period: The downtime period was not specified.
+* Resolution Time: Not specified.
 
-* East US region (specifically, the region where some customer resources were hosted)
+**Azure (again, as it's mentioned multiple times)**
 
-Please note that I couldn't find any information on the exact duration of the outage in hours, minutes, and seconds. The provided context only mentions approximate durations.
+* Outage: Between approximately 20:30 and 00:30 UTC on March 15, 2020
+* Duration: Approximately 2 hours
+* Affected Services: Customers in West Central US who experienced issues connecting to resources hosted in this region.
+* Root Cause: An ice storm in the region resulted in a loss of power to both primary and secondary utility power feeds in West Central US.
+* Start Time: Approximately 20:30 UTC on March 15, 2020
+* Downtime Period: The downtime period was not specified.
+* Resolution Time: Not specified.
 
-If you need more information or clarification, please let me know!
+Note that I've removed the cloud providers that were not mentioned in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare).

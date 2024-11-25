@@ -11,8 +11,36 @@ grant all on all tables in schema "cloud_service_risk_ratings" to postgres;
 grant all on all sequences in schema "cloud_service_risk_ratings" to postgres;
 
 --
--- Create the service_risk_ratings table
+-- Create the service_risk_ratings table in schema cloud_service_risk_ratings
 --
+-- truncate_if_exists function
+CREATE OR REPLACE FUNCTION public.truncate_if_exists(_table text, _schema text DEFAULT NULL)
+  RETURNS text
+  LANGUAGE plpgsql AS
+$func$
+DECLARE
+   _qual_tbl text := concat_ws('.', quote_ident(_schema), quote_ident(_table));
+   _row_found bool;
+BEGIN
+   IF to_regclass(_qual_tbl) IS NOT NULL THEN   -- table exists
+      EXECUTE 'SELECT EXISTS (SELECT FROM ' || _qual_tbl || ')'
+      INTO _row_found;
+
+      IF _row_found THEN                        -- table is not empty
+         EXECUTE 'TRUNCATE ' || _qual_tbl;
+         RETURN 'Table truncated: ' || _qual_tbl;
+      ELSE  -- optional!
+         RETURN 'Table exists but is empty: ' || _qual_tbl;
+      END IF;
+   ELSE  -- optional!
+      RETURN 'Table not found: ' || _qual_tbl;
+   END IF;
+END
+$func$;
+
+SELECT public.truncate_if_exists('service_risk_ratings', 'cloud_service_risk_ratings');
+DROP TABLE IF EXISTS cloud_service_risk_ratings.service_risk_ratings;
+
 CREATE TABLE cloud_service_risk_ratings.service_risk_ratings (
     database_key_id bigint,
     service_name text,

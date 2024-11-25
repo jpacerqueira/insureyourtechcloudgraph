@@ -1,5 +1,17 @@
-I don't have the capability to apply a query across multiple cloud providers. The text you provided appears to be a comprehensive list of Azure services and features, but it does not contain information about outages or incidents on other cloud providers.
+I can only apply the query to Microsoft Azure as per the provided context.
 
-If you'd like to know about outages on specific cloud providers, I can try to help you find that information. For example, you can search for "AWS outage" or "GCP outage" on the respective websites of Amazon Web Services and Google Cloud Platform. Similarly, you can search for "Azure outage" on Microsoft Azure's website.
+Here is the resume of the outage:
 
-If you're looking for a specific incident, please provide me with more context or details about the outage you're interested in, such as the date range or the services affected. I'll do my best to help you find the information you need.
+**Outage Details**
+
+* **Service Impacted**: Microsoft Defender for Cloud
+* **Regions and Availability Zones**: East US, Central US, North Central US, South Central US, West Central US, West US 2, West US 3, Canada East, Canada Central, Brazil South
+* **Root Cause of Outage**: Not specified in the provided context
+* **Duration of Outage**:
+	+ Start Time: 32 seconds ago
+	+ End Time: Not specified
+	+ Duration: Not specified
+* **Downtime Period**: Not specified
+* **Resolution Date and Time**: Not specified
+
+Note that I have removed all Cloud Vendors not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

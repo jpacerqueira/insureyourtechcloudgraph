@@ -1,14 +1,24 @@
-I don't have information on the specified list of cloud providers (Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud) as they are not mentioned in the provided context. The text only discusses a service outage affecting Google Cloud Platform (GCP).
+I can only apply the query to the specified cloud providers that are mentioned in the text. The cloud providers that meet this criteria are:
 
-However, I can provide you with the information about the GCP outage:
+* Google GCP
+* Amazon AWS is not mentioned in the text
+* Microsoft Azure is not mentioned in the text
+* Oracle OCI is not mentioned in the text
+* IBM Cloud is not mentioned in the text
+* Snowflake is not mentioned in the text
+* Databricks is not mentioned in the text
+* MongoDB is not mentioned in the text
+* Akamai is not mentioned in the text
+* Cloudflare is not mentioned in the text
 
-* Resume the outage: "We extend our sincerest apologies for the service interruption incurred as a result of this service outage."
-* Duration of the incident:
-	+ Hours: 3 hours
-	+ Minutes: 0 minutes (no additional minutes were specified)
-	+ Seconds: 0 seconds (no additional seconds were specified, but it's implied to be 0 since no specific duration was given in seconds)
-* When was the outage: "From 15:45 to 18:09 US/Pacific"
-* Impacted services:
+Here are the results of the query applied to Google GCP:
+
+Incident Details:
+
+* Incident Start: 16 May, 2024 15:22 PDT
+* Incident End: 16 May, 2024 18:10 PDT
+* Duration: 2 hours, 48 minutes
+* Services Impacted:
 	+ AlloyDB for PostgreSQL
 	+ Apigee
 	+ Backup and DR
@@ -25,7 +35,27 @@ However, I can provide you with the information about the GCP outage:
 	+ Cloud Workstations
 	+ Colab Enterprise
 	+ Contact Center AI Platform
-	+ Cloud Interconnect
-* Impacted cloud provider regions and availability zones:
-	+ US/Pacific region (specifically, the us-east1-c zone)
-* Summary duration of the outage: The outage lasted for approximately 2 hours and 24 minutes.
+* Root Cause: A bug in the automation caused the component to be shut down in all zones where it was still in use.
+* Services Downtime Period:
+	+ AlloyDB for PostgreSQL
+	+ Apigee
+	+ Backup and DR
+	+ Batch
+	+ Cloud Build
+	+ Cloud Data Fusion
+	+ Cloud Developer Tools
+	+ Cloud Filestore
+	+ Cloud Load Balancing
+	+ Cloud Machine Learning
+	+ Cloud Memorystore
+	+ Cloud NAT
+	+ Cloud Run
+	+ Cloud Workstations
+	+ Colab Enterprise
+	+ Contact Center AI Platform (varies by region and availability zone)
+* Regions and Availability Zones Affected:
+	+ us-east1-c
+	+ us-west1
+	+ us-west2
+	+ us-west3
+	+ us-west4

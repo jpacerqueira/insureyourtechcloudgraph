@@ -1,18 +1,18 @@
-I can only provide information on Microsoft Azure based on the provided context. The other cloud providers are not mentioned.
+Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
 
-Here is the resume of the outage:
+Here is the information about the outage:
 
-**Outage Details:**
+**Outage Details**
 
-* **Duration:** 24 hours
-* **Start Time:** Not specified, but it occurred within a minute of SQL unavailability.
-* **End Time:** Within two hours of storage recovery and three hours after that for most databases.
-* **Impacted Services:** Azure SQL Database and Managed Instance, Cosmos DB (specifically MongoDB API customers), and Azure DevOps.
+* **Cloud Provider:** Microsoft Azure
+* **Services Impacted:** Azure SQL Database and Managed Instance
+* **Regions and Availability Zones:** The outage affected various control and data plane clusters in different regions.
+* **Root Cause of Outage:** Storage availability failures
+* **Duration of Outage:**
+	+ Time started: Within one minute of SQL unavailability
+	+ Time ended: After failover policies were initiated, geo-secondarity was elevated as the new primary, and failover groups (FOG) endpoint was updated to point to the new primary.
+* **Outage Duration:** Approximately 2 hours and 3 minutes
+* **Downtime Period:** The downtime period started after the incident began and ended when the failover policies were initiated.
+* **Time Marked as Resolved:** Within an hour of the incident, failover policies were initiated.
 
-**Affected Regions and Availability Zones:**
-
-* Central US region
-* Multiple availability zones within the Central US region were impacted.
-
-**Summary:**
-The outage lasted approximately 24 hours, with most services becoming available within two to three hours after storage recovery. The incident was caused by a widespread regional impact due to storage availability failures in multiple availability zones within the Central US region.
+Note that there is no information about Amazon AWS or other cloud providers in the provided text.

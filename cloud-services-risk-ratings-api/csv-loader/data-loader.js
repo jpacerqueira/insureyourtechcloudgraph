@@ -22,11 +22,31 @@ const pool = new Pool({
 function loadCSV(filePath, callback) {
   const results = [];
   
-  // Read and parse the CSV file
   fs.createReadStream(filePath)
     .pipe(csv())
     .on('data', (row) => {
-      results.push(row); // Collect each row from CSV
+      // Process each field in the row object
+      const processedRow = {};
+      Object.keys(row).forEach(key => {
+        let value = row[key];
+        if (typeof value === 'string') {
+          // remove invisible characters
+          value = value.replace(/[\u200B\u200C\u200D\uFEFF]/g, '');
+          // remove leading and trailing whitespace
+          value = value.trim();
+          // replace characters '\'' by '.'
+          value = value.replace(/\\'/g, '.');
+        }
+        // Only add non-empty values
+        if (value !== '') {
+          processedRow[key] = value;
+        }
+      });
+      
+      // Only add non-empty rows
+      if (Object.keys(processedRow).length > 0) {
+        results.push(processedRow);
+      }
     })
     .on('end', function () {
       console.log('CSV file successfully processed');

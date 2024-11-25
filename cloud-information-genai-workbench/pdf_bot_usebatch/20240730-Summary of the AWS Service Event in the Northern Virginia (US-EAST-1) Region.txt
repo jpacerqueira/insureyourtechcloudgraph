@@ -1,0 +1,25 @@
+Here is the information about the outage on Amazon AWS:
+
+**Outage Details:**
+
+* **Services Impacted:** Amazon CloudWatch Logs, Amazon Data Firehose, Amazon Elastic Container Service (ECS), AWS Lambda, Amazon Redshift, and AWS Glue
+* **Regions Affected:** Northern Virginia (US-EAST-1) Region
+* **Availability Zones Affected:** Not specified
+
+**Root Cause of Outage:**
+The outage was caused by a degradation of one of the internally-used cells of the Amazon Kinesis Data Streams service.
+
+**Duration of Outage:**
+
+* **Start Time:** 2:45 PM PDT
+* **End Time:** 9:37 PM PDT
+* **Duration:** 7 hours and 52 minutes
+* **Days:** 1 day
+
+**Downtime Period:**
+The outage started at 2:45 PM PDT on July 30th, 2024, and lasted for approximately 8 hours.
+
+**Resolution Time:**
+Normal operations were restored to the Kinesis Data Streams cell by 7:21 PM PDT, which marked the end of the outage. The backlog of delayed S3 events completed processing at 2:38 AM PDT on August 1st.
+
+Note that I have removed all Cloud Vendors not identified in the text, including Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

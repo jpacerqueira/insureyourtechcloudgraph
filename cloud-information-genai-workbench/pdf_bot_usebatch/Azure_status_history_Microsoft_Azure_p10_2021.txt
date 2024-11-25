@@ -1,15 +1,22 @@
-I'll provide a general template for the query results, as I don't have specific information about each service's outage. If you need more detailed information, please let me know which service's outage you're interested in.
+Based on the provided text, I will resume the outage for Microsoft Azure.
 
-**Resume of Outage**
+**Outage Details:**
 
-* **Incident Summary:** [Insert brief summary of incident]
-* **Duration:** [Insert duration of outage in hours, minutes, and seconds]
-	+ Hours: [X] hours
-	+ Minutes: [Y] minutes
-	+ Seconds: [Z] seconds
-* **Outage Timeframe:** [Insert start and end times of outage in UTC format (e.g., 2022-01-01T00:00:00Z to 2022-01-02T23:59:59Z)]
-* **Impacted Services:** [List services impacted by the outage, e.g., web applications, APIs, databases]
-* **Cloud Provider Regions and Availability Zones Impacted:** [List regions and availability zones affected, e.g., US East (N. Virginia), US West (Oregon), EU (Frankfurt)]
-* **Summary Duration:** [Insert total duration of outage in hours, minutes, and seconds]
+* **Incident:** A code defect in a version update of a component that controls network traffic routing between Azure regions.
+* **Duration:** The incident started at 21:30 UTC and was resolved by 18:45 UTC.
+* **Timeframe:** The outage lasted for approximately 2 hours and 15 minutes, which is equivalent to 2 days, 1 hour, and 15 minutes.
+* **Affected Services:** Front-end services for other clusters in the region also made calls to the impacted cluster's front-end service to obtain configuration, resulting in a cascading effect that impacted most West US Cosmos DB front-end services.
+* **Regions Affected:** The outage affected the West US region of Azure.
+* **Availability Zones Affected:** Not specified in the text.
 
-Please note that I'll need more information about the specific outage you're interested in to provide a more detailed response. If you provide me with the name of the service or cloud provider, I can try to find more specific information for you.
+**Root Cause:**
+
+The root cause of the outage was a code defect in a version update of a component that controls network traffic routing between Azure regions. The main parameters of the new code were invoked only at production scale and scope levels, which led to the failure of anomaly detection processes.
+
+**Services Downtime Period:**
+
+Not specified in the text.
+
+**Resolution Time:**
+
+The outage was marked as resolved by 18:45 UTC.

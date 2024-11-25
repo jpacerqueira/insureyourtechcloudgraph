@@ -1,22 +1,14 @@
-I'll apply the query to the provided text. Here are the results:
+Based on the provided text, I can only identify outages related to Microsoft Azure. Here is the information about the outage:
 
-**Resume of Outage:**
+**Outage Details:**
 
-The outage occurred on December 11-20, 2019.
+* **Incident:** Multiple services across Microsoft including Azure, Microsoft 365 failed due to management requests.
+* **Duration:** The outage started at 00:56 UTC on November 20, 2019, and lasted for approximately 3 hours and 44 minutes.
+* **Start Time:** 00:56 UTC on November 20, 2019
+* **End Time:** 04:40 UTC on November 20, 2019
+* **Affected Services:** Azure services
+* **Regions/Availability Zones:** Not specified in the text
+* **Root Cause:** The root cause of the outage was not explicitly stated in the provided text.
+* **Downtime Period:** The downtime period for the affected services was approximately 3 hours and 44 minutes.
 
-**Duration:**
-The incident lasted for approximately 7 hours and 44 minutes.
-
-**Outage Timeframe:**
-Between 17:24 UTC on December 11, 2019, and 18:48 UTC on December 11, 2019.
-
-**Impacted Services:**
-Azure CDN services were impacted when clients attempting to reach Verizon endpoints received HTTP (5XX) error responses or connection failures instead of expected content.
-
-**Cloud Provider Regions and Availability Zones Impacted:**
-The outage affected Azure CDN services in the US region, specifically in California.
-
-**Summary:**
-A 7-hour and 44-minute outage occurred on December 11, 2019, affecting Azure CDN services in the US region, particularly in California. The incident caused HTTP (5XX) error responses or connection failures for clients attempting to reach Verizon endpoints.
-
-Note that this query was applied only to the provided text about Microsoft Azure, as it does not contain information about other cloud providers like Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+Note that there is no information about outages related to Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare in the provided text.

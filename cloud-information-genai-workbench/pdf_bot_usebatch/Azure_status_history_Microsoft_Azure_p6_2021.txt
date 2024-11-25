@@ -1,22 +1,17 @@
-I can try to help you with that query. However, I'll need to parse the text from Microsoft Azure's incident report to extract the relevant information.
+Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
 
-Here are the results:
+Here is the summary of the outage:
 
-**Resume of the Outage:**
+**Cloud Provider:** Microsoft Azure
+**Services Impacted:** App Service, Azure Functions, Cosmos DB, Access Panel
 
-The outage occurred on November 9, 2021, and lasted for approximately 3 hours and 28 minutes (208 minutes).
+**Outage Details:**
 
-**Services Impacted:**
+* **Start Time:** 03:00 UT C on November 9, 2021
+* **End Time:** 07:41 UT C on December 5, 2022 (approximately 21 days)
+* **Duration:** 21 days, 4 hours, and 41 minutes
+* **Downtime Period:** The Access Panel was scaled to handle low traffic during off-business hours, but failed-over traffic from West Central US to Central US prevented customers from experiencing the bug.
+* **Root Cause:** A code change introduced an unrelated bug in the Access Panel that caused issues with deployments and web jobs.
+* **Resolution Time:** 07:41 UT C on December 5, 2022
 
-* Access Panel
-
-**Cloud Provider Regions and Availability Zones Impacted:**
-
-* West Central US
-* The incident caused traffic to be routed from West Central US to Central US.
-
-**Summary of the Outage:**
-
-The outage was caused by a code change that introduced an unrelated bug, which was discovered during elementary validation in the first deployment stage. To prevent further impact on customers, Azure failed over traffic from West Central US to Central US at 07:00 UT C. The incident was resolved when service fabric team developed a fix and redeployed it the following morning.
-
-Note that this information is specific to Microsoft Azure's incident report and may not be applicable to other cloud providers or services.
+Note that I have removed all cloud providers not mentioned in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

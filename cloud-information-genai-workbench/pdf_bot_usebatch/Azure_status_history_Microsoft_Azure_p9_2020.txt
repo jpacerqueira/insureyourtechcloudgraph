@@ -1,20 +1,18 @@
-I'll provide a general template for the query results. Please note that I won't be able to retrieve specific information about outages from these providers without access to their status history pages.
+Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
 
-**Resume of Outage**
+Here is the information about the outage:
 
-* **Incident Summary:** [Insert incident summary text]
-* **Duration:** [Insert duration in hours, minutes, and seconds] (e.g., 2 hours 30 minutes 45 seconds)
-* **Outage Time:** [Insert start and end times in UTC] (e.g., February 26, 2021, 03:26 UTC - February 26, 2021, 10:02 UTC)
+**Outage Details**
 
-**Impacted Services and Regions**
+* **Cloud Provider:** Microsoft Azure
+* **Services Impacted:** Front-end services for other clusters in the region also made calls to the impacted cluster's front-end service to obtain configuration.
+* **Regions and Availability Zones:** The text does not specify a particular region or availability zone, but it mentions that the outage affected most West US Cosmos DB front-end services.
+* **Root Cause:** A code defect in a version update of a component that controls network traffic routing between Azure regions.
+* **Duration:**
+	+ Start Time: 21:30 UTC
+	+ End Time: 10:02 UTC (approximately 4 hours and 32 minutes later)
+	+ Duration: approximately 4 hours and 32 minutes
+* **Downtime Period:** The outage started at 21:30 UTC and was resolved by 18:45 UTC, with a downtime period of approximately 2 hours and 15 minutes.
+* **Resolution Time:** The outage was marked as resolved by 18:45 UTC.
 
-* **Services Impacted:** [List services impacted by the outage]
-* **Cloud Provider Regions Affected:** [List regions affected by the outage] (e.g., West US)
-* **Availability Zones Affected:** [List availability zones affected by the outage]
-
-**Root Cause and Mitigation**
-
-* **Root Cause:** [Insert root cause text]
-* **Mitigation Steps:** [Insert mitigation steps taken to resolve the issue]
-
-Please note that I'll need to provide a generic response, as I don't have direct access to the status history pages of these cloud providers. If you'd like to know more about a specific outage, feel free to ask, and I'll do my best to help!
+Note that the text does not provide information on the specific services impacted in terms of region or availability zone.

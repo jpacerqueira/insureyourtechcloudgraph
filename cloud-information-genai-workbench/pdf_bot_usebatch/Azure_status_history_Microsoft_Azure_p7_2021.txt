@@ -1,67 +1,24 @@
-I'll need to run a query across multiple cloud providers to gather this information. However, I don't have direct access to their databases or APIs. But I can provide some general guidance on how to find this information.
+Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the query applied to the text:
 
-To resume the outage for each cloud provider, you would typically need to:
+**Outage Details:**
 
-1. Check the official blog posts, announcements, or incident reports from each cloud provider.
-2. Search for keywords like "outage," "incident," "downtime," or "unavailability" along with the cloud provider's name.
-3. Look for information on the affected services, regions, and availability zones.
+* Incident: Data Center Operations team worked at restoring some of the physical links which restored network connectivity to operational threshold by 21:20 UTC.
+* Duration: The outage lasted for approximately 2 hours and 8 minutes (from 14:30 UTC to 16:38 UTC).
+* Root Cause: Reviewing existing network data center operations cabling processes and standards, revisiting and retraining data center staff on processes.
 
-Here are some general findings based on publicly available information:
+**Impacted Services:**
 
-**Amazon AWS**
+* Windows Virtual Desktop infrastructure services were temporarily reconfigured to bypass the use of Azure Front Door during a portion of the outage period.
+* No specific services or regions were mentioned in the text.
 
-* Outage duration: 2 hours 15 minutes
-* Time of outage: July 12th, 2021, 14:55 UTC - 17:10 UTC
-* Impacted services: Azur e Front Door and Azur e CDN S tandar d from Microsoft (specifically in East US metr o locations)
-* Affected regions: East US metr o locations
-* Availability zones: Not specified
+**Availability Zones:**
 
-**Google GCP**
+* No availability zones were mentioned in the text.
 
-* No information found on a similar outage.
+**Downtime Period:**
 
-**Microsoft Azure**
+* The downtime period was not explicitly stated in the text, but it is implied that some services were unavailable for approximately 2 hours and 8 minutes.
 
-* Outage duration: 5 hours 15 minutes
-* Time of outage: July 12th, 2021, 06:30 UTC - 11:45 UTC
-* Impacted services: Azur e Front Door and Azur e CDN S tandar d from Microsoft (specifically in Japan East, J apan West, K orea South, K orea Central, and/or West US regions)
-* Affected regions: Japan East, J apan West, K orea South, K orea Central, and/or West US regions
-* Availability zones: Not specified
+**Resolution Time:**
 
-**Oracle OCI**
-
-* No information found on a similar outage.
-
-**IBM Cloud**
-
-* No information found on a similar outage.
-
-**Snowflake**
-
-* No information found on a similar outage.
-
-**Databricks**
-
-* No information found on a similar outage.
-
-**MongoDB**
-
-* No information found on a similar outage.
-
-**Akamai**
-
-* Outage duration: 2 hours
-* Time of outage: August 11th, 2021, 06:30 UTC - 08:30 UTC
-* Impacted services: Not specified
-* Affected regions: Japan East, J apan West, K orea South, K orea Central, and/or West US regions
-* Availability zones: Not specified
-
-**Cloudflare**
-
-* Outage duration: 2 hours 15 minutes
-* Time of outage: August 11th, 2021, 06:30 UTC - 08:45 UTC
-* Impacted services: Not specified
-* Affected regions: Japan East, J apan West, K orea South, K orea Central, and/or West US regions
-* Availability zones: Not specified
-
-Please note that the information provided is based on publicly available data and might not be exhaustive or up-to-date.
+* The outage was marked as resolved by 00:52 UTC on July 24, 2021.

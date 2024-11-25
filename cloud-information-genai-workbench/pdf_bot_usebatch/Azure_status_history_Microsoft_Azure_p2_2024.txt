@@ -1,39 +1,33 @@
-I'll provide a summary of the outage based on the provided context. Please note that this information is specific to Microsoft Azure.
+Here is the information about the outage for Microsoft Azure:
 
-**Resume of the Outage:**
+The outage occurred between 03:45 CST and 06:00 CST on April 23, 2024.
 
-The outage occurred when one of the four major paths between datacenters was cut, resulting in congestive packet loss when traffic on the remaining links exceeded their capacity. This incident impacted various services across multiple regions and availability zones.
+The impacted services were:
 
-**Duration of the Outage:**
+* Cosmos DB
+* Azure Virtual Desktop
+* Azure Databricks
+* Backup
+* Site Recovery
+* Azure IoT Hub
+* Service Bus
+* Logic Apps
+* Data Factory
+* Azure Kubernetes Services
+* Azure Policy
+* Azure AI Speech Services
 
-* The outage lasted for approximately 8 hours.
-* Recovery began around 16:30 UTC, but full mitigation was declared at 19:00 UTC.
+The outage affected the following regions and availability zones in China:
 
-**Impacted Services:**
+* chinacloudapp.cn domain
+* chinacloudsites.cn domain
 
-* Azure App Services
-* Azure Application Insights
-* Azure Data Explorer
-* Azure Database for MySQL
-* Azure Databricks (also experienced impact in North Europe)
-* Azure Digital Twins
-* Azure HDInsight
-* Azure Kubernetes Service
-* Azure Log Analytics
-* Azure NetApp Files
-* Azure Resource Graph
-* Azure Site Recovery
-* Azure Service Bus
-* Azure SQL DB
-* Azure Storage
-* Azure Virtual Machines
-* Subsets of Microsoft 365, Microsoft Power Platform, and Microsoft Sentinel services
+The root cause of the outage was a configuration change performed through a domain registrar result.
 
-**Impacted Regions and Availability Zones:**
+The outage started at 04:59 CST on April 23, 2024.
 
-* The outage affected multiple regions, including South Africa.
-* Specific availability zones were impacted, but the exact details are not provided in the context.
+The outage lasted for approximately 1 hour and 15 minutes (from 04:59 CST to 06:00 CST).
 
-**Summary:**
+The services that were impacted had a downtime period of approximately 1 hour and 15 minutes.
 
-The incident lasted for approximately 8 hours, with recovery beginning around 16:30 UTC. Full mitigation was declared at 19:00 UTC. The outage impacted various services across multiple regions and availability zones, including Azure App Services, Azure Database for MySQL, Azure Databricks, and others.
+The outage was marked as resolved at 05:13 CST on April 23, 2024.

@@ -1,25 +1,35 @@
-I don't have information on the specified list of cloud providers (Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) as the context provided only discusses Google Cloud Platform. The outage was related to Google Cloud Platform services such as Vertex AI Online Prediction, Dialogflow CX, and Agent Assist.
+I can only apply the query to the specified cloud providers that are mentioned in the text, which are Google GCP and Microsoft Azure is not present but  Oracle OCI is also not present however Amazon AWS is present.
 
-However, I can provide information on the Google Cloud Platform outage:
+Here is the result of applying the query:
 
-* Resume of the outage: Elevated error rates in multiple regions for Google Cloud Platform services including Vertex AI Online Prediction, Dialogflow CX, and Agent Assist.
-* Duration of the incident:
-	+ Hours: 3
-	+ Minutes: 53
-	+ Seconds: Not specified
-* When was the outage: The incident began on June 12, 2024, at 12:06 US/Pacific Time and ended on June 12, 2024, at 15:59 US/Pacific Time.
-* Impacted services:
-	+ Vertex AI Online Prediction
-	+ Dialogflow CX
+**Incident Details**
+
+* Cloud Provider: Google GCP
+* Services Impacted:
 	+ Agent Assist
-* Cloud provider regions impacted:
-	+ asia-southeast1
-	+ europe-west3
-	+ europe-west4
-	+ us-central1
-	+ us-east1
-	+ us-west1
-	+ northamerica-northeast1
-	+ us-east4
-* Availability zones impacted: Not specified in the provided context.
-* Summary duration of the outage: The incident lasted for 3 hours and 53 minutes.
+	+ Dialogflow CX
+	+ Vertex AI Online Prediction
+* Regions and Availability Zones Affected:
+	+ Singapore (asia-southeast1)
+	+ Frankfurt (europe-west3)
+	+ Netherlands (europe-west4)
+	+ Iowa (us-central1)
+	+ South Carolina (us-east1)
+	+ Oregon (us-west1)
+
+**Outage Details**
+
+* Start Time: 2024-06-12 12:06 US/Pacific
+* End Time: 2024-06-12 15:59 US/Pacific
+* Duration: 3 hours and 53 minutes
+* Downtime Period:
+	+ Duration: 3 hours and 53 minutes
+	+ Start Time: 2024-06-12 12:06 US/Pacific
+	+ End Time: 2024-06-12 15:59 US/Pacific
+
+**Root Cause**
+
+* A novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers.
+* An affected server would restart after the segfault, and load balancers would send user queries to other healthy API servers until the affected server returned to service.
+
+Note: Microsoft Azure is not present in the text, so I did not include it in the results.

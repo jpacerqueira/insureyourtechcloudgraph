@@ -1,29 +1,22 @@
-Based on the provided context, here is a summary of the Amazon AWS outage:
+Based on the provided text, I can only identify one cloud provider: Amazon AWS.
 
-**Resume of the Outage:**
+Here is the information about the outage:
 
-The outage occurred when an issue with the EBS (Elastic Block Store) cluster caused a degradation in performance, leading to elevated error rates and latencies for new EBS-backed EC2 instances. The primary affected Availability Zone was impacted, resulting in a significant number of volumes becoming "stuck" and unable to be used.
+**Cloud Provider:** Amazon AWS
+**Services impacted:** Amazon Elastic Compute Cloud (EC2), Amazon Elastic Block Store (EBS)
+**Regions and Availability Zones affected:** US East Region, a single Availability Zone
 
-**Duration:**
+The outage occurred on April 21st, starting at an unknown time. The duration of the outage was approximately 11 hours.
 
-The outage lasted for approximately 11 hours, from the onset of the issue until Noon PM PDT on April 21st.
+**Root cause of the outage:** A subset of EBS volumes in the affected Availability Zone became unable to service read and write operations due to a race condition between essential communication between nodes in the cluster.
 
-**Timeline:**
+**Services downtime period:**
 
-* Onset of the issue: unknown (but occurred before Noon PDT on April 21st)
-* 11:30 AM PDT: A change to the EBS control plane fixed the issue and improved latencies and error rates for new EBS-backed EC2 instances.
-* Noon PM PDT on April 21st: Latencies and error rates returned to near-normal.
+* EC2 instances using the affected EBS volumes experienced significantly elevated error rates and latencies.
+* New EBS-backed EC2 launches were being affected by a specific API in the EBS control plane that is only needed for attaching new instances to volumes.
 
-**Impacted Services:**
+The outage started at an unknown time, but it was resolved when a change to the EBS control plane fixed the issue at 11:30 AM PDT. The total downtime period was approximately 11 hours and 30 minutes.
 
-* Amazon EC2 (specifically, EBS-backed instances)
-* Amazon RDS (database instances hosted in the primary affected Availability Zone)
+**Duration of the outage:** 11 hours and 30 minutes
 
-**Cloud Provider Regions and Availability Zones Impacted:**
-
-* The outage was primarily affecting the US East Region.
-* The specific Availability Zone impacted was not specified.
-
-**Summary:**
-
-The outage lasted for approximately 11 hours, from Noon PM PDT on April 21st until Noon PM PDT on April 22nd. It affected Amazon EC2 and RDS services in the US East Region, specifically in the primary affected Availability Zone.
+Note that I have removed all cloud providers not identified in the text, including Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

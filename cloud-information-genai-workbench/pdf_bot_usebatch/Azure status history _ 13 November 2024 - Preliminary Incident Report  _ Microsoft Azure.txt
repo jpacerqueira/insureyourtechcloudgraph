@@ -1,35 +1,23 @@
-I can only provide information on Microsoft Azure as the context is specific to Azure. The query you provided seems to be a generic one that applies to multiple cloud providers.
+Here is the resume of the outage:
 
-However, based on the provided context, here's the information about the Azure outage:
+**Cloud Provider:** Microsoft Azure
+**Services Impacted:**
 
-**Resume of the Outage:**
+* Azure Log Analytics (West Europe, Southeast Asia, and/or Korea Central regions)
+* Azure Container Registry (East US region)
 
-A subset of Azure Blob Storage and Azure Data Lake Storage accounts experienced connectivity errors between 00:50 UTC and 12:30 UTC on November 13, 2024. The issue manifested as loss of access to Blob and Data Lake storage endpoints of affected storage accounts.
+**Root Cause:** Unintentional deletion of Traffic Manager profiles for affected storage accounts.
 
-**Duration of the Incident:**
+**Duration:**
+- Start Time: 00:50 UTC on November 13, 2024
+- End Time: 12:30 UTC on November 13, 2024
 
-The outage lasted for approximately 11 hours and 40 minutes (7400 seconds).
+**Outage Details:**
 
-**Impacted Services:**
+* Duration in Days: 1 day
+* Duration in Hours: 2 hours
+* Duration in Minutes: 30 minutes
+* Downtime Period: The affected services experienced DNS resolution failures when interacting with impacted storage accounts in Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, and/or West US 2.
+* Marked as Resolved: Not specified in the text.
 
-* Azure Log Analytics
-* Azure Container Registry
-
-**Cloud Provider Regions and Availability Zones Impacted:**
-
-The following regions were impacted:
-
-* East US region
-* West US region
-* Australia East region
-* Canada Central region
-* Canada East region
-* Central US region
-* Japan East region
-* South Central US region
-* UAE North region
-* West US 2 region
-
-**Summary of the Outage:**
-
-The outage was caused by an unintentional deletion of Azure Traffic Manager profiles for affected storage accounts. The incident was resolved after the issue was identified and addressed.
+Note that Snowflake, MongoDB, Akamai, and Cloudflare are not mentioned in the original text.

@@ -1,24 +1,25 @@
-I'll try to extract the relevant information from the provided context. Please note that some details might be missing or not explicitly stated.
+Based on the provided text, I will resume the outages for Microsoft Azure.
 
-**Resume of Outage:**
+**Outage 1:**
 
-The outage occurred on February 21-22, 2020, affecting Azure customers.
+* Services impacted: FIB (Firewall)
+* Regions and availability zones: South Central US
+* Root cause of outage: Incorrect configuration change sent all SYN packets to the router's CPU for inspection, causing denial-of-service protection to drop a subset of packets.
+* Duration of outage:
+	+ Start time: 12:48 UTC on February 28, 2020
+	+ End time: 22:28 UTC on February 28, 2020 (approximately 9 hours and 40 minutes)
+	+ Downtime period: Approximately 9 hours and 40 minutes
+* Services affected by downtime:
+	+ IPv4 traffic
 
-**Duration:**
+**Outage 2:**
 
-* Total duration: approximately 8 hours and 36 minutes (from 22:17 UTC on February 21 to 00:53 UTC on February 22)
-* Partial recovery started at around 20:40 UTC, followed by full recovery at 00:53 UTC on February 22.
-
-**Impacted Services:**
-
-* Storage data was restored during the outage.
-
-**Cloud Provider Regions and Availability Zones Impacted:**
-
-* South Central US region (no specific availability zones mentioned)
-
-**Summary of Outage:**
-
-The outage lasted for approximately 8 hours and 36 minutes, affecting Azure customers in the South Central US region. The cause of the outage is not explicitly stated, but it appears to be related to a configuration issue with the network router.
-
-Please note that I couldn't find information on the other cloud providers you mentioned (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) as they were not mentioned in the provided context.
+* Services impacted: Network connection failures for IPv4 traffic
+* Regions and availability zones: Not specified
+* Root cause of outage: Incorrect configuration change sent all SYN packets to the router's CPU for inspection, causing denial-of-service protection to drop a subset of packets.
+* Duration of outage:
+	+ Start time: 22:17 UTC on February 21, 2020
+	+ End time: 00:53 UTC on February 22, 2020 (approximately 9 hours and 36 minutes)
+	+ Downtime period: Approximately 9 hours and 36 minutes
+* Services affected by downtime:
+	+ IPv4 traffic

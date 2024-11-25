@@ -22,6 +22,13 @@ elif [[ "$BUILD_METHOD" == "3" ]]; then
    #docker system prune -f
    #docker volume prune -f
    docker compose up --build --force-recreate
+elif [[ "$BUILD_METHOD" == "4" ]]; then
+   docker compose down
+   docker compose rm -sfv # just remove containers and volumes of the compose project
+   #docker system prune -f
+   #docker volume prune -f
+   docker compose up -d --build --force-recreate > /dev/null 2>&1
+   echo "Outage Webscraping , pdf file samples extracted, built! Now, wait 10 seconds for the database to be ready."
 else
    docker compose ps
 fi
