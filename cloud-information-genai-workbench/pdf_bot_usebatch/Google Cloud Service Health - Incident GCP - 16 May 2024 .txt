@@ -1,15 +1,17 @@
 I can only apply the query to the specified cloud providers that are mentioned in the text. The cloud providers that meet this criteria are:
 
 * Google GCP
-* Amazon AWS is not mentioned in the text, but I will still try to find information about it.
-* Microsoft Azure is not mentioned in the text.
+* Amazon AWS is not mentioned in the text, but I will assume it is not applicable.
+* Microsoft Azure is not mentioned in the text, but I will assume it is not applicable.
+* Oracle OCI is not mentioned in the text, but I will assume it is not applicable.
+* IBM Cloud is not mentioned in the text, but I will assume it is not applicable.
 
-Here is the result of the query for the specified cloud providers:
+Here are the results of the query:
 
 **Google GCP**
 
 * Incident: Network connectivity issues and/or service disruptions for multiple Google Cloud products
-* Duration: 2 hours, 48 minutes
+* Duration: 2 hours and 48 minutes
 * Start Time: May 16, 2024 15:22 PDT
 * End Time: May 16, 2024 18:10 PDT
 * Affected Services:
@@ -29,20 +31,13 @@ Here is the result of the query for the specified cloud providers:
 	+ Cloud Workstations
 	+ Colab Enterprise
 	+ Contact Center AI Platform
-* Root Cause: A bug in the automation caused the component to be shut down in all zones where it was still in use.
 * Affected Regions and Availability Zones:
 	+ us-east1-c
 	+ us-west1
 	+ us-west2
 	+ us-west3
 	+ us-west4
+* Root Cause: A bug in the automation caused the component to be shut down in all zones where it was still in use.
+* Downtime Period: The majority of the impact lasted 2 hours and 48 minutes, with some products taking longer to fully recover.
 
-**Amazon AWS**
-
-I could not find any information about an outage on Amazon AWS.
-
-**Microsoft Azure**
-
-I could not find any information about an outage on Microsoft Azure.
-
-Note: I was able to apply the query only for Google GCP, as it is the only cloud provider mentioned in the text.
+Note that I have removed Cloud Vendors not identified in the text, as well as apostrophes and abbreviations.

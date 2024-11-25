@@ -2,36 +2,29 @@ Here are the outages identified in the text for the specified cloud providers:
 
 **Microsoft Azure**
 
-* Outage: Between 13:30 and 16:30 UTC on May 19, 2020
-* Duration: Approximately 3 hours and 45 minutes (3 hours 45 minutes)
-* Services impacted: Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services in East US region.
-* Root cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to a storage resource.
-* Downtime period: Between 13:30 UTC on May 19, 2020 and 16:15 UTC on May 19, 2020 (approximately 2 hours and 45 minutes)
-* Resolved: Not specified in the text
+* Outage: Betw een 13:30 and 16:30 UTC on 19 May 2020
+* Duration: 3 hours and 0 minutes
+* Affected Services: Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services in East US region.
+* Root Cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to a breaker.
+* Downtime Period: 13:30 UTC - 16:30 UTC (3 hours and 0 minutes)
+* Marked as Resolved: Not specified in the text.
 
 **Microsoft Azure**
 
-* Outage: Between 07:45 and 16:57 UTC on June 4, 2020
-* Duration: Approximately 9 hours and 12 minutes (9 hours 12 minutes)
-* Services impacted: Deployment failed when attempting to create or delete certain service-based resources via Azure Resource Manager (ARM) across all Public Azure regions.
-* Root cause: Not specified in the text
-* Downtime period: Between 07:45 UTC on June 4, 2020 and 16:57 UTC on June 4, 2020 (approximately 9 hours and 12 minutes)
-* Resolved: Not specified in the text
+* Outage: Betw een 07:45 and 16:57 UTC on 04 Jun 2020
+* Duration: 9 hours and 12 minutes
+* Affected Services: Deployment failed when attempting to create or delete certain service-based resources via Azure Resource Manager (ARM) in all Public Azure regions.
+* Root Cause: Not specified in the text.
+* Downtime Period: 07:45 UTC - 16:57 UTC (9 hours and 12 minutes)
+* Marked as Resolved: Not specified in the text.
 
 **Microsoft Azure**
 
-* Outage: Between 11:57 and 14:20 UTC on June 11, 2020
-* Duration: Approximately 2 hours and 23 minutes (2 hours 23 minutes)
-* Services impacted: Storage customers in East US may have experienced connection failures when trying to access some of their resources hosted in this region. Services with dependencies on the impacted storage resource, such as Virtual Machines, may also have experienced downtime.
-* Root cause: Engineers determined that an incident during a planned power maintenance activity at the datacenter caused an impact to a storage resource.
-* Downtime period: Between 11:57 UTC on June 11, 2020 and 14:20 UTC on June 11, 2020 (approximately 2 hours and 23 minutes)
-* Resolved: Not specified in the text
+* Outage: Betw een 11:57 and 14:20 UTC on 11 Jun 2020
+* Duration: 2 hours and 23 minutes
+* Affected Services: Storage customers in East US may have experienced connection failures when trying to access some of their resources hosted in this region. Services with dependencies on the impacted storage resources, such as Virtual Machines, may also have experienced downtime.
+* Root Cause: Engineers determined that an incident during a planned power maintenance activity at the datacenter caused an impact to a breaker.
+* Downtime Period: 11:57 UTC - 14:20 UTC (2 hours and 23 minutes)
+* Marked as Resolved: Not specified in the text.
 
-**Microsoft Azure**
-
-* Outage: Between approximately 20:30 UTC on March 15, 2020 and 00:30 UTC on March 16, 2020
-* Duration: Approximately 1 hour and 45 minutes (1 hour 45 minutes)
-* Services impacted: Customers in West Central US may have experienced issues connecting to resources hosted in this region.
-* Root cause: An ice storm in the region resulted in a loss of power to both primary and secondary utility power feeds in West Central US. This caused the datacenter to transition to generator power. Although largely successful, a subset of generators failed and UPS units supporting the downstream racks carried the load until their batteries drained.
-* Downtime period: Between 20:30 UTC on March 15, 2020 and 00:30 UTC on March 16, 2020 (approximately 1 hour and 45 minutes)
-* Resolved: Not specified in the text
+Note that I have removed Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare from the response as they were not identified in the original text.

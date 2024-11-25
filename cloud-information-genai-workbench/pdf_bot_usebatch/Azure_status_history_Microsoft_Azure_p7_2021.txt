@@ -7,7 +7,7 @@ Based on the provided text, I can only identify Microsoft Azure as a cloud provi
 **Duration of Outage:**
 	* Start Time: 00:52 UT C on 24 Jul 2021
 	* End Time: Not specified, but it was marked as resolved by 21:20 UT C
-	* Duration: Approximately 2 hours and 30 minutes (from 00:52 UT C to 21:20 UT C)
-**Downtime Period:** The outage started on July 24, 2021, at 00:52 UT C and lasted for approximately 2 hours and 30 minutes. It was marked as resolved by 21:20 UT C.
+	* Duration: Approximately 4 hours and 30 minutes (from 00:52 UT C to 21:20 UT C)
+**Downtime Period:** The outage started on July 24, 2021, at 00:52 UT C and lasted for approximately 4 hours and 30 minutes. It was marked as resolved by 21:20 UT C.
 
-Note that the text does not provide information about the regions and availability zones affected by the outage, as well as the root cause of the outage.
+Note that the text does not provide information about the specific regions or availability zones affected by the outage, nor does it specify the root cause of the outage.

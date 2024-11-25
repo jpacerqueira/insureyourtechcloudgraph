@@ -8,11 +8,11 @@ Here is the resume of the outage:
 * **Duration**: 32 seconds
 * **Start Time**: 32 seconds ago
 * **End Time**: Not specified
-* **Affected Services**: Azur e Service Health, Azur e Status Page
+* **Affected Services**: Azur e status page, Azur e Service Health
 * **Regions and Availability Zones**: Central US, East US, North Central US, South Central US, West Central US, West US, Canada East, Canada Central, Brazil South
 * **Services Impacted**:
 	+ Azur e Service Health
-	+ Azur e Status Page
+	+ Azur e status page
 * **Root Cause**: Not specified
 * **Downtime Period**: 32 seconds
 * **Resolution Time**: Not specified

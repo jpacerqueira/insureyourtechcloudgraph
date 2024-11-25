@@ -10,7 +10,8 @@ The outage lasted for approximately 5 hours and 12 minutes. The downtime period 
 
 Here is a summary of the outage:
 
-* Outage start time: 7:30 AM JST
-* Duration: 5 hours and 12 minutes
-* Downtime period: 5 hours and 12 minutes (from 7:30 AM JST to 1:42 PM JST)
-* Resolution time: 1:42 PM JST
+* Date: September 2, 2021
+* Time: 7:30 AM JST - 1:42 PM JST
+* Duration: Approximately 5 hours and 12 minutes
+* Downtime period: 5 hours and 12 minutes
+* Resolved: 1:42 PM JST

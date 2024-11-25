@@ -9,10 +9,11 @@ Here is the information about the outage:
 * **Regions and Availability Zones:** The outage affected various control and data plane clusters in different regions.
 * **Root Cause of Outage:** Storage availability failures
 * **Duration of Outage:**
-	+ Time Started: Within one minute of SQL unavailability
-	+ Duration: Approximately 2 hours (80% of databases became available) + 3 hours (98% of databases were available)
-	+ Total Duration: Approximately 5 hours
-* **Downtime Period:** The outage started at an unknown time, but failover policies were initiated within one hour.
-* **Resolution Time:** The failover group (FOG) endpoint was updated to point to the new primary after failover. Applications that connected through the FOG endpoint would be automatically directed to the downstream services.
+	+ Time started: Within one minute of SQL unavailability
+	+ Time ended: After failover policies were initiated, geo-secondarity was elevated as the new primary, and failover groups (FOG) endpoint was updated to point to the new primary.
+* **Time Started:** 12:30 CST (China Standard Time)
+* **Duration in Days, Hours, and Minutes:** Approximately 2 hours
+* **Downtime Period:** The downtime period started after the incident began and ended when failover policies were initiated. The exact duration of the downtime is not specified.
+* **Time Marked as Resolved:** Not explicitly stated, but it can be inferred that the outage was resolved once failover policies were initiated.
 
-Note: I removed all cloud providers not mentioned in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+Note: There are no mentions of Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare in the provided text.

@@ -12,10 +12,10 @@ Here is the information about the outage:
 **Duration of the outage:**
 * Start time: 12:36 PM JST on August 23, 2019
 * End time: Not specified in the text
-* Duration: Unknown (text does not provide end time)
+* Duration: Unknown (not specified in the text)
 
-**Services affected and downtime period:** EC2 instances and EBS volumes in the affected Availability Zone were impacted. The exact duration of the outage is unknown.
+**Services affected and downtime period:** EC2 instances and EBS volumes in the affected Availability Zone were impaired. The exact duration of the outage is not specified in the text.
 
 **Resolution date:** Not specified in the text
 
-Note that I have removed all cloud providers except Amazon AWS, as per your request. I have also removed apostrophes and included full words only, without abbreviations.
+Note that I have removed all cloud providers except Amazon AWS, as per your request. I have also removed apostrophes and included only full words from the original text.

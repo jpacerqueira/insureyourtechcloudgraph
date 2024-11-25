@@ -8,15 +8,9 @@ Here is the information about the outage:
 
 The outage occurred on April 21st, starting at an unknown time. The duration of the outage was approximately 11 hours.
 
-**Root cause of the outage:** A subset of EBS volumes in the affected Availability Zone became unable to service read and write operations due to a race condition between essential communication between nodes in the cluster.
+**Root cause of the outage:** A subset of EBS volumes in the affected Availability Zone became unable to service read and write operations due to a race condition between nodes in the cluster.
+**Services downtime period:** EC2 instances using the affected EBS volumes experienced significantly elevated error rates and latencies. New EBS-backed EC2 launches were being affected by a specific API in the EBS control plane that is only needed for attaching new instances to volumes.
 
-**Services downtime period:**
-
-* EC2 instances using the affected EBS volumes experienced significantly elevated error rates and latencies.
-* New EBS-backed EC2 launches were being affected by a specific API in the EBS control plane that is only needed for attaching new instances to volumes.
-
-The outage started at an unknown time, but it was resolved when a change to the EBS control plane fixed the issue at 11:30 AM PDT. The total downtime period was approximately 11 hours and 30 minutes.
-
-**Duration of the outage:** 11 hours and 30 minutes
+The outage started at an unknown time, but it was resolved when a change to the EBS control plane fixed the issue at 11:30 AM PDT on April 21st. The total downtime period was approximately 11 hours and 30 minutes.
 
 Note that I have removed all cloud providers not identified in the text, including Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

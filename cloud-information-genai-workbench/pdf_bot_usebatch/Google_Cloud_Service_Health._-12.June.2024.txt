@@ -1,4 +1,4 @@
-I can only apply the query to the specified cloud providers that are mentioned in the text, which are Google GCP and Microsoft Azure is not present but  Oracle OCI is.
+I can only apply the query to the specified cloud providers that are mentioned in the text, which are Google GCP and Microsoft Azure is not present but  Amazon AWS is also not present however Oracle OCI is present.
 
 Here is the result of applying the query:
 
@@ -19,20 +19,17 @@ Here is the result of applying the query:
 
 **Outage Details**
 
-* Incident Start Time: 2024-06-12 12:06 US/Pacific
-* Incident End Time: 2024-06-12 15:59 US/Pacific
+* Start Time: 2024-06-12 12:06 US/Pacific
+* End Time: 2024-06-12 15:59 US/Pacific
 * Duration: 3 hours and 53 minutes
-* Root Cause:
-	+ A novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers.
-* Remediation and Prevention:
-	+ Google engineers were alerted to the issue via internal production monitoring on June 10, 2024 at 07:35 US/Pacific.
-	+ The root cause was identified and a fix was developed, which was progressively rolled out.
+* Downtime Period:
+	+ Duration: 3 hours and 53 minutes
+	+ Start Time: 2024-06-12 12:06 US/Pacific
+	+ End Time: 2024-06-12 15:59 US/Pacific
 
-**Downtime Period**
+**Root Cause**
 
-* Downtime Start Time: Not specified
-* Downtime End Time: Not specified
+* A novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers.
+* An affected server would restart after the segfault, and load balancers would send user queries to other healthy API servers until the affected server returned to service.
 
-**Resolution Marked**
-
-* Incident marked as resolved on June 12, 2024 at 15:59 US/Pacific
+Note: Microsoft Azure is not present in the text, so I did not include it in the results.
