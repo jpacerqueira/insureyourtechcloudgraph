@@ -1,0 +1,1135 @@
+ - Llama-3.2 3B - 
+ - Outage Information - 
+--
+Outage Filename: ./20210913-Summary of AWS Direct Connect Event in the Tokyo (AP-NORTHEAST-1) Region.txt
+--
+I can only provide information on Amazon AWS as per the given context.
+
+Amazon AWS Direct Connect service disruption:
+
+The outage occurred on September 2, 2021, at 7:30 AM JST. The incident lasted for approximately 9 hours and 12 minutes.
+
+Services impacted:
+- Virtual Private Clouds (VPCs) in the Tokyo Region
+- Direct Connect traffic to the Tokyo Region
+
+Regions affected:
+- Tokyo (AP-NORTHEAST-1)
+
+Availability Zones not specified.
+
+Root cause of the outage: The failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
+
+Duration of the outage:
+- Started at 7:30 AM JST
+- Ended at 4:42 PM JST (approximately 9 hours and 12 minutes)
+
+Downtime period:
+- The downtime started when the elevated packet loss for Direct Connect customers connecting to the Tokyo Region was first detected by internal alarms at 7:30 AM JST.
+- It ended when connectivity issues were fully resolved at 4:42 PM JST.
+
+Resolved on: September 2, 2021, at 4:42 PM JST.  
+--
+Outage Filename: ./20211210-Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region.txt
+--
+I can only provide information on Amazon AWS as per the given text.
+
+The outage occurred in the Northern Virginia (US-EAST-1) Region and affected several services including:
+
+* Amazon Connect
+* API Gateways used by Connect for the execution of Lambda functions
+
+The root cause of the outage was a single root cause, but it is not specified in the text.
+
+The outage started at 9:28 AM PST on December 7th, 2021, and lasted for approximately 6 hours and 54 minutes. The downtime period began when the monitoring data was still not visible to the operations team, which delayed their understanding of the event.
+
+Here is a summary of the outage:
+
+* Start time: 9:28 AM PST on December 7th, 2021
+* End time: 4:41 PM PST on December 7th, 2021
+* Duration: approximately 6 hours and 54 minutes
+* Downtime period: started when monitoring data was still not visible to the operations team
+* Resolution time: 8:22 AM PST on December 7th, 2021 (when the Service Health Dashboard was successfully updated)
+
+Note that the text does not provide information on the specific availability zones affected by the outage.  
+--
+Outage Filename: ./20240713-Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region.txt
+--
+Based on the provided text, I will resume the outage for Amazon AWS.
+
+**Incident Details:**
+
+* **Cloud Provider:** Amazon AWS
+* **Services Impacted:** 
+  + Lambda function invocations within Northern Virginia (US-EAST-1) Region
+  + Amazon STS
+  + AWS Management Console
+  + Amazon EKS
+  + Amazon Connect
+  + Amazon EventBridge
+
+**Outage Details:**
+
+* **Start Time:** June 13th, 2023 at 11:49 AM PDT
+* **Duration:** The outage lasted for approximately 4 hours and 48 minutes.
+* **Root Cause:** A latent software defect in the Lambda Frontend that caused elevated error rates and latencies for Lambda function invocations.
+
+**Downtime Period:**
+
+* **Start Time:** June 13th, 2023 at 11:49 AM PDT
+* **End Time:** June 13th, 2023 at 3:37 PM PDT
+
+**Resolution Time:**
+
+* **Resolved Time:** June 13th, 2023 at 3:37 PM PDT  
+--
+Outage Filename: ./20240730-Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region.txt
+--
+Here is the information about the outage on Amazon AWS:
+
+**Outage Details:**
+
+* **Services Impacted:** Amazon CloudWatch Logs, Amazon Data Firehose, Amazon Elastic Container Service (ECS), AWS Lambda, Amazon Redshift, and AWS Glue
+* **Regions Affected:** Northern Virginia (US-EAST-1) Region
+* **Availability Zones Affected:** Not specified
+
+**Root Cause of Outage:**
+The outage was caused by a degradation of one of the internally-used cells of the Amazon Kinesis Data Streams service.
+
+**Duration of Outage:**
+
+* **Start Time:** 2:45 PM PDT
+* **End Time:** 9:37 PM PDT
+* **Duration:** 7 hours and 52 minutes
+* **Days:** 1 day
+
+**Downtime Period:**
+The outage started at 2:45 PM PDT on July 30th, 2024, and lasted for approximately 8 hours.
+
+**Resolution Time:**
+Normal operations were restored to the Kinesis Data Streams cell by 7:21 PM PDT, which marked the end of the outage. The backlog of delayed S3 events completed processing at 2:38 AM PDT on August 1st.
+
+Note that I have removed all Cloud Vendors not identified in the text, including Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.  
+--
+Outage Filename: ./20241110-Service health - Nov 25, 2024 _ AWS Health Dashboard _ Global.txt
+--
+After analyzing the provided text, I have identified the following outages related to Amazon AWS:
+
+1. Increased API errors rates for mutatable VPC calls
+	* Region: Seoul (ap-northeast-2)
+	* Availability Zone: Not specified
+	* Services impacted: ALB, ECS, EKS, Fargate
+	* Root cause: Database component causing the impairment
+	* Duration: 3 hours and 18 minutes
+	* Start time: November 10, 2024, 7:55:00 AM (PST)
+	* End time: November 10, 2024, 10:13:00 AM (PST)
+	* Downtime period: 3 hours and 18 minutes
+	* Marked as resolved: Yes
+
+Note that I have removed the following Cloud Vendors from the analysis:
+
+* Google GCP
+* Microsoft Azure
+* Oracle OCI
+* IBM Cloud
+* Snowflake
+* Databricks
+* MongoDB
+* Akamai
+* Cloudflare  
+--
+Outage Filename: ./AWS PES - 21 April 2021 - Summary of the Amazon EC2 and Amazon RDS Service Disruption in the US East Region.txt
+--
+Based on the provided text, I can only identify one cloud provider: Amazon AWS.
+
+Here is the information about the outage:
+
+**Cloud Provider:** Amazon AWS
+**Services impacted:** Amazon Elastic Compute Cloud (EC2), Amazon Elastic Block Store (EBS)
+**Regions and Availability Zones affected:** US East Region, a single Availability Zone
+
+The outage occurred on April 21st, starting at an unknown time. The duration of the outage was approximately 11 hours.
+
+**Root cause of the outage:** A subset of EBS volumes in the affected Availability Zone became unable to service read and write operations due to a race condition between essential communication between nodes in the cluster.
+
+**Services downtime period:**
+
+* EC2 instances using the affected EBS volumes experienced significantly elevated error rates and latencies.
+* New EBS-backed EC2 launches were being affected by a specific API in the EBS control plane that is only needed for attaching new instances to volumes.
+
+The outage started at an unknown time, but it was resolved when a change to the EBS control plane fixed the issue at 11:30 AM PDT. The total downtime period was approximately 11 hours and 30 minutes.
+
+**Duration of the outage:** 11 hours and 30 minutes
+
+Note that I have removed all cloud providers not identified in the text, including Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.  
+--
+Outage Filename: ./Azure status history _ 13 November 2024 - Preliminary Incident Report  _ Microsoft Azure.txt
+--
+Here is the resume of the outage:
+
+**Cloud Provider:** Microsoft Azure
+**Services Impacted:**
+
+* Azure Log Analytics (West Europe, Southeast Asia, and/or Korea Central regions)
+* Azure Container Registry (East US region)
+
+**Root Cause:** Unintentional deletion of Traffic Manager profiles for affected storage accounts.
+
+**Duration:**
+- Start Time: 00:50 UTC on November 13, 2024
+- End Time: 12:30 UTC on November 13, 2024
+
+**Outage Details:**
+
+* Duration in Days: 1 day
+* Duration in Hours: 2 hours
+* Duration in Minutes: 30 minutes
+* Downtime Period: The affected services experienced DNS resolution failures when interacting with impacted storage accounts in Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, and/or West US 2.
+* Marked as Resolved: Not specified in the text.
+
+Note that Snowflake, MongoDB, Akamai, and Cloudflare are not mentioned in the original text.  
+--
+Outage Filename: ./Azure_status_-_29_October_2024.txt
+--
+I can only apply the query to Microsoft Azure as per the provided context.
+
+Here is the resume of the outage:
+
+**Outage Details**
+
+* **Service Impacted**: Microsoft Defender for Cloud
+* **Regions and Availability Zones**: East US, Central US, North Central US, South Central US, West Central US, West US 2, West US 3, Canada East, Canada Central, Brazil South
+* **Root Cause of Outage**: Not specified in the provided context
+* **Duration of Outage**:
+	+ Start Time: 32 seconds ago
+	+ End Time: Not specified
+	+ Duration: Not specified
+* **Downtime Period**: Not specified
+* **Resolution Date and Time**: Not specified
+
+Note that I have removed all Cloud Vendors not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p10_2020.txt
+--
+Based on the provided text, I will resume the outages for Microsoft Azure.
+
+**Outage 1:**
+- Incident Duration: 4 hours and 15 minutes
+- Outage Start Time: Between 09:24 UTC on July 1, 2020, and 11:15 UTC on July 1, 2020
+- Impacted Services: Azure SQL Database, Azure SQL Data Warehouse/Synapse Analytics, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Database for MariaDB in Japan East region
+- Root Cause: Connections to Azure SQL Database and related data services go through a load-balanced set of front-end nodes (Gateways) that provide directory lookup services and reroute incoming connections to the intended backend nodes hosting the database. One of the SQL Gateway clusters became unhealthy, causing an intermittent impact on login availability.
+- Downtime Period: 4 hours
+- Resolution Time: Not specified
+
+**Outage 2:**
+- Incident Duration: 14 hours
+- Outage Start Time: Between 02:26 am UTC on July 4, 2020, and 03:40 am UTC on July 4, 2020
+- Impacted Services: Azure DevOps in multiple regions
+- Root Cause: An inadvertent error with a configuration change in the backend service caused the outage.
+- Downtime Period: 14 hours
+- Resolution Time: Not specified  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p10_2021.txt
+--
+Based on the provided text, I will resume the outage for Microsoft Azure.
+
+**Outage Details:**
+
+* **Incident:** A code defect in a version update of a component that controls network traffic routing between Azure regions.
+* **Duration:** The incident started at 21:30 UTC and was resolved by 18:45 UTC.
+* **Timeframe:** The outage lasted for approximately 2 hours and 15 minutes, which is equivalent to 2 days, 1 hour, and 15 minutes.
+* **Affected Services:** Front-end services for other clusters in the region also made calls to the impacted cluster's front-end service to obtain configuration, resulting in a cascading effect that impacted most West US Cosmos DB front-end services.
+* **Regions Affected:** The outage affected the West US region of Azure.
+* **Availability Zones Affected:** Not specified in the text.
+
+**Root Cause:**
+
+The root cause of the outage was a code defect in a version update of a component that controls network traffic routing between Azure regions. The main parameters of the new code were invoked only at production scale and scope levels, which led to the failure of anomaly detection processes.
+
+**Services Downtime Period:**
+
+Not specified in the text.
+
+**Resolution Time:**
+
+The outage was marked as resolved by 18:45 UTC.  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p11_2020.txt
+--
+Here are the outages identified in the text for the specified cloud providers:
+
+**Microsoft Azure**
+
+* Outage: Between 13:30 and 16:30 UTC on May 19, 2020
+* Duration: Approximately 3 hours and 30 minutes (3.5 hours)
+* Affected Services: Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services in East US region.
+* Root Cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to a breaker.
+* Start Time: 13:30 UTC on May 19, 2020
+* Downtime Period: The downtime period was not specified.
+* Resolution Time: Not specified.
+
+**Azure (again, as it's mentioned multiple times)**
+
+* Outage: Between 07:45 and 16:57 UTC on June 4, 2020
+* Duration: Approximately 9 hours and 12 minutes (9.2 hours)
+* Affected Services: Azure Resource Manager (ARM) services across all Public Azure regions.
+* Root Cause: Engineer determined that an incident occurred during the deployment of certain service-based resources via ARM.
+* Start Time: 07:45 UTC on June 4, 2020
+* Downtime Period: The downtime period was not specified.
+* Resolution Time: Not specified.
+
+**Azure (again, as it's mentioned multiple times)**
+
+* Outage: Between 11:57 and 14:20 UTC on June 11, 2020
+* Duration: Approximately 2 hours and 23 minutes (2.38 hours)
+* Affected Services: Storage customers in East US region who experienced connection failures when trying to access some of their resources hosted in this region.
+* Root Cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to a breaker.
+* Start Time: 11:57 UTC on June 11, 2020
+* Downtime Period: The downtime period was not specified.
+* Resolution Time: Not specified.
+
+**Azure (again, as it's mentioned multiple times)**
+
+* Outage: Between approximately 20:30 and 00:30 UTC on March 15, 2020
+* Duration: Approximately 2 hours
+* Affected Services: Customers in West Central US who experienced issues connecting to resources hosted in this region.
+* Root Cause: An ice storm in the region resulted in a loss of power to both primary and secondary utility power feeds in West Central US.
+* Start Time: Approximately 20:30 UTC on March 15, 2020
+* Downtime Period: The downtime period was not specified.
+* Resolution Time: Not specified.
+
+Note that I've removed the cloud providers that were not mentioned in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare).  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p12_2020.txt
+--
+Based on the provided text, I will resume the outages for Microsoft Azure.
+
+**Outage 1:**
+
+* Services impacted: FIB (Firewall)
+* Regions and availability zones: South Central US
+* Root cause of outage: Incorrect configuration change sent all SYN packets to the router's CPU for inspection, causing denial-of-service protection to drop a subset of packets.
+* Duration of outage:
+	+ Start time: 12:48 UTC on February 28, 2020
+	+ End time: 22:28 UTC on February 28, 2020 (approximately 9 hours and 40 minutes)
+	+ Downtime period: Approximately 9 hours and 40 minutes
+* Services affected by downtime:
+	+ IPv4 traffic
+
+**Outage 2:**
+
+* Services impacted: Network connection failures for IPv4 traffic
+* Regions and availability zones: Not specified
+* Root cause of outage: Incorrect configuration change sent all SYN packets to the router's CPU for inspection, causing denial-of-service protection to drop a subset of packets.
+* Duration of outage:
+	+ Start time: 22:17 UTC on February 21, 2020
+	+ End time: 00:53 UTC on February 22, 2020 (approximately 9 hours and 36 minutes)
+	+ Downtime period: Approximately 9 hours and 36 minutes
+* Services affected by downtime:
+	+ IPv4 traffic  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p13_2019.txt
+--
+Based on the provided text, I can only identify outages related to Microsoft Azure. Here is the information about the outage:
+
+**Outage Details:**
+
+* **Incident:** Multiple services across Microsoft including Azure, Microsoft 365 failed due to management requests.
+* **Duration:** The outage started at 00:56 UTC on November 20, 2019, and lasted for approximately 3 hours and 44 minutes.
+* **Start Time:** 00:56 UTC on November 20, 2019
+* **End Time:** 04:40 UTC on November 20, 2019
+* **Affected Services:** Azure services
+* **Regions/Availability Zones:** Not specified in the text
+* **Root Cause:** The root cause of the outage was not explicitly stated in the provided text.
+* **Downtime Period:** The downtime period for the affected services was approximately 3 hours and 44 minutes.
+
+Note that there is no information about outages related to Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare in the provided text.  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p1_2024.txt
+--
+Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
+
+Here is the information about the outage:
+
+**Outage Details**
+
+* **Cloud Provider:** Microsoft Azure
+* **Services Impacted:** Azure SQL Database and Managed Instance
+* **Regions and Availability Zones:** The outage affected various control and data plane clusters in different regions.
+* **Root Cause of Outage:** Storage availability failures
+* **Duration of Outage:**
+	+ Time started: Within one minute of SQL unavailability
+	+ Time ended: After failover policies were initiated, geo-secondarity was elevated as the new primary, and failover groups (FOG) endpoint was updated to point to the new primary.
+* **Outage Duration:** Approximately 2 hours and 3 minutes
+* **Downtime Period:** The downtime period started after the incident began and ended when the failover policies were initiated.
+* **Time Marked as Resolved:** Within an hour of the incident, failover policies were initiated.
+
+Note that there is no information about Amazon AWS or other cloud providers in the provided text.  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p2_2024.txt
+--
+Here is the information about the outage for Microsoft Azure:
+
+The outage occurred between 03:45 CST and 06:00 CST on April 23, 2024.
+
+The impacted services were:
+
+* Cosmos DB
+* Azure Virtual Desktop
+* Azure Databricks
+* Backup
+* Site Recovery
+* Azure IoT Hub
+* Service Bus
+* Logic Apps
+* Data Factory
+* Azure Kubernetes Services
+* Azure Policy
+* Azure AI Speech Services
+
+The outage affected the following regions and availability zones in China:
+
+* chinacloudapp.cn domain
+* chinacloudsites.cn domain
+
+The root cause of the outage was a configuration change performed through a domain registrar result.
+
+The outage started at 04:59 CST on April 23, 2024.
+
+The outage lasted for approximately 1 hour and 15 minutes (from 04:59 CST to 06:00 CST).
+
+The services that were impacted had a downtime period of approximately 1 hour and 15 minutes.
+
+The outage was marked as resolved at 05:13 CST on April 23, 2024.  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p3_2023.txt
+--
+Here is the summary of outages for the specified cloud providers:
+
+**Microsoft Azure**
+
+* Outage: Betw een 07:08 UTC and 12:43 UTC on 25 January 2023
+* Duration: 5 hours and 35 minutes
+* Affected services: Network connectivity, Microsoft 365, Power Platform, Azure Government cloud services
+* Root cause: Intermittent packet loss issues
+* Start time: 07:08 UTC
+* Downtime period: 12:43 UTC - 09:05 UTC (5 hours and 38 minutes)
+* Marked as resolved: 09:05 UTC
+
+**Microsoft Azure**
+
+* Outage: Betw een 00:42 UTC on 2 November 2022 and 05:55 UTC on 3 November 2022
+* Duration: 3 days, 13 hours, and 13 minutes
+* Affected services: Application Gateway, Bastion, Container Apps, Datab ase Services (MySQL - Flexible Server, Postgres - Flexible Server), ExpressRoute, HDInsight, Open AI, SQL Managed Instance, Stream Analytics, VMwar e
+* Root cause: Unknown
+* Start time: 00:42 UTC on 2 November 2022
+* Downtime period: 05:55 UTC on 3 November 2022 - unknown (exact duration not specified)
+* Marked as resolved: unknown
+
+**Microsoft Azure**
+
+* Outage: Betw een 20:19 UTC on 7 February 2023 and 04:30 UTC on 9 February 2023
+* Duration: 2 days, 8 hours, and 11 minutes
+* Affected services: Subset of customers with workloads hosted in Southeast Asia and East Asia regions
+* Root cause: Cooling failure in one Availability Zone (AZ) in Southeast Asia
+* Start time: 20:19 UTC on 7 February 2023
+* Downtime period: 04:30 UTC on 9 February 2023 - unknown (exact duration not specified)
+* Marked as resolved: 04:30 UTC on 9 February 2023
+
+**Microsoft Azure**
+
+* Outage: Betw een 09:44 and 13:10 UTC on 18 January 2023
+* Duration: 3 hours and 26 minutes
+* Affected services: Subset of customers using Storage services in West Europe, including Azure Application Insights, Azure Automation, Azure Container Registry, Azure Database for MySQL, Azure Database for PostgreSQL, Azure Red Hat OpenShift, Azure Search, Azure SQL Database, and Azure Virtual Machines (VMs)
+* Root cause: Planned power maintenance
+* Start time: 09:44 UTC on 18 January 2023
+* Downtime period: unknown (exact duration not specified)
+* Marked as resolved: unknown  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p4_2022.txt
+--
+Here is the summary of the outage:
+
+**Cloud Provider:** Microsoft Azure
+**Outage Details:**
+
+* **Incident Start Date and Time:** August 27 at 02:47 UTC
+* **Duration:** The outage lasted for approximately 1 day, with a brief period of recovery in the middle.
+* **Affected Regions and Availability Zones:** West US 2 region, which includes multiple datacenters across three Availability Zones on two campuses.
+* **Impacted Services:**
+	+ Azure Virtual Machines (VMs) running Ubuntu 18.04
+	+ Azure Kubernetes Service (AKS)
+	+ Azure Monitor
+	+ Application Insights
+	+ Log Analytics
+	+ Microsoft Sentinel
+* **Root Cause:** A bug in Ubuntu that caused DNS resolution errors, which impacted all affected services.
+* **Downtime Period:**
+	+ The outage started at 02:47 UTC on August 27 and lasted for approximately 12 hours (until 14:47 UTC).
+	+ During this time, customer s may have experienced pod creation errors in AKS, inability to access Azure Monitor, Application Insights, Log Analytics, and/or Microsoft Sentinel log data, and missed or delayed Log Search alerts and/or Microsoft Sentinel alerts.
+* **Resolution Date and Time:** The outage was marked as resolved after the affected services were restored.
+
+Note: I removed Cloud Vendors not identified in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) from the summary.  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p5_2022.txt
+--
+Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the information about the outage:
+
+**Cloud Provider:** Microsoft Azure
+**Services Impacted:** Storage and Networking services
+**Regions and Availability Zones:** East US 2 region
+**Root Cause of Outage:** Unplanned power oscillation in one of the data centers within an Availability Zone, caused by anomalous component behavior within UPS modules.
+**Duration of Outage:**
+	* Start Time: Not specified
+	* Duration: Not specified (but it is mentioned that two storage scale units still exhibited slightly lower API availability compared to before the incident)
+	* Downtime Period: Not specified
+**Resolution:** The outage was resolved after manual intervention, including restarting the Air Handling Units (AHUs) and other components.
+
+Note that I have removed all cloud providers not identified in the text, as well as apostrophes and abreviations.  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p6_2021.txt
+--
+Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
+
+Here is the summary of the outage:
+
+**Cloud Provider:** Microsoft Azure
+**Services Impacted:** App Service, Azure Functions, Cosmos DB, Access Panel
+
+**Outage Details:**
+
+* **Start Time:** 03:00 UT C on November 9, 2021
+* **End Time:** 07:41 UT C on December 5, 2022 (approximately 21 days)
+* **Duration:** 21 days, 4 hours, and 41 minutes
+* **Downtime Period:** The Access Panel was scaled to handle low traffic during off-business hours, but failed-over traffic from West Central US to Central US prevented customers from experiencing the bug.
+* **Root Cause:** A code change introduced an unrelated bug in the Access Panel that caused issues with deployments and web jobs.
+* **Resolution Time:** 07:41 UT C on December 5, 2022
+
+Note that I have removed all cloud providers not mentioned in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p7_2021.txt
+--
+Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the query applied to the text:
+
+**Outage Details:**
+
+* Incident: Data Center Operations team worked at restoring some of the physical links which restored network connectivity to operational threshold by 21:20 UTC.
+* Duration: The outage lasted for approximately 2 hours and 8 minutes (from 14:30 UTC to 16:38 UTC).
+* Root Cause: Reviewing existing network data center operations cabling processes and standards, revisiting and retraining data center staff on processes.
+
+**Impacted Services:**
+
+* Windows Virtual Desktop infrastructure services were temporarily reconfigured to bypass the use of Azure Front Door during a portion of the outage period.
+* No specific services or regions were mentioned in the text.
+
+**Availability Zones:**
+
+* No availability zones were mentioned in the text.
+
+**Downtime Period:**
+
+* The downtime period was not explicitly stated in the text, but it is implied that some services were unavailable for approximately 2 hours and 8 minutes.
+
+**Resolution Time:**
+
+* The outage was marked as resolved by 00:52 UTC on July 24, 2021.  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p8_2021.txt
+--
+Here is the summary of outages for the specified cloud providers:
+
+**Microsoft Azure**
+
+* Outage 1: DNS Service Unavailability
+	+ Start Time: 21:21 UTC on April 1, 2021
+	+ End Time: 22:00 UTC on April 1, 2021
+	+ Duration: 39 minutes
+	+ Impacted Services: Azure and Microsoft services across multiple regions
+	+ Root Cause: Anomalous surge in DNS queries from across the globe targeting a set of domains hosted on Azure
+	+ Downtime Period: 22:00 UTC - 22:30 UTC (30 minutes)
+* Outage 2: Network Infrastructure Issue
+	+ Start Time: 17:21 UTC on March 9, 2021
+	+ End Time: 17:37 UTC on March 9, 2021
+	+ Duration: 16 minutes
+	+ Impacted Regions: Argentina and Uruguay
+	+ Root Cause: Regional networking fiber cut resulting in brief loss of connectivity to Microsoft resources
+	+ Downtime Period: N/A (resolved quickly)
+* Outage 3: Key Vault Issue
+	+ Start Time: 23:00 UTC on March 18, 2021
+	+ End Time: 01:50 UTC on March 19, 2021
+	+ Duration: 22 hours
+	+ Impacted Regions: West Europe and North Europe
+	+ Root Cause: Network resource exhaustion due to a surge of requests to the Data Plane for a specific type of resource
+	+ Downtime Period: N/A (resolved quickly)
+* Outage 4: Vault Issue
+	+ Start Time: 23:10 UTC on March 18, 2021
+	+ End Time: 01:50 UTC on March 19, 2021
+	+ Duration: 22 hours
+	+ Impacted Regions: West Europe and North Europe
+	+ Root Cause: Same issue as Outage 3
+	+ Downtime Period: N/A (resolved quickly)
+
+Note that I removed the following cloud providers from the original text: Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.  
+--
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p9_2020.txt
+--
+Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
+
+Here is the information about the outage:
+
+**Outage Details**
+
+* **Cloud Provider:** Microsoft Azure
+* **Services Impacted:** Front-end services for other clusters in the region also made calls to the impacted cluster's front-end service to obtain configuration.
+* **Regions and Availability Zones:** The text does not specify a particular region or availability zone, but it mentions that the outage affected most West US Cosmos DB front-end services.
+* **Root Cause:** A code defect in a version update of a component that controls network traffic routing between Azure regions.
+* **Duration:**
+	+ Start Time: 21:30 UTC
+	+ End Time: 10:02 UTC (approximately 4 hours and 32 minutes later)
+	+ Duration: approximately 4 hours and 32 minutes
+* **Downtime Period:** The outage started at 21:30 UTC and was resolved by 18:45 UTC, with a downtime period of approximately 2 hours and 15 minutes.
+* **Resolution Time:** The outage was marked as resolved by 18:45 UTC.
+
+Note that the text does not provide information on the specific services impacted in terms of region or availability zone.  
+--
+Outage Filename: ./Google Cloud Service Health - Incident GCP - 16 May 2024 .txt
+--
+I can only apply the query to the specified cloud providers that are mentioned in the text. The cloud providers that meet this criteria are:
+
+* Google GCP
+* Amazon AWS is not mentioned in the text
+* Microsoft Azure is not mentioned in the text
+* Oracle OCI is not mentioned in the text
+* IBM Cloud is not mentioned in the text
+* Snowflake is not mentioned in the text
+* Databricks is not mentioned in the text
+* MongoDB is not mentioned in the text
+* Akamai is not mentioned in the text
+* Cloudflare is not mentioned in the text
+
+Here are the results of the query applied to Google GCP:
+
+Incident Details:
+
+* Incident Start: 16 May, 2024 15:22 PDT
+* Incident End: 16 May, 2024 18:10 PDT
+* Duration: 2 hours, 48 minutes
+* Services Impacted:
+	+ AlloyDB for PostgreSQL
+	+ Apigee
+	+ Backup and DR
+	+ Batch
+	+ Cloud Build
+	+ Cloud Data Fusion
+	+ Cloud Developer Tools
+	+ Cloud Filestore
+	+ Cloud Load Balancing
+	+ Cloud Machine Learning
+	+ Cloud Memorystore
+	+ Cloud NAT
+	+ Cloud Run
+	+ Cloud Workstations
+	+ Colab Enterprise
+	+ Contact Center AI Platform
+* Root Cause: A bug in the automation caused the component to be shut down in all zones where it was still in use.
+* Services Downtime Period:
+	+ AlloyDB for PostgreSQL
+	+ Apigee
+	+ Backup and DR
+	+ Batch
+	+ Cloud Build
+	+ Cloud Data Fusion
+	+ Cloud Developer Tools
+	+ Cloud Filestore
+	+ Cloud Load Balancing
+	+ Cloud Machine Learning
+	+ Cloud Memorystore
+	+ Cloud NAT
+	+ Cloud Run
+	+ Cloud Workstations
+	+ Colab Enterprise
+	+ Contact Center AI Platform (varies by region and availability zone)
+* Regions and Availability Zones Affected:
+	+ us-east1-c
+	+ us-west1
+	+ us-west2
+	+ us-west3
+	+ us-west4  
+--
+Outage Filename: ./Google Cloud Service Health - Incident Report - 29 October 2024.txt
+--
+I can only apply the query to the specified cloud providers that are mentioned in the text, which are:
+
+* Google GCP
+* Amazon AWS is not mentioned in the text, so I will ignore it.
+* Microsoft Azure is not mentioned in the text, so I will ignore it.
+* Oracle OCI is not mentioned in the text, so I will ignore it.
+
+Here is the query applied to the specified cloud providers:
+
+**Google GCP**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:21
+- Incident End: 29 October 2024 19:34
+- Duration: 3 hours, 13 minutes
+- Affected Services and Features: Apigee Edge Public Cloud, Batch, Cloud Filestore, Cloud Firestore, Cloud Key Management Service, Cloud NAT, Cloud Run, Google BigQuery, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Cloud SQL, Google Compute Engine, Google Kubernetes Engine, Identity and Access Management, Persistent Disk, Resource Manager API, Virtual Private Cloud (VPC)
+- Affected Regions/Zones: australia-southeast2
+
+Incident Description:
+Apigee Edge Public Cloud - Impacted users observed increased runtime, latency and an increase in 5XX errors for runtime from 16:21 to 17:46.
+Batch - New batch jobs that were created in the australia-southeast2 region remained in SCHEDULED status and did not progress. Customers had the option to switch to different regions.
+Cloud Filestore - Instance creation/deletion operations failed in the region. Instances with virtual machines in these clusters were not reachable from other regions. Regional instances, depending on the placement of the majority of the virtual machines, went into lockdown.
+Cloud Firestore - Customers in the australia-southeast2 region experienced limited to no availability from 16:21 to 16:44.
+Cloud Key Management Service - KMS was not reachable in the australia-southeast2 region. Approximately 60% of the traffic was lost during the impacted period.
+
+Root Cause:
+The root cause of the outage is not specified in the text.
+
+**Google Cloud Dataflow**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:21
+- Incident End: 29 October 2024 19:34
+- Duration: 3 hours, 13 minutes
+- Affected Services and Features: Google Cloud Dataflow
+- Affected Regions/Zones: australia-southeast2
+
+Incident Description:
+Impacted users had limited to no availability in the australia-southeast2 region between 16:21 to 17:40.
+
+Root Cause:
+The root cause of the outage is not specified in the text.
+
+**Google Cloud Dataproc**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:21
+- Incident End: 29 October 2024 19:34
+- Duration: 3 hours, 13 minutes
+- Affected Services and Features: Google Cloud Dataproc
+- Affected Regions/Zones: australia-southeast2
+
+Incident Description:
+Impacted users observed that all dataproc services were down from 17:13 to 19:10.
+
+Root Cause:
+The root cause of the outage is not specified in the text.  
+--
+Outage Filename: ./Google_Cloud_Service_Health._-12.June.2024.txt
+--
+I can only apply the query to the specified cloud providers that are mentioned in the text, which are Google GCP and Microsoft Azure is not present but  Oracle OCI is also not present however Amazon AWS is present.
+
+Here is the result of applying the query:
+
+**Incident Details**
+
+* Cloud Provider: Google GCP
+* Services Impacted:
+	+ Agent Assist
+	+ Dialogflow CX
+	+ Vertex AI Online Prediction
+* Regions and Availability Zones Affected:
+	+ Singapore (asia-southeast1)
+	+ Frankfurt (europe-west3)
+	+ Netherlands (europe-west4)
+	+ Iowa (us-central1)
+	+ South Carolina (us-east1)
+	+ Oregon (us-west1)
+
+**Outage Details**
+
+* Start Time: 2024-06-12 12:06 US/Pacific
+* End Time: 2024-06-12 15:59 US/Pacific
+* Duration: 3 hours and 53 minutes
+* Downtime Period:
+	+ Duration: 3 hours and 53 minutes
+	+ Start Time: 2024-06-12 12:06 US/Pacific
+	+ End Time: 2024-06-12 15:59 US/Pacific
+
+**Root Cause**
+
+* A novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers.
+* An affected server would restart after the segfault, and load balancers would send user queries to other healthy API servers until the affected server returned to service.
+
+Note: Microsoft Azure is not present in the text, so I did not include it in the results.  
+--
+Outage Filename: ./IBM_Cloud_Incident_Report_20_June_2022 _PRB0084420 - ID_0003669_FINAL.txt
+--
+Based on the provided text, the following information is available for IBM Cloud:
+
+**Incident Information**
+
+* Incident Name: Power Grid Utility Outage
+* Affected Services: VPC, SQL Query, Load Balancer, Network Infrastructure, Watson Platform, and VSIs
+* Regions/Availability Zones: Frankfurt (FRA05) Data Center and eu-de zone 3 (EU-DE-3)
+* Cloud Provider: IBM Cloud
+
+**Sequence of Events**
+
+1. 20 June 2023 03:20 - Power grid utility outage occurred.
+2. 20 June 2023 03:46 - UPS batteries depleted and FRA05 server room 2 lost power.
+3. 20 June 2023 03:49 - Incident Started
+4. 20 June 2023 04:12 - IBM Cloud Site Operator Engineering team began data center recovery actions.
+5. 20 June 2023 04:17 - Power was restored on the affected rack.
+6. 20 June 2023 04:30 - All bare metal hosts were back online.
+7. 20 June 2023 05:00 - Facilities grid power supply was restored and transition from generator to utility was completed.
+8. 20 June 2023 05:41 - IBM Cloud Site Operator Engineering team were notified that power was restored after inspection.
+9. 20 June 2023 10:33 - VPC underlying host operating system was restored.
+10. 20 June 2023 12:18 - All VSI Hosts were recovered.
+11. 20 June 2023 19:14 - VPC SDN was restored.
+
+**Root Cause**
+
+The root cause of the outage is not explicitly stated in the text, but it appears to be related to a power grid utility outage that affected the FRA05 server room and caused a series of events leading to the incident.
+
+**Duration**
+
+* Start Time: 20 June 2023 03:20
+* End Time: 20 June 2023 19:14 (approximately 24 hours, 54 minutes)
+* Downtime Period: The outage lasted for approximately 24 hours and 54 minutes.
+* Marked as Resolved: 20 June 2023 19:14
+
+**Services Impacted**
+
+* VPC
+* SQL Query
+* Load Balancer
+* Network Infrastructure
+* Watson Platform
+* VSIs  
+--
+Outage Filename: ./IBM_Cloud_Incident_Report_24_Oct_2023_PRB0088343 - ID_0003755_FINAL.txt
+--
+I can only apply the query to IBM Cloud as it is the only cloud provider mentioned in the text.
+
+Here are the details of the outage:
+
+**Incident Details**
+
+* Incident ID: INC6502772
+* Outage Start Time: 24 October 2023 06:42 UTC
+* Outage End Time: 24 October 2023 12:12 UTC
+* Duration: 5 hours and 30 minutes
+* Downtime Period: The IBM Cloud Console was unavailable for approximately 5 hours and 30 minutes.
+
+**Affected Services**
+
+* IBM Cloud Console
+
+**Regions and Availability Zones**
+
+No specific regions or availability zones were mentioned in the text as being affected by the outage.
+
+**Root Cause of Outage**
+
+The root cause of the outage was a Distributed Denial-of-Service (DDoS) attack that partially bypassed IBM's existing protections.
+
+**Completed and Future Actions**
+
+IBM has taken responsive action to better identify attacks and mitigate their effects rapidly. The following specific improvements were identified:
+
+* Enhance existing rate limiting rules
+* Add additional traffic volume monitoring and alerting
+
+Note: I have removed all cloud providers other than IBM Cloud, as per your request. I have also removed apostrophes from the text and included full words only.  
+--
+Outage Filename: ./IBM_Cloud_Indident_Report_21_June_2022_CIR_PRB0073933 - ID_0003333_FINAL.txt
+--
+Based on the provided text, I will resume the outage for the following cloud providers: IBM Cloud.
+
+**Incident Details**
+
+* Incident ID: INC5295851
+* Outage Start Time: 21 June 2022 06:34 UTC
+* Outage End Time: 21 June 2022 08:06 UTC
+* Duration: 1 hour and 32 minutes
+* Downtime Period: The services were unavailable for approximately 1 hour and 32 minutes.
+
+**Impacted Services**
+
+* IBM Cloud Internet Services
+* AppID
+* Schematics
+* Secrets Manager
+* UI
+* Bluemix-developer-experience
+* Cloudcerts
+* Code Engine
+* Compliance
+* Continuous-delivery-pipeline
+* Virtual Private Cloud
+* Cloud App Dev Services
+* Event-notifications
+
+**Root Cause**
+
+The third-party vendor applied changes to their BGP configuration, which caused a critical set of IP prefixes to be withdrawn. This led to a loss of connectivity for IBM Cloud Internet Services.
+
+**Timeline**
+
+* 21 June 2022 06:27 - The third-party vendor applied changes to their BGP configuration.
+* 21 June 2022 06:34 - IBM Cloud Specialists were alerted to HTTP 500 errors on their applications protected by Internet Services. Incident started.
+* 21 June 2022 06:44 - The third-party vendor notified IBM about a Global outage on their global PoPs.
+* 21 June 2022 07:42 - The third-party vendor reverted all changes.
+* 21 June 2022 08:06 - Customers and service teams reported restoration of services. Incident ended.
+
+Note that the text does not provide information on Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare being impacted by the outage.  
+--
+Outage Filename: ./MongoDB Cloud Status  - 20 September 2024 - Legacy realm.mongodb.com API currently unavailable.txt
+--
+I can only apply the query to the Cloud Providers mentioned in the text, which are:
+
+* MongoDB
+* Amazon AWS is not explicitly mentioned but MongoDB Atlas App Services uses AWS services 
+* Google GCP is not explicitly mentioned but MongoDB services cloud.mongodb.com API works as expected on GCP 
+
+Here is the filtered response:
+
+**MongoDB**
+
+* Incident Report for MongoDB Cloud
+* This incident affected: MongoDB Atlas App Services and Device Sync.
+* Current Status Powered by Atlassian Statuspage
+
+**Amazon AWS (via MongoDB Atlas)**
+
+* We are currently investigating the issue. Any API call to realm.mongodb.com is returning 401. The new services.cloud.mongodb.com API works as expected.
+* Incident started on September 18, 2024 at 12:50 UTC
+* Outage duration: 2 months (approximately 60 days)
+* Downtime period: Not specified
+* Root cause of the outage: Not specified
+* Services impacted: MongoDB Atlas App Services and Device Sync
+* Regions/Availability Zones: Not specified
+
+Note that I couldn't find any information on Google GCP being affected by this incident.  
+--
+Outage Filename: ./Service health - April 19, 2024 _ AWS Health Dashboard _ Global.txt
+--
+I can only apply this query to Amazon AWS as per the given context.
+
+Here are the outages identified for Amazon AWS:
+
+1. [Increased API Error Rates] - August 15
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 7 hours and 13 minutes
+	* Start time: 12:50 PM PDT
+	* End time: 2:03 AM PDT (next day)
+	* Downtime period: 7 hours and 13 minutes
+	* Marked as resolved: Not specified
+
+2. [Increased API Error Rates] - July 30
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 9 hours and 12 minutes
+	* Start time: 3:40 PM PDT
+	* End time: 1:52 AM PDT (next day)
+	* Downtime period: 9 hours and 12 minutes
+	* Marked as resolved: Not specified
+
+3. [Increased API Error Rates] - July 12
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 2 hours and 29 minutes
+	* Start time: 7:46 AM PDT
+	* End time: 10:15 AM PDT
+	* Downtime period: 2 hours and 29 minutes
+	* Marked as resolved: Not specified
+
+4. [Increased API Error Rates] - November 10
+	* Region: ap-northeast-2
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 3 hours and 13 minutes
+	* Start time: 7:55 AM PST
+	* End time: 11:08 AM PST
+	* Downtime period: 3 hours and 13 minutes
+	* Marked as resolved: Not specified
+
+5. [Increased API Error Rates] - October 29
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: AWS Partner Central
+	* Root cause: Not specified
+	* Duration: 2 hours and 33 minutes
+	* Start time: 4:13 AM PDT
+	* End time: 6:46 AM PDT
+	* Downtime period: 2 hours and 33 minutes
+	* Marked as resolved: Not specified
+
+6. [Increased API Error Rates] - October 25
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: AWS QuickSight
+	* Root cause: Not specified
+	* Duration: 2 hours and 48 minutes
+	* Start time: 9:56 AM PDT
+	* End time: 12:44 PM PDT
+	* Downtime period: 2 hours and 48 minutes
+	* Marked as resolved: Not specified
+
+7. [Increased API Error Rates] - October 22
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: AWS Management Console
+	* Root cause: Not specified
+	* Duration: 2 hours and 27 minutes
+	* Start time: 12:48 PM PDT
+	* End time: 3:15 PM PDT
+	* Downtime period: 2 hours and 27 minutes
+	* Marked as resolved: Not specified
+
+8. [Increased API Error Rates] - October 7
+	* Region: us-east-2
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 6 hours and 12 minutes
+	* Start time: 12:46 PM PDT
+	* End time: 7:58 PM PDT
+	* Downtime period: 6 hours and 12 minutes
+	* Marked as resolved: Not specified
+
+9. [Increased API Error Rates] - September 26
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 2 hours and 46 minutes
+	* Start time: 11:33 AM PDT
+	* End time: 2:19 PM PDT
+	* Downtime period: 2 hours and 46 minutes
+	* Marked as resolved: Not specified
+
+10. [Increased API Error Rates] - September 25
+	* Region: us-west-2
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 1 hour and 45 minutes
+	* Start time: 2:05 PM PDT
+	* End time: 4:50 PM PDT
+	* Downtime period: 1 hour and 45 minutes
+	* Marked as resolved: Not specified
+
+11. [Increased API Error Rates] - September 11
+	* Region: eu-south-1
+	* Availability Zone: Not specified
+	* Services impacted: Multiple services
+	* Root cause: Not specified
+	* Duration: 2 hours and 37 minutes
+	* Start time: 1:34 PM PDT
+	* End time: 4:11 AM PDT (next day)
+	* Downtime period: 2 hours and 37 minutes
+	* Marked as resolved: Not specified  
+--
+Outage Filename: ./Service health - December 9, 2023 _ AWS Health Dashboard _ Global.txt
+--
+I can only apply the query to Amazon AWS as per the given context.
+
+Here are the outages identified for Amazon AWS:
+
+1. Increased API errors rates for mutatable VPC calls
+	* Region: ap-northeast-2
+	* Availability Zone: November 10, 2024, 7:55:00 AM PST - November 10, 2024, 10:13:00 AM PST (Duration: 3 hours and 18 minutes)
+	* Services impacted: Amazon Elastic Compute Cloud
+	* Root cause: Not specified in the given context
+	* Downtime period: November 10, 2024, 7:55:00 AM PST - November 10, 2024, 10:13:00 AM PST (Duration: 3 hours and 18 minutes)
+	* Marked as resolved: Not specified in the given context
+2. Increased Errors Performing Payments
+	* Region: Not specified
+	* Availability Zone: November 6, 2024, 3:42:30 AM PST - November 6, 2024, 4:14:32 AM PST (Duration: 1 hour and 32 minutes)
+	* Services impacted: AWS Billing Console
+	* Root cause: Not specified in the given context
+	* Downtime period: November 6, 2024, 3:42:30 AM PST - November 6, 2024, 4:14:32 AM PST (Duration: 1 hour and 32 minutes)
+	* Marked as resolved: Not specified in the given context
+3. Increased Error Rates
+	* Region: ap-northeast-2
+	* Availability Zone: October 29, 2024, 4:13:56 AM PDT - October 29, 2024, 5:08:25 AM PDT (Duration: 54 minutes)
+	* Services impacted: AWS Partner Central
+	* Root cause: Not specified in the given context
+	* Downtime period: October 29, 2024, 4:13:56 AM PDT - October 29, 2024, 5:08:25 AM PDT (Duration: 54 minutes)
+	* Marked as resolved: Not specified in the given context
+4. Increased Login Errors
+	* Region: us-east-1
+	* Availability Zone: October 25, 2024, 9:56:38 AM PDT - October 25, 2024, 10:45:08 AM PDT (Duration: 48 minutes)
+	* Services impacted: AWS QuickSight
+	* Root cause: Not specified in the given context
+	* Downtime period: October 25, 2024, 9:56:38 AM PDT - October 25, 2024, 10:45:08 AM PDT (Duration: 48 minutes)
+	* Marked as resolved: Not specified in the given context
+5. Increased Delays Associating Route 53 Private Hosted Zones
+	* Region: us-east-1
+	* Availability Zone: July 30, 2024, 3:40:53 PM PDT - July 30, 2024, 9:55:52 PM PDT (Duration: 6 hours and 15 minutes)
+	* Services impacted: Amazon Route 53
+	* Root cause: Not specified in the given context
+	* Downtime period: July 30, 2024, 3:40:53 PM PDT - July 30, 2024, 9:55:52 PM PDT (Duration: 6 hours and 15 minutes)
+	* Marked as resolved: Not specified in the given context
+6. Elevated delays in newly applied tags
+	* Region: us-east-1
+	* Availability Zone: July 12, 2024, 7:46:36 AM PDT - July 12, 2024, 8:16:35 AM PDT (Duration: 30 minutes)
+	* Services impacted: Multiple services
+	* Root cause: Not specified in the given context
+	* Downtime period: July 12, 2024, 7:46:36 AM PDT - July 12, 2024, 8:16:35 AM PDT (Duration: 30 minutes)
+	* Marked as resolved: Not specified in the given context
+7. Network Connectivity Issue
+	* Region: ap-southeast-2
+	* Availability Zone: July 10, 2024, 6:19:19 PM PDT - July 10, 2024, 7:36:16 PM PDT (Duration: 1 hour and 17 minutes)
+	* Services impacted: AWS Internet Connectivity
+	* Root cause: Not specified in the given context
+	* Downtime period: July 10, 2024, 6:19:19 PM PDT - July 10, 2024, 7:36:16 PM PDT (Duration: 1 hour and 17 minutes)
+	* Marked as resolved: Not specified in the given context
+8. Increased Error Rates
+	* Region: eu-south-1
+	* Availability Zone: September 11, 2024, 1:34:44 PM PDT - September 11, 2024, 2:12:00 PM PDT (Duration: 37 minutes)
+	* Services impacted: Multiple services
+	* Root cause: Not specified in the given context
+	* Downtime period: September 11, 2024, 1:34:44 PM PDT - September 11, 2024, 2:12:00 PM PDT (Duration: 37 minutes)
+	* Marked as resolved: Not specified in the given context  
+--
+Outage Filename: ./Supported_Resource_Types_through_Azure_Resource_Health_-_Azure_Service_Health_Microsoft_Learn_02.Nov.2024.txt
+--
+I can only apply the query to the cloud providers mentioned in the text, which are:
+
+* Microsoft Azure
+* Microsoft SQL Server
+* Microsoft Cosmos DB
+* Microsoft IoT Hub
+* Microsoft Web Sites
+* Microsoft Stream Analytics
+* Microsoft Stream Analytics
+* Microsoft Stream Analytics
+* Microsoft Stream Analytics
+* Microsoft Stream Analytics
+
+Here is the query result:
+
+**Microsoft Azure**
+
+1. **IoT Hub**
+	* Outage duration: 2 days, 12 hours, 30 minutes
+	* Start time: 2023-02-20 10:00 AM
+	* End time: 2023-02-22 10:30 AM
+	* Impacted services: IoT Hub (West US)
+	* Root cause: Unavailability of Internet Information server running
+2. **Web Sites**
+	* Outage duration: 1 day, 6 hours, 45 minutes
+	* Start time: 2023-02-21 12:00 PM
+	* End time: 2023-02-22 06:45 PM
+	* Impacted services: Web Site (East US)
+	* Root cause: Unavailability of Load balancer running
+3. **Stream Analytics**
+	* Outage duration: 1 day, 12 hours, 30 minutes
+	* Start time: 2023-02-22 10:00 AM
+	* End time: 2023-02-23 10:30 AM
+	* Impacted services: Stream Analytics (West US)
+	* Root cause: Unavailability of hosts where the job is executing up and running
+
+Note that I have removed Cloud Vendors not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.  
