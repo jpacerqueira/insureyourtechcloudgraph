@@ -471,7 +471,21 @@ The outage lasted from 16:20 to 18:24 US/Pacific Time, which is approximately 2 
 10000000000069,Amazon CodeGuru Profiler,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
 10000000000070,Amazon DataZone,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
 10000000000071,Amazon DocumentDB,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
-10000000000072,Amazon DynamoDB,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
+10000000000072,Amazon DynamoDB,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,575.00,525600.000,525074.400,525.600,-49.400,0.10%,0.11%,0.11%,-0.00940%,0.00940%,109.40%,0.10940%,995.815,995.721,0 days 9h35 down,"Lllama3.2-B Outage Analysis  -
+- About last Amazon DynamoDB -
+I will provide the information for each cloud provider. Please note that I will not be able to search across all providers simultaneously, so I will need to break it down by region or service.
+
+**Amazon Web Services (AWS)**
+
+* Outage: [Increased API Error Rates] - July 30, 2024
+* Duration: 9 hours 35 minutes
+* Impacted services: Multiple services , including AWS DynamoDB
+* Regions and availability zones impacted:
+        + us-east-1, us-west-2 (e.g., New York, Oregon)
+        + Impact on multiple AZs within the region
+* Summary: The outage lasted for approximately 9 hours and 35 minutes.
+
+",,,
 10000000000073,Amazon EC2 Instance Connect,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
 10000000000074,Amazon Elastic Compute Cloud,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,411.00,525600.000,525074.400,525.600,114.600,0.10%,0.08%,0.08%,0.02180%,-0.02180%,78.20%,0.07820%,996.439,996.656,0 days 6h51 down,"Lllama3.2-B Outage Analysis  
 - About last Amazon Elastic Compute Cloud EC2 Outage -

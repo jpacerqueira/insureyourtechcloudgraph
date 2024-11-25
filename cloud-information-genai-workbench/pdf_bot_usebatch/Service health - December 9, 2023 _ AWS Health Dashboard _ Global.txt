@@ -4,9 +4,9 @@ I'll provide the information for each cloud provider. Please note that I won't b
 
 * Outage: [Increased API Error Rates] - July 30, 2024
 * Duration: 9 hours 35 minutes
-* Impacted services: Multiple services
+* Impacted services: Multiple services , including AWS DynamoDB
 * Regions and availability zones impacted:
-	+ us-east-1 (e.g., New York)
+	+ us-east-1, us-west-2 (e.g., New York, Oregon)
 	+ Impact on multiple AZs within the region
 * Summary: The outage lasted for approximately 9 hours and 35 minutes.
 
