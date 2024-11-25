@@ -1,10 +1,20 @@
-Based on the provided text, I can answer your questions for Amazon AWS. Here are the details:
+Based on the provided text, I can only identify one cloud provider: Amazon AWS.
 
-* Resume of the outage: A subset of the Amazon Elastic Block Store (“EBS”) volumes in a single Availability Zone within the US East Region became unable to service read and write operations.
-* Services impacted: EC2 customers
-* Regions/Availability Zones affected: US East Region, specifically a single Availability Zone
-* Root cause of the outage: Not explicitly stated in the text, but it is mentioned that a change was made to the EBS control plane API that fixed the issue.
+Here is the information about the outage:
 
-The outage started on April 21st and was marked as resolved by Noon PDT on April 21st. The total duration of the outage was approximately 11 hours.
+**Cloud Provider:** Amazon AWS
+**Services impacted:** Amazon Elastic Compute Cloud (EC2), Amazon Elastic Block Store (EBS)
+**Regions and Availability Zones affected:** US East Region, a single Availability Zone
 
-Note that I have removed the other Cloud Vendors not identified in the text, such as Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+The outage occurred on April 21st, starting at an unknown time. The incident lasted for approximately 11 hours.
+
+Here is the detailed information about the outage:
+
+* **Start time:** Unknown
+* **Duration:** 11 hours
+* **End time:** Noon PM PDT on April 21st
+* **Root cause of the outage:** A subset of EBS volumes in a single Availability Zone became unable to service read and write operations, causing instances trying to use these affected volumes to also get stuck.
+* **Services impacted:**
+	+ EC2 customers experienced significantly elevated error rates and latencies when attempting to launch new EBS-backed EC2 instances.
+	+ Customers were able to create EBS-backed EC2 instances but were experiencing significant-elevated error rates and latencies.
+* **Resolution:** A change to the EBS control plane fixed this issue, and latencies and error rates for new EBS-backed EC2 instances declined rapidly and returned to near-normal at Noon PDT on April 21st.

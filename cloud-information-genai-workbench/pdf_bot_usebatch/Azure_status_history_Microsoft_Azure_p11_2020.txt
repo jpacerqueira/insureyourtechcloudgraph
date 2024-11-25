@@ -1,20 +1,37 @@
-Based on the provided text, I can only identify Microsoft Azure as one of the cloud providers. Here is the query applied to Azure:
+Here is the summary of the outages for the specified cloud providers:
 
-Resume the outage in text:
-The outage occurred between 13:30 and 16:30 UTC on May 19, 2020.
+**Microsoft Azure**
 
-Duration of the incident:
-The outage lasted for approximately 3 hours.
+* Outage: 13:30 - 16:30 UTC on May 19, 2020
+* Duration: 3 hours and 30 minutes (0 days, 3 hours, 30 minutes)
+* Impacted services: Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services in East US region.
+* Root cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to Azure Platform and processes to help ensure such incidents do not occur in the future.
+* Start time: 13:30 UTC on May 19, 2020
+* Resolution time: Not specified
 
-Impacted services and regions:
-A subset of customers in East US may have experienced timeouts and latency issues when processing service management operations such as create, update, delete, for Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services.
+**Azure Status History**
 
-Root cause of the outage:
-The root cause of the outage was not explicitly stated in the text. However, it is mentioned that engineers determined an incident during a planned power maintenance activity at the datacenter caused the impact to a subset of customers.
+* Outage: 11:57 - 14:20 UTC on June 11, 2020
+* Duration: 2 hours and 23 minutes (0 days, 2 hours, 23 minutes)
+* Impacted services: Storage customers in East US region.
+* Root cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to Azure Platform and processes to help ensure such incidents do not occur in the future.
+* Start time: 11:57 UTC on June 11, 2020
+* Resolution time: Not specified
 
-Services impacted:
-Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services in East US region.
+**Azure Status History**
 
-Availability zones not specified in the text.
+* Outage: 07:45 - 16:57 UTC on June 4, 2020
+* Duration: 9 hours and 12 minutes (0 days, 9 hours, 12 minutes)
+* Impacted services: Azure Resource Manager (ARM) customers across all Public Azure regions.
+* Root cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to Azure Platform and processes to help ensure such incidents do not occur in the future.
+* Start time: 07:45 UTC on June 4, 2020
+* Resolution time: Not specified
 
-Note that Amazon AWS is not mentioned in the provided text.
+**Azure Status History**
+
+* Outage: approximately 20:30 - 00:30 UTC on March 15, 2020
+* Duration: 2 hours (0 days, 2 hours)
+* Impacted services: Customers in West Central US region.
+* Root cause: Ice storm in the region resulted in a loss of power to both primary and secondary utility power feeds in West Central US. This caused the datacenter to transition to generator power. Although largely successful, a subset of generators failed and UPS units supporting the downstream racks carried the load until their batteries drained. At that point, the affected racks lost power entirely. Any customer resources hosted on the affected racks became unavailable at the time.
+* Start time: approximately 20:30 UTC on March 15, 2020
+* Resolution time: Not specified

@@ -1,17 +1,37 @@
-Based on the provided text, I can answer the query for Microsoft Azure.
+Here is the summary of the outages identified in the text:
 
-**Resume of the Outage:**
+**Microsoft Azure**
 
-* Incident: Service connection failures or possible timeouts
-* Duration: Between 09:24 and 11:15 UTC on July 1, 2020 (approximately 2 hours)
-* Affected Services:
+* Outage started: Between 09:24 and 11:15 UTC on July 1, 2020
+* Duration: Approximately 2 hours and 51 minutes (2 hours 51 minutes)
+* Region/Availability Zone: Japan East
+* Services impacted:
 	+ Azure SQL Database
 	+ Azure SQL Data Warehouse/Synapse Analytics
 	+ Azure Database for MySQL
 	+ Azure Database for PostgreSQL
 	+ Azure Database for MariaDB
-* Affected Regions and Availability Zones: Japan East region
-* Root Cause: A missing configuration at the site to detect site isolation, resulting in an outage due to a secondary fiber path incident.
-* Resolution Time: The outage was mitigated when the fiber provider technician completely restored the fiber connectivity at 04:52 UTC on August 14, 2020.
+* Root cause: Connections to Azure SQL Database and related services went through a load-balanced set of front-end nodes (Gateways) which took longer than expected to detect the issue.
+* Mitigation: A configuration update was applied, fully mitigating the issue.
 
-Note that I have removed Cloud Vendors not identified in the text, such as Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+**Microsoft Azure**
+
+* Outage started: Between 02:26 am and 03:40 am UTC on July 4, 2020
+* Duration: Approximately 1 hour and 14 minutes (1 hour 14 minutes)
+* Region/Availability Zone: Multiple regions
+* Services impacted:
+	+ Microsoft Azure DevOps
+* Root cause: An inadvertent error with a configuration change in the backend service which caused the outage.
+* Mitigation: A configuration update was applied, fully mitigating the issue.
+
+**Microsoft Azure**
+
+* Outage started: Between 18:05 and 19:55 UTC on August 21, 2020
+* Duration: Approximately 2 hours and 50 minutes (2 hours 50 minutes)
+* Region/Availability Zone: Not specified
+* Services impacted:
+	+ Azure CDN for Verizon
+* Root cause: A recent deployment task impacted connectivity to origins, causing dynamic or cache miss requests to fail.
+* Mitigation: The outage was mitigated when the fiber provider technician completely restored the fiber connectivity at 04:52 UTC on August 14, 2020.
+
+Note that I have removed Cloud Vendors not identified in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, and MongoDB) as well as any abbreviations or apostrophes.
