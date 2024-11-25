@@ -1,4 +1,4 @@
-all: config_where_am_I_running backend_server customer_app workbench_apps riskgraph
+all: config_where_am_I_running webscraping backend_server customer_app workbench_apps riskgraph
 
 check:
 	whoami ; id; pwd; ls -listarh; docker ps
@@ -11,6 +11,11 @@ distcheck:
 config_where_am_I_running:
 	whoami ; id ; pwd ; ls -listarh ; docker ps
 	echo "make config_where_am_I_running - Warning : Has No specific - rule to make target 'config_where_am_I_running'.  just continue."
+
+webscraping:
+	sleep 1
+	cd information/outages/webscraping/outage-webscraping ; bash -x run-webscraping 4 ; cd ../../..
+	echo "Webscraping , pdf file samples extracted, built! Now, waits for upload it later in database to be ready."
 
 backend_server:
 	sleep 1

@@ -1,6 +1,9 @@
 #/bin/bash env
 docker stop cloudriskgraph_customer_b2c
 docker rm cloudriskgraph_customer_b2c
+docker build -f insureyourtechcloud_cloudriskgraph.Dockerfile -t insureyourtechcloud/cloudriskgraph:latest .
+docker push insureyourtechcloud/cloudriskgraph:latest
+docker pull insureyourtechcloud/cloudriskgraph:latest
 docker run \
     --name cloudriskgraph_customer_b2c \
     -p37474:7474 -p37687:7687 \
@@ -10,8 +13,8 @@ docker run \
     -v $HOME/neo4j/import:/var/lib/neo4j/import \
     -v $HOME/neo4j/plugins:/plugins \
     --env NEO4J_AUTH=neo4j/insureyourtech.cloud \
-    neo4j:5.25.1-community
+    insureyourtechcloud/cloudriskgraph:latest 
 docker ps
 #    insureyourtechcloud/cloudriskgraph:latest 
 #    insureyourtechcloud/cloudriskgraph:0.0.1 
-#    neo4j:latest
+#    neo4j:5.25.1-community
