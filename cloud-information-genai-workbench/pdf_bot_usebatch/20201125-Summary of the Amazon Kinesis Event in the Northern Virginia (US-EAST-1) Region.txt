@@ -1,0 +1,22 @@
+Based on the provided text, I can only identify one cloud provider: Amazon AWS.
+
+Here is the information about the outage:
+
+**Cloud Provider:** Amazon AWS
+**Services Impacted:** Amazon Kinesis, Lambda, CloudWatch Events and EventBridge, Elastic Container Service (ECS), Elastic Kubernetes Service (EKS)
+
+**Regions and Availability Zones:** Northern Virginia (US-EAST-1) Region
+
+**Root Cause of Outage:** A relatively small addition of capacity that began to be added to the service at 2:44 AM PST, finishing at 3:47 AM PST.
+
+**Duration of Outage:**
+
+* Start Time: 2:44 AM PST
+* End Time: 5:47 PM PST (approximately 9 hours and 3 minutes)
+* Duration in Days: 1 day
+* Duration in Hours: 9 hours
+* Duration in Minutes: 63 minutes
+
+**Downtime Period:** The outage started at 2:44 AM PST and ended at 5:47 PM PST, resulting in a downtime period of approximately 9 hours and 3 minutes.
+
+**Resolution Time:** The outage was marked as resolved when CloudWatch metrics began to recover at 5:47 PM PST.

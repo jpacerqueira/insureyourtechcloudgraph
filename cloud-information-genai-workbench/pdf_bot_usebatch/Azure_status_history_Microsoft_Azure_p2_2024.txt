@@ -1,33 +1,30 @@
-Here is the information about the outage for Microsoft Azure:
+Here is the summary of the outage for the specified cloud providers:
 
-The outage occurred between 03:45 CST and 06:00 CST on April 23, 2024.
+**Microsoft Azure**
 
-The impacted services were:
+* Outage duration: 2 hours and 15 minutes
+* Start time: 03:45 CST on April 23, 2024
+* End time: 06:00 CST on April 23, 2024
+* Impacted services:
+	+ China Cloud domains (chinacloudapp.cn and chinacloudsites.cn)
+	+ Azur e Virtual Desktop
+	+ Azur e Databricks
+	+ Backup
+	+ Sit e Recovery
+	+ Azur e IoT Hub
+	+ Service Bus
+	+ Logic Apps
+	+ Data Factory
+	+ Azur e Kuber netes Services
+	+ Azur e Policy
+	+ Azur e AI Speech
+* Root cause: Configuration change through a domain registrar resulted in a service disruption to two system domains critical in cloud operations in China.
+* Downtime period:
+	+ 2 hours and 15 minutes (from 03:45 CST on April 23, 2024 to 06:00 CST on April 23, 2024)
+* Resolution time: 05:13 CST on April 23, 2024
 
-* Cosmos DB
-* Azure Virtual Desktop
-* Azure Databricks
-* Backup
-* Site Recovery
-* Azure IoT Hub
-* Service Bus
-* Logic Apps
-* Data Factory
-* Azure Kubernetes Services
-* Azure Policy
-* Azure AI Speech Services
+**Note:** The outage was resolved after reverting to the previously known good name server versions.
 
-The outage affected the following regions and availability zones in China:
+**Other cloud providers not identified in the text**
 
-* chinacloudapp.cn domain
-* chinacloudsites.cn domain
-
-The root cause of the outage was a configuration change performed through a domain registrar result.
-
-The outage started at 04:59 CST on April 23, 2024.
-
-The outage lasted for approximately 1 hour and 15 minutes (from 04:59 CST to 06:00 CST).
-
-The services that were impacted had a downtime period of approximately 1 hour and 15 minutes.
-
-The outage was marked as resolved at 05:13 CST on April 23, 2024.
+No other cloud providers were mentioned in the provided text.

@@ -1,17 +1,23 @@
 Based on the provided text, I will resume the outages for Microsoft Azure.
 
 **Outage 1:**
-- Incident Duration: 4 hours and 15 minutes
-- Outage Start Time: Between 09:24 UTC on July 1, 2020, and 11:15 UTC on July 1, 2020
-- Impacted Services: Azure SQL Database, Azure SQL Data Warehouse/Synapse Analytics, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Database for MariaDB in Japan East region
-- Root Cause: Connections to Azure SQL Database and related data services go through a load-balanced set of front-end nodes (Gateways) that provide directory lookup services and reroute incoming connections to the intended backend nodes hosting the database. One of the SQL Gateway clusters became unhealthy, causing an intermittent impact on login availability.
-- Downtime Period: 4 hours
-- Resolution Time: Not specified
+- Start Time: Between 09:24 and 11:15 UTC on July 01, 2020
+- End Time: Not specified
+- Impacted Services:
+  - Azure SQL Database
+  - Azure SQL Data Warehouse/Synapse Analytics
+  - Azure Database for MySQL
+  - Azure Database for PostgreSQL
+  - Azure Database for MariaDB in Japan East region
+- Root Cause: Connections to Azure SQL Database and related data services go through a load-balanced set of front-end nodes (Gateways) that provide directory lookup services and reroute incoming connections to the intended backend nodes hosting the database.
+- Duration: Not specified, but it is mentioned that the incident occurred between 09:24 and 11:15 UTC on July 01, 2020.
 
 **Outage 2:**
-- Incident Duration: 14 hours
-- Outage Start Time: Between 02:26 am UTC on July 4, 2020, and 03:40 am UTC on July 4, 2020
-- Impacted Services: Azure DevOps in multiple regions
-- Root Cause: An inadvertent error with a configuration change in the backend service caused the outage.
-- Downtime Period: 14 hours
-- Resolution Time: Not specified
+- Start Time: Between 02:26 am and 03:40 am UTC on July 04, 2020
+- End Time: Not specified
+- Impacted Services:
+  - Azure DevOps in multiple regions
+- Root Cause: An inadvertent error with a configuration change in the backend service which caused the outage.
+- Duration: Not specified, but it is mentioned that the incident occurred between 02:26 am and 03:40 am UTC on July 04, 2020.
+
+Note: The duration of both outages is not specified, as this information was not provided in the original text.

@@ -23,20 +23,14 @@ Based on the provided text, the following information is available for IBM Cloud
 
 **Root Cause**
 
-The root cause of the outage is not explicitly stated in the text, but it appears to be related to a power grid utility outage that affected the FRA05 server room and caused a series of events leading to the incident.
+The root cause of the outage is not explicitly stated in the text, but it appears to be related to a power grid utility outage that affected the FRA05 server room and subsequent failures in other services.
 
 **Duration**
 
-* Start Time: 20 June 2023 03:20
-* End Time: 20 June 2023 19:14 (approximately 24 hours, 54 minutes)
-* Downtime Period: The outage lasted for approximately 24 hours and 54 minutes.
-* Marked as Resolved: 20 June 2023 19:14
+* Incident Duration: 5 days
+* Outage Duration: 1 hour 41 minutes (from 03:20 to 04:01)
+* Downtime Period: 5 days, with an average of 12 hours and 45 minutes per day
 
-**Services Impacted**
+**Resolution**
 
-* VPC
-* SQL Query
-* Load Balancer
-* Network Infrastructure
-* Watson Platform
-* VSIs
+The incident was marked as resolved on 25 June 2023.

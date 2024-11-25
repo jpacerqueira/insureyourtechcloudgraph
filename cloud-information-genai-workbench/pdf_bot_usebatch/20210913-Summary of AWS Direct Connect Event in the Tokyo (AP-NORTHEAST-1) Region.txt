@@ -1,26 +1,17 @@
 I can only provide information on Amazon AWS as per the given context.
 
-Amazon AWS Direct Connect service disruption:
+The outage occurred in the Tokyo (AP-NORTHEAST-1) Region of Amazon AWS on September 2, 2021. The incident started at 7:30 AM JST and was resolved by 12:30 PM JST and then fully resolved by 1:42 PM JST.
 
-The outage occurred on September 2, 2021, at 7:30 AM JST. The incident lasted for approximately 9 hours and 12 minutes.
+The impacted services were Direct Connect customers connecting to the Tokyo Region. The outage affected connectivity issues and elevated packet loss for these customers.
 
-Services impacted:
-- Virtual Private Clouds (VPCs) in the Tokyo Region
-- Direct Connect traffic to the Tokyo Region
+The root cause of the outage was the failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region, where customers' Virtual Private Clouds (VPCs) reside.
 
-Regions affected:
-- Tokyo (AP-NORTHEAST-1)
+The outage lasted for approximately 5 hours and 12 minutes. The downtime period started at 7:30 AM JST and ended at 1:42 PM JST.
 
-Availability Zones not specified.
+Here is a summary of the outage:
 
-Root cause of the outage: The failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
-
-Duration of the outage:
-- Started at 7:30 AM JST
-- Ended at 4:42 PM JST (approximately 9 hours and 12 minutes)
-
-Downtime period:
-- The downtime started when the elevated packet loss for Direct Connect customers connecting to the Tokyo Region was first detected by internal alarms at 7:30 AM JST.
-- It ended when connectivity issues were fully resolved at 4:42 PM JST.
-
-Resolved on: September 2, 2021, at 4:42 PM JST.
+* Date: September 2, 2021
+* Time: 7:30 AM JST - 1:42 PM JST
+* Duration: Approximately 5 hours and 12 minutes
+* Downtime period: 5 hours and 12 minutes
+* Resolved: 1:42 PM JST

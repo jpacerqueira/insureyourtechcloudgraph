@@ -2,33 +2,32 @@ Here is the summary of outages for the specified cloud providers:
 
 **Microsoft Azure**
 
-* Outage 1: DNS Service Unavailability
-	+ Start Time: 21:21 UTC on April 1, 2021
-	+ End Time: 22:00 UTC on April 1, 2021
-	+ Duration: 39 minutes
-	+ Impacted Services: Azure and Microsoft services across multiple regions
-	+ Root Cause: Anomalous surge in DNS queries from across the globe targeting a set of domains hosted on Azure
-	+ Downtime Period: 22:00 UTC - 22:30 UTC (30 minutes)
-* Outage 2: Network Infrastructure Issue
-	+ Start Time: 17:21 UTC on March 9, 2021
-	+ End Time: 17:37 UTC on March 9, 2021
-	+ Duration: 16 minutes
-	+ Impacted Regions: Argentina and Uruguay
-	+ Root Cause: Regional networking fiber cut resulting in brief loss of connectivity to Microsoft resources
-	+ Downtime Period: N/A (resolved quickly)
-* Outage 3: Key Vault Issue
-	+ Start Time: 23:00 UTC on March 18, 2021
-	+ End Time: 01:50 UTC on March 19, 2021
-	+ Duration: 22 hours
-	+ Impacted Regions: West Europe and North Europe
-	+ Root Cause: Network resource exhaustion due to a surge of requests to the Data Plane for a specific type of resource
-	+ Downtime Period: N/A (resolved quickly)
-* Outage 4: Vault Issue
-	+ Start Time: 23:10 UTC on March 18, 2021
-	+ End Time: 01:50 UTC on March 19, 2021
-	+ Duration: 22 hours
-	+ Impacted Regions: West Europe and North Europe
-	+ Root Cause: Same issue as Outage 3
-	+ Downtime Period: N/A (resolved quickly)
+* Outage: Between 17:21 and 17:37 UTC on March 9, 2021
+* Impacted services: Traffic into and out of Argentina and Uruguay
+* Regions/Availability Zones: Argentina and Uruguay
+* Root cause: Regional networking fiber cut
+* Duration: 16 minutes
+* Downtime period: 16 minutes
+* Marked as resolved: Not specified
 
-Note that I removed the following cloud providers from the original text: Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+**Microsoft Azure (Key Vault)**
+
+* Outage: Between March 18, 2021, at 23:00 UTC and March 19, 2021, at 01:50 UTC
+* Impacted services: Storage transactions in the West Europe region
+* Regions/Availability Zones: West Europe
+* Root cause: Network resource exhaustion due to a code defect
+* Duration: 2 days, 10 hours, and 50 minutes
+* Downtime period: 2 days, 10 hours, and 50 minutes
+* Marked as resolved: Not specified
+
+**Microsoft Azure (AD Backup Authentication)**
+
+* Outage: Between March 18, 2021, at 23:00 UTC and March 19, 2021, at 01:50 UTC
+* Impacted services: Token validation
+* Regions/Availability Zones: West Europe and North Europe
+* Root cause: Tooling deficiencies
+* Duration: 2 days, 10 hours, and 50 minutes
+* Downtime period: 2 days, 10 hours, and 50 minutes
+* Marked as resolved: Not specified
+
+Note that the outages for Azure AD Backup Authentication are not explicitly stated to be separate incidents from the Key Vault outage, but rather a related issue.

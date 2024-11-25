@@ -4,11 +4,10 @@ Based on the provided text, I can only identify outages related to Microsoft Azu
 
 * **Incident:** Multiple services across Microsoft including Azure, Microsoft 365 failed due to management requests.
 * **Duration:** The outage started at 00:56 UTC on November 20, 2019, and lasted for approximately 3 hours and 44 minutes.
-* **Start Time:** 00:56 UTC on November 20, 2019
-* **End Time:** 04:40 UTC on November 20, 2019
 * **Affected Services:** Azure services
-* **Regions/Availability Zones:** Not specified in the text
-* **Root Cause:** The root cause of the outage was not explicitly stated in the provided text.
-* **Downtime Period:** The downtime period for the affected services was approximately 3 hours and 44 minutes.
+* **Regions and Availability Zones:** Not specified in the text.
+* **Root Cause:** Engineer deployed a platform hotfix to mitigate the issue. Further investigation is ongoing to establish the full root cause and prevent future occurrences.
+* **Downtime Period:** The outage started at 00:56 UTC on November 20, 2019, and ended at 04:40 UTC on November 20, 2019.
+* **Resolution Date:** Not specified in the text.
 
-Note that there is no information about outages related to Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare in the provided text.
+Note that I have removed all Cloud Vendors not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

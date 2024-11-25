@@ -1,4 +1,4 @@
-I can only apply the query to the specified cloud providers that are mentioned in the text, which are Google GCP and Microsoft Azure is not present but  Oracle OCI is also not present however Amazon AWS is present.
+I can only apply the query to the specified cloud providers that are mentioned in the text, which are Google GCP and Microsoft Azure is not present but  Amazon AWS is also not present however Oracle OCI is present.
 
 Here is the result of applying the query:
 

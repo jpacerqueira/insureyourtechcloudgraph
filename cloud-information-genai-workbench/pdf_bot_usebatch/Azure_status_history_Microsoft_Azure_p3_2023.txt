@@ -2,40 +2,57 @@ Here is the summary of outages for the specified cloud providers:
 
 **Microsoft Azure**
 
-* Outage: Betw een 07:08 UTC and 12:43 UTC on 25 January 2023
-* Duration: 5 hours and 35 minutes
-* Affected services: Network connectivity, Microsoft 365, Power Platform, Azure Government cloud services
-* Root cause: Intermittent packet loss issues
-* Start time: 07:08 UTC
-* Downtime period: 12:43 UTC - 09:05 UTC (5 hours and 38 minutes)
-* Marked as resolved: 09:05 UTC
+* Outage 1: Betw een 07:08 UTC and 12:43 UTC on 25 January 2023
+	+ Duration: 5 hours and 35 minutes
+	+ Impact: Network connectivity issues, long network latency and timeouts when attempting to connect to resources hosted in Azure regions, as well as other Microsoft services including Microsoft 365 and Power Platform. Azur e Government cloud services that were dependent on Azur e public cloud were also impacted.
+	+ Root cause: Not specified
+* Outage 2: Betw een 00:42 UTC on 2 November 2022 and 05:55 UTC on 3 November 2022
+	+ Duration: 29 hours and 13 minutes
+	+ Impact: Failures when attempting to provision new resources in a subset of Azure services including Application Gateway, Bastion, Container Apps, Database Services (MySQL - Flexible Server, Postgres - Flexible Server, and others), ExpressRoute, HDInsight, Open AI, SQL Managed Instance, Stream Analytics, VMware
+	+ Root cause: Not specified
+* Outage 3: Betw een 20:19 UTC on 7 February 2023 and 04:30 UTC on 9 February 2023
+	+ Duration: 49 hours and 11 minutes
+	+ Impact: Difficulties accessing and managing resources deployed in the Southeast Asia and East Asia regions. One Availability Zone (A Z) in Southeast Asia experienced cooling failure, leading to infrastructure shutdown to protect data and infrastructure.
+	+ Root cause: Cooling failure in one A Z in Southeast Asia
+* Outage 4: Betw een 09:44 UTC on 18 January 2023 and 13:10 UTC on 18 January 2023
+	+ Duration: 3 hours and 26 minutes
+	+ Impact: Higher than expected latency, timeouts or HTTP 500 errors when accessing data stored on Storage accounts hosted in West Europe. Other Azure services with dependencies on this specific storage infrastructure may also have experienced impact.
+	+ Root cause: Planned power maintenance
 
-**Microsoft Azure**
+**Note:** The root cause of the outages is not specified in the provided text for all incidents.
 
-* Outage: Betw een 00:42 UTC on 2 November 2022 and 05:55 UTC on 3 November 2022
-* Duration: 3 days, 13 hours, and 13 minutes
-* Affected services: Application Gateway, Bastion, Container Apps, Datab ase Services (MySQL - Flexible Server, Postgres - Flexible Server), ExpressRoute, HDInsight, Open AI, SQL Managed Instance, Stream Analytics, VMwar e
-* Root cause: Unknown
-* Start time: 00:42 UTC on 2 November 2022
-* Downtime period: 05:55 UTC on 3 November 2022 - unknown (exact duration not specified)
-* Marked as resolved: unknown
+**Amazon AWS**
 
-**Microsoft Azure**
+* No outages mentioned in the text.
 
-* Outage: Betw een 20:19 UTC on 7 February 2023 and 04:30 UTC on 9 February 2023
-* Duration: 2 days, 8 hours, and 11 minutes
-* Affected services: Subset of customers with workloads hosted in Southeast Asia and East Asia regions
-* Root cause: Cooling failure in one Availability Zone (AZ) in Southeast Asia
-* Start time: 20:19 UTC on 7 February 2023
-* Downtime period: 04:30 UTC on 9 February 2023 - unknown (exact duration not specified)
-* Marked as resolved: 04:30 UTC on 9 February 2023
+**Google GCP**
 
-**Microsoft Azure**
+* No outages mentioned in the text.
 
-* Outage: Betw een 09:44 and 13:10 UTC on 18 January 2023
-* Duration: 3 hours and 26 minutes
-* Affected services: Subset of customers using Storage services in West Europe, including Azure Application Insights, Azure Automation, Azure Container Registry, Azure Database for MySQL, Azure Database for PostgreSQL, Azure Red Hat OpenShift, Azure Search, Azure SQL Database, and Azure Virtual Machines (VMs)
-* Root cause: Planned power maintenance
-* Start time: 09:44 UTC on 18 January 2023
-* Downtime period: unknown (exact duration not specified)
-* Marked as resolved: unknown
+**Oracle OCI**
+
+* No outages mentioned in the text.
+
+**IBM Cloud**
+
+* No outages mentioned in the text.
+
+**Snowflake**
+
+* No outages mentioned in the text.
+
+**Databricks**
+
+* No outages mentioned in the text.
+
+**MongoDB**
+
+* No outages mentioned in the text.
+
+**Akamai**
+
+* No outages mentioned in the text.
+
+**Cloudflare**
+
+* No outages mentioned in the text.

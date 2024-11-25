@@ -16,42 +16,125 @@ Incident Details:
 - Affected Services and Features: Apigee Edge Public Cloud, Batch, Cloud Filestore, Cloud Firestore, Cloud Key Management Service, Cloud NAT, Cloud Run, Google BigQuery, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Cloud SQL, Google Compute Engine, Google Kubernetes Engine, Identity and Access Management, Persistent Disk, Resource Manager API, Virtual Private Cloud (VPC)
 - Affected Regions/Zones: australia-southeast2
 
-Incident Description:
-Apigee Edge Public Cloud - Impacted users observed increased runtime, latency and an increase in 5XX errors for runtime from 16:21 to 17:46.
-Batch - New batch jobs that were created in the australia-southeast2 region remained in SCHEDULED status and did not progress. Customers had the option to switch to different regions.
-Cloud Filestore - Instance creation/deletion operations failed in the region. Instances with virtual machines in these clusters were not reachable from other regions. Regional instances, depending on the placement of the majority of the virtual machines, went into lockdown.
-Cloud Firestore - Customers in the australia-southeast2 region experienced limited to no availability from 16:21 to 16:44.
-Cloud Key Management Service - KMS was not reachable in the australia-southeast2 region. Approximately 60% of the traffic was lost during the impacted period.
-
 Root Cause:
 The root cause of the outage is not specified in the text.
+
+**Cloud Filestore**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:21
+- Incident End: Not Specified
+- Duration: Not Specified
+- Affected Services and Features: Cloud Filestore
+- Affected Regions/Zones: australia-southeast2
+
+Root Cause:
+Instance creation/deletion operations failed in the region. Instances with virtual machines in these clusters were not reachable from other regions. Regional instances, depending on the placement of the majority of the virtual machines, went into lockdown.
+
+**Cloud Firestore**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:21
+- Incident End: Not Specified
+- Duration: Not Specified
+- Affected Services and Features: Cloud Firestore
+- Affected Regions/Zones: australia-southeast2
+
+Root Cause:
+Customers in the australia-southeast2 region experienced limited to no availability from 16:21 to 16:44.
+
+**Cloud NAT**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:21
+- Incident End: Not Specified
+- Duration: Not Specified
+- Affected Services and Features: Cloud NAT
+- Affected Regions/Zones: australia-southeast2
+
+Root Cause:
+Customers experienced loss of connectivity in the australia-southeast2 region.
+
+**Cloud Run**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:20
+- Incident End: Not Specified
+- Duration: Not Specified
+- Affected Services and Features: Cloud Run
+- Affected Regions/Zones: Not Specified
+
+Root Cause:
+Impacted users experienced dropped requests and high error rates from 16:20 to 17:14.
+
+**Google BigQuery**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:20
+- Incident End: Not Specified
+- Duration: Not Specified
+- Affected Services and Features: Google BigQuery
+- Affected Regions/Zones: Not Specified
+
+Root Cause:
+Impacted users observed delay/errors in handling the requests from 16:20 to 16:55.
 
 **Google Cloud Dataflow**
 
 Incident Details:
 - Incident Start: 29 October 2024 16:21
-- Incident End: 29 October 2024 19:34
-- Duration: 3 hours, 13 minutes
+- Incident End: Not Specified
+- Duration: Not Specified
 - Affected Services and Features: Google Cloud Dataflow
 - Affected Regions/Zones: australia-southeast2
 
-Incident Description:
-Impacted users had limited to no availability in the australia-southeast2 region between 16:21 to 17:40.
-
 Root Cause:
-The root cause of the outage is not specified in the text.
+Impacted users had limited to no availability in the australia-southeast2 region between 16:21 to 17:40.
 
 **Google Cloud Dataproc**
 
 Incident Details:
-- Incident Start: 29 October 2024 16:21
-- Incident End: 29 October 2024 19:34
-- Duration: 3 hours, 13 minutes
+- Incident Start: 29 October 2024 17:13
+- Incident End: Not Specified
+- Duration: Not Specified
 - Affected Services and Features: Google Cloud Dataproc
 - Affected Regions/Zones: australia-southeast2
 
-Incident Description:
+Root Cause:
 Impacted users observed that all dataproc services were down from 17:13 to 19:10.
 
+**Google Cloud Networking**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:21
+- Incident End: Not Specified
+- Duration: Not Specified
+- Affected Services and Features: Google Cloud Networking
+- Affected Regions/Zones: australia-southeast2
+
 Root Cause:
-The root cause of the outage is not specified in the text.
+Impacted users experienced up to 100% of the requests being dropped from 16:21 to 16:43.
+
+**Google Cloud Pub/Sub**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:21
+- Incident End: Not Specified
+- Duration: Not Specified
+- Affected Services and Features: Google Cloud Pub/Sub
+- Affected Regions/Zones: australia-southeast2
+
+Root Cause:
+Cloud Pub/Sub had limited to no availability in the australia-southeast2 region between 16:21 to 17:06.
+
+**Google Cloud SQL**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:23
+- Incident End: Not Specified
+- Duration: Not Specified
+- Affected Services and Features: Google Cloud SQL
+- Affected Regions/Zones: Not Specified
+
+Root Cause:
+Multiple instances of Cloud SQL were unavailable between 16:23 and 17:52.

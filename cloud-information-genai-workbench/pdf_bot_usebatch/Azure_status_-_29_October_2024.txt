@@ -4,14 +4,17 @@ Here is the resume of the outage:
 
 **Outage Details**
 
-* **Service Impacted**: Microsoft Defender for Cloud
-* **Regions and Availability Zones**: East US, Central US, North Central US, South Central US, West Central US, West US 2, West US 3, Canada East, Canada Central, Brazil South
-* **Root Cause of Outage**: Not specified in the provided context
-* **Duration of Outage**:
-	+ Start Time: 32 seconds ago
-	+ End Time: Not specified
-	+ Duration: Not specified
-* **Downtime Period**: Not specified
-* **Resolution Date and Time**: Not specified
+* **Incident**: Azur e status page
+* **Duration**: 32 seconds
+* **Start Time**: 32 seconds ago
+* **End Time**: Not specified
+* **Affected Services**: Azur e status page, Azur e Service Health
+* **Regions and Availability Zones**: Central US, East US, North Central US, South Central US, West Central US, West US, Canada East, Canada Central, Brazil South
+* **Services Impacted**:
+	+ Azur e Service Health
+	+ Azur e status page
+* **Root Cause**: Not specified
+* **Downtime Period**: 32 seconds
+* **Resolution Time**: Not specified
 
-Note that I have removed all Cloud Vendors not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+Note: The outage details are based on the provided context and may not be comprehensive or up-to-date.

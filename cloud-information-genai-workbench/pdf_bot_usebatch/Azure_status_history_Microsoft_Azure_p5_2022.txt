@@ -10,4 +10,4 @@ Based on the provided text, I can only identify Microsoft Azure as a cloud provi
 	* Downtime Period: Not specified
 **Resolution:** The outage was resolved after manual intervention, including restarting the Air Handling Units (AHUs) and other components.
 
-Note that I have removed all cloud providers not identified in the text, as well as apostrophes and abreviations.
+Note that I have removed all cloud providers not identified in the text, as well as apostrophes and abbreviations.

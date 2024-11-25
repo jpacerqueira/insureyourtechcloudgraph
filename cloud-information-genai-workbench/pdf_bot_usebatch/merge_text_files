@@ -1,0 +1,19 @@
+#!/bin/bash
+# merge_txt_files.sh
+# merge_txt_files.sh is a bash script that merges all the txt files in the current directory into a single file called merged.txt
+# 
+echo " - Llama-3.2 3B - " > merge.txt.tmp
+echo " - Outage Information - " >> merge.txt.tmp
+rm merge.txt
+#
+for file in  ./*.txt; do
+    echo "--" >> merge.txt.tmp
+    echo "Outage Filename: $file" >> merge.txt.tmp
+    echo "--" >> merge.txt.tmp
+    cat "$file" >> merge.txt.tmp
+    echo "  " >> merge.txt.tmp
+done
+# add as head to file merge.txt
+mv merge.txt.tmp merge.txt
+echo "All text files merged into merge.txt"
+#

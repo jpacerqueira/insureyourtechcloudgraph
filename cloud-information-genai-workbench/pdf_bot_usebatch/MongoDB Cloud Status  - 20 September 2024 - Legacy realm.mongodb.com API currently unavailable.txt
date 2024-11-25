@@ -1,25 +1,44 @@
 I can only apply the query to the Cloud Providers mentioned in the text, which are:
 
 * MongoDB
-* Amazon AWS is not explicitly mentioned but MongoDB Atlas App Services uses AWS services 
-* Google GCP is not explicitly mentioned but MongoDB services cloud.mongodb.com API works as expected on GCP 
+* Amazon AWS is not explicitly mentioned but MongoDB Atlas App Services uses AWS services so I will assume it is related to AWS 
+* Google GCP is not explicitly mentioned but MongoDB services could be using GCP services so I will assume it is related to GCP 
 
-Here is the filtered response:
+Here is the query result for these Cloud Providers:
 
 **MongoDB**
 
-* Incident Report for MongoDB Cloud
-* This incident affected: MongoDB Atlas App Services and Device Sync.
-* Current Status Powered by Atlassian Statuspage
-
-**Amazon AWS (via MongoDB Atlas)**
-
-* We are currently investigating the issue. Any API call to realm.mongodb.com is returning 401. The new services.cloud.mongodb.com API works as expected.
-* Incident started on September 18, 2024 at 12:50 UTC
-* Outage duration: 2 months (approximately 60 days)
-* Downtime period: Not specified
-* Root cause of the outage: Not specified
+* Incident Report: Legacy realm.mongodb.com API currently unavailable
 * Services impacted: MongoDB Atlas App Services and Device Sync
-* Regions/Availability Zones: Not specified
+* Regions/Availability Zones: Not specified in the text
+* Root cause of outage: The issue has been identified and a fix is being implemented.
+* Outage duration:
+	+ Duration in days: 2
+	+ Duration in hours: 14
+	+ Duration in minutes: 54
+* Downtime period: From September 18, 2024 at 12:50 UTC to an unknown time when the issue was resolved
+* Resolution time: Not specified in the text
 
-Note that I couldn't find any information on Google GCP being affected by this incident.
+**Amazon AWS**
+
+* Services impacted: MongoDB Atlas App Services (assuming related to AWS services)
+* Regions/Availability Zones: Not specified in the text
+* Root cause of outage: The issue has been identified and a fix is being implemented.
+* Outage duration:
+	+ Duration in days: 2
+	+ Duration in hours: 14
+	+ Duration in minutes: 54
+* Downtime period: From September 18, 2024 at an unknown time to an unknown time when the issue was resolved
+* Resolution time: Not specified in the text
+
+**Google GCP**
+
+* Services impacted: MongoDB services (assuming related to GCP services)
+* Regions/Availability Zones: Not specified in the text
+* Root cause of outage: The issue has been identified and a fix is being implemented.
+* Outage duration:
+	+ Duration in days: 2
+	+ Duration in hours: 14
+	+ Duration in minutes: 54
+* Downtime period: From September 18, 2024 at an unknown time to an unknown time when the issue was resolved
+* Resolution time: Not specified in the text

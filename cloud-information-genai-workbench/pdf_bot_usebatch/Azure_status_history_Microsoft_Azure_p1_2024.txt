@@ -11,8 +11,9 @@ Here is the information about the outage:
 * **Duration of Outage:**
 	+ Time started: Within one minute of SQL unavailability
 	+ Time ended: After failover policies were initiated, geo-secondarity was elevated as the new primary, and failover groups (FOG) endpoint was updated to point to the new primary.
-* **Outage Duration:** Approximately 2 hours and 3 minutes
-* **Downtime Period:** The downtime period started after the incident began and ended when the failover policies were initiated.
-* **Time Marked as Resolved:** Within an hour of the incident, failover policies were initiated.
+* **Time Started:** 12:30 CST (China Standard Time)
+* **Duration in Days, Hours, and Minutes:** Approximately 2 hours
+* **Downtime Period:** The downtime period started after the incident began and ended when failover policies were initiated. The exact duration of the downtime is not specified.
+* **Time Marked as Resolved:** Not explicitly stated, but it can be inferred that the outage was resolved once failover policies were initiated.
 
-Note that there is no information about Amazon AWS or other cloud providers in the provided text.
+Note: There are no mentions of Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare in the provided text.

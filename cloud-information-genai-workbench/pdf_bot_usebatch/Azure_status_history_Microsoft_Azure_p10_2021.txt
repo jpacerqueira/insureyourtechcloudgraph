@@ -1,22 +1,18 @@
-Based on the provided text, I will resume the outage for Microsoft Azure.
+Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
 
-**Outage Details:**
+Here is the information about the outage:
 
-* **Incident:** A code defect in a version update of a component that controls network traffic routing between Azure regions.
-* **Duration:** The incident started at 21:30 UTC and was resolved by 18:45 UTC.
-* **Timeframe:** The outage lasted for approximately 2 hours and 15 minutes, which is equivalent to 2 days, 1 hour, and 15 minutes.
-* **Affected Services:** Front-end services for other clusters in the region also made calls to the impacted cluster's front-end service to obtain configuration, resulting in a cascading effect that impacted most West US Cosmos DB front-end services.
-* **Regions Affected:** The outage affected the West US region of Azure.
-* **Availability Zones Affected:** Not specified in the text.
+**Outage Details**
 
-**Root Cause:**
+* **Cloud Provider:** Microsoft Azure
+* **Services Impacted:** Front-end services for other clusters in the region also made calls to the impacted cluster's front-end service to obtain configuration.
+* **Regions and Availability Zones:** The incident affected most West US Cosmos DB front-end services.
+* **Root Cause:** A code defect in a version update of a component that controls network traffic routing between Azure regions.
+* **Duration:**
+	+ Start Time: 21:30 UTC
+	+ End Time: 10:02 UTC (next day)
+	+ Duration: 2 days, 3 hours, and 32 minutes
+* **Downtime Period:** The outage caused service degradation and increased latency for some customers in Japan East who were using Azure Storage.
+* **Resolution Time:** The incident was resolved by 18:45 UTC.
 
-The root cause of the outage was a code defect in a version update of a component that controls network traffic routing between Azure regions. The main parameters of the new code were invoked only at production scale and scope levels, which led to the failure of anomaly detection processes.
-
-**Services Downtime Period:**
-
-Not specified in the text.
-
-**Resolution Time:**
-
-The outage was marked as resolved by 18:45 UTC.
+Note that I have removed all cloud providers not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
