@@ -10,7 +10,7 @@ Here are the outages identified for Amazon AWS:
 	* Downtime period: November 10, 2024, 7:55:00 AM PST - November 10, 2024, 10:13:00 AM PST (Duration: 3 hours and 18 minutes)
 	* Marked as resolved: Not specified in the given context
 2. Increased Errors Performing Payments
-	* Region: Not specified
+	* Region: None specified
 	* Availability Zone: November 6, 2024, 3:42:30 AM PST - November 6, 2024, 4:14:32 AM PST (Duration: 1 hour and 32 minutes)
 	* Services impacted: AWS Billing Console
 	* Root cause: Not specified in the given context

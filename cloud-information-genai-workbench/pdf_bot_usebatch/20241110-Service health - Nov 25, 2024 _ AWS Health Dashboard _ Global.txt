@@ -1,24 +1,13 @@
 After analyzing the provided text, I have identified the following outages related to Amazon AWS:
 
 1. Increased API errors rates for mutatable VPC calls
-	* Region: Seoul (ap-northeast-2)
-	* Availability Zone: Not specified
-	* Services impacted: ALB, ECS, EKS, Fargate
-	* Root cause: Database component causing the impairment
+	* Affected services: ALB, ECS, EKS, Fargate
+	* Regions and availability zones: ap-northeast-2 (Seoul)
 	* Duration: 3 hours and 18 minutes
-	* Start time: November 10, 2024, 7:55:00 AM (PST)
-	* End time: November 10, 2024, 10:13:00 AM (PST)
+	* Start time: November 10, 2024, 7:55 AM PST
+	* End time: November 10, 2024, 10:13 AM PST
+	* Root cause: Database component causing the impairment
 	* Downtime period: 3 hours and 18 minutes
-	* Marked as resolved: Yes
+	* Marked as resolved: Yes (November 10, 2024, 10:13 AM PST)
 
-Note that I have removed the following Cloud Vendors from the analysis:
-
-* Google GCP
-* Microsoft Azure
-* Oracle OCI
-* IBM Cloud
-* Snowflake
-* Databricks
-* MongoDB
-* Akamai
-* Cloudflare
+Note that I have removed Google Cloud Platform, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare from the analysis as they were not mentioned in the provided text.

@@ -1,24 +1,13 @@
-Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the query applied to the text:
+Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the information about the outage:
 
-**Outage Details:**
+**Cloud Provider:** Microsoft Azure
+**Services Impacted:** Windows Virtual Desktop infrastructure services
+**Regions and Availability Zones:** Not specified
+**Root Cause of Outage:** Not specified
+**Duration of Outage:**
+	* Start Time: 00:52 UT C on 24 Jul 2021
+	* End Time: Not specified, but it was marked as resolved by 21:20 UT C
+	* Duration: Approximately 2 hours and 30 minutes (from 00:52 UT C to 21:20 UT C)
+**Downtime Period:** The outage started on July 24, 2021, at 00:52 UT C and lasted for approximately 2 hours and 30 minutes. It was marked as resolved by 21:20 UT C.
 
-* Incident: Data Center Operations team worked at restoring some of the physical links which restored network connectivity to operational threshold by 21:20 UTC.
-* Duration: The outage lasted for approximately 2 hours and 8 minutes (from 14:30 UTC to 16:38 UTC).
-* Root Cause: Reviewing existing network data center operations cabling processes and standards, revisiting and retraining data center staff on processes.
-
-**Impacted Services:**
-
-* Windows Virtual Desktop infrastructure services were temporarily reconfigured to bypass the use of Azure Front Door during a portion of the outage period.
-* No specific services or regions were mentioned in the text.
-
-**Availability Zones:**
-
-* No availability zones were mentioned in the text.
-
-**Downtime Period:**
-
-* The downtime period was not explicitly stated in the text, but it is implied that some services were unavailable for approximately 2 hours and 8 minutes.
-
-**Resolution Time:**
-
-* The outage was marked as resolved by 00:52 UTC on July 24, 2021.
+Note that the text does not provide information about the regions and availability zones affected by the outage, as well as the root cause of the outage.

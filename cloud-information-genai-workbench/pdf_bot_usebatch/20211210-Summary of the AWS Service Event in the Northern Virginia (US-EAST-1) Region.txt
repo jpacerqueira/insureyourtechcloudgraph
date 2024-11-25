@@ -7,7 +7,7 @@ The outage occurred in the Northern Virginia (US-EAST-1) Region and affected sev
 
 The root cause of the outage was a single root cause, but it is not specified in the text.
 
-The outage started at 9:28 AM PST on December 7th, 2021, and lasted for approximately 6 hours and 54 minutes. The downtime period began when the monitoring data was still not visible to the operations team, which delayed their understanding of the event.
+The outage started at 9:28 AM PST on December 7th, 2021, and lasted for approximately 6 hours and 54 minutes. The downtime period began when the monitoring data was still not visible to the operations team, which continued resolving the issue with reduced system visibility.
 
 Here is a summary of the outage:
 
@@ -17,4 +17,4 @@ Here is a summary of the outage:
 * Downtime period: started when monitoring data was still not visible to the operations team
 * Resolution time: 8:22 AM PST on December 7th, 2021 (when the Service Health Dashboard was successfully updated)
 
-Note that the text does not provide information on the specific availability zones affected by the outage.
+Note that the outage duration is approximate as it is based on the provided start and end times.

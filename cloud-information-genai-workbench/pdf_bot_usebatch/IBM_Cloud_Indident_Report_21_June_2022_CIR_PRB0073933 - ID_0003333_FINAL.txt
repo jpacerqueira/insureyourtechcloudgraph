@@ -26,14 +26,16 @@ Based on the provided text, I will resume the outage for the following cloud pro
 
 **Root Cause**
 
-The third-party vendor applied changes to their BGP configuration, which caused a critical set of IP prefixes to be withdrawn. This led to a loss of connectivity for IBM Cloud Internet Services.
+The third-party vendor's change to their BGP configuration caused a critical set of IP prefixes to be withdrawn, leading to the outage.
 
-**Timeline**
+**Timeline of Events**
 
-* 21 June 2022 06:27 - The third-party vendor applied changes to their BGP configuration.
-* 21 June 2022 06:34 - IBM Cloud Specialists were alerted to HTTP 500 errors on their applications protected by Internet Services. Incident started.
-* 21 June 2022 06:44 - The third-party vendor notified IBM about a Global outage on their global PoPs.
-* 21 June 2022 07:42 - The third-party vendor reverted all changes.
-* 21 June 2022 08:06 - Customers and service teams reported restoration of services. Incident ended.
+1. 21 June 2022 06:27 - The third-party vendor applied changes to their BGP configuration.
+2. 21 June 2022 06:34 - IBM Cloud Specialists were alerted to HTTP 500 errors on their applications protected by Internet Services. Incident started.
+3. 21 June 2022 06:44 - The third-party vendor notified IBM about a Global outage on their global PoPs.
+4. 21 June 2022 07:42 - The third-party vendor reverted all changes.
+5. 21 June 2022 08:06 - Customers and service teams reported restoration of services. Incident ended.
 
-Note that the text does not provide information on Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare being impacted by the outage.
+**Additional Information**
+
+The incident was marked as resolved at 08:06 UTC on 21 June 2022.

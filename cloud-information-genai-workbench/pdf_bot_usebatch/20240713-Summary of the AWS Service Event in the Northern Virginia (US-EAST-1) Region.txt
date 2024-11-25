@@ -1,27 +1,31 @@
-Based on the provided text, I will resume the outage for Amazon AWS.
+Based on the provided text, I have extracted the information about the outage that occurred in Amazon AWS (US-EAST-1) Region.
 
-**Incident Details:**
+**Outage Details:**
 
-* **Cloud Provider:** Amazon AWS
 * **Services Impacted:** 
-  + Lambda function invocations within Northern Virginia (US-EAST-1) Region
+  + AWS Lambda
   + Amazon STS
   + AWS Management Console
   + Amazon EKS
   + Amazon Connect
   + Amazon EventBridge
 
-**Outage Details:**
+* **Regions and Availability Zones Affected:** Northern Virginia (US-EAST-1) Region
 
-* **Start Time:** June 13th, 2023 at 11:49 AM PDT
-* **Duration:** The outage lasted for approximately 4 hours and 48 minutes.
-* **Root Cause:** A latent software defect in the Lambda Frontend that caused elevated error rates and latencies for Lambda function invocations.
+* **Root Cause of Outage:** Latent software defect in the Lambda Frontend fleet
 
-**Downtime Period:**
+* **Duration of Outage:**
+  + Start Time: 11:49 AM PDT
+  + End Time: 3:37 PM PDT
+  + Duration: 3 hours and 48 minutes
+  + Duration in Days, Hours, and Minutes: 0 days, 3 hours, and 48 minutes
 
-* **Start Time:** June 13th, 2023 at 11:49 AM PDT
-* **End Time:** June 13th, 2023 at 3:37 PM PDT
+* **Downtime Period:** 
+  + Start Time: 11:49 AM PDT
+  + End Time: 2:02 PM PDT (for elevated error rates)
+  + End Time: 1:40 PM PDT (for Amazon Connect)
+  + End Time: 2:38 PM PDT (for AWS Support Center)
 
-**Resolution Time:**
-
-* **Resolved Time:** June 13th, 2023 at 3:37 PM PDT
+* **Resolution Time:** 
+  + Lambda function invocations began to return to normal levels at 1:45 PM PDT
+  + All affected services had fully recovered by 3:37 PM PDT

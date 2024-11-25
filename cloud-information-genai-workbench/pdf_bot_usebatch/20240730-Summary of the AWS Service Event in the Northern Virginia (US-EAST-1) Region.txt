@@ -1,25 +1,37 @@
-Here is the information about the outage on Amazon AWS:
+Here is the query result with only the specified cloud providers and without apostrophes:
 
-**Outage Details:**
+**Amazon AWS**
 
-* **Services Impacted:** Amazon CloudWatch Logs, Amazon Data Firehose, Amazon Elastic Container Service (ECS), AWS Lambda, Amazon Redshift, and AWS Glue
-* **Regions Affected:** Northern Virginia (US-EAST-1) Region
-* **Availability Zones Affected:** Not specified
+* Services impacted: Amazon CloudWatch Logs, Amazon Data Firehose, Amazon Elastic Container Service (ECS), AWS Lambda, Amazon Redshift, and AWS Glue
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Root cause of outage: Degradation of one of the internally-used cells of the Amazon Kinesis Data Streams service
+* Duration of outage:
+	+ Start time: 2:45 PM PDT
+	+ End time: 9:37 PM PDT
+	+ Duration: 7 hours and 52 minutes
+	+ Downtime period: The backlog of delayed S3 events completed processing at 2:38 AM PDT on August 1st
+* Marked as resolved: Yes
 
-**Root Cause of Outage:**
-The outage was caused by a degradation of one of the internally-used cells of the Amazon Kinesis Data Streams service.
+**Amazon AWS**
 
-**Duration of Outage:**
+* Services impacted: Managed Workows for Apache Airflow (MWAA) and AWS Glue customers
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Root cause of outage: Fargate task launch errors and CloudWatch Logs availability issues
+* Duration of outage:
+	+ Start time: 2:45 PM PDT
+	+ End time: 7:21 PM PDT
+	+ Duration: 4 hours and 36 minutes
+	+ Downtime period: MWAA and Glue latencies and API errors recovered when Fargate task launch errors and CloudWatch Logs availability improved
+* Marked as resolved: Yes
 
-* **Start Time:** 2:45 PM PDT
-* **End Time:** 9:37 PM PDT
-* **Duration:** 7 hours and 52 minutes
-* **Days:** 1 day
+Note that I removed the following cloud providers from the query result:
 
-**Downtime Period:**
-The outage started at 2:45 PM PDT on July 30th, 2024, and lasted for approximately 8 hours.
-
-**Resolution Time:**
-Normal operations were restored to the Kinesis Data Streams cell by 7:21 PM PDT, which marked the end of the outage. The backlog of delayed S3 events completed processing at 2:38 AM PDT on August 1st.
-
-Note that I have removed all Cloud Vendors not identified in the text, including Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+* Google GCP
+* Microsoft Azure
+* Oracle OCI
+* IBM Cloud
+* Snowflake
+* Databricks
+* MongoDB
+* Akamai
+* Cloudflare

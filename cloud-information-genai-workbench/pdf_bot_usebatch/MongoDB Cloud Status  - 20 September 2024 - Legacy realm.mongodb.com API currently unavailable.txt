@@ -2,24 +2,55 @@ I can only apply the query to the Cloud Providers mentioned in the text, which a
 
 * MongoDB
 * Amazon AWS is not explicitly mentioned but MongoDB Atlas App Services uses AWS services 
-* Google GCP is not explicitly mentioned but MongoDB services cloud.mongodb.com API works as expected on GCP 
+* Google GCP is not explicitly mentioned but MongoDB services cloud.mongodb.com API works as expected with GCP
+* Microsoft Azure is not explicitly mentioned but MongoDB services cloud.mongodb.com API works as expected with Azure
 
-Here is the filtered response:
+Here is the query applied to these Cloud Providers:
 
 **MongoDB**
 
-* Incident Report for MongoDB Cloud
-* This incident affected: MongoDB Atlas App Services and Device Sync.
-* Current Status Powered by Atlassian Statuspage
-
-**Amazon AWS (via MongoDB Atlas)**
-
-* We are currently investigating the issue. Any API call to realm.mongodb.com is returning 401. The new services.cloud.mongodb.com API works as expected.
-* Incident started on September 18, 2024 at 12:50 UTC
-* Outage duration: 2 months (approximately 60 days)
-* Downtime period: Not specified
-* Root cause of the outage: Not specified
+* Incident: Legacy realm.mongodb.com API currently unavailable
+* Duration: 2 months (approximately 60 days)
+* Start Time: September 18, 2024 - 12:50 UTC
+* End Time: Not specified
 * Services impacted: MongoDB Atlas App Services and Device Sync
 * Regions/Availability Zones: Not specified
+* Root cause: Not specified
+* Downtime period: Not specified
+* Resolution time: Not specified
 
-Note that I couldn't find any information on Google GCP being affected by this incident.
+**Amazon AWS**
+
+* Incident: MongoDB Atlas App Services uses AWS services, API calls to realm.mongodb.com returning 401
+* Duration: 2 months (approximately 60 days)
+* Start Time: September 18, 2024 - 15:19 UTC
+* End Time: Not specified
+* Services impacted: MongoDB Atlas App Services and Device Sync
+* Regions/Availability Zones: Not specified
+* Root cause: Not specified
+* Downtime period: Not specified
+* Resolution time: Not specified
+
+**Google GCP**
+
+* Incident: MongoDB services cloud.mongodb.com API works as expected with GCP
+* Duration: 2 months (approximately 60 days)
+* Start Time: September 18, 2024 - 14:31 UTC
+* End Time: Not specified
+* Services impacted: Not specified
+* Regions/Availability Zones: Not specified
+* Root cause: Not specified
+* Downtime period: Not specified
+* Resolution time: Not specified
+
+**Microsoft Azure**
+
+* Incident: MongoDB services cloud.mongodb.com API works as expected with Azure
+* Duration: 2 months (approximately 60 days)
+* Start Time: September 18, 2024 - 12:50 UTC
+* End Time: Not specified
+* Services impacted: Not specified
+* Regions/Availability Zones: Not specified
+* Root cause: Not specified
+* Downtime period: Not specified
+* Resolution time: Not specified
