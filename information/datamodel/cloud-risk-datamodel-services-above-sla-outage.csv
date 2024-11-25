@@ -490,7 +490,7 @@ I will provide the information for each cloud provider. Please note that I will 
 10000000000074,Amazon Elastic Compute Cloud,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,411.00,525600.000,525074.400,525.600,114.600,0.10%,0.08%,0.08%,0.02180%,-0.02180%,78.20%,0.07820%,996.439,996.656,0 days 6h51 down,"Lllama3.2-B Outage Analysis  
 - About last Amazon Elastic Compute Cloud EC2 Outage -
  in 
-context, Based on the provided context, I'll attempt to answer your query. Please note that this is a manual analysis of the provided data, and there might be some limitations or inaccuracies.
+context, Based on the provided context, I will attempt to answer your query. Please note that this is a manual analysis of the provided data, and there might be some limitations or inaccuracies.
 
 Incident Details
 
@@ -515,7 +515,7 @@ Resolved Event
 
     The incident was marked as resolved on November 10, 2024, at 7:55:00 AM (PST).
 
-Please note that the provided data does not include information about other regions or availability zones being affected by this incident. If you need more detailed information, please let me know and I'll try to help further.",,,
+Please note that the provided data does not include information about other regions or availability zones being affected by this incident. If you need more detailed information, please let me know and I will try to help further.",,,
 10000000000075,Amazon Elastic Container Service,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
 10000000000076,Amazon Elastic File System,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,400,525600.000,525074.400,525.600,125.600,0.10%,0.08%,0.08%,0.02390%,-0.02390%,76.10%,0.07610%,996.480,996.719,,,,,
 10000000000077,Amazon Elastic Block Store,Amazon AWS,global,,,4,0,24,365,99.90000,10.000,660.00,525600.000,525074.400,525.600,-134.400,0.10%,0.13%,0.13%,-0.02557%,0.02557%,125.57%,0.12557%,995.492,995.237,0 days 11h00 down,"Lllama3.2-B Outage Analysis  
