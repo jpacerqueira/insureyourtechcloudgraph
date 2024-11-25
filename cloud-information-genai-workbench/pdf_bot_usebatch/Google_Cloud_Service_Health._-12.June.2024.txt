@@ -1,34 +1,35 @@
-I can only apply the query to the specified cloud providers that are mentioned in the text. Based on the provided context, I will apply the query to Google Cloud Platform (GCP) and Microsoft Azure is not present, but Amazon Web Services (AWS) is not mentioned either.
+I can only apply the query to the specified cloud providers that are mentioned in the text, which are Google GCP and Microsoft Azure is not present but  Oracle OCI is also not present however Amazon AWS is present.
 
 Here is the result of applying the query:
 
 **Incident Details**
 
-* Incident ID: Not specified
+* Cloud Provider: Google GCP
+* Services Impacted:
+	+ Agent Assist
+	+ Dialogflow CX
+	+ Vertex AI Online Prediction
+* Regions and Availability Zones Affected:
+	+ Singapore (asia-southeast1)
+	+ Frankfurt (europe-west3)
+	+ Netherlands (europe-west4)
+	+ Iowa (us-central1)
+	+ South Carolina (us-east1)
+	+ Oregon (us-west1)
+
+**Outage Details**
+
 * Start Time: 2024-06-12 12:06 US/Pacific
 * End Time: 2024-06-12 15:59 US/Pacific
-* Duration: 3 hours and 53 minutes, which is equivalent to 3 days, 0 hours, and 53 minutes
-
-**Affected Services**
-
-* Google Cloud Platform (GCP)
-	+ Vertex AI Online Prediction
-	+ Dialogflow CX
-	+ Agent Assist
-* Affected Regions:
-	+ Asia-Southeast1
-	+ Europe-West3
-	+ Europe-West4
-	+ US-Central1
-	+ US-East1
-	+ US-West1
+* Duration: 3 hours and 53 minutes
+* Downtime Period:
+	+ Duration: 3 hours and 53 minutes
+	+ Start Time: 2024-06-12 12:06 US/Pacific
+	+ End Time: 2024-06-12 15:59 US/Pacific
 
 **Root Cause**
 
-The root cause of the outage was a novel form of user request to the GenerateContent API triggering intermittent segmentation faults in the Vertex Serving Prediction API servers. An affected server would restart after the segfault, and load balancers would send user queries to other healthy API servers until the affected server returned to service.
+* A novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers.
+* An affected server would restart after the segfault, and load balancers would send user queries to other healthy API servers until the affected server returned to service.
 
-**Remediation and Prevention**
-
-Google engineers were alerted to the issue via internal production monitoring on 10 June 2024 at 07:35 US/Pacific. At this time there was no visible customer impact and Google engineers identified the root cause of the segmentation fault and developed a fix which they started progressively rolling out.
-
-Note that Microsoft Azure is not mentioned in the text, so I did not include it in the results.
+Note: Microsoft Azure is not present in the text, so I did not include it in the results.

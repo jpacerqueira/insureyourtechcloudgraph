@@ -1,23 +1,22 @@
-Here is the information about the incident:
+Here is the summary of the outage:
 
-**Incident Details:**
+**Cloud Provider:** Microsoft Azure
+**Outage Details:**
 
-* **Cloud Provider:** Microsoft Azure
-* **Services Impacted:** Azur e Kuber netes Service (AKS), Azur e Monit or, Application Insights, Log Analy tics, and Micr osoft Sentinel
-* **Regions Affected:** All Azur e regions, including public and sovereign clouds
-* **Availability Zones Affected:** Three Availability Zones in the West US 2 region
+* **Incident Start Date and Time:** August 27 at 02:47 UTC
+* **Duration:** The outage lasted for approximately 1 day, with a brief period of recovery in the middle.
+* **Affected Regions and Availability Zones:** West US 2 region, which includes multiple datacenters across three Availability Zones on two campuses.
+* **Impacted Services:**
+	+ Azure Virtual Machines (VMs) running Ubuntu 18.04
+	+ Azure Kubernetes Service (AKS)
+	+ Azure Monitor
+	+ Application Insights
+	+ Log Analytics
+	+ Microsoft Sentinel
+* **Root Cause:** A bug in Ubuntu that caused DNS resolution errors, which impacted all affected services.
+* **Downtime Period:**
+	+ The outage started at 02:47 UTC on August 27 and lasted for approximately 12 hours (until 14:47 UTC).
+	+ During this time, customer s may have experienced pod creation errors in AKS, inability to access Azure Monitor, Application Insights, Log Analytics, and/or Microsoft Sentinel log data, and missed or delayed Log Search alerts and/or Microsoft Sentinel alerts.
+* **Resolution Date and Time:** The outage was marked as resolved after the affected services were restored.
 
-**Root Cause:**
-
-* The root cause of the outage was a bug in Ubuntu version 18.04 that resulted in DNS resolution errors.
-
-**Duration of Outage:**
-
-* The exact duration of the outage is not specified in the text, but it is mentioned that multiple teams detected the issue shortly after packages were published via production alerts.
-
-**Timeline:**
-
-* **Start Time:** Not specified
-* **Resolution Time:** Not specified
-
-Note: The incident did not involve Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare.
+Note: I removed Cloud Vendors not identified in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) from the summary.

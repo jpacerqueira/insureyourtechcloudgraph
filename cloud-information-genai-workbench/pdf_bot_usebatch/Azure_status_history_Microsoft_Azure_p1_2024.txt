@@ -1,36 +1,18 @@
-Based on the provided text, I'll apply the query to the specified cloud providers:
+Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
 
-**Cloud Provider:** Microsoft Azure
-**Services impacted:**
+Here is the information about the outage:
 
-* Azure SQL Database
-* Azure SQL Managed Instance
-* Cosmos DB
-* Azure Storage (specifically, storage scale unit configurations)
+**Outage Details**
 
-**Regions and Availability Zones affected:**
-The incident affected the China Telecom network and the Azure Commercial cloud, with no specific regions or availability zones mentioned.
+* **Cloud Provider:** Microsoft Azure
+* **Services Impacted:** Azure SQL Database and Managed Instance
+* **Regions and Availability Zones:** The outage affected various control and data plane clusters in different regions.
+* **Root Cause of Outage:** Storage availability failures
+* **Duration of Outage:**
+	+ Time started: Within one minute of SQL unavailability
+	+ Time ended: After failover policies were initiated, geo-secondarity was elevated as the new primary, and failover groups (FOG) endpoint was updated to point to the new primary.
+* **Outage Duration:** Approximately 2 hours and 3 minutes
+* **Downtime Period:** The downtime period started after the incident began and ended when the failover policies were initiated.
+* **Time Marked as Resolved:** Within an hour of the incident, failover policies were initiated.
 
-**Root cause of the outage:** The root cause was not explicitly stated in the text. However, it is mentioned that the issue was caused by a failure to follow Safe Deployment Practices (SDP) such as Availability Zone sequencing, leading to widespread regional impact.
-
-**Duration of the outage:**
-The incident started at 12:30 CST on October 22, 2024, and continued for an unknown duration. However, it is mentioned that:
-
-* Within one minute of SQL unavailability, investigation and mitigation workstreams were established.
-* 80% of the SQL databases became available within two hours of storage recovery.
-* 98% of the SQL databases were available over the next three hours.
-* The incident was marked as resolved when:
-	+ 95% of Cosmos DB account failovers completed (02:29 UT C on July 19, 2024).
-	+ 99% of all impacted compute resources had recovered (02:51 UT C on July 19, 2024).
-	+ Updated configuration was completed on all Storage scale units in the Central US region, restoring availability of all Azure Storage scale units (02:55 UT C on July 19, 2024).
-
-**Timeline of the outage:**
-
-* 12:30 CST, October 22, 2024: Incident started
-* Within one minute of SQL unavailability: Investigation and mitigation workstreams established
-* 80% of SQL databases became available within two hours of storage recovery (approx. 02:00 UT C on July 19, 2024)
-* 95% of Cosmos DB account failovers completed (02:29 UT C on July 19, 2024)
-* 99% of all impacted compute resources had recovered (02:51 UT C on July 19, 2024)
-* Updated configuration was completed on all Storage scale units in the Central US region, restoring availability of all Azure Storage scale units (02:55 UT C on July 19, 2024)
-
-Note that the incident occurred on October 22, 2024, but the timeline provided is for a separate incident that occurred on July 19, 2024.
+Note that there is no information about Amazon AWS or other cloud providers in the provided text.

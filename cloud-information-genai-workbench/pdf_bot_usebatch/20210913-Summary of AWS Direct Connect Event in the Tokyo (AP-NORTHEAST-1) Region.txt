@@ -1,11 +1,26 @@
-Based on the provided text, I can answer your query for Amazon Web Services (AWS) only.
+I can only provide information on Amazon AWS as per the given context.
 
-Here are the details about the AWS Direct Connect service disruption:
+Amazon AWS Direct Connect service disruption:
 
-* **Services impacted:** Direct Connect
-* **Regions affected:** Tokyo (AP-NORTHEAST-1)
-* **Availability Zones not specified**
-* **Root cause of the outage:** Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
-* **Duration of the outage:** The incident started at 7:30 AM JST and customers began seeing recovery by 12:30 PM JST, with full resolution by 1:42 PM JST. Therefore, the outage lasted approximately 6 hours and 12 minutes.
+The outage occurred on September 2, 2021, at 7:30 AM JST. The incident lasted for approximately 9 hours and 12 minutes.
 
-Note that I have removed Cloud Vendors not identified in the text, such as Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+Services impacted:
+- Virtual Private Clouds (VPCs) in the Tokyo Region
+- Direct Connect traffic to the Tokyo Region
+
+Regions affected:
+- Tokyo (AP-NORTHEAST-1)
+
+Availability Zones not specified.
+
+Root cause of the outage: The failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
+
+Duration of the outage:
+- Started at 7:30 AM JST
+- Ended at 4:42 PM JST (approximately 9 hours and 12 minutes)
+
+Downtime period:
+- The downtime started when the elevated packet loss for Direct Connect customers connecting to the Tokyo Region was first detected by internal alarms at 7:30 AM JST.
+- It ended when connectivity issues were fully resolved at 4:42 PM JST.
+
+Resolved on: September 2, 2021, at 4:42 PM JST.

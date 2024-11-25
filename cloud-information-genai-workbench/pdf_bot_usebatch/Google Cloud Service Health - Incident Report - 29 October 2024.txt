@@ -1,19 +1,57 @@
-After applying the query to the specified cloud providers, I found that only Google GCP was mentioned. Here are the results:
+I can only apply the query to the specified cloud providers that are mentioned in the text, which are:
+
+* Google GCP
+* Amazon AWS is not mentioned in the text, so I will ignore it.
+* Microsoft Azure is not mentioned in the text, so I will ignore it.
+* Oracle OCI is not mentioned in the text, so I will ignore it.
+
+Here is the query applied to the specified cloud providers:
 
 **Google GCP**
 
-* Incident: Resume of outage
-* Duration: 3 hours and 34 minutes (from 16:20 to 19:54)
-* Affected services:
-	+ Cloud Run (australia-southeast2 region)
-	+ Google BigQuery (australia-southeast2 region)
-	+ Google Cloud Dataflow (australia-southeast2 region)
-	+ Google Cloud Dataproc (australia-southeast2 region)
-	+ Google Cloud Networking (australia-southeast2 region)
-	+ Google Cloud Pub/Sub (australia-southeast2 region)
-	+ Google Cloud SQL (multiple instances unavailable in australia-southeast2 region)
-* Root cause: Not specified
-* Start time: 16:20
-* Resolution time: 19:54
+Incident Details:
+- Incident Start: 29 October 2024 16:21
+- Incident End: 29 October 2024 19:34
+- Duration: 3 hours, 13 minutes
+- Affected Services and Features: Apigee Edge Public Cloud, Batch, Cloud Filestore, Cloud Firestore, Cloud Key Management Service, Cloud NAT, Cloud Run, Google BigQuery, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Cloud SQL, Google Compute Engine, Google Kubernetes Engine, Identity and Access Management, Persistent Disk, Resource Manager API, Virtual Private Cloud (VPC)
+- Affected Regions/Zones: australia-southeast2
 
-Note that the root cause of the outage is not specified in the provided text.
+Incident Description:
+Apigee Edge Public Cloud - Impacted users observed increased runtime, latency and an increase in 5XX errors for runtime from 16:21 to 17:46.
+Batch - New batch jobs that were created in the australia-southeast2 region remained in SCHEDULED status and did not progress. Customers had the option to switch to different regions.
+Cloud Filestore - Instance creation/deletion operations failed in the region. Instances with virtual machines in these clusters were not reachable from other regions. Regional instances, depending on the placement of the majority of the virtual machines, went into lockdown.
+Cloud Firestore - Customers in the australia-southeast2 region experienced limited to no availability from 16:21 to 16:44.
+Cloud Key Management Service - KMS was not reachable in the australia-southeast2 region. Approximately 60% of the traffic was lost during the impacted period.
+
+Root Cause:
+The root cause of the outage is not specified in the text.
+
+**Google Cloud Dataflow**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:21
+- Incident End: 29 October 2024 19:34
+- Duration: 3 hours, 13 minutes
+- Affected Services and Features: Google Cloud Dataflow
+- Affected Regions/Zones: australia-southeast2
+
+Incident Description:
+Impacted users had limited to no availability in the australia-southeast2 region between 16:21 to 17:40.
+
+Root Cause:
+The root cause of the outage is not specified in the text.
+
+**Google Cloud Dataproc**
+
+Incident Details:
+- Incident Start: 29 October 2024 16:21
+- Incident End: 29 October 2024 19:34
+- Duration: 3 hours, 13 minutes
+- Affected Services and Features: Google Cloud Dataproc
+- Affected Regions/Zones: australia-southeast2
+
+Incident Description:
+Impacted users observed that all dataproc services were down from 17:13 to 19:10.
+
+Root Cause:
+The root cause of the outage is not specified in the text.

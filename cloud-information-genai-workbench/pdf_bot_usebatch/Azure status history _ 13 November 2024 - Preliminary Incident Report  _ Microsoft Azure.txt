@@ -1,17 +1,23 @@
-Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the information you requested:
+Here is the resume of the outage:
 
 **Cloud Provider:** Microsoft Azure
-**Services impacted:**
+**Services Impacted:**
 
-* Azure Log Analytics ( delays and/or stale data when viewing Microsoft Graph activity logs)
-* Azure Container Registry (interrmittent 5XX errors while trying to pull images from the registry)
+* Azure Log Analytics (West Europe, Southeast Asia, and/or Korea Central regions)
+* Azure Container Registry (East US region)
 
-**Regions and availability zones affected:**
+**Root Cause:** Unintentional deletion of Traffic Manager profiles for affected storage accounts.
 
-* West US 2
+**Duration:**
+- Start Time: 00:50 UTC on November 13, 2024
+- End Time: 12:30 UTC on November 13, 2024
 
-**Root cause of the outage:** Unintentional deletion of Azure Traffic Manager profiles for impacted storage accounts.
+**Outage Details:**
 
-**Duration of the outage:** The incident occurred between 00:50 UTC and 12:30 UTC on November 13, 2024. However, the text does not provide information on when the outage started and was marked as resolved.
+* Duration in Days: 1 day
+* Duration in Hours: 2 hours
+* Duration in Minutes: 30 minutes
+* Downtime Period: The affected services experienced DNS resolution failures when interacting with impacted storage accounts in Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, and/or West US 2.
+* Marked as Resolved: Not specified in the text.
 
-Note that I have removed all other cloud providers mentioned in your query, as they were not identified in the provided text.
+Note that Snowflake, MongoDB, Akamai, and Cloudflare are not mentioned in the original text.

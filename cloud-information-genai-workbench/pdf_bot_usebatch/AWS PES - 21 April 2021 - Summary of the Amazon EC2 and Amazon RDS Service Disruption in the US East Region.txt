@@ -6,15 +6,17 @@ Here is the information about the outage:
 **Services impacted:** Amazon Elastic Compute Cloud (EC2), Amazon Elastic Block Store (EBS)
 **Regions and Availability Zones affected:** US East Region, a single Availability Zone
 
-The outage occurred on April 21st, starting at an unknown time. The incident lasted for approximately 11 hours.
+The outage occurred on April 21st, starting at an unknown time. The duration of the outage was approximately 11 hours.
 
-Here is the detailed information about the outage:
+**Root cause of the outage:** A subset of EBS volumes in the affected Availability Zone became unable to service read and write operations due to a race condition between essential communication between nodes in the cluster.
 
-* **Start time:** Unknown
-* **Duration:** 11 hours
-* **End time:** Noon PM PDT on April 21st
-* **Root cause of the outage:** A subset of EBS volumes in a single Availability Zone became unable to service read and write operations, causing instances trying to use these affected volumes to also get stuck.
-* **Services impacted:**
-	+ EC2 customers experienced significantly elevated error rates and latencies when attempting to launch new EBS-backed EC2 instances.
-	+ Customers were able to create EBS-backed EC2 instances but were experiencing significant-elevated error rates and latencies.
-* **Resolution:** A change to the EBS control plane fixed this issue, and latencies and error rates for new EBS-backed EC2 instances declined rapidly and returned to near-normal at Noon PDT on April 21st.
+**Services downtime period:**
+
+* EC2 instances using the affected EBS volumes experienced significantly elevated error rates and latencies.
+* New EBS-backed EC2 launches were being affected by a specific API in the EBS control plane that is only needed for attaching new instances to volumes.
+
+The outage started at an unknown time, but it was resolved when a change to the EBS control plane fixed the issue at 11:30 AM PDT. The total downtime period was approximately 11 hours and 30 minutes.
+
+**Duration of the outage:** 11 hours and 30 minutes
+
+Note that I have removed all cloud providers not identified in the text, including Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

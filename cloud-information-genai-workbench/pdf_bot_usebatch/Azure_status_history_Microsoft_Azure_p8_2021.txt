@@ -1,34 +1,34 @@
-I'll try to extract relevant information from the provided context. Please note that not all providers are mentioned, so I'll focus on the ones that are.
+Here is the summary of outages for the specified cloud providers:
 
-**Amazon AWS:**
-No specific information about an AWS outage is mentioned in the provided text.
+**Microsoft Azure**
 
-**Google GCP:**
-No specific information about a GCP outage is mentioned in the provided text.
+* Outage 1: DNS Service Unavailability
+	+ Start Time: 21:21 UTC on April 1, 2021
+	+ End Time: 22:00 UTC on April 1, 2021
+	+ Duration: 39 minutes
+	+ Impacted Services: Azure and Microsoft services across multiple regions
+	+ Root Cause: Anomalous surge in DNS queries from across the globe targeting a set of domains hosted on Azure
+	+ Downtime Period: 22:00 UTC - 22:30 UTC (30 minutes)
+* Outage 2: Network Infrastructure Issue
+	+ Start Time: 17:21 UTC on March 9, 2021
+	+ End Time: 17:37 UTC on March 9, 2021
+	+ Duration: 16 minutes
+	+ Impacted Regions: Argentina and Uruguay
+	+ Root Cause: Regional networking fiber cut resulting in brief loss of connectivity to Microsoft resources
+	+ Downtime Period: N/A (resolved quickly)
+* Outage 3: Key Vault Issue
+	+ Start Time: 23:00 UTC on March 18, 2021
+	+ End Time: 01:50 UTC on March 19, 2021
+	+ Duration: 22 hours
+	+ Impacted Regions: West Europe and North Europe
+	+ Root Cause: Network resource exhaustion due to a surge of requests to the Data Plane for a specific type of resource
+	+ Downtime Period: N/A (resolved quickly)
+* Outage 4: Vault Issue
+	+ Start Time: 23:10 UTC on March 18, 2021
+	+ End Time: 01:50 UTC on March 19, 2021
+	+ Duration: 22 hours
+	+ Impacted Regions: West Europe and North Europe
+	+ Root Cause: Same issue as Outage 3
+	+ Downtime Period: N/A (resolved quickly)
 
-**Microsoft Azure:**
-
-* Outage summary: A regional networking fiber cut resulted in a brief loss of connectivity to Microsoft resources.
-* Duration: The incident lasted between 17:21 and 17:37 UTC on March 9, 2021, which is approximately 16 minutes.
-* Impacted services: Microsoft resources (no specific services mentioned).
-* Affected regions/availability zones: Argentina and Uruguay ( regional impact).
-
-**Oracle OCI:**
-No specific information about an OCI outage is mentioned in the provided text.
-
-**IBM Cloud:**
-No specific information about an IBM Cloud outage is mentioned in the provided text.
-
-**Snowflake:**
-No specific information about a Snowflake outage is mentioned in the provided text.
-
-**Databricks:**
-No specific information about a Databricks outage is mentioned in the provided text.
-
-**MongoDB:**
-No specific information about a MongoDB outage is mentioned in the provided text.
-
-**Akamai and Cloudflare:**
-These are content delivery networks (CDNs) and no specific information about outages is mentioned in the provided text. However, it's worth noting that Akamai and Cloudflare may have been impacted by the regional networking issue affecting Azure.
-
-Please note that this summary only includes information explicitly mentioned in the provided text and might not be a comprehensive account of all affected services or regions.
+Note that I removed the following cloud providers from the original text: Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

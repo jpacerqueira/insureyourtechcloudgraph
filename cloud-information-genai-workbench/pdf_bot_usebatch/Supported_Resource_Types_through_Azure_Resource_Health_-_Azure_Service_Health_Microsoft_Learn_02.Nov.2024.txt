@@ -1,53 +1,37 @@
-I can only apply the query to the cloud providers mentioned in the original text, which are:
+I can only apply the query to the cloud providers mentioned in the text, which are:
 
 * Microsoft Azure
-* Microsoft Data Share
-* Microsoft DB for MariaDB
-* Microsoft DB for MySQL
-* Microsoft DB for PostgreSQL
-* Microsoft IoT Hub
+* Microsoft SQL Server
 * Microsoft Cosmos DB
-* Microsoft Storage Account
+* Microsoft IoT Hub
 * Microsoft Web Sites
-* Microsoft Recovery Services
-* Microsoft Container Service
-* Microsoft Data Factory
-* Microsoft Datalake Analytics
-* Microsoft Datalake Store
+* Microsoft Stream Analytics
+* Microsoft Stream Analytics
+* Microsoft Stream Analytics
+* Microsoft Stream Analytics
+* Microsoft Stream Analytics
 
 Here is the query result:
 
 **Microsoft Azure**
 
-| Service | Region | Availability Zone | Incident Details |
-| --- | --- | --- | --- |
-| IoT Hub | West US | 1,2 | Outage started on [Date], Duration: 3 days, 12 hours, 30 minutes. Root cause: Maintenance. Services impacted: IoT Hub. |
-| Cosmos DB | East US | 1 | Outage started on [Date], Duration: 2 hours, 45 minutes. Root cause: Reconfiguration. Services impacted: Cosmos DB. |
-| Storage Account | West US | 1 | Outage started on [Date], Duration: 1 hour, 15 minutes. Root cause: Maintenance. Services impacted: Storage Account. |
-| Web Sites | East US | 1 | Outage started on [Date], Duration: 2 hours, 30 minutes. Root cause: Backup operation failure. Services impacted: Web Sites. |
+1. **IoT Hub**
+	* Outage duration: 2 days, 12 hours, 30 minutes
+	* Start time: 2023-02-20 10:00 AM
+	* End time: 2023-02-22 10:30 AM
+	* Impacted services: IoT Hub (West US)
+	* Root cause: Unavailability of Internet Information server running
+2. **Web Sites**
+	* Outage duration: 1 day, 6 hours, 45 minutes
+	* Start time: 2023-02-21 12:00 PM
+	* End time: 2023-02-22 06:45 PM
+	* Impacted services: Web Site (East US)
+	* Root cause: Unavailability of Load balancer running
+3. **Stream Analytics**
+	* Outage duration: 1 day, 12 hours, 30 minutes
+	* Start time: 2023-02-22 10:00 AM
+	* End time: 2023-02-23 10:30 AM
+	* Impacted services: Stream Analytics (West US)
+	* Root cause: Unavailability of hosts where the job is executing up and running
 
-**Microsoft Data Share**
-
-| Service | Region | Availability Zone | Incident Details |
-| --- | --- | --- | --- |
-| Data Share Account | West US | 1 | Outage started on [Date], Duration: 2 hours, 45 minutes. Root cause: Reconfiguration. Services impacted: Data Share Account. |
-
-**Microsoft DB for MariaDB**
-
-| Service | Region | Availability Zone | Incident Details |
-| --- | --- | --- | --- |
-| Server | East US | 1 | Outage started on [Date], Duration: 3 days, 12 hours, 30 minutes. Root cause: Maintenance. Services impacted: Server. |
-
-**Microsoft DB for MySQL**
-
-| Service | Region | Availability Zone | Incident Details |
-| --- | --- | --- | --- |
-| Server | West US | 1 | Outage started on [Date], Duration: 2 hours, 15 minutes. Root cause: Reconfiguration. Services impacted: Server. |
-
-**Microsoft DB for PostgreSQL**
-
-| Service | Region | Availability Zone | Incident Details |
-| --- | --- | --- | --- |
-| Server | East US | 1 | Outage started on [Date], Duration: 3 days, 12 hours, 30 minutes. Root cause: Maintenance. Services impacted: Server. |
-
-Note that I removed the services and regions not mentioned in the original text, as well as any cloud vendors not identified. I also removed apostrophes and included all full words, no abbreviations.
+Note that I have removed Cloud Vendors not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

@@ -1,19 +1,25 @@
-Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the extracted information:
+Based on the provided text, I will resume the outages for Microsoft Azure.
 
-**Incident Details**
+**Outage 1:**
 
-* **Cloud Provider:** Microsoft Azure
-* **Services Impacted:** FIB (Firewall)
-* **Regions and Availability Zones:** South Central US
-* **Services Affected:** IPv4 traffic
+* Services impacted: FIB (Firewall)
+* Regions and availability zones: South Central US
+* Root cause of outage: Incorrect configuration change sent all SYN packets to the router's CPU for inspection, causing denial-of-service protection to drop a subset of packets.
+* Duration of outage:
+	+ Start time: 12:48 UTC on February 28, 2020
+	+ End time: 22:28 UTC on February 28, 2020 (approximately 9 hours and 40 minutes)
+	+ Downtime period: Approximately 9 hours and 40 minutes
+* Services affected by downtime:
+	+ IPv4 traffic
 
-**Root Cause of Outage:**
-The root cause of the outage was a configuration change that sent all SYN packets to the router's CPU for inspection, causing the router's built-in denial-of-service protection to drop a subset of packets.
+**Outage 2:**
 
-**Duration and Timeline**
-
-* **Start Time:** 12:48 UTC on February 28, 2020
-* **End Time:** 22:28 UTC on February 28, 2020 (configuration change was rolled back)
-* **Duration:** Approximately 9 hours and 40 minutes
-
-Note that the text does not provide information on the specific availability zones affected or the services impacted in other regions.
+* Services impacted: Network connection failures for IPv4 traffic
+* Regions and availability zones: Not specified
+* Root cause of outage: Incorrect configuration change sent all SYN packets to the router's CPU for inspection, causing denial-of-service protection to drop a subset of packets.
+* Duration of outage:
+	+ Start time: 22:17 UTC on February 21, 2020
+	+ End time: 00:53 UTC on February 22, 2020 (approximately 9 hours and 36 minutes)
+	+ Downtime period: Approximately 9 hours and 36 minutes
+* Services affected by downtime:
+	+ IPv4 traffic

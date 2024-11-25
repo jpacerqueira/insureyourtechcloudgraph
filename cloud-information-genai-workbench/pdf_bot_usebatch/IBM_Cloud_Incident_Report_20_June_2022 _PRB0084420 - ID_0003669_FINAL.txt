@@ -1,38 +1,42 @@
-Based on the provided text, I can answer the query for IBM Cloud only.
+Based on the provided text, the following information is available for IBM Cloud:
 
-Here are the answers to your questions:
+**Incident Information**
 
-1. Resume the outage:
-The outage occurred due to a power grid utility outage, which led to UPS batteries depleting and FRA05 server room 2 losing power.
-2. How long was the incident?
-The exact duration of the incident is not specified in the text.
-3. When was the outage?
-The outage started at 03:20 on June 20, 2023.
-4. What services got impacted in what regions and availability zones?
-- VSI (Impacted customer VSIs experienced an outage.)
-- SQL Query (SQL jobs/queries experienced long delays and eventually failures for all submitted jobs. Streaming jobs were running as normal where the impact was limited to SQL batch jobs.)
-- IBM Cloud Databases had an impact due to worker nodes being in critical status.
-- VPC VPN (Impacted customers experienced VPN Gateway provisioning failures and VSI was stuck in "pending" status.)
-- Code Engine (Impacted customers experienced delays in creating or updating applications, due to the degraded performance of the system.)
-- Load Balancer (Data plane and control plane for Load Balancers were impacted.)
-- Network Infrastructure (All IBM Cloud services experienced connectivity issues.)
+* Incident Name: Power Grid Utility Outage
+* Affected Services: VPC, SQL Query, Load Balancer, Network Infrastructure, Watson Platform, and VSIs
+* Regions/Availability Zones: Frankfurt (FRA05) Data Center and eu-de zone 3 (EU-DE-3)
+* Cloud Provider: IBM Cloud
 
-5. What services had outage?
-The following services had an outage:
-- VSI
-- SQL Query
-- IBM Cloud Databases
-- VPC VPN
-- Code Engine
-- Load Balancer
-- Network Infrastructure
+**Sequence of Events**
 
-6. What was the root cause of the outage?
-The root cause of the outage is not explicitly stated in the text, but it appears to be related to a power grid utility outage and subsequent UPS battery depletion.
+1. 20 June 2023 03:20 - Power grid utility outage occurred.
+2. 20 June 2023 03:46 - UPS batteries depleted and FRA05 server room 2 lost power.
+3. 20 June 2023 03:49 - Incident Started
+4. 20 June 2023 04:12 - IBM Cloud Site Operator Engineering team began data center recovery actions.
+5. 20 June 2023 04:17 - Power was restored on the affected rack.
+6. 20 June 2023 04:30 - All bare metal hosts were back online.
+7. 20 June 2023 05:00 - Facilities grid power supply was restored and transition from generator to utility was completed.
+8. 20 June 2023 05:41 - IBM Cloud Site Operator Engineering team were notified that power was restored after inspection.
+9. 20 June 2023 10:33 - VPC underlying host operating system was restored.
+10. 20 June 2023 12:18 - All VSI Hosts were recovered.
+11. 20 June 2023 19:14 - VPC SDN was restored.
 
-7. How long was the outage?
-The exact duration of the outage is not specified in the text.
-8. When was the outage started and marked as resolved?
-The outage started at 03:20 on June 20, 2023, and it is not clear when it was marked as resolved. The text mentions that power was restored to the affected rack at 04:17, but it does not provide information on when the full outage was resolved.
+**Root Cause**
 
-Note: The other cloud providers mentioned in your query (Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) are not identified as being impacted by the outage in the provided text.
+The root cause of the outage is not explicitly stated in the text, but it appears to be related to a power grid utility outage that affected the FRA05 server room and caused a series of events leading to the incident.
+
+**Duration**
+
+* Start Time: 20 June 2023 03:20
+* End Time: 20 June 2023 19:14 (approximately 24 hours, 54 minutes)
+* Downtime Period: The outage lasted for approximately 24 hours and 54 minutes.
+* Marked as Resolved: 20 June 2023 19:14
+
+**Services Impacted**
+
+* VPC
+* SQL Query
+* Load Balancer
+* Network Infrastructure
+* Watson Platform
+* VSIs

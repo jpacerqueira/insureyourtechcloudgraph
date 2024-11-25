@@ -1,14 +1,16 @@
-Here is the query result with only the specified cloud providers:
+Based on the provided text, I will resume the outage for the following cloud providers: IBM Cloud.
 
-**Resume the outage:**
+**Incident Details**
 
-* Incident duration: 1 hour 32 minutes
-* Outage start: June 21, 2022 06:34 UTC
-* Outage end: June 21, 2022 08:06 UTC
+* Incident ID: INC5295851
+* Outage Start Time: 21 June 2022 06:34 UTC
+* Outage End Time: 21 June 2022 08:06 UTC
+* Duration: 1 hour and 32 minutes
+* Downtime Period: The services were unavailable for approximately 1 hour and 32 minutes.
 
-**Impacted services and regions:**
+**Impacted Services**
 
-* IBM Cloud Internet Services in all IBM Cloud Regions (no specific availability zones mentioned)
+* IBM Cloud Internet Services
 * AppID
 * Schematics
 * Secrets Manager
@@ -22,8 +24,16 @@ Here is the query result with only the specified cloud providers:
 * Cloud App Dev Services
 * Event-notifications
 
-**Root cause:**
+**Root Cause**
 
-* The third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+The third-party vendor applied changes to their BGP configuration, which caused a critical set of IP prefixes to be withdrawn. This led to a loss of connectivity for IBM Cloud Internet Services.
 
-Note that Amazon AWS and Google GCP are not mentioned in the text as being impacted by the outage. Microsoft Azure is also not explicitly mentioned, but it is possible that some services may have been affected indirectly due to the global outage on the third-party vendor's PoPs. Oracle OCI and Snowflake, Databricks, MongoDB, Akamai, and Cloudflare are not mentioned at all in the text as being impacted by the outage.
+**Timeline**
+
+* 21 June 2022 06:27 - The third-party vendor applied changes to their BGP configuration.
+* 21 June 2022 06:34 - IBM Cloud Specialists were alerted to HTTP 500 errors on their applications protected by Internet Services. Incident started.
+* 21 June 2022 06:44 - The third-party vendor notified IBM about a Global outage on their global PoPs.
+* 21 June 2022 07:42 - The third-party vendor reverted all changes.
+* 21 June 2022 08:06 - Customers and service teams reported restoration of services. Incident ended.
+
+Note that the text does not provide information on Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare being impacted by the outage.

@@ -1,32 +1,27 @@
-Based on the provided text, here is the information about the Cloud Provider Amazon AWS:
+Based on the provided text, I will resume the outage for Amazon AWS.
 
 **Incident Details:**
 
-* The incident occurred in the Northern Virginia (US-EAST-1) Region.
-* The outage started at 11:49 AM PDT and was marked as resolved at 3:37 PM PDT.
+* **Cloud Provider:** Amazon AWS
+* **Services Impacted:** 
+  + Lambda function invocations within Northern Virginia (US-EAST-1) Region
+  + Amazon STS
+  + AWS Management Console
+  + Amazon EKS
+  + Amazon Connect
+  + Amazon EventBridge
 
-**Impacted Services and Regions:**
+**Outage Details:**
 
-* Lambda function invocations within the Northern Virginia (US-EAST-1) Region were impacted.
-* Other AWS services, including:
-	+ Amazon STS
-	+ AWS Management Console
-	+ Amazon EKS
-	+ Amazon Connect
-	+ Amazon EventBridge
+* **Start Time:** June 13th, 2023 at 11:49 AM PDT
+* **Duration:** The outage lasted for approximately 4 hours and 48 minutes.
+* **Root Cause:** A latent software defect in the Lambda Frontend that caused elevated error rates and latencies for Lambda function invocations.
 
-**Duration of Outage:**
+**Downtime Period:**
 
-* The outage lasted for approximately 3 hours and 48 minutes.
+* **Start Time:** June 13th, 2023 at 11:49 AM PDT
+* **End Time:** June 13th, 2023 at 3:37 PM PDT
 
-**Root Cause of Outage:**
+**Resolution Time:**
 
-* A latent software defect was identified by engineering teams at 12:26 PM PDT, which caused the provisioning of underlying compute capacity to be impacted.
-
-**Services Affected:**
-
-* Lambda function invocations
-* Amazon Connect (contact handling issues)
-* AWS Management Console (unavailability and 504 Time-out error pages)
-
-Note that the text does not provide information on other Cloud Providers such as Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare.
+* **Resolved Time:** June 13th, 2023 at 3:37 PM PDT

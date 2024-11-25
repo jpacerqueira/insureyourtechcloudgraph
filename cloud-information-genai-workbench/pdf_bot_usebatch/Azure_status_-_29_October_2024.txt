@@ -1,15 +1,17 @@
-I can only apply the query to Microsoft Azure since that's the only cloud provider explicitly mentioned in the text. Here is the result:
+I can only apply the query to Microsoft Azure as per the provided context.
 
-**Microsoft Azure Outage**
+Here is the resume of the outage:
 
-* **Incident Details:**
-	+ Resume of outage: Not available
-	+ Duration of incident: Not available
-	+ Root cause of outage: Not available
-* **Affected Services and Regions:**
-	+ No specific services or regions mentioned in the text
-* **Timeline:**
-	+ Start time of outage: Not available
-	+ End time of outage: Not available
+**Outage Details**
 
-Note that I couldn't find any information on an Azure outage meeting the specified criteria, as there is no mention of a resume of outage, duration of incident, root cause, or timeline in the provided text.
+* **Service Impacted**: Microsoft Defender for Cloud
+* **Regions and Availability Zones**: East US, Central US, North Central US, South Central US, West Central US, West US 2, West US 3, Canada East, Canada Central, Brazil South
+* **Root Cause of Outage**: Not specified in the provided context
+* **Duration of Outage**:
+	+ Start Time: 32 seconds ago
+	+ End Time: Not specified
+	+ Duration: Not specified
+* **Downtime Period**: Not specified
+* **Resolution Date and Time**: Not specified
+
+Note that I have removed all Cloud Vendors not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

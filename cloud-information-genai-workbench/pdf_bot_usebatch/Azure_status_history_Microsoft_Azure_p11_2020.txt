@@ -1,37 +1,43 @@
-Here is the summary of the outages for the specified cloud providers:
+Here are the outages identified in the text for the specified cloud providers:
 
 **Microsoft Azure**
 
-* Outage: 13:30 - 16:30 UTC on May 19, 2020
-* Duration: 3 hours and 30 minutes (0 days, 3 hours, 30 minutes)
-* Impacted services: Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services in East US region.
-* Root cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to Azure Platform and processes to help ensure such incidents do not occur in the future.
-* Start time: 13:30 UTC on May 19, 2020
-* Resolution time: Not specified
+* Outage: Between 13:30 and 16:30 UTC on May 19, 2020
+* Duration: Approximately 3 hours and 30 minutes (3.5 hours)
+* Affected Services: Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services in East US region.
+* Root Cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to a breaker.
+* Start Time: 13:30 UTC on May 19, 2020
+* Downtime Period: The downtime period was not specified.
+* Resolution Time: Not specified.
 
-**Azure Status History**
+**Azure (again, as it's mentioned multiple times)**
 
-* Outage: 11:57 - 14:20 UTC on June 11, 2020
-* Duration: 2 hours and 23 minutes (0 days, 2 hours, 23 minutes)
-* Impacted services: Storage customers in East US region.
-* Root cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to Azure Platform and processes to help ensure such incidents do not occur in the future.
-* Start time: 11:57 UTC on June 11, 2020
-* Resolution time: Not specified
+* Outage: Between 07:45 and 16:57 UTC on June 4, 2020
+* Duration: Approximately 9 hours and 12 minutes (9.2 hours)
+* Affected Services: Azure Resource Manager (ARM) services across all Public Azure regions.
+* Root Cause: Engineer determined that an incident occurred during the deployment of certain service-based resources via ARM.
+* Start Time: 07:45 UTC on June 4, 2020
+* Downtime Period: The downtime period was not specified.
+* Resolution Time: Not specified.
 
-**Azure Status History**
+**Azure (again, as it's mentioned multiple times)**
 
-* Outage: 07:45 - 16:57 UTC on June 4, 2020
-* Duration: 9 hours and 12 minutes (0 days, 9 hours, 12 minutes)
-* Impacted services: Azure Resource Manager (ARM) customers across all Public Azure regions.
-* Root cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to Azure Platform and processes to help ensure such incidents do not occur in the future.
-* Start time: 07:45 UTC on June 4, 2020
-* Resolution time: Not specified
+* Outage: Between 11:57 and 14:20 UTC on June 11, 2020
+* Duration: Approximately 2 hours and 23 minutes (2.38 hours)
+* Affected Services: Storage customers in East US region who experienced connection failures when trying to access some of their resources hosted in this region.
+* Root Cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to a breaker.
+* Start Time: 11:57 UTC on June 11, 2020
+* Downtime Period: The downtime period was not specified.
+* Resolution Time: Not specified.
 
-**Azure Status History**
+**Azure (again, as it's mentioned multiple times)**
 
-* Outage: approximately 20:30 - 00:30 UTC on March 15, 2020
-* Duration: 2 hours (0 days, 2 hours)
-* Impacted services: Customers in West Central US region.
-* Root cause: Ice storm in the region resulted in a loss of power to both primary and secondary utility power feeds in West Central US. This caused the datacenter to transition to generator power. Although largely successful, a subset of generators failed and UPS units supporting the downstream racks carried the load until their batteries drained. At that point, the affected racks lost power entirely. Any customer resources hosted on the affected racks became unavailable at the time.
-* Start time: approximately 20:30 UTC on March 15, 2020
-* Resolution time: Not specified
+* Outage: Between approximately 20:30 and 00:30 UTC on March 15, 2020
+* Duration: Approximately 2 hours
+* Affected Services: Customers in West Central US who experienced issues connecting to resources hosted in this region.
+* Root Cause: An ice storm in the region resulted in a loss of power to both primary and secondary utility power feeds in West Central US.
+* Start Time: Approximately 20:30 UTC on March 15, 2020
+* Downtime Period: The downtime period was not specified.
+* Resolution Time: Not specified.
+
+Note that I've removed the cloud providers that were not mentioned in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare).

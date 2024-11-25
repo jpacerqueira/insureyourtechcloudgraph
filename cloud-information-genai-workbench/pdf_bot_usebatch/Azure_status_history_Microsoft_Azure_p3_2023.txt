@@ -1,43 +1,41 @@
-After applying the query to the specified cloud providers, I found the following information:
+Here is the summary of outages for the specified cloud providers:
 
 **Microsoft Azure**
 
-* Incident: Network connectivity issues with long network latency and timeouts
-* Duration: 4 hours 37 minutes (from 07:08 UTC on January 25, 2023, to 11:45 UTC on January 25, 2023)
-* Affected regions and availability zones:
-	+ Southeast Asia region (1 Availability Zone experienced cooling failure)
-	+ East Asia region
-* Impacted services:
-	+ Azure Government cloud services
-	+ Microsoft 365
-	+ Power Platform
-* Root cause: Cooling failure in one Availability Zone in the Southeast Asia region, which led to infrastructure shutdown and packet loss issues.
-* Resolution start time: 09:05 UTC on January 25, 2023
+* Outage: Betw een 07:08 UTC and 12:43 UTC on 25 January 2023
+* Duration: 5 hours and 35 minutes
+* Affected services: Network connectivity, Microsoft 365, Power Platform, Azure Government cloud services
+* Root cause: Intermittent packet loss issues
+* Start time: 07:08 UTC
+* Downtime period: 12:43 UTC - 09:05 UTC (5 hours and 38 minutes)
+* Marked as resolved: 09:05 UTC
 
-**Microsoft Azure (again, since it's mentioned multiple times)**
+**Microsoft Azure**
 
-* Incident: Failures when attempting to provision new resources
-* Duration: 4 days (from 00:42 UTC on November 2, 2022, to 05:55 UTC on November 3, 2022)
-* Affected regions and availability zones:
-	+ Multiple regions, including Application Gateway, Bastion, Container Apps, Database Services, ExpressRoute, HDInsight, Open AI, SQL Managed Instance, Stream Analytics, and VMware
-* Impacted services:
-	+ Various Azure services listed above
-* Root cause: Not specified in the text
-* Resolution start time: Not specified in the text
+* Outage: Betw een 00:42 UTC on 2 November 2022 and 05:55 UTC on 3 November 2022
+* Duration: 3 days, 13 hours, and 13 minutes
+* Affected services: Application Gateway, Bastion, Container Apps, Datab ase Services (MySQL - Flexible Server, Postgres - Flexible Server), ExpressRoute, HDInsight, Open AI, SQL Managed Instance, Stream Analytics, VMwar e
+* Root cause: Unknown
+* Start time: 00:42 UTC on 2 November 2022
+* Downtime period: 05:55 UTC on 3 November 2022 - unknown (exact duration not specified)
+* Marked as resolved: unknown
 
-**Microsoft Azure (again, since it's mentioned multiple times)**
+**Microsoft Azure**
 
-* Incident: Greater than expected throttling when performing requests against Storage resources
-* Duration: 10 hours and 47 minutes (from 03:50 UTC on March 6, 2023, to 14:37 UTC on March 7, 2023)
-* Affected regions:
-	+ West Europe region
-* Impacted services:
-	+ Azure Automation
-	+ Azure Arc enabled Kubernetes
-	+ Azure Bastion
-	+ Azure Batch
-	+ Azure Container Apps
-	+ Azure Data Factory (ADF)
-	+ Azure Storage
-* Root cause: Not specified in the text
-* Resolution start time: 04:30 UTC on March 9, 2023
+* Outage: Betw een 20:19 UTC on 7 February 2023 and 04:30 UTC on 9 February 2023
+* Duration: 2 days, 8 hours, and 11 minutes
+* Affected services: Subset of customers with workloads hosted in Southeast Asia and East Asia regions
+* Root cause: Cooling failure in one Availability Zone (AZ) in Southeast Asia
+* Start time: 20:19 UTC on 7 February 2023
+* Downtime period: 04:30 UTC on 9 February 2023 - unknown (exact duration not specified)
+* Marked as resolved: 04:30 UTC on 9 February 2023
+
+**Microsoft Azure**
+
+* Outage: Betw een 09:44 and 13:10 UTC on 18 January 2023
+* Duration: 3 hours and 26 minutes
+* Affected services: Subset of customers using Storage services in West Europe, including Azure Application Insights, Azure Automation, Azure Container Registry, Azure Database for MySQL, Azure Database for PostgreSQL, Azure Red Hat OpenShift, Azure Search, Azure SQL Database, and Azure Virtual Machines (VMs)
+* Root cause: Planned power maintenance
+* Start time: 09:44 UTC on 18 January 2023
+* Downtime period: unknown (exact duration not specified)
+* Marked as resolved: unknown

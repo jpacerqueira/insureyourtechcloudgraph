@@ -1,56 +1,33 @@
-Based on the provided text, I'll apply the query to the following cloud providers:
+Here is the information about the outage for Microsoft Azure:
 
-* Microsoft Azure
-* Databricks
-* MongoDB
+The outage occurred between 03:45 CST and 06:00 CST on April 23, 2024.
 
-Here are the results of the query:
+The impacted services were:
 
-**Microsoft Azure**
+* Cosmos DB
+* Azure Virtual Desktop
+* Azure Databricks
+* Backup
+* Site Recovery
+* Azure IoT Hub
+* Service Bus
+* Logic Apps
+* Data Factory
+* Azure Kubernetes Services
+* Azure Policy
+* Azure AI Speech Services
 
-* Resume of the outage: A configuration change through a domain registrar resulted in a service disruption to 2 system domains (chinacloudapp.cn and chinacloudsites.cn) critical in Azure operations in China.
-* Duration of the incident: The outage lasted from 03:45 CST on April 23, 2024, to 06:00 CST on April 23, 2024, which is approximately 2.25 hours.
-* Impacted services and regions:
-	+ Azur e China r egions
-	+ ChinaCloudApp.cn domain
-	+ ChinaCloudSites.Cn domain
-	+ Impacted services include:
-		- Cosmos DB
-		- Azure Virtual Desktop
-		- Azure Databricks
-		- Backup
-		- Site Recovery
-		- Azure IoT Hub
-		- Service Bus
-		- Logic Apps
-		- Data Factory
-		- Azure Kubernetes Services
-		- Azure Policy
-		- Azure AI Speech Services
-* Root cause of the outage: The root cause was a configuration change through a domain registrar.
-* Time when the outage started and was marked as resolved:
-	+ Started: 04:59 CST on April 23, 2024 (reverted to previously known good name server versions)
-	+ Marked as resolved: 06:00 CST on April 23, 2024 (full recovery declared after verifying that traffic for the services and affected DNS zones had recovered back to pre-incident levels)
+The outage affected the following regions and availability zones in China:
 
-**Databricks**
+* chinacloudapp.cn domain
+* chinacloudsites.cn domain
 
-* Resume of the outage: Databricks experienced an impact in North Europe due to a control plane dependency.
-* Duration of the incident: The exact duration is not specified, but it's mentioned that Databricks was impacted along with other services.
-* Impacted services and regions:
-	+ North Europe region
-	+ Impacted services include:
-		- Databricks (also experienced impact in Azur e China)
-* Root cause of the outage: The root cause is not specified, but it's mentioned that the incident was related to a control plane dependency.
-* Time when the outage started and was marked as resolved:
-	+ Started: Not specified
-	+ Marked as resolved: Not specified
+The root cause of the outage was a configuration change performed through a domain registrar result.
 
-**MongoDB**
+The outage started at 04:59 CST on April 23, 2024.
 
-* Resume of the outage: No information is provided about MongoDB being impacted during the incident.
-* Duration of the incident: N/A (not applicable)
-* Impacted services and regions: N/A
-* Root cause of the outage: N/A
-* Time when the outage started and was marked as resolved:
-	+ Started: Not specified
-	+ Marked as resolved: Not specified
+The outage lasted for approximately 1 hour and 15 minutes (from 04:59 CST to 06:00 CST).
+
+The services that were impacted had a downtime period of approximately 1 hour and 15 minutes.
+
+The outage was marked as resolved at 05:13 CST on April 23, 2024.

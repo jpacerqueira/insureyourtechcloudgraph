@@ -1,20 +1,18 @@
-Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the extracted information:
+Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
 
-**Incident Details**
+Here is the information about the outage:
 
-* Incident Name: Azur e services outage
-* Duration: The incident lasted for approximately 2 hours and 45 minutes (from 21:25 UT C to 18:45 UT C)
-* Start Time: 21:25 UT C
-* End Time: 18:45 UT C
+**Outage Details**
 
-**Impacted Services**
+* **Cloud Provider:** Microsoft Azure
+* **Services Impacted:** Front-end services for other clusters in the region also made calls to the impacted cluster's front-end service to obtain configuration.
+* **Regions and Availability Zones:** The text does not specify a particular region or availability zone, but it mentions that the outage affected most West US Cosmos DB front-end services.
+* **Root Cause:** A code defect in a version update of a component that controls network traffic routing between Azure regions.
+* **Duration:**
+	+ Start Time: 21:30 UTC
+	+ End Time: 10:02 UTC (approximately 4 hours and 32 minutes later)
+	+ Duration: approximately 4 hours and 32 minutes
+* **Downtime Period:** The outage started at 21:30 UTC and was resolved by 18:45 UTC, with a downtime period of approximately 2 hours and 15 minutes.
+* **Resolution Time:** The outage was marked as resolved by 18:45 UTC.
 
-* Azur e AD backend services
-* Azure regions: No specific regions mentioned, but it's implied that the outage affected multiple regions due to the geo-distributed nature of Azure AD.
-* Availability Zones: No specific availability zones mentioned.
-
-**Root Cause**
-
-* The root cause was a code defect in the Safe Deployment Pr ocess (SDP) system, which caused the service update to deploy directly into production without proper validation.
-
-Note that I've removed all other cloud providers and services not identified in the text.
+Note that the text does not provide information on the specific services impacted in terms of region or availability zone.

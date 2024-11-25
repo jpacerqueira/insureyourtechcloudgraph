@@ -1,20 +1,24 @@
-Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the query applied to Microsoft Azure:
+Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the query applied to the text:
 
-Resume the outage in text:
+**Outage Details:**
 
-* Incident: Increased latency and connection timeouts when connecting to Azure Front Door and Azure CDN Standard.
-* Duration: The peak failure rate was approximately 70% in some East US metropolitan locations.
-* Timeframe: The outage occurred between 14:55 UTC and 19:50 UTC on July 12th, 2021.
-* Impacted services:
-	+ Azure Front Door
-	+ Azure CDN Standard
-	+ Windows Virtual Desktop (some customers experienced connection failures when attempting to access remote applications and resources)
-* Regions and availability zones impacted:
-	+ East US metropolitan locations (specifically, some regions experienced issues)
-* Root cause: A periodic background task executed on site led to the disruption of services.
-* Timeframe for resolution:
-	+ The Data Center Operations team restored network connectivity to operational thresholds by 21:20 UTC.
-	+ Most affected services were recovered by 21:28 UTC.
-	+ The remaining subset of cables was restored by 00:52 UTC on July 24, 2021.
+* Incident: Data Center Operations team worked at restoring some of the physical links which restored network connectivity to operational threshold by 21:20 UTC.
+* Duration: The outage lasted for approximately 2 hours and 8 minutes (from 14:30 UTC to 16:38 UTC).
+* Root Cause: Reviewing existing network data center operations cabling processes and standards, revisiting and retraining data center staff on processes.
 
-Note that the outage did not affect non-Windows Virtual Machines.
+**Impacted Services:**
+
+* Windows Virtual Desktop infrastructure services were temporarily reconfigured to bypass the use of Azure Front Door during a portion of the outage period.
+* No specific services or regions were mentioned in the text.
+
+**Availability Zones:**
+
+* No availability zones were mentioned in the text.
+
+**Downtime Period:**
+
+* The downtime period was not explicitly stated in the text, but it is implied that some services were unavailable for approximately 2 hours and 8 minutes.
+
+**Resolution Time:**
+
+* The outage was marked as resolved by 00:52 UTC on July 24, 2021.

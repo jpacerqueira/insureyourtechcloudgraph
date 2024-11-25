@@ -1,32 +1,25 @@
-Based on the provided text, here is the information about the outage:
+Here is the information about the outage on Amazon AWS:
 
-**Cloud Provider:** Amazon AWS (specifically, US-EAST-1 Region)
+**Outage Details:**
 
-**Services impacted:**
+* **Services Impacted:** Amazon CloudWatch Logs, Amazon Data Firehose, Amazon Elastic Container Service (ECS), AWS Lambda, Amazon Redshift, and AWS Glue
+* **Regions Affected:** Northern Virginia (US-EAST-1) Region
+* **Availability Zones Affected:** Not specified
 
-* CloudWatch Logs
-* Amazon Data Firehose
-* Event framework that publishes Amazon S3 events
-* Amazon Elastic Container Service (ECS)
-* AWS Lambda
-* Amazon Redshift
-* AWS Glue
+**Root Cause of Outage:**
+The outage was caused by a degradation of one of the internally-used cells of the Amazon Kinesis Data Streams service.
 
-**Regions and Availability Zones:** Northern Virginia (US-EAST-1) Region
+**Duration of Outage:**
 
-**Duration of the outage:**
+* **Start Time:** 2:45 PM PDT
+* **End Time:** 9:37 PM PDT
+* **Duration:** 7 hours and 52 minutes
+* **Days:** 1 day
 
-* The outage started at 2:45 PM PDT on July 30th, 2024.
-* The backlog of delayed S3 events completed processing at 2:38 AM PDT on August 1st.
+**Downtime Period:**
+The outage started at 2:45 PM PDT on July 30th, 2024, and lasted for approximately 8 hours.
 
-**Root cause of the outage:** A degradation of one of Amazon's internally-used cells of the Amazon Kinesis Data Streams service.
+**Resolution Time:**
+Normal operations were restored to the Kinesis Data Streams cell by 7:21 PM PDT, which marked the end of the outage. The backlog of delayed S3 events completed processing at 2:38 AM PDT on August 1st.
 
-**Services with partial recovery:**
-
-* Managed Workflows for Apache Airflow (MWAA) and AWS Glue customers experienced elevated latencies and API failures when creating or updating resources and logging metrics.
-* Lambda was able to publish more logs successfully and log delivery fully recovered when CloudWatch Logs API fully recovered.
-* Some ECS customers experienced impact to running tasks when these tasks were configured to use the awslogs log driver in the default blocking mode.
-
-**Services with no data loss:**
-
-* Amazon Data Firehose saw increased failures when invoking PutRecord and PutRecordBatch APIs to deliver data streams, but all records accepted by the service during the impacted period were delivered.
+Note that I have removed all Cloud Vendors not identified in the text, including Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

@@ -1,22 +1,14 @@
-After analyzing the provided text, I found that only Microsoft Azure is mentioned. Here's a summary of the incident:
+Based on the provided text, I can only identify outages related to Microsoft Azure. Here is the information about the outage:
 
-**Incident Details:**
+**Outage Details:**
 
-* **Cloud Provider:** Microsoft Azure
-* **Services Impacted:** Azur e CDN (specifically Verizon endpoints)
-* **Regions and Availability Zones:** Not specified in detail, but it's mentioned that the issue affected customers in North America.
-* **Timeframe:** The outage occurred between 17:24 and 18:48 UTC on December 11, 2019.
+* **Incident:** Multiple services across Microsoft including Azure, Microsoft 365 failed due to management requests.
+* **Duration:** The outage started at 00:56 UTC on November 20, 2019, and lasted for approximately 3 hours and 44 minutes.
+* **Start Time:** 00:56 UTC on November 20, 2019
+* **End Time:** 04:40 UTC on November 20, 2019
+* **Affected Services:** Azure services
+* **Regions/Availability Zones:** Not specified in the text
+* **Root Cause:** The root cause of the outage was not explicitly stated in the provided text.
+* **Downtime Period:** The downtime period for the affected services was approximately 3 hours and 44 minutes.
 
-**Root Cause:**
-
-The root cause of the outage was attributed to Azure CDN providers using staged deployment processes to deploy configuration changes across their infrastructure.
-
-**Duration:**
-
-The incident lasted for approximately 1 hour and 24 minutes (from 17:24 to 18:48 UTC).
-
-**Resolution:**
-
-I couldn't find information on when the outage started or was marked as resolved. The text only mentions that engineers deployed a platform hotfix to mitigate the issue, but it doesn't provide details on when the fix was implemented.
-
-Note that Amazon AWS and other cloud providers were not mentioned in the provided text.
+Note that there is no information about outages related to Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare in the provided text.

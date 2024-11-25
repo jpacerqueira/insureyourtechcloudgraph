@@ -1,21 +1,17 @@
-Based on the provided text, I can extract the following information:
+Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
+
+Here is the summary of the outage:
 
 **Cloud Provider:** Microsoft Azure
+**Services Impacted:** App Service, Azure Functions, Cosmos DB, Access Panel
 
-**Incident Details:**
+**Outage Details:**
 
-* **Duration:** The incident lasted for approximately 2 hours and 28 minutes.
-* **Start Time:** The outage started at 14:03 UT C on 09 Nov 2021.
-* **Resolution Time:** The outage was marked as resolved at 07:41 UT C on 05 Dec 2022.
+* **Start Time:** 03:00 UT C on November 9, 2021
+* **End Time:** 07:41 UT C on December 5, 2022 (approximately 21 days)
+* **Duration:** 21 days, 4 hours, and 41 minutes
+* **Downtime Period:** The Access Panel was scaled to handle low traffic during off-business hours, but failed-over traffic from West Central US to Central US prevented customers from experiencing the bug.
+* **Root Cause:** A code change introduced an unrelated bug in the Access Panel that caused issues with deployments and web jobs.
+* **Resolution Time:** 07:41 UT C on December 5, 2022
 
-**Impacted Services and Regions:**
-
-* **Service:** Azure Cosmos DB
-* **Region:** East US region
-* **Availability Zone:** Not specified
-
-**Root Cause:**
-
-* The root cause of the outage was a code change introduced to Access Panel that caused an unrelated bug, which affected a small subset of customers.
-
-Note that I have removed Cloud Vendors not identified in the text, such as Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+Note that I have removed all cloud providers not mentioned in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

@@ -1,19 +1,22 @@
-Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the information you requested:
+Based on the provided text, I will resume the outage for Microsoft Azure.
 
-**Cloud Provider:** Microsoft Azure
-**Services impacted:**
-- Azure Storage
-- Virtual Machine disks
-- Azure AD services (specifically, the Safe Deployment Process)
+**Outage Details:**
 
-**Regions and Availability Zones affected:**
-- Japan East region
+* **Incident:** A code defect in a version update of a component that controls network traffic routing between Azure regions.
+* **Duration:** The incident started at 21:30 UTC and was resolved by 18:45 UTC.
+* **Timeframe:** The outage lasted for approximately 2 hours and 15 minutes, which is equivalent to 2 days, 1 hour, and 15 minutes.
+* **Affected Services:** Front-end services for other clusters in the region also made calls to the impacted cluster's front-end service to obtain configuration, resulting in a cascading effect that impacted most West US Cosmos DB front-end services.
+* **Regions Affected:** The outage affected the West US region of Azure.
+* **Availability Zones Affected:** Not specified in the text.
 
-**Duration of outage:**
-The incident started at 03:26 UTC on February 26, 2021, and was resolved by 18:45 UTC on the same day.
+**Root Cause:**
 
-**Root cause of the outage:**
-The root cause of the outage was a code defect in a version update of a component that controls network traffic routing between Azure regions. The main parameters of the new code were invoked only at production scale and scope levels, which led to the prevention of anomaly detection from occurring.
+The root cause of the outage was a code defect in a version update of a component that controls network traffic routing between Azure regions. The main parameters of the new code were invoked only at production scale and scope levels, which led to the failure of anomaly detection processes.
 
-**Summary of impact:**
-A subset of customers in Japan East may have experienced service degradation and increased latency for resources utilizing Azure Storage, including failure of virtual machine disks. Some Azure services utilizing Storage may also have experienced downtime impact.
+**Services Downtime Period:**
+
+Not specified in the text.
+
+**Resolution Time:**
+
+The outage was marked as resolved by 18:45 UTC.
