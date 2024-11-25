@@ -1,20 +1,20 @@
-I'll provide a general template for the query results. Please note that I won't be able to retrieve specific information about outages from these providers without access to their status history pages.
+Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the extracted information:
 
-**Resume of Outage**
+**Incident Details**
 
-* **Incident Summary:** [Insert incident summary text]
-* **Duration:** [Insert duration in hours, minutes, and seconds] (e.g., 2 hours 30 minutes 45 seconds)
-* **Outage Time:** [Insert start and end times in UTC] (e.g., February 26, 2021, 03:26 UTC - February 26, 2021, 10:02 UTC)
+* Incident Name: Azur e services outage
+* Duration: The incident lasted for approximately 2 hours and 45 minutes (from 21:25 UT C to 18:45 UT C)
+* Start Time: 21:25 UT C
+* End Time: 18:45 UT C
 
-**Impacted Services and Regions**
+**Impacted Services**
 
-* **Services Impacted:** [List services impacted by the outage]
-* **Cloud Provider Regions Affected:** [List regions affected by the outage] (e.g., West US)
-* **Availability Zones Affected:** [List availability zones affected by the outage]
+* Azur e AD backend services
+* Azure regions: No specific regions mentioned, but it's implied that the outage affected multiple regions due to the geo-distributed nature of Azure AD.
+* Availability Zones: No specific availability zones mentioned.
 
-**Root Cause and Mitigation**
+**Root Cause**
 
-* **Root Cause:** [Insert root cause text]
-* **Mitigation Steps:** [Insert mitigation steps taken to resolve the issue]
+* The root cause was a code defect in the Safe Deployment Pr ocess (SDP) system, which caused the service update to deploy directly into production without proper validation.
 
-Please note that I'll need to provide a generic response, as I don't have direct access to the status history pages of these cloud providers. If you'd like to know more about a specific outage, feel free to ask, and I'll do my best to help!
+Note that I've removed all other cloud providers and services not identified in the text.

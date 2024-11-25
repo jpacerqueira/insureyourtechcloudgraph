@@ -1,22 +1,43 @@
-I'll provide the information for Microsoft Azure as per the given context. I don't have information on other cloud providers.
+After applying the query to the specified cloud providers, I found the following information:
 
-**What happened?**
-Betw een 07:08 UT C and 12:43 UT C on 25 J anuar y 2023, cust omer s experienced issues with netw ork connectivity , manifesting as long
-netw ork lat ency and/or timeouts when att empting t o connect t o resour ces host ed in Azur e regions, as w ell as other Micr osoft services
-including Micr osoft 365 and P ower Platfor m. This incident also imp acted Azur e Gov ernment cloud ser vices that w ere dependent on Azur e
-public cloud. While most r egions and ser vices had r ecovered by 09:05 UT C, int ermittent p acket loss issues caused some cust omer s to
+**Microsoft Azure**
 
-**Duration of the outage**
-The outage lasted from 07:08 UT C to 12:43 UT C on 25 J anuar y 2023, which is approximately 5 hours and 35 minutes.
+* Incident: Network connectivity issues with long network latency and timeouts
+* Duration: 4 hours 37 minutes (from 07:08 UTC on January 25, 2023, to 11:45 UTC on January 25, 2023)
+* Affected regions and availability zones:
+	+ Southeast Asia region (1 Availability Zone experienced cooling failure)
+	+ East Asia region
+* Impacted services:
+	+ Azure Government cloud services
+	+ Microsoft 365
+	+ Power Platform
+* Root cause: Cooling failure in one Availability Zone in the Southeast Asia region, which led to infrastructure shutdown and packet loss issues.
+* Resolution start time: 09:05 UTC on January 25, 2023
 
-**Affected services and regions**
-The following services were impacted:
-- Azur e regions
-- Micr osoft 365
-- P ower Platfor m
+**Microsoft Azure (again, since it's mentioned multiple times)**
 
-**Availability zones affected**
-Not specified in the given context.
+* Incident: Failures when attempting to provision new resources
+* Duration: 4 days (from 00:42 UTC on November 2, 2022, to 05:55 UTC on November 3, 2022)
+* Affected regions and availability zones:
+	+ Multiple regions, including Application Gateway, Bastion, Container Apps, Database Services, ExpressRoute, HDInsight, Open AI, SQL Managed Instance, Stream Analytics, and VMware
+* Impacted services:
+	+ Various Azure services listed above
+* Root cause: Not specified in the text
+* Resolution start time: Not specified in the text
 
-**Summary of outage duration**
-The outage lasted for approximately 5 hours and 35 minutes.
+**Microsoft Azure (again, since it's mentioned multiple times)**
+
+* Incident: Greater than expected throttling when performing requests against Storage resources
+* Duration: 10 hours and 47 minutes (from 03:50 UTC on March 6, 2023, to 14:37 UTC on March 7, 2023)
+* Affected regions:
+	+ West Europe region
+* Impacted services:
+	+ Azure Automation
+	+ Azure Arc enabled Kubernetes
+	+ Azure Bastion
+	+ Azure Batch
+	+ Azure Container Apps
+	+ Azure Data Factory (ADF)
+	+ Azure Storage
+* Root cause: Not specified in the text
+* Resolution start time: 04:30 UTC on March 9, 2023

@@ -1,22 +1,21 @@
-I can try to help you with that query. However, I'll need to parse the text from Microsoft Azure's incident report to extract the relevant information.
+Based on the provided text, I can extract the following information:
 
-Here are the results:
+**Cloud Provider:** Microsoft Azure
 
-**Resume of the Outage:**
+**Incident Details:**
 
-The outage occurred on November 9, 2021, and lasted for approximately 3 hours and 28 minutes (208 minutes).
+* **Duration:** The incident lasted for approximately 2 hours and 28 minutes.
+* **Start Time:** The outage started at 14:03 UT C on 09 Nov 2021.
+* **Resolution Time:** The outage was marked as resolved at 07:41 UT C on 05 Dec 2022.
 
-**Services Impacted:**
+**Impacted Services and Regions:**
 
-* Access Panel
+* **Service:** Azure Cosmos DB
+* **Region:** East US region
+* **Availability Zone:** Not specified
 
-**Cloud Provider Regions and Availability Zones Impacted:**
+**Root Cause:**
 
-* West Central US
-* The incident caused traffic to be routed from West Central US to Central US.
+* The root cause of the outage was a code change introduced to Access Panel that caused an unrelated bug, which affected a small subset of customers.
 
-**Summary of the Outage:**
-
-The outage was caused by a code change that introduced an unrelated bug, which was discovered during elementary validation in the first deployment stage. To prevent further impact on customers, Azure failed over traffic from West Central US to Central US at 07:00 UT C. The incident was resolved when service fabric team developed a fix and redeployed it the following morning.
-
-Note that this information is specific to Microsoft Azure's incident report and may not be applicable to other cloud providers or services.
+Note that I have removed Cloud Vendors not identified in the text, such as Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

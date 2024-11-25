@@ -1,43 +1,19 @@
-I can only provide information on the Google Cloud Platform (GCP) outage. I don't have access to the other cloud providers' outages.
+After applying the query to the specified cloud providers, I found that only Google GCP was mentioned. Here are the results:
 
-Here is the information for the GCP outage:
+**Google GCP**
 
-**Resume of the Outage:**
+* Incident: Resume of outage
+* Duration: 3 hours and 34 minutes (from 16:20 to 19:54)
+* Affected services:
+	+ Cloud Run (australia-southeast2 region)
+	+ Google BigQuery (australia-southeast2 region)
+	+ Google Cloud Dataflow (australia-southeast2 region)
+	+ Google Cloud Dataproc (australia-southeast2 region)
+	+ Google Cloud Networking (australia-southeast2 region)
+	+ Google Cloud Pub/Sub (australia-southeast2 region)
+	+ Google Cloud SQL (multiple instances unavailable in australia-southeast2 region)
+* Root cause: Not specified
+* Start time: 16:20
+* Resolution time: 19:54
 
-The outage affected multiple services, including Apigee, Apigee Edge Public Cloud, Batch, Cloud Filestore, Cloud Firestore, Cloud Key Management Service, Cloud NAT, Cloud Run, Google BigQuery, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Deploy, Google Cloud Networking, Google Cloud Pub/Sub, and Google Cloud SQL.
-
-**Duration of the Outage:**
-
-The outage lasted for 3 hours, 13 minutes.
-
-**When was the Outage:**
-
-The outage started at 16:21 UTC on October 29, 2024, and ended at 19:34 UTC on October 29, 2024.
-
-**Impacted Services and Features:**
-
-The following services were impacted:
-
-* Apigee
-* Apigee Edge Public Cloud
-* Batch
-* Cloud Filestore
-* Cloud Firestore
-* Cloud Key Management Service
-* Cloud NAT
-* Cloud Run
-* Google BigQuery
-* Google Cloud Dataflow
-* Google Cloud Dataproc
-* Google Cloud Deploy
-* Google Cloud Networking
-* Google Cloud Pub/Sub
-* Google Cloud SQL
-
-**Impacted Regions and Availability Zones:**
-
-The outage affected the australia-southeast2 region.
-
-**Summary of the Outage:**
-
-The outage lasted for 3 hours, 13 minutes, starting at 16:21 UTC on October 29, 2024, and ending at 19:34 UTC on October 29, 2024. It impacted multiple services across the australia-southeast2 region.
+Note that the root cause of the outage is not specified in the provided text.

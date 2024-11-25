@@ -1,34 +1,23 @@
-I can try to help you with that query. However, I need to clarify that the text provided is related to Microsoft Azure, not Amazon AWS or Google GCP.
+Here is the information about the incident:
 
-Here's my attempt to extract the information:
+**Incident Details:**
 
-**Resume of the Outage:**
+* **Cloud Provider:** Microsoft Azure
+* **Services Impacted:** Azur e Kuber netes Service (AKS), Azur e Monit or, Application Insights, Log Analy tics, and Micr osoft Sentinel
+* **Regions Affected:** All Azur e regions, including public and sovereign clouds
+* **Availability Zones Affected:** Three Availability Zones in the West US 2 region
 
-A utility power outage caused a significant impact on Microsoft Azure services in the West US 2 region. The outage occurred between August 27, 2022, at 02:47 UTC and August 28, 2022, at 02:00 UTC.
+**Root Cause:**
 
-**Impacted Services:**
+* The root cause of the outage was a bug in Ubuntu version 18.04 that resulted in DNS resolution errors.
 
-* Storage
-* Virtual Machines
-* App Services
-* Application Insights
-* Azure Database for PostgreSQL
-* Azure Red Hat OpenShift
-* Azure Search
-* Azure SQL DB
-* Backup
-* Data Explorer
-* ExpressRoute
-* NetApp Files
+**Duration of Outage:**
 
-**Cloud Provider Regions and Availability Zones Impacted:**
+* The exact duration of the outage is not specified in the text, but it is mentioned that multiple teams detected the issue shortly after packages were published via production alerts.
 
-The West US 2 region, which includes three Availability Zones (AZs), was impacted.
+**Timeline:**
 
-**Duration of the Outage:**
+* **Start Time:** Not specified
+* **Resolution Time:** Not specified
 
-The outage lasted for approximately 13 hours and 13 minutes.
-
-**Summary:**
-
-A utility power outage in the West US 2 region caused a significant impact on Microsoft Azure services, resulting in a 13-hour and 13-minute outage. The majority of backup power systems performed as designed, but two data centers experienced issues due to unique problems with their Uninterruptible Power Supply (UPS) systems.
+Note: The incident did not involve Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare.

@@ -1,26 +1,20 @@
-I can only provide information on Microsoft Azure based on the provided context. I don't have information on Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare.
+Based on the provided text, I can only identify Microsoft Azure as one of the cloud providers. Here is the query applied to Azure:
 
-Here is the resume of the outage in text:
+Resume the outage in text:
+The outage occurred between 13:30 and 16:30 UTC on May 19, 2020.
 
-**Outage Details:**
+Duration of the incident:
+The outage lasted for approximately 3 hours.
 
-* **Start Time:** Between 13:30 and 16:30 UTC on May 19, 2020
-* **End Time:** Unknown (but it's mentioned that some customers may have experienced issues between 11:57 and 14:20 UTC on June 11, 2020)
-* **Duration:** Approximately 5 hours and 40 minutes (between 13:30 and 16:30 UTC on May 19, 2020) or approximately 2 hours and 23 minutes (between 11:57 and 14:20 UTC on June 11, 2020)
+Impacted services and regions:
+A subset of customers in East US may have experienced timeouts and latency issues when processing service management operations such as create, update, delete, for Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services.
 
-**Impacted Services:**
+Root cause of the outage:
+The root cause of the outage was not explicitly stated in the text. However, it is mentioned that engineers determined an incident during a planned power maintenance activity at the datacenter caused the impact to a subset of customers.
 
-* Azure SQL Database
-* Azure SQL Database Managed Instance
-* Azure Database for MariaDB
-* Azure Database for MySQL
-* Azure Database for PostgreSQL
-* Azure Synapse Analytics services
+Services impacted:
+Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services in East US region.
 
-**Cloud Provider Regions and Availability Zones Impacted:**
+Availability zones not specified in the text.
 
-* East US region (specifically, the region where some customer resources were hosted)
-
-Please note that I couldn't find any information on the exact duration of the outage in hours, minutes, and seconds. The provided context only mentions approximate durations.
-
-If you need more information or clarification, please let me know!
+Note that Amazon AWS is not mentioned in the provided text.

@@ -1,15 +1,19 @@
-I'll provide a general template for the query results, as I don't have specific information about each service's outage. If you need more detailed information, please let me know which service's outage you're interested in.
+Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the information you requested:
 
-**Resume of Outage**
+**Cloud Provider:** Microsoft Azure
+**Services impacted:**
+- Azure Storage
+- Virtual Machine disks
+- Azure AD services (specifically, the Safe Deployment Process)
 
-* **Incident Summary:** [Insert brief summary of incident]
-* **Duration:** [Insert duration of outage in hours, minutes, and seconds]
-	+ Hours: [X] hours
-	+ Minutes: [Y] minutes
-	+ Seconds: [Z] seconds
-* **Outage Timeframe:** [Insert start and end times of outage in UTC format (e.g., 2022-01-01T00:00:00Z to 2022-01-02T23:59:59Z)]
-* **Impacted Services:** [List services impacted by the outage, e.g., web applications, APIs, databases]
-* **Cloud Provider Regions and Availability Zones Impacted:** [List regions and availability zones affected, e.g., US East (N. Virginia), US West (Oregon), EU (Frankfurt)]
-* **Summary Duration:** [Insert total duration of outage in hours, minutes, and seconds]
+**Regions and Availability Zones affected:**
+- Japan East region
 
-Please note that I'll need more information about the specific outage you're interested in to provide a more detailed response. If you provide me with the name of the service or cloud provider, I can try to find more specific information for you.
+**Duration of outage:**
+The incident started at 03:26 UTC on February 26, 2021, and was resolved by 18:45 UTC on the same day.
+
+**Root cause of the outage:**
+The root cause of the outage was a code defect in a version update of a component that controls network traffic routing between Azure regions. The main parameters of the new code were invoked only at production scale and scope levels, which led to the prevention of anomaly detection from occurring.
+
+**Summary of impact:**
+A subset of customers in Japan East may have experienced service degradation and increased latency for resources utilizing Azure Storage, including failure of virtual machine disks. Some Azure services utilizing Storage may also have experienced downtime impact.

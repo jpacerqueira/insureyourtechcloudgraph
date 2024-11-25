@@ -1,22 +1,38 @@
-I don't have information about Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare. The incident appears to be specific to IBM Cloud.
+Based on the provided text, I can answer the query for IBM Cloud only.
 
-Here is the information I can provide:
+Here are the answers to your questions:
 
-* Incident resume: On 20 June 2023 at 03:49, an outage occurred in FRA05 and EU-DE-3 data centers.
-* Duration of the incident:
-	+ Hours: 10
-	+ Minutes: 33
-	+ Seconds: 0 (approximately 10 hours and 33 minutes)
-* Impacted services:
-	+ VPC
-	+ VSIs
-	+ SQL Query
-	+ Load Balancer
-	+ Network Infrastructure
-	+ Watson platform
-	+ Code Engine
-	+ Analytic Engine
-* Cloud provider regions and availability zones impacted:
-	+ FRA05 (Frankfurt, Germany)
-	+ EU-DE-3 (Europe - Frankfurt)
-* Summary: The outage lasted approximately 10 hours and 33 minutes.
+1. Resume the outage:
+The outage occurred due to a power grid utility outage, which led to UPS batteries depleting and FRA05 server room 2 losing power.
+2. How long was the incident?
+The exact duration of the incident is not specified in the text.
+3. When was the outage?
+The outage started at 03:20 on June 20, 2023.
+4. What services got impacted in what regions and availability zones?
+- VSI (Impacted customer VSIs experienced an outage.)
+- SQL Query (SQL jobs/queries experienced long delays and eventually failures for all submitted jobs. Streaming jobs were running as normal where the impact was limited to SQL batch jobs.)
+- IBM Cloud Databases had an impact due to worker nodes being in critical status.
+- VPC VPN (Impacted customers experienced VPN Gateway provisioning failures and VSI was stuck in "pending" status.)
+- Code Engine (Impacted customers experienced delays in creating or updating applications, due to the degraded performance of the system.)
+- Load Balancer (Data plane and control plane for Load Balancers were impacted.)
+- Network Infrastructure (All IBM Cloud services experienced connectivity issues.)
+
+5. What services had outage?
+The following services had an outage:
+- VSI
+- SQL Query
+- IBM Cloud Databases
+- VPC VPN
+- Code Engine
+- Load Balancer
+- Network Infrastructure
+
+6. What was the root cause of the outage?
+The root cause of the outage is not explicitly stated in the text, but it appears to be related to a power grid utility outage and subsequent UPS battery depletion.
+
+7. How long was the outage?
+The exact duration of the outage is not specified in the text.
+8. When was the outage started and marked as resolved?
+The outage started at 03:20 on June 20, 2023, and it is not clear when it was marked as resolved. The text mentions that power was restored to the affected rack at 04:17, but it does not provide information on when the full outage was resolved.
+
+Note: The other cloud providers mentioned in your query (Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) are not identified as being impacted by the outage in the provided text.

@@ -1,25 +1,37 @@
-I don't have information on the specified list of cloud providers (Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) as the context provided only discusses Google Cloud Platform. The outage was related to Google Cloud Platform services such as Vertex AI Online Prediction, Dialogflow CX, and Agent Assist.
+Here is the query result for the specified cloud providers:
 
-However, I can provide information on the Google Cloud Platform outage:
+**Incident Details**
 
-* Resume of the outage: Elevated error rates in multiple regions for Google Cloud Platform services including Vertex AI Online Prediction, Dialogflow CX, and Agent Assist.
-* Duration of the incident:
-	+ Hours: 3
-	+ Minutes: 53
-	+ Seconds: Not specified
-* When was the outage: The incident began on June 12, 2024, at 12:06 US/Pacific Time and ended on June 12, 2024, at 15:59 US/Pacific Time.
-* Impacted services:
-	+ Vertex AI Online Prediction
-	+ Dialogflow CX
-	+ Agent Assist
-* Cloud provider regions impacted:
+* Incident Name: Elevated errors and product functionality issues
+* Duration: 3 hours and 53 minutes
+* Start Time: June 12, 2024, 12:06 US/Pacific
+* End Time: June 12, 2024, 15:59 US/Pacific
+
+**Impacted Services and Regions**
+
+* Agent Assist:
 	+ asia-southeast1
 	+ europe-west3
 	+ europe-west4
 	+ us-central1
 	+ us-east1
 	+ us-west1
-	+ northamerica-northeast1
-	+ us-east4
-* Availability zones impacted: Not specified in the provided context.
-* Summary duration of the outage: The incident lasted for 3 hours and 53 minutes.
+* Dialogflow CX:
+	+ asia-southeast1
+	+ europe-west3
+	+ europe-west4
+	+ us-central1
+	+ us-east1
+	+ us-west1
+
+**Root Cause**
+
+* A novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers.
+* The root cause was identified on June 10, 2024, at 07:35 US/Pacific.
+
+**Remediation and Prevention**
+
+* Google engineers developed a fix and started progressively rolling it out.
+* The outage was marked as resolved on June 12, 2024, at 15:59 US/Pacific.
+
+Note that the query result only includes services and regions mentioned in the original text.

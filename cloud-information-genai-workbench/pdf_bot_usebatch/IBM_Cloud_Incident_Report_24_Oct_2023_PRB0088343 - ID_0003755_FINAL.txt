@@ -1,18 +1,13 @@
-I can try to help you with that query. However, I need to clarify that the provided text is related to an IBM Cloud incident, not a multi-cloud incident involving multiple providers.
+Based on the provided text, I can only identify IBM Cloud as a cloud provider. Here is the query applied to IBM Cloud:
 
-That being said, here's my attempt to extract the relevant information:
+Resume the outage in text:
+The outage affected the IBM Cloud Console, which is available worldwide.
 
-**Incident Details**
+Duration of the incident: 5 hours and 30 minutes
+Start time of the outage: October 24, 2023, at 06:42 UTC (resolved at 12:12 UTC)
+Root cause of the outage: A highly distributed denial-of-service (DDoS) attack partially bypassed IBM Cloud's existing protections.
 
-* **Outage Start:** 24 October 2023 06:42 UTC
-* **Outage End:** 24 October 2023 12:12 UTC
-* **Duration:** 5 hours 30 minutes
+Services impacted:
+- IBM Cloud Console
 
-**Impacted Services and Regions/AZs**
-
-* **Services Impacted:** IBM Cloud Console (unavailable)
-* **Cloud Provider Regions/AZs Impacted:** Not specified in the provided text.
-
-**Summary of Outage Duration**
-
-The outage lasted for approximately 5 hours and 30 minutes.
+Regions and availability zones not specified in the text.

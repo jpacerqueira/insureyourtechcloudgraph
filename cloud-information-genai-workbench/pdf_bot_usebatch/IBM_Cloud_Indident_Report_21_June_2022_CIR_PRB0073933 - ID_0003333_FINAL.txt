@@ -1,24 +1,14 @@
-I'll try to reconstruct the outage based on the provided context. Please note that I won't be able to apply a query directly as there is no single database or API to query across all these services.
+Here is the query result with only the specified cloud providers:
 
-Here's my attempt to summarize the outage:
+**Resume the outage:**
 
-**Resume of the Outage:**
+* Incident duration: 1 hour 32 minutes
+* Outage start: June 21, 2022 06:34 UTC
+* Outage end: June 21, 2022 08:06 UTC
 
-On June 21, 2022, at 06:34 UTC, an outage occurred affecting multiple cloud providers and services. The third-party vendor made changes to their BGP configuration, causing a critical set of IP prefixes to be withdrawn. This led to a loss of network connectivity to customer origin servers.
+**Impacted services and regions:**
 
-**Duration of the Outage:**
-
-The outage lasted for 1 hour and 32 minutes.
-
-**When was the Outage:**
-
-The outage started on June 21, 2022, at 06:34 UTC and ended on June 21, 2022, at 08:06 UTC.
-
-**Impacted Services:**
-
-The following services were impacted:
-
-* IBM Cloud Internet Services
+* IBM Cloud Internet Services in all IBM Cloud Regions (no specific availability zones mentioned)
 * AppID
 * Schematics
 * Secrets Manager
@@ -32,10 +22,8 @@ The following services were impacted:
 * Cloud App Dev Services
 * Event-notifications
 
-**Cloud Provider Regions and Availability Zones Impacted:**
+**Root cause:**
 
-The outage affected all IBM Cloud regions. The specific availability zones impacted are not mentioned in the provided context.
+* The third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
 
-**Summary of the Outage:**
-
-A third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to an outage affecting multiple IBM Cloud services and customers across all regions. The outage was resolved after 1 hour and 32 minutes.
+Note that Amazon AWS and Google GCP are not mentioned in the text as being impacted by the outage. Microsoft Azure is also not explicitly mentioned, but it is possible that some services may have been affected indirectly due to the global outage on the third-party vendor's PoPs. Oracle OCI and Snowflake, Databricks, MongoDB, Akamai, and Cloudflare are not mentioned at all in the text as being impacted by the outage.

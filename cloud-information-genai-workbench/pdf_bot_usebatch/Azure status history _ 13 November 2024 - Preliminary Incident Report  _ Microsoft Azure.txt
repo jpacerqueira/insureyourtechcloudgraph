@@ -1,35 +1,17 @@
-I can only provide information on Microsoft Azure as the context is specific to Azure. The query you provided seems to be a generic one that applies to multiple cloud providers.
+Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the information you requested:
 
-However, based on the provided context, here's the information about the Azure outage:
+**Cloud Provider:** Microsoft Azure
+**Services impacted:**
 
-**Resume of the Outage:**
+* Azure Log Analytics ( delays and/or stale data when viewing Microsoft Graph activity logs)
+* Azure Container Registry (interrmittent 5XX errors while trying to pull images from the registry)
 
-A subset of Azure Blob Storage and Azure Data Lake Storage accounts experienced connectivity errors between 00:50 UTC and 12:30 UTC on November 13, 2024. The issue manifested as loss of access to Blob and Data Lake storage endpoints of affected storage accounts.
+**Regions and availability zones affected:**
 
-**Duration of the Incident:**
+* West US 2
 
-The outage lasted for approximately 11 hours and 40 minutes (7400 seconds).
+**Root cause of the outage:** Unintentional deletion of Azure Traffic Manager profiles for impacted storage accounts.
 
-**Impacted Services:**
+**Duration of the outage:** The incident occurred between 00:50 UTC and 12:30 UTC on November 13, 2024. However, the text does not provide information on when the outage started and was marked as resolved.
 
-* Azure Log Analytics
-* Azure Container Registry
-
-**Cloud Provider Regions and Availability Zones Impacted:**
-
-The following regions were impacted:
-
-* East US region
-* West US region
-* Australia East region
-* Canada Central region
-* Canada East region
-* Central US region
-* Japan East region
-* South Central US region
-* UAE North region
-* West US 2 region
-
-**Summary of the Outage:**
-
-The outage was caused by an unintentional deletion of Azure Traffic Manager profiles for affected storage accounts. The incident was resolved after the issue was identified and addressed.
+Note that I have removed all other cloud providers mentioned in your query, as they were not identified in the provided text.

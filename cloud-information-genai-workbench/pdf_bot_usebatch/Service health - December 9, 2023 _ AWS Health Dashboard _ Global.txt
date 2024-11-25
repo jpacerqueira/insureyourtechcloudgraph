@@ -1,66 +1,193 @@
-I'll provide the information for each cloud provider. Please note that I won't be able to search across all providers simultaneously, so I'll need to break it down by region or service.
+After applying the query to the specified cloud providers (Amazon AWS), I found the following information:
 
-**Amazon Web Services (AWS)**
+**Amazon AWS**
 
-* Outage: [Increased API Error Rates] - July 30, 2024
-* Duration: 9 hours 35 minutes
-* Impacted services: Multiple services , including AWS DynamoDB
-* Regions and availability zones impacted:
-	+ us-east-1, us-west-2 (e.g., New York, Oregon)
-	+ Impact on multiple AZs within the region
-* Summary: The outage lasted for approximately 9 hours and 35 minutes.
+* Incident: Increased API errors rates for mutatable VPC calls
+* Duration: November 10, 2024, 7:55:00 AM PST - November 10, 2024, 10:13:00 AM PST (approximately 2 hours and 18 minutes)
+* Affected services: Amazon Elastic Compute Cloud (EC2) in ap-northeast-2
+* Region/AZ: ap-northeast-2
+* Root cause: Not specified
+* Start time: November 10, 2024, 7:55:00 AM PST
+* Resolution time: November 10, 2024, 10:13:00 AM PST
 
-**Google Cloud Platform (GCP)**
+**Amazon AWS**
 
-I couldn't find any information about a recent outage that matches the query. If you'd like, I can try searching for outages in GCP's public health dashboard or incident reports.
+* Incident: Increased Errors performing Payments
+* Duration: November 6, 2024, 3:42:30 AM PST - November 6, 2024, 4:14:32 AM PST (approximately 1 hour and 32 minutes)
+* Affected services: Billing Console
+* Region/AZ: Not specified
+* Root cause: Not specified
+* Start time: November 6, 2024, 3:42:30 AM PST
+* Resolution time: November 6, 2024, 4:14:32 AM PST
 
-**Microsoft Azure**
+**Amazon AWS**
 
-* Outage: [Increased API Error Rates] - July 30, 2024
-* Duration: 9 hours 35 minutes
-* Impacted services: Multiple services
-* Regions and availability zones impacted:
-	+ ap-northeast-2 (e.g., Tokyo)
-	+ Impact on multiple AZs within the region
-* Summary: The outage lasted for approximately 9 hours and 35 minutes.
+* Incident: Increased Error Rates
+* Duration: October 29, 2024, 4:13:56 AM PDT - October 29, 2024, 5:08:25 AM PDT (approximately 54 minutes)
+* Affected services: AWS Partner Central
+* Region/AZ: PDT (Pacific Time Zone)
+* Root cause: Not specified
+* Start time: October 29, 2024, 4:13:56 AM PDT
+* Resolution time: October 29, 2024, 5:08:25 AM PDT
 
-**Oracle Cloud Infrastructure (OCI)**
+**Amazon AWS**
 
-I couldn't find any information about a recent outage that matches the query. If you'd like, I can try searching for outages in OCI's public health dashboard or incident reports.
+* Incident: Increased Login Errors
+* Duration: October 25, 2024, 9:56:38 AM PDT - October 25, 2024, 10:45:08 AM PDT (approximately 48 minutes)
+* Affected services: AWS QuickSight
+* Region/AZ: us-east-1
+* Root cause: Not specified
+* Start time: October 25, 2024, 9:56:38 AM PDT
+* Resolution time: October 25, 2024, 10:45:08 AM PDT
 
-**IBM Cloud**
+**Amazon AWS**
 
-* Outage: [Increased API Error Rates] - July 30, 2024
-* Duration: 9 hours 35 minutes
-* Impacted services: Multiple services
-* Regions and availability zones impacted:
-	+ eu-south-1 (e.g., Dublin)
-	+ Impact on multiple AZs within the region
-* Summary: The outage lasted for approximately 9 hours and 35 minutes.
+* Incident: Increased Delays associating Route 53 Private Hosted Zones
+* Duration: July 30, 2024, 3:40:53 PM PDT - July 30, 2024, 9:55:52 PM PDT (approximately 6 hours and 15 minutes)
+* Affected services: Amazon Route 53
+* Region/AZ: us-east-1
+* Root cause: Not specified
+* Start time: July 30, 2024, 3:40:53 PM PDT
+* Resolution time: July 30, 2024, 9:55:52 PM PDT
 
-**Snowflake**
+**Amazon AWS**
 
-I couldn't find any information about a recent outage that matches the query. If you'd like, I can try searching for outages in Snowflake's public health dashboard or incident reports.
+* Incident: Elevated delays in newly applied tags
+* Duration: July 12, 2024, 7:46:36 AM PDT - July 12, 2024, 8:16:35 AM PDT (approximately 30 minutes)
+* Affected services: Multiple services
+* Region/AZ: us-east-1
+* Root cause: Not specified
+* Start time: July 12, 2024, 7:46:36 AM PDT
+* Resolution time: July 12, 2024, 8:16:35 AM PDT
 
-**Databricks**
+**Amazon AWS**
 
-I couldn't find any information about a recent outage that matches the query. If you'd like, I can try searching for outages in Databricks' public health dashboard or incident reports.
+* Incident: Network Connectivity Issue
+* Duration: July 10, 2024, 6:19:19 PM PDT - July 10, 2024, 7:36:16 PM PDT (approximately 1 hour and 17 minutes)
+* Affected services: AWS Internet Connectivity
+* Region/AZ: ap-southeast-2
+* Root cause: Not specified
+* Start time: July 10, 2024, 6:19:19 PM PDT
+* Resolution time: July 10, 2024, 7:36:16 PM PDT
 
-**MongoDB**
+**Amazon AWS**
 
-* Outage: [Increased API Error Rates] - July 30, 2024
-* Duration: 9 hours 35 minutes
-* Impacted services: Multiple services
-* Regions and availability zones impacted:
-	+ Impact on multiple regions (e.g., US East, US West)
-* Summary: The outage lasted for approximately 9 hours and 35 minutes.
+* Incident: Increased Error Rates
+* Duration: June 25, 2024, 7:20:00 PM PDT - June 25, 2024, 8:46:00 PM PDT (approximately 1 hour and 26 minutes)
+* Affected services: Amazon Kinesis Data Streams
+* Region/AZ: us-east-1
+* Root cause: Not specified
+* Start time: June 25, 2024, 7:20:00 PM PDT
+* Resolution time: June 25, 2024, 8:46:00 PM PDT
 
-**Akamai**
+**Amazon AWS**
 
-I couldn't find any information about a recent outage that matches the query. If you'd like, I can try searching for outages in Akamai's public health dashboard or incident reports.
+* Incident: Intermittent Inbound Call Connection Failures
+* Duration: May 14, 2024, 8:19:00 PM PDT - May 14, 2024, 9:09:11 PM PDT (approximately 50 minutes)
+* Affected services: Amazon Connect
+* Region/AZ: us-east-1
+* Root cause: Not specified
+* Start time: May 14, 2024, 8:19:00 PM PDT
+* Resolution time: May 14, 2024, 9:09:11 PM PDT
 
-**Cloudflare**
+**Amazon AWS**
 
-I couldn't find any information about a recent outage that matches the query. If you'd like, I can try searching for outages in Cloudflare's public health dashboard or incident reports.
+* Incident: Increased delays in EC2 instance and Status Check metrics
+* Duration: April 19, 2024, 12:47:34 PM PDT - April 19, 2024, 3:28:51 PM PDT (approximately 2 hours and 41 minutes)
+* Affected services: Amazon Elastic Compute Cloud (EC2) in us-east-2
+* Region/AZ: us-east-2
+* Root cause: Not specified
+* Start time: April 19, 2024, 12:47:34 PM PDT
+* Resolution time: April 19, 2024, 3:28:51 PM PDT
 
-Please note that some of these cloud providers might not have publicly disclosed the exact duration or impacted services of the outage. The information provided is based on my analysis of available data and may not be comprehensive.
+**Amazon AWS**
+
+* Incident: Increased API Error Rates
+* Duration: March 26, 2024, 1:39:00 PM PDT - March 26, 2024, 3:12:00 PM PDT (approximately 1 hour and 33 minutes)
+* Affected services: Amazon Elastic Compute Cloud (EC2) in us-east-1
+* Region/AZ: us-east-1
+* Root cause: Not specified
+* Start time: March 26, 2024, 1:39:00 PM PDT
+* Resolution time: March 26, 2024, 3:12:00 PM PDT
+
+**Amazon AWS**
+
+* Incident: Increased Error Rates
+* Duration: October 25, 2024, 9:56:38 AM PDT - October 25, 2024, 10:45:08 AM PDT (approximately 48 minutes)
+* Affected services: AWS QuickSight
+* Region/AZ: us-east-1
+* Root cause: Not specified
+* Start time: October 25, 2024, 9:56:38 AM PDT
+* Resolution time: October 25, 2024, 10:45:08 AM PDT
+
+**Amazon AWS**
+
+* Incident: Increased Delays associating Route 53 Private Hosted Zones
+* Duration: July 30, 2024, 3:40:53 PM PDT - July 30, 2024, 9:55:52 PM PDT (approximately 6 hours and 15 minutes)
+* Affected services: Amazon Route 53
+* Region/AZ: us-east-1
+* Root cause: Not specified
+* Start time: July 30, 2024, 3:40:53 PM PDT
+* Resolution time: July 30, 2024, 9:55:52 PM PDT
+
+**Amazon AWS**
+
+* Incident: Elevated delays in newly applied tags
+* Duration: July 12, 2024, 7:46:36 AM PDT - July 12, 2024, 8:16:35 AM PDT (approximately 30 minutes)
+* Affected services: Multiple services
+* Region/AZ: us-east-1
+* Root cause: Not specified
+* Start time: July 12, 2024, 7:46:36 AM PDT
+* Resolution time: July 12, 2024, 8:16:35 AM PDT
+
+**Amazon AWS**
+
+* Incident: Network Connectivity Issue
+* Duration: July 10, 2024, 6:19:19 PM PDT - July 10, 2024, 7:36:16 PM PDT (approximately 1 hour and 17 minutes)
+* Affected services: AWS Internet Connectivity
+* Region/AZ: ap-southeast-2
+* Root cause: Not specified
+* Start time: July 10, 2024, 6:19:19 PM PDT
+* Resolution time: July 10, 2024, 7:36:16 PM PDT
+
+**Amazon AWS**
+
+* Incident: Increased Error Rates
+* Duration: June 25, 2024, 7:20:00 PM PDT - June 25, 2024, 8:46:00 PM PDT (approximately 1 hour and 26 minutes)
+* Affected services: Amazon Kinesis Data Streams
+* Region/AZ: us-east-1
+* Root cause: Not specified
+* Start time: June 25, 2024, 7:20:00 PM PDT
+* Resolution time: June 25, 2024, 8:46:00 PM PDT
+
+**Amazon AWS**
+
+* Incident: Intermittent Inbound Call Connection Failures
+* Duration: May 14, 2024, 8:19:00 PM PDT - May 14, 2024, 9:09:11 PM PDT (approximately 50 minutes)
+* Affected services: Amazon Connect
+* Region/AZ: us-east-1
+* Root cause: Not specified
+* Start time: May 14, 2024, 8:19:00 PM PDT
+* Resolution time: May 14, 2024, 9:09:11 PM PDT
+
+**Amazon AWS**
+
+* Incident: Increased delays in EC2 instance and Status Check metrics
+* Duration: April 19, 2024, 12:47:34 PM PDT - April 19, 2024, 3:28:51 PM PDT (approximately 2 hours and 41 minutes)
+* Affected services: Amazon Elastic Compute Cloud (EC2) in us-east-2
+* Region/AZ: us-east-2
+* Root cause: Not specified
+* Start time: April 19, 2024, 12:47:34 PM PDT
+* Resolution time: April 19, 2024, 3:28:51 PM PDT
+
+**Amazon AWS**
+
+* Incident: Increased API Error Rates
+* Duration: March 26, 2024, 1:39:00 PM PDT - March 26, 2024, 3:12:00 PM PDT (approximately 1 hour and 33 minutes)
+* Affected services: Amazon Elastic Compute Cloud (EC2) in us-east-1
+* Region/AZ: us-east-1
+* Root cause: Not specified
+* Start time: March 26, 2024, 1:39:00 PM PDT
+* Resolution time: March 26, 2024, 3:12:00 PM PDT
+
+Note that the root cause of each incident is not specified in the provided text.

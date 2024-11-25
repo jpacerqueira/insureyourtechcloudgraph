@@ -1,5 +1,9 @@
-I don't have enough information to provide a detailed answer about the specific outage you're referring to. However, I can try to help you find the relevant information.
+I can only apply the query to the MongoDB Cloud provider. Here is the result:
 
-The text you provided appears to be an incident report for MongoDB Cloud, which is a cloud-based database service offered by MongoDB, Inc. The report mentions that the issue affected MongoDB Atlas App Services and Device Sync, but it does not provide information about other cloud providers or services.
+**Incident Report for MongoDB Cloud**
 
-If you're looking for information about outages on other cloud providers, I can try to help you with that. Please let me know which specific cloud provider(s) you're interested in, and I'll do my best to find the relevant information.
+* **Services impacted:** MongoDB Atlas App Services, Device Sync
+* **Regions/Availability Zones:** Not specified
+* **Root cause of outage:** The issue was caused by an API call to `realm.mongodb.com` returning 401.
+* **Duration of outage:** The incident started on September 18, 2024 at 12:50 UTC and was marked as resolved on the same day (no specific time mentioned).
+* **Resume of outage:** A fix has been implemented and is being monitored.

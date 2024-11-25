@@ -1,39 +1,56 @@
-I'll provide a summary of the outage based on the provided context. Please note that this information is specific to Microsoft Azure.
+Based on the provided text, I'll apply the query to the following cloud providers:
 
-**Resume of the Outage:**
+* Microsoft Azure
+* Databricks
+* MongoDB
 
-The outage occurred when one of the four major paths between datacenters was cut, resulting in congestive packet loss when traffic on the remaining links exceeded their capacity. This incident impacted various services across multiple regions and availability zones.
+Here are the results of the query:
 
-**Duration of the Outage:**
+**Microsoft Azure**
 
-* The outage lasted for approximately 8 hours.
-* Recovery began around 16:30 UTC, but full mitigation was declared at 19:00 UTC.
+* Resume of the outage: A configuration change through a domain registrar resulted in a service disruption to 2 system domains (chinacloudapp.cn and chinacloudsites.cn) critical in Azure operations in China.
+* Duration of the incident: The outage lasted from 03:45 CST on April 23, 2024, to 06:00 CST on April 23, 2024, which is approximately 2.25 hours.
+* Impacted services and regions:
+	+ Azur e China r egions
+	+ ChinaCloudApp.cn domain
+	+ ChinaCloudSites.Cn domain
+	+ Impacted services include:
+		- Cosmos DB
+		- Azure Virtual Desktop
+		- Azure Databricks
+		- Backup
+		- Site Recovery
+		- Azure IoT Hub
+		- Service Bus
+		- Logic Apps
+		- Data Factory
+		- Azure Kubernetes Services
+		- Azure Policy
+		- Azure AI Speech Services
+* Root cause of the outage: The root cause was a configuration change through a domain registrar.
+* Time when the outage started and was marked as resolved:
+	+ Started: 04:59 CST on April 23, 2024 (reverted to previously known good name server versions)
+	+ Marked as resolved: 06:00 CST on April 23, 2024 (full recovery declared after verifying that traffic for the services and affected DNS zones had recovered back to pre-incident levels)
 
-**Impacted Services:**
+**Databricks**
 
-* Azure App Services
-* Azure Application Insights
-* Azure Data Explorer
-* Azure Database for MySQL
-* Azure Databricks (also experienced impact in North Europe)
-* Azure Digital Twins
-* Azure HDInsight
-* Azure Kubernetes Service
-* Azure Log Analytics
-* Azure NetApp Files
-* Azure Resource Graph
-* Azure Site Recovery
-* Azure Service Bus
-* Azure SQL DB
-* Azure Storage
-* Azure Virtual Machines
-* Subsets of Microsoft 365, Microsoft Power Platform, and Microsoft Sentinel services
+* Resume of the outage: Databricks experienced an impact in North Europe due to a control plane dependency.
+* Duration of the incident: The exact duration is not specified, but it's mentioned that Databricks was impacted along with other services.
+* Impacted services and regions:
+	+ North Europe region
+	+ Impacted services include:
+		- Databricks (also experienced impact in Azur e China)
+* Root cause of the outage: The root cause is not specified, but it's mentioned that the incident was related to a control plane dependency.
+* Time when the outage started and was marked as resolved:
+	+ Started: Not specified
+	+ Marked as resolved: Not specified
 
-**Impacted Regions and Availability Zones:**
+**MongoDB**
 
-* The outage affected multiple regions, including South Africa.
-* Specific availability zones were impacted, but the exact details are not provided in the context.
-
-**Summary:**
-
-The incident lasted for approximately 8 hours, with recovery beginning around 16:30 UTC. Full mitigation was declared at 19:00 UTC. The outage impacted various services across multiple regions and availability zones, including Azure App Services, Azure Database for MySQL, Azure Databricks, and others.
+* Resume of the outage: No information is provided about MongoDB being impacted during the incident.
+* Duration of the incident: N/A (not applicable)
+* Impacted services and regions: N/A
+* Root cause of the outage: N/A
+* Time when the outage started and was marked as resolved:
+	+ Started: Not specified
+	+ Marked as resolved: Not specified

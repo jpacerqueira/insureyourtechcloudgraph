@@ -1,31 +1,23 @@
-I don't have information on the specified list of cloud providers (Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud) as they are not mentioned in the provided context. The text only discusses a service outage affecting Google Cloud Platform (GCP).
+Here is the query result with only the specified cloud providers:
 
-However, I can provide you with the information about the GCP outage:
+**Cloud Providers:** Google GCP
 
-* Resume the outage: "We extend our sincerest apologies for the service interruption incurred as a result of this service outage."
-* Duration of the incident:
-	+ Hours: 3 hours
-	+ Minutes: 0 minutes (no additional minutes were specified)
-	+ Seconds: 0 seconds (no additional seconds were specified, but it's implied to be 0 since no specific duration was given in seconds)
-* When was the outage: "From 15:45 to 18:09 US/Pacific"
-* Impacted services:
+**Incident Details:**
+
+* **Resume of Outage:** A routine maintenance action to shut down an unused Virtual Private Cloud (VPC) controller in a single Google Cloud zone went awry, causing a bug in the automation to shut down the component in all zones where it was still in use.
+* **Duration of Incident:** The majority of the impact lasted 2 hours and 48 minutes.
+* **Start and End Time:** The outage started at 15:45 US/Pacific and was marked as resolved at 18:09 US/Pacific.
+* **Impacted Services and Regions/AZs:**
 	+ AlloyDB for PostgreSQL
 	+ Apigee
 	+ Backup and DR
 	+ Batch
-	+ Cloud Build
 	+ Cloud Data Fusion
 	+ Cloud Developer Tools
 	+ Cloud Filestore
-	+ Cloud Load Balancing
-	+ Cloud Machine Learning
-	+ Cloud Memorystore
-	+ Cloud NAT
-	+ Cloud Run
-	+ Cloud Workstations
-	+ Colab Enterprise
-	+ Contact Center AI Platform
-	+ Cloud Interconnect
-* Impacted cloud provider regions and availability zones:
-	+ US/Pacific region (specifically, the us-east1-c zone)
-* Summary duration of the outage: The outage lasted for approximately 2 hours and 24 minutes.
+	+ Cloud Load Balancing (south1), Oregon (us-west1), Los Angeles (us-west2), Salt Lake City (us-west3), Las Vegas (us-west4)
+	+ Cloud NAT (south1), Oregon (us-west1), Los Angeles (us-west2), Salt Lake City (us-west3), Las Vegas (us-west4)
+* **Root Cause of Outage:** A bug in the automation caused the component to be shut down in all zones where it was still in use.
+* **Services Affected:** Cloud Load Balancing, Cloud NAT, and some other services experienced data plane impact or were unable to make changes due to network programming as a dependency.
+
+Note that I removed the following cloud providers from the query result: Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

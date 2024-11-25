@@ -1,24 +1,42 @@
-I don't have the capability to execute a query across multiple cloud providers. The text you provided appears to be a collection of health check results from Microsoft Azure, but it does not contain information about outages or incidents on other cloud providers.
+I can only apply the query to the cloud providers mentioned in the text. Here is the filtered query:
 
-If you'd like to know more about an outage on a specific cloud provider, I can try to help you find the relevant information. Please let me know which cloud provider you're interested in and I'll do my best to assist you.
+```sql
+Microsoft.Azureservices
+Microsoft.DBforMariaDB/servers
+Microsoft.DBforMySQL/servers
+Microsoft.DBforPostgreSQL/servers
+Microsoft.devices/iothubs
+Microsoft.RecoveryServices/vaults
+Microsoft.web/sites
+Microsoft.CDN/profile
+Microsoft.ContainerService/managedClusters
+Microsoft.datafactory/factories
+Microsoft.datalakeanalytics/accounts
+Microsoft.datamigration/services
+Microsoft.DataShare/accounts
 
-Alternatively, if you have access to the Azure Health Dashboard or Azure Monitor, you may be able to find information about outages on Microsoft Azure. However, this would not provide information about outages on other cloud providers.
+Resume the outage in text 
+- Is there ongoing planned maintenance?
+- Are there heartbeats between Guest and host agent (if Guest extension is installed) ?
+- Is production slot deployment healthy across all role instances?
+- Is the role healthy across all its VM instances?
+- What is the health status of each VM within a role of a cloud service?
+- Was the VM status change due to platform or customer initiated operation?
+- Has the booting of the guest OS completed?
+- Is there ongoing planned maintenance?
+- Is the host hardware degraded and predicted to fail soon?
 
-If you'd like to search for outages across multiple cloud providers, I can suggest some options:
+- Have there been pipeline run failures?
+- Is the cluster hosting the Data Factory healthy?
+- Have users experienced problems submitting or listing their Data Lake Analytics jobs?
+- Are Data Lake Analytics jobs unable to complete due to system errors?
+- Has the database migration service failed to provision?
+- Has the database migration service stopped due to inactivity or user request?
+- Is the Data Share account up and running?
+- Is the cluster hosting the Data Share available?
 
-* Cloud provider-specific outage pages:
-	+ AWS: https://status.aws.amazon.com/
-	+ GCP: https://status.cloud.google.com/
-	+ Azure: https://azure.microsoft.com/en-us/status/
-	+ OCI: https://status.oracle.com/
-	+ IBM Cloud: https://status.ibmcloud.com/
-	+ Snowflake: https://status.snowflake.com/
-	+ Databricks: https://status.databricks.com/
-	+ MongoDB: https://status.mongodb.com/
-	+ Akamai: https://www.akamai.com/status
-	+ Cloudflare: https://status.cloudflare.com/
-* Third-party outage tracking websites:
-	+ Downdetector: https://downdetector.com/
-	+ Outage Report: https://outagereport.com/
+- Have users experienced problems uploading data to Data Lake Store?
+- Have users experienced problems downloading data from Data Lake Store?
+```
 
-Please note that these resources may not provide real-time information about outages, and the availability of information can vary depending on the cloud provider and the specific services impacted.
+Note that I removed services and cloud providers not mentioned in the original text, such as Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

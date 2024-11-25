@@ -1,5 +1,15 @@
-I don't have the capability to apply a query across multiple cloud providers. The text you provided appears to be a comprehensive list of Azure services and features, but it does not contain information about outages or incidents on other cloud providers.
+I can only apply the query to Microsoft Azure since that's the only cloud provider explicitly mentioned in the text. Here is the result:
 
-If you'd like to know about outages on specific cloud providers, I can try to help you find that information. For example, you can search for "AWS outage" or "GCP outage" on the respective websites of Amazon Web Services and Google Cloud Platform. Similarly, you can search for "Azure outage" on Microsoft Azure's website.
+**Microsoft Azure Outage**
 
-If you're looking for a specific incident, please provide me with more context or details about the outage you're interested in, such as the date range or the services affected. I'll do my best to help you find the information you need.
+* **Incident Details:**
+	+ Resume of outage: Not available
+	+ Duration of incident: Not available
+	+ Root cause of outage: Not available
+* **Affected Services and Regions:**
+	+ No specific services or regions mentioned in the text
+* **Timeline:**
+	+ Start time of outage: Not available
+	+ End time of outage: Not available
+
+Note that I couldn't find any information on an Azure outage meeting the specified criteria, as there is no mention of a resume of outage, duration of incident, root cause, or timeline in the provided text.
