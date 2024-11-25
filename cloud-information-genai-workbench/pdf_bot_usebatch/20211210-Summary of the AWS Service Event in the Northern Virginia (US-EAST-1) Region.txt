@@ -1,0 +1,19 @@
+I can only apply the query to Amazon AWS since it's the only cloud provider mentioned in the text. Here are the answers:
+
+**Resume of the Outage:**
+
+The outage occurred on December 7th, 2021.
+
+**Duration and Start/End Times:**
+The outage started at an unknown time (not specified in the text) and was marked as resolved by 2:22 PM PST.
+
+**Impacted Services and Regions/AZs:**
+Amazon Connect experienced elevated failure rates for handling phone calls, chat sessions, and task contacts. Issues with API Gateways used by Connect for the execution of Lambda functions resulted in elevated failure rates for inbound phone calls, chat sessions or task contacts. The outage affected Amazon Connect in the Northern Virginia (US-EAST-1) Region.
+
+**Root Cause:**
+The root cause of the outage was not explicitly stated in the text, but it's mentioned that the issue stemmed from a single root cause and that the team completed work at 9:28 AM PST to resolve the DNS resolution errors, which fully recovered the impacted services. However, monitoring data was still not visible to the operations team, and congestion persisted.
+
+**Services Affected:**
+Amazon Connect, API Gateways used by Connect for Lambda functions
+
+Note that I've removed Google Cloud Platform (GCP), Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare from the query since they were not mentioned in the text.

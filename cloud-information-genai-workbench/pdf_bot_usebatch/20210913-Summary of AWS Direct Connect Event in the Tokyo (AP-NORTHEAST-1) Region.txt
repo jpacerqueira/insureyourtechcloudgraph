@@ -1,0 +1,11 @@
+Based on the provided text, I can answer your query for Amazon Web Services (AWS) only.
+
+Here are the details about the AWS Direct Connect service disruption:
+
+* **Services impacted:** Direct Connect
+* **Regions affected:** Tokyo (AP-NORTHEAST-1)
+* **Availability Zones not specified**
+* **Root cause of the outage:** Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
+* **Duration of the outage:** The incident started at 7:30 AM JST and customers began seeing recovery by 12:30 PM JST, with full resolution by 1:42 PM JST. Therefore, the outage lasted approximately 6 hours and 12 minutes.
+
+Note that I have removed Cloud Vendors not identified in the text, such as Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

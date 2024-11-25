@@ -1,0 +1,32 @@
+Based on the provided text, here is the information about the outage:
+
+**Cloud Provider:** Amazon AWS (specifically, US-EAST-1 Region)
+
+**Services impacted:**
+
+* CloudWatch Logs
+* Amazon Data Firehose
+* Event framework that publishes Amazon S3 events
+* Amazon Elastic Container Service (ECS)
+* AWS Lambda
+* Amazon Redshift
+* AWS Glue
+
+**Regions and Availability Zones:** Northern Virginia (US-EAST-1) Region
+
+**Duration of the outage:**
+
+* The outage started at 2:45 PM PDT on July 30th, 2024.
+* The backlog of delayed S3 events completed processing at 2:38 AM PDT on August 1st.
+
+**Root cause of the outage:** A degradation of one of Amazon's internally-used cells of the Amazon Kinesis Data Streams service.
+
+**Services with partial recovery:**
+
+* Managed Workflows for Apache Airflow (MWAA) and AWS Glue customers experienced elevated latencies and API failures when creating or updating resources and logging metrics.
+* Lambda was able to publish more logs successfully and log delivery fully recovered when CloudWatch Logs API fully recovered.
+* Some ECS customers experienced impact to running tasks when these tasks were configured to use the awslogs log driver in the default blocking mode.
+
+**Services with no data loss:**
+
+* Amazon Data Firehose saw increased failures when invoking PutRecord and PutRecordBatch APIs to deliver data streams, but all records accepted by the service during the impacted period were delivered.

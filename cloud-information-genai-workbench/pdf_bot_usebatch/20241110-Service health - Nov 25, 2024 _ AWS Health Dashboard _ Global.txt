@@ -1,0 +1,32 @@
+Based on the provided text, I'll apply the query to Amazon AWS. Here are the results:
+
+**Cloud Provider:** Amazon AWS
+**Services impacted:**
+
+* Amazon Elastic Compute Cloud (EC2)
+* Amazon Simple Queue Service (SQS)
+* AWS Identity and Access Management (IAM)
+* Amazon Route 53
+* AWS Management Console
+
+**Regions and Availability Zones affected:**
+
+* Seoul (ap-northeast-2)
+
+**Timeframe of the outage:**
+
+* Start time: November 10, 2024, 7:55:00 AM (PST)
+* Last update time: November 10, 2024, 10:13:00 AM (PST)
+
+**Duration of the outage:** Approximately 2 hours and 18 minutes
+
+**Root cause of the outage:** The text does not explicitly state the root cause of the outage. However, it mentions that "service team engineers have identified the database component causing the impairment" and are actively working towards mitigation.
+
+**Services with creation errors:**
+
+* ALB (Application Load Balancer)
+* ECS (EC2 Container Service)
+* EKS (Elastic Container Service for Kubernetes)
+* Fargate
+
+Note that these services are not directly impacted by the outage, but they are experiencing creation errors due to the underlying issue.
