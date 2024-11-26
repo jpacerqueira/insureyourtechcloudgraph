@@ -8,26 +8,26 @@ Here is the summary of outages for the specified cloud providers:
 * Root cause: Regional networking fiber cut
 * Duration: 16 minutes
 * Downtime period: 16 minutes
-* Marked as resolved: Not specified
+* Marked as resolved: After deploying new VMs, mitigations were completed by 01:50 UTC on March 19, 2021
 
 **Microsoft Azure (Key Vault)**
 
-* Outage: Between March 18, 2021, at 23:00 UTC and March 19, 2021, at 01:50 UTC
-* Impacted services: Storage transactions in the West Europe region
-* Regions/Availability Zones: West Europe
-* Root cause: Network resource exhaustion due to a code defect
-* Duration: 2 days, 10 hours, and 50 minutes
-* Downtime period: 2 days, 10 hours, and 50 minutes
-* Marked as resolved: Not specified
-
-**Microsoft Azure (AD Backup Authentication)**
-
-* Outage: Between March 18, 2021, at 23:00 UTC and March 19, 2021, at 01:50 UTC
-* Impacted services: Token validation
+* Outage: Between 23:00 and 23:10 UTC on March 18, 2021
+* Impacted services: West Europe Key Vault service failed to connect to North Europe
 * Regions/Availability Zones: West Europe and North Europe
-* Root cause: Tooling deficiencies
-* Duration: 2 days, 10 hours, and 50 minutes
-* Downtime period: 2 days, 10 hours, and 50 minutes
-* Marked as resolved: Not specified
+* Root cause: Network resource exhaustion due to a surge of requests to the Data Plane for a specific type of resource
+* Duration: 10 minutes
+* Downtime period: 10 minutes
+* Marked as resolved: After mitigations were completed by deploying new VMs, North Europe was fully recovered at 02:15 UTC on March 19, 2021
 
-Note that the outages for Azure AD Backup Authentication are not explicitly stated to be separate incidents from the Key Vault outage, but rather a related issue.
+**Microsoft Azure (Key Vault - updated root cause)**
+
+* Outage: Between 23:00 and 23:10 UTC on March 18, 2021
+* Impacted services: West Europe Key Vault service failed to connect to North Europe
+* Regions/Availability Zones: West Europe and North Europe
+* Root cause: Network resource exhaustion due to a surge of requests to the Data Plane for a specific type of resource, which was triggered by a code defect and under-provisioning in West Europe and North Europe
+* Duration: 10 minutes
+* Downtime period: 10 minutes
+* Marked as resolved: After mitigations were completed by deploying new VMs, North Europe was fully recovered at 02:15 UTC on March 19, 2021
+
+Note that I removed the following cloud providers from the original text: Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

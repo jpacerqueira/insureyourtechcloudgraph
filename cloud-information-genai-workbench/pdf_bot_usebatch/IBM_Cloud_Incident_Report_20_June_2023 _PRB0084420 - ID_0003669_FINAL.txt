@@ -1,36 +1,29 @@
-Based on the provided text, the following information is available for IBM Cloud:
+Based on the provided text, I will apply the query to IBM Cloud only.
 
-**Incident Information**
+**Incident Details**
 
-* Incident Name: Power Grid Utility Outage
-* Affected Services: VPC, SQL Query, Load Balancer, Network Infrastructure, Watson Platform, and VSIs
-* Regions/Availability Zones: Frankfurt (FRA05) Data Center and eu-de zone 3 (EU-DE-3)
-* Cloud Provider: IBM Cloud
+* Incident Start: 20 June 2023 03:49 UTC
+* Incident End: 20 June 2023 22:15 UTC
+* Duration: 18 hours and 26 minutes
+* Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
 
-**Sequence of Events**
+**Impacted Services**
 
-1. 20 June 2023 03:20 - Power grid utility outage occurred.
-2. 20 June 2023 03:46 - UPS batteries depleted and FRA05 server room 2 lost power.
-3. 20 June 2023 03:49 - Incident Started
-4. 20 June 2023 04:12 - IBM Cloud Site Operator Engineering team began data center recovery actions.
-5. 20 June 2023 04:17 - Power was restored on the affected rack.
-6. 20 June 2023 04:30 - All bare metal hosts were back online.
-7. 20 June 2023 05:00 - Facilities grid power supply was restored and transition from generator to utility was completed.
-8. 20 June 2023 05:41 - IBM Cloud Site Operator Engineering team were notified that power was restored after inspection.
-9. 20 June 2023 10:33 - VPC underlying host operating system was restored.
-10. 20 June 2023 12:18 - All VSI Hosts were recovered.
-11. 20 June 2023 19:14 - VPC SDN was restored.
+* VPC - Impacted customers experienced an inability to access, manage, and provision VSIs. Any customer workloads running on these VSIs were impacted.
+* SQL Query - SQL jobs/queries experienced long delays and eventually failures for all submitted jobs. Streaming jobs were running as normal where the impact was limited to SQL batch jobs.
+* Databases - IBM Cloud Databases had an impact due to worker nodes being in critical status.
+* Cloud Foundry - Impacted customers experienced issues with CF command.
+* Containers Kubernetes - Multiple nodes and carriers went down.
+* DNS - Service degradation experienced for appliance (custom-resolver and origin healthcheck). Customers with HA deployment configuration of custom-resolvers would not have seen any impacts. Provisioning of new appliance failed.
+* VPC VPN - Impacted customers experienced VPN Gateway provisioning failures and VSI was stuck in "pending" status.
+* Code Engine - Impacted customers experienced delays in creating or updating applications, due to the degraded performance of the system.
 
-**Root Cause**
+**Region and Availability Zone**
 
-The root cause of the outage is not explicitly stated in the text, but it appears to be related to a power grid utility outage that affected the FRA05 server room and subsequent failures in other services.
+The incident occurred in Frankfurt (FRA05) Data Center and eu-de zone 3 (EU-DE-3).
 
-**Duration**
+**Downtime Period**
 
-* Incident Duration: 5 days
-* Outage Duration: 1 hour 41 minutes (from 03:20 to 04:01)
-* Downtime Period: 5 days, with an average of 12 hours and 45 minutes per day
+* The downtime period for each service is not explicitly stated in the text. However, it can be inferred that the outage started at 03:49 UTC and ended at 22:15 UTC.
 
-**Resolution**
-
-The incident was marked as resolved on 25 June 2023.
+Note: The other cloud providers mentioned in the original text (Amazon AWS, Google GCP, Microsoft Azure, Oracle OCI, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) are not included in this response as they were not identified in the provided text.

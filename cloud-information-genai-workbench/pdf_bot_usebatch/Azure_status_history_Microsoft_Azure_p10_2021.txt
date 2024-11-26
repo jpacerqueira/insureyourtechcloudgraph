@@ -1,18 +1,27 @@
 Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
 
-Here is the information about the outage:
+Here is the summary of the outage:
 
-**Outage Details**
+**Incident Details**
 
-* **Cloud Provider:** Microsoft Azure
-* **Services Impacted:** Front-end services for other clusters in the region also made calls to the impacted cluster's front-end service to obtain configuration.
-* **Regions and Availability Zones:** The incident affected most West US Cosmos DB front-end services.
-* **Root Cause:** A code defect in a version update of a component that controls network traffic routing between Azure regions.
-* **Duration:**
-	+ Start Time: 21:30 UTC
-	+ End Time: 10:02 UTC (next day)
-	+ Duration: 2 days, 3 hours, and 32 minutes
-* **Downtime Period:** The outage caused service degradation and increased latency for some customers in Japan East who were using Azure Storage.
-* **Resolution Time:** The incident was resolved by 18:45 UTC.
+* Incident Name: Network Traffic Routing Issue
+* Duration: 6 hours and 36 minutes (from 21:30 UTC to 03:06 UTC)
+* Start Time: 21:30 UTC
+* End Time: 03:06 UTC
+
+**Impacted Services and Regions**
+
+* Azure services in the West US region, including Cosmos DB and front-end services
+* Impacted Availability Zones: Not specified
+
+**Root Cause**
+
+* The incident was caused by a code defect in a version update of a component that controls network traffic routing between Azure regions.
+* The main parameters of the new code were invoked only at production scale and scope levels, which led to the failure of anomaly detection.
+
+**Downtime Period**
+
+* The outage started on February 26, 2021, at 21:30 UTC
+* The downtime period was approximately 6 hours and 36 minutes
 
 Note that I have removed all cloud providers not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

@@ -1,23 +1,16 @@
 Based on the provided text, I have extracted information about outages in Microsoft Azure.
 
-**Outage 1:**
+**Outage Details:**
 
-* Services impacted: FIB (Firewall)
-* Regions and availability zones affected: South Central US
-* Root cause of outage: Incorrect configuration change sent all SYN packets to the router's CPU for inspection, causing denial-of-service protection to drop a subset of packets.
-* Duration of outage:
-	+ Start time: 12:48 UTC on February 28, 2020
-	+ End time: 22:28 UTC on February 28, 2020 (approximately 9 hours and 40 minutes)
-	+ Downtime period: Approximately 9 hours and 40 minutes
-* Resolution date: 22:28 UTC on February 28, 2020
+1. **Incident Name:** Unspecified outage
+2. **Cloud Provider:** Microsoft Azure
+3. **Region/AZ:** South Central US (specifically, two network routers)
+4. **Services Impacted:** Network connection failures for IPv4 traffic
+5. **Root Cause:** Incorrect configuration change sent all SYN packets to the router's CPU for inspection, causing denial-of-service protection to drop a subset of packets.
+6. **Duration:**
+	* Start Time: 12:48 UTC on February 28, 2020
+	* End Time: 22:28 UTC on February 28, 2020 (approximately 9 hours and 40 minutes)
+7. **Downtime Period:** The outage started at 20:40 UTC on February 20, 2020, and was marked as resolved at 00:53 UTC on March 1, 2020.
+8. **Duration in Days, Hours, and Minutes:** Approximately 2 days, 10 hours, and 13 minutes.
 
-**Outage 2:**
-
-* Services impacted: IPv4 traffic
-* Regions affected: Amsterdam
-* Root cause of outage: Incorrect configuration change sent all SYN packets to the router's CPU for inspection, causing denial-of-service protection to drop a subset of packets.
-* Duration of outage:
-	+ Start time: 22:17 UTC on February 21, 2020
-	+ End time: 00:53 UTC on February 22, 2020 (approximately 9 hours and 36 minutes)
-	+ Downtime period: Approximately 9 hours and 36 minutes
-* Resolution date: 00:53 UTC on February 22, 2020
+Note that there is no information about the specific services impacted or the root cause of the outage for other cloud providers mentioned in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare).

@@ -10,14 +10,14 @@ Based on the provided text, I will resume the outages for Microsoft Azure.
   - Azure Database for PostgreSQL
   - Azure Database for MariaDB in Japan East region
 - Root Cause: Connections to Azure SQL Database and related data services go through a load-balanced set of front-end nodes (Gateways) that provide directory lookup services and reroute incoming connections to the intended backend nodes hosting the database.
-- Duration: Not specified, but it is mentioned that the incident occurred between 09:24 and 11:15 UTC on July 01, 2020.
+- Duration: Not specified, but it is mentioned that the incident was fully mitigated after applying a configuration update.
 
 **Outage 2:**
 - Start Time: Between 02:26 am and 03:40 am UTC on July 04, 2020
 - End Time: Not specified
 - Impacted Services:
   - Azure DevOps in multiple regions
-- Root Cause: An inadvertent error with a configuration change in the backend service which caused the outage.
-- Duration: Not specified, but it is mentioned that the incident occurred between 02:26 am and 03:40 am UTC on July 04, 2020.
+- Root Cause: Preliminary investigation identified an inadvertent error with a configuration change in the backend service which caused the outage.
+- Duration: Not specified, but it is mentioned that the issue was fully mitigated after applying a configuration update.
 
-Note: The duration of both outages is not specified, as this information was not provided in the original text.
+Note: The root cause of the second outage is not explicitly stated in the provided text. However, it is mentioned that the decommissioning of a legacy DNS solution inadvertently caused some data streams for Azure DNS recursive resolver service to become out of sync with the resolver state.

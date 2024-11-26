@@ -5,15 +5,15 @@ Here is the information about the outage:
 **Outage Details**
 
 * **Cloud Provider:** Amazon AWS
+* **Region:** Northern Virginia (US-EAST-1)
+* **Availability Zone:** Not specified
 * **Services Impacted:** Support Contact Center, Service Health Dashboard tooling
-* **Regions and Availability Zones:** Northern Virginia (US-EAST-1) Region
-* **Root Cause of Outage:** The text does not explicitly state the root cause of the outage. However, it mentions that the impairment to monitoring systems delayed understanding of the event.
+* **Root Cause of Outage:** Single root cause not specified in the text
 * **Duration of Outage:**
 	+ Start Time: 7:33 AM PST
 	+ End Time: 2:25 PM PST
 	+ Duration: 6 hours and 52 minutes
-	+ Date: December 7th, 2021
-* **Downtime Period:** The outage started at 7:33 AM PST and was resolved by 8:22 AM PST. However, the Service Health Dashboard tooling was not fully recovered until later.
-* **Resolution Time:** The text does not provide a specific time when the outage was marked as resolved.
+* **Downtime Period:** The outage started on December 7th, 2021, at 7:33 AM PST and lasted for approximately 6 hours and 52 minutes.
+* **Resolution Time:** The outage was marked as resolved by 8:22 AM PST.
 
-Note that I have removed all cloud providers except Amazon AWS, as per your request. I have also removed apostrophes and included only full words in my response.
+Note that the text does not provide information about the specific services impacted or the root cause of the outage. However, it mentions that the impairment to monitoring systems delayed understanding of the event, and networking congestion impaired Service Health Dashboard tooling.

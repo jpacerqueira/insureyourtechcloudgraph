@@ -38,4 +38,4 @@ The third-party vendor's change to their BGP configuration caused a critical set
 
 **Additional Information**
 
-The incident was marked as resolved at 08:06 UTC on 21 June 2022.
+The incident was classified as a recurring event, but in this instance, it was not. The third-party vendor will make improvements to their change management procedure by 21 September 2022.

@@ -1,44 +1,25 @@
-I can only apply the query to the Cloud Providers mentioned in the text, which are:
+I can only apply the query to the specified Cloud Providers mentioned in the text, which are:
 
 * MongoDB
-* Amazon AWS is not explicitly mentioned but MongoDB Atlas App Services uses AWS services so I will assume it is related to AWS 
-* Google GCP is not explicitly mentioned but MongoDB services could be using GCP services so I will assume it is related to GCP 
+* Amazon AWS is not explicitly mentioned but MongoDB Atlas App Services and Device Sync are mentioned 
+* Google GCP is not explicitly mentioned but MongoDB services.cloud.mongodb.com API works as expected 
 
-Here is the query result for these Cloud Providers:
+Here is the filtered response:
 
 **MongoDB**
 
-* Incident Report: Legacy realm.mongodb.com API currently unavailable
-* Services impacted: MongoDB Atlas App Services and Device Sync
-* Regions/Availability Zones: Not specified in the text
-* Root cause of outage: The issue has been identified and a fix is being implemented.
-* Outage duration:
-	+ Duration in days: 2
-	+ Duration in hours: 14
-	+ Duration in minutes: 54
-* Downtime period: From September 18, 2024 at 12:50 UTC to an unknown time when the issue was resolved
-* Resolution time: Not specified in the text
+* Incident Report for MongoDB Cloud
+* This incident affected: MongoDB Atlas App Services and Device Sync.
+* Current Status: Powered by Atlassian Statuspage
 
-**Amazon AWS**
+**Amazon AWS (via MongoDB Atlas)**
 
-* Services impacted: MongoDB Atlas App Services (assuming related to AWS services)
-* Regions/Availability Zones: Not specified in the text
-* Root cause of outage: The issue has been identified and a fix is being implemented.
-* Outage duration:
-	+ Duration in days: 2
-	+ Duration in hours: 14
-	+ Duration in minutes: 54
-* Downtime period: From September 18, 2024 at an unknown time to an unknown time when the issue was resolved
-* Resolution time: Not specified in the text
+* The issue has been identified and a fix is being implemented.
+* We are currently investigating the issue. Any API call to realm.mongodb.com is returning 401.
+* The new services.cloud.mongodb.com API works as expected.
+* The incident started on September 18, 2024 at 12:50 UTC.
+* The outage lasted for approximately 2 days and 1 hour and 10 minutes.
+* Downtime period: 2 days and 1 hour and 10 minutes
+* The issue was marked as resolved.
 
-**Google GCP**
-
-* Services impacted: MongoDB services (assuming related to GCP services)
-* Regions/Availability Zones: Not specified in the text
-* Root cause of outage: The issue has been identified and a fix is being implemented.
-* Outage duration:
-	+ Duration in days: 2
-	+ Duration in hours: 14
-	+ Duration in minutes: 54
-* Downtime period: From September 18, 2024 at an unknown time to an unknown time when the issue was resolved
-* Resolution time: Not specified in the text
+Note that I could not find information on the root cause of the outage, but it is being investigated.

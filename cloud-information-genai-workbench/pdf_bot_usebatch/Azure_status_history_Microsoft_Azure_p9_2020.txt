@@ -1,18 +1,20 @@
-Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
+Based on the provided text, I will resume the outage for Microsoft Azure.
 
-Here is the summary of the outage:
+**Outage Details:**
 
-**Outage Details**
+* **Incident Duration:** The incident lasted for approximately 6 hours and 36 minutes.
+* **Start Time:** The outage started at 21:30 UTC.
+* **End Time:** The outage was resolved by 03:26 UTC on February 26, 2021.
+* **Impacted Services:** Front-end services for other clusters in the region also made calls to the impacted cluster's front-end service to obtain configuration. These calls were timed out due to unavailability, triggering the same unhandled failure condition and resulting crash.
 
-* **Cloud Provider:** Microsoft Azure
-* **Services Impacted:** Front-end services for other clusters in the region also made calls to the impacted cluster's front-end service to obtain configuration.
-* **Regions and Availability Zones:** West US (no specific availability zones mentioned)
-* **Root Cause:** Code defect in a version update of a component that controls network traffic routing between Azure regions.
-* **Duration:**
-	+ Start Time: 21:30 UTC
-	+ End Time: 10:02 UTC
-	+ Duration: 2 hours and 32 minutes (approximately 2 days, 8 hours, and 32 minutes)
-* **Downtime Period:** The outage started at 21:30 UTC on February 26, 2021, and was resolved by 18:45 UTC on the same day.
-* **Impact:** Some Azure services utilizing Storage may have experienced downtime impact.
+**Root Cause:**
 
-Note that I removed Cloud Vendors not identified in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) as per your request.
+The root cause of the outage was a code defect in a version update of a component that controls network traffic routing between Azure regions. The main parameters of the new code were invoked only at production scale and scope levels, which led to the prevention of anomaly detection from occurring. This resulted in an abnormal, sudden increase in the number of unhealthy devices and forced a health validation of those devices before removing routes from the network.
+
+**Downtime Period:**
+
+The downtime period was approximately 6 hours and 36 minutes.
+
+**Resolution Time:**
+
+The outage was marked as resolved by 03:26 UTC on February 26, 2021.

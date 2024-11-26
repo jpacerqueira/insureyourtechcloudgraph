@@ -5,16 +5,16 @@ The outage occurred in the Northern Virginia (US-EAST-1) Region and affected sev
 * Amazon Connect
 * API Gateways used by Connect for the execution of Lambda functions
 
-The root cause of the outage was a single root cause, but it is not specified in the text.
+The root cause of the outage was not explicitly stated, but it was related to a change made to the internal network, which resulted in increased load on the impacted networking devices.
 
-The outage started at 9:28 AM PST on December 7th, 2021, and lasted for approximately 6 hours and 54 minutes. The downtime period began when the monitoring data was still not visible to the operations team, which continued resolving the issue with reduced system visibility.
+The outage started at 9:28 AM PST and lasted for approximately 7 hours and 54 minutes. The services were unavailable during this period.
 
 Here is a summary of the outage:
 
-* Start time: 9:28 AM PST on December 7th, 2021
-* End time: 4:41 PM PST on December 7th, 2021
-* Duration: approximately 6 hours and 54 minutes
-* Downtime period: started when monitoring data was still not visible to the operations team
-* Resolution time: 8:22 AM PST on December 7th, 2021 (when the Service Health Dashboard was successfully updated)
+* Start Time: 9:28 AM PST
+* End Time: 4:41 PM PST (when the affected API Gateway fully recovered)
+* Duration: 7 hours and 54 minutes
+* Downtime Period: 7 hours and 54 minutes
+* Resolution Time: 8:22 AM PST (when the Service Health Dashboard was successfully updated)
 
-Note that the outage duration is approximate as it is based on the provided start and end times.
+Note that the text does not provide information on the duration of the outage in days, as it is a short-term outage.

@@ -1,37 +1,39 @@
-Here is the query result with only the specified cloud providers and without apostrophes:
+Here is the information about the outage for the specified cloud providers:
 
 **Amazon AWS**
 
-* Services impacted: Amazon CloudWatch Logs, Amazon Data Firehose, Amazon Elastic Container Service (ECS), AWS Lambda, Amazon Redshift, and AWS Glue
-* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Outage duration: 7 hours and 52 minutes
+* Start time of outage: July 30th, 2024 at 2:45 PM PDT
+* End time of outage: July 31st, 2024 at 9:37 PM PDT
+* Impacted services:
+	+ CloudWatch Logs (Northern Virginia US-EAST-1 Region)
+	+ Amazon Data Firehose (Northern Virginia US-EAST-1 Region)
+	+ Event framework that publishes Amazon S3 events (Northern Virginia US-EAST-1 Region)
+	+ Amazon Elastic Container Service (ECS) (Northern Virginia US-EAST-1 Region)
+	+ AWS Lambda (Northern Virginia US-EAST-1 Region)
+	+ Amazon Redshift (Northern Virginia US-EAST-1 Region)
+	+ AWS Glue (Northern Virginia US-EAST-1 Region)
 * Root cause of outage: Degradation of one of the internally-used cells of the Amazon Kinesis Data Streams service
-* Duration of outage:
-	+ Start time: 2:45 PM PDT
-	+ End time: 9:37 PM PDT
-	+ Duration: 7 hours and 52 minutes
-	+ Downtime period: The backlog of delayed S3 events completed processing at 2:38 AM PDT on August 1st
-* Marked as resolved: Yes
+* Downtime period: 7 hours and 52 minutes
 
 **Amazon AWS**
 
-* Services impacted: Managed Workows for Apache Airflow (MWAA) and AWS Glue customers
-* Region/Availability Zone: Northern Virginia (US-EAST-1)
-* Root cause of outage: Fargate task launch errors and CloudWatch Logs availability issues
-* Duration of outage:
-	+ Start time: 2:45 PM PDT
-	+ End time: 7:21 PM PDT
-	+ Duration: 4 hours and 36 minutes
-	+ Downtime period: MWAA and Glue latencies and API errors recovered when Fargate task launch errors and CloudWatch Logs availability improved
-* Marked as resolved: Yes
+* Outage duration: 2 hours and 52 minutes
+* Start time of outage: July 30th, 2024 at 5:39 PM PDT
+* End time of outage: July 31st, 2024 at 8:31 PM PDT
+* Impacted services:
+	+ Managed Workflows for Apache Airflow (MWAA) and AWS Glue customers (Northern Virginia US-EAST-1 Region)
+* Root cause of outage: Fargate task launch errors and CloudWatch Logs availability improvement
+* Downtime period: 2 hours and 52 minutes
 
-Note that I removed the following cloud providers from the query result:
+**Amazon AWS**
 
-* Google GCP
-* Microsoft Azure
-* Oracle OCI
-* IBM Cloud
-* Snowflake
-* Databricks
-* MongoDB
-* Akamai
-* Cloudflare
+* Outage duration: 4 hours and 38 minutes
+* Start time of outage: July 30th, 2024 at 2:45 PM PDT
+* End time of outage: August 1st, 2024 at 6:23 AM PDT
+* Impacted services:
+	+ S3 event delivery (Northern Virginia US-EAST-1 Region)
+* Root cause of outage: Degradation of one of the internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime period: 4 hours and 38 minutes
+
+Note that I have removed Google Cloud Platform, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare from the list as they were not mentioned in the original text.

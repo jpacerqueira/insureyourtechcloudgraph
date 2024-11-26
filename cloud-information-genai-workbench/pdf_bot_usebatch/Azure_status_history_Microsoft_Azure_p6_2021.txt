@@ -1,16 +1,24 @@
 Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
 
-Here is the summary of the outage:
+Here is a summary of the outage:
 
-**Cloud Provider:** Microsoft Azure
-**Services Impacted:** App Service, Azure Functions, Cosmos DB, Access Panel
+**Outage Details**
 
-**Outage Details:**
+* **Cloud Provider:** Microsoft Azure
+* **Services Impacted:** Access Panel, App Service, Azure Cosmos DB, and Azure Functions
+* **Regions Affected:** West Central US
+* **Availability Zones Affected:** Not specified
+
+**Root Cause:**
+The root cause of the outage was a code change to the Access Panel that introduced an unrelated bug affecting a small subset of customers.
+
+**Duration:**
 
 * **Start Time:** 03:00 UT C on November 9, 2021
-* **End Time:** 07:41 UT C on December 5, 2022 (approximately 21 days)
-* **Duration:** 21 days, 4 hours, and 41 minutes
-* **Downtime Period:** The service was in a failed-over state for approximately 8 hours and 23 minutes.
-* **Root Cause:** A code change to the Access Panel introduced an unrelated bug that affected a small subset of customers. The bug was not detected through testing and was discovered during element validation in the first deployment stage in West Central US.
-* **Impact Regions/Availability Zones:** West Central US, Central US
-* **Resolution Time:** 07:41 UT C on December 5, 2022
+* **End Time:** 07:41 UT C on December 5, 2022 (approximately 21 days and 3 hours)
+* **Downtime Period:** The outage started during off-business hours and persisted into business hours. The Central US datacenter was scaled to handle the low amounts of off-business hour traffic.
+
+**Resolution:**
+The outage was marked as resolved at 07:41 UT C on December 5, 2022.
+
+Note that I have removed all cloud providers not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

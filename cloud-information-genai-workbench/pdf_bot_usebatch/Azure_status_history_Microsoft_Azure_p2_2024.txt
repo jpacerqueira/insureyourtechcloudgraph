@@ -7,24 +7,31 @@ Here is the summary of the outage for the specified cloud providers:
 * End time: 06:00 CST on April 23, 2024
 * Impacted services:
 	+ China Cloud domains (chinacloudapp.cn and chinacloudsites.cn)
-	+ Azur e Virtual Desktop
-	+ Azur e Databricks
+	+ Cosmos DB
+	+ Azure Virtual Desktop
+	+ Azure Databricks
 	+ Backup
-	+ Sit e Recovery
-	+ Azur e IoT Hub
+	+ Site Recovery
+	+ Azure IoT Hub
 	+ Service Bus
 	+ Logic Apps
 	+ Data Factory
-	+ Azur e Kuber netes Services
-	+ Azur e Policy
-	+ Azur e AI Speech
+	+ Azure Kubernetes Services
+	+ Azure Policy
+	+ Azure AI Speech Services
 * Root cause: Configuration change through a domain registrar resulted in a service disruption to two system domains critical in cloud operations in China.
-* Downtime period:
-	+ 2 hours and 15 minutes (from 03:45 CST on April 23, 2024 to 06:00 CST on April 23, 2024)
-* Resolution time: 05:13 CST on April 23, 2024
+* Downtime period: 2 hours and 15 minutes
 
-**Note:** The outage was resolved after reverting to the previously known good name server versions.
+**Note:** The outage was resolved after reverting to the previously known good name server versions at 05:13 CST on April 23, 2024.
 
-**Other cloud providers not identified in the text**
+I have removed the following cloud providers from the summary:
 
-No other cloud providers were mentioned in the provided text.
+* Amazon AWS
+* Google GCP
+* Oracle OCI
+* IBM Cloud
+* Snowflake
+* Databricks
+* MongoDB
+* Akamai
+* Cloudflare

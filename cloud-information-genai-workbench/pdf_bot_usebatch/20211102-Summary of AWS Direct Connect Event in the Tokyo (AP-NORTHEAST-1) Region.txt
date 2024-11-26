@@ -1,22 +1,22 @@
-Based on the provided text, I can only identify one cloud provider that is explicitly mentioned: Amazon AWS.
+Based on the provided text, I can only identify one cloud provider: Amazon AWS.
 
-Here are the details of the outage:
+Here is the information about the outage:
 
-**Cloud Provider:** Amazon AWS
-**Incident:** AWS Direct Connect service disruption in Tokyo (AP-NORTHEAST-1) Region
-**Date and Time:** September 2, 2021, starting at 7:30 AM JST
+**Outage Details**
 
-The outage affected customers' Virtual Private Clouds (VPCs) in the Tokyo Region. The incident was caused by a failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network.
+* Cloud Provider: Amazon AWS
+* Region: Tokyo (AP-NORTHEAST-1)
+* Availability Zone: Not specified
+* Services Impacted:
+	+ Direct Connect
+	+ Virtual Private Clouds (VPCs)
+* Root Cause of Outage: Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
+* Duration of Outage:
+	+ Started: 7:30 AM JST
+	+ Ended: 12:30 PM JST (approximately 5 hours)
+	+ Downtime Period: Approximately 5 hours
+* Services Downtime Period:
+	+ Direct Connect customers experienced intermittent connectivity issues and elevated packet loss for their traffic destined towards the Tokyo Region.
+	+ Customers started seeing recovery by 1:42 PM JST, and connectivity issues were fully resolved.
 
-**Services impacted:** Direct Connect customer traffic
-**Regions and Availability Zones affected:** Tokyo (AP-NORTHEAST-1) Region
-
-The outage started at 7:30 AM JST and lasted for approximately 5 hours and 12 minutes. The incident was resolved by 1:42 PM JST on the same day.
-
-**Root cause of the outage:** Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network
-
-**Downtime period:** 5 hours and 12 minutes
-**Duration in days, hours, and minutes:** 0 days, 5 hours, and 12 minutes
-**Services downtime period:** Direct Connect customer traffic was affected for approximately 5 hours and 12 minutes.
-
-The outage was marked as resolved by 1:42 PM JST on September 2, 2021.
+Note that I have removed all cloud providers not identified in the text, including Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

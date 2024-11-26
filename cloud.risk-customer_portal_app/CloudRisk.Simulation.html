@@ -351,7 +351,8 @@
             sla_deviation: [],
             traffic_coef: [],
             usage_risk: [],
-            service_sla: [],
+            service_sla_tier1: [],
+            service_credit_back_tier1: [],
             annual_downtime: []
         };
 
@@ -367,7 +368,7 @@
                             <div class="value" id="customer-sla-usage"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median SLA Deviation Risk</h4>
+                            <h4>Rating Median Cloud.Risk SLA Deviation</h4>
                             <div class="value" id="customer-sla-deviation"></div>
                         </div>
                     </div>
@@ -377,14 +378,18 @@
                             <div class="value" id="customer-traffic-coef"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median Usage Risk Rating</h4>
+                            <h4>Rating Median Cloud.Risk Usage Risk</h4>
                             <div class="value" id="customer-usage-risk"></div>
                         </div>
                     </div>
                     <div class="metric-column">
                         <div class="metric">
-                            <h4>Median Service SLA %</h4>
-                            <div class="value" id="customer-service-sla"></div>
+                            <h4>Median Service SLA Tier 1 %</h4>
+                            <div class="value" id="customer-service-sla-tier1"></div>
+                        </div>
+                        <div class="metric">
+                            <h4>Median Service Credit Back Tier 1 %</h4>
+                            <div class="value" id="customer-service-credit-back-tier1"></div>
                         </div>
                         <div class="metric">
                             <h4>Median Annual Downtime (minutes)</h4>
@@ -412,8 +417,8 @@
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Service Credit Back (%):</strong> Measures the percentage credit back the cloud vendor gives in credit , if SLA the Service has not been meet monthly or Year-to-date . A value of 10% means the Service provider, if requested, will give 10% credit back.</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA Usage %:</strong> Measures the percentage of SLA the Service has used Year-to-date . A value of 100% means the Service has used 100% of its SLA .</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Traffic Coef %:</strong> Measures the percentage of time the Service was down or degraded Year-to-Date. A value of 0% means the service was never down or degraded. A value of 100% means the service was always down or degraded.</li>
-                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA Deviation Risk Rating:</strong> Indicates Risk based on SLA discrepancies. Measures the likelihood of service level agreement deviations (0.0-999.0, where higher values indicate greater risk).</li>
-                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Usage Risk Rating:</strong> Indicates the operational risk based on service usage patterns (0.0-999.0, where higher values indicate greater risk).</li>
+                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA Deviation Risk Rating:</strong> A Rating that indicates Risk based on SLA discrepancies. Measures the likelihood of service level agreement deviations (0.0-999.0, where higher values indicate greater risk).</li>
+                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Usage Risk Rating:</strong> A Rating that indicates the operational risk based on service usage patterns (0.0-999.0, where higher values indicate greater risk).</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Outage Remarks:</strong> AI-generated insights about potential service outages, disruptions and historical performance issues.</li>
                 </ul>
             </div>`;
@@ -440,7 +445,8 @@
                     customerMetrics.sla_deviation.push(parseFloat(riskData.sla_deviation_connected_risk_0_999));
                     customerMetrics.traffic_coef.push(parseFloat(riskData.service_traffic_coef_by_percent_down));
                     customerMetrics.usage_risk.push(parseFloat(riskData.usage_connected_risk_0_999));
-                    customerMetrics.service_sla.push(parseFloat(riskData.service_sla_0_99_9999_for_60min_times_24h_365days));
+                    customerMetrics.service_sla_tier1.push(parseFloat(riskData.service_sla_0_99_9999_for_tier1));
+                    customerMetrics.service_credit_back_tier1.push(parseFloat(riskData.percentage_service_credit_back_tier1));
                     customerMetrics.annual_downtime.push(parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes));
 
                     // Process metrics for vendor
@@ -450,7 +456,8 @@
                             sla_deviation: [],
                             traffic_coef: [],
                             usage_risk: [],
-                            service_sla: [],
+                            service_sla_tier1: [],
+                            service_credit_back_tier1: [],
                             annual_downtime: []
                         };
                     }
@@ -460,7 +467,8 @@
                     vendorMetrics[vendor].sla_deviation.push(parseFloat(riskData.sla_deviation_connected_risk_0_999));
                     vendorMetrics[vendor].traffic_coef.push(parseFloat(riskData.service_traffic_coef_by_percent_down));
                     vendorMetrics[vendor].usage_risk.push(parseFloat(riskData.usage_connected_risk_0_999));
-                    vendorMetrics[vendor].service_sla.push(parseFloat(riskData.service_sla_0_99_9999_for_60min_times_24h_365days));
+                    vendorMetrics[vendor].service_sla_tier1.push(parseFloat(riskData.service_sla_0_99_9999_for_tier1));
+                    vendorMetrics[vendor].service_credit_back_tier1.push(parseFloat(riskData.percentage_service_credit_back_tier1));
                     vendorMetrics[vendor].annual_downtime.push(parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes));
 
                     // Add service analysis
@@ -492,7 +500,8 @@
         document.getElementById("customer-sla-deviation").textContent = calculateMedian(metrics.sla_deviation).toFixed(2);
         document.getElementById("customer-traffic-coef").textContent = `${calculateMedian(metrics.traffic_coef).toFixed(2)}%`;
         document.getElementById("customer-usage-risk").textContent = calculateMedian(metrics.usage_risk).toFixed(2);
-        document.getElementById("customer-service-sla").textContent = `${calculateMedian(metrics.service_sla).toFixed(2)}%`;
+        document.getElementById("customer-service-sla-tier1").textContent = `${calculateMedian(metrics.service_sla_tier1).toFixed(2)}%`;
+        document.getElementById("customer-service-credit-back-tier1").textContent = `${calculateMedian(metrics.service_credit_back_tier1).toFixed(2)}%`;
         document.getElementById("customer-annual-downtime").textContent = calculateMedian(metrics.annual_downtime).toFixed(2);
     }
 
@@ -511,7 +520,7 @@
                                 <div class="value">${calculateMedian(metrics.sla_usage).toFixed(2)}%</div>
                             </div>
                             <div class="metric">
-                                <h4>Median SLA Deviation Risk</h4>
+                                <h4>Rating Median Cloud.Risk SLA Deviation</h4>
                                 <div class="value">${calculateMedian(metrics.sla_deviation).toFixed(2)}</div>
                             </div>
                         </div>
@@ -521,14 +530,18 @@
                                 <div class="value">${calculateMedian(metrics.traffic_coef).toFixed(2)}%</div>
                             </div>
                             <div class="metric">
-                                <h4>Median Usage Risk Rating</h4>
+                                <h4>Rating Median Cloud.Risk Usage</h4>
                                 <div class="value">${calculateMedian(metrics.usage_risk).toFixed(2)}</div>
                             </div>
                         </div>
                         <div class="metric-column">
                             <div class="metric">
-                                <h4>Median Service SLA %</h4>
-                                <div class="value">${calculateMedian(metrics.service_sla).toFixed(2)}%</div>
+                                <h4>Median Service SLA Tier 1 %</h4>
+                                <div class="value">${calculateMedian(metrics.service_sla_tier1).toFixed(2)}%</div>
+                            </div>
+                            <div class="metric">
+                                <h4>Median Service Credit Back Tier 1 %</h4>
+                                <div class="value">${calculateMedian(metrics.service_credit_back_tier1).toFixed(2)}%</div>
                             </div>
                             <div class="metric">
                                 <h4>Median Annual Downtime (minutes)</h4>
@@ -551,7 +564,7 @@
         // Calculate estimated credit money back
         let estimatedCreditBack = 0.0;
         const slaUsage = parseFloat(riskData.service_sla_usage_percentage);
-        const creditBackPercentage = parseFloat(riskData.percentage_service_credit_back || 0);
+        const creditBackPercentage = parseFloat(riskData.percentage_service_credit_back_tier1 || 0);
         if (slaUsage > 100) {
             estimatedCreditBack = ((slaUsage - 100) / 100) * (creditBackPercentage / 100) * monthy_customer_service_spent;
             estimatedCreditBack = Math.min(Math.round(estimatedCreditBack * 100) / 100, monthy_customer_service_spent);
@@ -579,7 +592,7 @@
                         <div class="value">${riskData.service_sla_usage_percentage}</div>
                     </div>
                     <div class="metric">
-                        <h4>SLA Deviation Risk</h4>
+                        <h4>Rating Cloud.Risk SLA Deviation</h4>
                         <div class="value">${riskData.sla_deviation_connected_risk_0_999}</div>
                     </div>
                 </div>
@@ -589,7 +602,7 @@
                         <div class="value">${riskData.service_traffic_coef_by_percent_down}</div>
                     </div>
                     <div class="metric">
-                        <h4>Usage Risk Rating</h4>
+                        <h4>Rating Cloud.Risk Usage </h4>
                         <div class="value">${riskData.usage_connected_risk_0_999}</div>
                     </div>
                 </div>
@@ -605,12 +618,12 @@
                 </div>
                 <div class="metric-column">
                     <div class="metric">
-                        <h4>Service SLA (99.99999%)</h4>
-                        <div class="value">${riskData.service_sla_0_99_9999_for_60min_times_24h_365days}%</div>
+                        <h4>Service SLA Tier 1</h4>
+                        <div class="value">${riskData.service_sla_0_99_9999_for_tier1}%</div>
                     </div>
                     <div class="metric">
-                        <h4>Service Credit Back (%)</h4>
-                        <div class="value">${riskData.percentage_service_credit_back}%</div>
+                        <h4>Service Credit Back Tier 1</h4>
+                        <div class="value">${riskData.percentage_service_credit_back_tier1}%</div>
                     </div>
                     <div class="metric">
                         <h4>Monthly Credit Back max. of Service</h4>
