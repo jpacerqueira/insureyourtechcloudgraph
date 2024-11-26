@@ -25,9 +25,20 @@ UI: http://localhost:8504
 - New Cloud Risk - Insurance Risk Measurement
 - Manually insert information about cloud usage to calculate your cloud risk graph
 - 
-![customer submission cloud risk information 1](images/CustomerPortal_SubmissionAnalysis-1.png)
-![customer submission cloud risk information 2](images/CustomerPortal_SubmissionAnalysis-2.png)
-![customer submission cloud risk information 3](images/CustomerPortal_SubmissionAnalysis-3.png)
+![customer submission cloud risk information 1](images/CustomerPortal_SubmissionAnalysis-1-1.png)
+![customer submission cloud risk information 2](images/CustomerPortal_SubmissionAnalysis-1-2.png)
+![customer submission cloud risk information 3](images/CustomerPortal_SubmissionAnalysis-1-3.png)
 -
 - Obtain risk ratings for your cloud service usage - from your Cloud.Risk.Graph - 
-![customer submission cloud risk information - graph](images/Customer_App4_-_Insurance_Risk_Measurement.png)
+![customer submission cloud risk information - graph](images/CustomerPortal_SubmissionAnalysis-1-4.png)
+- 
+![customer submission cloud risk information 1](images/CustomerPortal_SubmissionAnalysis-2-1.png)
+![customer submission cloud risk information 2](images/CustomerPortal_SubmissionAnalysis-2-2.png)
+![customer submission cloud risk information 3](images/CustomerPortal_SubmissionAnalysis-2-3.png)
+-
+- Obtain risk ratings for your cloud service usage - from your Cloud.Risk.Graph - 
+![customer submission cloud risk information - graph](images/CustomerPortal_SubmissionAnalysis-2-4.png)
+-
+- Export Your Cloud.Risk.Graph to low-level detail
+![customer submission cloud risk information - graph png](images/graph.png)
+-
