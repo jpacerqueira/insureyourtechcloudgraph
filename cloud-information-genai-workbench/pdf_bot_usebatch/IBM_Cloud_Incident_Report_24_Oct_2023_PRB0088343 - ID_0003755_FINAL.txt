@@ -22,11 +22,6 @@ No specific regions or availability zones were mentioned in the text as being af
 
 The root cause of the outage was a Distributed Denial-of-Service (DDoS) attack that partially bypassed IBM's existing protections.
 
-**Completed and Future Actions**
+**Services Impacted**
 
-IBM has taken responsive action to better identify attacks and mitigate their effects rapidly. The following specific improvements were identified:
-
-* Enhance existing rate limiting rules
-* Add additional traffic volume monitoring and alerting
-
-Note: I have removed all cloud providers other than IBM Cloud, as per your request. I have also removed apostrophes from the text and included full words only.
+* The IBM Cloud Console login page at cloud.ibm.com was unavailable for approximately 5 hours and 30 minutes, impacting customers worldwide.

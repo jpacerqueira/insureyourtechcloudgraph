@@ -2,15 +2,20 @@ Based on the provided text, I can only identify one cloud provider: Amazon AWS.
 
 Here is the information about the outage:
 
-**Cloud Provider:** Amazon AWS
-**Services impacted:** Amazon Elastic Compute Cloud (EC2), Amazon Elastic Block Store (EBS)
-**Regions and Availability Zones affected:** US East Region, a single Availability Zone
+**Outage Details**
 
-The outage occurred on April 21st, starting at an unknown time. The duration of the outage was approximately 11 hours.
+* Cloud Provider: Amazon AWS
+* Services Impacted: Amazon Elastic Compute Cloud (EC2), Amazon Elastic Block Store (EBS)
+* Regions and Availability Zones Affected: US East Region, a single Availability Zone within the region
+* Root Cause of Outage: A subset of EBS volumes in the affected Availability Zone became unable to service read and write operations.
+* Duration of Outage:
+	+ Start Time: April 21st, Noon PM PDT
+	+ End Time: April 22nd, Noon PM PDT (11 hours)
+	+ Total Duration: 1 day, 11 hours, 0 minutes
 
-**Root cause of the outage:** A subset of EBS volumes in the affected Availability Zone became unable to service read and write operations due to a race condition between nodes in the cluster.
-**Services downtime period:** EC2 instances using the affected EBS volumes experienced significantly elevated error rates and latencies. New EBS-backed EC2 launches were being affected by a specific API in the EBS control plane that is only needed for attaching new instances to volumes.
+**Downtime Period**
 
-The outage started at an unknown time, but it was resolved when a change to the EBS control plane fixed the issue at 11:30 AM PDT on April 21st. The total downtime period was approximately 11 hours and 30 minutes.
+* The outage started at Noon PM PDT on April 21st and lasted for approximately 11 hours.
+* Customers experienced elevated error rates until Noon PM PDT on April 21st when attempting to launch new EBS-backed EC2 instances in Availability Zones other than the affected zone.
 
 Note that I have removed all cloud providers not identified in the text, including Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

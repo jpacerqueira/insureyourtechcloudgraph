@@ -1,30 +1,25 @@
-Here are the outages identified in the text for the specified cloud providers:
+Based on the provided text, I've extracted the information for Microsoft Azure:
 
-**Microsoft Azure**
+**Outage Details:**
 
-* Outage: Betw een 13:30 and 16:30 UTC on 19 May 2020
-* Duration: 3 hours and 0 minutes
-* Affected Services: Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services in East US region.
-* Root Cause: Engineer determined that an incident during a planned power maintenance activity at the datacenter caused an impact to a breaker.
-* Downtime Period: 13:30 UTC - 16:30 UTC (3 hours and 0 minutes)
-* Marked as Resolved: Not specified in the text.
+* **Service Impacted:** Storage customers in East US region
+* **Regions Affected:** East US
+* **Availability Zones Affected:** ARM end
+* **Start Time:** Between 11:57 and 14:20 UTC on June 11, 2020
+* **Duration:** Approximately 2 hours and 23 minutes (2 hours 23 minutes)
+* **Root Cause:** Incident during a planned power maintenance activity at the datacenter caused an impact to the networking end.
+* **Downtime Period:** Between 11:57 and 14:20 UTC on June 11, 2020
+* **Resolution Time:** Not specified in the text
 
-**Microsoft Azure**
+**Additional Outages:**
 
-* Outage: Betw een 07:45 and 16:57 UTC on 04 Jun 2020
-* Duration: 9 hours and 12 minutes
-* Affected Services: Deployment failed when attempting to create or delete certain service-based resources via Azure Resource Manager (ARM) in all Public Azure regions.
-* Root Cause: Not specified in the text.
-* Downtime Period: 07:45 UTC - 16:57 UTC (9 hours and 12 minutes)
-* Marked as Resolved: Not specified in the text.
+* **Service Impacted:** Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Synapse Analytics services
+* **Regions Affected:** East US region
+* **Availability Zones Affected:** Not specified in the text
+* **Start Time:** Between 13:30 and 16:30 UTC on May 19, 2020
+* **Duration:** Approximately 3 hours (3 hours)
+* **Root Cause:** Forensic investigation into the breaker that failed, review of breaker maintenance and testing requirements, improving monitoring and alerting visibility when in maintenance modes, ensuring that emergency maintenance activities associated with power switching are monitored closely with automated processes to manage unintended impact.
+* **Downtime Period:** Between 13:30 and 16:30 UTC on May 19, 2020
+* **Resolution Time:** Not specified in the text
 
-**Microsoft Azure**
-
-* Outage: Betw een 11:57 and 14:20 UTC on 11 Jun 2020
-* Duration: 2 hours and 23 minutes
-* Affected Services: Storage customers in East US may have experienced connection failures when trying to access some of their resources hosted in this region. Services with dependencies on the impacted storage resources, such as Virtual Machines, may also have experienced downtime.
-* Root Cause: Engineers determined that an incident during a planned power maintenance activity at the datacenter caused an impact to a breaker.
-* Downtime Period: 11:57 UTC - 14:20 UTC (2 hours and 23 minutes)
-* Marked as Resolved: Not specified in the text.
-
-Note that I have removed Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare from the response as they were not identified in the original text.
+Note that I've removed Cloud Vendors not identified in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare).

@@ -3,19 +3,20 @@ Here is the summary of the outage:
 **Cloud Provider:** Microsoft Azure
 **Outage Details:**
 
-* **Incident Start Date and Time:** August 27 at 02:47 UTC
-* **Duration:** The outage lasted for approximately 1 day, with a brief period of recovery in the morning.
-* **Affected Regions and Availability Zones:** The West US 2 region, which includes multiple datacenters across three Availability Zones on two campuses.
-* **Impacted Services:**
-	+ Azure Virtual Machines (VMs) running Ubuntu 18.04
-	+ Azure Kubernetes Service (AKS)
-	+ Azure Monitor
-	+ Application Insights
-	+ Log Analytics
-	+ Microsoft Sentinel
-* **Root Cause:** A bug in Ubuntu, specifically the unattended-upgrade package, which caused DNS resolution errors.
+* **Incident Duration:** 1 day
+* **Start Time:** August 27 at 02:47 UTC
+* **End Time:** August 28 at 02:47 UTC (approximately 24 hours)
+* **Impacted Services and Regions:**
+	+ West US 2 region, including all three Availability Zones
+	+ Impacted services:
+		- Azur e Kuber netes Service (AKS)
+		- Azur e Monit or
+		- Application Insights
+		- Log Analy tics
+		- Micr osoft Sentinel
+* **Root Cause:** Bug in Ubuntu 18.04, specifically a DNS resolution error caused by an unattended upgrade
 * **Downtime Period:**
-	+ The outage started at 02:47 UTC on August 27 and lasted for approximately 12 hours.
-	+ The downtime period was marked as resolved around 14:47 UTC on August 28.
+	+ West US 2 region: approximately 24 hours (from August 27 at 02:47 UTC to August 28 at 02:47 UTC)
+	+ Individual Availability Zones within the region experienced partial downtime due to utility power outages
 
-Note that I have removed the following cloud providers from the original text: Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+**Resolution Marked:** The outage was marked as resolved on August 28 at 02:47 UTC, after the affected services were restored and the root cause was identified and addressed.

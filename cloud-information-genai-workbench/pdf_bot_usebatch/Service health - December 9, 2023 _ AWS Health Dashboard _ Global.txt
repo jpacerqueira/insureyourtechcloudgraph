@@ -1,223 +1,143 @@
-I can only apply the query to Amazon AWS as per the given context.
+I can only apply the query to Amazon AWS since that is the only cloud provider mentioned in the text.
 
-Here are the outages identified for Amazon AWS:
+Here are the outages for Amazon AWS:
 
 1. Increased API errors rates for mutatable VPC calls
-	* Service impacted: Amazon Elastic Compute Cloud (EC2)
-	* Regions affected: ap-northeast-2
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 3 hours and 13 minutes
-	* Start time: November 10, 2024, 7:55 AM PST
-	* End time: November 10, 2024, 10:13 AM PST
-	* Downtime period: 2 hours and 18 minutes
-	* Marked as resolved: Not specified
+	* Region: us-east-2
+	* Availability Zone: Not specified
+	* Start Time: November 10, 2024, 7:55 AM PST
+	* End Time: November 10, 2024, 10:13 AM PST
+	* Duration: 1 hour and 18 minutes
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 1 hour and 18 minutes.
+	* Resolved: Marked as resolved on November 10, 2024, 10:13 AM PST
 
 2. Increased Errors performing Payments
-	* Service impacted: AWS Billing Console
-	* Regions affected: None specified
-	* Availability zones affected: None specified
-	* Root cause: Not specified
+	* Region: Not specified
+	* Availability Zone: Not specified
+	* Start Time: November 6, 2024, 3:42:30 AM PST
+	* End Time: November 6, 2024, 4:14:32 AM PST
 	* Duration: 1 hour and 32 minutes
-	* Start time: November 6, 2024, 3:42 AM PST
-	* End time: November 6, 2024, 4:14 AM PST
-	* Downtime period: 1 hour
-	* Marked as resolved: Not specified
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 1 hour and 32 minutes.
+	* Resolved: Marked as resolved on November 6, 2024, 4:14:32 AM PST
 
-3. Increased Error rates
-	* Service impacted: AWS Partner Central
-	* Regions affected: None specified
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 25 minutes
-	* Start time: October 29, 2024, 4:13 AM PDT
-	* End time: October 29, 2024, 5:08 AM PDT
-	* Downtime period: 1 hour and 55 minutes
-	* Marked as resolved: Not specified
+3. Increased Error Rates
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Start Time: October 29, 2024, 4:13:56 AM PDT
+	* End Time: October 29, 2024, 5:08:25 AM PDT
+	* Duration: 54 minutes
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 54 minutes.
+	* Resolved: Marked as resolved on October 29, 2024, 5:08:25 AM PDT
 
-4. Increased Login errors
-	* Service impacted: AWS QuickSight
-	* Regions affected: us-east-1
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 8 minutes
-	* Start time: October 25, 2024, 9:56 AM PDT
-	* End time: October 25, 2024, 10:45 AM PDT
-	* Downtime period: 1 hour and 49 minutes
-	* Marked as resolved: Not specified
+4. Increased Login Errors
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Start Time: October 25, 2024, 9:56:38 AM PDT
+	* End Time: October 25, 2024, 10:45:08 AM PDT
+	* Duration: 48 minutes and 30 seconds
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 48 minutes and 30 seconds.
+	* Resolved: Marked as resolved on October 25, 2024, 10:45:08 AM PDT
 
 5. Increased Delays associating Route 53 Private Hosted Zones
-	* Service impacted: Amazon Route 53
-	* Regions affected: us-east-1
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 15 minutes
-	* Start time: July 30, 2024, 3:40 PM PDT
-	* End time: July 30, 2024, 9:55 PM PDT
-	* Downtime period: 6 hours and 15 minutes
-	* Marked as resolved: Not specified
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Start Time: October 24, 2024, 12:01 PM PDT
+	* End Time: October 24, 2024, 1:45:55 PM PDT
+	* Duration: 2 hours and 44 minutes
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 2 hours and 44 minutes.
+	* Resolved: Marked as resolved on October 24, 2024, 1:45:55 PM PDT
 
-6. Elevated delays in newly applied tags
-	* Service impacted: Multiple services
-	* Regions affected: us-east-1
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 30 minutes
-	* Start time: July 12, 2024, 7:46 AM PDT
-	* End time: July 12, 2024, 8:16 AM PDT
-	* Downtime period: 1 hour and 30 minutes
-	* Marked as resolved: Not specified
+6. Management Console Issues
+	* Region: Not specified
+	* Availability Zone: Not specified
+	* Start Time: October 22, 2024, 12:48:52 PM PDT
+	* End Time: October 22, 2024, 2:15:30 PM PDT
+	* Duration: 1 hour and 26 minutes
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 1 hour and 26 minutes.
+	* Resolved: Marked as resolved on October 22, 2024, 2:15:30 PM PDT
 
-7. Network Connectivity Issue
-	* Service impacted: AWS Internet Connectivity
-	* Regions affected: ap-southeast-2
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 1 hour and 17 minutes
-	* Start time: July 10, 2024, 6:19 PM PDT
-	* End time: July 10, 2024, 7:36 AM PDT
-	* Downtime period: 1 hour and 17 minutes
-	* Marked as resolved: Not specified
+7. Increased API Error Rates
+	* Region: us-east-2
+	* Availability Zone: Not specified
+	* Start Time: September 11, 2024, 1:34:44 PM PDT
+	* End Time: September 11, 2024, 2:12:00 PM PDT
+	* Duration: 37 minutes and 16 seconds
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 37 minutes and 16 seconds.
+	* Resolved: Marked as resolved on September 11, 2024, 2:12:00 PM PDT
 
-8. Increased Error Rates
-	* Service impacted: Amazon Elastic Compute Cloud (EC2)
-	* Regions affected: us-east-1
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 33 minutes
-	* Start time: March 26, 2024, 1:39 PM PDT
-	* End time: March 26, 2024, 3:12 PM PDT
-	* Downtime period: 1 hour and 33 minutes
-	* Marked as resolved: Not specified
+8. Increased Latencies and Errors
+	* Region: us-west-2
+	* Availability Zone: Not specified
+	* Start Time: September 25, 2024, 2:05:30 PM PDT
+	* End Time: September 25, 2024, 2:15:32 PM PDT
+	* Duration: 10 minutes and 2 seconds
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 10 minutes and 2 seconds.
+	* Resolved: Marked as resolved on September 25, 2024, 2:15:32 PM PDT
 
-9. Increased Login errors
-	* Service impacted: AWS Identity and Access Management
-	* Regions affected: us-east-1
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 8 minutes
-	* Start time: October 25, 2024, 9:56 AM PDT
-	* End time: October 25, 2024, 10:45 AM PDT
-	* Downtime period: 1 hour and 49 minutes
-	* Marked as resolved: Not specified
+9. Increased Error Rates
+	* Region: eu-south-1
+	* Availability Zone: Not specified
+	* Start Time: September 11, 2024, 1:34:44 PM PDT
+	* End Time: September 11, 2024, 2:12:00 PM PDT
+	* Duration: 37 minutes and 16 seconds
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 37 minutes and 16 seconds.
+	* Resolved: Marked as resolved on September 11, 2024, 2:12:00 PM PDT
 
-10. Increased Delays associating Route 53 Private Hosted Zones to VPC
-	* Service impacted: Amazon Route 53
-	* Regions affected: None specified
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 1 hour and 44 minutes
-	* Start time: October 24, 2024, 12:01 PM PDT
-	* End time: October 24, 2024, 1:45 PM PDT
-	* Downtime period: 1 hour and 44 minutes
-	* Marked as resolved: Not specified
+10. Increased API Error Rates
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Start Time: July 30, 2024, 3:40:53 PM PDT
+	* End Time: July 30, 2024, 9:55:52 PM PDT
+	* Duration: 6 hours and 15 minutes
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 6 hours and 15 minutes.
+	* Resolved: Marked as resolved on July 30, 2024, 9:55:52 PM PDT
 
-11. Management Console Issues
-	* Service impacted: AWS Management Console
-	* Regions affected: None specified
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 27 minutes
-	* Start time: October 22, 2024, 12:48 PM PDT
-	* End time: October 22, 2024, 2:15 PM PDT
-	* Downtime period: 1 hour and 27 minutes
-	* Marked as resolved: Not specified
+11. Elevated delays in newly applied tags
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Start Time: July 12, 2024, 7:46:36 AM PDT
+	* End Time: July 12, 2024, 8:10:56 AM PDT
+	* Duration: 24 minutes and 20 seconds
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 24 minutes and 20 seconds.
+	* Resolved: Marked as resolved on July 12, 2024, 8:10:56 AM PDT
 
-12. Increased API Error rates
-	* Service impacted: Multiple services
-	* Regions affected: us-east-2
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 7 hours and 38 minutes
-	* Start time: October 7, 2024, 12:46 PM PDT
-	* End time: October 7, 2024, 10:24 AM PDT
-	* Downtime period: 9 hours and 38 minutes
-	* Marked as resolved: Not specified
+12. Increased Login Errors
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Start Time: October 25, 2024, 9:56:38 AM PDT
+	* End Time: October 25, 2024, 10:45:08 AM PDT
+	* Duration: 48 minutes and 30 seconds
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 48 minutes and 30 seconds.
+	* Resolved: Marked as resolved on October 25, 2024, 10:45:08 AM PDT
 
-13. Increased Error rates
-	* Service impacted: Multiple services
-	* Regions affected: None specified
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 25 minutes
-	* Start time: October 29, 2024, 4:13 AM PDT
-	* End time: October 29, 2024, 5:08 AM PDT
-	* Downtime period: 1 hour and 55 minutes
-	* Marked as resolved: Not specified
+13. Increased Error Rates
+	* Region: us-east-1
+	* Availability Zone: Not specified
+	* Start Time: October 29, 2024, 4:13:56 AM PDT
+	* End Time: October 29, 2024, 5:08:25 AM PDT
+	* Duration: 54 minutes
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 54 minutes.
+	* Resolved: Marked as resolved on October 29, 2024, 5:08:25 AM PDT
 
-14. Increased Login errors
-	* Service impacted: AWS QuickSight
-	* Regions affected: us-east-1
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 8 minutes
-	* Start time: October 25, 2024, 9:56 AM PDT
-	* End time: October 25, 2024, 10:45 AM PDT
-	* Downtime period: 1 hour and 49 minutes
-	* Marked as resolved: Not specified
-
-15. Increased Delays associating Route 53 Private Hosted Zones
-	* Service impacted: Amazon Route 53
-	* Regions affected: us-east-1
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 15 minutes
-	* Start time: July 30, 2024, 3:40 PM PDT
-	* End time: July 30, 2024, 9:55 PM PDT
-	* Downtime period: 6 hours and 15 minutes
-	* Marked as resolved: Not specified
-
-16. Increased Error rates
-	* Service impacted: Multiple services
-	* Regions affected: None specified
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 33 minutes
-	* Start time: March 26, 2024, 1:39 PM PDT
-	* End time: March 26, 2024, 3:12 PM PDT
-	* Downtime period: 1 hour and 33 minutes
-	* Marked as resolved: Not specified
-
-17. Increased Login errors
-	* Service impacted: AWS Identity and Access Management
-	* Regions affected: us-east-1
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 8 minutes
-	* Start time: October 25, 2024, 9:56 AM PDT
-	* End time: October 25, 2024, 10:45 AM PDT
-	* Downtime period: 1 hour and 49 minutes
-	* Marked as resolved: Not specified
-
-18. Increased Delays associating Route 53 Private Hosted Zones to VPC
-	* Service impacted: Amazon Route 53
-	* Regions affected: None specified
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 1 hour and 44 minutes
-	* Start time: October 24, 2024, 12:01 PM PDT
-	* End time: October 24, 2024, 1:45 PM PDT
-	* Downtime period: 1 hour and 44 minutes
-	* Marked as resolved: Not specified
-
-19. Management Console Issues
-	* Service impacted: AWS Management Console
-	* Regions affected: None specified
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 2 hours and 27 minutes
-	* Start time: October 22, 2024, 12:48 PM PDT
-	* End time: October 22, 2024, 2:15 PM PDT
-	* Downtime period: 1 hour and 27 minutes
-	* Marked as resolved: Not specified
-
-20. Increased API Error rates
-	* Service impacted: Multiple services
-	* Regions affected: us-east-2
-	* Availability zones affected: None specified
-	* Root cause: Not specified
-	* Duration: 7 hours and 38 minutes
-	* Start time: October 7, 2024, 12:46 PM PDT
-	* End time: October 7, 2024, 10:24 AM PDT
-	* Downtime period: 9 hours and 38 minutes
-	* Marked as resolved: Not specified
+14. Increased API errors rates for mutatable VPC calls
+	* Region: us-east-2
+	* Availability Zone: Not specified
+	* Start Time: November 10, 2024, 7:55 AM PST
+	* End Time: November 10, 2024, 10:13 AM PST
+	* Duration: 1 hour and 18 minutes
+	* Root Cause: Not specified
+	* Downtime Period: The service was unavailable for 1 hour and 18 minutes.
+	* Resolved: Marked as resolved on November 10, 2024, 10:13 AM PST

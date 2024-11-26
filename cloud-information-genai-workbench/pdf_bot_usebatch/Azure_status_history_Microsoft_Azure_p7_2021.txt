@@ -1,13 +1,27 @@
-Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the information about the outage:
+Based on the provided text, I will resume the outage for Microsoft Azure.
 
-**Cloud Provider:** Microsoft Azure
-**Services Impacted:** Windows Virtual Desktop infrastructure services
-**Regions and Availability Zones:** Not specified
-**Root Cause of Outage:** Not specified
-**Duration of Outage:**
-	* Start Time: 00:52 UT C on 24 Jul 2021
-	* End Time: Not specified, but it was marked as resolved by 21:20 UT C
-	* Duration: Approximately 4 hours and 30 minutes (from 00:52 UT C to 21:20 UT C)
-**Downtime Period:** The outage started on July 24, 2021, at 00:52 UT C and lasted for approximately 4 hours and 30 minutes. It was marked as resolved by 21:20 UT C.
+**Outage Details:**
 
-Note that the text does not provide information about the specific regions or availability zones affected by the outage, nor does it specify the root cause of the outage.
+* **Incident Duration:** Approximately 70% peak failure rate in some East US metropolitan locations.
+* **Start Time:** Between 14:55 UTC and 19:50 UTC on July 12th, 2021.
+* **End Time:** By 21:20 UTC on July 12th, 2021 (some services restored), and by 00:52 UTC on July 24th, 2021 (all services completed).
+* **Affected Regions/Availability Zones:** East US metropolitan locations.
+* **Affected Services:**
+	+ Azure Front Door
+	+ Azure CDN Standard
+	+ Windows Virtual Desktop
+
+**Root Cause:**
+
+The outage was caused by a periodic background task executed on site that led to the disruption of services.
+
+**Downtime Period:**
+
+* The downtime period for affected services started between 14:55 UTC and 19:50 UTC on July 12th, 2021.
+* The duration of the outage is approximately 4 days, 6 hours, and 15 minutes (from 14:55 UTC to 00:52 UTC on July 24th, 2021).
+
+**Resolution Marked:**
+
+The outage was marked as resolved by 21:20 UTC on July 12th, 2021, with most services recovered. However, the remaining subset of cables was not restored until 00:52 UTC on July 24th, 2021.
+
+Note that I have removed Cloud Vendors not identified in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, and MongoDB) from the response.

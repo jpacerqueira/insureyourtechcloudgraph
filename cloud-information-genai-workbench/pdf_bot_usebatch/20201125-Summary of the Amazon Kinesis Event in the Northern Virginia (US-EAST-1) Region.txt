@@ -17,6 +17,6 @@ Here is the information about the outage:
 * Duration in Hours: 9 hours
 * Duration in Minutes: 63 minutes
 
-**Downtime Period:** The outage started at 2:44 AM PST and ended at 5:47 PM PST, resulting in a downtime period of approximately 9 hours and 3 minutes.
+**Downtime Period:** The outage started at 2:44 AM PST and was resolved when CloudWatch metrics began to recover at 5:47 PM PST.
 
-**Resolution Time:** The outage was marked as resolved when CloudWatch metrics began to recover at 5:47 PM PST.
+Note that the text does not provide information on the specific services impacted by the outage, such as MongoDB, Akamai, or Cloudflare. These services are not mentioned in the provided text.

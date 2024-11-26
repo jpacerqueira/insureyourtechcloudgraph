@@ -1,21 +1,26 @@
-Based on the provided text, I can only identify one cloud provider: Amazon AWS.
+Based on the provided text, I will resume the outage for Amazon AWS.
 
-Here is the information about the outage:
+**Outage Details:**
 
-**Cloud Provider:** Amazon AWS
-**Services impacted:** EC2, EBS, Application Load Balancer, and AWS Web Application Firewall
-**Regions affected:** Tokyo (AP-NORTHEAST-1) Region
-**Availability Zones affected:** Single Availability Zone in the Tokyo (AP-NORTHEAST-1) Region
+* **Cloud Provider:** Amazon AWS
+* **Incident:** A small percentage of EC2 servers in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region shut down due to overheating.
+* **Start Time:** 12:36 PM JST on August 23, 2019
+* **Duration:** The outage lasted for approximately 3 hours and 45 minutes.
 
-**Root cause of the outage:** Control system failure that caused overheating in a single Availability Zone.
+**Impacted Services and Regions/AZs:**
 
-**Duration of the outage:**
-* Start time: 12:36 PM JST on August 23, 2019
-* End time: Not specified in the text
-* Duration: Unknown (not specified in the text)
+* Amazon EC2 in the Tokyo (AP-NORTHEAST-1) Region, specifically in a single Availability Zone.
+* Amazon EBS resources in the affected area of the Availability Zone.
+* Some other services, such as RDS, Redshift, ElastiCache, and Workspaces, would have seen some impact if their underlying EC2 instances were affected.
 
-**Services affected and downtime period:** EC2 instances and EBS volumes in the affected Availability Zone were impaired. The exact duration of the outage is not specified in the text.
+**Root Cause:**
+The root cause of the outage was a control system failure that caused multiple, redundant cooling systems to fail in parts of the affected Availability Zone.
 
-**Resolution date:** Not specified in the text
+**Downtime Period:**
 
-Note that I have removed all cloud providers except Amazon AWS, as per your request. I have also removed apostrophes and included only full words from the original text.
+* The affected cooling systems were restored at 3:21 PM JST.
+* Temperatures in the affected areas began to return to normal after the cooling systems were restored.
+* Power was restored to the affected instances by 6:30 PM JST.
+* A small number of instances and volumes hosted on hardware that was adversely affected by the loss of power and excessive heat took longer to recover.
+
+**Resolved Time:** The outage was marked as resolved at 6:30 PM JST on August 23, 2019.

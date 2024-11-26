@@ -1,3 +1,5 @@
+Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
+
 Here is the resume of the outage:
 
 **Cloud Provider:** Microsoft Azure
@@ -5,34 +7,19 @@ Here is the resume of the outage:
 
 * Azure Log Analytics (impacted customers using West Europe, Southeast Asia, and/or Korea Central regions)
 * Azure Container Registry (impacted customers using East US region)
+* Azure Storage (impacted customers in Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, and/or West US 2)
+* Azure Databricks (impacted customers in Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, and/or West US 2)
 
-**Regions and Availability Zones Affected:**
+**Root Cause:** Unintentional deletion of Azure Traffic Manager profiles for affected storage accounts.
 
-* Australia East
-* Canada Central
-* Canada East
-* Central US
-* East US
-* East US 2
-* Japan East
-* South Central US
-* UAE North
-* West US
-* West US 2
+**Duration:**
 
-**Root Cause of the Outage:** Unintentional deletion of Azure Traffic Manager profiles for affected storage accounts.
-
-**Duration of the Outage:**
-
-* Start Time: 00:50 UTC on November 13, 2024
-* End Time: 12:30 UTC on November 13, 2024
+* Start time: Between 00:50 UTC and 12:30 UTC on November 13, 2024
+* Duration: Approximately 11 hours and 40 minutes
 
 **Downtime Period:**
 
-* Duration: 11 hours and 40 minutes
-* Start Time: 00:50 UTC on November 13, 2024
-* End Time: 12:30 UTC on November 13, 2024
+* The outage started at an unknown time before 00:50 UTC on November 13, 2024.
+* The exact start time is not specified in the text.
 
-**Resolution Date:** Not specified in the text.
-
-Note that I have removed Cloud Vendors not identified in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, MongoDB, Akamai, and Cloudflare) as per your request.
+**Resolved:** The text does not specify when the outage was marked as resolved.

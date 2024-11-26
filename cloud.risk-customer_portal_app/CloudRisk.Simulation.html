@@ -212,7 +212,8 @@
     const optionsForVariable1 = ["Amazon AWS", "Google Cloud GCP", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai", "Macrometa"];
     const optionsForVariable2 = ["AnyCast CloudFlare","CDN CloudFlare","CDN Akamai","Security Akamai","Edge Computing Akamai","CDN Macrometa","Edge Computing Macrometa",
         "Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)",
-        "Azure Machine Learning","Azure AI","Azure AI Search","Azure OpenAI Service","Azure API Management",
+        "Azure Active Directory AAD","Microsoft Entra ID","Azure Active Directory B2C",
+        "Azure Machine Learning","Azure AI","Azure AI Search","Azure OpenAI Service","Azure API Management","Azure Databricks",
         "Azure SQL Managed Instance","Azure SQL Database","Azure Cosmos DB","Azure Database for PostgreSQL","Azure Database for MySQL",
         "Azure Batch","Azure App Service","Azure Functions","Azure PowerBi App","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)",
         "IBM Watson Platform","IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
@@ -223,18 +224,17 @@
         "IBM Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Kubernetes",
         "Red Hat OpenShift on IBM Cloud",
         "Google Cloud VertexAI","Google Cloud Machine Learning","Google Cloud Apigee","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL","Google Cloud SQL",
-        "Google Cloud Bigtable","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud Load Balancing","Google Cloud And Media CDN",
-        "Google Cloud DataStudio","Google Cloud Datalab","Google Cloud Looker Studio Pro","Google Kubernetes Engine (GKE)", 
-        "Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon DataZone",
+        "Google Cloud Bigtable","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud DataStudio","Google Cloud Datalab","Google Cloud Looker Studio Pro",
+        "Google Cloud Load Balancing","Google Cloud And Media CDN","Google Cloud DNS","Google Kubernetes Engine (GKE)", 
+        "Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon Route 53","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon DataZone",
         "Amazon DocumentDB","Amazon DynamoDB","Amazon AWS RDS","Amazon AWS Aurora Serverles","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
         "Amazon Elastic File System","Amazon Elastic Block Store","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
         "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
         "Amazon AWS Step Functions","Amazon Redshift","Amazon AWS Glue","Amazon s3","Amazon Elastic Kubernetes Service",
-        "Salesforce SaaS",
         "Snowflake on AWS","Snowflake on Azure","Snowflake on GCP",
         "MongoDB Atlas","MongoDB Atlas AWS","MongoDB Atlas Azure","MongoDB Atlas GCP","MongoDB Atlas Search","MongoDB Atlas Vector Search","MongoDB Atlas Stream Processing","MongoDB Atlas BI Connector","MongoDB Atlas SQL",
         "Databricks SaaS","Databricks Workspace", "Databricks Mlflow", "Databricks Notebooks",
-        "Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud"
+        "Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud","Salesforce Mulesoft Anypoint Platform"
     ];
 
     // Add new options for regions
@@ -282,7 +282,7 @@
         variableTrioDiv.id = `variableTrio_${trioNumber}`;
 
         variableTrioDiv.innerHTML = `
-            <label for="variable1_${trioNumber}">Set ${trioNumber} - Cloud Vendor:</label>
+            <label for="variable1_${trioNumber}">Set ${trioNumber} - Cloud Provider (cloud vendor):</label>
             <select id="variable1_${trioNumber}">
                 <option value="">Select a vendor</option>
                 ${dropdownOptions1}
@@ -298,6 +298,14 @@
             <select id="variable3_${trioNumber}">
                 ${createRegionOptions()}
             </select>
+
+            <label for="monthlyCost_${trioNumber}">Monthly Service estimate cost ($):</label>
+            <input type="number" 
+                   id="monthlyCost_${trioNumber}" 
+                   min="1" 
+                   max="10000" 
+                   value="1000"
+                   placeholder="Enter value between $1-$10,000">
         `;
 
         container.appendChild(variableTrioDiv);
@@ -343,7 +351,8 @@
             sla_deviation: [],
             traffic_coef: [],
             usage_risk: [],
-            service_sla: [],
+            service_sla_tier1: [],
+            service_credit_back_tier1: [],
             annual_downtime: []
         };
 
@@ -359,7 +368,7 @@
                             <div class="value" id="customer-sla-usage"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median SLA Deviation Risk</h4>
+                            <h4>Rating Median Cloud.Risk SLA Deviation</h4>
                             <div class="value" id="customer-sla-deviation"></div>
                         </div>
                     </div>
@@ -369,14 +378,18 @@
                             <div class="value" id="customer-traffic-coef"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median Usage Risk Rating</h4>
+                            <h4>Rating Median Cloud.Risk Usage Risk</h4>
                             <div class="value" id="customer-usage-risk"></div>
                         </div>
                     </div>
                     <div class="metric-column">
                         <div class="metric">
-                            <h4>Median Service SLA %</h4>
-                            <div class="value" id="customer-service-sla"></div>
+                            <h4>Median Service SLA Tier 1 %</h4>
+                            <div class="value" id="customer-service-sla-tier1"></div>
+                        </div>
+                        <div class="metric">
+                            <h4>Median Service Credit Back Tier 1 %</h4>
+                            <div class="value" id="customer-service-credit-back-tier1"></div>
                         </div>
                         <div class="metric">
                             <h4>Median Annual Downtime (minutes)</h4>
@@ -385,7 +398,7 @@
                     </div>
                 </div>
 
-                <h2>Cloud Vendor Analysis</h2>
+                <h2>Cloud Provider Analysis</h2>
                 <div id="vendor-metrics"></div>
 
                 <h2>Individual Services Analysis</h2>
@@ -404,8 +417,8 @@
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Service Credit Back (%):</strong> Measures the percentage credit back the cloud vendor gives in credit , if SLA the Service has not been meet monthly or Year-to-date . A value of 10% means the Service provider, if requested, will give 10% credit back.</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA Usage %:</strong> Measures the percentage of SLA the Service has used Year-to-date . A value of 100% means the Service has used 100% of its SLA .</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Traffic Coef %:</strong> Measures the percentage of time the Service was down or degraded Year-to-Date. A value of 0% means the service was never down or degraded. A value of 100% means the service was always down or degraded.</li>
-                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA Deviation Risk Rating:</strong> Indicates Risk based on SLA discrepancies. Measures the likelihood of service level agreement deviations (0.0-999.0, where higher values indicate greater risk).</li>
-                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Usage Risk Rating:</strong> Indicates the operational risk based on service usage patterns (0.0-999.0, where higher values indicate greater risk).</li>
+                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA Deviation Risk Rating:</strong> A Rating that indicates Risk based on SLA discrepancies. Measures the likelihood of service level agreement deviations (0.0-999.0, where higher values indicate greater risk).</li>
+                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Usage Risk Rating:</strong> A Rating that indicates the operational risk based on service usage patterns (0.0-999.0, where higher values indicate greater risk).</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Outage Remarks:</strong> AI-generated insights about potential service outages, disruptions and historical performance issues.</li>
                 </ul>
             </div>`;
@@ -432,7 +445,8 @@
                     customerMetrics.sla_deviation.push(parseFloat(riskData.sla_deviation_connected_risk_0_999));
                     customerMetrics.traffic_coef.push(parseFloat(riskData.service_traffic_coef_by_percent_down));
                     customerMetrics.usage_risk.push(parseFloat(riskData.usage_connected_risk_0_999));
-                    customerMetrics.service_sla.push(parseFloat(riskData.service_sla_0_99_9999_for_60min_times_24h_365days));
+                    customerMetrics.service_sla_tier1.push(parseFloat(riskData.service_sla_0_99_9999_for_tier1));
+                    customerMetrics.service_credit_back_tier1.push(parseFloat(riskData.percentage_service_credit_back_tier1));
                     customerMetrics.annual_downtime.push(parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes));
 
                     // Process metrics for vendor
@@ -442,7 +456,8 @@
                             sla_deviation: [],
                             traffic_coef: [],
                             usage_risk: [],
-                            service_sla: [],
+                            service_sla_tier1: [],
+                            service_credit_back_tier1: [],
                             annual_downtime: []
                         };
                     }
@@ -452,11 +467,12 @@
                     vendorMetrics[vendor].sla_deviation.push(parseFloat(riskData.sla_deviation_connected_risk_0_999));
                     vendorMetrics[vendor].traffic_coef.push(parseFloat(riskData.service_traffic_coef_by_percent_down));
                     vendorMetrics[vendor].usage_risk.push(parseFloat(riskData.usage_connected_risk_0_999));
-                    vendorMetrics[vendor].service_sla.push(parseFloat(riskData.service_sla_0_99_9999_for_60min_times_24h_365days));
+                    vendorMetrics[vendor].service_sla_tier1.push(parseFloat(riskData.service_sla_0_99_9999_for_tier1));
+                    vendorMetrics[vendor].service_credit_back_tier1.push(parseFloat(riskData.percentage_service_credit_back_tier1));
                     vendorMetrics[vendor].annual_downtime.push(parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes));
 
                     // Add service analysis
-                    addServiceAnalysis(service, riskData);
+                    addServiceAnalysis(service, riskData, i);
                 } catch (error) {
                     console.error(`Error processing ${service}:`, error);
                 }
@@ -484,7 +500,8 @@
         document.getElementById("customer-sla-deviation").textContent = calculateMedian(metrics.sla_deviation).toFixed(2);
         document.getElementById("customer-traffic-coef").textContent = `${calculateMedian(metrics.traffic_coef).toFixed(2)}%`;
         document.getElementById("customer-usage-risk").textContent = calculateMedian(metrics.usage_risk).toFixed(2);
-        document.getElementById("customer-service-sla").textContent = `${calculateMedian(metrics.service_sla).toFixed(2)}%`;
+        document.getElementById("customer-service-sla-tier1").textContent = `${calculateMedian(metrics.service_sla_tier1).toFixed(2)}%`;
+        document.getElementById("customer-service-credit-back-tier1").textContent = `${calculateMedian(metrics.service_credit_back_tier1).toFixed(2)}%`;
         document.getElementById("customer-annual-downtime").textContent = calculateMedian(metrics.annual_downtime).toFixed(2);
     }
 
@@ -503,7 +520,7 @@
                                 <div class="value">${calculateMedian(metrics.sla_usage).toFixed(2)}%</div>
                             </div>
                             <div class="metric">
-                                <h4>Median SLA Deviation Risk</h4>
+                                <h4>Rating Median Cloud.Risk SLA Deviation</h4>
                                 <div class="value">${calculateMedian(metrics.sla_deviation).toFixed(2)}</div>
                             </div>
                         </div>
@@ -513,14 +530,18 @@
                                 <div class="value">${calculateMedian(metrics.traffic_coef).toFixed(2)}%</div>
                             </div>
                             <div class="metric">
-                                <h4>Median Usage Risk Rating</h4>
+                                <h4>Rating Median Cloud.Risk Usage</h4>
                                 <div class="value">${calculateMedian(metrics.usage_risk).toFixed(2)}</div>
                             </div>
                         </div>
                         <div class="metric-column">
                             <div class="metric">
-                                <h4>Median Service SLA %</h4>
-                                <div class="value">${calculateMedian(metrics.service_sla).toFixed(2)}%</div>
+                                <h4>Median Service SLA Tier 1 %</h4>
+                                <div class="value">${calculateMedian(metrics.service_sla_tier1).toFixed(2)}%</div>
+                            </div>
+                            <div class="metric">
+                                <h4>Median Service Credit Back Tier 1 %</h4>
+                                <div class="value">${calculateMedian(metrics.service_credit_back_tier1).toFixed(2)}%</div>
                             </div>
                             <div class="metric">
                                 <h4>Median Annual Downtime (minutes)</h4>
@@ -533,31 +554,35 @@
         });
     }
 
-    function addServiceAnalysis(service, riskData) {
+    function addServiceAnalysis(service, riskData, trioNumber) {
         const servicesContainer = document.getElementById("services-analysis");
         
-        // Create service analysis section
-        const serviceSection = document.createElement("div");
-        serviceSection.className = "vendor-section";
-        
+        // Get the monthly cost from the input
+        const monthlyCostInput = document.getElementById(`monthlyCost_${trioNumber}`);
+        const monthy_customer_service_spent = parseFloat(monthlyCostInput?.value || 1000.00);
+
         // Calculate estimated credit money back
         let estimatedCreditBack = 0.0;
         const slaUsage = parseFloat(riskData.service_sla_usage_percentage);
-        const creditBackPercentage = parseFloat(riskData.percentage_service_credit_back || 0);
+        const creditBackPercentage = parseFloat(riskData.percentage_service_credit_back_tier1 || 0);
         if (slaUsage > 100) {
-            estimatedCreditBack = ((slaUsage - 100) / 100) * (creditBackPercentage / 100) * 1000;
-            estimatedCreditBack = Math.min(Math.round(estimatedCreditBack * 100) / 100, 1000);
+            estimatedCreditBack = ((slaUsage - 100) / 100) * (creditBackPercentage / 100) * monthy_customer_service_spent;
+            estimatedCreditBack = Math.min(Math.round(estimatedCreditBack * 100) / 100, monthy_customer_service_spent);
         }
 
         // Warning message for max credit back
-        const warningMessage = estimatedCreditBack >= 1000 ? 
-            "<div style='color: #ff6b6b; margin-top: 5px;'>Warning: Max. credit back was above 1000.00 per month</div>" : "";
+        const warningMessage = estimatedCreditBack >= monthy_customer_service_spent ? 
+            `<div class='value' style='color: #ff6b6b; margin-top: 5px;'>Warning: Max. credit back was above the $${monthy_customer_service_spent.toFixed(2)} of service estimated cost per month</div>` : "";
 
         // Format AI Analysis text with line breaks
         const aiAnalysis = riskData.remarks_outage_genai
             ? riskData.remarks_outage_genai.split('\n').join('<br>')
             : 'No analysis available';
 
+        // Create service analysis section
+        const serviceSection = document.createElement("div");
+        serviceSection.className = "vendor-section";
+        
         serviceSection.innerHTML = `
             <h3>Risk Analysis for ${service}</h3>
             <div class="metrics-grid">
@@ -567,7 +592,7 @@
                         <div class="value">${riskData.service_sla_usage_percentage}</div>
                     </div>
                     <div class="metric">
-                        <h4>SLA Deviation Risk</h4>
+                        <h4>Rating Cloud.Risk SLA Deviation</h4>
                         <div class="value">${riskData.sla_deviation_connected_risk_0_999}</div>
                     </div>
                 </div>
@@ -577,7 +602,7 @@
                         <div class="value">${riskData.service_traffic_coef_by_percent_down}</div>
                     </div>
                     <div class="metric">
-                        <h4>Usage Risk Rating</h4>
+                        <h4>Rating Cloud.Risk Usage </h4>
                         <div class="value">${riskData.usage_connected_risk_0_999}</div>
                     </div>
                 </div>
@@ -593,15 +618,15 @@
                 </div>
                 <div class="metric-column">
                     <div class="metric">
-                        <h4>Service SLA (99.99999%)</h4>
-                        <div class="value">${riskData.service_sla_0_99_9999_for_60min_times_24h_365days}%</div>
+                        <h4>Service SLA Tier 1</h4>
+                        <div class="value">${riskData.service_sla_0_99_9999_for_tier1}%</div>
                     </div>
                     <div class="metric">
-                        <h4>Service Credit Back (%)</h4>
-                        <div class="value">${riskData.percentage_service_credit_back}%</div>
+                        <h4>Service Credit Back Tier 1</h4>
+                        <div class="value">${riskData.percentage_service_credit_back_tier1}%</div>
                     </div>
                     <div class="metric">
-                        <h4>Monthly Credit Back max. per $1,000</h4>
+                        <h4>Monthly Credit Back max. of Service</h4>
                         <div class="value">$${estimatedCreditBack}</div>
                         ${warningMessage}
                     </div>

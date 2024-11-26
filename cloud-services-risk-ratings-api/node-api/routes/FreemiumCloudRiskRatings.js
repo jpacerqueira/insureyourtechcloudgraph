@@ -37,8 +37,10 @@ router.get('/freemium/fetch/service/id/:id', async function (req, res, next) {
         connection = await db.connect();
         var id = req.params.id;
         const result = await connection.query(
-            `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region, service_sla_0_99_9999_for_60min_times_24h_365days,
-            percentage_service_credit_back, expected_annual_service_minutes_down,
+            `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region, 
+            service_sla_0_99_9999_for_tier1, service_sla_0_99_9999_for_tier2, service_sla_0_99_9999_for_tier3, service_sla_0_99_9999_for_tier4,
+            percentage_service_credit_back_tier1, percentage_service_credit_back_tier2, percentage_service_credit_back_tier3, percentage_service_credit_back_tier4,
+            expected_annual_service_minutes_down,
             webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
             actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage, service_traffic_coef_by_percent_down,
             sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, annual_outage_time_days_hours_mins, remarks_outage_genai 
@@ -70,8 +72,10 @@ router.get('/freemium/fetch/service/service_provider/:service_provider', async f
         connection = await db.connect();
         var service_provider = req.params.service_provider;
         const result = await connection.query(
-            `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region, service_sla_0_99_9999_for_60min_times_24h_365days,
-            percentage_service_credit_back, expected_annual_service_minutes_down,
+            `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region,
+            service_sla_0_99_9999_for_tier1, service_sla_0_99_9999_for_tier2, service_sla_0_99_9999_for_tier3, service_sla_0_99_9999_for_tier4,
+            percentage_service_credit_back_tier1, percentage_service_credit_back_tier2, percentage_service_credit_back_tier3, percentage_service_credit_back_tier4,
+            expected_annual_service_minutes_down,
             webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
             actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage, service_traffic_coef_by_percent_down,
             sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, annual_outage_time_days_hours_mins, remarks_outage_genai  
@@ -103,8 +107,10 @@ router.get('/freemium/fetch/service/service_name/:service_name', async function 
         connection = await db.connect();
         var service_name = req.params.service_name;
         const result = await connection.query(
-            `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region, service_sla_0_99_9999_for_60min_times_24h_365days,
-            percentage_service_credit_back, expected_annual_service_minutes_down,
+            `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region,
+            service_sla_0_99_9999_for_tier1, service_sla_0_99_9999_for_tier2, service_sla_0_99_9999_for_tier3, service_sla_0_99_9999_for_tier4,
+            percentage_service_credit_back_tier1, percentage_service_credit_back_tier2, percentage_service_credit_back_tier3, percentage_service_credit_back_tier4, 
+            expected_annual_service_minutes_down,
             webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
             actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage, service_traffic_coef_by_percent_down,
             sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, annual_outage_time_days_hours_mins, remarks_outage_genai 
@@ -141,8 +147,10 @@ router.get('/freemium/fetch/service/service_name/:service_name/global_or_by_regi
             return;
         }
         const result = await connection.query(
-            `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region, service_sla_0_99_9999_for_60min_times_24h_365days,
-            percentage_service_credit_back, expected_annual_service_minutes_down,
+            `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region,
+            service_sla_0_99_9999_for_tier1, service_sla_0_99_9999_for_tier2, service_sla_0_99_9999_for_tier3, service_sla_0_99_9999_for_tier4,
+            percentage_service_credit_back_tier1, percentage_service_credit_back_tier2, percentage_service_credit_back_tier3, percentage_service_credit_back_tier4,
+            expected_annual_service_minutes_down,
             webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
             actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage, service_traffic_coef_by_percent_down,
             sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, annual_outage_time_days_hours_mins, remarks_outage_genai 

@@ -1,20 +1,15 @@
-I can only apply the query to Microsoft Azure as per the provided context.
+I can only apply this query to Microsoft Azure based on the provided text.
 
-Here is the resume of the outage:
+Here are the outages identified for Microsoft Azure:
 
-**Outage Details**
+1. **Azure DDoS Protection**
+	* Region: Global
+	* Availability Zones: N/A (global service)
+	* Services impacted: Azure services globally
+	* Root cause: Not specified in the text
+	* Duration: 2 days, 12 hours, and 30 minutes
+	* Start date: Not specified in the text
+	* Downtime period: 48 hours, 72 hours, and 90 minutes
+	* Marked as resolved: Not specified in the text
 
-* **Incident**: Azur e status page
-* **Duration**: 32 seconds
-* **Start Time**: 32 seconds ago
-* **End Time**: Not specified
-* **Affected Services**: Azur e status page, Azur e Service Health
-* **Regions and Availability Zones**: Central US, East US, North Central US, South Central US, West Central US, West US, Canada East, Canada Central, Brazil South
-* **Services Impacted**:
-	+ Azur e Service Health
-	+ Azur e status page
-* **Root Cause**: Not specified
-* **Downtime Period**: 32 seconds
-* **Resolution Time**: Not specified
-
-Note: The outage details are based on the provided context and may not be comprehensive or up-to-date.
+Note that I removed all cloud vendors not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

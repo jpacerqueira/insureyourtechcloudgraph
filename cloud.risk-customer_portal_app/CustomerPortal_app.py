@@ -119,15 +119,16 @@ st.subheader("Cloud.Risk.Graph - Analysis")
 
 # Define services dictionary before using it
 services = {
-    "Amazon AWS": ["Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon DataZone",
+    "Amazon AWS": ["Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon Route 53","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon DataZone",
         "Amazon DocumentDB","Amazon DynamoDB","Amazon AWS RDS","Amazon AWS Aurora Serverles","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
         "Amazon Elastic File System","Amazon Elastic Block Store","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
         "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
         "Amazon AWS Step Functions","Amazon Redshift","Amazon AWS Glue","Amazon s3","Amazon Elastic Kubernetes Service"],
     "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Machine Learning","Google Cloud Apigee API","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL","Google Cloud SQL",
-        "Google Cloud Bigtable","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud Load Balancing","Google Cloud And Media CDN",
-        "Google Cloud DataStudio", "Google Cloud Datalab" ,"Google Cloud Looker Studio Pro","Google Kubernetes Engine (GKE)"],
-    "Microsoft Azure": ["Azure Machine Learning","Azure AI","Azure AI Search","Azure OpenAI Service","Azure API Management",
+        "Google Cloud Bigtable","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud DataStudio", "Google Cloud Datalab" ,"Google Cloud Looker Studio Pro",
+        "Google Cloud Load Balancing","Google Cloud And Media CDN","Google Cloud DNS","Google Kubernetes Engine (GKE)"],
+    "Microsoft Azure": ["Azure Active Directory AAD","Microsoft Entra ID","Azure Active Directory B2C",
+                        "Azure Machine Learning","Azure AI","Azure AI Search","Azure OpenAI Service","Azure API Management","Azure Databricks",
                         "Azure SQL Managed Instance","Azure SQL Database","Azure Cosmos DB","Azure Database for PostgreSQL","Azure Database for MySQL",
                         "Azure Batch","Azure App Service","Azure Functions","Azure PowerBi App","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)"],
     "IBM Cloud": ["IBM Watson Platform","IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
@@ -140,7 +141,7 @@ services = {
     "Oracle Cloud OCI": ["Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)"],
     "Snowflake": ["Snowflake on AWS","Snowflake on Azure","Snowflake on GCP"],
     "Databricks": ["Databricks SaaS","Databricks Workspace", "Databricks Mlflow", "Databricks Notebooks"],
-    "Salesforce": ["Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud"],
+    "Salesforce": ["Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud","Salesforce Mulesoft Anypoint Platform"],
     "MongoDB": [ "MongoDB Atlas","MongoDB Atlas AWS","MongoDB Atlas Azure","MongoDB Atlas GCP","MongoDB Atlas Search","MongoDB Atlas Vector Search","MongoDB Atlas Stream Processing","MongoDB Atlas BI Connector","MongoDB Atlas SQL"],
     "Cloudflare": ["AnyCast CloudFlare","CDN CloudFlare", "Cloudflare DNS", "Cloudflare DDoS Protection"],
     "Akamai": ["CDN Akamai", "Edge Computing Akamai", "Security Akamai"],
@@ -164,6 +165,22 @@ for vendor in selected_vendors:
 
 max_service_selections = 100
 selected_services = st.multiselect("Select Services (up to 100)", all_available_services, max_selections=max_service_selections)
+
+# Add monthly cost estimates for each selected service
+service_costs = {}
+if selected_services:
+    st.subheader("Monthly Service Cost Estimates")
+    cols = st.columns(3)  # Create 3 columns for better layout
+    for idx, service in enumerate(selected_services):
+        with cols[idx % 3]:
+            service_costs[service] = st.number_input(
+                f"Monthly cost estimate for {service} ($)",
+                min_value=1.0,
+                max_value=10000.0,
+                value=1000.0,
+                step=100.0,
+                key=f"cost_{service}"
+            )
 
 # Region type selection
 region_type = st.selectbox("Select Region Type", ["global", "regional"])
@@ -209,13 +226,14 @@ if st.button("Analyze Cloud Risk"):
                 customer_traffic_coef_values.append(traffic_coef)
                 customer_usage_risk_values.append(usage_risk)
                 
-                # Add these lines to collect new metrics
-                service_sla = float(risk_data.get('service_sla_0_99_9999_for_60min_times_24h_365days', 0.0).rstrip('%').replace(',', '.'))
+                # Update these lines to use new API fields
+                service_sla = float(risk_data.get('service_sla_0_99_9999_for_tier1', 0.0).rstrip('%').replace(',', '.'))
+                service_credit_back = float(risk_data.get('percentage_service_credit_back_tier1', 0.0).rstrip('%').replace(',', '.'))
                 annual_downtime = float(risk_data.get('webscraper_annual_period_service_down_per_year_in_minutes', 0.0))
                 customer_service_sla_values.append(service_sla)
                 customer_annual_downtime_values.append(annual_downtime)
                 
-                # Create service node
+                # Update service node creation
                 cypher_query += f"""
 CREATE ({service_id}:TECHNOLOGY_SERVICE {{
     name: '{service}',
@@ -224,8 +242,8 @@ CREATE ({service_id}:TECHNOLOGY_SERVICE {{
     traffic_coefficient: '{risk_data.get('service_traffic_coef_by_percent_down', 0.0)}',
     usage_risk: '{risk_data.get('usage_connected_risk_0_999', 0.0)}',
     annual_downtime_minutes: '{risk_data.get('webscraper_annual_period_service_down_per_year_in_minutes', 0.0)}',
-    service_sla: '{risk_data.get('service_sla_0_99_9999_for_60min_times_24h_365days', 0.0)}',
-    percentage_service_credit_back: '{risk_data.get('percentage_service_credit_back', 0.0)}'
+    service_sla_tier1: '{risk_data.get('service_sla_0_99_9999_for_tier1', 0.0)}',
+    service_credit_back_tier1: '{risk_data.get('percentage_service_credit_back_tier1', 0.0)}'
 }})
 """
                 # Find vendor for this service
@@ -270,7 +288,7 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                         traffic_coef = float(risk_data.get('service_traffic_coef_by_percent_down', 0.0).rstrip('%').replace(',', '.'))
                         usage_risk = float(risk_data.get('usage_connected_risk_0_999', 0.0).rstrip('%').replace(',', '.'))
                         # Add service_sla to vendor metrics
-                        service_sla = float(risk_data.get('service_sla_0_99_9999_for_60min_times_24h_365days', 0.0).rstrip('%').replace(',', '.'))
+                        service_sla = float(risk_data.get('service_sla_0_99_9999_for_tier1', 0.0).rstrip('%').replace(',', '.'))
                         vendor_metrics[vendor].setdefault('service_sla', []).append(service_sla)
                         
                         vendor_metrics[vendor]['sla_usage'].append(sla_usage)
@@ -301,10 +319,10 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                 col1, col2, col3 = st.columns(3)
                 with col1:
                     st.metric("Median SLA Usage %", f"{vendor_median_sla_usage:.2f}%")
-                    st.metric("Median SLA Deviation Risk", f"{vendor_median_sla_deviation:.2f}")
+                    st.metric("Rating Median Cloud.Risk SLA Deviation", f"{vendor_median_sla_deviation:.2f}")
                 with col2:
                     st.metric("Median Traffic Coefficient %", f"{vendor_median_traffic_coef:.2f}%")
-                    st.metric("Median Usage Risk Rating", f"{vendor_median_usage_risk:.2f}")
+                    st.metric("Rating Median Cloud.Risk Usage Risk", f"{vendor_median_usage_risk:.2f}")
                 with col3:
                     st.metric("Median Service SLA %", f"{vendor_median_sla:.2f}%")
                     st.metric("Median Annual Downtime (minutes)", f"{vendor_median_annual_downtime:.2f}")
@@ -335,10 +353,10 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
             col1, col2, col3 = st.columns(3)
             with col1:
                 st.metric("Median SLA Usage %", f"{customer_median_sla_usage:.2f}%")
-                st.metric("Median SLA Deviation Risk", f"{customer_median_sla_deviation:.2f}")
+                st.metric("Rating Median Cloud.Risk SLA Deviation", f"{customer_median_sla_deviation:.2f}")
             with col2:
                 st.metric("Median Traffic Coefficient %", f"{customer_median_traffic_coef:.2f}%")
-                st.metric("Median Usage Risk Rating", f"{customer_median_usage_risk:.2f}")
+                st.metric("Rating Median Cloud.Risk Usage Risk", f"{customer_median_usage_risk:.2f}")
             with col3:
                 st.metric("Median Service SLA %", f"{customer_median_service_sla:.2f}%")
                 st.metric("Median Annual Downtime (minutes)", f"{customer_median_annual_downtime:.2f}")
@@ -413,32 +431,32 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
 
                     # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
                     # Formula: when SLA usage is 100% or more, then the credit back is XXX%-100% of the SLA usage , divide by 12 for monthy approach
-                    estimated_cloud_services_credit_money_back = 0.0 if float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%')) <= 100 else (float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%'))-100)/100*float(risk_data.get("percentage_service_credit_back", 0.0).rstrip('%'))/100*1000
+                    estimated_cloud_services_credit_money_back = 0.0 if float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%')) <= 100 else (float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%'))-100)/100*float(risk_data.get("percentage_service_credit_back_tier1", 0.0).rstrip('%'))/100*service_costs[service]
                     estimated_cloud_services_credit_money_back = round(estimated_cloud_services_credit_money_back, 2)
                     # Limit the credit back to 1000.00 per month
                     # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
                     # Open question: what is the max. credit back per month?
                     # TODO: add 1000 to the formula when ready (ASK_CUSTOMER_HOW_MUCH=1000)
                     # Set Warning if max. credit back was above 1000.00 per month
-                    warning_max_credit_back = "**Warning: Max. credit back was above 1000.00 per month**" if estimated_cloud_services_credit_money_back > 1000.00 else ""
-                    estimated_cloud_services_credit_money_back = min(estimated_cloud_services_credit_money_back, 1000.00)
+                    warning_max_credit_back = f"**Warning: Max. credit back was above the {service_costs[service]} of service estimated cost per month**" if estimated_cloud_services_credit_money_back > service_costs[service] else ""
+                    estimated_cloud_services_credit_money_back = min(estimated_cloud_services_credit_money_back, service_costs[service])
 
                     with col1:
                         st.metric("SLA Usage %", risk_data.get("service_sla_usage_percentage", "N/A"))
-                        st.metric("SLA Deviation Risk", risk_data.get("sla_deviation_connected_risk_0_999", "N/A"))
+                        st.metric("Rating Cloud.Risk SLA Deviation", risk_data.get("sla_deviation_connected_risk_0_999", "N/A"))
                     
                     with col2:
                         st.metric("Traffic Coefficient %", risk_data.get("service_traffic_coef_by_percent_down", "N/A"))
-                        st.metric("Usage Risk Rating", risk_data.get("usage_connected_risk_0_999", "N/A"))
+                        st.metric("Rating Cloud.Risk Usage", risk_data.get("usage_connected_risk_0_999", "N/A"))
                     
                     with col3:
                         st.metric("Annual Downtime (minutes)", risk_data.get("webscraper_annual_period_service_down_per_year_in_minutes", "N/A"))
                         st.metric("By SLA Expected Annual Downtime (minutes)", risk_data.get("expected_annual_service_minutes_down", "N/A"))
                     
                     with col4:
-                        st.metric("Service SLA (99.99999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A") +"%")
-                        st.metric("Service Credit Back (%)", str(risk_data.get("percentage_service_credit_back", "N/A"))+"%")
-                        st.metric("Monthly Credit Back max. per $1.000 ", "$"+str(estimated_cloud_services_credit_money_back))
+                        st.metric("Service SLA Tier 1 (99.99999%)", risk_data.get("service_sla_0_99_9999_for_tier1", "N/A") +"%")
+                        st.metric("Service Credit Back Tier 1 (%)", str(risk_data.get("percentage_service_credit_back_tier1", "N/A"))+"%")
+                        st.metric("Monthly Credit Back max. for Service ", "$"+str(estimated_cloud_services_credit_money_back))
                         st.caption(warning_max_credit_back)
                     
                     st.text_area(f"AI Analysis - {service}", risk_data.get("remarks_outage_genai", "No analysis available"), height=100)

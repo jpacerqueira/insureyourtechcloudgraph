@@ -5,15 +5,14 @@ Here is the information about the outage:
 **Outage Details**
 
 * **Cloud Provider:** Microsoft Azure
+* **Region/Availability Zone:** Not specified
 * **Services Impacted:** Azure SQL Database and Managed Instance
-* **Regions and Availability Zones:** The outage affected various control and data plane clusters in different regions.
 * **Root Cause of Outage:** Storage availability failures
 * **Duration of Outage:**
-	+ Time started: Within one minute of SQL unavailability
-	+ Time ended: After failover policies were initiated, geo-secondarity was elevated as the new primary, and failover groups (FOG) endpoint was updated to point to the new primary.
-* **Time Started:** 12:30 CST (China Standard Time)
-* **Duration in Days, Hours, and Minutes:** Approximately 2 hours
-* **Downtime Period:** The downtime period started after the incident began and ended when failover policies were initiated. The exact duration of the downtime is not specified.
-* **Time Marked as Resolved:** Not explicitly stated, but it can be inferred that the outage was resolved once failover policies were initiated.
+	+ Total duration: 1 hour
+	+ Duration in days, hours, and minutes: 0 days, 1 hour, 0 minutes
+* **Downtime Period:** The geo-secondar y was elevated as the new primary, and the failover group (FOG) endpoint was updated to point to the new primary.
+* **Start Time of Outage:** Not specified
+* **Resolution Time:** Within one minute of SQL unavailability, investigation and mitigation workstreams were established, and customers were advised to consider putting in action their disaster recovery (DR) strategies.
 
-Note: There are no mentions of Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare in the provided text.
+Note that there is no information about other cloud providers such as Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare.

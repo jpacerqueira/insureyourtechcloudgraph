@@ -1,30 +1,64 @@
-Based on the provided text, I will resume the outage for Amazon AWS.
+Based on the provided text, I will resume the outage for the following cloud providers:
 
-**Affected Services:** 
-- Lambda function invocations
-- Amazon STS
-- AWS Management Console
-- Amazon EKS
-- Amazon Connect
-- Amazon EventBridge
+* Amazon AWS
+* Microsoft Azure is not mentioned in the text so it will be excluded from this query.
+* Oracle OCI is not mentioned in the text so it will be excluded from this query.
 
-**Regions and Availability Zones:**
-- Northern Virginia (US-EAST-1) Region
+Here are the details of the outage for each affected service:
 
-**Root Cause of Outage:** 
-The root cause of the outage was a latent software defect in the Lambda frontend.
+**Amazon AWS**
 
-**Duration of Outage:**
-- Start Time: 11:49 AM PDT
-- End Time: 3:37 PM PDT
-- Duration: 3 hours and 48 minutes
-- Date Range: June 13th, 2023
+* Outage started: June 13th, 2023 at 11:49 AM PDT
+* Duration: 4 hours and 48 minutes
+* Root cause: Latent software defect in the Lambda frontend
+* Services impacted:
+	+ Lambda function invocations in Northern Virginia (US-EAST-1) Region
+	+ Amazon STS
+	+ AWS Management Console
+	+ Amazon EKS
+	+ Amazon Connect
+	+ Amazon EventBridge
+* Downtime period: 4 hours and 48 minutes, starting from 11:49 AM PDT to 3:37 PM PDT
 
-**Services Downtime Period:** 
-- AWS Management Console: 11:49 AM - 3:37 PM PDT (5 hours and 48 minutes)
-- Amazon Connect: 11:49 AM - 1:40 PM PDT (3 hours and 51 minutes)
-- AWS Support Center: 11:49 AM - 2:38 PM PDT (2 hours and 49 minutes)
+**Amazon AWS Lambda**
 
-**Resolution Time:** 
-- Lambda function invocations fully recovered at 1:45 PM PDT
-- All affected services fully recovered by 3:37 PM PDT
+* Outage started: June 13th, 2023 at 11:49 AM PDT
+* Duration: 4 hours and 48 minutes
+* Root cause: Latent software defect in the Lambda frontend
+* Services impacted:
+	+ Lambda function invocations in Northern Virginia (US-EAST-1) Region
+	+ Asynchronous events from various event sources
+* Downtime period: 4 hours and 48 minutes, starting from 11:49 AM PDT to 3:37 PM PDT
+
+**Amazon AWS Management Console**
+
+* Outage started: June 13th, 2023 at 11:49 AM PDT
+* Duration: 2 hours and 48 minutes
+* Root cause: Increased error rates for Lambda function invocations in Northern Virginia (US-EAST-1) Region
+* Services impacted:
+	+ AWS Management Console
+	+ Amazon Connect
+	+ AWS Support Center
+* Downtime period: 2 hours and 48 minutes, starting from 11:49 AM PDT to 2:37 PM PDT
+
+**Amazon AWS Connect**
+
+* Outage started: June 13th, 2023 at 11:49 AM PDT
+* Duration: 1 hour and 51 minutes
+* Root cause: Increased error rates for Lambda function invocations in Northern Virginia (US-EAST-1) Region
+* Services impacted:
+	+ Amazon Connect
+	+ AWS Support Center
+* Downtime period: 1 hour and 51 minutes, starting from 11:49 AM PDT to 1:40 PM PDT
+
+**Amazon AWS Support Center**
+
+* Outage started: June 13th, 2023 at 11:49 AM PDT
+* Duration: 2 hours and 48 minutes
+* Root cause: Increased error rates for Lambda function invocations in Northern Virginia (US-EAST-1) Region
+* Services impacted:
+	+ AWS Support Center
+	+ Amazon Connect
+* Downtime period: 2 hours and 48 minutes, starting from 11:49 AM PDT to 2:37 PM PDT
+
+Note that the outage duration is calculated based on the start and end times of each service's downtime period.
