@@ -282,7 +282,7 @@
         variableTrioDiv.id = `variableTrio_${trioNumber}`;
 
         variableTrioDiv.innerHTML = `
-            <label for="variable1_${trioNumber}">Set ${trioNumber} - Cloud Vendor:</label>
+            <label for="variable1_${trioNumber}">Set ${trioNumber} - Cloud Provider (cloud vendor):</label>
             <select id="variable1_${trioNumber}">
                 <option value="">Select a vendor</option>
                 ${dropdownOptions1}
@@ -298,6 +298,14 @@
             <select id="variable3_${trioNumber}">
                 ${createRegionOptions()}
             </select>
+
+            <label for="monthlyCost_${trioNumber}">Monthly Service estimate cost ($):</label>
+            <input type="number" 
+                   id="monthlyCost_${trioNumber}" 
+                   min="1" 
+                   max="10000" 
+                   value="1000"
+                   placeholder="Enter value between $1-$10,000">
         `;
 
         container.appendChild(variableTrioDiv);
@@ -385,7 +393,7 @@
                     </div>
                 </div>
 
-                <h2>Cloud Vendor Analysis</h2>
+                <h2>Cloud Provider Analysis</h2>
                 <div id="vendor-metrics"></div>
 
                 <h2>Individual Services Analysis</h2>
@@ -456,7 +464,7 @@
                     vendorMetrics[vendor].annual_downtime.push(parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes));
 
                     // Add service analysis
-                    addServiceAnalysis(service, riskData);
+                    addServiceAnalysis(service, riskData, i);
                 } catch (error) {
                     console.error(`Error processing ${service}:`, error);
                 }
@@ -533,31 +541,35 @@
         });
     }
 
-    function addServiceAnalysis(service, riskData) {
+    function addServiceAnalysis(service, riskData, trioNumber) {
         const servicesContainer = document.getElementById("services-analysis");
         
-        // Create service analysis section
-        const serviceSection = document.createElement("div");
-        serviceSection.className = "vendor-section";
-        
+        // Get the monthly cost from the input
+        const monthlyCostInput = document.getElementById(`monthlyCost_${trioNumber}`);
+        const monthy_customer_service_spent = parseFloat(monthlyCostInput?.value || 1000.00);
+
         // Calculate estimated credit money back
         let estimatedCreditBack = 0.0;
         const slaUsage = parseFloat(riskData.service_sla_usage_percentage);
         const creditBackPercentage = parseFloat(riskData.percentage_service_credit_back || 0);
         if (slaUsage > 100) {
-            estimatedCreditBack = ((slaUsage - 100) / 100) * (creditBackPercentage / 100) * 1000;
-            estimatedCreditBack = Math.min(Math.round(estimatedCreditBack * 100) / 100, 1000);
+            estimatedCreditBack = ((slaUsage - 100) / 100) * (creditBackPercentage / 100) * monthy_customer_service_spent;
+            estimatedCreditBack = Math.min(Math.round(estimatedCreditBack * 100) / 100, monthy_customer_service_spent);
         }
 
         // Warning message for max credit back
-        const warningMessage = estimatedCreditBack >= 1000 ? 
-            "<div style='color: #ff6b6b; margin-top: 5px;'>Warning: Max. credit back was above 1000.00 per month</div>" : "";
+        const warningMessage = estimatedCreditBack >= monthy_customer_service_spent ? 
+            `<div class='value' style='color: #ff6b6b; margin-top: 5px;'>Warning: Max. credit back was above the $${monthy_customer_service_spent.toFixed(2)} of service estimated cost per month</div>` : "";
 
         // Format AI Analysis text with line breaks
         const aiAnalysis = riskData.remarks_outage_genai
             ? riskData.remarks_outage_genai.split('\n').join('<br>')
             : 'No analysis available';
 
+        // Create service analysis section
+        const serviceSection = document.createElement("div");
+        serviceSection.className = "vendor-section";
+        
         serviceSection.innerHTML = `
             <h3>Risk Analysis for ${service}</h3>
             <div class="metrics-grid">
@@ -601,7 +613,7 @@
                         <div class="value">${riskData.percentage_service_credit_back}%</div>
                     </div>
                     <div class="metric">
-                        <h4>Monthly Credit Back max. per $1,000</h4>
+                        <h4>Monthly Credit Back max. of Service</h4>
                         <div class="value">$${estimatedCreditBack}</div>
                         ${warningMessage}
                     </div>

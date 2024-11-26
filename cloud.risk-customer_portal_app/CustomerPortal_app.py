@@ -165,6 +165,22 @@ for vendor in selected_vendors:
 max_service_selections = 100
 selected_services = st.multiselect("Select Services (up to 100)", all_available_services, max_selections=max_service_selections)
 
+# Add monthly cost estimates for each selected service
+service_costs = {}
+if selected_services:
+    st.subheader("Monthly Service Cost Estimates")
+    cols = st.columns(3)  # Create 3 columns for better layout
+    for idx, service in enumerate(selected_services):
+        with cols[idx % 3]:
+            service_costs[service] = st.number_input(
+                f"Monthly cost estimate for {service} ($)",
+                min_value=1.0,
+                max_value=10000.0,
+                value=1000.0,
+                step=100.0,
+                key=f"cost_{service}"
+            )
+
 # Region type selection
 region_type = st.selectbox("Select Region Type", ["global", "regional"])
 
@@ -413,15 +429,15 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
 
                     # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
                     # Formula: when SLA usage is 100% or more, then the credit back is XXX%-100% of the SLA usage , divide by 12 for monthy approach
-                    estimated_cloud_services_credit_money_back = 0.0 if float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%')) <= 100 else (float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%'))-100)/100*float(risk_data.get("percentage_service_credit_back", 0.0).rstrip('%'))/100*1000
+                    estimated_cloud_services_credit_money_back = 0.0 if float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%')) <= 100 else (float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%'))-100)/100*float(risk_data.get("percentage_service_credit_back", 0.0).rstrip('%'))/100*service_costs[service]
                     estimated_cloud_services_credit_money_back = round(estimated_cloud_services_credit_money_back, 2)
                     # Limit the credit back to 1000.00 per month
                     # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
                     # Open question: what is the max. credit back per month?
                     # TODO: add 1000 to the formula when ready (ASK_CUSTOMER_HOW_MUCH=1000)
                     # Set Warning if max. credit back was above 1000.00 per month
-                    warning_max_credit_back = "**Warning: Max. credit back was above 1000.00 per month**" if estimated_cloud_services_credit_money_back > 1000.00 else ""
-                    estimated_cloud_services_credit_money_back = min(estimated_cloud_services_credit_money_back, 1000.00)
+                    warning_max_credit_back = f"**Warning: Max. credit back was above the {service_costs[service]} of service estimated cost per month**" if estimated_cloud_services_credit_money_back > service_costs[service] else ""
+                    estimated_cloud_services_credit_money_back = min(estimated_cloud_services_credit_money_back, service_costs[service])
 
                     with col1:
                         st.metric("SLA Usage %", risk_data.get("service_sla_usage_percentage", "N/A"))
@@ -438,7 +454,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                     with col4:
                         st.metric("Service SLA (99.99999%)", risk_data.get("service_sla_0_99_9999_for_60min_times_24h_365days", "N/A") +"%")
                         st.metric("Service Credit Back (%)", str(risk_data.get("percentage_service_credit_back", "N/A"))+"%")
-                        st.metric("Monthly Credit Back max. per $1.000 ", "$"+str(estimated_cloud_services_credit_money_back))
+                        st.metric("Monthly Credit Back max. for Service ", "$"+str(estimated_cloud_services_credit_money_back))
                         st.caption(warning_max_credit_back)
                     
                     st.text_area(f"AI Analysis - {service}", risk_data.get("remarks_outage_genai", "No analysis available"), height=100)
