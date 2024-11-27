@@ -116,3 +116,8 @@ DB client: http://localhost:7474
 
 ![](.github/media/app1-ticket.png)  
 *(UI of the auto generated support ticket draft)*
+
+
+## Technology stack dependent on model  sentence transformesr model via Hugging Face
+
+ - current version is : https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/tree/main 
