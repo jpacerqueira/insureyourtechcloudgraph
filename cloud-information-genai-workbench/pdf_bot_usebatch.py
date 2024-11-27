@@ -25,6 +25,7 @@ def main(input_folder="./pdf_bot_usebatch"):
         output_folder=input_folder,
         mark_processed=True  
     )
+    os.system("python pdf_bot_usebatch/merger.py")
 
 if __name__ == "__main__":
     main()
