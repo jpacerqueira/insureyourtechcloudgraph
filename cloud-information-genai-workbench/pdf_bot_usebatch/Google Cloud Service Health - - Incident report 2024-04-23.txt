@@ -1,0 +1,30 @@
+I can provide you with the information you requested. However, I need to clarify that some of the cloud providers mentioned in your request (Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB) are not explicitly mentioned in the text.
+
+The text only mentions Google Cloud Service Health and specifically mentions Apigee as the service impacted. Therefore, I will provide information on the outage related to Apigee in Google Cloud.
+
+Here is the breakdown of the outage:
+
+**Apigee Outage**
+
+* **Incident Started:** Tuesday, 2024-04-23 12:25 US/Pacific
+* **Duration:** 2 hours and 28 minutes (15:53 - 14:24 US/Pacific)
+* **Root Cause:** Impacted customers may receive HTML errors instead of correct data while trying to access Apigee portal.
+* **Affected Regions:** asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-west2, us-west3, us-west4
+* **Availability Zones:** Not specified
+* **Services Impacted:** Apigee portal
+* **Workaround:** None at this time
+
+Here is the summary of the outage in a table format:
+
+| Date | Time | Duration | Root Cause | Affected Regions | Availability Zones |
+| --- | --- | --- | --- | --- | --- |
+| 2024-04-23 | 12:25 US/Pacific | - | Impacted customers may receive HTML errors instead of correct data while trying to access Apigee portal. | asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-west2, us-west3, us-west4 | - |
+| 2024-04-23 | 15:53 US/Pacific | 2 hours and 28 minutes | Impacted customers may receive HTML errors instead of correct data while trying to access Apigee portal. | asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-west2, us-west3, us-west4 | - |
+
+Note: The table only includes the information explicitly mentioned in the text.
+
+**Overall Summary**
+
+The Apigee outage affected multiple regions and availability zones in Google Cloud. The outage started on Tuesday, 2024-04-23 at 12:25 US/Pacific and lasted for 2 hours and 28 minutes. The root cause of the outage was related to HTML errors in the Apigee portal. No workaround was available during this time.
+
+Please note that I did not include any information from cloud providers not explicitly mentioned in the text, as per your request.

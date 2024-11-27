@@ -1,0 +1,39 @@
+Here is the breakdown of the outage for each cloud provider:
+
+**Google Cloud**
+
+The outage affected Google Cloud Bigtable in the us-central1 region.
+
+Incident started: 2023-12-04 20:00 US/Pacific
+Duration: 1 day, 8 hours, 5 minutes
+Root cause: Network issue
+
+Services impacted: Google Cloud Bigtable and Google Kubernetes Engine
+Regions/Zones: us-central1
+Availability Zones: Not specified
+
+Downtime period: 2023-12-04 20:00 - 2023-12-06 03:55 US/Pacific
+Resolved: 2023-12-06 03:55 US/Pacific
+
+**Summary of Google Cloud outage**
+
+* Date impacted: December 4, 2023 - December 6, 2023
+* Duration: 1 day, 8 hours, 5 minutes
+* Services impacted: Google Cloud Bigtable and Google Kubernetes Engine
+* Region: us-central1
+* Availability Zones: Not specified
+
+**Cloud Provider Summary**
+
+The outage affected Google Cloud in the us-central1 region.
+
+Incident started: December 4, 2023
+Duration: 1 day, 8 hours, 5 minutes
+Root cause: Network issue
+
+Services impacted: Google Cloud Bigtable and Google Kubernetes Engine
+Regions/Zones: us-central1
+Availability Zones: Not specified
+
+Downtime period: December 4, 2023 - December 6, 2023
+Resolved: December 6, 2023

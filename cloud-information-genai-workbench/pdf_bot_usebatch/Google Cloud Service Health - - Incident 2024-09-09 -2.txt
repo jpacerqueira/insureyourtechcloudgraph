@@ -1,0 +1,39 @@
+I can only provide information on Google Cloud Service Health incidents, as that is the only cloud provider mentioned in the text.
+
+Here are the details of the outage:
+
+**Incident Details**
+
+* Incident ID: UbJv334dXk5XQNSgiY48
+* Start Date and Time: 2024-09-09 19:15 PDT
+* End Date and Time: 2024-09-09 19:00 PDT (resolved at 11:30 US/Pacific)
+* Duration: 1 hour and 45 minutes
+
+**Affected Services**
+
+* Looker Studio
+
+**Root Cause**
+
+The root cause of the outage is not specified in the text.
+
+**Impact Regions and Availability Zones**
+
+No specific regions or availability zones are mentioned as being impacted.
+
+**Workaround**
+
+None available at this time.
+
+Here is a summary of the outage:
+
+Looker Studio users experienced elevated query performance when loading and accessing reports. The incident started on 2024-09-09 19:15 PDT and ended on 2024-09-09 19:00 PDT, with a duration of 1 hour and 45 minutes.
+
+Here is an output table summarizing the outage:
+
+| Date and Time | Duration | Region/AZ |
+| --- | --- | --- |
+| 2024-09-09 19:15 PDT | 1h 45m | N/A |
+| 2024-09-09 19:00 PDT | 1h 45m | N/A |
+
+Note: The table only includes the information provided in the text and does not include any additional details that may be available on the Google Cloud Service Health page.

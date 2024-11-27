@@ -1,0 +1,44 @@
+Here is the response to your query:
+
+**Outage Details**
+
+The outage affected Google Cloud Platform (GCP) only.
+
+**Incident Summary**
+
+* Incident Start: 11 September 2023 04:00
+* Incident End: 11 September 2023 12:25
+* Duration: 8 hours, 25 minutes
+
+**Affected Services and Features**
+
+Apigee Edge and Apigee X
+
+**Root Cause of Outage**
+
+Misconfiguration of internal Apigee load balancers.
+
+**Customer Impact**
+
+Customers experienced elevated 5xx responses.
+Customers experience issues authenticating to API portals.
+Customers experienced errors like "Failed to load users", "Failed to load zone" or "Service Unavailable” when interacting with the developer portal.
+Customers may have also experienced issues updating their portals.
+
+**Resolution Date**
+
+The issue was resolved for all affected users as of 11 September 2023 12:25 US/Pacific Time.
+
+Here is the outage details broken down by service and region:
+
+**Apigee Edge and Apigee X Outage Details**
+
+| Service | Region/Zones | Duration |
+| --- | --- | --- |
+| Apigee Edge | asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, singapore | 8 hours, 25 minutes |
+
+Note: The outage affected multiple regions and zones globally.
+
+**Overall Summary**
+
+The outage impacted Apigee Edge and Apigee X services across multiple regions and zones in Google Cloud Platform. The root cause was misconfiguration of internal Apigee load balancers. The outage lasted for 8 hours and 25 minutes, starting at 04:00 US/Pacific Time on September 11, 2023, and ending at 12:25 US/Pacific Time on the same day.

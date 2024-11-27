@@ -1,0 +1,40 @@
+Here is the breakdown of the outage for each cloud provider:
+
+**Google Cloud**
+
+The incident began on November 8, 2023, at 15:11 US/Pacific Time and ended on November 8, 2023, at 17:29 US/Pacific Time.
+
+Affected services:
+- Google App Engine
+- Cloud Run
+- Secret Manager
+
+Regions/Availability Zones affected:
+- Australia/Sydney (australia-southeast1)
+- Belgium/Europe-West 1
+
+Root cause of the outage: Requests to Secret Manager might time out for App Engine and Cloud Run customers. Direct calls of some customers to Secret Manager are also impacted.
+
+Duration of outage:
+- Total duration: 2 hours and 18 minutes
+- Duration in days, hours, and minutes: 0 days, 2 hours, and 18 minutes
+
+Downtime period:
+- Started on November 8, 2023, at 15:11 US/Pacific Time
+- Ended on November 8, 2023, at 17:29 US/Pacific Time
+
+Resolution date: November 8, 2023, at 16:42 US/Pacific Time
+
+**Summary of Google Cloud outage**
+
+Google Cloud experienced an outage affecting Google App Engine, Cloud Run, and Secret Manager. The incident started on November 8, 2023, at 15:11 US/Pacific Time and lasted for 2 hours and 18 minutes. The affected regions were Australia/Sydney (australia-southeast1) and Belgium/Europe-West 1.
+
+**Output Table**
+
+| Cloud Provider | Service | Region/AZ | Root Cause | Duration | Downtime Start | Downtime End | Resolution Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | App Engine | australia-southeast1 | Requests to Secret Manager might time out for App Engine and Cloud Run customers. Direct calls of some customers to Secret Manager are also impacted. | 2 hours, 18 minutes | November 8, 2023, 15:11 US/Pacific Time | November 8, 2023, 17:29 US/Pacific Time | November 8, 2023, 16:42 US/Pacific Time |
+| Google Cloud | Cloud Run | australia-southeast1 | Requests to Secret Manager might time out for App Engine and Cloud Run customers. Direct calls of some customers to Secret Manager are also impacted. | 2 hours, 18 minutes | November 8, 2023, 15:11 US/Pacific Time | November 8, 2023, 17:29 US/Pacific Time | November 8, 2023, 16:42 US/Pacific Time |
+| Google Cloud | Secret Manager | australia-southeast1 | Requests to Secret Manager might time out for App Engine and Cloud Run customers. Direct calls of some customers to Secret Manager are also impacted. | 2 hours, 18 minutes | November 8, 2023, 15:11 US/Pacific Time | November 8, 2023, 17:29 US/Pacific Time | November 8, 2023, 16:42 US/Pacific Time |
+
+Note: The table only includes the services and regions affected by the outage as mentioned in the original text.

@@ -1,19 +1,35 @@
-Based on the provided text, I can only identify one cloud provider: Amazon AWS.
+Here is the breakdown of the outage for each cloud provider:
 
-Here is the information about the outage:
+**Amazon AWS**
 
-**Outage Details**
+The outage occurred in the Northern Virginia (US-EAST-1) Region.
 
-* **Cloud Provider:** Amazon AWS
-* **Region:** Northern Virginia (US-EAST-1)
-* **Availability Zone:** Not specified
-* **Services Impacted:** Support Contact Center, Service Health Dashboard tooling
-* **Root Cause of Outage:** A single root cause is mentioned in the text, but it is not explicitly stated.
-* **Duration of Outage:**
-	+ Start Time: 7:33 AM PST
-	+ End Time: 2:25 PM PST
-	+ Duration: 6 hours and 52 minutes
-* **Downtime Period:** The outage lasted for approximately 6 hours and 52 minutes.
-* **Resolution Time:** By 8:22 AM PST, the Service Health Dashboard was successfully updated.
+* Services impacted: Support Contact Center, Service Health Dashboard
+* Root cause: Persistent congestion and performance issues on networking devices connecting the two networks.
+* Duration: 7 hours and 52 minutes
+* Start time: 7:33 AM PST
+* End time: 2:25 PM PST
+* Downtime period: The Support Contact Center was unable to create support cases for 7 hours and 52 minutes.
 
-Note that there is no information about Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare in the provided text.
+**Service details**
+
+| Service | Region | Availability Zone | Impact |
+| --- | --- | --- | --- |
+| Support Contact Center | US-EAST-1 | - | Unable to create support cases |
+| Service Health Dashboard | US-EAST-1 | - | Impaired monitoring systems |
+
+**Overall summary**
+
+The outage in the Northern Virginia (US-EAST-1) Region impacted Amazon AWS services, including the Support Contact Center and Service Health Dashboard. The root cause was persistent congestion and performance issues on networking devices connecting the two networks.
+
+**Root cause analysis**
+
+The teams focused on moving internal DNS traffic away from congested network paths at 9:28 AM PST, which improved the availability of several impacted services by reducing load on the impacted networking devices. However, monitoring data was still not available due to the congestion.
+
+**Summary of outages and root case with dates**
+
+* Date: December 7th, 2021
+* Time: 7:33 AM PST - 2:25 PM PST (7 hours and 52 minutes)
+* Root cause: Persistent congestion and performance issues on networking devices connecting the two networks.
+* Services impacted: Support Contact Center, Service Health Dashboard
+* Regions affected: Northern Virginia (US-EAST-1) Region

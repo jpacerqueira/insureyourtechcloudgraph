@@ -1,0 +1,39 @@
+Here is the breakdown of the outage for each cloud provider:
+
+**Google Cloud**
+
+The issue with Virtual Private Cloud (VPC) customers located in us-central1 may observe an issue with VPC Service Controls for newly created VMs or networks.
+
+* Services impacted: Google Cloud Networking, VPC Service Controls
+* Region/Availability Zone: us-central1
+* Duration of outage: 6 hours and 10 minutes
+* Downtime period: 2024-09-04 06:29 - 2024-09-04 11:39
+* Root cause: VPC network data for newly created VMs or networks might not be available when requests to Google APIs originate from these VMs/networks.
+* Workaround: None at this time.
+
+**Incident details**
+
+* Incident began: 2024-09-04 06:29 US/Pacific
+* Incident ended: 2024-09-04 11:39 US/Pacific
+* Duration of incident: 6 hours and 10 minutes
+* Resolution date: 2024-09-04 11:06 US/Pacific
+
+**Summary**
+
+Google Cloud was impacted by an outage in the us-central1 region, affecting Google Cloud Networking and VPC Service Controls. The outage lasted for 6 hours and 10 minutes, starting at 06:29 US/Pacific on September 4, 2024, and ending at 11:39 US/Pacific on the same day.
+
+**Output table**
+
+| Cloud Provider | Services Impacted | Region/Availability Zone | Duration of Outage | Downtime Period | Root Cause | Workaround |
+| --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Google Cloud Networking, VPC Service Controls | us-central1 | 6 hours and 10 minutes | 2024-09-04 06:29 - 2024-09-04 11:39 | VPC network data issue | None at this time |
+
+Note: The table only includes the information provided in the original text, without any additional details or assumptions.
+
+**Overall summary**
+
+Google Cloud was impacted by an outage in the us-central1 region, affecting Google Cloud Networking and VPC Service Controls. The outage lasted for 6 hours and 10 minutes, starting at 06:29 US/Pacific on September 4, 2024, and ending at 11:39 US/Pacific on the same day.
+
+**No other cloud providers were impacted by this outage.**
+
+Please note that I have removed Cloud Vendors not identified in the text (Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) as per your request.

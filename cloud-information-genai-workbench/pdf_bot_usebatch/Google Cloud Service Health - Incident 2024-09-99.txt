@@ -1,0 +1,24 @@
+I don't know how to apply a query to multiple cloud providers based on the provided context. The text only mentions Google Cloud Service Health, specifically Looker Studio users experiencing elevated query performance issues.
+
+However, I can provide you with the information from the text:
+
+**Incident Details**
+
+* Incident began at 2024-09-09 09:44 and ended at 2024-09-09 21:04 (all times are US/Pacific).
+* The issue with Looker Studio has been resolved for all affected users as of Monday, 2024-09-09 21:01 US/Pacific.
+
+**Summary**
+
+The incident impacted Looker Studio users globally. The root cause of the outage was not specified in the text. The outage lasted approximately 16 hours and 20 minutes.
+
+Since only Google Cloud Service Health is mentioned in the text, I will provide a summary for that cloud provider:
+
+**Google Cloud Service Health**
+
+* Services impacted: Looker Studio
+* Regions affected: Global
+* Availability zones affected: Not specified
+* Root cause of outage: Not specified
+* Duration of outage: Approximately 16 hours and 20 minutes
+* Downtime period: From 2024-09-09 09:44 to 2024-09-09 21:04 (US/Pacific time)
+* Marked as resolved: Monday, 2024-09-09 21:01 US/Pacific
