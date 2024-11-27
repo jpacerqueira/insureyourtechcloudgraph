@@ -71,18 +71,50 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
     
     # Extended status patterns
     status_patterns = {
-        "degraded": r"(?i)(degraded performance|degraded service|partial outage)",
-        "outage": r"(?i)(complete outage|service disruption|unavailable)",
-        "resolved": r"(?i)(resolved|restored|recovered|mitigated)",
-        "investigating": r"(?i)(investigating|identified|monitoring)"
+        "investigating": r"(?i)(investigating|identified|monitoring|increased error rates|elevated delays|issues|disruption)",
+        "resolved": r"(?i)(resolved|restored|recovered|mitigated|marked as resolved)",
+        "outage": r"(?i)(complete outage|service disruption|unavailable|increased api errors|increased latencies)",
+        "degraded": r"(?i)(degraded performance|degraded service|partial outage|intermittent connectivity|elevated packet loss)"
     }
     
     # Extended impact patterns
     impact_patterns = {
-        "critical": r"(?i)(critical impact|severe impact|major outage)",
-        "moderate": r"(?i)(moderate impact|partial impact|minor outage)",
-        "minimal": r"(?i)(minimal impact|slight impact|limited disruption)"
+        "critical": r"(?i)(critical impact|severe impact|major outage|complete failure|service unavailable)",
+        "moderate": r"(?i)(moderate impact|partial impact|minor outage|increased error rates|intermittent issues)",
+        "minimal": r"(?i)(minimal impact|slight impact|limited disruption|elevated delays|degraded performance)"
     }
+    
+    # Add timestamp patterns
+    time_patterns = {
+        "start": [
+            r"(?i)Start(?:\s+Time)?:\s*([^\n]+)",
+            r"(?i)Between\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST).*?)(?:and|to|-)",
+            r"(?i)at\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
+            r"(?i)started.*?at\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
+            r"(?i)(\d{1,2}:\d{2}(?:\s*(?:AM|PM))?\s*(?:UTC|PDT|PST|JST|CST))",
+        ],
+        "end": [
+            r"(?i)End(?:\s+Time)?:\s*([^\n]+)",
+            r"(?i)and\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
+            r"(?i)resolved.*?at\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
+            r"(?i)until\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
+        ]
+    }
+    
+    # Add duration extraction patterns
+    duration_patterns = [
+        r"(?i)Duration:\s*([^\n]+)",
+        r"(?i)(\d+)\s*(?:days?|hours?|minutes?|hrs?|mins?)",
+        r"(?i)approximately\s+(\d+\s+(?:days?|hours?|minutes?|hrs?|mins?)(?:\s+and\s+\d+\s+(?:days?|hours?|minutes?|hrs?|mins?))*)",
+    ]
+    
+    # Add region extraction patterns
+    region_patterns = [
+        r"(?i)Region(?:s)?(?:\s+Affected)?:\s*([^\n]+)",
+        r"(?i)in\s+(?:the\s+)?([\w\s-]+)\s+Region",
+        r"(?i)((?:us|eu|ap|sa|ca|me)-(?:east|west|north|south|central|southeast|northeast)-\d+)",
+        r"(?i)(Northern Virginia|Tokyo|Seoul|Singapore|London|Frankfurt|Paris|Sydney)",
+    ]
     
     # Split text into sections by outage
     sections = re.split(r"--\nOutage Filename:", text)
@@ -145,24 +177,35 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
                 else:
                     setattr(outage, field, value)
         
-        # Try to extract timestamps
-        time_patterns = {
-            "start": r"(?i)Start(?:\s+Time)?:\s*([^\n]+)",
-            "end": r"(?i)End(?:\s+Time)?:\s*([^\n]+)"
-        }
+        # Extract regions using multiple patterns
+        for pattern in region_patterns:
+            matches = re.finditer(pattern, section)
+            for match in matches:
+                region = match.group(1).strip()
+                if region and region not in outage.regions:
+                    outage.regions.append(region)
         
-        for field, pattern in time_patterns.items():
+        # Extract duration using multiple patterns
+        for pattern in duration_patterns:
             match = re.search(pattern, section)
             if match:
-                try:
-                    # Add flexible timestamp parsing here
-                    timestamp = parse_timestamp(match.group(1))
-                    if field == "start":
-                        outage.start_time = timestamp
-                    else:
-                        outage.end_time = timestamp
-                except:
-                    pass
+                outage.duration = match.group(1).strip()
+                break
+        
+        # Extract timestamps using multiple patterns
+        for field, patterns in time_patterns.items():
+            for pattern in patterns:
+                match = re.search(pattern, section)
+                if match:
+                    try:
+                        timestamp = parse_timestamp(match.group(1))
+                        if field == "start":
+                            outage.start_time = timestamp
+                        else:
+                            outage.end_time = timestamp
+                        break
+                    except:
+                        continue
         
         outages.append(outage)
     
