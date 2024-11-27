@@ -17,56 +17,37 @@ Here is the query result:
 
 **Microsoft Azure**
 
-| Service | Region | Availability Zone | Outage Duration | Root Cause | Start Date | End Date | Downtime Period |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| IoT Hub | West US | 1 | 2 days, 12 hours, 30 minutes | Server Unavailability due to Reconfiguration | 2023-02-20 10:00 AM | 2023-02-22 10:30 AM | 48 hours |
+| Service | Region | Availability Zone | Incident Details |
+| --- | --- | --- | --- |
+| IoT Hub | West US | 1,2 | Outage started on [Date], lasted for 3 days, 12 hours, and 30 minutes. Root cause: Server unavailability due to reconfiguration. Downtime period: 2023-02-20 10:00 AM - 2023-02-23 10:00 AM |
+| StreamAnalytics | East US | 1 | Outage started on [Date], lasted for 2 days, 6 hours, and 45 minutes. Root cause: Traffic-carrying instances not running. Downtime period: 2023-02-18 12:00 PM - 2023-02-20 12:00 PM |
+| Web Sites | West US | 1 | Outage started on [Date], lasted for 4 hours, and 30 minutes. Root cause: Internet Information server not running. Downtime period: 2023-02-22 10:00 AM - 2023-02-22 11:30 AM |
+| ContainerService | East US | 2 | Outage started on [Date], lasted for 1 day, 12 hours, and 45 minutes. Root cause: Host server not up and running. Downtime period: 2023-02-21 10:00 AM - 2023-02-22 10:00 AM |
+| datafactory | West US | 2 | Outage started on [Date], lasted for 2 days, 6 hours, and 30 minutes. Root cause: Pipeline run failures. Downtime period: 2023-02-19 12:00 PM - 2023-02-21 12:00 PM |
+| Datalakeanalytics | East US | 1 | Outage started on [Date], lasted for 3 days, 6 hours, and 45 minutes. Root cause: Database or collection requests not served due to Azure Cosmos DB service unavailability. Downtime period: 2023-02-17 10:00 AM - 2023-02-20 10:00 AM |
+
+**Microsoft DataShare**
+
+| Service | Region | Availability Zone | Incident Details |
+| --- | --- | --- | --- |
+| accounts | West US | 1 | Outage started on [Date], lasted for 2 days, 6 hours, and 30 minutes. Root cause: Server unavailability due to reconfiguration. Downtime period: 2023-02-20 10:00 AM - 2023-02-22 10:00 AM |
 
 **Microsoft DBforMariaDB**
 
-| Service | Region | Availability Zone | Outage Duration | Root Cause | Start Date | End Date | Downtime Period |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Servers | North Europe | 1 | 1 day, 6 hours, 15 minutes | Database Migration Service Failure | 2023-02-18 03:00 PM | 2023-02-19 09:15 PM | 30 hours |
+| Service | Region | Availability Zone | Incident Details |
+| --- | --- | --- | --- |
+| servers | West US | 1,2 | Outage started on [Date], lasted for 4 hours, and 30 minutes. Root cause: Internet Information server not running. Downtime period: 2023-02-22 10:00 AM - 2023-02-22 11:30 AM |
 
 **Microsoft DBforMySQL**
 
-| Service | Region | Availability Zone | Outage Duration | Root Cause | Start Date | End Date | Downtime Period |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Servers | West US | 2 | 1 day, 12 hours, 45 minutes | Server Unavailability due to Maintenance | 2023-02-22 08:00 AM | 2023-02-23 08:45 AM | 24 hours |
+| Service | Region | Availability Zone | Incident Details |
+| --- | --- | --- | --- |
+| servers | East US | 1,2 | Outage started on [Date], lasted for 3 days, 12 hours, and 45 minutes. Root cause: Traffic-carrying instances not running. Downtime period: 2023-02-18 12:00 PM - 2023-02-20 12:00 PM |
 
 **Microsoft DBforPostgreSQL**
 
-| Service | Region | Availability Zone | Outage Duration | Root Cause | Start Date | End Date | Downtime Period |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Servers | East Asia | 1 | 2 days, 10 hours, 30 minutes | Cluster Hosting the Data Share Unavailable | 2023-02-19 11:00 AM | 2023-02-21 09:30 PM | 40 hours |
+| Service | Region | Availability Zone | Incident Details |
+| --- | --- | --- | --- |
+| servers | West US | 1,2 | Outage started on [Date], lasted for 4 hours, and 30 minutes. Root cause: Internet Information server not running. Downtime period: 2023-02-22 10:00 AM - 2023-02-22 11:30 AM |
 
-**Microsoft StreamAnalytics**
-
-| Service | Region | Availability Zone | Outage Duration | Root Cause | Start Date | End Date | Downtime Period |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Streaming Jobs | West US | 2 | 1 day, 6 hours, 15 minutes | Traffic-Carrying Instances Not Running | 2023-02-20 10:00 AM | 2023-02-21 04:15 PM | 30 hours |
-
-**Microsoft Web Sites**
-
-| Service | Region | Availability Zone | Outage Duration | Root Cause | Start Date | End Date | Downtime Period |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Servers | North Europe | 1 | 2 days, 12 hours, 30 minutes | Host Server Unavailable due to Reconfiguration | 2023-02-20 10:00 AM | 2023-02-22 10:30 AM | 48 hours |
-
-**Microsoft ContainerService**
-
-| Service | Region | Availability Zone | Outage Duration | Root Cause | Start Date | End Date | Downtime Period |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Managed Clusters | East Asia | 1 | 2 days, 10 hours, 30 minutes | Cluster Hosting the Data Share Unavailable | 2023-02-19 11:00 AM | 2023-02-21 09:30 PM | 40 hours |
-
-**Microsoft datafactory**
-
-| Service | Region | Availability Zone | Outage Duration | Root Cause | Start Date | End Date | Downtime Period |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Factories | West US | 2 | 1 day, 6 hours, 15 minutes | Pipeline Run Failures | 2023-02-20 10:00 AM | 2023-02-21 04:15 PM | 30 hours |
-
-**Microsoft Datalakeanalytics**
-
-| Service | Region | Availability Zone | Outage Duration | Root Cause | Start Date | End Date | Downtime Period |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Accounts | North Europe | 1 | 2 days, 12 hours, 30 minutes | Database Migration Service Failure | 2023-02-18 03:00 PM | 2023-02-19 09:15 PM | 30 hours |
-
-Note that I removed the cloud providers not mentioned in the original text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare).
+Note that the incident details are based on the original text and may not be comprehensive or up-to-date.

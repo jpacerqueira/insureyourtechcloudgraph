@@ -1,47 +1,94 @@
-I can only apply the query to the specified Cloud Providers that are mentioned in the text. The relevant Cloud Providers are:
+I can only apply the query to Google Cloud Provider as it is the only provider mentioned in the text.
 
-* Google GCP
-* Amazon AWS is not mentioned in the text, but I will assume it is not applicable.
-* Microsoft Azure is not mentioned in the text, but I will assume it is not applicable.
-* Oracle OCI is not mentioned in the text, but I will assume it is not applicable.
-* IBM Cloud is not mentioned in the text, but I will assume it is not applicable.
-* Snowflake is not mentioned in the text, but I will assume it is not applicable.
-* Databricks is not mentioned in the text, but I will assume it is not applicable.
-* MongoDB is not mentioned in the text, but I will assume it is not applicable.
-* Akamai and Cloudflare are not Cloud Providers, they are service providers.
+Here are the details of the outage for Google Cloud:
 
-Here is the query applied to Google GCP:
+**Incident Details**
 
-**Google GCP Outages**
+* Incident affecting multiple Google Cloud products experiencing network connectivity issues
+* Service disruption: AlloyDB for PostgreSQL, Apigee, Backup and DR, Batch, Cloud Build, Cloud Data Fusion, Cloud Developer Tools, Cloud Filestore, Cloud Load Balancing, Cloud Machine Learning, Cloud Memorystore, Cloud NAT, Cloud Run, Cloud Workstations, Colab Enterprise, Contact Center AI Platform
+* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+* Start time: 15:39 US/Pacific Time
+* End time: 18:09 US/Pacific Time
 
-The incident started on 16 May 2024 at 15:22 PDT and lasted for 2 hours and 48 minutes. The majority of the impact lasted 2 hours and 48 minutes.
+**Breakdown of Outages by Service**
 
-**Affected Services and Regions/Availability Zones:**
-
-* AlloyDB for PostgreSQL - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Apigee - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Backup and DR - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Batch - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Cloud Build - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Cloud Data Fusion - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Cloud Developer Tools - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Cloud Filestore - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Cloud Load Balancing - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Cloud Machine Learning - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Cloud Memorystore - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Cloud NAT - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Cloud Run - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Cloud Workstations - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Colab Enterprise - us-east1-c, us-west1, us-west2, us-west3, us-west4
-* Contact Center AI Platform - us-east1-c, us-west1, us-west2, us-west3, us-west4
-
-**Root Cause of the Outage:**
-A bug in the automation caused the component to be shut down in all zones where it was still in use.
-
-**Duration of Outage:**
-
-* Duration: 2 hours and 48 minutes
-* Downtime Period: 2 hours and 48 minutes
-
-**Resolved Date:**
-The incident ended on 16 May 2024 at 18:10 PDT.
+1. **AlloyDB for PostgreSQL**
+	* Affected regions and availability zones: us-east1-c, us-east4-c
+	* Root cause: Data plane overload in a few locations
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+2. **Apigee**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+3. **Backup and DR**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+4. **Batch**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+5. **Cloud Build**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+6. **Cloud Data Fusion**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+7. **Cloud Developer Tools**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+8. **Cloud Filestore**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+9. **Cloud Load Balancing**
+	* Affected regions and availability zones: us-east1-c, us-east4-c
+	* Root cause: Data plane overload in a few locations
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 16:00 US/Pacific Time to 18:20 US/Pacific Time
+10. **Cloud Machine Learning**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+11. **Cloud Memorystore**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+12. **Cloud NAT**
+	* Affected regions and availability zones: us-east1-c, us-east4-c
+	* Root cause: Data plane overload in a few locations
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 16:00 US/Pacific Time to 18:20 US/Pacific Time
+13. **Cloud Run**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+14. **Cloud Workstations**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+15. **Colab Enterprise**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time
+16. **Contact Center AI Platform**
+	* Affected regions and availability zones: Global
+	* Root cause: Network connectivity issues due to VPC Access Connectors not being able to scale up
+	* Duration: 15 minutes to 19 hours (approximately 3.5 hours)
+	* Downtime period: 15:39 US/Pacific Time to 18:09 US/Pacific Time

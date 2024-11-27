@@ -8,12 +8,12 @@ Here is the information about the outage:
 * **Region:** Northern Virginia (US-EAST-1)
 * **Availability Zone:** Not specified
 * **Services Impacted:** Support Contact Center, Service Health Dashboard tooling
-* **Root Cause of Outage:** Single root cause not specified in the text
+* **Root Cause of Outage:** A single root cause is mentioned in the text, but it is not explicitly stated.
 * **Duration of Outage:**
 	+ Start Time: 7:33 AM PST
 	+ End Time: 2:25 PM PST
 	+ Duration: 6 hours and 52 minutes
-* **Downtime Period:** The outage started on December 7th, 2021, at 7:33 AM PST and lasted for approximately 6 hours and 52 minutes.
-* **Resolution Time:** The outage was marked as resolved by 8:22 AM PST.
+* **Downtime Period:** The outage lasted for approximately 6 hours and 52 minutes.
+* **Resolution Time:** By 8:22 AM PST, the Service Health Dashboard was successfully updated.
 
-Note that the text does not provide information about the specific services impacted or the root cause of the outage. However, it mentions that the impairment to monitoring systems delayed understanding of the event, and networking congestion impaired Service Health Dashboard tooling.
+Note that there is no information about Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare in the provided text.

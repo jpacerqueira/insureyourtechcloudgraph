@@ -18,8 +18,18 @@ Here is the filtered response:
 * We are currently investigating the issue. Any API call to realm.mongodb.com is returning 401.
 * The new services.cloud.mongodb.com API works as expected.
 * The incident started on September 18, 2024 at 12:50 UTC.
-* The outage lasted for approximately 2 days and 1 hour and 10 minutes.
-* Downtime period: 2 days and 1 hour and 10 minutes
-* The issue was marked as resolved.
+* The outage lasted for approximately 2 days and 14 hours.
 
-Note that I could not find information on the root cause of the outage, but it is being investigated.
+**Duration of Outage**
+
+* Realm mongodb com API currently unavailable
+* Duration of outage:
+	+ Days: 2
+	+ Hours: 14
+	+ Minutes: 0
+
+**Resolved Date**
+
+* The incident has been resolved.
+* Resolved This incident has been resolved.
+* Posted 2 months ago. September 18, 2024 - 16:56 UTC
