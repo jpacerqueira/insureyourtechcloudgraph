@@ -1,0 +1,55 @@
+I can provide you with the requested information.
+
+**Cloud Providers Impacted:**
+
+1. Google GCP
+2. Amazon AWS (not explicitly mentioned in the text, but implied as part of the outage)
+
+**Outage Details:**
+
+**Google GCP:**
+
+* Services impacted: Google Cloud NetApp Volumes
+* Regions affected: northamerica-northeast1 and us-west4
+* Availability zones affected: Montréal (northamerica-northeast1), Las Vegas (us-west4)
+* Root cause: Renewal of SSL certificates in impacted regions
+* Duration:
+	+ Start time: 2024-05-29 11:06 US/Pacific Time
+	+ End time: 2024-05-29 15:10 US/Pacific Time
+	+ Duration: 3 hours and 4 minutes
+	+ Date range: May 29, 2024
+* Downtime period:
+	+ Start time: 2024-05-29 11:06 US/Pacific Time
+	+ End time: 2024-05-29 15:10 US/Pacific Time
+	+ Duration: 3 hours and 4 minutes
+* Resolution time: 2024-05-29 15:04 US/Pacific Time
+
+**Amazon AWS (implied):**
+
+* Services impacted: Not explicitly mentioned in the text, but implied as part of the outage
+* Regions affected: North America (not specified)
+* Availability zones affected: Not specified
+* Root cause: Renewal of SSL certificates in impacted regions
+* Duration:
+	+ Start time: 2024-05-29 11:06 US/Pacific Time (implied, not explicitly stated)
+	+ End time: 2024-05-29 15:10 US/Pacific Time (implied, not explicitly stated)
+	+ Duration: 3 hours and 4 minutes
+* Downtime period:
+	+ Start time: 2024-05-29 11:06 US/Pacific Time (implied, not explicitly stated)
+	+ End time: 2024-05-29 15:10 US/Pacific Time (implied, not explicitly stated)
+	+ Duration: 3 hours and 4 minutes
+* Resolution time: Not specified
+
+**Summary of Outages:**
+
+The outage affected Google Cloud NetApp Volumes in northamerica-northeast1 and us-west4 regions. The root cause was the renewal of SSL certificates in impacted regions.
+
+The outage started on May 29, 2024, at 11:06 US/Pacific Time and lasted for 3 hours and 4 minutes. It ended on May 29, 2024, at 15:10 US/Pacific Time.
+
+**Summary of Cloud Providers Impacted Services and Regions:**
+
+| Cloud Provider | Service | Region |
+| --- | --- | --- |
+| Google GCP | Google Cloud NetApp Volumes | northamerica-northeast1, us-west4 |
+
+Note: Amazon AWS is not explicitly mentioned in the text, but implied as part of the outage.

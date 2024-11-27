@@ -1,0 +1,80 @@
+I can help you with that query. However, I need to clarify that some of the cloud providers mentioned in your text are not explicitly identified (e.g., Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud). I will assume that only Amazon AWS is one of the cloud providers impacted.
+
+Here is the output:
+
+**Amazon AWS Outages**
+
+Each outage is displayed as a separate line, followed by an output table summarizing the details.
+
+1. **EMR Cluster Launch Failures**
+	* Start time: August 6, 2024, 7:24:28 PM (PDT)
+	* Duration: 5 days, 9 hours, and 46 minutes
+	* Downtime period: August 6-11, 2024
+	* Root cause: Not specified
+	* Impacted services: Amazon Elastic MapReduce (N. Virginia) - Northern Virginia region
+2. **Increased API Error Rates**
+	* November 25, 2024, 4:31:00 AM (PST)
+	* Duration: 1 hour and 24 minutes
+	* Downtime period: November 25, 2024
+	* Root cause: Not specified
+	* Impacted services: Amazon Bedrock (us-west-2) - US West (Oregon) region
+3. **Increased API Errors Rates for Mutatable VPC Calls**
+	* November 10, 2024, 7:55:00 AM (PST)
+	* Duration: 5 hours and 18 minutes
+	* Downtime period: November 10-11, 2024
+	* Root cause: Not specified
+	* Impacted services: Amazon Elastic Compute Cloud (ap-northeast-2) - Asia Pacific (Tokyo) region
+4. **Increased Errors Performing Payments**
+	* November 6, 2024, 3:42:30 AM (PST)
+	* Duration: 1 hour and 32 minutes
+	* Downtime period: November 6, 2024
+	* Root cause: Not specified
+	* Impacted services: AWS Billing Console - Global region
+5. **Increased Error Rates**
+	* October 29, 2024, 4:13:56 AM (PDT)
+	* Duration: 1 hour and 12 minutes
+	* Downtime period: October 29-30, 2024
+	* Root cause: Not specified
+	* Impacted services: AWS Partner Central - Global region
+6. **Increased Login Errors**
+	* October 25, 2024, 9:56:38 AM (PDT)
+	* Duration: 1 hour and 48 minutes
+	* Downtime period: October 25-26, 2024
+	* Root cause: Not specified
+	* Impacted services: AWS QuickSight (us-east-1) - US East (N. Virginia) region
+7. **Increased Delays Associating Route 53 Private Hosted Zones to VPC**
+	* October 24, 2024, 12:01:00 PM (PDT)
+	* Duration: 2 hours and 44 minutes
+	* Downtime period: October 24-25, 2024
+	* Root cause: Not specified
+	* Impacted services: Amazon Route 53 - Global region
+8. **Management Console Issues**
+	* October 22, 2024, 12:48:52 PM (PDT)
+	* Duration: 2 hours and 26 minutes
+	* Downtime period: October 22-23, 2024
+	* Root cause: Not specified
+	* Impacted services: AWS Management Console - Global region
+9. **Increased API Error Rates**
+	* September 25, 2024, 2:05:30 PM (PDT)
+	* Duration: 1 hour and 17 minutes
+	* Downtime period: September 25-26, 2024
+	* Root cause: Not specified
+	* Impacted services: Multiple services - US West (Oregon) region
+10. **Increased Latencies and Errors**
+	* September 25, 2024, 2:05:30 PM (PDT)
+	* Duration: 1 hour and 17 minutes
+	* Downtime period: September 25-26, 2024
+	* Root cause: Not specified
+	* Impacted services: Multiple services - US West (Oregon) region
+
+**Summary of Amazon AWS Outages**
+
+There were 10 outages reported on Amazon AWS, affecting various services and regions. The root cause of the outages was not specified in most cases.
+
+**Cloud Providers Impacted Services and Regions**
+
+Only Amazon AWS is explicitly identified as one of the cloud providers impacted.
+
+**Overall Summary of Cloud Provider Impacted Services and Regions**
+
+Unfortunately, I couldn't identify any other cloud providers mentioned in your text. If you provide more information or clarify which cloud providers are impacted, I'll be happy to help further.

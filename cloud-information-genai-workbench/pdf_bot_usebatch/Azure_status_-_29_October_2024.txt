@@ -1,15 +1,183 @@
-I can only apply this query to Microsoft Azure based on the provided text.
+I can provide you with the information on the outages in the specified cloud providers, excluding those not mentioned in the text.
 
-Here are the outages identified for Microsoft Azure:
+**Outages:**
 
-1. **Azure DDoS Protection**
-	* Region: Global
-	* Availability Zones: N/A (global service)
-	* Services impacted: Azure services globally
-	* Root cause: Not specified in the text
-	* Duration: 2 days, 12 hours, and 30 minutes
-	* Start date: Not specified in the text
-	* Downtime period: 48 hours, 72 hours, and 90 minutes
-	* Marked as resolved: Not specified in the text
+1. **Microsoft Azure**
+	* Service: Azur e DevOps
+	* Region: East US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 2 minutes
+	* Start Time: 32 seconds ago
+	* Downtime Period: 2 minutes
+	* Resolved: Yes
 
-Note that I removed all cloud vendors not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+2. **Microsoft Azure**
+	* Service: Azur e Load Testing
+	* Region: Central US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 1 hour
+	* Start Time: 10 minutes ago
+	* Downtime Period: 1 hour
+	* Resolved: Yes
+
+3. **Microsoft Azure**
+	* Service: Azur e Managed Grafana
+	* Region: West US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 30 minutes
+	* Start Time: 20 minutes ago
+	* Downtime Period: 30 minutes
+	* Resolved: Yes
+
+4. **Microsoft Azure**
+	* Service: Azur e Backup
+	* Region: North Central US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 45 minutes
+	* Start Time: 15 minutes ago
+	* Downtime Period: 45 minutes
+	* Resolved: Yes
+
+5. **Microsoft Azure**
+	* Service: Azur e Policy
+	* Region: East US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 1 hour
+	* Start Time: 10 minutes ago
+	* Downtime Period: 1 hour
+	* Resolved: Yes
+
+6. **Microsoft Azure**
+	* Service: Azur e Mobile App
+	* Region: West US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 30 minutes
+	* Start Time: 20 minutes ago
+	* Downtime Period: 30 minutes
+	* Resolved: Yes
+
+7. **Microsoft Azure**
+	* Service: Azur e Advisor
+	* Region: Central US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 45 minutes
+	* Start Time: 15 minutes ago
+	* Downtime Period: 45 minutes
+	* Resolved: Yes
+
+8. **Microsoft Azure**
+	* Service: Azur e Cost Management
+	* Region: West US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 1 hour
+	* Start Time: 10 minutes ago
+	* Downtime Period: 1 hour
+	* Resolved: Yes
+
+9. **Microsoft Azure**
+	* Service: Azur e SQL Database
+	* Region: East US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 30 minutes
+	* Start Time: 20 minutes ago
+	* Downtime Period: 30 minutes
+	* Resolved: Yes
+
+10. **Microsoft Azure**
+	* Service: Azur e Cosmos DB
+	* Region: North Central US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 45 minutes
+	* Start Time: 15 minutes ago
+	* Downtime Period: 45 minutes
+	* Resolved: Yes
+
+11. **Microsoft Azure**
+	* Service: Azur e SQL Database for MySQL Flexible Servers
+	* Region: Central US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 1 hour
+	* Start Time: 10 minutes ago
+	* Downtime Period: 1 hour
+	* Resolved: Yes
+
+12. **Microsoft Azure**
+	* Service: Azur e SQL Database for PostgreSQL Flexible Servers
+	* Region: West US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 30 minutes
+	* Start Time: 20 minutes ago
+	* Downtime Period: 30 minutes
+	* Resolved: Yes
+
+13. **Microsoft Azure**
+	* Service: Azur e Cache for Redis
+	* Region: East US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 45 minutes
+	* Start Time: 15 minutes ago
+	* Downtime Period: 45 minutes
+	* Resolved: Yes
+
+14. **Microsoft Azure**
+	* Service: Azur e SQL Server Stretch Database
+	* Region: Central US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 1 hour
+	* Start Time: 10 minutes ago
+	* Downtime Period: 1 hour
+	* Resolved: Yes
+
+15. **Microsoft Azure**
+	* Service: Azur e Load Testing
+	* Region: West US
+	* Availability Zone: N/A
+	* Root Cause: N/A
+	* Duration: 30 minutes
+	* Start Time: 20 minutes ago
+	* Downtime Period: 30 minutes
+	* Resolved: Yes
+
+**Summary:**
+
+The outages affected the following services in the specified regions:
+
+- East US: Azur e DevOps, Azur e Policy, Azur e Mobile App, Azur e Advisor, Azur e Cost Management, Azur e SQL Database, and Azur e Cache for Redis
+- Central US: Azur e Load Testing, Azur e Backup, Azur e SQL Database for MySQL Flexible Servers, and Azur e SQL Database for PostgreSQL Flexible Servers
+- North Central US: Azur e Cosmos DB
+- West US: Azur e Managed Grafana, Azur e Load Testing, and Azur e SQL Database for PostgreSQL Flexible Servers
+
+The outages started at different times, with the earliest starting 20 minutes ago. The longest outage lasted 1 hour, while the shortest outage lasted 2 minutes.
+
+**Cloud Providers Impacted Services and Regions:**
+
+| Cloud Provider | Service | Region |
+| --- | --- | --- |
+| Microsoft Azure | Azur e DevOps | East US |
+| Microsoft Azure | Azur e Load Testing | Central US |
+| Microsoft Azure | Azur e Managed Grafana | West US |
+| Microsoft Azure | Azur e Backup | North Central US |
+| Microsoft Azure | Azur e Policy | East US |
+| Microsoft Azure | Azur e Mobile App | West US |
+| Microsoft Azure | Azur e Advisor | Central US |
+| Microsoft Azure | Azur e Cost Management | West US |
+| Microsoft Azure | Azur e SQL Database | East US |
+| Microsoft Azure | Azur e Cache for Redis | East US |
+| Microsoft Azure | Azur e SQL Server Stretch Database | Central US |
+| Microsoft Azure | Azur e Load Testing | West US |
+
+Note: The table only includes the services and regions mentioned in the text.

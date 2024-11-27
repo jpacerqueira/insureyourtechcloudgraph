@@ -1,0 +1,115 @@
+Here is the response to your query:
+
+**Summary of Outages**
+
+The following cloud providers were impacted: Amazon AWS, Amazon STS, AWS Management Console, Amazon EKS, Amazon Connect, Amazon EventBridge.
+
+**Outage Details**
+
+**Amazon AWS**
+
+* Region: Northern Virginia (US-EAST-1)
+* Availability Zones: Not specified
+* Services Impacted:
+	+ Lambda function invocations
+	+ Amazon STS
+	+ AWS Management Console
+	+ Amazon EKS
+	+ Amazon Connect
+	+ Amazon EventBridge
+* Root Cause: Latent software defect in the provisioning of underlying compute capacity
+* Duration: 3 hours and 48 minutes (from 11:49 AM PDT to 3:37 PM PDT)
+* Downtime Period:
+	+ Lambda function invocations: 2 hours and 13 minutes
+	+ Amazon STS: 1 hour and 53 minutes
+	+ AWS Management Console: 1 hour and 53 minutes
+	+ Amazon EKS: 1 hour and 53 minutes
+	+ Amazon Connect: 1 hour and 40 minutes
+	+ Amazon EventBridge: 1 hour and 13 minutes
+* Marked as Resolved: 3:37 PM PDT
+
+**Amazon STS**
+
+* Region: Northern Virginia (US-EAST-1)
+* Availability Zones: Not specified
+* Services Impacted:
+	+ AWS Management Console
+	+ Amazon EKS
+	+ Amazon Connect
+	+ Amazon EventBridge
+* Root Cause: Latent software defect in the provisioning of underlying compute capacity
+* Duration: 1 hour and 53 minutes (from 11:49 AM PDT to 1:42 PM PDT)
+* Downtime Period:
+	+ AWS Management Console: 1 hour and 53 minutes
+	+ Amazon EKS: 1 hour and 53 minutes
+	+ Amazon Connect: 1 hour and 40 minutes
+	+ Amazon EventBridge: 1 hour and 13 minutes
+* Marked as Resolved: 1:42 PM PDT
+
+**AWS Management Console**
+
+* Region: Northern Virginia (US-EAST-1)
+* Availability Zones: Not specified
+* Services Impacted:
+	+ AWS STS
+	+ Amazon EKS
+	+ Amazon Connect
+	+ Amazon EventBridge
+* Root Cause: Latent software defect in the provisioning of underlying compute capacity
+* Duration: 1 hour and 53 minutes (from 11:49 AM PDT to 1:42 PM PDT)
+* Downtime Period:
+	+ AWS STS: 1 hour and 53 minutes
+	+ Amazon EKS: 1 hour and 53 minutes
+	+ Amazon Connect: 1 hour and 40 minutes
+	+ Amazon EventBridge: 1 hour and 13 minutes
+* Marked as Resolved: 1:42 PM PDT
+
+**Amazon EKS**
+
+* Region: Northern Virginia (US-EAST-1)
+* Availability Zones: Not specified
+* Services Impacted:
+	+ AWS Management Console
+	+ Amazon STS
+	+ Amazon Connect
+	+ Amazon EventBridge
+* Root Cause: Latent software defect in the provisioning of underlying compute capacity
+* Duration: 1 hour and 53 minutes (from 11:49 AM PDT to 1:42 PM PDT)
+* Downtime Period:
+	+ AWS Management Console: 1 hour and 53 minutes
+	+ Amazon STS: 1 hour and 53 minutes
+	+ Amazon Connect: 1 hour and 40 minutes
+	+ Amazon EventBridge: 1 hour and 13 minutes
+* Marked as Resolved: 1:42 PM PDT
+
+**Amazon Connect**
+
+* Region: Northern Virginia (US-EAST-1)
+* Availability Zones: Not specified
+* Services Impacted:
+	+ AWS Management Console
+	+ Amazon EKS
+	+ Amazon EventBridge
+* Root Cause: Latent software defect in the provisioning of underlying compute capacity
+* Duration: 1 hour and 40 minutes (from 11:49 AM PDT to 1:29 PM PDT)
+* Downtime Period:
+	+ AWS Management Console: 1 hour and 53 minutes
+	+ Amazon EKS: 1 hour and 53 minutes
+	+ Amazon EventBridge: 1 hour and 13 minutes
+* Marked as Resolved: 1:29 PM PDT
+
+**Amazon EventBridge**
+
+* Region: Northern Virginia (US-EAST-1)
+* Availability Zones: Not specified
+* Services Impacted:
+	+ AWS Management Console
+	+ Amazon EKS
+	+ Amazon Connect
+* Root Cause: Latent software defect in the provisioning of underlying compute capacity
+* Duration: 1 hour and 13 minutes (from 11:49 AM PDT to 12:02 PM PDT)
+* Downtime Period:
+	+ AWS Management Console: 1 hour and 53 minutes
+	+ Amazon EKS: 1 hour and 53 minutes
+	+ Amazon Connect: 1 hour and 40 minutes
+* Marked as Resolved: 12:02 PM PDT

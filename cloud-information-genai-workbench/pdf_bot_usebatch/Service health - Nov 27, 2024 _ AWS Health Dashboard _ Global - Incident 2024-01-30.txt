@@ -1,0 +1,110 @@
+I can provide you with the requested information. However, I need to clarify that some of the cloud providers mentioned in your query (Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) are not explicitly mentioned in the provided text.
+
+Based on the text, only Amazon Web Services (AWS) is identified. I will provide the information for AWS services that were impacted by outages.
+
+**Outage Details:**
+
+Here are the outage details for each affected service:
+
+1. **Amazon Bedrock**
+	* Outage started: November 25, 2024, 4:31:00 AM PST
+	* Duration: 5 minutes
+	* Root cause: Increased API error rates
+	* Affected regions: us-west-2
+	* Availability zones: Not specified
+
+2. **Amazon Elastic Compute Cloud (EC2)**
+	* Outage started: November 10, 2024, 7:55:00 AM PST
+	* Duration: 3 hours and 18 minutes
+	* Root cause: Increased API error rates for mutable VPC calls
+	* Affected regions: ap-northeast-2
+	* Availability zones: Not specified
+
+3. **AWS Billing Console**
+	* Outage started: November 6, 2024, 3:42:30 AM PST
+	* Duration: 32 minutes
+	* Root cause: Increased errors performing payments
+	* Affected regions: Not specified
+	* Availability zones: Not specified
+
+4. **AWS Partner Central**
+	* Outage started: October 29, 2024, 4:13:56 AM PDT
+	* Duration: 44 minutes
+	* Root cause: Increased error rates
+	* Affected regions: Not specified
+	* Availability zones: Not specified
+
+5. **AWS QuickSight**
+	* Outage started: October 25, 2024, 12:19:15 PM PDT
+	* Duration: 1 hour and 37 minutes
+	* Root cause: Increased login errors
+	* Affected regions: us-east-1
+	* Availability zones: Not specified
+
+6. **Amazon DynamoDB**
+	* Outage started: December 9, 2023, 7:17:00 PM PST
+	* Duration: 2 hours and 12 minutes
+	* Root cause: Increased error rates
+	* Affected regions: us-west-2
+	* Availability zones: Not specified
+
+7. **Multiple services (EC2, S3, RDS)**
+	* Outage started: September 25, 2024, 2:05:30 PM PDT
+	* Duration: 10 minutes
+	* Root cause: Increased latencies and errors
+	* Affected regions: us-west-2
+	* Availability zones: Not specified
+
+8. **Multiple services (EC2, S3, RDS)**
+	* Outage started: September 11, 2024, 1:34:44 PM PDT
+	* Duration: 37 minutes
+	* Root cause: Increased error rates
+	* Affected regions: eu-south-1
+	* Availability zones: Not specified
+
+9. **AWS Identity and Access Management (IAM)**
+	* Outage started: August 29, 2024, 2:31:00 AM PDT
+	* Duration: 50 minutes
+	* Root cause: Connectivity issues
+	* Affected regions: Not specified
+	* Availability zones: Not specified
+
+10. **Amazon Simple Queue Service (SQS)**
+	* Outage started: August 15, 2024, 12:50:00 PM PDT
+	* Duration: 1 minute
+	* Root cause: Increased API error rates
+	* Affected regions: us-east-1
+	* Availability zones: Not specified
+
+11. **AWS Service Catalog**
+	* Outage started: August 6, 2024, 8:11:29 PM PDT
+	* Duration: 46 minutes
+	* Root cause: Increased API error rates
+	* Affected regions: us-west-1
+	* Availability zones: Not specified
+
+12. **Amazon Elastic MapReduce (EMR)**
+	* Outage started: August 6, 2024, 7:24:28 PM PDT
+	* Duration: 46 minutes
+	* Root cause: EMR cluster launch failures
+	* Affected regions: us-east-1
+	* Availability zones: Not specified
+
+13. **Multiple services (EC2, S3, RDS)**
+	* Outage started: July 30, 2024, 3:40:53 PM PDT
+	* Duration: 14 hours and 15 minutes
+	* Root cause: Increased API error rates
+	* Affected regions: us-east-1
+	* Availability zones: Not specified
+
+**Summary of Outages:**
+
+Amazon Web Services (AWS) experienced multiple outages across various services, including EC2, S3, RDS, DynamoDB, and more. The outages were caused by a range of issues, including increased API error rates, connectivity problems, and EMR cluster launch failures.
+
+The most recent outage occurred on July 30, 2024, which lasted for 14 hours and 15 minutes. This was followed by an outage on September 11, 2024, which lasted for 37 minutes.
+
+**Cloud Provider Summary:**
+
+Amazon Web Services (AWS) is the only cloud provider explicitly mentioned in the text. The outages affected various services across multiple regions, including us-west-2, ap-northeast-2, eu-south-1, and us-east-1.
+
+Note that I have not included information on Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare as they were not explicitly mentioned in the text.

@@ -1,86 +1,23 @@
-After analyzing the provided text, I have identified the following Cloud Providers:
+Here is the response to your query:
 
-* Microsoft Azure
-* Google GCP is not mentioned in the text
-* Amazon AWS is not mentioned in the text
-* Oracle OCI is not mentioned in the text
-* IBM Cloud is not mentioned in the text
-* Snowflake is not mentioned in the text
-* Databricks is not mentioned in the text
-* MongoDB is not mentioned in the text
-* Akamai is not mentioned in the text
-* Cloudflare is not mentioned in the text
+**Summary of Outages**
 
-Here are the outages for each service impacted by Microsoft Azure:
+The outage affected Microsoft Azure, specifically the Access Panel service.
 
-**Azure Cosmos DB**
+**Outage Details**
 
-Outage started: 07:00 UT C on 09 Nov 2021
-Duration: 5 hours and 30 minutes
-Downtime period: 14:03 UT C to 19:33 UT C on 09 Nov 2021
-Root cause: Unrelated bug introduced by code change to Access Panel, causing node health status reporting issues
-Resolved: 07:41 UT C on 05 Dec 2022
+**Microsoft Azure - Access Panel Service**
 
-**Azure**
+* **Duration**: 5 days, 13 hours, 41 minutes
+* **Start Date**: November 9, 2021, 03:00 UTC
+* **End Date**: December 4, 2022, 07:41 UTC
+* **Affected Regions**: West Central US
+* **Availability Zones**: Not specified
+* **Services Impacted**: Access Panel service in West Central US region
+* **Root Cause**: Unrelated bug introduced by code change to Access Panel
+* **Downtime Period**: The service was marked as offline at 14:08 UTC on January 4, 2022, which triggered regional failover for accounts with multiple regions and automatic failover enabled.
+* **Resolution Date**: December 5, 2022, 07:41 UTC
 
-Outage started: 14:03 UT C on 09 Nov 2021
-Duration: 6 hours and 30 minutes
-Downtime period: 14:03 UT C to 20:33 UT C on 09 Nov 2021
-Root cause: Unrelated bug introduced by code change to Access Panel, causing node health status reporting issues
-Resolved: 07:41 UT C on 05 Dec 2022
+**Note**: The outage occurred during off-business hours and persisted into business hours, causing traffic to rise quickly for the Access Panel service. The root cause was identified as an unrelated bug introduced by a code change to the Access Panel.
 
-**Azure Service Fabric**
-
-Outage started: 14:03 UT C on 09 Nov 2021
-Duration: 6 hours and 30 minutes
-Downtime period: 14:03 UT C to 20:33 UT C on 09 Nov 2021
-Root cause: Unrelated bug introduced by code change to Access Panel, causing node health status reporting issues
-Resolved: 07:41 UT C on 05 Dec 2022
-
-**Azure Service Fabric Team**
-
-Outage started: 14:03 UT C on 09 Nov 2021
-Duration: 6 hours and 30 minutes
-Downtime period: 14:03 UT C to 20:33 UT C on 09 Nov 2021
-Root cause: Unrelated bug introduced by code change to Access Panel, causing node health status reporting issues
-Resolved: 07:41 UT C on 05 Dec 2022
-
-**Azure Cosmos DB (Monitoring)**
-
-Outage started: 14:03 UT C on 09 Nov 2021
-Duration: 6 hours and 30 minutes
-Downtime period: 14:03 UT C to 20:33 UT C on 09 Nov 2021
-Root cause: Unrelated bug introduced by code change to Access Panel, causing node health status reporting issues
-Resolved: 07:41 UT C on 05 Dec 2022
-
-**Azure Service Fabric Team (Fix)**
-
-Outage started: 14:03 UT C on 09 Nov 2021
-Duration: 6 hours and 30 minutes
-Downtime period: 14:03 UT C to 20:33 UT C on 09 Nov 2021
-Root cause: Unrelated bug introduced by code change to Access Panel, causing node health status reporting issues
-Resolved: 07:41 UT C on 05 Dec 2022
-
-**Azure Service Fabric Team (Feedback)**
-
-Outage started: 14:03 UT C on 09 Nov 2021
-Duration: 6 hours and 30 minutes
-Downtime period: 14:03 UT C to 20:33 UT C on 09 Nov 2021
-Root cause: Unrelated bug introduced by code change to Access Panel, causing node health status reporting issues
-Resolved: 07:41 UT C on 05 Dec 2022
-
-**Azure Service Fabric Team (Survey)**
-
-Outage started: 14:03 UT C on 09 Nov 2021
-Duration: 6 hours and 30 minutes
-Downtime period: 14:03 UT C to 20:33 UT C on 09 Nov 2021
-Root cause: Unrelated bug introduced by code change to Access Panel, causing node health status reporting issues
-Resolved: 07:41 UT C on 05 Dec 2022
-
-**Azure Service Fabric Team (Provide Feedback)**
-
-Outage started: 14:03 UT C on 09 Nov 2021
-Duration: 6 hours and 30 minutes
-Downtime period: 14:03 UT C to 20:33 UT C on 09 Nov 2021
-Root cause: Unrelated bug introduced by code change to Access Panel, causing node health status reporting issues
-Resolved: 07:41 UT C on 05 Dec 2022
+There were no outages reported for Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare.

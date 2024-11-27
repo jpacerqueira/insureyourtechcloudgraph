@@ -1,0 +1,47 @@
+Here is the breakdown of the outage for each cloud provider:
+
+**Google Cloud**
+
+Incident Start: 2024-10-29 16:21 US/Pacific
+Incident End: 2024-10-29 19:34 US/Pacific
+Duration: 3 hours, 13 minutes
+
+Affected Services and Features:
+Apigee, Apigee Edge Public Cloud, Batch, Cloud Filestore, Cloud Firestore, Cloud Key Management Service, Cloud NAT, Cloud Run, Google BigQuery, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Deploy, Google Cloud Networking, Google Cloud Pub/Sub, Google Cloud SQL, Google Cloud Storage, Google Compute Engine, Google Kubernetes Engine, Identity and Access Management, Persistent Disk, Resource Manager API, Virtual Private Cloud (VPC)
+
+Affected Regions/Zones: australia-southeast2
+
+Root Cause: Power voltage swell event impacted the Network Point of Presence (POP) infrastructure in one of the campuses supporting the australia-southeast2 region.
+
+Downtime Period:
+- Google BigQuery: 16:20 - 17:55 US/Pacific
+- Cloud Run: 16:20 - 17:14 US/Pacific
+- Google Cloud Dataflow: 16:21 - 17:40 US/Pacific
+- Cloud NAT: 16:21 - 16:43 US/Pacific
+- Google Cloud Pub/Sub: 16:21 - 17:06 US/Pacific
+- Google Cloud SQL: 16:23 - 17:52 US/Pacific
+- Google Cloud Storage: 16:21 - 17:12 US/Pacific
+
+Resolved: 2024-10-29 19:34 US/Pacific
+
+**Cloud Services Downtime Duration**
+
+| Service | Start Time | End Time | Duration |
+| --- | --- | --- | --- |
+| Google BigQuery | 16:20 | 17:55 | 1 hour, 35 minutes |
+| Cloud Run | 16:20 | 17:14 | 54 minutes |
+| Google Cloud Dataflow | 16:21 | 17:40 | 1 hour, 19 minutes |
+| Cloud NAT | 16:21 | 16:43 | 22 minutes |
+| Google Cloud Pub/Sub | 16:21 | 17:06 | 45 minutes |
+| Google Cloud SQL | 16:23 | 17:52 | 1 hour, 29 minutes |
+| Google Cloud Storage | 16:21 | 17:12 | 51 minutes |
+
+**Summary**
+
+Google Cloud experienced a power voltage swell event that impacted the australia-southeast2 region. The outage affected multiple services and features, including Apigee, Batch, Cloud Filestore, Cloud Firestore, Cloud Key Management Service, Cloud NAT, Cloud Run, Google BigQuery, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Deploy, Google Cloud Networking, Google Cloud Pub/Sub, Google Cloud SQL, Google Cloud Storage, Google Compute Engine, Google Kubernetes Engine, Identity and Access Management, Persistent Disk, Resource Manager API, and Virtual Private Cloud (VPC).
+
+**Cloud Providers Impacted**
+
+Google Cloud
+- Services: Apigee, Batch, Cloud Filestore, Cloud Firestore, Cloud Key Management Service, Cloud NAT, Cloud Run, Google BigQuery, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Deploy, Google Cloud Networking, Google Cloud Pub/Sub, Google Cloud SQL, Google Cloud Storage, Google Compute Engine, Google Kubernetes Engine, Identity and Access Management, Persistent Disk, Resource Manager API, Virtual Private Cloud (VPC)
+- Regions/Zones: australia-southeast2
