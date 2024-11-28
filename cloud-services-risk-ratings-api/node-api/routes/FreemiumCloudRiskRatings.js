@@ -175,4 +175,117 @@ router.get('/freemium/fetch/service/service_name/:service_name/global_or_by_regi
     }
 });
 
+// Get all outage reports
+router.get('/freemium/outages/list/all', async function (req, res) {
+    let connection;
+    try {
+        connection = await db.connect();
+        const result = await connection.query(
+            `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries`
+        );
+        
+        const rows = Array.isArray(result) ? result[0] : result.rows;
+        
+        if (rows && rows.length > 0) {
+            res.status(200).json(rows.slice(0, 100000));
+        } else {
+            res.status(200).json([]);
+        }
+    } catch (err) {
+        console.error('Database connection error:', err);
+        res.status(500).json({ error: 'Failed to retrieve outage reports' });
+    } finally {
+        if (connection) {
+            connection.release();
+        }
+    }
+});
+
+// Get outage reports by cloud provider
+router.get('/freemium/outages/provider/:provider', async function (req, res) {
+    let connection;
+    try {
+        connection = await db.connect();
+        const provider = req.params.provider;
+        const result = await connection.query(
+            `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
+             WHERE cloud_provider = $1`,
+            [provider]
+        );
+        
+        const rows = Array.isArray(result) ? result[0] : result.rows;
+        
+        if (rows && rows.length > 0) {
+            res.status(200).json(rows);
+        } else {
+            res.status(404).json({ error: 'No outage reports found for this provider' });
+        }
+    } catch (err) {
+        console.error('Database connection error:', err);
+        res.status(500).json({ error: 'Failed to retrieve outage reports' });
+    } finally {
+        if (connection) {
+            connection.release();
+        }
+    }
+});
+
+// Get outage reports by service
+router.get('/freemium/outages/service/:service', async function (req, res) {
+    let connection;
+    try {
+        connection = await db.connect();
+        const service = req.params.service;
+        const result = await connection.query(
+            `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
+             WHERE cloud_service = $1`,
+            [service]
+        );
+        
+        const rows = Array.isArray(result) ? result[0] : result.rows;
+        
+        if (rows && rows.length > 0) {
+            res.status(200).json(rows);
+        } else {
+            res.status(404).json({ error: 'No outage reports found for this service' });
+        }
+    } catch (err) {
+        console.error('Database connection error:', err);
+        res.status(500).json({ error: 'Failed to retrieve outage reports' });
+    } finally {
+        if (connection) {
+            connection.release();
+        }
+    }
+});
+
+// Get outage reports by region
+router.get('/freemium/outages/region/:region', async function (req, res) {
+    let connection;
+    try {
+        connection = await db.connect();
+        const region = req.params.region;
+        const result = await connection.query(
+            `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
+             WHERE regions LIKE $1`,
+            [`%${region}%`]
+        );
+        
+        const rows = Array.isArray(result) ? result[0] : result.rows;
+        
+        if (rows && rows.length > 0) {
+            res.status(200).json(rows);
+        } else {
+            res.status(404).json({ error: 'No outage reports found for this region' });
+        }
+    } catch (err) {
+        console.error('Database connection error:', err);
+        res.status(500).json({ error: 'Failed to retrieve outage reports' });
+    } finally {
+        if (connection) {
+            connection.release();
+        }
+    }
+});
+
 module.exports = router;

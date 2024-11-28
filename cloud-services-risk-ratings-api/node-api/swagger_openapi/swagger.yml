@@ -316,6 +316,174 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
+  /cloud-services-risk-ratings/risk-ratings/outages/list/all:
+    get:
+      summary: Get all outage reports (Premium)
+      description: Retrieves a list of all cloud service outage reports (limited to 100000 records)
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OutageReport'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings/outages/provider/{provider}:
+    get:
+      summary: Get outage reports by provider (Premium)
+      description: Retrieves outage reports for a specific cloud provider
+      parameters:
+        - name: provider
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OutageReport'
+        '404':
+          description: No outage reports found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings/outages/service/{service}:
+    get:
+      summary: Get outage reports by service (Premium)
+      description: Retrieves outage reports for a specific cloud service
+      parameters:
+        - name: service
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OutageReport'
+        '404':
+          description: No outage reports found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings/outages/region/{region}:
+    get:
+      summary: Get outage reports by region (Premium)
+      description: Retrieves outage reports for a specific region
+      parameters:
+        - name: region
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OutageReport'
+        '404':
+          description: No outage reports found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/list/all:
+    get:
+      summary: Get all outage reports (Freemium)
+      description: Retrieves a list of all cloud service outage reports (limited to 100000 records)
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OutageReport'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/provider/{provider}:
+    get:
+      summary: Get outage reports by provider (Freemium)
+      description: Retrieves outage reports for a specific cloud provider
+      parameters:
+        - name: provider
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OutageReport'
+        '404':
+          description: No outage reports found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
 components:
   schemas:
     BasicRiskRating:
@@ -372,4 +540,21 @@ components:
       type: object
       properties:
         error:
+          type: string
+    OutageReport:
+      type: object
+      properties:
+        provider:
+          type: string
+        service:
+          type: string
+        region:
+          type: string
+        outage_start_time:
+          type: string
+        outage_end_time:
+          type: string
+        outage_duration:
+          type: number
+        outage_reason:
           type: string
