@@ -995,32 +995,62 @@ The following cloud providers were impacted:
 --
 Outage Filename: ./Azure_status_history_Microsoft_Azure_p13_2019.txt
 --
-Based on the provided text, I can only identify outages related to Microsoft Azure. Here is the information about the outage:
+After analyzing the provided text, I have identified the following outages for the specified cloud providers:
 
-**Outage Details:**
+**Microsoft Azure**
 
-* **Incident:** Multiple services across Microsoft including Azure, Microsoft 365 failed due to management requests.
-* **Duration:** The outage started at 00:56 UTC on November 20, 2019, and was resolved by deploying a platform hotfix to mitigate the issue. However, it is not clear when exactly the outage ended.
-* **Services Impacted:** Azure services
-* **Regions and Availability Zones:** Not specified in the text.
-* **Root Cause:** The root cause of the outage is not explicitly stated in the provided text, but it is mentioned that engineers deployed a platform hotfix to mitigate the issue.
+* Service: CDN
+* Region/Availability Zone: Not specified
+* Impact Date: Between 17:24 and 18:48 UTC on December 11, 2019
+* Duration: 1 hour 24 minutes
+* Root Cause: Azure CDN providers use staged deployment processes to deploy configuration changes across the network.
+* Downtime Period: Yes
+* Resolved Date: Not specified
 
-**Summary of Outage:**
+**Microsoft Azure**
 
-The outage occurred on November 20, 2019, and lasted for an unknown duration. It affected multiple services across Microsoft, including Azure and Microsoft 365. The root cause of the outage was not explicitly stated in the provided text, but a platform hotfix was deployed to mitigate the issue.
+* Service: Various services (including Azure, Microsoft 365)
+* Region/Availability Zone: Not specified
+* Impact Date: Between 00:56 and 03:40 UTC on November 20, 2019
+* Duration: 2 hours 44 minutes
+* Root Cause: Management requests failed.
+* Downtime Period: Yes
+* Resolved Date: Engineer deployed a platform hotfix to mitigate the issue.
 
-**Other Outages:**
+**Microsoft Azure**
 
-There were two other outages mentioned in the text:
+* Service: Various services (including Azure, Microsoft 365)
+* Region/Availability Zone: Not specified
+* Impact Date: Between 15:01 and 16:30 UTC on January 20, 2020
+* Duration: 1 hour 29 minutes
+* Root Cause: Multiple "Edge Sites" on the network greatly enhanced the connectivity experience for Microsoft users in certain regions.
+* Downtime Period: Yes
+* Resolved Date: Not specified
 
-* **Outage 1:** Between 17:24 and 18:48 UTC on December 11, 2019, clients of customers attempting to reach Azure CDN from Verizon endpoints would intermittently receive HTTP (5XX) error or connection failures instead of expected content.
-	+ Duration: Approximately 2 hours and 24 minutes
-	+ Root Cause: Azure CDN providers use staged deployment processes to deploy configuration changes across the network.
-* **Outage 2:** Between 09:45 and 16:26 UTC on December 12, 2019, a subset of customers in North America may have experienced degraded performance, network drops, or timeouts when accessing Azure resources. Customers may also have experienced downstream impact to dependent Azure services.
-	+ Duration: Approximately 6 hours and 41 minutes
-	+ Root Cause: Engineers identified a routing protocol metric change within an ISP backbone network, which resulted in network congestion.
+**No outages found for Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare.**
 
-Note that the other cloud providers mentioned in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) were not included in this response as they were not identified as being affected by outages.  
+Here is the output table:
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Azure | CDN |  | Between 17:24 and 18:48 UTC on December 11, 2019 | 1 hour 24 minutes | Staged deployment processes | Yes | Not specified |
+| Azure | Various services (including Azure, Microsoft 365) |  | Between 00:56 and 03:40 UTC on November 20, 2019 | 2 hours 44 minutes | Management requests failed | Yes | Engineer deployed a platform hotfix to mitigate the issue. |
+| Azure | Various services (including Azure, Microsoft 365) |  | Between 15:01 and 16:30 UTC on January 20, 2020 | 1 hour 29 minutes | Multiple "Edge Sites" on the network greatly enhanced the connectivity experience for Microsoft users in certain regions | Yes | Not specified |
+
+Overall Summary:
+
+* Cloud Providers impacted: Microsoft Azure
+* Services impacted: CDN, Various services (including Azure, Microsoft 365)
+* Regions/Availability Zones impacted: Not specified
+* Impact dates: December 11, 2019, November 20, 2019, January 20, 2020
+* Duration of outages:
+	+ December 11, 2019: 1 hour 24 minutes
+	+ November 20, 2019: 2 hours 44 minutes
+	+ January 20, 2020: 1 hour 29 minutes
+* Root cause of outages:
+	+ December 11, 2019: Staged deployment processes
+	+ November 20, 2019: Management requests failed
+	+ January 20, 2020: Multiple "Edge Sites" on the network greatly enhanced the connectivity experience for Microsoft users in certain regions  
 --
 Outage Filename: ./Azure_status_history_Microsoft_Azure_p1_2024.txt
 --
@@ -4250,6 +4280,88 @@ Here is the information displayed in a table format:
 The outage affected Google App Engine customers in the us-central1 region. The incident started on October 8, 2024, at 12:15 PM PDT and ended on October 8, 2024, at 6:46 PM PDT. The root cause of the outage was not specified.
 
 Note that I have removed all cloud providers other than Google Cloud Service Health from the query results.  
+--
+Outage Filename: ./Google Cloud Service Health - Incident report 2024-10-09.txt
+--
+I can provide you with the information you requested. However, I need to clarify that some of the cloud providers mentioned in your request (Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud) are not explicitly mentioned in the text.
+
+Based on the provided text, I will only analyze Google Cloud Platform (GCP) and its services. Here is the information you requested:
+
+**Google Cloud Platform Outage**
+
+The outage affected AppEngine Flexible users experiencing an increase in HTTP 429 responses.
+
+**Incident Details**
+
+* Incident began: October 9, 2024, 14:57 US/Pacific
+* Incident ended: October 9, 2024, 17:18 US/Pacific (resolved)
+* Duration: 1 day, 2 hours, and 21 minutes
+
+**Impacted Services and Regions**
+
+* AppEngine Flexible users in the following regions were impacted:
+	+ Taiwan (asia-east1)
+	+ Hong Kong (asia-east2)
+	+ Tokyo (asia-northeast1)
+	+ Osaka (asia-northeast2)
+	+ Seoul (asia-northeast3)
+	+ Mumbai (asia-south1)
+	+ Singapore (asia-southeast1)
+	+ Jakarta (asia-southeast2)
+	+ Sydney (australia-southeast1)
+	+ Warsaw (europe-central2)
+	+ Belgium (europe-west1)
+	+ London (europe-west2)
+	+ Frankfurt (europe-west3)
+	+ Zurich (europe-west6)
+	+ Montréal (northamerica-northeast1)
+	+ São Paulo (southamerica-east1)
+	+ Iowa (us-central1)
+	+ South Carolina (us-east1)
+	+ Northern Virginia (us-east4)
+	+ Oregon (us-west1)
+	+ Los Angeles (us-west2)
+	+ Salt Lake City (us-west3)
+	+ Las Vegas (us-west4)
+
+**Root Cause and Workaround**
+
+* The root cause of the outage was not specified.
+* There was no workaround provided.
+
+**Summary**
+
+The Google Cloud Platform outage affected AppEngine Flexible users in multiple regions, including Asia-Pacific, Europe, North America, South America, and the US. The incident began on October 9, 2024, at 14:57 US/Pacific and ended on October 9, 2024, at 17:18 US/Pacific. The outage lasted for approximately 2 hours and 21 minutes.
+
+Here is the information displayed as an output table:
+
+| Service | Region | Availability Zone | Incident Start | Incident End | Duration |
+| --- | --- | --- | --- | --- | --- |
+| AppEngine Flexible | asia-east1 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | asia-east2 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | asia-northeast1 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | asia-northeast2 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | asia-northeast3 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | asia-south1 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | asia-southeast1 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | asia-southeast2 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | australia-southeast1 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | europe-central2 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | europe-west1 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | europe-west2 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | europe-west3 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | europe-west6 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | northamerica-northeast1 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | southamerica-east1 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | us-central1 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | us-east1 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | us-east4 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | us-west1 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | us-west2 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | us-west3 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+| AppEngine Flexible | us-west4 |  | October 9, 2024 14:57 US/Pacific | October 9, 2024 17:18 US/Pacific | 2 hours, 21 minutes |
+
+Note that the table only includes the services and regions impacted by the outage. The root cause of the outage was not specified in the provided text.  
 --
 Outage Filename: ./Google Cloud Service Health - Incident report 2024-10-29.txt
 --
