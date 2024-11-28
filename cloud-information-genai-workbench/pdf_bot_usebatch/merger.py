@@ -44,60 +44,256 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
     # Extended service patterns for specific providers
     service_patterns = {
         "AWS": [
-            r"(?i)(EC2|S3|RDS|Lambda|DynamoDB|CloudFront|Route53|ECS|EKS|SQS|SNS)",
-            r"(?i)(AWS Direct Connect|Amazon Connect|AWS Management Console)"
+            # API & Gateway Services
+            r"(?i)(Amazon API Gateway|API Gateway|AGW)",
+            # AI/ML Services
+            r"(?i)(Amazon Bedrock|Bedrock|ABR)",
+            # CDN & DNS Services
+            r"(?i)(Amazon CloudFront|CloudFront|CF)",
+            r"(?i)(Amazon Route 53|Route 53|R53|DNS)",
+            # Monitoring & Insights
+            r"(?i)(Amazon CloudWatch|CloudWatch|CW|CloudWatch Application Insights)",
+            r"(?i)(Amazon CodeGuru Profiler|CodeGuru|CGP)",
+            # Data Services
+            r"(?i)(Amazon DataZone|DataZone|ADZ)",
+            r"(?i)(Amazon DocumentDB|DocumentDB|DDB)",
+            r"(?i)(Amazon DynamoDB|DynamoDB|DDB)",
+            r"(?i)(Amazon RDS|RDS|Relational Database Service)",
+            r"(?i)(Amazon Aurora Serverless|Aurora|AAS)",
+            # Compute Services
+            r"(?i)(EC2 Instance Connect|Instance Connect|EIC)",
+            r"(?i)(Amazon EC2|EC2|Elastic Compute Cloud)",
+            r"(?i)(Amazon ECS|ECS|Elastic Container Service)",
+            # Storage Services
+            r"(?i)(Amazon EFS|EFS|Elastic File System)",
+            r"(?i)(Amazon EBS|EBS|Elastic Block Store)",
+            # Load Balancing
+            r"(?i)(Amazon ELB|ELB|Elastic Load Balancing)",
+            # Analytics Services
+            r"(?i)(Amazon EMR|EMR|Elastic MapReduce)",
+            r"(?i)(Amazon EMR Serverless|EMR Serverless)",
+            r"(?i)(Amazon ElastiCache|ElastiCache|EC)",
+            r"(?i)(Amazon FinSpace|FinSpace)",
+            r"(?i)(Amazon QuickSight|QuickSight|QS)",
+            # Serverless
+            r"(?i)(AWS Lambda|Lambda|λ)",
+            r"(?i)(AWS Step Functions|Step Functions|SF)",
+            # Data Processing
+            r"(?i)(Amazon Redshift|Redshift|RS)",
+            r"(?i)(AWS Glue|Glue)",
+            # Container Services
+            r"(?i)(Amazon EKS|EKS|Elastic Kubernetes Service)",
+        ],
+        "GCP": [
+            # AI/ML Services
+            r"(?i)(Google Cloud VertexAI|VertexAI|VAI)",
+            r"(?i)(Google Cloud Machine Learning|ML Engine|GCML)",
+            # API Services
+            r"(?i)(Google Cloud Apigee API|Apigee|GAPI)",
+            # Compute Services
+            r"(?i)(Google Cloud Run|Cloud Run|GCR)",
+            # Data Services
+            r"(?i)(Google Cloud BigQuery|BigQuery|BQ)",
+            r"(?i)(AlloyDB for PostgreSQL|AlloyDB|ADB)",
+            r"(?i)(Google Cloud SQL|Cloud SQL|GCS)",
+            r"(?i)(Google Cloud Bigtable|Bigtable|CBT)",
+            # Compute & Processing
+            r"(?i)(Google Cloud Compute Engine|Compute Engine|GCE)",
+            r"(?i)(Google Cloud Dataproc|Dataproc|DP)",
+            r"(?i)(Google Cloud Dataflow|Dataflow|DF)",
+            # Storage
+            r"(?i)(Google Cloud Storage|GCS|Cloud Storage)",
+            # Analytics
+            r"(?i)(Google Cloud DataStudio|DataStudio|DS)",
+            r"(?i)(Google Cloud Datalab|Datalab|DL)",
+            r"(?i)(Google Cloud Composer|Composer|GCC)",
+            r"(?i)(Google Cloud Looker Studio Pro|Looker|LSP)",
+            # Security
+            r"(?i)(Google Cloud reCAPTCHA Enterprise|reCAPTCHA|RCE)",
+            # Network Services
+            r"(?i)(Google Cloud Load Balancing|Load Balancing|GCLB)",
+            r"(?i)(Google Cloud And Media CDN|Media CDN|GCDN)",
+            r"(?i)(Google Cloud DNS|Cloud DNS|GCDNS)",
+            # Container Services
+            r"(?i)(Google Kubernetes Engine|GKE)",
         ],
         "Azure": [
-            r"(?i)(Azure SQL|Azure Storage|Azure VM|Azure Functions|Azure Cosmos DB)",
-            r"(?i)(Azure App Service|Azure Kubernetes Service|Azure DevOps)"
+            # Identity Services
+            r"(?i)(Azure Active Directory|Azure AD|AAD)",
+            r"(?i)(Microsoft Entra ID|Entra ID|EID)",
+            r"(?i)(Azure Active Directory B2C|Azure AD B2C|AAD B2C)",
+            # AI/ML Services
+            r"(?i)(Azure Machine Learning|AML|Azure ML)",
+            r"(?i)(Azure AI|AAI)",
+            r"(?i)(Azure AI Search|Cognitive Search|AIS)",
+            r"(?i)(Azure OpenAI Service|Azure OpenAI|AOAI)",
+            # API Services
+            r"(?i)(Azure API Management|APIM)",
+            # Data Services
+            r"(?i)(Azure Databricks|ADB|Databricks)",
+            r"(?i)(Azure SQL Managed Instance|SQL MI|ASQLMI)",
+            r"(?i)(Azure SQL Database|SQL DB|ASDB)",
+            r"(?i)(Azure Cosmos DB|Cosmos|ACDB)",
+            r"(?i)(Azure Database for PostgreSQL|Azure PostgreSQL|APS)",
+            r"(?i)(Azure Database for MySQL|Azure MySQL|AMS)",
+            # Compute Services
+            r"(?i)(Azure Batch|Batch)",
+            r"(?i)(Azure App Service|App Service|AAS)",
+            r"(?i)(Azure Functions|Functions|AF)",
+            # Analytics
+            r"(?i)(Azure PowerBI App|PowerBI|PBI)",
+            # Network Services
+            r"(?i)(Azure CDN|Content Delivery Network)",
+            # Storage
+            r"(?i)(Azure Storage Accounts|Azure Storage|ASA)",
+            # Container Services
+            r"(?i)(Azure Kubernetes Service|AKS)",
         ],
-        "Cloudflare": [
-            r"(?i)(DNS|CDN|DDoS Protection|Workers|Access|Pages)",
-            r"(?i)(Cloudflare Stream|Magic Transit|Load Balancing)"
+        "IBM": [
+            # AI/ML Services
+            r"(?i)(IBM Watson Platform|Watson|IWP)",
+            # Storage Services
+            r"(?i)(IBM Dedicated Storage Instance|Storage Instance|DSI)",
+            # Data Services
+            r"(?i)(IBM Data Engine|SQL Query|IDE)",
+            r"(?i)(IBM Data Product Hub|DPH)",
+            r"(?i)(IBM Databases|IDB)",
+            r"(?i)(IBM Databases for DataStax|DataStax|IDD)",
+            r"(?i)(IBM Databases for EDB|EDB|IDE)",
+            r"(?i)(IBM Databases for Elasticsearch|Elasticsearch|IDE)",
+            r"(?i)(IBM Databases for etcd|etcd|IDE)",
+            r"(?i)(IBM Databases for MongoDB|MongoDB|IDM)",
+            r"(?i)(IBM Databases for MySQL|MySQL|IDM)",
+            r"(?i)(IBM Databases for PostgreSQL|PostgreSQL|IDP)",
+            r"(?i)(IBM Databases for Redis|Redis|IDR)",
+            r"(?i)(IBM DataStage|DataStage|IDS)",
+            r"(?i)(IBM Db2|Db2)",
+            r"(?i)(IBM Db2 Warehouse|Db2W)",
+            # Analytics
+            r"(?i)(IBM watsonx BI Assistant|BI Assistant|WBA)",
+            # Storage
+            r"(?i)(IBM Cloud Object Storage|Object Storage|COS)",
+            # Management
+            r"(?i)(IBM Cloud Console|Console|ICC)",
+            # Container Services
+            r"(?i)(IBM Kubernetes|IKS)",
+            r"(?i)(Red Hat OpenShift on IBM Cloud|OpenShift|RHOIC)",
         ],
-        "Databricks": [
-            r"(?i)(Databricks SQL|Delta Lake|MLflow|Unity Catalog)",
-            r"(?i)(Databricks Runtime|Databricks Workflows)"
-        ],
-        "Salesforce": [
-            r"(?i)(Sales Cloud|Service Cloud|Marketing Cloud|Commerce Cloud)",
-            r"(?i)(Platform Services|Core Services|API Services)"
+        "Oracle": [
+            # Database Services
+            r"(?i)(Oracle AutonomousDB 21c|AutonomousDB|ADB)",
+            # Storage Services
+            r"(?i)(Object Storage OCI|OCI Storage|OCIS)",
+            # Data Services
+            r"(?i)(Oracle Big Data Service|BDS|OBDS)",
+            # Container Services
+            r"(?i)(Oracle Kubernetes Service|OKE)",
         ],
         "Snowflake": [
-            r"(?i)(Data Warehouse|Data Lake|Data Engineering|Data Science)",
-            r"(?i)(Snowpipe|Snowpark|Data Sharing|Data Marketplace)"
+            r"(?i)(Snowflake on AWS|SFAWS)",
+            r"(?i)(Snowflake on Azure|SFA)",
+            r"(?i)(Snowflake on GCP|SFGCP)",
+        ],
+        "Databricks": [
+            r"(?i)(Databricks SaaS|DBSAAS)",
+            r"(?i)(Databricks Workspace|DBW)",
+            r"(?i)(Databricks MLflow|MLflow)",
+            r"(?i)(Databricks Notebooks|DBN)",
+        ],
+        "Salesforce": [
+            r"(?i)(Salesforce SaaS|SFSAAS)",
+            r"(?i)(Salesforce Sales Cloud|Sales Cloud|SSC)",
+            r"(?i)(Salesforce Service Cloud|Service Cloud|SSC)",
+            r"(?i)(Salesforce Marketing Cloud|Marketing Cloud|SMC)",
+            r"(?i)(Salesforce Mulesoft Anypoint Platform|Mulesoft|MAP)",
+        ],
+        "MongoDB": [
+            r"(?i)(MongoDB Atlas|Atlas)",
+            r"(?i)(MongoDB Atlas AWS|Atlas AWS)",
+            r"(?i)(MongoDB Atlas Azure|Atlas Azure)",
+            r"(?i)(MongoDB Atlas GCP|Atlas GCP)",
+            r"(?i)(MongoDB Atlas Search|Atlas Search)",
+            r"(?i)(MongoDB Atlas Vector Search|Vector Search)",
+            r"(?i)(MongoDB Atlas Stream Processing|Stream Processing)",
+            r"(?i)(MongoDB Atlas BI Connector|BI Connector)",
+            r"(?i)(MongoDB Atlas SQL|Atlas SQL)",
+        ],
+        "Cloudflare": [
+            r"(?i)(AnyCast CloudFlare|AnyCast)",
+            r"(?i)(CDN CloudFlare|CF CDN)",
+            r"(?i)(Cloudflare DNS|CF DNS)",
+            r"(?i)(Cloudflare DDoS Protection|CF DDoS)",
+        ],
+        "Akamai": [
+            r"(?i)(CDN Akamai|Akamai CDN)",
+            r"(?i)(Edge Computing Akamai|Akamai Edge)",
+            r"(?i)(Security Akamai|Akamai Security)",
+        ],
+        "Macrometa": [
+            r"(?i)(CDN Macrometa|Macrometa CDN)",
+            r"(?i)(Edge Computing Macrometa|Macrometa Edge)",
         ]
     }
     
-    # Extended status patterns
+    # Extended status patterns to include more granular states
     status_patterns = {
-        "investigating": r"(?i)(investigating|identified|monitoring|increased error rates|elevated delays|issues|disruption)",
-        "resolved": r"(?i)(resolved|restored|recovered|mitigated|marked as resolved)",
-        "outage": r"(?i)(complete outage|service disruption|unavailable|increased api errors|increased latencies)",
-        "degraded": r"(?i)(degraded performance|degraded service|partial outage|intermittent connectivity|elevated packet loss)"
+        "investigating": r"(?i)(investigating|identified|monitoring|increased error rates|elevated delays|issues|disruption|degradation|intermittent connectivity)",
+        "resolved": r"(?i)(resolved|restored|recovered|mitigated|marked as resolved|normal operations)",
+        "outage": r"(?i)(complete outage|service disruption|unavailable|increased api errors|increased latencies|service unavailable)",
+        "degraded": r"(?i)(degraded performance|degraded service|partial outage|intermittent connectivity|elevated packet loss|impaired|congestion)",
+        "maintenance": r"(?i)(scheduled maintenance|planned downtime|maintenance window)",
+        "recovering": r"(?i)(recovery in progress|partially recovered|improvement observed|started seeing recovery)"
     }
     
-    # Extended impact patterns
+    # Extended impact patterns to include more specific levels
     impact_patterns = {
-        "critical": r"(?i)(critical impact|severe impact|major outage|complete failure|service unavailable)",
+        "critical": r"(?i)(critical impact|severe impact|major outage|complete failure|service unavailable|widespread disruption)",
+        "high": r"(?i)(high impact|significant impact|service degradation|multiple services affected)",
         "moderate": r"(?i)(moderate impact|partial impact|minor outage|increased error rates|intermittent issues)",
-        "minimal": r"(?i)(minimal impact|slight impact|limited disruption|elevated delays|degraded performance)"
+        "minimal": r"(?i)(minimal impact|slight impact|limited disruption|elevated delays|degraded performance)",
+        "none": r"(?i)(no impact|no outage reported|normal operation)"
     }
     
-    # Add timestamp patterns
+    # Add incident ID pattern
+    incident_patterns = [
+        r"(?i)Incident(?:\s+ID)?:\s*([^\n]+)",
+        r"(?i)Event(?:\s+ID)?:\s*([^\n]+)",
+        r"(?i)Reference(?:\s+Number)?:\s*([^\n]+)"
+    ]
+    
+    # Enhanced affected components patterns
+    affected_components_patterns = [
+        r"(?i)Affected(?:\s+Components?)?:\s*([^\n]+)",
+        r"(?i)Impacted(?:\s+Components?)?:\s*([^\n]+)",
+        r"(?i)Components?\s+Affected:\s*([^\n]+)"
+    ]
+    
+    # Enhanced mitigation steps patterns
+    mitigation_patterns = [
+        r"(?i)Mitigation(?:\s+Steps?)?:\s*([^\n]+)",
+        r"(?i)Resolution(?:\s+Steps?)?:\s*([^\n]+)",
+        r"(?i)Steps?\s+Taken:\s*([^\n]+)",
+        r"(?i)Actions?\s+Taken:\s*([^\n]+)"
+    ]
+    
+    # Enhanced timestamp patterns
     time_patterns = {
         "start": [
-            r"(?i)Start(?:\s+Time)?:\s*([^\n]+)",
+            r"(?i)Start(?:ed)?(?:\s+Time)?:\s*([^\n]+)",
             r"(?i)Between\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST).*?)(?:and|to|-)",
             r"(?i)at\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
             r"(?i)started.*?at\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
             r"(?i)(\d{1,2}:\d{2}(?:\s*(?:AM|PM))?\s*(?:UTC|PDT|PST|JST|CST))",
+            r"(?i)Outage\s+started:\s*([^\n]+)",
+            r"(?i)Start\s+date:\s*([^\n]+)"
         ],
         "end": [
-            r"(?i)End(?:\s+Time)?:\s*([^\n]+)",
+            r"(?i)End(?:ed)?(?:\s+Time)?:\s*([^\n]+)",
             r"(?i)and\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
             r"(?i)resolved.*?at\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
             r"(?i)until\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
+            r"(?i)Resolved:\s*([^\n]+)",
+            r"(?i)Resolution\s+date:\s*([^\n]+)"
         ]
     }
     
@@ -207,6 +403,27 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
                     except:
                         continue
         
+        # Extract incident ID
+        for pattern in incident_patterns:
+            match = re.search(pattern, section)
+            if match:
+                outage.incident_id = match.group(1).strip()
+                break
+        
+        # Extract affected components
+        for pattern in affected_components_patterns:
+            match = re.search(pattern, section)
+            if match:
+                components = re.split(r'[,•*]+', match.group(1))
+                outage.affected_components.extend([c.strip() for c in components if c.strip()])
+        
+        # Extract mitigation steps
+        for pattern in mitigation_patterns:
+            match = re.search(pattern, section)
+            if match:
+                steps = re.split(r'[;\n]+', match.group(1))
+                outage.mitigation_steps.extend([s.strip() for s in steps if s.strip()])
+        
         outages.append(outage)
     
     return outages
@@ -221,11 +438,13 @@ def parse_timestamp(timestamp_str: str) -> Optional[datetime]:
     return None
 
 def write_outage_summary(outage: OutageInfo, file):
-    """Helper function to write outage summary with new fields"""
+    """Helper function to write outage summary with enhanced fields"""
     file.write(f"Cloud Provider: {outage.cloud_provider}\n")
     file.write(f"Services: {', '.join(outage.services)}\n")
     file.write(f"Regions: {', '.join(outage.regions)}\n")
     file.write(f"Availability Zones: {', '.join(outage.availability_zones)}\n")
+    file.write(f"Start Time: {outage.start_time}\n" if outage.start_time else "")
+    file.write(f"End Time: {outage.end_time}\n" if outage.end_time else "")
     file.write(f"Status: {outage.status}\n")
     file.write(f"Impact Level: {outage.impact}\n")
     file.write(f"Duration: {outage.duration}\n")

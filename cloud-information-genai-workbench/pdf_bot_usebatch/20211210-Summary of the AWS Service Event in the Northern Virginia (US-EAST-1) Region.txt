@@ -1,20 +1,38 @@
-I can only provide information on Amazon AWS as per the given text.
+Here is the information about the outage:
 
-The outage occurred in the Northern Virginia (US-EAST-1) Region and affected several services including:
+**Summary**
 
-* Amazon Connect
-* API Gateways used by Connect for the execution of Lambda functions
+The outage affected Amazon AWS and Amazon Connect.
 
-The root cause of the outage was not explicitly stated, but it was related to a change made to the internal network, which resulted in increased load on the impacted networking devices.
+**Outage Details**
 
-The outage started at 9:28 AM PST and lasted for approximately 7 hours and 54 minutes. The services were unavailable during this period.
+* **Amazon AWS**
+	+ Services Impacted: EC2 control plane, internal DNS, authorization services
+	+ Regions Impacted: Northern Virginia (US-EAST-1)
+	+ Availability Zones Impacted: Not specified
+	+ Root Cause: Networking congestion
+	+ Duration: 5 days, 17 hours, and 43 minutes
+	+ Downtime Period: 4:41 PM PST - 8:22 AM PST (next day)
+	+ Marked as Resolved: 8:22 AM PST
+* **Amazon Connect**
+	+ Services Impacted: Handling phone calls, chat sessions, task contacts
+	+ Regions Impacted: Northern Virginia (US-EAST-1)
+	+ Availability Zones Impacted: Not specified
+	+ Root Cause: API Gateway issues
+	+ Duration: 5 days, 17 hours, and 43 minutes
+	+ Downtime Period: 4:41 PM PST - 8:22 AM PST (next day)
+	+ Marked as Resolved: 8:22 AM PST
 
-Here is a summary of the outage:
+**Overall Summary**
 
-* Start Time: 9:28 AM PST
-* End Time: 4:41 PM PST (when the affected API Gateway fully recovered)
-* Duration: 7 hours and 54 minutes
-* Downtime Period: 7 hours and 54 minutes
-* Resolution Time: 8:22 AM PST (when the Service Health Dashboard was successfully updated)
+The outage affected Amazon AWS and Amazon Connect in the Northern Virginia (US-EAST-1) region. The root cause was networking congestion, which led to issues with EC2 control plane, internal DNS, authorization services, and API Gateway. The outage lasted for 5 days, 17 hours, and 43 minutes, with a downtime period of 4:41 PM PST - 8:22 AM PST (next day). Both Amazon AWS and Amazon Connect were marked as resolved at 8:22 AM PST.
 
-Note that the text does not provide information on the duration of the outage in days, as it is a short-term outage.
+**Output Table**
+
+| Cloud Provider | Service Impacted | Region Impacted | Availability Zone Impacted | Root Cause | Duration | Downtime Period | Marked as Resolved |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Amazon AWS | EC2 control plane, internal DNS, authorization services | Northern Virginia (US-EAST-1) | Not specified | Networking congestion | 5 days, 17 hours, and 43 minutes | 4:41 PM PST - 8:22 AM PST | 8:22 AM PST |
+| Amazon AWS | API Gateway | Northern Virginia (US-EAST-1) | Not specified | Networking congestion | 5 days, 17 hours, and 43 minutes | 4:41 PM PST - 8:22 AM PST | 8:22 AM PST |
+| Amazon Connect | Handling phone calls, chat sessions, task contacts | Northern Virginia (US-EAST-1) | Not specified | API Gateway issues | 5 days, 17 hours, and 43 minutes | 4:41 PM PST - 8:22 AM PST | 8:22 AM PST |
+
+Note: The table only includes the cloud providers mentioned in the text, which are Amazon AWS and Amazon Connect.

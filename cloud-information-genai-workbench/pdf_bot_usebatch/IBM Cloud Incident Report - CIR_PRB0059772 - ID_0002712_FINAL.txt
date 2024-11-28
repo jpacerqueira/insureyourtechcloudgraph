@@ -1,0 +1,42 @@
+I can only provide information on IBM Cloud as per the given text.
+
+**IBM Cloud Outage Details**
+
+The outage started on 06 April 2021 at 08:17. The incident lasted for approximately 9 hours and 35 minutes.
+
+**Services Impacted**
+
+* Cloudant NoSQL DB
+* VSI-San Storage
+* Load Balancers
+* API Connect
+
+**Root Cause of Outage**
+
+The failure of the dedicated UPS caused the Programmable Logic Controller (PLC) to go offline, resulting in the critical load not being transferred from the UPS to the generator.
+
+**Duration of Outage**
+
+9 hours and 35 minutes
+
+**Downtime Period**
+
+06 April 2021 08:17 - 18 April 2021 14:12
+
+**Resolved Date**
+
+16 April 2021
+
+
+Here is the outage details in a table format:
+
+| Service | Region/Availability Zone | Impacted Dates | Duration |
+| --- | --- | --- | --- |
+| Cloudant NoSQL DB | WDC01 | 06 April 2021 - 18 April 2021 | 9 hours and 35 minutes |
+| VSI-San Storage | WDC01 | 06 April 2021 - 18 April 2021 | 9 hours and 35 minutes |
+| Load Balancers | WDC01 | 06 April 2021 - 18 April 2021 | 9 hours and 35 minutes |
+| API Connect | WDC01 | 06 April 2021 - 18 April 2021 | 9 hours and 35 minutes |
+
+**Overall Summary**
+
+IBM Cloud experienced a power outage in the Washington D.C. area on 06 April 2021, affecting thousands of power customers. The outage impacted several services, including Cloudant NoSQL DB, VSI-San Storage, Load Balancers, and API Connect, in the WDC01 region. The root cause of the outage was the failure of the dedicated UPS, which caused the Programmable Logic Controller (PLC) to go offline. The outage lasted for approximately 9 hours and 35 minutes, with a downtime period from 08:17 on 06 April 2021 to 14:12 on 18 April 2021.
