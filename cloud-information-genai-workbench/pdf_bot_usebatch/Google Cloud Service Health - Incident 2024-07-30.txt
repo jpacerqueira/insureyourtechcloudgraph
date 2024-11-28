@@ -1,0 +1,100 @@
+Here is the breakdown of the outage for each cloud provider:
+
+**Google Cloud**
+
+Resume of Outage
+Duration: 6 hours and 8 minutes
+Start Time: July 30, 2024 02:36 PDT
+End Time: July 30, 2024 12:44 PDT
+Affected Services:
+Tokyo (asia-northeast1)
+Mumbai (asia-south1)
+Delhi (asia-south2)
+Singapore (asia-southeast1)
+Sydney (australia-southeast1)
+Turin (europe-west12)
+London (europe-west2)
+Frankfurt (europe-west3)
+Netherlands (europe-west4)
+Zurich (europe-west6)
+Milan (europe-west8)
+Tel Aviv (me-west1)
+Montréal (northamerica-northeast1)
+Toronto (northamerica-northeast2)
+São Paulo (southamerica-east1)
+Santiago (southamerica-west1)
+Iowa (us-central1)
+Northern Virginia (us-east4)
+Los Angeles (us-west2)
+
+Root Cause: DigiCert found a problem with their Domain Control Validation (DCV) and informed Google Cloud of the issue.
+
+Downtime Period: 6 hours and 8 minutes
+
+Resolved Time: July 30, 2024 12:44 PDT
+
+
+**Google Compute Engine**
+
+Resume of Outage
+Duration: 6 hours and 8 minutes
+Start Time: July 30, 2024 02:36 PDT
+End Time: July 30, 2024 12:44 PDT
+Affected Services:
+VMWare engine
+
+Root Cause: DigiCert found a problem with their Domain Control Validation (DCV) and informed Google Cloud of the issue.
+
+Downtime Period: 6 hours and 8 minutes
+
+Resolved Time: July 30, 2024 12:44 PDT
+
+
+**Google VMware Engine Private Cloud**
+
+Resume of Outage
+Duration: 30 minutes
+Start Time: July 30, 2024 02:36 PDT
+End Time: July 30, 2024 03:06 PDT
+Affected Services:
+NSX
+V-Center
+HCX virtual machines
+
+Root Cause: DigiCert found a problem with their Domain Control Validation (DCV) and informed Google Cloud of the issue.
+
+Downtime Period: 30 minutes
+
+Resolved Time: July 30, 2024 03:06 PDT
+
+
+**Google Private Cloud Certiificate’s Renewal**
+
+Resume of Outage
+Duration: 30 minutes
+Start Time: July 30, 2024 02:36 PDT
+End Time: July 30, 2024 03:06 PDT
+Affected Services:
+All services
+
+Root Cause: DigiCert found a problem with their Domain Control Validation (DCV) and informed Google Cloud of the issue.
+
+Downtime Period: 30 minutes
+
+Resolved Time: July 30, 2024 03:06 PDT
+
+
+**VMWare engine**
+
+Resume of Outage
+Duration: 6 hours and 8 minutes
+Start Time: July 30, 2024 02:36 PDT
+End Time: July 30, 2024 12:44 PDT
+Affected Services:
+All projects
+
+Root Cause: DigiCert found a problem with their Domain Control Validation (DCV) and informed Google Cloud of the issue.
+
+Downtime Period: 6 hours and 8 minutes
+
+Resolved Time: July 30, 2024 12:44 PDT

@@ -1,0 +1,31 @@
+I can provide you with the requested information based on the provided text.
+
+**Outage Information**
+
+The outage affected Looker Studio, which is a Google Cloud Service. The incident began at 2024-07-01 05:00 and ended at 2024-07-01 12:30 (US/Pacific Time).
+
+Here is the breakdown of the outage for each cloud provider impacted:
+
+**Google Cloud**
+
+* Incident: Looker Studio MySQL Connections Failing Globally
+* Affected Location(s): Global
+* Root Cause: Not specified
+* Duration:
+	+ Days: 1
+	+ Hours: 7
+	+ Minutes: 30
+* Downtime Period: 2024-07-01 05:00 - 2024-07-01 12:30 (US/Pacific Time)
+* Resolved: Yes, as of 2024-07-01 11:31 US/Pacific Time
+
+**Summary**
+
+The outage affected Looker Studio globally, with a downtime period of 7 hours and 30 minutes. The incident began at 5:00 AM on July 1, 2024, and was resolved at 11:31 AM on the same day.
+
+Here is the outage information in a table format:
+
+| Cloud Provider | Service | Affected Location(s) | Root Cause | Duration (Days) | Duration (Hours) | Duration (Minutes) | Downtime Period | Resolved |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Looker Studio | Global | - | 1 | 7 | 30 | 2024-07-01 05:00 - 2024-07-01 12:30 (US/Pacific Time) | Yes |
+
+Note that the root cause of the outage is not specified in the provided text.

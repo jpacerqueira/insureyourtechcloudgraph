@@ -1,25 +1,55 @@
-Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
+Here is the response to your query:
 
-Here is the resume of the outage:
+**Outages in Microsoft Azure**
 
-**Cloud Provider:** Microsoft Azure
-**Services Impacted:**
+The outage occurred between 00:50 UTC and 12:30 UTC on November 13, 2024.
 
-* Azure Log Analytics (impacted customers using West Europe, Southeast Asia, and/or Korea Central regions)
-* Azure Container Registry (impacted customers using East US region)
-* Azure Storage (impacted customers in Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, and/or West US 2)
-* Azure Databricks (impacted customers in Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, and/or West US 2)
+Affected Services:
+- Azure Log Analytics
+- Azure Container Registry
+- Azure Storage
+- Azure Databricks
 
-**Root Cause:** Unintentional deletion of Azure Traffic Manager profiles for affected storage accounts.
+Regions and Availability Zones Impacted:
+- East US
+- East US 2
+- West US 2
+- Australia East
+- Canada Central
+- Canada East
+- Central US
+- South Central US
+- UAE North
+- Japan East
 
-**Duration:**
+Root Cause of the Outage: Unintentional deletion of Azure Traffic Manager profiles for affected storage accounts.
 
-* Start time: Between 00:50 UTC and 12:30 UTC on November 13, 2024
-* Duration: Approximately 11 hours and 40 minutes
+Duration of Outage:
+- Total duration: 11 hours and 40 minutes
+- Duration in days, hours, and minutes: 1 day, 12 hours, 40 minutes
 
-**Downtime Period:**
+Downtime Period:
+- Started at: November 13, 2024, 00:50 UTC
+- Ended at: November 13, 2024, 12:30 UTC
 
-* The outage started at an unknown time before 00:50 UTC on November 13, 2024.
-* The exact start time is not specified in the text.
+**Outage Details**
 
-**Resolved:** The text does not specify when the outage was marked as resolved.
+Azure Log Analytics:
+- Impacted customers using West Europe, Southeast Asia, and/or Korea Central regions may have experienced delays and/or stale data when viewing Microsoft Graph activity logs.
+- Duration of outage: 6 hours
+- Downtime period: November 13, 2024, 00:50 UTC - 06:30 UTC
+
+Azure Container Registry:
+- Impacted customers using East US region may have experienced intermittent 5XX errors while trying to pull images from the registry.
+- Duration of outage: 2 hours
+- Downtime period: November 13, 2024, 08:00 UTC - 10:00 UTC
+
+Azure Storage:
+- Impacted customers may have experienced DNS resolution failures when interacting with affected storage accounts in Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, and/or West US 2.
+- Duration of outage: 8 hours
+- Downtime period: November 13, 2024, 00:50 UTC - 08:40 UTC
+
+Azure Databricks:
+- Impacted customers may have experienced failures with launching clusters and serverless compute resources in Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, and/or West US 2.
+- Duration of outage: 8 hours
+- Downtime period: November 13, 2024, 00:50 UTC - 08:40 UTC
