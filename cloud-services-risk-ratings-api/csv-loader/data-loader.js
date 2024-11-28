@@ -57,35 +57,32 @@ function loadCSV(filePath, callback) {
     });
 }
 
-function insertData(rows, callback) {
+function insertData(rows, tableName, callback) {
   // Add sleep helper function
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
   // Make this an async function
   pool.connect(async function (err, client, release) {
     if (err) {
-      return callback(err); // Error connecting to DB
+      return callback(err);
     }
     
-    /*console.log(await pool.query('SELECT NOW()'));*/
     console.log(await pool.query('select current_schema;'));
-    await sleep(2*1000); // sleep for 2s/2000ms
+    await sleep(2*1000);
 
     client.query('BEGIN', function (err) {
       if (err) {
         release();
-        return callback(err); // Error starting transaction
+        return callback(err);
       }
 
-      // Iterate over each row in the CSV and insert it into the database
-      let insertPromises = rows.map(function (row, index) {
+      let insertPromises = rows.map(function (row) {
         const columns = Object.keys(row).join(', ');
-        const values = Object.values(row).map(function (val, index) {
-          return index === 0 ? `${val}` : `'${val}'`; // Typecast first value as bigint
+        const values = Object.values(row).map(function (val) {
+          return `'${val}'`; // All values as strings since we handle types in DB
         }).join(', ');
 
-        const query = `INSERT INTO "${process.env.DB_NAME}".service_risk_ratings (${columns}) VALUES (${values}) `;
-        /*const query = `INSERT INTO cloud_service_risk_ratings (${columns}) VALUES (${values}) `;*/
+        const query = `INSERT INTO "${process.env.DB_NAME}".${tableName} (${columns}) VALUES (${values})`;
         return client.query(query);
       });
 
@@ -106,20 +103,53 @@ function insertData(rows, callback) {
   });
 }
 
-function main(filePath) {
-  loadCSV(filePath, function (err, rows) {
-    if (err) {
-      console.error('Error loading CSV:', err);
+function main(files) {
+  // Process each file sequentially
+  const processFile = (fileInfo, callback) => {
+    loadCSV(fileInfo.path, function (err, rows) {
+      if (err) {
+        console.error(`Error loading CSV ${fileInfo.path}:`, err);
+        return callback(err);
+      }
+      insertData(rows, fileInfo.table, function (err, result) {
+        if (err) {
+          console.error(`Error inserting data into ${fileInfo.table}:`, err);
+          return callback(err);
+        }
+        console.log(`Successfully loaded data into ${fileInfo.table}`);
+        callback(null, result);
+      });
+    });
+  };
+
+  // Get file arguments
+  const fileInfos = [];
+  for (let i = 2; i < process.argv.length; i += 2) {
+    fileInfos.push({
+      path: process.argv[i],
+      table: process.argv[i + 1]
+    });
+  }
+
+  // Process files sequentially
+  let currentIndex = 0;
+  const processNext = () => {
+    if (currentIndex >= fileInfos.length) {
+      console.log('All files processed successfully');
       return;
     }
-    insertData(rows, function (err, result) {
+
+    processFile(fileInfos[currentIndex], (err) => {
       if (err) {
-        console.error('Error inserting data:', err);
+        console.error('Stopping due to error');
         return;
       }
-      console.log(result);
+      currentIndex++;
+      processNext();
     });
-  });
+  };
+
+  processNext();
 }
 
 // Execute the main function with the provided CSV file path

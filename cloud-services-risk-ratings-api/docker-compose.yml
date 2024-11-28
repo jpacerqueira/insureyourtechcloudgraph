@@ -1,4 +1,3 @@
-
 services:
   
   postgres-db:
@@ -68,7 +67,10 @@ services:
         condition: service_healthy
     networks:
       - backend
-    command: ["node", "/app/data-loader.js", "/data/cloud_service_risk_ratings.csv"]
+    command: >
+      sh -c "node /app/data-loader.js 
+      /data/cloud_service_risk_ratings.csv service_risk_ratings
+      /data/outage_report_summaries.csv outage_report_summaries"
 
 
 volumes:
