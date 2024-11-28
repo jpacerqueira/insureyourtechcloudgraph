@@ -1,0 +1,1508 @@
+Cloud Provider: AWS
+Services: abr, Amazon RDS, RDS, Amazon EC2, EC2, EBS, Amazon EBS, EC, ec, Amazon ElastiCache, ElastiCache, rs, Amazon Redshift, Redshift
+Regions: AP-NORTHEAST-1, Tokyo
+Availability Zones: 
+Status: investigating
+Impact Level: none
+Duration: 5 hours and 30 minutes
+Root Cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
+Resolution: 
+Downtime Period: EC2 instances and EBS volumes in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
+
+---
+
+Cloud Provider: AWS
+Services: CloudWatch, Elastic Container Service, ECS, EC, ec, Lambda, rs, Elastic Kubernetes Service, EKS
+Regions: US-EAST-1, Northern Virginia
+Availability Zones: Northern Virginia (US-EAST-1) Region
+Status: resolved
+Impact Level: service-specific
+Duration: 9
+Root Cause: 
+Resolution: 
+Downtime Period: ** The outage started at 2:44 AM PST and was resolved when CloudWatch metrics began to recover at 5:47 PM PST.
+Affected Components: Amazon Kinesis, Lambda, CloudWatch Events and EventBridge, Elastic Container Service (ECS), Elastic Kubernetes Service (EKS)
+
+---
+
+Cloud Provider: AWS
+Services: ec, rs
+Regions: Tokyo (AP-NORTHEAST-1), Tokyo, AP-NORTHEAST-1
+Availability Zones: Not specified
+Status: investigating
+Impact Level: 
+Duration: 5 hours and 12 minutes
+Root Cause: Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
+Resolution: 
+Downtime Period: 7:30 AM JST to 1:42 PM JST
+Affected Components: September 2, 2021
+
+---
+
+Cloud Provider: AWS
+Services: rds, ec, rs
+Regions: Tokyo, AP-NORTHEAST-1
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: - Days: 1
+Root Cause: 
+Resolution: 
+Downtime Period: - Started: September 2, 2021 7:30 AM JST
+
+---
+
+Cloud Provider: AWS
+Services: DNS, ec, rs
+Regions: Northern Virginia (US-EAST-1) Region, US-EAST-1, Northern Virginia
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 7 hours and 52 minutes
+Root Cause: Persistent congestion and performance issues on networking devices connecting the two networks.
+Resolution: 
+Downtime Period: The Support Contact Center was unable to create support cases for 7 hours and 52 minutes.
+Affected Components: Northern Virginia (US-EAST-1) Region, Support Contact Center, Service Health Dashboard
+
+---
+
+Cloud Provider: AWS
+Services: API Gateway, DNS, EC2, ec, EC, rs
+Regions: US-EAST-1, Northern Virginia
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 5 days, 17 hours, and 43 minutes
+Root Cause: Networking congestion
+Resolution: 
+Downtime Period: 4:41 PM PST - 8:22 AM PST (next day)
+Affected Components: EC2 control plane, internal DNS, authorization services
+
+---
+
+Cloud Provider: AWS
+Services: ec, Lambda, rs, Amazon EKS
+Regions: Northern Virginia (US-EAST-1), US-EAST-1, Northern Virginia
+Availability Zones: Not specified
+Status: resolved
+Impact Level: 
+Duration: 3 hours and 48 minutes (from 11:49 AM PDT to 3:37 PM PDT)
+Root Cause: Latent software defect in the provisioning of underlying compute capacity
+Resolution: 
+Downtime Period: + Lambda function invocations: 2 hours and 13 minutes
+Affected Components: Amazon AWS, Amazon STS, AWS Management Console, Amazon EKS, Amazon Connect, Amazon EventBridge.
+
+---
+
+Cloud Provider: AWS
+Services: abr, CloudWatch, Elastic Container Service, ECS, ec, EC, AWS Lambda, rs, Amazon Redshift, AWS Glue
+Regions: US-EAST-1, Northern Virginia
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 7 hours and 52 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: 7 hours and 52 minutes
+
+---
+
+Cloud Provider: AWS
+Services: abr, ECS, ec, EC, rs, EKS
+Regions: Seoul (ap-northeast-2), ap-northeast-2, Seoul
+Availability Zones: Not specified
+Status: investigating
+Impact Level: 
+Duration: 3 hours and 18 minutes
+Root Cause: Database component causing the impairment
+Resolution: 
+Downtime Period: 3 hours and 18 minutes
+Affected Components: ALB, ECS, EKS, Fargate
+
+---
+
+Cloud Provider: AWS
+Services: Amazon RDS, Amazon EC2, EC2, Elastic Compute Cloud, EBS, Elastic Block Store, EC, ec, rs
+Regions: US East
+Availability Zones: US East Region, single Availability Zone
+Status: investigating
+Impact Level: 
+Duration: 11
+Root Cause: The root cause of the outage was not explicitly stated in the text, but it was mentioned that a change to the EBS control plane fixed the issue and latencies and error rates for new EBS-backed EC2 instances declined rapidly.
+Resolution: 
+Downtime Period: April 21st, Noon PM PDT - April 22nd, unknown time
+Affected Components: - Amazon Elastic Compute Cloud (EC2)
+
+---
+
+Cloud Provider: Azure
+Services: Azure Databricks, Af, af, Azure Storage
+Regions: 
+Availability Zones: 
+Status: 
+Impact Level: 
+Duration: 11 hours and 40 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: - Started at: November 13, 2024, 00:50 UTC
+Affected Components: - East US
+
+---
+
+Cloud Provider: Azure
+Services: Cosmos, af
+Regions: East US, Central US, West US, North Central US, - East US: Azur e DevOps, Azur e Policy, Azur e Mobile App, Azur e Advisor, Azur e Cost Management, Azur e SQL Database, and Azur e Cache for Redis, **, specified
+Availability Zones: N/A
+Status: resolved
+Impact Level: 
+Duration: 2 minutes
+Root Cause: N/A
+Resolution: 
+Downtime Period: 2 minutes
+
+---
+
+Cloud Provider: AWS
+Services: DNS, ec, rs
+Regions: Japan East, Multiple regions, Global
+Availability Zones: Not specified
+Status: resolved
+Impact Level: 
+Duration: 2 hours and 51 minutes
+Root Cause: Connections to Azure SQL Database went through a load-balanced set of front-end nodes (Gateways)
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Microsoft Azure, Amazon AWS was not mentioned in the text.
+
+---
+
+Cloud Provider: Azure
+Services: Cosmos, Af, af
+Regions: + Affected Regions: West US, West US, the, a version update of a component that controls network traffic routing between Azure
+Availability Zones: Not specified
+Status: 
+Impact Level: 
+Duration: 5
+Root Cause: Unhandled error condition due to unavailability of calls to impacted cluster's front-end service.
+Resolution: 
+Downtime Period: 5 hours
+Affected Components: Microsoft Azure, Cosmos DB.
+
+---
+
+Cloud Provider: Azure
+Services: aDB, Azure SQL Database, aps, Azure Database for PostgreSQL, Azure Database for MySQL, Af, af
+Regions: East US, West Central US, the
+Availability Zones: Not specified
+Status: investigating
+Impact Level: service-specific
+Duration: 2 hours 32 minutes
+Root Cause: Planned power maintenance activity at the datacenter caused an impact to a storage resource
+Resolution: 
+Downtime Period: 
+Affected Components: ARM, Virtual Machines in East US region
+
+---
+
+Cloud Provider: Azure
+Services: Ams, Af, af
+Regions: 
+Availability Zones: 
+Status: 
+Impact Level: 
+Duration: 9 hours and 40 minutes
+Root Cause: Configuration change sent all SYN packets to the router's CPU for inspection, causing denial of service protection to drop a subset of packets.
+Resolution: 
+Downtime Period: 22:28 UTC on February 28, 2020 - 00:53 UTC on March 1, 2020 (2 days and 5 hours)
+Affected Components: Microsoft Azure
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: certain
+Availability Zones: Not specified
+Status: investigating
+Impact Level: 
+Duration: 1 hour 24 minutes
+Root Cause: Azure CDN providers use staged deployment processes to deploy configuration changes across the network.
+Resolution: 
+Downtime Period: Yes
+Affected Components: Microsoft Azure
+
+---
+
+Cloud Provider: AWS
+Services: ec, rs
+Regions: the
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 8 hours and 58 minutes
+Root Cause: Storage availability failures in various control and data plane clusters
+Resolution: 
+Downtime Period: All unhealthy nodes were detected within one minute of SQL unavailability, and investigation and mitigation workstreams were established
+Affected Components: Microsoft Azure, Amazon AWS was not mentioned in the text but A T&T was mentioned which is a service provided by AT&T (a company that uses AWS) however it was not specified if it was an AWS service or a service of AT&T.
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: 
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 2 hours and 15 minutes
+Root Cause: Configuration change through a domain registrar resulted in a service disruption to two system domains critical in cloud operations in China.
+Resolution: 
+Downtime Period: 2 hours and 15 minutes
+
+---
+
+Cloud Provider: Azure
+Services: Azure SQL Database, Azure Database for PostgreSQL, Azure Database for MySQL, af
+Regions: Multiple regions, Not specified, Southeast Asia, East Asia, West Europe, Southeast Asia and East Asia
+Availability Zones: Not specified
+Status: resolved
+Impact Level: 
+Duration: 5 hours and 35 minutes
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 12:43 UTC - 09:05 UTC (approximately 3 hours and 38 minutes)
+Affected Components: Multiple regions, Network connectivity, Microsoft 365, Power Platform, Azure Government cloud services
+
+---
+
+Cloud Provider: Azure
+Services: AKS
+Regions: 
+Availability Zones: West US 2 region, all three Availability Zones
+Status: 
+Impact Level: 
+Duration: + Downtime Period: 1 day (August 27)
+Root Cause: Bug in Ubuntu 18.04, specifically the Domain Name System (DNS) resolution error
+Resolution: 
+Downtime Period: 1 day (August 27)
+Affected Components: DNS Resolution and Network Connectivity for Ubuntu 18.04 VMs
+
+---
+
+Cloud Provider: Azure
+Services: af
+Regions: one of the data centers within one of the Availability Zones in the East US 2, one of its data centers within one of its Availability Zones in the East US 2
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: West Central US
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 5
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: AWS
+Services: ec, rs
+Regions: East US, Brazil South
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 5
+Root Cause: 
+Resolution: 
+Downtime Period: 
+Affected Components: Microsoft Azure, Amazon AWS was not mentioned in the text, Google GCP was not mentioned in the text.
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: 
+Availability Zones: Argentina and Uruguay
+Status: resolved
+Impact Level: 
+Duration: 16 minutes
+Root Cause: Regional networking fiber cut
+Resolution: 
+Downtime Period: 16 minutes
+
+---
+
+Cloud Provider: Azure
+Services: af
+Regions: the, a version update of a component that controls network traffic routing between Azure
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: ** The incident lasted for approximately 6 hours and 36 minutes.
+Root Cause: **
+Resolution: 
+Downtime Period: **
+
+---
+
+Cloud Provider: GCP
+Services: vai, Cloud Run
+Regions: Sydney
+Availability Zones: - Australia/Sydney (australia-southeast1)
+Status: 
+Impact Level: 
+Duration: 2 hours and 18 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: - Started on November 8, 2023, at 15:11 US/Pacific Time
+Affected Components: - Australia/Sydney (australia-southeast1)
+
+---
+
+Cloud Provider: GCP
+Services: vai, Looker
+Regions: 
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 1 hour and 45 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: 
+Incident ID: UbJv334dXk5XQNSgiY48
+
+---
+
+Cloud Provider: GCP
+Services: vai, Apigee
+Regions: multiple, Tokyo, Seoul
+Availability Zones: 
+Status: 
+Impact Level: service-specific
+Duration: 1 hour and 25 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: 
+Availability Zones: 
+Status: 
+Impact Level: 
+Duration: **
+Root Cause: ** The europe-west8 region recently received a networking upgrade to increase capacity and improve resilience.
+Resolution: 
+Downtime Period: ** Customers were unable to reach any of the impacted services in europe-west8-b.
+Affected Components: Google Kubernetes Engine, Cloud Key Management Service, Google BigQuery, Google Cloud Bigtable, Virtual Private Cloud (VPC), Google Compute Engine, Persistent Disk, Google Cloud Networking, Service Directory, Traffic Director
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: London, Frankfurt
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 6 hours 37 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: 6 hours 37 minutes
+
+---
+
+Cloud Provider: GCP
+Services: vai, Apigee
+Regions: Tokyo, Seoul
+Availability Zones: 
+Status: resolved
+Impact Level: service-specific
+Duration: 5
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: GCP
+Services: 
+Regions: us-central1
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 13 hours, 18 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-west2, us-west3, us-west4, ** asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-west2, us-west3, us-west4
+Availability Zones: Not specified
+Status: 
+Impact Level: 
+Duration: ** 2 hours and 28 minutes (15:53 - 14:24 US/Pacific)
+Root Cause: ** Impacted customers may receive HTML errors instead of correct data while trying to access Apigee portal.
+Resolution: 
+Downtime Period: 
+Affected Components: Apigee portal
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: Dataplex Catalog API and UI in Google Cloud Console returned errors and timeouts on all API calls., * Dataplex Catalog API and UI in Google Cloud Console returned errors and timeouts on all API calls.
+Availability Zones: Google GCP Outage Details
+Status: investigating
+Impact Level: 
+Duration: ** 2 hours and 12 minutes
+Root Cause: ** Connectivity issues to a dependent backend service
+Resolution: 
+Downtime Period: ** 2 hours and 12 minutes
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: us-east5
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 1 day, 22 hours, and 23 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: GCP
+Services: vai, BigQuery, Cloud SQL, Dataflow, Load Balancing, GKE, Google Kubernetes Engine
+Regions: 
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 2 hours and 44 minutes
+Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+Resolution: 
+Downtime Period: 00:52 US/Pacific Time - 03:36 US/Pacific Time
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: Northern Virginia
+Availability Zones: + northamerica-northeast2
+Status: 
+Impact Level: 
+Duration: + Days: 3
+Root Cause: 
+Resolution: 
+Downtime Period: 2023-11-29 13:56 PST
+Affected Components: Google Cloud Platform
+
+---
+
+Cloud Provider: GCP
+Services: vai
+Regions: 
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 3
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: GCP
+Services: 
+Regions: Hong Kong (asia-east2), Mumbai (asia-south1), São Paulo (southamerica-east1), and Los Angeles (us-west2)., Hong Kong (asia-east2), Mumbai (asia-south1), São Paulo (southamerica-east1), and Los Angeles (us-west2)., Hong Kong (asia-east2), Mumbai (asia-south1), São Paulo (southamerica-east1), and Los Angeles (us-west2). The outage lasted for approximately 1 hour and 24 minutes., four
+Availability Zones: 
+Status: 
+Impact Level: 
+Duration: 1
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: AWS
+Services: ec, rs
+Regions: us-east1
+Availability Zones: N/A
+Status: resolved
+Impact Level: 
+Duration: 3 hours and 53 minutes
+Root Cause: Unknown
+Resolution: 
+Downtime Period: 3 hours and 53 minutes
+Affected Components: Google Cloud Tasks
+
+---
+
+Cloud Provider: AWS
+Services: ec, rs
+Regions: northamerica-northeast1 and us-west4, North America (not specified), **, impacted
+Availability Zones: Montréal (northamerica-northeast1), Las Vegas (us-west4)
+Status: 
+Impact Level: 
+Duration: + Start time: 2024-05-29 11:06 US/Pacific Time
+Root Cause: Renewal of SSL certificates in impacted regions
+Resolution: 
+Downtime Period: + Start time: 2024-05-29 11:06 US/Pacific Time
+Affected Components: northamerica-northeast1 and us-west4
+
+---
+
+Cloud Provider: GCP
+Services: Looker
+Regions: 
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: + Days: 1
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 2024-07-01 05:00 - 2024-07-01 12:30 (US/Pacific Time)
+Incident ID: Looker Studio MySQL Connections Failing Globally
+Affected Components: Google Cloud
+
+---
+
+Cloud Provider: AWS
+Services: abr, rs
+Regions: Tokyo, Singapore, Sydney, London, Frankfurt, Northern Virginia
+Availability Zones: Tokyo (asia-northeast1), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Sydney (australia-southeast1), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Tel Aviv (me-west1), Montréal (northamerica-northeast1), Toronto (northamerica-northeast2), São Paulo (southamerica-east1), Santiago (southamerica-west1), Iowa (us-central1), Northern Virginia (us-east4), Los Angeles (us-west2)
+Status: resolved
+Impact Level: 
+Duration: 13 hours and 23 minutes
+Root Cause: Mitigation work is currently underway by our engineering team.
+Resolution: 
+Downtime Period: 2024-07-25 14:30 - 2024-07-25 14:45
+Affected Components: VMware Engine
+
+---
+
+Cloud Provider: GCP
+Services: Compute Engine, ds
+Regions: Tokyo, Singapore, Sydney, London, Frankfurt, Northern Virginia
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 6 hours and 8 minutes
+Root Cause: DigiCert found a problem with their Domain Control Validation (DCV) and informed Google Cloud of the issue.
+Resolution: 
+Downtime Period: 6 hours and 8 minutes
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: us-central1
+Availability Zones: us-central1
+Status: investigating
+Impact Level: 
+Duration: 6
+Root Cause: VPC network data for newly created VMs or networks might not be available when requests to Google APIs originate from these VMs/networks.
+Resolution: 
+Downtime Period: 2024-09-04 06:29 - 2024-09-04 11:39
+Incident ID: 6 hours and 10 minutes
+Affected Components: Google Cloud Networking, VPC Service Controls
+
+---
+
+Cloud Provider: GCP
+Services: vai
+Regions: us-central1
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 25
+Root Cause: Intermittent connectivity issue with VMWare Engine (GCVE), Cloud Interconnect, and Cloud VPN
+Resolution: 
+Downtime Period: 25 minutes
+Affected Components: GCVE and Hybrid Connectivity
+
+---
+
+Cloud Provider: GCP
+Services: Compute Engine, GCE, Google Cloud Dataflow, Google Kubernetes Engine
+Regions: affected
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 1 hour, 50 minutes
+Root Cause: Change rollout to an internal component
+Resolution: 
+Downtime Period: 2024-09-07 05:10 - 2024-09-07 06:00 US/Pacific
+Affected Components: Cloud Build - deployed via the Cloud Build API or via CloudBuild Integrations were not being executed.
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: 
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 3
+Root Cause: 
+Resolution: 
+Downtime Period: 11:20 US/Pacific Time (resolved)
+Affected Components: Hybrid Connectivity - Cloud Interconnect
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: Pacific
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 10 days, 12 hours, and 10 minutes
+Root Cause: Unknown
+Resolution: 
+Downtime Period: September 28, 2024, 00:00 - September 30, 2024, 23:59 PDT (5 days)
+
+---
+
+Cloud Provider: GCP
+Services: vai, Looker
+Regions: Global
+Availability Zones: Not specified
+Status: investigating
+Impact Level: 
+Duration: 16
+Root Cause: 
+Resolution: 
+Downtime Period: From 2024-09-09 09:44 to 2024-09-09 21:04 (US/Pacific time)
+Affected Components: Global, Looker Studio
+
+---
+
+Cloud Provider: GCP
+Services: vai, Looker
+Regions: 
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 1
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: GCP
+Services: vai, Looker
+Regions: global
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 1
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: GCP
+Services: vai, Apigee, Cloud Run, AlloyDB for PostgreSQL, Load Balancing
+Regions: 
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 2 hours and 48 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: - Duration: 2 hours and 48 minutes
+Affected Components: - us-east1-c (peak loss: 3%)
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: the, australia-southeast2
+Availability Zones: 
+Status: 
+Impact Level: service-specific
+Duration: 3 hours, 13 minutes
+Root Cause: ** Review of datacenter power distribution design in the region, implementation of additional protections against voltage swells and sags.
+Resolution: 
+Downtime Period: 
+Affected Components: 1. Google Cloud Platform (GCP)
+
+---
+
+Cloud Provider: GCP
+Services: vai, Google Cloud Bigtable, Google Kubernetes Engine
+Regions: us-central1
+Availability Zones: Not specified
+Status: resolved
+Impact Level: 
+Duration: 1 day, 8 hours, 5 minutes
+Root Cause: Network issue
+Resolution: 
+Downtime Period: 2023-12-04 20:00 - 2023-12-06 03:55 US/Pacific
+Affected Components: Google Cloud Bigtable and Google Kubernetes Engine
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: us-central1, **
+Availability Zones: Not specified
+Status: resolved
+Impact Level: 
+Duration: 1
+Root Cause: **
+Resolution: 
+Downtime Period: December 5, 2023, from 06:17 US/Pacific Time to 07:26 US/Pacific Time (1 hour and 9 minutes)
+Affected Components: us-central1
+
+---
+
+Cloud Provider: AWS
+Services: ec, rs
+Regions: Tokyo, Seoul, Singapore, Sydney, London, Frankfurt, Northern Virginia
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 1 hour and 21 minutes (0 days, 1 hours, and 21 minutes)
+Root Cause: The root cause of the outage was not specified.
+Resolution: 
+Downtime Period: 1 hour and 21 minutes
+Affected Components: Tokyo (asia-northeast1)
+
+---
+
+Cloud Provider: GCP
+Services: vai, BigQuery, GCS
+Regions: **, 1. **Google Cloud Logging**, Multiple regions, multiple
+Availability Zones: Not specified
+Status: 
+Impact Level: 
+Duration: 25 hours
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 
+Affected Components: Multiple regions
+
+---
+
+Cloud Provider: GCP
+Services: VAI, vai, Cloud Run, Cloud SQL, Google Cloud SQL, Dataproc, DL, Load Balancing, Google Kubernetes Engine, GKE
+Regions: us-west1
+Availability Zones: 
+Status: outage
+Impact Level: 
+Duration: **
+Root Cause: **
+Resolution: 
+Downtime Period: **
+
+---
+
+Cloud Provider: GCP
+Services: ds, dl, Google Cloud Composer, Composer
+Regions: Global
+Availability Zones: 
+Status: 
+Impact Level: 
+Duration: 1 day 1 hours, 20 minutes
+Root Cause: The root cause was due to an issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+Resolution: 
+Downtime Period: Affected environments with Private IP configuration that experienced upgrade failures during the incident will now upgrade successfully.
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: Tokyo, Seoul
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: The outage lasted for approximately 2 hours and 3 minutes.
+Root Cause: Starting Wednesday, May 8, 2024, customers making use of caching policies in their API proxies were experiencing issues with Apigee API Platform services.
+Resolution: 
+Downtime Period: - May 8, 2024, 16:41 US/Pacific Time to May 9, 2024, 03:44 US/Pacific Time
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: 
+Availability Zones: 
+Status: 
+Impact Level: 
+Duration: 2 hours, 48 minutes
+Root Cause: A bug in maintenance automation intended to shutdown an unused network control component in a single location instead caused the component to be shutdown in many locations where it was still in use.
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: GCP
+Services: BigQuery
+Regions: - Google BigQuery, **
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 3
+Root Cause: The root cause of the outage is not yet known, but Google engineers are working on mitigating the problem and observing the error rate for the impacted APIs dropping.
+Resolution: 
+Downtime Period: The outage started at 16:45 PDT on June 10, 2024 and ended at 20:00 PDT on June 10, 2024.
+
+---
+
+Cloud Provider: AWS
+Services: ec, rs
+Regions: 
+Availability Zones: africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, eu, europe-central2, europe-north1, europe-southwest1, europe-west1, europe-west10, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9, me-central1, me-central2, me-west1, northamerica-northeast1, northamerica-northeast2, southamerica-east1, southamerica-west1
+Status: resolved
+Impact Level: 
+Duration: ** 6 days, 11 hours, and 5 minutes
+Root Cause: ** Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system.
+Resolution: 
+Downtime Period: ** The outage started on July 11, 2024, at 00:00 US/Pacific Time and was resolved on July 17, 2024, at 11:05 US/Pacific Time.
+Affected Components: BigQuery
+
+---
+
+Cloud Provider: GCP
+Services: vai, Cloud SQL, Bigtable, Google Cloud Bigtable, Google Kubernetes Engine
+Regions: us-central1, Not specified
+Availability Zones: Not specified
+Status: investigating
+Impact Level: 
+Duration: 2 hours and 21 minutes
+Root Cause: Query processing service outage
+Resolution: 
+Downtime Period: 2024-07-15 09:29 - 11:50 PDT (2 hours and 21 minutes)
+Affected Components: + Cloud Monitoring
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, sf, rs
+Regions: 
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 8
+Root Cause: 
+Resolution: 
+Downtime Period: The engineering team successfully concluded validations and confirmed that the issue had been mitigated on August 2, 2024, at 17:36 PDT.
+Affected Components: - Netherlands (europe-west4)
+
+---
+
+Cloud Provider: GCP
+Services: vai, Cloud Run, Bigtable, Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, GKE
+Regions: other
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 55 minutes
+Root Cause: **
+Resolution: 
+Downtime Period: **
+
+---
+
+Cloud Provider: AWS
+Services: abr, elb, ec, rs
+Regions: + Taiwan (asia-east1), 15, Tokyo, Seoul, Singapore, Sydney, London, Frankfurt, Paris, Northern Virginia
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 5 days, 13 hours, and 41 minutes
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: GCP
+Services: vai, ds, GKE
+Regions: Tokyo, Seoul, Singapore, Sydney, London, Frankfurt, Northern Virginia
+Availability Zones: Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Seoul (asia-northeast3), Mumbai (asia-south1), Singapore (asia-southeast1), Sydney (australia-southeast1), Belgium (europe-west1), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Montréal (north-america-northeast1), Toronto (north-america-northeast2), Iowa (us-central1), South Carolina (us-east1), Northern Virginia (us-east4), Oregon (us-west1), Los Angeles (us-west2)
+Status: investigating
+Impact Level: 
+Duration: 15 hours
+Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi."
+Resolution: 
+Downtime Period: 15 hours
+Affected Components: Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Seoul (asia-northeast3), Mumbai (asia-south1), Singapore (asia-southeast1), Sydney (australia-southeast1), Belgium (europe-west1), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Montréal (north-america-northeast1), Toronto (north-america-northeast2), Iowa (us-central1), South Carolina (us-east1), Northern Virginia (us-east4), Oregon (us-west1), Los Angeles (us-west2), Vertex AI custom training jobs
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: 
+Availability Zones: 
+Status: 
+Impact Level: 
+Duration: 4 hours, 9 minutes
+Root Cause: A regressive change in the rollout strategy caused all incoming requests to be discarded, resulting in widespread RPC errors for both internal systems and external customers.
+Resolution: 
+Downtime Period: 
+Affected Components: Google GCP
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: asia-east2, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central2, us-west1, asia-east2, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central2, us-west1, multiple
+Availability Zones: Not specified
+Status: investigating
+Impact Level: 
+Duration: 2 hours and 56 minutes
+Root Cause: The automation pipeline was removed as a short-term measure to prevent recurrence of the issue.
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: GCP
+Services: 
+Regions: 
+Availability Zones: 
+Status: 
+Impact Level: 
+Duration: 35 minutes
+Root Cause: Issue introduced by a new version release of an internal service which the Search API relies on
+Resolution: 
+Downtime Period: 
+Affected Components: 1., Vertex AI Search
+
+---
+
+Cloud Provider: GCP
+Services: vai
+Regions: us-central1
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 7
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: AWS
+Services: ec, rs
+Regions: following, multiple, Tokyo, Seoul, Singapore, Sydney, London, Frankfurt, Northern Virginia
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 1 day, 2 hours, and 21 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: 
+Affected Components: + Taiwan (asia-east1)
+
+---
+
+Cloud Provider: GCP
+Services: Apigee, Cloud Run, BigQuery, Google Cloud SQL, Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine
+Regions: one of the campuses supporting the australia-southeast2
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 3 hours, 13 minutes
+Root Cause: Power voltage swell event impacted the Network Point of Presence (POP) infrastructure in one of the campuses supporting the australia-southeast2 region.
+Resolution: 
+Downtime Period: - Google BigQuery: 16:20 - 17:55 US/Pacific
+
+---
+
+Cloud Provider: GCP
+Services: vai, Apigee
+Regions: Apigee Edge and Apigee X Outage Details, **Apigee Edge and Apigee X Outage Details**, singapore
+Availability Zones: 
+Status: investigating
+Impact Level: critical
+Duration: 8 hours, 25 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: AWS
+Services: abr, ec, rs
+Regions: southamerica-west1, scl-zone1-7594 and scl-zone2-7594
+- GCP services via scl-zone1-7594 and scl-zone2-7594
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 0 days, 14 hours, 35 minutes
+Root Cause: Physical connections issue in Google Cloud Interconnect in Santiago, Chile
+Resolution: 
+Downtime Period: 14 hours, 35 minutes
+Affected Components: southamerica-west1
+
+---
+
+Cloud Provider: AWS
+Services: ec, rs
+Regions: multiple, some clusters in the impacted, Tokyo, Seoul, Singapore, Sydney, Northern Virginia
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 5
+Root Cause: Intermitent issue with Vertex Gemini API
+Resolution: 
+Downtime Period: 5 days, 17 hours, and 8 minutes
+Affected Components: Vertex Gemini API
+
+---
+
+Cloud Provider: GCP
+Services: df
+Regions: Asia-Southeast1, Europe-West3, Europe-West4, US-Central1, US-East1, US-West1, Asia-Southeast1, Europe-West3, Europe-West4, US-Central1, US-East1, US-West1, multiple
+Availability Zones: 
+Status: 
+Impact Level: 
+Duration: 3
+Root Cause: Novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers
+Resolution: 
+Downtime Period: 
+Affected Components: Agent Assist features including Proactive Generative Knowledge Assist, LLM Summarization, and topic modeling features
+
+---
+
+Cloud Provider: IBM
+Services: Watson, ide, IBM Kubernetes
+Regions: DAL12, TOK02, LON06, Tokyo, London
+Availability Zones: Not specified
+Status: 
+Impact Level: 
+Duration: 1 hour 43 minutes
+Root Cause: Automated procedure in network device configuration management triggered a software defect, causing routing protocol reset and anomalous route advertisement.
+Resolution: 
+Downtime Period: 1 hour 43 minutes
+Affected Components: DAL12, IBM Kubernetes Service, Watson Platform services
+
+---
+
+Cloud Provider: IBM
+Services: ide
+Regions: Tokyo
+Availability Zones: TOK02
+Status: investigating
+Impact Level: 
+Duration: 3 hours and 31 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: The downtime period started when the unplanned VSI migrations began at 00:40 UTC and ended when all VSIs were verified to be back online at 04:11 UTC.
+Affected Components: VSIs in Pod 1 of the Tokyo (TOK02) Data Center
+
+---
+
+Cloud Provider: IBM
+Services: ide, IKS
+Regions: Sao Paulo 01 DATACENTER
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 17
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: IBM
+Services: ide, Object Storage
+Regions: MEX01
+Availability Zones: Not specified
+Status: investigating
+Impact Level: 
+Duration: 6
+Root Cause: 
+Resolution: 
+Downtime Period: 6 hours 19 minutes
+
+---
+
+Cloud Provider: IBM
+Services: ide
+Regions: WDC01
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 9
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: IBM
+Services: ide, IKS
+Regions: Frankfurt, London, Tokyo, Sydney
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 12
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: IBM
+Services: ide
+Regions: All regions, All regions., all
+Availability Zones: Not specified
+Status: resolved
+Impact Level: 
+Duration: 1 hour 32 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: 1 hour 32 minutes
+Affected Components: All regions., AppID, Schematics, Secrets Manager, UI, Bluemix-developer-experience, Cloudcerts, Code Engine, Compliance, Continuous-delivery-pipeline, Virtual Private Cloud, and Cloud App Dev Services.
+
+---
+
+Cloud Provider: IBM
+Services: ide
+Regions: Seoul 01 (SEO01) Data Center, Seoul
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 1 day, 12 hours, and 46 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: IBM
+Services: ide, IBM Cloud Console
+Regions: those
+Availability Zones: 
+Status: investigating
+Impact Level: global
+Duration: 5
+Root Cause: 
+Resolution: 
+Downtime Period: 06:42 UTC - 12:12 UTC
+Affected Components: IBM Cloud Console
+
+---
+
+Cloud Provider: IBM
+Services: Watson, ide, SQL Query
+Regions: Frankfurt
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 18
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: IBM
+Services: Watson, ide, SQL Query
+Regions: Frankfurt
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 18
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: IBM
+Services: ide, IBM Cloud Console
+Regions: Worldwide
+Availability Zones: Not specified
+Status: 
+Impact Level: global
+Duration: 5 hours and 30 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: 5 hours and 30 minutes
+
+---
+
+Cloud Provider: IBM
+Services: ide
+Regions: 
+Availability Zones: 
+Status: outage
+Impact Level: 
+Duration: 1 hour and 32 minutes
+Root Cause: 
+Resolution: 
+Downtime Period: The services were unavailable for approximately 1 hour and 32 minutes.
+Incident ID: INC5295851
+
+---
+
+Cloud Provider: MongoDB
+Services: MongoDB Atlas
+Regions: - None specified in the text
+Availability Zones: MongoDB:
+Status: investigating
+Impact Level: 
+Duration: - Duration of outage not explicitly stated
+Root Cause: - The issue has been identiﬁed as an API call to realm.mongodb.com returning 401, while the new services.cloud.mongodb.com API works as expected.
+Resolution: 
+Downtime Period: Not specified
+
+---
+
+Cloud Provider: AWS
+Services: Amazon Route 53, Elastic Compute Cloud, EC2, EMR, EC, ec, rs
+Regions: us-east-1, us-east-2, us-west-2, * us-east-1
+Availability Zones: Not specified
+Status: 
+Impact Level: 
+Duration: 1 day, 14 hours, and 41 minutes
+Root Cause: Not specified
+Resolution: 
+Downtime Period: August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT
+Affected Components: EMR Cluster Launch Failures
+
+---
+
+Cloud Provider: AWS
+Services: abr, Route 53, Amazon Route 53, Elastic Compute Cloud, EC2, ec, EC, QuickSight, rs
+Regions: ap-northeast-2, None specified, us-east-1, ap-southeast-2, ** ap-northeast-2, us-east-1, None specified for other regions
+Availability Zones: None specified
+Status: investigating
+Impact Level: moderate
+Duration: 3 hours and 13 minutes (from November 10, 2024, 7:55 AM PST to November 10, 2024, 11:08 AM PST)
+Root Cause: Not specified
+Resolution: 
+Downtime Period: November 10, 2024, 8:00 AM PST - November 10, 2024, 11:13 AM PST (2 hours and 13 minutes)
+Affected Components: ap-northeast-2, Amazon Elastic Compute Cloud
+
+---
+
+Cloud Provider: AWS
+Services: abr, Elastic Compute Cloud, EC2, Amazon EC2, Elastic MapReduce, EMR, ec, EC, QS, rs
+Regions: ap-northeast-2, all, us-east-1, us-west-2
+Availability Zones: 
+Status: investigating
+Impact Level: 
+Duration: 3
+Root Cause: Increased API error rates for mutable VPC calls
+Resolution: 
+Downtime Period: 
+Affected Components: Amazon AWS
+
+---
+
+Cloud Provider: AWS
+Services: Amazon Bedrock, Amazon Route 53, Route 53, Elastic Compute Cloud, Elastic MapReduce, EMR, ec, QuickSight, rs
+Regions: ap-northeast-2, us-east-1, US-EAST-1, ap-southeast-2, us-west-2, us-west-1
+Availability Zones: 
+Status: investigating
+Impact Level: moderate
+Duration: 1 hour and 18 minutes (from 7:55 AM PST to 10:13 AM PST)
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 
+Affected Components: Amazon Elastic Compute Cloud
+
+---
+
+Cloud Provider: AWS
+Services: abr, Amazon DynamoDB, DynamoDB, Elastic Compute Cloud, EC2, ec, EC, QuickSight, rs
+Regions: us-west-2
+Availability Zones: 
+Status: investigating
+Impact Level: moderate
+Duration: 1 hour and 12 minutes
+Root Cause: Increased Error Rates
+Resolution: 
+Downtime Period: 8:29 PM PST - 8:41 PM PST (resolved)
+Affected Components: Amazon DynamoDB
+
+---
+
+Cloud Provider: AWS
+Services: abr, Elastic Compute Cloud, Elastic File System, Elastic Load Balancing, ec, QuickSight, AWS Lambda, rs, Elastic Kubernetes Service
+Regions: Global, us-west-2, us-east-1
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 95 minutes (1 hour 35 minutes)
+Root Cause: IAM Propagation delays
+Resolution: 
+Downtime Period: December 17, 2023, 6:57:08 PM PST - December 17, 2023, 8:32:00 PM PST
+
+---
+
+Cloud Provider: AWS
+Services: abr, Amazon Bedrock, Amazon DynamoDB, DynamoDB, RDS, Elastic Compute Cloud, EC2, Elastic MapReduce, EMR, ec, EC, QuickSight, QS, rs
+Regions: us-west-2, ap-northeast-2, Not specified, us-east-1, eu-south-1, us-west-1
+Availability Zones: Not specified
+Status: investigating
+Impact Level: moderate
+Duration: 5 minutes
+Root Cause: Increased API error rates
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: AWS
+Services: abr, Amazon Bedrock, Elastic Compute Cloud, Elastic MapReduce, EMR, ec, QuickSight, rs
+Regions: ap-northeast-2, Not specified, us-east-1, us-west-1, us-west-2, * ap-northeast-2, following
+Availability Zones: Not specified
+Status: investigating
+Impact Level: moderate
+Duration: 3 hours and 27 minutes
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 1 hour and 13 minutes
+
+---
+
+Cloud Provider: AWS
+Services: abr, Amazon DynamoDB, DynamoDB, Elastic Compute Cloud, EC2, Elastic Container Service, ECS, EC, ec, QuickSight, rs, Elastic Kubernetes Service, EKS
+Regions: us-east-1, us-west-2
+Availability Zones: 
+Status: investigating
+Impact Level: moderate
+Duration: 3 hours and 18 minutes
+Root Cause: Increased API error rates for mutable VPC calls
+Resolution: 
+Downtime Period: November 10, 2024, 8:13 AM - 11:33 AM PST (2 hours and 20 minutes)
+Affected Components: + EC2
+
+---
+
+Cloud Provider: AWS
+Services: EC2 Instance Connect, Elastic Compute Cloud, EC2, Amazon EC2, EC, ec, rs, Elastic Kubernetes Service
+Regions: 
+Availability Zones: 
+Status: investigating
+Impact Level: moderate
+Duration: 10 minutes
+Root Cause: Increased API error rates
+Resolution: 
+Downtime Period: November 25, 2024, 4:31 AM PST - November 25, 2024, 4:41 AM PST (10 minutes)
+
+---
+
+Cloud Provider: AWS
+Services: abr, Amazon CloudWatch, Elastic Container Service, Elastic Load Balancing, ec, rs
+Regions: N. Virginia (us-east-1), **, us-east-1
+Availability Zones: 
+Status: investigating
+Impact Level: moderate
+Duration: 26 hours
+Root Cause: Increased Error Rates
+Resolution: 
+Downtime Period: 5:34 PM - 7:23 PM (PDT) on June 25, 2024
+
+---
+
+Cloud Provider: AWS
+Services: Elastic Compute Cloud, Elastic MapReduce, rs
+Regions: US-EAST-1
+Availability Zones: 
+Status: resolved
+Impact Level: 
+Duration: 17 minutes
+Root Cause: Planned configuration change that caused increased API error rates
+Resolution: 
+Downtime Period: Between 11:10 AM and 12:08 PM PDT ( lasted for 58 minutes)
+Affected Components: SendMessage, CreateMessage, ChangeMessageAvailability APIs in the US-EAST-1 Region
+
+---
+
+Cloud Provider: AWS
+Services: abr, Amazon Route 53, route 53, Elastic Compute Cloud, Elastic MapReduce, EMR, ec, QuickSight, rs
+Regions: ap-northeast-2, Not specified, us-east-1, us-west-2, eu-south-1, us-west-1, us-east-2, | Service | Region | Availability Zones |
+Availability Zones: Not specified
+Status: investigating
+Impact Level: moderate
+Duration: 3 hours and 18 minutes
+Root Cause: Increased API error rates for mutable VPC calls
+Resolution: 
+Downtime Period: 
+
+---
+
+Cloud Provider: AWS
+Services: Amazon Bedrock, Route 53, Amazon Route 53, Elastic Compute Cloud, EMR, Elastic MapReduce, ec, QuickSight, rs
+Regions: us-west-2, ap-northeast-2, us-east-1, Northern Virginia, Tokyo
+Availability Zones: 
+Status: investigating
+Impact Level: moderate
+Duration: 5 days, 9 hours, and 46 minutes
+Root Cause: Not specified
+Resolution: 
+Downtime Period: August 6-11, 2024
+
+---
+
+Cloud Provider: AWS
+Services: ec, Lambda, rs, Amazon EKS
+Regions: Northern Virginia (US-EAST-1), US-EAST-1, Northern Virginia
+Availability Zones: Not specified
+Status: resolved
+Impact Level: 
+Duration: 3 hours and 48 minutes (from 11:49 AM PDT to 3:37 PM PDT)
+Root Cause: Latent software defect in the provisioning of underlying compute capacity
+Resolution: 
+Downtime Period: + Lambda function invocations: 2 hours and 13 minutes
+Affected Components: Amazon AWS, Amazon STS, AWS Management Console, Amazon EKS, Amazon Connect, Amazon EventBridge.
+
+---
+
+Cloud Provider: AWS
+Services: CloudWatch, Elastic Container Service, ECS, EC, ec, Lambda, rs, Amazon Redshift, Redshift, Glue, AWS Glue
+Regions: US-EAST-1, Northern Virginia
+Availability Zones: 
+Status: investigating
+Impact Level: none
+Duration: 7 hours and 21 minutes
+Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+Resolution: 
+Downtime Period: Until normal operations were restored to the Kinesis Data Streams cell
+Affected Components: Amazon AWS, Amazon Data Firehose, Amazon Elastic Container Service (ECS), Amazon Lambda, Amazon Redshift, Amazon Glue, CloudWatch Logs, and Amazon Kinesis Data Streams.
+
+---
+
+Cloud Provider: Azure
+Services: Azure Cosmos DB, Af
+Regions: Not specified
+Availability Zones: Not specified
+Status: investigating
+Impact Level: 
+Duration: Not specified
+Root Cause: Not specified
+Resolution: 
+Downtime Period: Not specified
+Affected Components: IoT Hub
+
+---
+
