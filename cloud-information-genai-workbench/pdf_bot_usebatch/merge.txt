@@ -3486,6 +3486,156 @@ No information is available in the text about an outage on Akamai.
 
 No information is available in the text about an outage on Cloudflare.  
 --
+Outage Filename: ./Google Cloud Service Health - Incident report 2024-05-16.txt
+--
+I can only apply the query to the specified cloud providers that are mentioned in the text, which are:
+
+Google GCP
+Amazon AWS is not mentioned in the text, so I will ignore it.
+Microsoft Azure is not mentioned in the text, so I will ignore it.
+Oracle OCI is not mentioned in the text, so I will ignore it.
+IBM Cloud is not mentioned in the text, so I will ignore it.
+Snowflake is not mentioned in the text, so I will ignore it.
+Databricks is not mentioned in the text, so I will ignore it.
+MongoDB is not mentioned in the text, so I will ignore it.
+Akamai and Cloudflare are not cloud providers, they are companies that provide services on top of these cloud providers.
+
+Here is the information for Google GCP:
+
+AlloyDB for PostgreSQL
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Apigee
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Backup and DR
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Batch
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Cloud Build
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Cloud Data Fusion
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Cloud Developer Tools
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Cloud Filestore
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Cloud Load Balancing
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Cloud Machine Learning
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Cloud Memorystore
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Cloud NAT
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Cloud Run
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Cloud Workstations
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Colab Enterprise
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Contact Center AI Platform
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Dataproc Metastore
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Firebase Test Lab
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Google App Engine
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Google Cloud Composer
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Google Cloud Dataflow
+Duration: 2 hours, 48 minutes
+Start Date: May 16, 2024 15:22 PDT
+End Date: May 16, 2024 18:10 PDT
+
+Root Cause: A bug in maintenance automation intended to shutdown an unused network control component in a single location instead caused the component to be shutdown in many locations where it was still in use.
+
+Here is the information for Google GCP displayed as a table:
+
+| Service | Duration | Start Date | End Date |
+| --- | --- | --- | --- |
+| AlloyDB for PostgreSQL | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Apigee | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Backup and DR | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Batch | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Cloud Build | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Cloud Data Fusion | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Cloud Developer Tools | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Cloud Filestore | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Cloud Load Balancing | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Cloud Machine Learning | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Cloud Memorystore | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Cloud NAT | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Cloud Run | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Cloud Workstations | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Colab Enterprise | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Contact Center AI Platform | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Dataproc Metastore | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Firebase Test Lab | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Google App Engine | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+| Google Cloud Composer | 2 hours, 48 minutes | May 16, 2024 15:22 PDT | May 16, 2024 18:10 PDT |
+
+Note that the table only includes services that were affected by the outage.  
+--
 Outage Filename: ./Google Cloud Service Health - Incident report 2024-06-10.txt
 --
 Here is the breakdown of the outage for each cloud provider:
