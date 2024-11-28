@@ -1,0 +1,60 @@
+Here is the breakdown of the outage for each cloud provider:
+
+**Google Cloud**
+
+The outage affected Google App Engine, Cloud Firestore, and Google Cloud Run functions (1st gen).
+
+Outage Details:
+- Start Date: 2024-09-18
+- End Date: 2024-09-18 15:30 US/Pacific
+- Duration: 2 hours and 56 minutes
+- Affected Regions: asia-east2, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central2, us-west1
+- Affected Availability Zones: Not specified
+
+Root Cause:
+The automation pipeline was removed as a short-term measure to prevent recurrence of the issue.
+
+**Cloud Run functions (1st gen)**
+
+Outage Details:
+- Start Date: 2024-09-18
+- End Date: 2024-09-18 15:30 US/Pacific
+- Duration: 2 hours and 56 minutes
+- Affected Regions: asia-east2, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central2, us-west1
+- Affected Availability Zones: Not specified
+
+Root Cause:
+The automation pipeline was removed as a short-term measure to prevent recurrence of the issue.
+
+**Cloud Firestore**
+
+Outage Details:
+- Start Date: 2024-09-18
+- End Date: 2024-09-18 15:30 US/Pacific
+- Duration: 2 hours and 56 minutes
+- Affected Regions: asia-east2, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central2, us-west1
+- Affected Availability Zones: Not specified
+
+Root Cause:
+The automation pipeline was removed as a short-term measure to prevent recurrence of the issue.
+
+**Summary**
+
+Google Cloud experienced an outage affecting Google App Engine, Cloud Run functions (1st gen), and Cloud Firestore in multiple regions. The outage started on September 18, 2024, at 12:34 US/Pacific and lasted for 2 hours and 56 minutes. The root cause was the removal of the automation pipeline as a short-term measure to prevent recurrence.
+
+**Cloud Providers Impacted**
+
+- Google Cloud
+- Amazon AWS (not identified in the text)
+- Microsoft Azure (not identified in the text)
+- Oracle OCI (not identified in the text)
+- IBM Cloud (not identified in the text)
+- Snowflake (not identified in the text)
+- Databricks (not identified in the text)
+- MongoDB (not identified in the text)
+- Akamai (not identified in the text)
+- Cloudflare (not identified in the text)
+
+**Overall Summary**
+
+The outage affected multiple cloud providers, but only Google Cloud was explicitly mentioned. The root cause of the outage was the removal of the automation pipeline as a short-term measure to prevent recurrence.

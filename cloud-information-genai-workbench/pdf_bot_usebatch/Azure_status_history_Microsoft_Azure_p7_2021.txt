@@ -1,27 +1,49 @@
-Based on the provided text, I will resume the outage for Microsoft Azure.
+Here is the response to your query:
 
-**Outage Details:**
+**Outages Summary**
 
-* **Incident Duration:** Approximately 70% peak failure rate in some East US metropolitan locations.
-* **Start Time:** Between 14:55 UTC and 19:50 UTC on July 12th, 2021.
-* **End Time:** By 21:20 UTC on July 12th, 2021 (some services restored), and by 00:52 UTC on July 24th, 2021 (all services completed).
-* **Affected Regions/Availability Zones:** East US metropolitan locations.
-* **Affected Services:**
-	+ Azure Front Door
-	+ Azure CDN Standard
-	+ Windows Virtual Desktop
+The following cloud providers were impacted: Microsoft Azure, Amazon AWS was not mentioned in the text, Google GCP was not mentioned in the text.
 
-**Root Cause:**
+**Microsoft Azure Outage**
 
-The outage was caused by a periodic background task executed on site that led to the disruption of services.
+* **Start Date**: July 12th, 2021
+* **Duration**: 5 days, 13 hours and 43 minutes
+* **Services Impacted**: Azur e Front Door, Azur e CDN S tandar d, Windows Virtual Desktop
+* **Regions Affected**: East US
+* **Availability Zones Affected**: Multiple AZs in the East US region
+* **Root Cause**: Periodic background task executed on site led to disruption of services
+* **Downtime Period**: 21:20 UT C - 00:52 UT C (July 12th, 2021)
+* **Resolution Date**: July 13th, 2021
 
-**Downtime Period:**
+**Microsoft Azure Outage (continued)**
 
-* The downtime period for affected services started between 14:55 UTC and 19:50 UTC on July 12th, 2021.
-* The duration of the outage is approximately 4 days, 6 hours, and 15 minutes (from 14:55 UTC to 00:52 UTC on July 24th, 2021).
+* **Start Time**: 14:55 UT C
+* **Duration**: 5 days, 13 hours and 43 minutes
+* **Services Impacted**: Azur e Front Door, Azur e CDN S tandar d, Windows Virtual Desktop
+* **Regions Affected**: East US
+* **Availability Zones Affected**: Multiple AZs in the East US region
+* **Root Cause**: Periodic background task executed on site led to disruption of services
+* **Downtime Period**: 21:20 UT C - 00:52 UT C (July 12th, 2021)
+* **Resolution Date**: July 13th, 2021
 
-**Resolution Marked:**
+**Microsoft Azure Outage (continued)**
 
-The outage was marked as resolved by 21:20 UTC on July 12th, 2021, with most services recovered. However, the remaining subset of cables was not restored until 00:52 UTC on July 24th, 2021.
+* **Start Time**: 19:50 UT C
+* **Duration**: 5 days, 13 hours and 43 minutes
+* **Services Impacted**: Azur e Front Door, Azur e CDN S tandar d, Windows Virtual Desktop
+* **Regions Affected**: East US
+* **Availability Zones Affected**: Multiple AZs in the East US region
+* **Root Cause**: Periodic background task executed on site led to disruption of services
+* **Downtime Period**: 21:20 UT C - 00:52 UT C (July 12th, 2021)
+* **Resolution Date**: July 13th, 2021
 
-Note that I have removed Cloud Vendors not identified in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, and MongoDB) from the response.
+**Microsoft Azure Outage (continued)**
+
+* **Start Time**: 19:00 UT C
+* **Duration**: 9 hours and 28 minutes
+* **Services Impacted**: App Service, ExpressRoute, Azur e Search, VPN Gateway
+* **Regions Affected**: Brazil South
+* **Availability Zones Affected**: Multiple AZs in the Brazil South region
+* **Root Cause**: Physical network link disruption during planned maintenance activity
+* **Downtime Period**: 19:00 UT C - 21:28 UT C (July 23rd, 2021)
+* **Resolution Date**: July 24th, 2021

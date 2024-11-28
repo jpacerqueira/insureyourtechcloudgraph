@@ -1,13 +1,39 @@
-Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the information about the outage:
+I can only provide information on the cloud providers mentioned in the text, which are Microsoft Azure.
 
-**Cloud Provider:** Microsoft Azure
-**Services Impacted:** Storage and Networking services
-**Regions and Availability Zones:** East US 2 region
-**Root Cause of Outage:** Unplanned power oscillation in one of the data centers within an Availability Zone, caused by anomalous component behavior within UPS modules.
-**Duration of Outage:**
-	* Start Time: Not specified
-	* Duration: Not specified (but it is mentioned that two storage scale units still exhibited slightly lower API availability compared to before the incident)
-	* Downtime Period: Not specified
-**Resolution:** The outage was resolved after manual intervention, including restarting the Air Handling Units (AHUs) and other components.
+**Microsoft Azure Outage**
 
-Note that I have removed all cloud providers not identified in the text, as well as apostrophes and abreviations.
+The outage started on an unspecified date and was marked as resolved after a certain period of time. The exact duration is not specified in the text.
+
+**Services Impacted**
+
+* Storage
+* Networking
+
+**Root Cause**
+
+An unplanned power oscillation in one of the data centers within one of the Availability Zones in the East US 2 region caused the outage.
+
+**Duration**
+
+The outage lasted for an unspecified number of days, hours, and minutes. The text mentions that after most storage network connectivity was restored, recovery activities included diagnosing and remediating any host nodes that had entered an unhealthy state due to loss of network, and triaging any other hardware failures to ensure that all storage infrastructure could be brought back online.
+
+**Downtime Period**
+
+The downtime period for the Storage service is not specified in the text. However, it is mentioned that after the storage nodes returned to a healthy state, two storage scale units still exhibited slightly lower API availability compared to before the incident. This was caused by a limited number of storage software roles being in an unhealthy state.
+
+**Resolution Date**
+
+The resolution date is not specified in the text.
+
+Here is the outage information displayed as a table:
+
+| Service | Region | Availability Zone | Start Date | End Date | Duration |
+| --- | --- | --- | --- | --- | --- |
+| Storage | East US 2 |  |  |  |  |
+| Networking | East US 2 |  |  |  |  |
+
+Note: The table only includes the information specified in the text and does not provide any additional details.
+
+**Summary**
+
+Microsoft Azure experienced an outage caused by an unplanned power oscillation in one of its data centers within one of its Availability Zones in the East US 2 region. The outage impacted the Storage and Networking services, but it is unclear what specific duration or downtime period was experienced for each service.

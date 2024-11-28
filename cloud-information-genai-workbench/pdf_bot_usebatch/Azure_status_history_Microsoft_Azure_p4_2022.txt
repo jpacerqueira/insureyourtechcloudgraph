@@ -1,22 +1,64 @@
-Here is the summary of the outage:
+I can only provide information on the cloud providers mentioned in the text, which are:
 
-**Cloud Provider:** Microsoft Azure
-**Outage Details:**
+* Microsoft Azure
+* Azur e Red Hat OpenShift
+* PostgreSQL
+* NetApp Files
 
-* **Incident Duration:** 1 day
-* **Start Time:** August 27 at 02:47 UTC
-* **End Time:** August 28 at 02:47 UTC (approximately 24 hours)
-* **Impacted Services and Regions:**
-	+ West US 2 region, including all three Availability Zones
-	+ Impacted services:
-		- Azur e Kuber netes Service (AKS)
-		- Azur e Monit or
-		- Application Insights
-		- Log Analy tics
-		- Micr osoft Sentinel
-* **Root Cause:** Bug in Ubuntu 18.04, specifically a DNS resolution error caused by an unattended upgrade
-* **Downtime Period:**
-	+ West US 2 region: approximately 24 hours (from August 27 at 02:47 UTC to August 28 at 02:47 UTC)
-	+ Individual Availability Zones within the region experienced partial downtime due to utility power outages
+Here is the information about each outage per cloud provider:
 
-**Resolution Marked:** The outage was marked as resolved on August 28 at 02:47 UTC, after the affected services were restored and the root cause was identified and addressed.
+**Microsoft Azure**
+
+* Service Impacted: DNS Resolution and Network Connectivity for Ubuntu 18.04 VMs
+* Regions/Availability Zones: West US 2 region, all three Availability Zones
+* Date of Outage: August 27 at 02:47 UTC
+* Duration:
+	+ Downtime Period: 1 day (August 27)
+	+ Hours and Minutes: 12 hours and 30 minutes
+	+ Root Cause: Bug in Ubuntu 18.04, specifically the Domain Name System (DNS) resolution error
+* Services Impacted: Azur e VMs running Ubuntu 18.04, AKS, Azur e Monit or, Application Insights, Log Analy tics, and Micr osoft Sentinel
+
+**Azur e Red Hat OpenShift**
+
+* Service Impacted: Not specified in the text
+* Regions/Availability Zones: Not specified in the text
+* Date of Outage: Not specified in the text
+* Duration:
+	+ Downtime Period: Not specified in the text
+	+ Hours and Minutes: Not specified in the text
+	+ Root Cause: Not specified in the text
+* Services Impacted: Not specified in the text
+
+**PostgreSQL**
+
+* Service Impacted: Not specified in the text
+* Regions/Availability Zones: Not specified in the text
+* Date of Outage: Not specified in the text
+* Duration:
+	+ Downtime Period: Not specified in the text
+	+ Hours and Minutes: Not specified in the text
+	+ Root Cause: Not specified in the text
+* Services Impacted: Not specified in the text
+
+**NetApp Files**
+
+* Service Impacted: Not specified in the text
+* Regions/Availability Zones: Not specified in the text
+* Date of Outage: Not specified in the text
+* Duration:
+	+ Downtime Period: Not specified in the text
+	+ Hours and Minutes: Not specified in the text
+	+ Root Cause: Not specified in the text
+* Services Impacted: Not specified in the text
+
+**Overall Summary**
+
+The outages impacted services running on Microsoft Azure, specifically Ubuntu 18.04 VMs, AKS, Azur e Monit or, Application Insights, Log Analy tics, and Micr osoft Sentinel. The outage occurred on August 27 at 02:47 UTC and lasted for approximately 12 hours and 30 minutes.
+
+**Output Table**
+
+| Cloud Provider | Service Impacted | Regions/Availability Zones | Date of Outage | Duration | Downtime Period | Root Cause | Services Impacted |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | DNS Resolution and Network Connectivity for Ubuntu 18.04 VMs | West US 2 region, all three Availability Zones | August 27 at 02:47 UTC | 1 day (12 hours and 30 minutes) | 12 hours and 30 minutes | Bug in Ubuntu 18.04, specifically the Domain Name System (DNS) resolution error | Azur e VMs running Ubuntu 18.04, AKS, Azur e Monit or, Application Insights, Log Analy tics, and Micr osoft Sentinel |
+
+Note: The table only includes information from the text and may not be comprehensive.

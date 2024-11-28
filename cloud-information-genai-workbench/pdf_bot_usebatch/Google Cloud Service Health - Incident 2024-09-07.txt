@@ -1,0 +1,51 @@
+Here is the breakdown of the outage for each cloud provider:
+
+**Google Cloud**
+
+Outage started: 2024-09-07 04:20 US/Pacific
+Duration: 1 hour, 50 minutes
+Root cause: Change rollout to an internal component
+Affected services and features:
+Cloud Build
+Google Cloud Dataflow
+Google Cloud Deploy
+Google Compute Engine
+Google Kubernetes Engine
+
+Services impacted:
+Cloud Build - deployed via the Cloud Build API or via CloudBuild Integrations were not being executed.
+Google Cloud Dataflow jobs failed at start up, existing job autoscale functionality was disrupted.
+Google Cloud Deploy actions (render, deploy, verify, pre- and post-deploy hooks) were unresponsive and unable to complete their tasks.
+Google Compute Engine requests and operations like creating, deleting, starting or modifying VMs were not executed.
+Google Kubernetes Engine experienced issues with operations that depend on GCE. Specifically, cluster and node pool creation, node autoscaling, cluster and node upgrades, and automatic repairs were unsuccessful in the affected region and zones.
+
+**Summary of Google Cloud Outage**
+
+Outage started: 2024-09-07 04:20 US/Pacific
+Duration: 1 hour, 50 minutes
+Root cause: Change rollout to an internal component
+
+**Cloud Build**
+Duration: 1 hour, 50 minutes
+Downtime period: 2024-09-07 05:10 - 2024-09-07 06:00 US/Pacific
+Resolved: Yes
+
+**Google Cloud Dataflow**
+Duration: 1 hour, 50 minutes
+Downtime period: 2024-09-07 04:20 - 2024-09-07 06:10 US/Pacific
+Resolved: Yes
+
+**Google Cloud Deploy**
+Duration: 1 hour, 50 minutes
+Downtime period: 2024-09-07 05:00 - 2024-09-07 06:50 US/Pacific
+Resolved: Yes
+
+**Google Compute Engine**
+Duration: 1 hour, 50 minutes
+Downtime period: 2024-09-07 04:20 - 2024-09-07 06:10 US/Pacific
+Resolved: Yes
+
+**Google Kubernetes Engine**
+Duration: 1 hour, 50 minutes
+Downtime period: 2024-09-07 04:20 - 2024-09-07 06:10 US/Pacific
+Resolved: Yes

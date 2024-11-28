@@ -1,0 +1,27 @@
+I can only apply the query to Google Cloud Service Health, Amazon AWS is not mentioned in the text.
+
+Here are the results:
+
+**Google Cloud Services Impacted**
+
+Increased latency for create task calls in us-east1 for Google Cloud Tasks
+-----------------------------------------------
+
+* Outage Duration: 3 hours and 53 minutes
+* Start Date: Thursday, 2024-05-16 23:38 US/Pacific Time
+* End Date: Friday, 2024-05-17 01:45 US/Pacific Time
+* Affected Regions: us-east1
+* Affected Availability Zones: N/A
+* Root Cause: Unknown
+* Services Impacted: Google Cloud Tasks
+* Downtime Period: 3 hours and 53 minutes
+
+**Summary of Outage**
+
+The outage started on Thursday, May 16, 2024, at 23:38 US/Pacific Time and lasted for 3 hours and 53 minutes. The issue was resolved on Friday, May 17, 2024, at 01:45 US/Pacific Time.
+
+**Google Cloud Services Impacted**
+
+No other services were impacted by this outage.
+
+Note: I have removed the text from the original message to make it easier to read and understand.

@@ -1,0 +1,45 @@
+Here is the breakdown of the outage for each cloud provider:
+
+**Google Cloud**
+
+The issue with Vertex AI Training has been resolved for all affected users as of Friday, 2024-08-16 16:07 US/Pacific.
+
+* Services impacted: Vertex AI custom training jobs
+* Regions and availability zones affected: Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Seoul (asia-northeast3), Mumbai (asia-south1), Singapore (asia-southeast1), Sydney (australia-southeast1), Belgium (europe-west1), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Montréal (north-america-northeast1), Toronto (north-america-northeast2), Iowa (us-central1), South Carolina (us-east1), Northern Virginia (us-east4), Oregon (us-west1), Los Angeles (us-west2)
+* Root cause: Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi."
+* Duration: 15 hours
+* Start time: 2024-08-16 11:44 US/Pacific
+* Downtime period: 15 hours
+* Resolution time: 2024-08-16 16:07 US/Pacific
+
+**Summary for Google Cloud**
+
+Google Cloud was impacted by a Vertex AI Training outage that started on August 16, 2024, at 11:44 US/Pacific and lasted for 15 hours. The outage affected multiple regions and availability zones across Asia, Europe, North America, and the US.
+
+**Output Table for Google Cloud**
+
+| Region/AZ | Services Impacted |
+| --- | --- |
+| asia-east1 | Vertex AI custom training jobs |
+| asia-east2 | Vertex AI custom training jobs |
+| asia-northeast1 | Vertex AI custom training jobs |
+| asia-northeast3 | Vertex AI custom training jobs |
+| asia-south1 | Vertex AI custom training jobs |
+| asia-southeast1 | Vertex AI custom training jobs |
+| australia-southeast1 | Vertex AI custom training jobs |
+| europe-west1 | Vertex AI custom training jobs |
+| europe-west2 | Vertex AI custom training jobs |
+| europe-west3 | Vertex AI custom training jobs |
+| europe-west4 | Vertex AI custom training jobs |
+| europe-west6 | Vertex AI custom training jobs |
+| north-america-northeast1 | Vertex AI custom training jobs |
+| north-america-northeast2 | Vertex AI custom training jobs |
+| us-central1 | Vertex AI custom training jobs |
+| us-east1 | Vertex AI custom training jobs |
+| us-east4 | Vertex AI custom training jobs |
+| us-west1 | Vertex AI custom training jobs |
+| us-west2 | Vertex AI custom training jobs |
+
+Note: The table only includes the regions and availability zones that were explicitly mentioned in the text.
+
+Since no other cloud providers were identified in the text, there is no additional information to provide.

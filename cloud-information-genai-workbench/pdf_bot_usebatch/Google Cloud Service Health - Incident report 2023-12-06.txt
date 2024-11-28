@@ -1,0 +1,71 @@
+I can only apply the query to the specified cloud providers, which are Google GCP and Amazon AWS.
+
+Here is the result:
+
+**Google GCP**
+
+The outage started on December 6, 2023, at 14:47 US/Pacific Time (UTC-8) and was resolved on December 6, 2023, at 18:08 US/Pacific Time (UTC-8).
+
+Services impacted:
+Tokyo (asia-northeast1)
+Seoul (asia-northeast3)
+Singapore (asia-southeast1)
+Sydney (australia-southeast1)
+Belgium (europe-west1)
+London (europe-west2)
+Frankfurt (europe-west3)
+Milan (europe-west8)
+Montréal (northamerica-northeast1)
+São Paulo (southamerica-east1)
+Iowa (us-central1)
+South Carolina (us-east1)
+Northern Virginia (us-east4)
+Oregon (us-west1)
+
+Services that were unable to be used:
+Create new DPMS instances
+Update existing DPMS instances involving scaling configuration or tier updates
+Perform full Restore of existing backups
+Import metadata into DPMS Create Dataproc Metastore Federation APIs
+
+Root cause: The root cause of the outage was not specified.
+
+Duration: 1 hour and 21 minutes (0 days, 1 hours, and 21 minutes)
+
+Downtime period: 1 hour and 21 minutes
+
+**Amazon AWS**
+
+No information is available for Amazon AWS in the provided text.
+
+However, I can provide a summary of the overall outage:
+
+The outage started on December 6, 2023, at 14:47 US/Pacific Time (UTC-8) and was resolved on December 6, 2023, at 18:08 US/Pacific Time (UTC-8).
+
+Services impacted:
+Tokyo (asia-northeast1)
+Seoul (asia-northeast3)
+Singapore (asia-southeast1)
+Sydney (australia-southeast1)
+Belgium (europe-west1)
+London (europe-west2)
+Frankfurt (europe-west3)
+Milan (europe-west8)
+Montréal (northamerica-northeast1)
+São Paulo (southamerica-east1)
+Iowa (us-central1)
+South Carolina (us-east1)
+Northern Virginia (us-east4)
+Oregon (us-west1)
+
+Services that were unable to be used:
+Create new DPMS instances
+Update existing DPMS instances involving scaling configuration or tier updates
+Perform full Restore of existing backups
+Import metadata into DPMS Create Dataproc Metastore Federation APIs
+
+Root cause: The root cause of the outage was not specified.
+
+Duration: 1 hour and 21 minutes (0 days, 1 hours, and 21 minutes)
+
+Downtime period: 1 hour and 21 minutes

@@ -1,23 +1,28 @@
-I can only provide information on Amazon AWS as per the given context.
+Here is the response to your query:
 
-Here is the summary of the outage:
+**Summary of Outages**
 
-**Outage Details:**
+The outage occurred in the Tokyo (AP-NORTHEAST-1) Region on September 2, 2021.
 
-* **Cloud Provider:** Amazon AWS
-* **Services Impacted:** Direct Connect service
-* **Regions Affected:** Tokyo (AP-NORTHEAST-1) Region
-* **Availability Zones:** Not specified
-* **Root Cause:** Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region
+**Cloud Provider Impacted Services and Regions**
 
-**Outage Timeline:**
+* Amazon AWS:
+	+ Service: Direct Connect
+	+ Region: Tokyo (AP-NORTHEAST-1)
+	+ Availability Zones: Not specified
+	+ Duration of Outage: 5 hours and 12 minutes
+	+ Downtime Period: 7:30 AM JST to 1:42 PM JST
+* No other cloud providers were impacted.
 
-* **Start Time:** September 2, 2021 at 7:30 AM JST
-* **Duration:** Approximately 5 hours and 12 minutes (from 7:30 AM JST to 12:42 PM JST)
-* **Downtime Period:** The outage started with intermittent connectivity issues and elevated packet loss for Direct Connect customers connecting to the Tokyo Region. Customers started seeing recovery by 12:30 PM JST, and by 1:42 PM JST, all other forms of network connectivity were fully resolved.
+**Detailed Breakdown of Outages**
 
-**Resolution Time:**
+Here is the detailed breakdown of the outage for each service in Amazon AWS:
 
-* **Resolved Time:** September 2, 2021 at 1:42 PM JST
+1. Direct Connect:
+	+ Date Impacted: September 2, 2021
+	+ Time Impacted: 7:30 AM JST to 1:42 PM JST
+	+ Duration: 5 hours and 12 minutes
+	+ Root Cause: Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
+	+ Downtime Period: Customers started seeing recovery by 12:30 PM JST, but connectivity issues were not fully resolved until 1:42 PM JST.
 
-Note that the outage was resolved within a short period, with customers seeing recovery by 12:30 PM JST and full resolution by 1:42 PM JST.
+Note: The text does not provide information on specific Availability Zones impacted or other services affected.

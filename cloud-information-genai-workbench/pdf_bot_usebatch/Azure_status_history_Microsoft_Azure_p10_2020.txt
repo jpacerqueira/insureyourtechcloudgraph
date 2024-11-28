@@ -1,23 +1,85 @@
-Based on the provided text, I will resume the outages for Microsoft Azure.
+Here is the response to your query:
 
-**Outage 1:**
-- Start Time: Between 09:24 and 11:15 UTC on July 01, 2020
-- End Time: Not specified
-- Impacted Services:
-  - Azure SQL Database
-  - Azure SQL Data Warehouse/Synapse Analytics
-  - Azure Database for MySQL
-  - Azure Database for PostgreSQL
-  - Azure Database for MariaDB in Japan East region
-- Root Cause: Connections to Azure SQL Database and related data services go through a load-balanced set of front-end nodes (Gateways) that provide directory lookup services and reroute incoming connections to the intended backend nodes hosting the database.
-- Duration: Not specified, but it is mentioned that the incident was fully mitigated after applying a configuration update.
+**Outages Summary**
 
-**Outage 2:**
-- Start Time: Between 02:26 am and 03:40 am UTC on July 04, 2020
-- End Time: Not specified
-- Impacted Services:
-  - Azure DevOps in multiple regions
-- Root Cause: Preliminary investigation identified an inadvertent error with a configuration change in the backend service which caused the outage.
-- Duration: Not specified, but it is mentioned that the issue was fully mitigated after applying a configuration update.
+The following cloud providers were impacted: Microsoft Azure, Amazon AWS was not mentioned in the text.
 
-Note: The root cause of the second outage is not explicitly stated in the provided text. However, it is mentioned that the decommissioning of a legacy DNS solution inadvertently caused some data streams for Azure DNS recursive resolver service to become out of sync with the resolver state.
+**Azure Outage Details**
+
+1. **SQL Database**
+	* Region: Japan East
+	* Availability Zone: Not specified
+	* Time of outage: Between 09:24 and 11:15 UTC on July 01, 2020
+	* Duration: 2 hours and 51 minutes
+	* Root cause: Connections to Azure SQL Database went through a load-balanced set of front-end nodes (Gateways)
+	* Downtime period: Not specified
+	* Marked as resolved: Not specified
+
+2. **SQL Data Warehouse/Synapse Analytics**
+	* Region: Japan East
+	* Availability Zone: Not specified
+	* Time of outage: Between 09:24 and 11:15 UTC on July 01, 2020
+	* Duration: 2 hours and 51 minutes
+	* Root cause: Connections to Azure SQL Database went through a load-balanced set of front-end nodes (Gateways)
+	* Downtime period: Not specified
+	* Marked as resolved: Not specified
+
+3. **Azure Database for MySQL**
+	* Region: Japan East
+	* Availability Zone: Not specified
+	* Time of outage: Between 09:24 and 11:15 UTC on July 01, 2020
+	* Duration: 2 hours and 51 minutes
+	* Root cause: Connections to Azure SQL Database went through a load-balanced set of front-end nodes (Gateways)
+	* Downtime period: Not specified
+	* Marked as resolved: Not specified
+
+4. **Azure Database for PostgreSQL**
+	* Region: Japan East
+	* Availability Zone: Not specified
+	* Time of outage: Between 09:24 and 11:15 UTC on July 01, 2020
+	* Duration: 2 hours and 51 minutes
+	* Root cause: Connections to Azure SQL Database went through a load-balanced set of front-end nodes (Gateways)
+	* Downtime period: Not specified
+	* Marked as resolved: Not specified
+
+5. **Azure Database for MariaDB**
+	* Region: Japan East
+	* Availability Zone: Not specified
+	* Time of outage: Between 09:24 and 11:15 UTC on July 01, 2020
+	* Duration: 2 hours and 51 minutes
+	* Root cause: Connections to Azure SQL Database went through a load-balanced set of front-end nodes (Gateways)
+	* Downtime period: Not specified
+	* Marked as resolved: Not specified
+
+6. **DevOps**
+	* Region: Multiple regions
+	* Availability Zone: Not specified
+	* Time of outage: Between 02:26 am and 03:40 UTC on July 04, 2020
+	* Duration: 1 hour and 14 minutes
+	* Root cause: An inadvertent error with a configuration change in the backend service caused the outage.
+	* Downtime period: Not specified
+	* Marked as resolved: Not specified
+
+7. **DNS Resolver Service**
+	* Region: Global
+	* Availability Zone: Not specified
+	* Time of outage: Between 02:26 am and 03:40 UTC on July 04, 2020
+	* Duration: 1 hour and 14 minutes
+	* Root cause: The decommissioning of a legacy DNS solution inadvertently caused some data streams for Azure DNS recursive resolver service to become out of sync with the resolver state.
+	* Downtime period: Not specified
+	* Marked as resolved: Not specified
+
+**Overall Summary**
+
+The following cloud providers were impacted:
+
+- Microsoft Azure
+- Amazon AWS was not mentioned in the text.
+
+The services that got impacted were SQL Database, SQL Data Warehouse/Synapse Analytics, Azure Database for MySQL, Azure Database for PostgreSQL, and Azure Database for MariaDB. The regions affected were Japan East.
+
+The outages occurred on July 01, 2020, and July 04, 2020. The duration of the outages was between 2 hours and 51 minutes and 1 hour and 14 minutes respectively.
+
+The root cause of the outages was related to connections going through a load-balanced set of front-end nodes (Gateways) for SQL Database and DevOps services, and an inadvertent error with a configuration change in the backend service caused the outage. The decommissioning of a legacy DNS solution inadvertently caused some data streams for Azure DNS recursive resolver service to become out of sync with the resolver state.
+
+The downtime period was not specified for any of the affected services.

@@ -1,0 +1,34 @@
+I can provide you with the information you requested. However, I need to clarify that some of the cloud providers mentioned in your original text (e.g., Snowflake, Databricks, MongoDB) are not explicitly mentioned as being affected by the outage.
+
+Assuming the outage only affected Google Cloud Provider, here is the information you requested:
+
+**Outage Details**
+
+The outage began on April 19, 2024, at 12:39 PDT and ended on April 19, 2024, at 15:03 PDT. The incident lasted for approximately 1 hour and 24 minutes.
+
+**Affected Services and Regions**
+
+* Google Distributed Cloud Edge customers may have experienced failures with creation, update, and deletion of Local Control Plane clusters and Nodepool lifecycle operations.
+	+ Affected Locations:
+		- Hong Kong (asia-east2)
+		- Mumbai (asia-south1)
+		- São Paulo (southamerica-east1)
+		- Los Angeles (us-west2)
+
+**Root Cause**
+
+The root cause of the outage is not explicitly mentioned in the text.
+
+**Summary of Outage**
+
+The outage affected Google Distributed Cloud Edge customers, causing failures with creation, update, and deletion of Local Control Plane clusters and Nodepool lifecycle operations. The outage impacted four regions: Hong Kong (asia-east2), Mumbai (asia-south1), São Paulo (southamerica-east1), and Los Angeles (us-west2).
+
+**Table of Outage Details**
+
+| Service | Region | Duration | Start Time | End Time | Downtime Period |
+| --- | --- | --- | --- | --- | --- |
+| Google Distributed Cloud Edge | asia-east2, asia-south1, southamerica-east1, us-west2 | 1 hour 24 minutes | April 19, 2024 12:39 PDT | April 19, 2024 15:03 PDT | 1 day 0 hours |
+
+**Overall Summary**
+
+The outage affected Google Distributed Cloud Edge customers in four regions: Hong Kong (asia-east2), Mumbai (asia-south1), São Paulo (southamerica-east1), and Los Angeles (us-west2). The outage lasted for approximately 1 hour and 24 minutes.

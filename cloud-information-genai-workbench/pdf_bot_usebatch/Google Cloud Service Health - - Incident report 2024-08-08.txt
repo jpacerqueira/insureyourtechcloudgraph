@@ -1,0 +1,40 @@
+I can only apply the query to Google Cloud Service Health, as Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare are not mentioned in the text.
+
+Here is the output:
+
+**Google Cloud Service Health Outages**
+
+**Incident Details**
+
+* Incident began at 2024-08-07 23:55 US/Pacific
+* Incident ended at 2024-08-08 17:18 US/Pacific
+* Duration: 1 day, 22 hours, and 23 minutes
+
+**Affected Services and Regions**
+
+* Vertex AI Online Prediction in us-east5 region
+
+**Root Cause of Outage**
+
+* Elevated 500 errors for Claude Sonnet 3.5 and Opus models
+
+**Downtime Period**
+
+* No specific downtime period mentioned
+
+**Resolution Date**
+
+* Incident ended at 2024-08-08 17:18 US/Pacific
+
+Here is the output in a table format:
+
+| Service | Region | Duration | Root Cause | Resolution Date |
+| --- | --- | --- | --- | --- |
+| Vertex AI Online Prediction | us-east5 | 1 day, 22 hours, and 23 minutes | Elevated 500 errors for Claude Sonnet 3.5 and Opus models | 2024-08-08 17:18 US/Pacific |
+
+**Summary of Google Cloud Service Health Outage**
+
+* Incident began on August 7, 2024, at 23:55 US/Pacific
+* Incident ended on August 8, 2024, at 17:18 US/Pacific
+* Vertex AI Online Prediction in us-east5 region was impacted for approximately 1 day, 22 hours, and 23 minutes due to elevated 500 errors for Claude Sonnet 3.5 and Opus models.
+* The incident was resolved on August 8, 2024, at 17:18 US/Pacific.

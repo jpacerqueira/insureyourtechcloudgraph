@@ -1,0 +1,73 @@
+I can only provide information on Amazon AWS as per the given text, since other cloud providers like Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare are not mentioned.
+
+Here is the breakdown of outages for each service in Amazon AWS:
+
+**Amazon Kinesis Data Streams**
+
+* Outage started: June 25, 2024, 7:20:00 PM (PDT)
+* Duration: 26 hours
+* Downtime period: 5:34 PM - 7:23 PM (PDT) on June 25, 2024
+* Root cause: Increased Error Rates
+* Affected services: Amazon Kinesis Data Streams (N. Virginia)
+* Regions: N. Virginia (us-east-1)
+
+**Amazon AppSync**
+
+* No outage information available in the given text.
+
+**AWS Cloud Map**
+
+* No outage information available in the given text.
+
+**AWS Fargate**
+
+* No outage information available in the given text.
+
+**AWS IoT Core**
+
+* No outage information available in the given text.
+
+**Amazon AppStream 2.0**
+
+* No outage information available in the given text.
+
+**Amazon CloudWatch**
+
+* No outage information available in the given text.
+
+**Amazon Elastic Container Service**
+
+* No outage information available in the given text.
+
+**Amazon Elastic Load Balancing**
+
+* No outage information available in the given text.
+
+Here is a summary of the outages:
+
+**Summary of Outages:**
+
+There was one outage affecting Amazon Kinesis Data Streams in N. Virginia (us-east-1) region, starting on June 25, 2024, at 7:20:00 PM (PDT), and resolving at 7:23 PM (PDT). The outage lasted for 26 hours.
+
+**Summary of Cloud Providers Impacted Services and Regions:**
+
+Only Amazon AWS was impacted by the outages. The affected services were:
+
+* Amazon Kinesis Data Streams
+* Amazon AppStream 2.0
+* AWS Cloud Map
+* AWS Fargate
+* AWS IoT Core
+* Amazon CloudWatch
+* Amazon Elastic Container Service
+* Amazon Elastic Load Balancing
+
+The regions affected were:
+
+* N. Virginia (us-east-1)
+
+**Summary of Outage Duration:**
+
+The outage lasted for 26 hours, which is equivalent to 0 days, 2 hours, and 24 minutes.
+
+Note that the text does not provide information on the root cause of the outages or the services impacted by other cloud providers.

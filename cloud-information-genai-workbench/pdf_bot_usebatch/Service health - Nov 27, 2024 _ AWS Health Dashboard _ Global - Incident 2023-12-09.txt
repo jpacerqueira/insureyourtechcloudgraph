@@ -1,0 +1,56 @@
+I can provide you with the requested information. However, I need to clarify that some of the cloud providers mentioned in your query (Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) are not explicitly mentioned in the provided text.
+
+Based on the text, the following cloud providers are identified: Amazon AWS. I will provide information only for this provider.
+
+Here is the breakdown of outages for each service impacted by Amazon AWS:
+
+**Amazon DynamoDB (Oregon)**
+
+* Outage started: December 9, 2023, 7:17:00 PM PST
+* Duration: 1 hour and 12 minutes
+* Root cause: Increased Error Rates
+* Downtime period: 8:29 PM PST - 8:41 PM PST (resolved)
+* Services impacted: Amazon DynamoDB
+
+**Amazon Elastic Compute Cloud**
+
+* Outage started: November 25, 2024, 4:31:00 AM PST
+* Duration: 10 minutes
+* Root cause: Increased API error rates for mutatable VPC calls
+* Downtime period: 4:35:06 AM PST - 4:45:06 AM PST (resolved)
+* Services impacted: Amazon Elastic Compute Cloud
+
+**AWS Billing Console**
+
+* Outage started: November 6, 2024, 3:42:30 AM PST
+* Duration: 32 minutes
+* Root cause: Increased Errors Performing Payments
+* Downtime period: 4:14:32 AM PST - 4:46:32 AM PST (resolved)
+* Services impacted: AWS Billing Console
+
+**AWS Partner Central**
+
+* Outage started: October 29, 2024, 4:13:56 AM PDT
+* Duration: 1 hour and 12 minutes
+* Root cause: Increased Error Rates
+* Downtime period: 5:08:25 AM PDT - 6:20:25 AM PDT (resolved)
+* Services impacted: AWS Partner Central
+
+**AWS QuickSight**
+
+* Outage started: October 25, 2024, 
+* Duration: Not specified
+* Root cause: Increased Login Errors
+* Downtime period: Not specified
+* Services impacted: AWS QuickSight
+
+Here is the summary of outages for Amazon AWS:
+
+| Service | Region | Availability Zone | Outage Started | Duration | Root Cause | Downtime Period | Resolved |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| DynamoDB | Oregon |  | December 9, 2023, 7:17:00 PM PST | 1 hour and 12 minutes | Increased Error Rates | 8:29 PM PST - 8:41 PM PST | Yes |
+| EC2 | us-west-2 |  | November 25, 2024, 4:31:00 AM PST | 10 minutes | Increased API error rates for mutatable VPC calls | 4:35:06 AM PST - 4:45:06 AM PST | Yes |
+| Billing Console |  |  | November 6, 2024, 3:42:30 AM PST | 32 minutes | Increased Errors Performing Payments | 4:14:32 AM PST - 4:46:32 AM PST | Yes |
+| Partner Central |  |  | October 29, 2024, 4:13:56 AM PDT | 1 hour and 12 minutes | Increased Error Rates | 5:08:25 AM PDT - 6:20:25 AM PDT | Yes |
+
+Note that the duration of outages for AWS QuickSight is not specified in the provided text.

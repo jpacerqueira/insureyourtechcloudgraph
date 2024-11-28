@@ -1,0 +1,65 @@
+I can only provide information on Amazon AWS as per the given context, since other cloud providers like Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare are not mentioned in the text.
+
+Here is the breakdown of outages for each service impacted by Amazon AWS:
+
+**Amazon AWS Outages**
+
+1. **AWS Amplify**
+	* Start Time: December 17, 2023, 6:57:08 PM PST
+	* Last Update Time: December 17, 2023, 7:52:00 PM PST
+	* Affected Regions: Global
+	* Affected Services: AWS Amplify Admin, AWS Cloud9, AWS CloudFormation, AWS Lambda, AWS Marketplace, Amazon Elastic File System, Amazon Elastic Kubernetes Service, Amazon Elastic Load Balancing
+	* Root Cause: IAM Propagation delays
+	* Duration: 95 minutes (1 hour 35 minutes)
+	* Downtime Period: December 17, 2023, 6:57:08 PM PST - December 17, 2023, 8:32:00 PM PST
+	* Marked as Resolved: December 17, 2023, 7:52:00 PM PST
+
+2. **Amazon Elastic Compute Cloud**
+	* Start Time: Not specified
+	* Last Update Time: Not specified
+	* Affected Regions: us-west-2
+	* Affected Services: Not specified
+	* Root Cause: Not specified
+	* Duration: Not specified
+	* Downtime Period: Not specified
+	* Marked as Resolved: Not specified
+
+3. **AWS Billing Console**
+	* Start Time: November 6, 2024, 3:42:30 AM PST
+	* Last Update Time: November 6, 2024, 4:14:32 AM PST
+	* Affected Regions: Global
+	* Affected Services: AWS Billing Console
+	* Root Cause: Not specified
+	* Duration: 32 minutes (0 hours 32 minutes)
+	* Downtime Period: November 6, 2024, 3:42:30 AM PST - November 6, 2024, 4:14:32 AM PST
+	* Marked as Resolved: Not specified
+
+4. **AWS Partner Central**
+	* Start Time: October 29, 2024, 4:13:56 AM PDT
+	* Last Update Time: October 29, 2024, 5:08:25 AM PDT
+	* Affected Regions: Global
+	* Affected Services: AWS Partner Central
+	* Root Cause: Not specified
+	* Duration: 55 minutes (0 hours 55 minutes)
+	* Downtime Period: October 29, 2024, 4:13:56 AM PDT - October 29, 2024, 5:08:25 AM PDT
+	* Marked as Resolved: Not specified
+
+5. **AWS QuickSight**
+	* Start Time: October 25, 2024, Not specified
+	* Last Update Time: October 25, 2024, Not specified
+	* Affected Regions: us-east-1
+	* Affected Services: AWS QuickSight
+	* Root Cause: Not specified
+	* Duration: Not specified
+	* Downtime Period: Not specified
+	* Marked as Resolved: Not specified
+
+**Summary of Amazon AWS Outages**
+
+There were four outages on Amazon AWS, affecting various services and regions. The longest outage was the IAM Propagation delays outage, which lasted for 95 minutes (1 hour 35 minutes). The shortest outage was the AWS Billing Console outage, which lasted for 32 minutes (0 hours 32 minutes).
+
+**Overall Summary of Cloud Providers Impacted Services and Regions**
+
+Only Amazon AWS is mentioned in the text. The outages affected various services across different regions.
+
+Note: I couldn't provide information on other cloud providers as they were not mentioned in the text.

@@ -1,0 +1,50 @@
+Here is the breakdown of the outage for each cloud provider:
+
+**Google Cloud**
+
+The incident began on August 2, 2024, at 09:30 PDT and ended on August 2, 2024, at 17:36 PDT.
+
+Affected services:
+- AutoML Translation
+- Cloud Translation
+
+Regions impacted:
+- Netherlands (europe-west4)
+- Iowa (us-central1)
+
+Root cause of the outage: High latency and resource exhausted failures in AutoML translations.
+
+Duration of outage:
+- Days: 8
+- Hours: 6
+- Minutes: 36
+
+Downtime period: The engineering team successfully concluded validations and confirmed that the issue had been mitigated on August 2, 2024, at 17:36 PDT.
+
+**Summary for Google Cloud**
+
+Google Cloud was impacted by an outage in AutoML Translation and Cloud Translation services. The incident started on August 2, 2024, at 09:30 PDT and ended on August 2, 2024, at 17:36 PDT. The root cause of the outage was high latency and resource exhausted failures.
+
+**Output Table for Google Cloud**
+
+| Service | Region | Duration of Outage | Downtime Period |
+| --- | --- | --- | --- |
+| AutoML Translation | europe-west4 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
+| AutoML Translation | us-central1 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
+| Cloud Translation | europe-west4 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
+| Cloud Translation | us-central1 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
+
+**Summary for Google Cloud**
+
+Google Cloud was impacted by an outage in AutoML Translation and Cloud Translation services. The incident started on August 2, 2024, at 09:30 PDT and ended on August 2, 2024, at 17:36 PDT. The root cause of the outage was high latency and resource exhausted failures.
+
+**Output Table for Google Cloud**
+
+| Service | Region | Duration of Outage | Downtime Period |
+| --- | --- | --- | --- |
+| AutoML Translation | europe-west4 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
+| AutoML Translation | us-central1 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
+| Cloud Translation | europe-west4 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
+| Cloud Translation | us-central1 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
+
+Note that the text does not provide information on other cloud providers such as Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

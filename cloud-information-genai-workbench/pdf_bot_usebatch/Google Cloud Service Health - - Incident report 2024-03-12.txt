@@ -1,0 +1,56 @@
+I can provide you with the requested information based on the provided text.
+
+**Outage Information**
+
+The outage affected Google Cloud Platform (GCP) only, specifically Apigee Sense.
+
+**Incident Details**
+
+* **Duration**: 5 hours and 20 minutes
+* **Start Time**: Tuesday, March 12, 2024, at 13:33 US/Pacific Time
+* **End Time**: Tuesday, March 12, 2024, at 17:13 US/Pacific Time
+
+**Affected Services**
+
+* Apigee Sense
+* Apigee Sense API
+
+**Regions and Availability Zones Affected**
+
+* asia-east1 (Taiwan)
+* asia-east2 (Hong Kong)
+* asia-northeast1 (Tokyo)
+* asia-northeast2 (Osaka)
+* asia-northeast3 (Seoul)
+* asia-south1 (Mumbai)
+* asia-south2 (Delhi)
+* us-west3 (Salt Lake City)
+* us-west4 (Las Vegas)
+
+**Root Cause**
+
+The root cause of the outage was not explicitly stated in the text.
+
+**Workaround**
+
+None
+
+**Summary**
+
+Google Cloud Platform's Apigee Sense experienced a 5-hour and 20-minute outage, affecting multiple regions and availability zones. The outage started on Tuesday, March 12, 2024, at 13:33 US/Pacific Time and was resolved at 17:13 US/Pacific Time.
+
+**Table Output**
+
+| Service | Region/AZ | Duration | Start Time | End Time |
+| --- | --- | --- | --- | --- |
+| Apigee Sense | asia-east1 (Taiwan) | - | 2024-03-12 13:33 | 2024-03-12 17:13 |
+| Apigee Sense API | asia-east2 (Hong Kong) | - | 2024-03-12 10:00 | 2024-03-12 15:00 |
+| Apigee Sense | asia-northeast1 (Tokyo) | - | 2024-03-12 13:33 | 2024-03-12 17:13 |
+| Apigee Sense | asia-northeast2 (Osaka) | - | 2024-03-12 13:33 | 2024-03-12 17:13 |
+| Apigee Sense | asia-northeast3 (Seoul) | - | 2024-03-12 13:33 | 2024-03-12 17:13 |
+| Apigee Sense | asia-south1 (Mumbai) | - | 2024-03-12 13:33 | 2024-03-12 17:13 |
+| Apigee Sense | asia-south2 (Delhi) | - | 2024-03-12 13:33 | 2024-03-12 17:13 |
+| Apigee Sense API | us-west3 (Salt Lake City) | - | 2024-03-12 10:00 | 2024-03-12 15:00 |
+| Apigee Sense API | us-west4 (Las Vegas) | - | 2024-03-12 10:00 | 2024-03-12 15:00 |
+
+Note: The table output is limited to the services and regions mentioned in the original text.

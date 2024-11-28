@@ -1,0 +1,75 @@
+I can only provide information on the Google Cloud Platform (GCP) services that were impacted during the outage, as per the text provided.
+
+Here is the breakdown of the outage for each GCP service:
+
+**Cloud Services Impacted:**
+
+1. Artifact Registry
+2. Certificate Authority Service
+3. Cloud Build
+4. Cloud Healthcare
+5. Cloud Key Management Service
+6. Cloud Load Balancing
+7. Cloud Memorystore
+8. Cloud Run
+9. Cloud Spanner
+10. Cloud SQL
+11. Cloud Workflows
+12. Data Catalog
+13. Dataproc Metastore
+14. Dialogflow CX
+15. Eventarc
+16. Google Cloud SQL
+17. Google Kubernetes Engine
+18. GKE fleet management
+19. Document AI Warehouse
+20. Multiple Google Cloud Products in us-west1 region
+
+**Root Cause:**
+The root cause of the outage was elevated latencies and errors, specifically due to UNAVAILABLE or DEADLINE_EXCEEDED for control and crypto operations.
+
+**Duration:**
+The incident started on February 14, 2024, at 09:45 AM US/Pacific Time and ended on February 14, 2024, at 12:52 PM US/Pacific Time. The outage lasted for 2 hours and 40 minutes.
+
+**Affected Regions and Availability Zones:**
+Only the us-west1 region was affected.
+
+**Downtime Period:**
+The downtime period started at 10:35 AM US/Pacific Time and ended at 12:10 PM US/Pacific Time, with some Persistent Disk deletion operations stuck in the us-west1 region.
+
+Here is a summary of the outage:
+
+**Summary:**
+
+* Cloud Provider: Google Cloud Platform (GCP)
+* Services Impacted: Multiple GCP services in the us-west1 region
+* Root Cause: Elevated latencies and errors due to UNAVAILABLE or DEADLINE_EXCEEDED for control and crypto operations
+* Duration: 2 hours and 40 minutes
+* Affected Regions: us-west1
+* Downtime Period: 1 hour and 35 minutes
+
+Here is the outage information in a table format:
+
+| Service | Region | Availability Zone | Start Time | End Time | Duration | Downtime Period |
+| --- | --- | --- | --- | --- | --- | --- |
+| Artifact Registry | us-west1 | - | - | - | - | - |
+| Certificate Authority Service | us-west1 | - | - | - | - | - |
+| Cloud Build | us-west1 | - | - | - | - | - |
+| Cloud Healthcare | us-west1 | - | - | - | - | - |
+| Cloud Key Management Service | us-west1 | - | - | - | - | - |
+| Cloud Load Balancing | us-west1 | - | - | - | - | - |
+| Cloud Memorystore | us-west1 | - | - | - | - | - |
+| Cloud Run | us-west1 | - | - | - | - | - |
+| Cloud Spanner | us-west1 | - | - | - | - | - |
+| Cloud SQL | us-west1 | - | - | - | - | - |
+| Cloud Workflows | us-west1 | - | - | - | - | - |
+| Data Catalog | us-west1 | - | - | - | - | - |
+| Dataproc Metastore | us-west1 | - | - | - | - | - |
+| Dialogflow CX | us-west1 | - | - | - | - | - |
+| Eventarc | us-west1 | - | - | - | - | - |
+| Google Cloud SQL | us-west1 | - | - | - | - | - |
+| Google Kubernetes Engine | us-west1 | - | - | - | - | - |
+| GKE fleet management | us-west1 | - | - | - | - | - |
+| Document AI Warehouse | us-west1 | - | - | - | - | - |
+
+Note: The table only includes the services that were explicitly mentioned in the text as being impacted during the outage.

@@ -1,26 +1,56 @@
-Based on the provided text, I can only identify outages related to Microsoft Azure. Here is the information about the outage:
+After analyzing the provided text, I have identified the following outages for the specified cloud providers:
 
-**Outage Details:**
+**Microsoft Azure**
 
-* **Incident:** Multiple services across Microsoft including Azure, Microsoft 365 failed due to management requests.
-* **Duration:** The outage started at 00:56 UTC on November 20, 2019, and was resolved by deploying a platform hotfix to mitigate the issue. However, it is not clear when exactly the outage ended.
-* **Services Impacted:** Azure services
-* **Regions and Availability Zones:** Not specified in the text.
-* **Root Cause:** The root cause of the outage is not explicitly stated in the provided text, but it is mentioned that engineers deployed a platform hotfix to mitigate the issue.
+* Service: CDN
+* Region/Availability Zone: Not specified
+* Impact Date: Between 17:24 and 18:48 UTC on December 11, 2019
+* Duration: 1 hour 24 minutes
+* Root Cause: Azure CDN providers use staged deployment processes to deploy configuration changes across the network.
+* Downtime Period: Yes
+* Resolved Date: Not specified
 
-**Summary of Outage:**
+**Microsoft Azure**
 
-The outage occurred on November 20, 2019, and lasted for an unknown duration. It affected multiple services across Microsoft, including Azure and Microsoft 365. The root cause of the outage was not explicitly stated in the provided text, but a platform hotfix was deployed to mitigate the issue.
+* Service: Various services (including Azure, Microsoft 365)
+* Region/Availability Zone: Not specified
+* Impact Date: Between 00:56 and 03:40 UTC on November 20, 2019
+* Duration: 2 hours 44 minutes
+* Root Cause: Management requests failed.
+* Downtime Period: Yes
+* Resolved Date: Engineer deployed a platform hotfix to mitigate the issue.
 
-**Other Outages:**
+**Microsoft Azure**
 
-There were two other outages mentioned in the text:
+* Service: Various services (including Azure, Microsoft 365)
+* Region/Availability Zone: Not specified
+* Impact Date: Between 15:01 and 16:30 UTC on January 20, 2020
+* Duration: 1 hour 29 minutes
+* Root Cause: Multiple "Edge Sites" on the network greatly enhanced the connectivity experience for Microsoft users in certain regions.
+* Downtime Period: Yes
+* Resolved Date: Not specified
 
-* **Outage 1:** Between 17:24 and 18:48 UTC on December 11, 2019, clients of customers attempting to reach Azure CDN from Verizon endpoints would intermittently receive HTTP (5XX) error or connection failures instead of expected content.
-	+ Duration: Approximately 2 hours and 24 minutes
-	+ Root Cause: Azure CDN providers use staged deployment processes to deploy configuration changes across the network.
-* **Outage 2:** Between 09:45 and 16:26 UTC on December 12, 2019, a subset of customers in North America may have experienced degraded performance, network drops, or timeouts when accessing Azure resources. Customers may also have experienced downstream impact to dependent Azure services.
-	+ Duration: Approximately 6 hours and 41 minutes
-	+ Root Cause: Engineers identified a routing protocol metric change within an ISP backbone network, which resulted in network congestion.
+**No outages found for Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare.**
 
-Note that the other cloud providers mentioned in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) were not included in this response as they were not identified as being affected by outages.
+Here is the output table:
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Azure | CDN |  | Between 17:24 and 18:48 UTC on December 11, 2019 | 1 hour 24 minutes | Staged deployment processes | Yes | Not specified |
+| Azure | Various services (including Azure, Microsoft 365) |  | Between 00:56 and 03:40 UTC on November 20, 2019 | 2 hours 44 minutes | Management requests failed | Yes | Engineer deployed a platform hotfix to mitigate the issue. |
+| Azure | Various services (including Azure, Microsoft 365) |  | Between 15:01 and 16:30 UTC on January 20, 2020 | 1 hour 29 minutes | Multiple "Edge Sites" on the network greatly enhanced the connectivity experience for Microsoft users in certain regions | Yes | Not specified |
+
+Overall Summary:
+
+* Cloud Providers impacted: Microsoft Azure
+* Services impacted: CDN, Various services (including Azure, Microsoft 365)
+* Regions/Availability Zones impacted: Not specified
+* Impact dates: December 11, 2019, November 20, 2019, January 20, 2020
+* Duration of outages:
+	+ December 11, 2019: 1 hour 24 minutes
+	+ November 20, 2019: 2 hours 44 minutes
+	+ January 20, 2020: 1 hour 29 minutes
+* Root cause of outages:
+	+ December 11, 2019: Staged deployment processes
+	+ November 20, 2019: Management requests failed
+	+ January 20, 2020: Multiple "Edge Sites" on the network greatly enhanced the connectivity experience for Microsoft users in certain regions

@@ -1,18 +1,57 @@
-Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
+Here is the response to your query:
 
-Here is the information about the outage:
+**Outages Summary**
+
+The following cloud providers were impacted: Microsoft Azure, Amazon AWS was not mentioned in the text but A T&T was mentioned which is a service provided by AT&T (a company that uses AWS) however it was not specified if it was an AWS service or a service of AT&T. 
+
+Microsoft Azure and A T&T experienced outages.
 
 **Outage Details**
 
-* **Cloud Provider:** Microsoft Azure
-* **Region/Availability Zone:** Not specified
-* **Services Impacted:** Azure SQL Database and Managed Instance
-* **Root Cause of Outage:** Storage availability failures
-* **Duration of Outage:**
-	+ Total duration: 1 hour
-	+ Duration in days, hours, and minutes: 0 days, 1 hour, 0 minutes
-* **Downtime Period:** The geo-secondar y was elevated as the new primary, and the failover group (FOG) endpoint was updated to point to the new primary.
-* **Start Time of Outage:** Not specified
-* **Resolution Time:** Within one minute of SQL unavailability, investigation and mitigation workstreams were established, and customers were advised to consider putting in action their disaster recovery (DR) strategies.
+**Azure SQL Database and Managed Instance**
 
-Note that there is no information about other cloud providers such as Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare.
+* Outage started: 11:45 UTC on July 30, 2024
+* Duration: 8 hours and 58 minutes
+* Root cause: Storage availability failures in various control and data plane clusters
+* Services impacted: Azure SQL DB and Azure SQL Managed Instance customers in the region
+* Downtime period: All unhealthy nodes were detected within one minute of SQL unavailability, and investigation and mitigation workstreams were established
+
+**A T&T**
+
+* Outage started: 11:46 UTC on September 12, 2024
+* Duration: 28 minutes
+* Root cause: Automated systems in the Microsoft network shifted traffic away from A T&T, resulting in issues accessing services
+* Services impacted: A T T customers connecting to Microsoft services
+* Downtime period: Traffic was shifted away at 13:01 UTC, and the issue was resolved after A T T reverted a change at 13:14 UTC
+
+**Azure Front Door (AFD) and Azure Content Delivery Network (CDN)**
+
+* Outage started: Between 11:45 and 13:58 UTC on July 30, 2024
+* Duration: Approximately 2 hours and 13 minutes
+* Root cause: Intermittent connection errors, timeouts, or latency spikes while connecting to AFD and CDN
+* Services impacted: Microsoft services leveraging AFD and CDN
+* Downtime period: Customers experienced intermittent connection errors, timeouts, or latency spikes
+
+**AT&T**
+
+* Outage started: 11:46 UTC on September 12, 2024
+* Duration: 28 minutes
+* Root cause: Automated systems in the Microsoft network shifted traffic away from A T&T, resulting in issues accessing services
+* Services impacted: A T T customers connecting to Microsoft services
+* Downtime period: Traffic was shifted away at 13:01 UTC, and the issue was resolved after A T T reverted a change at 13:14 UTC
+
+**Azure SQL Database and Managed Instance**
+
+* Outage started: Between 11:45 and 13:58 UTC on July 30, 2024
+* Duration: Approximately 2 hours and 13 minutes
+* Root cause: Storage availability failures in various control and data plane clusters
+* Services impacted: Azure SQL DB and Azure SQL Managed Instance customers in the region
+* Downtime period: All unhealthy nodes were detected within one minute of SQL unavailability, and investigation and mitigation workstreams were established
+
+**AT&T**
+
+* Outage started: 11:46 UTC on September 12, 2024
+* Duration: 28 minutes
+* Root cause: Automated systems in the Microsoft network shifted traffic away from A T&T, resulting in issues accessing services
+* Services impacted: A T T customers connecting to Microsoft services
+* Downtime period: Traffic was shifted away at 13:01 UTC, and the issue was resolved after A T T reverted a change at 13:14 UTC

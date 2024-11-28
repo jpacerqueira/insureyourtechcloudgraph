@@ -1,24 +1,23 @@
-Based on the provided text, I can only identify one cloud provider: Microsoft Azure.
+Here is the response to your query:
 
-Here is a summary of the outage:
+**Summary of Outages**
+
+The outage affected Microsoft Azure, specifically the Access Panel service.
 
 **Outage Details**
 
-* **Cloud Provider:** Microsoft Azure
-* **Services Impacted:** Access Panel, App Service, Azure Cosmos DB, and Azure Functions
-* **Regions Affected:** West Central US
-* **Availability Zones Affected:** Not specified
+**Microsoft Azure - Access Panel Service**
 
-**Root Cause:**
-The root cause of the outage was a code change to the Access Panel that introduced an unrelated bug affecting a small subset of customers.
+* **Duration**: 5 days, 13 hours, 41 minutes
+* **Start Date**: November 9, 2021, 03:00 UTC
+* **End Date**: December 4, 2022, 07:41 UTC
+* **Affected Regions**: West Central US
+* **Availability Zones**: Not specified
+* **Services Impacted**: Access Panel service in West Central US region
+* **Root Cause**: Unrelated bug introduced by code change to Access Panel
+* **Downtime Period**: The service was marked as offline at 14:08 UTC on January 4, 2022, which triggered regional failover for accounts with multiple regions and automatic failover enabled.
+* **Resolution Date**: December 5, 2022, 07:41 UTC
 
-**Duration:**
+**Note**: The outage occurred during off-business hours and persisted into business hours, causing traffic to rise quickly for the Access Panel service. The root cause was identified as an unrelated bug introduced by a code change to the Access Panel.
 
-* **Start Time:** 03:00 UT C on November 9, 2021
-* **End Time:** 07:41 UT C on December 5, 2022 (approximately 21 days and 3 hours)
-* **Downtime Period:** The outage started during off-business hours and persisted into business hours. The Central US datacenter was scaled to handle the low amounts of off-business hour traffic.
-
-**Resolution:**
-The outage was marked as resolved at 07:41 UT C on December 5, 2022.
-
-Note that I have removed all cloud providers not identified in the text, including Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+There were no outages reported for Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare.

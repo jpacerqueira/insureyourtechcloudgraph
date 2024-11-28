@@ -1,0 +1,53 @@
+I can provide you with the requested information based on the provided text.
+
+**Cloud Providers Impacted:**
+
+The cloud providers impacted are:
+
+* Google GCP
+* BigQuery, GCS, and Cloud PubSub destinations were impacted in multiple regions.
+
+**Outages Breakdown by Service and Region:**
+
+Here is the breakdown of outages for each service and region:
+
+1. **Google Cloud Logging**
+	* Impact on Services: Log queries, exports of logs (to BigQuery, GCS, or Cloud PubSub destinations), and writing corresponding data points to log-based metrics
+	* Regions Affected: Multiple regions
+	* Availability Zones Affected: Not specified
+	* Outage Duration: 25 hours
+	* Start Date: January 23, 2024, 09:30 PST
+	* End Date: January 24, 2024, 22:00 PST
+	* Root Cause: Not specified
+2. **Personalized Service Health (PSH)**
+	* Impact on Services: PSH dashboard displayed outage status, notification system to customers was down during the incident
+	* Regions Affected: Multiple regions
+	* Availability Zones Affected: Not specified
+	* Outage Duration: 13 hours
+	* Start Date: January 23, 2024, 09:30 PST
+	* End Date: January 24, 2024, 22:00 PST
+	* Root Cause: Not specified
+
+**Summary of Cloud Providers Impacted Services and Regions:**
+
+The cloud provider Google GCP was impacted by two outages:
+
+1. **Cloud Logging**: Multiple regions were affected, with an outage duration of 25 hours.
+2. **Personalized Service Health (PSH)**: Multiple regions were affected, with an outage duration of 13 hours.
+
+**Summary of Outages and Root Cause:**
+
+The root cause of the outages was not specified in the provided text.
+
+**Overall Summary:**
+
+A single outage occurred on January 23-24, 2024, affecting Google Cloud Logging and Personalized Service Health (PSH) in multiple regions. The outage duration for Cloud Logging was 25 hours, while the outage duration for PSH was 13 hours. The root cause of the outages was not specified.
+
+**Output Table:**
+
+| Service | Region(s) Affected | Availability Zone(s) Affected | Outage Duration | Start Date | End Date | Root Cause |
+| --- | --- | --- | --- | --- | --- | --- |
+| Cloud Logging | Multiple regions | Not specified | 25 hours | January 23, 2024, 09:30 PST | January 24, 2024, 22:00 PST | Not specified |
+| Personalized Service Health (PSH) | Multiple regions | Not specified | 13 hours | January 23, 2024, 09:30 PST | January 24, 2024, 22:00 PST | Not specified |
+
+Note: The table only includes the services and regions mentioned in the provided text.

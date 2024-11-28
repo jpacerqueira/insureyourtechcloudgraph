@@ -1,0 +1,51 @@
+I can only apply the query to Google Cloud Service HealthIncidentsAPI for the specified outage.
+
+Here is the information about the outage:
+
+**Incident Details**
+
+* Incident Name: API Deployment Failures due to Exceeded limit Errors
+* Start Date: 2023-08-07 12:35 US/Pacific Time
+* End Date: 2023-08-07 15:00 US/Pacific Time
+* Duration: 1 hour and 25 minutes
+
+**Affected Services**
+
+* Apigee
+* API Deployment Failures due to Exceeded limit Errors
+
+**Root Cause**
+
+* A affected customers with more than 1000 deployments on their organization will see the following error when attempting new deployments:
+Error creating object too many deployments for environment "organizations/<org_name>/environments/<env_name>" Dismiss All Destination
+organization "<org_name>" has xxxx deployments. Deployments PerOrganization Exceeded limit of 1000 deployments
+
+**Affected Regions and Availability Zones**
+
+* asia-east1 (Taiwan)
+* asia-east2 (Hong Kong)
+* asia-northeast1 (Tokyo)
+* asia-northeast2 (Osaka)
+* asia-northeast3 (Seoul)
+* asia-south1 (Mumbai)
+* asia-south2 (Delhi)
+* us-west4 (Vegas)
+
+**Summary**
+
+The API Deployment Failures due to Exceeded limit Errors incident affected Apigee services in multiple regions and availability zones. The root cause was the exceeded limit of 1000 deployments per organization, which caused errors when attempting new deployments.
+
+Here is a table summarizing the outage:
+
+| Service | Region/AZ | Start Date | End Date | Duration |
+| --- | --- | --- | --- | --- |
+| Apigee | asia-east1 (Taiwan) | 2023-08-07 12:35 | 2023-08-07 15:00 | 1 hour and 25 minutes |
+| Apigee | asia-east2 (Hong Kong) | 2023-08-07 12:35 | 2023-08-07 15:00 | 1 hour and 25 minutes |
+| Apigee | asia-northeast1 (Tokyo) | 2023-08-07 12:35 | 2023-08-07 15:00 | 1 hour and 25 minutes |
+| Apigee | asia-northeast2 (Osaka) | 2023-08-07 12:35 | 2023-08-07 15:00 | 1 hour and 25 minutes |
+| Apigee | asia-northeast3 (Seoul) | 2023-08-07 12:35 | 2023-08-07 15:00 | 1 hour and 25 minutes |
+| Apigee | asia-south1 (Mumbai) | 2023-08-07 12:35 | 2023-08-07 15:00 | 1 hour and 25 minutes |
+| Apigee | asia-south2 (Delhi) | 2023-08-07 12:35 | 2023-08-07 15:00 | 1 hour and 25 minutes |
+| Apigee | us-west4 (Vegas) | 2023-08-07 12:35 | 2023-08-07 15:00 | 1 hour and 25 minutes |
+
+Note that only Google Cloud Service HealthIncidentsAPI is available for this query, so the information provided above is limited to that service.

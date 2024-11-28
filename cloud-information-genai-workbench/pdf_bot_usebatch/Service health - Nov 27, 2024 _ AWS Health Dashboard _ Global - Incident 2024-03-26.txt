@@ -1,0 +1,92 @@
+I can provide you with the requested information. However, I need to clarify that some of the cloud providers mentioned in your query (Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) are not explicitly mentioned in the provided text.
+
+Based on the text, the following cloud providers are identified: Amazon AWS. I will provide information only for this provider.
+
+Here is the breakdown of outages for each service impacted by Amazon AWS:
+
+**Amazon Elastic Compute Cloud (EC2)**
+
+* Outage started: November 10, 2024, 7:55 AM PST
+* Duration: 3 hours and 18 minutes
+* Root cause: Increased API error rates for mutable VPC calls
+* Downtime period: November 10, 2024, 8:13 AM - 11:33 AM PST (2 hours and 20 minutes)
+* Resolved: November 10, 2024, 10:13 AM PST
+
+**AWS Batch**
+
+* Outage started: Not specified
+* Duration: Not specified
+* Root cause: Not specified
+* Downtime period: Not specified
+* Resolved: Not specified
+
+**Amazon Elastic Container Service (ECS)**
+
+* Outage started: Not specified
+* Duration: Not specified
+* Root cause: Not specified
+* Downtime period: Not specified
+* Resolved: Not specified
+
+**Amazon Elastic Kubernetes Service (EKS)**
+
+* Outage started: Not specified
+* Duration: Not specified
+* Root cause: Not specified
+* Downtime period: Not specified
+* Resolved: Not specified
+
+**AWS DataSync**
+
+* Outage started: November 10, 2024, 7:55 AM PST
+* Duration: 3 hours and 18 minutes
+* Root cause: Increased API error rates for mutable VPC calls
+* Downtime period: November 10, 2024, 8:13 AM - 11:33 AM PST (2 hours and 20 minutes)
+* Resolved: November 10, 2024, 10:13 AM PST
+
+**AWS QuickSight**
+
+* Outage started: October 25, 2024, 12:19 PM PDT
+* Duration: Not specified
+* Root cause: Increased login errors
+* Downtime period: Not specified
+* Resolved: Not specified
+
+**Multiple services (including EC2, DataSync, and others)**
+
+* Outage started: September 25, 2024, 2:05 PM PDT
+* Duration: 1 hour and 17 minutes
+* Root cause: Increased latencies and errors
+* Downtime period: Not specified
+* Resolved: Not specified
+
+**Amazon DynamoDB**
+
+* Outage started: December 9, 2023, 7:17 PM PST
+* Duration: 2 hours and 12 minutes
+* Root cause: Increased error rates
+* Downtime period: December 9, 2023, 8:29 PM - 10:41 PM PST (2 hours and 12 minutes)
+* Resolved: Not specified
+
+Here is the summary of outages for Amazon AWS:
+
+**Outage Summary**
+
+* Date range: November 6, 2024, to March 26, 2024
+* Services impacted:
+	+ EC2
+	+ DataSync
+	+ Batch (partial outage)
+	+ QuickSight
+	+ Multiple services (including EC2, DataSync, and others)
+	+ DynamoDB
+* Regions impacted:
+	+ N. Virginia (us-east-1)
+	+ us-west-2
+* Root causes:
+	+ Increased API error rates for mutable VPC calls
+	+ Increased login errors
+	+ Increased latencies and errors
+	+ Increased error rates
+
+Note that the root cause of some outages is not specified in the provided text.

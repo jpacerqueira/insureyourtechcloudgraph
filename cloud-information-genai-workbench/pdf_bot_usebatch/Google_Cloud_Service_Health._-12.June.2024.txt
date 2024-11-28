@@ -1,51 +1,43 @@
-I can only apply the query to the specified Cloud Providers that are mentioned in the text. The applicable Cloud Providers are:
+I can provide you with the requested information.
 
-* Google GCP
-* Amazon AWS is not mentioned in the text
-* Microsoft Azure is not mentioned in the text
-* Oracle OCI is not mentioned in the text
-* IBM Cloud is not mentioned in the text
-* Snowflake is not mentioned in the text
-* Databricks is not mentioned in the text
-* MongoDB is not mentioned in the text
-* Akamai is not mentioned in the text
-* Cloudflare is not mentioned in the text
+**Summary of Outages**
 
-Here are the results of the query applied to Google GCP:
+The outage affected Google Cloud Platform (GCP) services in multiple regions, including Asia-Southeast1, Europe-West3, Europe-West4, US-Central1, US-East1, and US-West1.
 
-**Incident Details**
+**Cloud Providers Impacted Services and Regions**
 
-* Incident started: 2024-06-12 12:06 US/Pacific Time (UTC-7)
-* Incident ended: 2024-06-12 15:59 US/Pacific Time (UTC-7)
-* Duration: 3 hours and 53 minutes
-* Impacted regions:
-	+ asia-southeast1
-	+ europe-west3
-	+ europe-west4
-	+ us-central1
-	+ us-east1
-	+ us-west1
+Here is the breakdown of outages for each cloud provider:
 
-**Impacted Services**
+**Google Cloud Platform (GCP)**
 
-* Vertex AI Online Prediction
-* Dialogflow CX
-* Agent Assist
+* **Agent Assist**
+	+ Affected regions: Asia-Southeast1, Europe-West3, Europe-West4, US-Central1, US-East1, US-West1
+	+ Services impacted: Agent Assist features including Proactive Generative Knowledge Assist, LLM Summarization, and topic modeling features
+	+ Duration of outage: 3 hours and 53 minutes
+	+ Root cause: Novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers
+	+ Start time: June 12, 2024, 12:06 PM PDT
+	+ End time: June 12, 2024, 15:59 PM PDT
+* **Cloud Machine Learning**
+	+ Affected regions: Asia-Southeast1, Europe-West3, Europe-West4, US-Central1, US-East1, US-West1
+	+ Services impacted: Cloud Machine Learning services
+	+ Duration of outage: 3 hours and 53 minutes
+	+ Root cause: Novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers
+	+ Start time: June 12, 2024, 12:06 PM PDT
+	+ End time: June 12, 2024, 15:59 PM PDT
+* **Dialogflow CX**
+	+ Affected regions: Asia-Southeast1, Europe-West3, Europe-West4, US-Central1, US-East1, US-West1
+	+ Services impacted: Dialogflow CX Insights features including LLM summarization and topic modeling
+	+ Duration of outage: 3 hours and 53 minutes
+	+ Root cause: Novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers
+	+ Start time: June 12, 2024, 12:06 PM PDT
+	+ End time: June 12, 2024, 15:59 PM PDT
 
-**Root Cause of Outage**
+**Output Table**
 
-A novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers. An affected server would restart after the segfault, and load balancers would send user queries to other healthy API servers until the affected server returned to service.
+| Cloud Provider | Service | Affected Regions | Duration of Outage | Root Cause | Start Time | End Time |
+| --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud Platform (GCP) | Agent Assist | Asia-Southeast1, Europe-West3, Europe-West4, US-Central1, US-East1, US-West1 | 3 hours and 53 minutes | Novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers | June 12, 2024, 12:06 PM PDT | June 12, 2024, 15:59 PM PDT |
+| Google Cloud Platform (GCP) | Cloud Machine Learning | Asia-Southeast1, Europe-West3, Europe-West4, US-Central1, US-East1, US-West1 | 3 hours and 53 minutes | Novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers | June 12, 2024, 12:06 PM PDT | June 12, 2024, 15:59 PM PDT |
+| Google Cloud Platform (GCP) | Dialogflow CX | Asia-Southeast1, Europe-West3, Europe-West4, US-Central1, US-East1, US-West1 | 3 hours and 53 minutes | Novel form of user request to the GenerateContent API triggered intermittent segmentation faults in the Vertex Serving Prediction API servers | June 12, 2024, 12:06 PM PDT | June 12, 2024, 15:59 PM PDT |
 
-**Remediation and Prevention**
-
-Google engineers were alerted to the issue via internal production monitoring on 10 June 2024 at 07:35 US/Pacific Time (UTC-7). At this time there was no visible customer impact and Google engineers identified the root cause of the segmentation fault and developed a fix which they started progressively rolling out.
-
-**Downtime Period**
-
-The outage started at 12:06 US/Pacific Time (UTC-7) on June 12, 2024, and ended at 15:59 US/Pacific Time (UTC-7) on June 12, 2024. The downtime period was approximately 3 hours and 53 minutes.
-
-**Duration of Outage**
-
-The outage lasted for 3 hours and 53 minutes.
-
-Note that the duration is calculated from the start time to the end time, not from the moment the issue started causing problems until it was resolved.
+Note that Snowflake, Databricks, MongoDB, Akamai, and Cloudflare were not impacted by this outage.

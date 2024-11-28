@@ -1,0 +1,35 @@
+Here is the response to your query:
+
+**Summary of Outages**
+
+The outage affected IBM Cloud, which was caused by a cooling problem in a non-IBM owned building that houses the IBM Cloud data center in Sao Paulo, Brazil.
+
+**Outage Details**
+
+**Incident Timeline**
+
+* 07 December 2020 07:13 - Local IBM technician noticed an increase in temperature in SAO01.
+* 07 December 2020 07:23 - Data Center Aggregate Routers (DARS) auto-shutdown due to high temperature.
+* 08 December 2020 00:15 - IKS services restored.
+* 08 December 2020 01:00 - ROKS restoration completed. All Compute services were restored.
+
+**IBM Cloud Services Impacted**
+
+| Service | Region/Availability Zone | Downtime Period |
+| --- | --- | --- |
+| IBM Cloud | Sao Paulo 01 DATACENTER | 17 hours 36 minutes |
+
+**Root Cause of Outage**
+
+The root cause of the outage was a cooling problem in the non-IBM owned building that houses the IBM Cloud data center in Sao Paulo, Brazil.
+
+**Summary of Outage**
+
+The outage started on December 7, 2020 at 07:23 and lasted for 17 hours and 36 minutes. The services impacted were all Compute services in the Sao Paulo 01 DATACENTER region.
+
+Here is a breakdown of the outage by service:
+
+* IKS services: Restored on December 8, 2020 at 00:15
+* ROKS restoration: Completed on December 8, 2020 at 01:00
+
+Note that no other cloud providers were identified in the text as being impacted by this outage.

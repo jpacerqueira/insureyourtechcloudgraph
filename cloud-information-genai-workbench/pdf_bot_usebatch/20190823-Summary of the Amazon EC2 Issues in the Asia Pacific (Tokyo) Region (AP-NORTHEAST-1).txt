@@ -1,26 +1,85 @@
-Based on the provided text, I will resume the outage for Amazon AWS.
+Here is the breakdown of the outage for each cloud provider:
 
-**Outage Details:**
+**Amazon AWS**
 
-* **Cloud Provider:** Amazon AWS
-* **Incident:** A small percentage of EC2 servers in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region shut down due to overheating.
-* **Start Time:** 12:36 PM JST on August 23, 2019
-* **Duration:** The outage lasted for approximately 3 hours and 45 minutes.
+Outage started: August 23, 2019 12:36 PM JST
+Duration: 5 hours and 30 minutes
+Downtime period: EC2 instances and EBS volumes in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
+Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
+Resolved: August 23, 2019 6:30 PM JST
 
-**Impacted Services and Regions/AZs:**
+**Amazon EBS**
 
-* Amazon EC2 in the Tokyo (AP-NORTHEAST-1) Region, specifically in a single Availability Zone.
-* Amazon EBS resources in the affected area of the Availability Zone.
-* Some other services, such as RDS, Redshift, ElastiCache, and Workspaces, would have seen some impact if their underlying EC2 instances were affected.
+Outage started: August 23, 2019 12:36 PM JST
+Duration: 5 hours and 30 minutes
+Downtime period: EBS volumes in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
+Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
+Resolved: August 23, 2019 6:30 PM JST
 
-**Root Cause:**
-The root cause of the outage was a control system failure that caused multiple, redundant cooling systems to fail in parts of the affected Availability Zone.
+**Amazon EC2**
 
-**Downtime Period:**
+Outage started: August 23, 2019 12:36 PM JST
+Duration: 5 hours and 30 minutes
+Downtime period: EC2 instances in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
+Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
+Resolved: August 23, 2019 6:30 PM JST
 
-* The affected cooling systems were restored at 3:21 PM JST.
-* Temperatures in the affected areas began to return to normal after the cooling systems were restored.
-* Power was restored to the affected instances by 6:30 PM JST.
-* A small number of instances and volumes hosted on hardware that was adversely affected by the loss of power and excessive heat took longer to recover.
+**Amazon RDS**
 
-**Resolved Time:** The outage was marked as resolved at 6:30 PM JST on August 23, 2019.
+Outage started: August 23, 2019 12:36 PM JST
+Duration: 5 hours and 30 minutes
+Downtime period: RDS instances in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
+Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
+Resolved: August 23, 2019 6:30 PM JST
+
+**Amazon Redshift**
+
+Outage started: August 23, 2019 12:36 PM JST
+Duration: 5 hours and 30 minutes
+Downtime period: Redshift instances in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
+Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
+Resolved: August 23, 2019 6:30 PM JST
+
+**Amazon ElastiCache**
+
+Outage started: August 23, 2019 12:36 PM JST
+Duration: 5 hours and 30 minutes
+Downtime period: ElastiCache instances in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
+Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
+Resolved: August 23, 2019 6:30 PM JST
+
+**Amazon Workspaces**
+
+Outage started: August 23, 2019 12:36 PM JST
+Duration: 5 hours and 30 minutes
+Downtime period: Workspaces instances in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
+Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
+Resolved: August 23, 2019 6:30 PM JST
+
+**Snowflake**
+
+No outage reported.
+
+**Databricks**
+
+No outage reported.
+
+**MongoDB**
+
+No outage reported.
+
+**Akamai**
+
+No outage reported.
+
+**Cloudflare**
+
+No outage reported.
+
+**IBM Cloud**
+
+No outage reported.
+
+**Oracle OCI**
+
+No outage reported.

@@ -1,7 +1,6 @@
 services:
 
   ollama-llm:
-    image: ollama/ollama:latest
     build:
       dockerfile: ollama.Dockerfile
     restart: unless-stopped

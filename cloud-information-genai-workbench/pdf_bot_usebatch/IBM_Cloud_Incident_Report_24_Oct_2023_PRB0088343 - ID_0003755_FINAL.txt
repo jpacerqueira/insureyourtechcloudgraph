@@ -1,27 +1,42 @@
-I can only apply the query to IBM Cloud as it is the only cloud provider mentioned in the text.
+Here is the response to your query:
 
-Here are the details of the outage:
+**Outage Details**
 
-**Incident Details**
+The outage affected IBM Cloud Console, which is available at cloud.ibm.com.
 
-* Incident ID: INC6502772
-* Outage Start Time: 24 October 2023 06:42 UTC
-* Outage End Time: 24 October 2023 12:12 UTC
-* Duration: 5 hours and 30 minutes
-* Downtime Period: The IBM Cloud Console was unavailable for approximately 5 hours and 30 minutes.
+**Incident Timeline**
 
-**Affected Services**
+* Outage started: 24 October 2023 06:42 UTC
+* Incident duration: 5 hours and 30 minutes
+* Outage ended: 24 October 2023 12:12 UTC
 
-* IBM Cloud Console
+**Impact on Services**
 
-**Regions and Availability Zones**
-
-No specific regions or availability zones were mentioned in the text as being affected by the outage.
+The outage impacted the IBM Cloud Console login page, which is available worldwide.
 
 **Root Cause of Outage**
 
-The root cause of the outage was a Distributed Denial-of-Service (DDoS) attack that partially bypassed IBM's existing protections.
+The root cause of the outage was a highly distributed denial-of-service (DDoS) attack that partially bypassed IBM's existing protections.
 
-**Services Impacted**
+**Outage Details by Service**
 
-* The IBM Cloud Console login page at cloud.ibm.com was unavailable for approximately 5 hours and 30 minutes, impacting customers worldwide.
+Here are the details of the outage for each service:
+
+1. **IBM Cloud Console**
+	* Region: Worldwide
+	* Availability Zones: Not specified
+	* Downtime Period: 5 hours and 30 minutes
+	* Duration in Days, Hours, and Minutes: 0 days, 5 hours, 30 minutes
+	* Resolution Date: 24 October 2023 12:12 UTC
+
+**Summary of Outage**
+
+The outage was caused by a DDoS attack on the IBM Cloud Console. The outage lasted for 5 hours and 30 minutes, starting at 06:42 UTC on 24 October 2023 and ending at 12:12 UTC on the same day.
+
+Here is the summary in table format:
+
+| Service | Region | Availability Zones | Downtime Period | Duration in Days, Hours, and Minutes | Resolution Date |
+| --- | --- | --- | --- | --- | --- |
+| IBM Cloud Console | Worldwide | Not specified | 5 hours, 30 minutes | 0 days, 5 hours, 30 minutes | 24 October 2023 12:12 UTC |
+
+Note that the table only includes the service impacted by the outage, which is the IBM Cloud Console.

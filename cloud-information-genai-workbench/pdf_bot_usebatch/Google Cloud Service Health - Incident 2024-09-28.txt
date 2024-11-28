@@ -1,0 +1,28 @@
+I can only apply the query to Google Cloud Service Health, since Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare are not mentioned in the text.
+
+Here is the output:
+
+**Google Cloud Service Health Outages**
+
+Outage 1: VMware Engine
+
+* Description: Mitigation work is currently underway by our engineering team.
+* Diagnosis: VMware Engine network creation is failing for new customer projects of VMware engine. Existing projects appear to be functioning ok.
+* Root Cause: Unknown
+* Duration: 10 days, 12 hours, and 10 minutes
+* Start Date: September 27, 2024, 12:27 PDT
+* End Date: October 7, 2024, 13:49 PDT
+* Downtime Period: September 28, 2024, 00:00 - September 30, 2024, 23:59 PDT (5 days)
+* Resolved: Yes
+
+**Outage Details**
+
+| Service | Region | Availability Zone | Start Date | End Date | Duration |
+| --- | --- | --- | --- | --- | --- |
+| VMware Engine | Pacific | n/a | September 27, 2024, 12:27 PDT | October 7, 2024, 13:49 PDT | 10 days, 12 hours, and 10 minutes |
+
+**Summary**
+
+Google Cloud Service Health was impacted by one outage in the Pacific region. The outage started on September 27, 2024, at 12:27 PDT and ended on October 7, 2024, at 13:49 PDT. The downtime period lasted for 5 days.
+
+Note: Since only Google Cloud Service Health is mentioned in the text, there are no outages to report from other cloud providers.

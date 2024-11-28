@@ -1,0 +1,42 @@
+Here is the breakdown of the outage for each cloud provider:
+
+**Google Cloud**
+
+The incident began on September 11, 2024, at 08:00 US/Pacific Time and ended on September 11, 2024, at 11:20 US/Pacific Time.
+
+Affected services and features:
+Hybrid Connectivity - Cloud Interconnect
+Regions/Zones:
+asia-south1, asia-south2, and asia-southeast1
+
+Symptoms:
+Google Cloud Interconnect experienced elevated packet loss from Hyderabad, India edge location to regions asia-south1, asia-south2, and asia-southeast1.
+
+Root cause of the outage: Not specified in the text.
+
+Duration of outage:
+3 hours 20 minutes
+Downtime period: 11:20 US/Pacific Time (resolved)
+
+**Summary for Google Cloud**
+
+* Services impacted: Hybrid Connectivity - Cloud Interconnect
+* Regions/Zones: asia-south1, asia-south2, and asia-southeast1
+* Root cause of outage: Not specified in the text
+* Duration of outage: 3 hours 20 minutes
+* Downtime period: 11:20 US/Pacific Time (resolved)
+
+**Cloud Interconnect Incident Details**
+
+| Date | Time | Description |
+| --- | --- | --- |
+| September 11, 2024 | 08:00 US/Pacific Time | Incident began |
+| September 11, 2024 | 11:20 US/Pacific Time | Incident ended |
+
+**Overall Summary for Google Cloud**
+
+Google Cloud Interconnect experienced an outage on September 11, 2024, affecting Hybrid Connectivity - Cloud Interconnect services in regions asia-south1, asia-south2, and asia-southeast1. The incident began at 08:00 US/Pacific Time and ended at 11:20 US/Pacific Time, lasting for 3 hours and 20 minutes.
+
+**No other cloud providers were identified as being impacted by this outage.**
+
+Note: I have removed the text from Cloud Vendors not mentioned in the original text (Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare).

@@ -1,0 +1,68 @@
+Here is the response to your query:
+
+**Summary of Outages**
+
+The following cloud providers were impacted: Amazon AWS, Amazon Data Firehose, Amazon Elastic Container Service (ECS), Amazon Lambda, Amazon Redshift, Amazon Glue, CloudWatch Logs, and Amazon Kinesis Data Streams.
+
+**Outage Details**
+
+Here are the outage details for each affected service:
+
+**Amazon AWS**
+
+1. **CloudWatch Logs**
+	* Outage started: July 30th, 2024, 2:45 PM PDT
+	* Duration: 7 hours and 21 minutes
+	* Root cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	* Downtime period: Until normal operations were restored to the Kinesis Data Streams cell
+	* Marked as resolved: August 1st, 2024, 2:38 AM PDT
+2. **Amazon Data Firehose**
+	* Outage started: July 30th, 2024, 2:45 PM PDT
+	* Duration: Until normal operations were restored to the Kinesis Data Streams cell
+	* Root cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	* Downtime period: Until S3 event delivery resumed normal operations
+	* Marked as resolved: August 1st, 2024, 2:38 AM PDT
+3. **Amazon Elastic Container Service (ECS)**
+	* Outage started: July 30th, 2024, 2:45 PM PDT
+	* Duration: Until normal operations were restored to the Kinesis Data Streams cell
+	* Root cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	* Downtime period: Until tasks were no longer impacted by the awslogs log driver in the default blocking mode
+	* Marked as resolved: August 1st, 2024, 2:38 AM PDT
+4. **Amazon Lambda**
+	* Outage started: July 30th, 2024, 2:45 PM PDT
+	* Duration: Until normal operations were restored to the Kinesis Data Streams cell
+	* Root cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	* Downtime period: Until tasks were no longer impacted by the awslogs log driver in the default blocking mode
+	* Marked as resolved: August 1st, 2024, 2:38 AM PDT
+5. **Amazon Redshift**
+	* Outage started: July 30th, 2024, 2:45 PM PDT
+	* Duration: Until normal operations were restored to the Kinesis Data Streams cell
+	* Root cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	* Downtime period: Until CloudWatch metrics for Redshift clusters became available again
+	* Marked as resolved: August 1st, 2024, 2:38 AM PDT
+6. **Amazon Glue**
+	* Outage started: July 30th, 2024, 2:45 PM PDT
+	* Duration: Until normal operations were restored to the Kinesis Data Streams cell
+	* Root cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	* Downtime period: Until AWS Managed Workflows for Apache Airflow and AWS Glue became available again
+	* Marked as resolved: August 1st, 2024, 2:38 AM PDT
+7. **Amazon Kinesis Data Streams**
+	* Outage started: July 30th, 2024, 2:45 PM PDT
+	* Duration: Until normal operations were restored to the Kinesis Data Streams cell
+	* Root cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	* Downtime period: Until S3 event delivery resumed normal operations
+	* Marked as resolved: August 1st, 2024, 2:38 AM PDT
+
+**Output Table**
+
+| Service | Outage Started | Duration | Root Cause | Downtime Period | Marked as Resolved |
+| --- | --- | --- | --- | --- | --- |
+| CloudWatch Logs | July 30th, 2024, 2:45 PM PDT | 7 hours and 21 minutes | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | Until normal operations were restored to the Kinesis Data Streams cell | August 1st, 2024, 2:38 AM PDT |
+| Amazon Data Firehose | July 30th, 2024, 2:45 PM PDT | Until normal operations were restored to the Kinesis Data Streams cell | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | Until S3 event delivery resumed normal operations | August 1st, 2024, 2:38 AM PDT |
+| Amazon Elastic Container Service (ECS) | July 30th, 2024, 2:45 PM PDT | Until normal operations were restored to the Kinesis Data Streams cell | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | Until tasks were no longer impacted by the awslogs log driver in the default blocking mode | August 1st, 2024, 2:38 AM PDT |
+| Amazon Lambda | July 30th, 2024, 2:45 PM PDT | Until normal operations were restored to the Kinesis Data Streams cell | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | Until tasks were no longer impacted by the awslogs log driver in the default blocking mode | August 1st, 2024, 2:38 AM PDT |
+| Amazon Redshift | July 30th, 2024, 2:45 PM PDT | Until normal operations were restored to the Kinesis Data Streams cell | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | Until CloudWatch metrics for Redshift clusters became available again | August 1st, 2024, 2:38 AM PDT |
+| Amazon Glue | July 30th, 2024, 2:45 PM PDT | Until normal operations were restored to the Kinesis Data Streams cell | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | Until AWS Managed Workflows for Apache Airflow and AWS Glue became available again | August 1st, 2024, 2:38 AM PDT |
+| Amazon Kinesis Data Streams | July 30th, 2024, 2:45 PM PDT | Until normal operations were restored to the Kinesis Data Streams cell | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | Until S3 event delivery resumed normal operations | August 1st, 2024, 2:38 AM PDT |
+
+Note: The table only includes the services that were impacted by the outage.

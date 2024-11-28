@@ -1,0 +1,108 @@
+Here is the response to your query:
+
+**Outage Details**
+
+The outage affected multiple IBM Cloud clients in all regions, including AppID, Schematics, Secrets Manager, UI, Bluemix-developer-experience, Cloudcerts, Code Engine, Compliance, Continuous-delivery-pipeline, Virtual Private Cloud, and Cloud App Dev Services.
+
+**Incident Timeline**
+
+* Outage started: 21 June 2022 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Incident ended: 21 June 2022 08:06 UTC
+
+**Root Cause**
+
+The third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to the outage.
+
+**Outage Breakdown by Service and Region**
+
+Here is the breakdown of the outage for each affected service:
+
+1. AppID
+	* Region: All regions
+	* Availability Zone: Not specified
+	* Downtime Period: 1 hour 32 minutes
+	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
+2. Schematics
+	* Region: All regions
+	* Availability Zone: Not specified
+	* Downtime Period: 1 hour 32 minutes
+	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
+3. Secrets Manager
+	* Region: All regions
+	* Availability Zone: Not specified
+	* Downtime Period: 1 hour 32 minutes
+	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
+4. UI
+	* Region: All regions
+	* Availability Zone: Not specified
+	* Downtime Period: 1 hour 32 minutes
+	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
+5. Bluemix-developer-experience
+	* Region: All regions
+	* Availability Zone: Not specified
+	* Downtime Period: 1 hour 32 minutes
+	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
+6. Cloudcerts
+	* Region: All regions
+	* Availability Zone: Not specified
+	* Downtime Period: 1 hour 32 minutes
+	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
+7. Code Engine
+	* Region: All regions
+	* Availability Zone: Not specified
+	* Downtime Period: 1 hour 32 minutes
+	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
+8. Compliance
+	* Region: All regions
+	* Availability Zone: Not specified
+	* Downtime Period: 1 hour 32 minutes
+	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
+9. Continuous-delivery-pipeline
+	* Region: All regions
+	* Availability Zone: Not specified
+	* Downtime Period: 1 hour 32 minutes
+	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
+10. Virtual Private Cloud
+	* Region: All regions
+	* Availability Zone: Not specified
+	* Downtime Period: 1 hour 32 minutes
+	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
+11. Cloud App Dev Services
+	* Region: All regions
+	* Availability Zone: Not specified
+	* Downtime Period: 1 hour 32 minutes
+	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
+
+**Summary of Outage**
+
+The outage affected multiple IBM Cloud services across all regions. The root cause was a BGP configuration change by the third-party vendor that caused a critical set of IP prefixes to be withdrawn.
+
+**Cloud Providers Impacted**
+
+* IBM Cloud
+	+ Services impacted: AppID, Schematics, Secrets Manager, UI, Bluemix-developer-experience, Cloudcerts, Code Engine, Compliance, Continuous-delivery-pipeline, Virtual Private Cloud, and Cloud App Dev Services.
+	+ Regions affected: All regions.
+	+ Availability zones not specified.
+
+**Overall Summary**
+
+The outage was a global incident that affected multiple IBM Cloud services across all regions. The root cause was a BGP configuration change by the third-party vendor. The outage lasted for 1 hour and 32 minutes, and it was resolved at 08:06 UTC on 21 June 2022.
+
+**Output Table**
+
+| Service | Region | Availability Zone | Downtime Period | Duration in days, hours, and minutes |
+| --- | --- | --- | --- | --- |
+| AppID | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
+| Schematics | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
+| Secrets Manager | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
+| UI | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
+| Bluemix-developer-experience | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
+| Cloudcerts | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
+| Code Engine | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
+| Compliance | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
+| Continuous-delivery-pipeline | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
+| Virtual Private Cloud | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
+| Cloud App Dev Services | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
+
+Note: The availability zone information is not available in the original text.

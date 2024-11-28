@@ -1,0 +1,73 @@
+Here is the breakdown of the outage for each cloud provider:
+
+**Google Cloud**
+
+The incident began on May 8, 2024, at 16:41 US/Pacific Time and ended on May 9, 2024, at 03:44 US/Pacific Time.
+
+Affected services:
+- Apigee API Platform
+- Impacted customers may experience latency in the completion of their API calls
+
+Root cause: Starting Wednesday, May 8, 2024, customers making use of caching policies in their API proxies were experiencing issues with Apigee API Platform services.
+
+Duration: The outage lasted for approximately 2 hours and 3 minutes.
+
+Downtime period:
+- May 8, 2024, 16:41 US/Pacific Time to May 9, 2024, 03:44 US/Pacific Time
+
+Resolved on: May 9, 2024, at 03:40 US/Pacific Time
+
+**Summary of Google Cloud Services and Regions Impacted**
+
+- Apigee API Platform
+- asia-east1 (Taiwan)
+- asia-east2 (Hong Kong)
+- asia-northeast1 (Tokyo)
+- asia-northeast2 (Osaka)
+- asia-northeast3 (Seoul)
+- asia-south1 (Mumbai)
+- asia-south2 (Delhi)
+- asia-west2 (Salt Lake City)
+- us-west3 (Las Vegas)
+
+**Output Table for Google Cloud**
+
+| Service | Region | Availability Zone | Duration | Downtime Period | Resolved |
+| --- | --- | --- | --- | --- | --- |
+| Apigee API Platform | asia-east1 |  | 2 hours, 3 minutes | May 8, 2024, 16:41 US/Pacific Time to May 9, 2024, 03:44 US/Pacific Time | May 9, 2024, 03:40 US/Pacific Time |
+
+**Amazon Web Services (AWS)**
+
+No information is available in the text about an outage on AWS.
+
+**Microsoft Azure**
+
+No information is available in the text about an outage on Azure.
+
+**Oracle Cloud Infrastructure (OCI)**
+
+No information is available in the text about an outage on OCI.
+
+**IBM Cloud**
+
+No information is available in the text about an outage on IBM Cloud.
+
+**Snowflake**
+
+No information is available in the text about an outage on Snowflake.
+
+**Databricks**
+
+No information is available in the text about an outage on Databricks.
+
+**MongoDB**
+
+No information is available in the text about an outage on MongoDB.
+
+**Akamai**
+
+No information is available in the text about an outage on Akamai.
+
+**Cloudflare**
+
+No information is available in the text about an outage on Cloudflare.

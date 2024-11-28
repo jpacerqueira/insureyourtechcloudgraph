@@ -1,0 +1,62 @@
+I can provide you with the requested information based on the provided text.
+
+**Cloud Providers Impacted:**
+
+The cloud providers impacted are:
+
+* Google GCP
+* Amazon AWS is not mentioned in the text, so it will be excluded from the response.
+* Microsoft Azure is not mentioned in the text, so it will be excluded from the response.
+* Oracle OCI is not mentioned in the text, so it will be excluded from the response.
+* IBM Cloud is not mentioned in the text, so it will be excluded from the response.
+* Snowflake is not a cloud provider, but rather a cloud-based database service. It will be excluded from the response.
+* Databricks is not a cloud provider, but rather a cloud-based data platform. It will be excluded from the response.
+* MongoDB is not a cloud provider, but rather a NoSQL document-oriented database. It will be excluded from the response.
+* Akamai and Cloudflare are not cloud providers, but rather content delivery network (CDN) services. They will be excluded from the response.
+
+**Outages:**
+
+Here is the information about the outage in the format requested:
+
+**Google GCP Outage:**
+
+The outage started on December 5, 2023, at 06:17 US/Pacific Time and ended on December 5, 2023, at 07:26 US/Pacific Time. The incident was merged with an existing incident.
+
+Here is the detailed information about the outage:
+
+* Services impacted: Cloud Bigtable
+* Regions affected: us-central1
+* Availability zones affected: Not specified
+* Root cause of the outage: Underlying networking issue
+* Duration of the outage:
+	+ Days: 0
+	+ Hours: 9.5
+	+ Minutes: 49
+* Downtime period: December 5, 2023, from 06:17 US/Pacific Time to 07:26 US/Pacific Time (1 hour and 9 minutes)
+* Marked as resolved: Yes
+
+**Output Table for Google GCP Outage:**
+
+| Category | Value |
+| --- | --- |
+| Start Date | December 5, 2023, 06:17 US/Pacific Time |
+| End Date | December 5, 2023, 07:26 US/Pacific Time |
+| Services Impacted | Cloud Bigtable |
+| Regions Affected | us-central1 |
+| Availability Zones Affected | Not specified |
+| Root Cause | Underlying networking issue |
+| Duration (Days) | 0 |
+| Duration (Hours) | 9.5 |
+| Duration (Minutes) | 49 |
+| Downtime Period | December 5, 2023, from 06:17 US/Pacific Time to 07:26 US/Pacific Time (1 hour and 9 minutes) |
+| Marked as Resolved | Yes |
+
+**Summary of Cloud Providers Impacted Services and Regions:**
+
+* Google GCP:
+	+ Services impacted: Cloud Bigtable
+	+ Regions affected: us-central1
+
+**Overall Summary of Outages and Root Cause:**
+
+The outage started on December 5, 2023, at 06:17 US/Pacific Time due to an underlying networking issue. The services impacted were Cloud Bigtable in the us-central1 region. The outage lasted for approximately 9 hours and 49 minutes, with a downtime period of 1 hour and 9 minutes.

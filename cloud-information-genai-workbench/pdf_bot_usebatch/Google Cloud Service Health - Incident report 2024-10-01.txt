@@ -1,0 +1,45 @@
+Here is the response to your query:
+
+**Outage Information**
+
+The outage affected Google Cloud Platform (GCP) only.
+
+**Summary of Outage**
+
+* Service: Vertex AI Search
+* Region/Zone: Global
+* Duration: 35 minutes
+* Start Time: October 1, 2024 09:28 US/Pacific
+* End Time: October 1, 2024 10:03 US/Pacific
+
+**Breakdown of Outage by Service and Region**
+
+Here is the breakdown of the outage for each service affected:
+
+1. **Vertex AI Search**
+	* Region/Zone: Global
+	* Duration: 35 minutes
+	* Start Time: October 1, 2024 09:28 US/Pacific
+	* End Time: October 1, 2024 10:03 US/Pacific
+	* Root Cause: Issue introduced by a new version release of an internal service which the Search API relies on
+2. **Recommendation AI**
+	* Region/Zone: Global
+	* Duration: Not impacted
+
+**Note**: Recommendation AI was not impacted by the outage.
+
+Here is the output in table format:
+
+| Service | Region/Zone | Duration | Start Time | End Time |
+| --- | --- | --- | --- | --- |
+| Vertex AI Search | Global | 35 minutes | October 1, 2024 09:28 US/Pacific | October 1, 2024 10:03 US/Pacific |
+
+**Summary of Outage**
+
+The outage was caused by an issue introduced by a new version release of an internal service which the Search API relies on. The outage started at 09:28 US/Pacific and ended at 10:03 US/Pacific.
+
+**Root Cause**
+
+The root cause of the outage was an issue with the internal service that the Search API relies on, which caused failures on the Search API.
+
+I do not have information about other cloud providers or services impacted.

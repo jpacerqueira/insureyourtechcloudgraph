@@ -1,16 +1,57 @@
-Based on the provided text, I have extracted information about outages in Microsoft Azure.
+Here is the analysis of the outages:
 
-**Outage Details:**
+**Microsoft Azure**
 
-1. **Incident Name:** Unspecified outage
-2. **Cloud Provider:** Microsoft Azure
-3. **Region/AZ:** South Central US (specifically, two network routers)
-4. **Services Impacted:** Network connection failures for IPv4 traffic
-5. **Root Cause:** Incorrect configuration change sent all SYN packets to the router's CPU for inspection, causing denial-of-service protection to drop a subset of packets.
-6. **Duration:**
-	* Start Time: 12:48 UTC on February 28, 2020
-	* End Time: 22:28 UTC on February 28, 2020 (approximately 9 hours and 40 minutes)
-7. **Downtime Period:** The outage started at 20:40 UTC on February 20, 2020, and was marked as resolved at 00:53 UTC on March 1, 2020.
-8. **Duration in Days, Hours, and Minutes:** Approximately 2 days, 10 hours, and 13 minutes.
+Outage 1:
+- Start Date: 12:48 UTC on February 28, 2020
+- End Date: 22:28 UTC on February 28, 2020
+- Duration: 9 hours and 40 minutes
+- Affected Services: FIB (Firewall)
+- Root Cause: Configuration change sent all SYN packets to the router's CPU for inspection, causing denial of service protection to drop a subset of packets.
+- Downtime Period: 22:28 UTC on February 28, 2020 - 00:53 UTC on March 1, 2020 (2 days and 5 hours)
+- Resolution Date: 00:53 UTC on March 1, 2020
 
-Note that there is no information about the specific services impacted or the root cause of the outage for other cloud providers mentioned in the text (Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare).
+Outage 2:
+- Start Date: 20:40 UTC on February 22, 2020
+- End Date: 00:53 UTC on February 23, 2020
+- Duration: 8 hours and 13 minutes
+- Affected Services: Network routers
+- Root Cause: Engineer's mitigation of incorrect configuration by deploying an update to the configuration changes of the two impacted network routers.
+- Downtime Period: 20:40 UTC on February 22, 2020 - 00:53 UTC on February 23, 2020 (1 day and 9 hours)
+- Resolution Date: 00:53 UTC on February 23, 2020
+
+Outage 3:
+- Start Date: 22:17 UTC on February 21, 2020
+- End Date: 00:53 UTC on February 22, 2020
+- Duration: 9 hours and 36 minutes
+- Affected Services: IPv4 traffic
+- Root Cause: Configuration change sent all SYN packets to the router's CPU for inspection, causing denial of service protection to drop a subset of packets.
+- Downtime Period: 22:17 UTC on February 21, 2020 - 00:53 UTC on February 22, 2020 (1 day and 9 hours)
+- Resolution Date: 00:53 UTC on February 22, 2020
+
+**Summary**
+
+Microsoft Azure was impacted by three outages:
+
+* Outage 1: FIB (Firewall) in South Central US
+* Outage 2: Network routers in South Central US
+* Outage 3: IPv4 traffic in South Central US and Amsterdam
+
+The root cause of the outages was related to configuration changes that caused denial of service protection to drop a subset of packets.
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Start Date | End Date | Duration | Downtime Period | Resolution Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Azure | FIB (Firewall) | South Central US |  | 12:48 UTC Feb 28, 2020 | 22:28 UTC Feb 28, 2020 | 9 hours and 40 minutes | 22:28 UTC Feb 28, 2020 - 00:53 UTC Mar 1, 2020 | 00:53 UTC Mar 1, 2020 |
+| Azure | Network routers | South Central US |  | 20:40 UTC Feb 22, 2020 | 00:53 UTC Feb 23, 2020 | 8 hours and 13 minutes | 20:40 UTC Feb 22, 2020 - 00:53 UTC Feb 23, 2020 | 00:53 UTC Feb 23, 2020 |
+| Azure | IPv4 traffic | South Central US |  | 22:17 UTC Feb 21, 2020 | 00:53 UTC Feb 22, 2020 | 9 hours and 36 minutes | 22:17 UTC Feb 21, 2020 - 00:53 UTC Feb 22, 2020 | 00:53 UTC Feb 22, 2020 |
+
+Note that the regions and availability zones are not explicitly mentioned in the text for all services. The above table only includes the information that is available from the text.
+
+**Cloud Providers impacted**
+
+The following cloud providers were impacted:
+
+* Microsoft Azure
+* Snowflake
