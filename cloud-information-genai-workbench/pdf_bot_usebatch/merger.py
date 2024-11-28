@@ -245,7 +245,10 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         "outage": r"(?i)(complete outage|service disruption|unavailable|increased api errors|increased latencies|service unavailable)",
         "degraded": r"(?i)(degraded performance|degraded service|partial outage|intermittent connectivity|elevated packet loss|impaired|congestion)",
         "maintenance": r"(?i)(scheduled maintenance|planned downtime|maintenance window)",
-        "recovering": r"(?i)(recovery in progress|partially recovered|improvement observed|started seeing recovery)"
+        "recovering": r"(?i)(recovery in progress|partially recovered|improvement observed|started seeing recovery)",
+        "active": r"(?i)(active incident|ongoing|in progress|currently investigating)",
+        "planned": r"(?i)(planned maintenance|scheduled work|upcoming maintenance)",
+        "warning": r"(?i)(warning|potential issue|monitoring closely|increased latency)",
     }
     
     # Extended impact patterns to include more specific levels
@@ -254,7 +257,10 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         "high": r"(?i)(high impact|significant impact|service degradation|multiple services affected)",
         "moderate": r"(?i)(moderate impact|partial impact|minor outage|increased error rates|intermittent issues)",
         "minimal": r"(?i)(minimal impact|slight impact|limited disruption|elevated delays|degraded performance)",
-        "none": r"(?i)(no impact|no outage reported|normal operation)"
+        "none": r"(?i)(no impact|no outage reported|normal operation)",
+        "regional": r"(?i)(regional impact|specific region affected|isolated to region)",
+        "global": r"(?i)(global impact|worldwide|all regions affected)",
+        "service-specific": r"(?i)(specific service|single service affected|limited to)",
     }
     
     # Add incident ID pattern
@@ -288,7 +294,11 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)started.*?at\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
             r"(?i)(\d{1,2}:\d{2}(?:\s*(?:AM|PM))?\s*(?:UTC|PDT|PST|JST|CST))",
             r"(?i)Outage\s+started:\s*([^\n]+)",
-            r"(?i)Start\s+date:\s*([^\n]+)"
+            r"(?i)Start\s+date:\s*([^\n]+)",
+            r"(?i)(\d{1,2}:\d{2}(?::\d{2})?\s*(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
+            r"(?i)(\w+ \d{1,2}(?:st|nd|rd|th)?,\s*\d{4}\s+at\s+\d{1,2}:\d{2}\s*(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
+            r"(?i)(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?\s*(?:UTC|PDT|PST|JST|CST))",
+            r"(?i)on\s+(\w+\s+\d{1,2}(?:st|nd|rd|th)?,\s*\d{4})",
         ],
         "end": [
             r"(?i)End(?:ed)?(?:\s+Time)?:\s*([^\n]+)",
@@ -296,7 +306,9 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)resolved.*?at\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
             r"(?i)until\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
             r"(?i)Resolved:\s*([^\n]+)",
-            r"(?i)Resolution\s+date:\s*([^\n]+)"
+            r"(?i)Resolution\s+date:\s*([^\n]+)",
+            r"(?i)Resolved:\s*(\w+\s+\d{1,2}(?:st|nd|rd|th)?,\s*\d{4}.*?(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
+            r"(?i)Resolution\s+date:\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?\s*(?:UTC|PDT|PST|JST|CST))",
         ]
     }
     
@@ -305,6 +317,9 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         r"(?i)Duration:\s*([^\n]+)",
         r"(?i)(\d+)\s*(?:days?|hours?|minutes?|hrs?|mins?)",
         r"(?i)approximately\s+(\d+\s+(?:days?|hours?|minutes?|hrs?|mins?)(?:\s+and\s+\d+\s+(?:days?|hours?|minutes?|hrs?|mins?))*)",
+        r"(?i)Duration:\s*(\d+\s+(?:days?|hours?|minutes?|hrs?|mins?)(?:\s+and\s+\d+\s+(?:days?|hours?|minutes?|hrs?|mins?))*)",
+        r"(?i)lasted\s+(?:for\s+)?(\d+\s+(?:days?|hours?|minutes?|hrs?|mins?)(?:\s+and\s+\d+\s+(?:days?|hours?|minutes?|hrs?|mins?))*)",
+        r"(?i)(\d+)\s*(?:days?|hours?|minutes?|hrs?|mins?)\s+and\s+(\d+)\s*(?:days?|hours?|minutes?|hrs?|mins?)",
     ]
     
     # Add region extraction patterns
@@ -462,6 +477,10 @@ def write_outage_summary(outage: OutageInfo, file):
         file.write("Mitigation Steps:\n")
         for step in outage.mitigation_steps:
             file.write(f"- {step}\n")
+    if hasattr(outage, 'severity'):
+        file.write(f"Severity: {outage.severity}\n")
+    if hasattr(outage, 'customer_impact'):
+        file.write(f"Customer Impact: {outage.customer_impact}\n")
     file.write("\n---\n\n")
 
 def run_merge_script():

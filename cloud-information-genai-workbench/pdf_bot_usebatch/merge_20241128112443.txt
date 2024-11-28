@@ -1167,44 +1167,112 @@ Here is the summary of outages for the specified cloud providers:
 --
 Outage Filename: ./Azure_status_history_Microsoft_Azure_p4_2022.txt
 --
-Here is the summary of the outage:
+I can only provide information on the cloud providers mentioned in the text, which are:
 
-**Cloud Provider:** Microsoft Azure
-**Outage Details:**
+* Microsoft Azure
+* Azur e Red Hat OpenShift
+* PostgreSQL
+* NetApp Files
 
-* **Incident Duration:** 1 day
-* **Start Time:** August 27 at 02:47 UTC
-* **End Time:** August 28 at 02:47 UTC (approximately 24 hours)
-* **Impacted Services and Regions:**
-	+ West US 2 region, including all three Availability Zones
-	+ Impacted services:
-		- Azur e Kuber netes Service (AKS)
-		- Azur e Monit or
-		- Application Insights
-		- Log Analy tics
-		- Micr osoft Sentinel
-* **Root Cause:** Bug in Ubuntu 18.04, specifically a DNS resolution error caused by an unattended upgrade
-* **Downtime Period:**
-	+ West US 2 region: approximately 24 hours (from August 27 at 02:47 UTC to August 28 at 02:47 UTC)
-	+ Individual Availability Zones within the region experienced partial downtime due to utility power outages
+Here is the information about each outage per cloud provider:
 
-**Resolution Marked:** The outage was marked as resolved on August 28 at 02:47 UTC, after the affected services were restored and the root cause was identified and addressed.  
+**Microsoft Azure**
+
+* Service Impacted: DNS Resolution and Network Connectivity for Ubuntu 18.04 VMs
+* Regions/Availability Zones: West US 2 region, all three Availability Zones
+* Date of Outage: August 27 at 02:47 UTC
+* Duration:
+	+ Downtime Period: 1 day (August 27)
+	+ Hours and Minutes: 12 hours and 30 minutes
+	+ Root Cause: Bug in Ubuntu 18.04, specifically the Domain Name System (DNS) resolution error
+* Services Impacted: Azur e VMs running Ubuntu 18.04, AKS, Azur e Monit or, Application Insights, Log Analy tics, and Micr osoft Sentinel
+
+**Azur e Red Hat OpenShift**
+
+* Service Impacted: Not specified in the text
+* Regions/Availability Zones: Not specified in the text
+* Date of Outage: Not specified in the text
+* Duration:
+	+ Downtime Period: Not specified in the text
+	+ Hours and Minutes: Not specified in the text
+	+ Root Cause: Not specified in the text
+* Services Impacted: Not specified in the text
+
+**PostgreSQL**
+
+* Service Impacted: Not specified in the text
+* Regions/Availability Zones: Not specified in the text
+* Date of Outage: Not specified in the text
+* Duration:
+	+ Downtime Period: Not specified in the text
+	+ Hours and Minutes: Not specified in the text
+	+ Root Cause: Not specified in the text
+* Services Impacted: Not specified in the text
+
+**NetApp Files**
+
+* Service Impacted: Not specified in the text
+* Regions/Availability Zones: Not specified in the text
+* Date of Outage: Not specified in the text
+* Duration:
+	+ Downtime Period: Not specified in the text
+	+ Hours and Minutes: Not specified in the text
+	+ Root Cause: Not specified in the text
+* Services Impacted: Not specified in the text
+
+**Overall Summary**
+
+The outages impacted services running on Microsoft Azure, specifically Ubuntu 18.04 VMs, AKS, Azur e Monit or, Application Insights, Log Analy tics, and Micr osoft Sentinel. The outage occurred on August 27 at 02:47 UTC and lasted for approximately 12 hours and 30 minutes.
+
+**Output Table**
+
+| Cloud Provider | Service Impacted | Regions/Availability Zones | Date of Outage | Duration | Downtime Period | Root Cause | Services Impacted |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | DNS Resolution and Network Connectivity for Ubuntu 18.04 VMs | West US 2 region, all three Availability Zones | August 27 at 02:47 UTC | 1 day (12 hours and 30 minutes) | 12 hours and 30 minutes | Bug in Ubuntu 18.04, specifically the Domain Name System (DNS) resolution error | Azur e VMs running Ubuntu 18.04, AKS, Azur e Monit or, Application Insights, Log Analy tics, and Micr osoft Sentinel |
+
+Note: The table only includes information from the text and may not be comprehensive.  
 --
 Outage Filename: ./Azure_status_history_Microsoft_Azure_p5_2022.txt
 --
-Based on the provided text, I can only identify Microsoft Azure as a cloud provider. Here is the information about the outage:
+I can only provide information on the cloud providers mentioned in the text, which are Microsoft Azure.
 
-**Cloud Provider:** Microsoft Azure
-**Services Impacted:** Storage and Networking services
-**Regions and Availability Zones:** East US 2 region
-**Root Cause of Outage:** Unplanned power oscillation in one of the data centers within an Availability Zone, caused by anomalous component behavior within UPS modules.
-**Duration of Outage:**
-	* Start Time: Not specified
-	* Duration: Not specified (but it is mentioned that two storage scale units still exhibited slightly lower API availability compared to before the incident)
-	* Downtime Period: Not specified
-**Resolution:** The outage was resolved after manual intervention, including restarting the Air Handling Units (AHUs) and other components.
+**Microsoft Azure Outage**
 
-Note that I have removed all cloud providers not identified in the text, as well as apostrophes and abreviations.  
+The outage started on an unspecified date and was marked as resolved after a certain period of time. The exact duration is not specified in the text.
+
+**Services Impacted**
+
+* Storage
+* Networking
+
+**Root Cause**
+
+An unplanned power oscillation in one of the data centers within one of the Availability Zones in the East US 2 region caused the outage.
+
+**Duration**
+
+The outage lasted for an unspecified number of days, hours, and minutes. The text mentions that after most storage network connectivity was restored, recovery activities included diagnosing and remediating any host nodes that had entered an unhealthy state due to loss of network, and triaging any other hardware failures to ensure that all storage infrastructure could be brought back online.
+
+**Downtime Period**
+
+The downtime period for the Storage service is not specified in the text. However, it is mentioned that after the storage nodes returned to a healthy state, two storage scale units still exhibited slightly lower API availability compared to before the incident. This was caused by a limited number of storage software roles being in an unhealthy state.
+
+**Resolution Date**
+
+The resolution date is not specified in the text.
+
+Here is the outage information displayed as a table:
+
+| Service | Region | Availability Zone | Start Date | End Date | Duration |
+| --- | --- | --- | --- | --- | --- |
+| Storage | East US 2 |  |  |  |  |
+| Networking | East US 2 |  |  |  |  |
+
+Note: The table only includes the information specified in the text and does not provide any additional details.
+
+**Summary**
+
+Microsoft Azure experienced an outage caused by an unplanned power oscillation in one of its data centers within one of its Availability Zones in the East US 2 region. The outage impacted the Storage and Networking services, but it is unclear what specific duration or downtime period was experienced for each service.  
 --
 Outage Filename: ./Azure_status_history_Microsoft_Azure_p6_2021.txt
 --
@@ -1481,6 +1549,67 @@ Here is a table summarizing the outage:
 | Apigee | us-west4 (Vegas) | 2023-08-07 12:35 | 2023-08-07 15:00 | 1 hour and 25 minutes |
 
 Note that only Google Cloud Service HealthIncidentsAPI is available for this query, so the information provided above is limited to that service.  
+--
+Outage Filename: ./Google Cloud Service Health - - Incident report 2024-02-07.txt
+--
+I can only apply the query to the specified cloud providers mentioned in the text, which are:
+
+* Google GCP
+* Amazon AWS is not mentioned in the text
+* Microsoft Azure is not mentioned in the text
+* Oracle OCI is not mentioned in the text
+* IBM Cloud is not mentioned in the text
+* Snowflake is not mentioned in the text
+* Databricks is not mentioned in the text
+* MongoDB is not mentioned in the text
+* Akamai is not mentioned in the text
+* Cloudflare is not mentioned in the text
+
+Here are the results for Google GCP:
+
+**Google GCP Outage**
+
+The outage started on February 7, 2024, at 02:46 US/Pacific and ended on February 7, 2024, at 03:54 US/Pacific. The incident lasted for 1 hour and 8 minutes.
+
+**Affected Services and Regions/Availability Zones:**
+
+* Google Kubernetes Engine
+* Cloud Key Management Service
+* Google BigQuery
+* Google Cloud Bigtable
+* Virtual Private Cloud (VPC)
+* Google Compute Engine
+* Persistent Disk
+* Google Cloud Networking
+* Service Directory
+* Traffic Director
+
+**Root Cause:** The europe-west8 region recently received a networking upgrade to increase capacity and improve resilience.
+
+**Downtime Period:** Customers were unable to reach any of the impacted services in europe-west8-b.
+
+**Duration:**
+
+| Service | Duration |
+| --- | --- |
+| Google Kubernetes Engine | 1 hour, 8 minutes |
+| Cloud Key Management Service | 1 hour, 8 minutes |
+| Google BigQuery | 1 hour, 8 minutes |
+| Google Cloud Bigtable | 1 hour, 8 minutes |
+| Virtual Private Cloud (VPC) | 1 hour, 8 minutes |
+| Google Compute Engine | 1 hour, 8 minutes |
+| Persistent Disk | 1 hour, 8 minutes |
+| Google Cloud Networking | 1 hour, 8 minutes |
+| Service Directory | 1 hour, 8 minutes |
+| Traffic Director | 1 hour, 8 minutes |
+
+**Summary:**
+
+* Cloud Provider: Google GCP
+* Services Impacted: Google Kubernetes Engine, Cloud Key Management Service, Google BigQuery, Google Cloud Bigtable, Virtual Private Cloud (VPC), Google Compute Engine, Persistent Disk, Google Cloud Networking, Service Directory, Traffic Director
+* Regions/Availability Zones: europe-west8-b
+* Impacted Dates: February 7, 2024
+* Duration: 1 hour, 8 minutes  
 --
 Outage Filename: ./Google Cloud Service Health - - Incident report 2024-02-15.txt
 --
@@ -3377,6 +3506,125 @@ Google Cloud experienced an outage on June 10, 2024 that affected BigQuery and C
 
 Note that the outage only affected services in the US Multi-region.  
 --
+Outage Filename: ./Google Cloud Service Health - Incident report 2024-07-11.txt
+--
+I can provide you with the information you requested. However, I need to clarify that some of the cloud providers mentioned in your request (e.g., Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud) are not explicitly mentioned in the text.
+
+Based on the provided text, I will only analyze the outages related to Google Cloud Service Health and BigQuery.
+
+**Outage Details:**
+
+The outage affected Google BigQuery services globally. Here is a breakdown of the outage per service impacted:
+
+**BigQuery**
+----------------
+
+* **Affected Services:** BigQuery
+* **Regions/Availability Zones:** africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, eu, europe-central2, europe-north1, europe-southwest1, europe-west1, europe-west10, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9, me-central1, me-central2, me-west1, northamerica-northeast1, northamerica-northeast2, southamerica-east1, southamerica-west1
+* **Incident Start Date:** 2024-07-11 00:00 US/Pacific Time
+* **Duration:** 6 days, 11 hours, and 5 minutes
+* **Downtime Period:** The outage started on July 11, 2024, at 00:00 US/Pacific Time and was resolved on July 17, 2024, at 11:05 US/Pacific Time.
+* **Root Cause:** Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system.
+
+**Summary:**
+
+The outage affected Google BigQuery services globally, impacting multiple regions and availability zones. The incident started on July 11, 2024, at 00:00 US/Pacific Time and lasted for 6 days, 11 hours, and 5 minutes. The root cause was configuration changes that interrupted the reporting flow of BigQuery storage usage to the GCP billing system.
+
+**Output Table:**
+
+| Service | Regions/Availability Zones | Incident Start Date | Duration | Downtime Period | Root Cause |
+| --- | --- | --- | --- | --- | --- |
+| BigQuery | africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, eu, europe-central2, europe-north1, europe-southwest1, europe-west1, europe-west10, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9, me-central1, me-central2, me-west1, northamerica-northeast1, northamerica-northeast2, southamerica-east1, southamerica-west1 | 2024-07-11 00:00 US/Pacific Time | 6 days, 11 hours, and 5 minutes | The outage started on July 11, 2024, at 00:00 US/Pacific Time and was resolved on July 17, 2024, at 11:05 US/Pacific Time. | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. |
+
+Note: The output table only includes the information related to Google Cloud Service Health and BigQuery.  
+--
+Outage Filename: ./Google Cloud Service Health - Incident report 2024-07-15.txt
+--
+I can only apply this query to the cloud providers identified in the text, which are:
+
+* Google GCP
+* Cloud Bigtable
+* Cloud SQL
+
+Here is the information for each service impacted by the outage:
+
+**Google GCP**
+
+* Service: Cloud Monitoring
+* Region: us-central1
+* Availability Zone: Not specified
+* Incident started: 2024-07-15 09:29 PDT
+* Duration: 2 hours and 21 minutes
+* Downtime period: 2024-07-15 09:29 - 11:50 PDT (2 hours and 21 minutes)
+* Root cause: Query processing service outage
+* Services impacted:
+	+ Cloud Monitoring
+	+ Cloud Spanner
+	+ Google Cloud Bigtable
+	+ Google Kubernetes Engine
+
+**Cloud Bigtable**
+
+* Service: Google Cloud Monitoring
+* Region: us-central1
+* Availability Zone: Not specified
+* Incident started: 2024-07-15 09:29 PDT
+* Duration: 2 hours and 21 minutes
+* Downtime period: 2024-07-15 09:29 - 11:50 PDT (2 hours and 21 minutes)
+* Root cause: Query processing service outage
+* Services impacted:
+	+ Google Cloud Monitoring
+
+**Cloud SQL**
+
+* Service: Google Cloud Monitoring
+* Region: Not specified
+* Availability Zone: Not specified
+* Incident started: 2024-07-15 16:21 PDT
+* Duration: 1 hour and 30 minutes
+* Downtime period: 2024-07-15 16:21 - 17:51 PDT (1 hour and 30 minutes)
+* Root cause: Query processing service outage
+* Services impacted:
+	+ Google Cloud Monitoring
+
+Here is the information in a table format:
+
+| Service | Region | Availability Zone | Incident Started | Duration | Downtime Period | Root Cause |
+| --- | --- | --- | --- | --- | --- | --- |
+| Cloud Monitoring | us-central1 | Not specified | 2024-07-15 09:29 PDT | 2 hours and 21 minutes | 2024-07-15 09:29 - 11:50 PDT | Query processing service outage |
+| Google Cloud Spanner | us-central1 | Not specified | 2024-07-15 09:29 PDT | 2 hours and 21 minutes | 2024-07-15 09:29 - 11:50 PDT | Query processing service outage |
+| Google Cloud Bigtable | us-central1 | Not specified | 2024-07-15 09:29 PDT | 2 hours and 21 minutes | 2024-07-15 09:29 - 11:50 PDT | Query processing service outage |
+| Google Kubernetes Engine | us-central1 | Not specified | 2024-07-15 09:29 PDT | 2 hours and 21 minutes | 2024-07-15 09:29 - 11:50 PDT | Query processing service outage |
+| Google Cloud Monitoring | Not specified | Not specified | 2024-07-15 16:21 PDT | 1 hour and 30 minutes | 2024-07-15 16:21 - 17:51 PDT | Query processing service outage |
+
+Here is a summary of the cloud providers impacted, services, regions, availability zones, impacted dates and duration:
+
+**Cloud Providers Impacted**
+
+* Google GCP
+	+ Services impacted: Cloud Monitoring, Cloud Spanner, Google Cloud Bigtable, Google Kubernetes Engine
+	+ Regions impacted: us-central1
+	+ Availability zones impacted: Not specified
+	+ Incident started: 2024-07-15 09:29 PDT
+	+ Duration: 2 hours and 21 minutes
+
+**Cloud SQL**
+
+* Service impacted: Google Cloud Monitoring
+* Region not specified
+* Availability zone not specified
+* Incident started: 2024-07-15 16:21 PDT
+* Duration: 1 hour and 30 minutes
+* Downtime period: 2024-07-15 16:21 - 17:51 PDT
+
+**Root Cause**
+
+The root cause of the outage was a query processing service outage.
+
+**Summary of Outage**
+
+The outage started on July 15, 2024, at 09:29 PDT and lasted for 2 hours and 21 minutes. The services impacted were Cloud Monitoring, Cloud Spanner, Google Cloud Bigtable, and Google Kubernetes Engine in the us-central1 region. Cloud SQL was also impacted, but its incident details are not specified. The outage was caused by a query processing service outage.  
+--
 Outage Filename: ./Google Cloud Service Health - Incident report 2024-08-02.txt
 --
 Here is the breakdown of the outage for each cloud provider:
@@ -3777,6 +4025,78 @@ Note: The table only includes the regions and availability zones that were expli
 
 Since no other cloud providers were identified in the text, there is no additional information to provide.  
 --
+Outage Filename: ./Google Cloud Service Health - Incident report 2024-09-04.txt
+--
+I can only apply the query to the specified cloud providers mentioned in the text, which are:
+
+* Google GCP
+* Amazon AWS is not mentioned in the text
+* Microsoft Azure is not mentioned in the text
+* Oracle OCI is not mentioned in the text
+* IBM Cloud is not mentioned in the text
+* Snowflake is not mentioned in the text
+* Databricks is not mentioned in the text
+* MongoDB is not mentioned in the text
+* Akamai is not mentioned in the text
+* Cloudflare is not mentioned in the text
+
+Here are the results:
+
+**Google GCP**
+
+Cloud Run: All deployments were failing globally. Running environments were not affected.
+Duration: 4 hours, 9 minutes
+Start Date: September 4, 2024, 08:16 PDT
+End Date: September 4, 2024, 12:25 PDT
+
+Cloud App Engine Flexible: Failures in delete requests in us-central1. 70-100% of all delete requests failed for ~90 min.
+Duration: 90 minutes
+Start Date: September 4, 2024, 08:16 PDT
+End Date: September 4, 2024, 09:46 PDT
+
+Cloud Composer: All Composer 1 operations (creations/updates/deletions) were failing globally. Running Composer 1 environments were not affected.
+Duration: 4 hours, 9 minutes
+Start Date: September 4, 2024, 08:16 PDT
+End Date: September 4, 2024, 12:25 PDT
+
+Cloud Console: The Deployment Manager UI was unreachable, caused outages for all deployments and the Deployment Manager UI.
+Duration: 4 hours, 9 minutes
+Start Date: September 4, 2024, 08:16 PDT
+End Date: September 4, 2024, 12:25 PDT
+
+Cloud Functions: Not specified
+Duration: Not specified
+Start Date: Not specified
+End Date: Not specified
+
+Cloud Marketplace: Customers experienced errors when deploying Deployment Manager based solutions.
+Duration: Not specified
+Start Date: Not specified
+End Date: Not specified
+
+Root Cause: A regressive change in the rollout strategy caused all incoming requests to be discarded, resulting in widespread RPC errors for both internal systems and external customers.
+
+**Summary**
+
+Cloud Providers impacted: Google GCP
+Services impacted: Cloud Run, Cloud App Engine Flexible, Cloud Composer, Cloud Console, Cloud Functions, Cloud Marketplace
+Regions/Availability Zones impacted: Global (all regions)
+Impacted dates: September 4, 2024
+Duration: 4 hours, 9 minutes
+
+**Output Table**
+
+| Service | Duration | Start Date | End Date |
+| --- | --- | --- | --- |
+| Cloud Run | 4 hours, 9 minutes | September 4, 2024, 08:16 PDT | September 4, 2024, 12:25 PDT |
+| Cloud App Engine Flexible | 90 minutes | September 4, 2024, 08:16 PDT | September 4, 2024, 09:46 PDT |
+| Cloud Composer | 4 hours, 9 minutes | September 4, 2024, 08:16 PDT | September 4, 2024, 12:25 PDT |
+| Cloud Console | 4 hours, 9 minutes | September 4, 2024, 08:16 PDT | September 4, 2024, 12:25 PDT |
+| Cloud Functions | Not specified | Not specified | Not specified |
+| Cloud Marketplace | Not specified | Not specified | Not specified |
+
+Note: The table only includes the services that were explicitly mentioned in the text as being impacted.  
+--
 Outage Filename: ./Google Cloud Service Health - Incident report 2024-09-18.txt
 --
 Here is the breakdown of the outage for each cloud provider:
@@ -3887,6 +4207,49 @@ The outage was caused by an issue introduced by a new version release of an inte
 The root cause of the outage was an issue with the internal service that the Search API relies on, which caused failures on the Search API.
 
 I do not have information about other cloud providers or services impacted.  
+--
+Outage Filename: ./Google Cloud Service Health - Incident report 2024-10-08.txt
+--
+I can only apply the query to Google Cloud Service Health since that is the only cloud provider mentioned in the text.
+
+Here are the results:
+
+**Google Cloud Service Health**
+
+The outage started on October 8, 2024, at 12:15 PM PDT and ended on October 8, 2024, at 6:46 PM PDT. The incident lasted for approximately 7 hours and 31 minutes.
+
+**Affected Services**
+
+* Google App Engine
+
+**Affected Regions and Availability Zones**
+
+* us-central1 region
+* Iowa (us-central1)
+
+**Root Cause of the Outage**
+
+The root cause of the outage was not specified in the text.
+
+**Downtime Period**
+
+The downtime period for Google App Engine customers in us-central1 region started on October 8, 2024, at 12:15 PM PDT and ended on October 8, 2024, at 6:46 PM PDT.
+
+**Resolution Date**
+
+The outage was marked as resolved on October 8, 2024, at 6:46 PM PDT.
+
+Here is the information displayed in a table format:
+
+| Service | Region/Availability Zone | Start Time | End Time | Duration | Downtime Period |
+| --- | --- | --- | --- | --- | --- |
+| Google App Engine | us-central1 | 2024-10-08 12:15 PDT | 2024-10-08 18:35 PDT | 7 hours, 20 minutes | 2024-10-08 12:15 PDT - 2024-10-08 18:35 PDT |
+
+**Summary of Outage**
+
+The outage affected Google App Engine customers in the us-central1 region. The incident started on October 8, 2024, at 12:15 PM PDT and ended on October 8, 2024, at 6:46 PM PDT. The root cause of the outage was not specified.
+
+Note that I have removed all cloud providers other than Google Cloud Service Health from the query results.  
 --
 Outage Filename: ./Google Cloud Service Health - Incident report 2024-10-29.txt
 --
@@ -5193,6 +5556,251 @@ The analyzed outages affected various services across different regions and clou
 | Amazon Elastic MapReduce (EMR) | us-east-1 | | | EMR cluster launch failures | 1 hour and 46 minutes | August 6, 2024 | August 7, 2024 |
 
 Note: The availability zone is not specified for all services, as it was not provided in the original text.  
+--
+Outage Filename: ./Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - - Incident 2024-10-25.txt
+--
+I can only provide information on AWS as per the given text.
+
+Here is the breakdown of the outage for each service impacted by AWS:
+
+**Amazon Elastic Compute Cloud [Increased API errors rates for mutatable VPC calls]**
+
+* Services impacted: Amazon Elastic Compute Cloud
+* Regions impacted: ap-northeast-2
+* Availability zones impacted: Not specified
+* Outage duration: 1 hour and 18 minutes (from 7:55 AM PST to 10:13 AM PST)
+* Root cause: Not specified
+* Start time: November 10, 2024, 7:55 AM PST
+* Last update time: November 10, 2024, 10:13 AM PST
+
+**AWS Billing Console [Increased Errors Performing Payments]**
+
+* Services impacted: AWS Billing Console
+* Regions impacted: Not specified
+* Availability zones impacted: Not specified
+* Outage duration: 32 minutes (from 3:42:30 AM PST to 4:14:32 AM PST)
+* Root cause: Not specified
+* Start time: November 6, 2024, 3:42:30 AM PST
+* Last update time: November 6, 2024, 4:14:32 AM PST
+
+**AWS Partner Central [Increased Error Rates]**
+
+* Services impacted: AWS Partner Central
+* Regions impacted: Not specified
+* Availability zones impacted: Not specified
+* Outage duration: 1 hour and 15 minutes (from 4:13:56 AM PDT to 5:08:25 AM PDT)
+* Root cause: Not specified
+* Start time: October 29, 2024, 4:13:56 AM PDT
+* Last update time: October 29, 2024, 5:08:25 AM PDT
+
+**AWS QuickSight [Increased Login Errors]**
+
+* Services impacted: AWS QuickSight
+* Regions impacted: us-east-1 (N. Virginia)
+* Availability zones impacted: Not specified
+* Outage duration: 48 minutes (from 9:56:38 AM PDT to 10:45:08 AM PDT)
+* Root cause: IAM users with authentication directories housed in US-EAST-1 experiencing errors
+* Start time: October 25, 2024, 9:56:38 AM PDT
+* Last update time: October 25, 2024, 10:45:08 AM PDT
+
+**Amazon Elastic MapReduce [EMR Cluster Launch Failures]**
+
+* Services impacted: Amazon Elastic MapReduce
+* Regions impacted: us-east-1 (N. Virginia)
+* Availability zones impacted: Not specified
+* Outage duration: 44 minutes (from 7:24:28 PM EDT to 9:10:29 PM EDT)
+* Root cause: Not specified
+* Start time: August 6, 2024, 7:24:28 PM EDT
+* Last update time: August 6, 2024, 9:10:29 PM EDT
+
+**Multiple services [Increased API Error Rates]**
+
+* Services impacted: Multiple services (not specified)
+* Regions impacted: us-east-1
+* Availability zones impacted: Not specified
+* Outage duration: 5 hours and 15 minutes (from 3:40:53 PM PDT to 9:55:52 PM PDT)
+* Root cause: Not specified
+* Start time: July 30, 2024, 3:40:53 PM PDT
+* Last update time: July 30, 2024, 9:55:52 PM PDT
+
+**Multiple services [Elevated delays in newly applied tags]**
+
+* Services impacted: Multiple services (not specified)
+* Regions impacted: us-east-1
+* Availability zones impacted: Not specified
+* Outage duration: 2 hours and 30 minutes (from 7:46:36 AM EDT to 8:16:35 AM EDT)
+* Root cause: Not specified
+* Start time: July 12, 2024, 7:46:36 AM EDT
+* Last update time: July 12, 2024, 8:16:35 AM EDT
+
+**AWS Internet Connectivity [Network Connectivity Issue]**
+
+* Services impacted: AWS Internet Connectivity
+* Regions impacted: ap-southeast-2
+* Availability zones impacted: Not specified
+* Outage duration: 1 hour and 17 minutes (from 6:19:19 PM PDT to 7:36:16 PM PDT)
+* Root cause: Not specified
+* Start time: July 10, 2024, 6:19:19 PM PDT
+* Last update time: July 10, 2024, 7:36:16 PM PDT
+
+**Amazon Kinesis Data Streams [Increased Error Rates]**
+
+* Services impacted: Amazon Kinesis Data Streams
+* Regions impacted: us-east-1
+* Availability zones impacted: Not specified
+* Outage duration: 2 hours (from 7:20:00 PM PDT to 9:20:00 PM PDT)
+* Root cause: Not specified
+* Start time: June 25, 2024, 7:20:00 PM PDT
+* Last update time: June 25, 2024, 9:20:00 PM PDT
+
+**Amazon Bedrock [Increased API error rates]**
+
+* Services impacted: Amazon Bedrock
+* Regions impacted: us-west-2
+* Availability zones impacted: Not specified
+* Outage duration: 1 hour and 6 minutes (from 4:31:00 AM PST to 5:37:06 AM PST)
+* Root cause: Not specified
+* Start time: November 25, 2024, 4:31:00 AM PST
+* Last update time: November 25, 2024, 5:37:06 AM PST
+
+**AWS Service Catalog [Increased API Error rates]**
+
+* Services impacted: AWS Service Catalog
+* Regions impacted: us-west-1
+* Availability zones impacted: Not specified
+* Outage duration: 2 hours and 26 minutes (from 8:11:29 PM PDT to 10:37:55 PM PDT)
+* Root cause: Not specified
+* Start time: August 6, 2024, 8:11:29 PM PDT
+* Last update time: August 6, 2024, 10:37:55 PM PDT
+
+**Amazon Route 53 [Increased Delays Associating Route 53 Private Hosted Zones to VPC]**
+
+* Services impacted: Amazon Route 53
+* Regions impacted: Not specified
+* Availability zones impacted: Not specified
+* Outage duration: 2 hours and 4 minutes (from 12:01:00 PM PDT to 2:05:04 PM PDT)
+* Root cause: Not specified
+* Start time: October 29, 2024, 12:01:00 PM PDT
+* Last update time: October 29, 2024, 2:05:04 PM PDT
+
+**AWS Billing Console [Increased Errors Performing Payments]**
+
+* Services impacted: AWS Billing Console
+* Regions impacted: Not specified
+* Availability zones impacted: Not specified
+* Outage duration: 32 minutes (from 3:42:30 AM PST to 4:14:32 AM PST)
+* Root cause: Not specified
+* Start time: November 6, 2024, 3:42:30 AM PST
+* Last update time: November 6, 2024, 4:14:32 AM PST
+
+**AWS Partner Central [Increased Error Rates]**
+
+* Services impacted: AWS Partner Central
+* Regions impacted: Not specified
+* Availability zones impacted: Not specified
+* Outage duration: 1 hour and 15 minutes (from 4:13:56 AM PDT to 5:08:25 AM PDT)
+* Root cause: Not specified
+* Start time: October 29, 2024, 4:13:56 AM PDT
+* Last update time: October 29, 2024, 5:08:25 AM PDT
+
+**AWS QuickSight [Increased Login Errors]**
+
+* Services impacted: AWS QuickSight
+* Regions impacted: us-east-1 (N. Virginia)
+* Availability zones impacted: Not specified
+* Outage duration: 48 minutes (from 9:56:38 AM PDT to 10:45:08 AM PDT)
+* Root cause: IAM users with authentication directories housed in US-EAST-1 experiencing errors
+* Start time: October 25, 2024, 9:56:38 AM PDT
+* Last update time: October 25, 2024, 10:45:08 AM PDT
+
+**Amazon Elastic MapReduce [EMR Cluster Launch Failures]**
+
+* Services impacted: Amazon Elastic MapReduce
+* Regions impacted: us-east-1 (N. Virginia)
+* Availability zones impacted: Not specified
+* Outage duration: 44 minutes (from 7:24:28 PM EDT to 9:10:29 PM EDT)
+* Root cause: Not specified
+* Start time: August 6, 2024, 7:24:28 PM EDT
+* Last update time: August 6, 2024, 9:10:29 PM EDT
+
+**Multiple services [Increased API Error Rates]**
+
+* Services impacted: Multiple services (not specified)
+* Regions impacted: us-east-1
+* Availability zones impacted: Not specified
+* Outage duration: 5 hours and 15 minutes (from 3:40:53 PM PDT to 9:55:52 PM PDT)
+* Root cause: Not specified
+* Start time: July 30, 2024, 3:40:53 PM PDT
+* Last update time: July 30, 2024, 9:55:52 PM PDT
+
+**Multiple services [Elevated delays in newly applied tags]**
+
+* Services impacted: Multiple services (not specified)
+* Regions impacted: us-east-1
+* Availability zones impacted: Not specified
+* Outage duration: 2 hours and 30 minutes (from 7:46:36 AM EDT to 8:16:35 AM EDT)
+* Root cause: Not specified
+* Start time: July 12, 2024, 7:46:36 AM EDT
+* Last update time: July 12, 2024, 8:16:35 AM EDT
+
+**AWS Internet Connectivity [Network Connectivity Issue]**
+
+* Services impacted: AWS Internet Connectivity
+* Regions impacted: ap-southeast-2
+* Availability zones impacted: Not specified
+* Outage duration: 1 hour and 17 minutes (from 6:19:19 PM PDT to 7:36:16 PM PDT)
+* Root cause: Not specified
+* Start time: July 10, 2024, 6:19:19 PM PDT
+* Last update time: July 10, 2024, 7:36:16 PM PDT
+
+**Amazon Kinesis Data Streams [Increased Error Rates]**
+
+* Services impacted: Amazon Kinesis Data Streams
+* Regions impacted: us-east-1
+* Availability zones impacted: Not specified
+* Outage duration: 2 hours (from 7:20:00 PM PDT to 9:20:00 PM PDT)
+* Root cause: Not specified
+* Start time: June 25, 2024, 7:20:00 PM PDT
+* Last update time: June 25, 2024, 9:20:00 PM PDT
+
+**Amazon Bedrock [Increased API error rates]**
+
+* Services impacted: Amazon Bedrock
+* Regions impacted: us-west-2
+* Availability zones impacted: Not specified
+* Outage duration: 1 hour and 6 minutes (from 4:31:00 AM PST to 5:37:06 AM PST)
+* Root cause: Not specified
+* Start time: November 25, 2024, 4:31:00 AM PST
+* Last update time: November 25, 2024, 5:37:06 AM PST
+
+**AWS Service Catalog [Increased API Error rates]**
+
+* Services impacted: AWS Service Catalog
+* Regions impacted: us-west-1
+* Availability zones impacted: Not specified
+* Outage duration: 2 hours and 26 minutes (from 8:11:29 PM PDT to 10:37:55 PM PDT)
+* Root cause: Not specified
+* Start time: August 6, 2024, 8:11:29 PM PDT
+* Last update time: August 6, 2024, 10:37:55 PM PDT
+
+**Amazon Route 53 [Increased Delays Associating Route 53 Private Hosted Zones to VPC]**
+
+* Services impacted: Amazon Route 53
+* Regions impacted: Not specified
+* Availability zones impacted: Not specified
+* Outage duration: 2 hours and 4 minutes (from 12:01:00 PM PDT to 2:05:04 PM PDT)
+* Root cause: Not specified
+* Start time: October 29, 2024, 12:01:00 PM PDT
+* Last update time: October 29, 2024, 2:05:04 PM PDT
+
+**Summary of Cloud Providers impacted**
+
+| Cloud Provider | Services Impacted | Regions Impacted | Availability Zones Impacted | Start Time | End Time |
+| --- | --- | --- | --- | --- | --- |
+| AWS | Multiple services (not specified) | us-east-1, us-west-2, ap-southeast-2, us-west-1 | Not specified | July 30, 2024, 3:40:53 PM PDT | November 25, 2024, 5:37:06 AM PST |
+| AWS | Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, AWS Billing Console, AWS Partner Central, AWS QuickSight, Amazon Route 53, Amazon Kinesis Data Streams, Amazon Bedrock, AWS Service Catalog | us-east-1 (N. Virginia), us-west-2, ap-southeast-2, us-west-1 | Not specified | August 6, 2024, 7:24:28 PM EDT | November 25, 2024, 5:37:06 AM PST |
+
+**Note**: The start and end times listed are for the duration of each outage.  
 --
 Outage Filename: ./Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2023-12-09.txt
 --
