@@ -2,6 +2,8 @@ import os
 import re
 from datetime import datetime
 from typing import Dict, List, Optional
+import csv
+from time import time
 
 class OutageInfo:
     def __init__(self):
@@ -455,10 +457,186 @@ def parse_timestamp(timestamp_str: str) -> Optional[datetime]:
     # This is a placeholder - implement based on your specific timestamp formats
     return None
 
+# Add this mapping dictionary after the service_patterns
+service_full_names = {
+    "AWS": {
+        "AGW": "Amazon API Gateway",
+        "ABR": "Amazon Bedrock",
+        "CF": "Amazon CloudFront",
+        "R53": "Amazon Route 53",
+        "CW": "Amazon CloudWatch",
+        "CGP": "Amazon CodeGuru Profiler",
+        "ADZ": "Amazon DataZone",
+        "DDB": "Amazon DocumentDB",
+        "RDS": "Amazon Relational Database Service",
+        "AAS": "Amazon Aurora Serverless",
+        "EIC": "EC2 Instance Connect",
+        "EC2": "Amazon Elastic Compute Cloud",
+        "ECS": "Amazon Elastic Container Service",
+        "EFS": "Amazon Elastic File System",
+        "EBS": "Amazon Elastic Block Store",
+        "ELB": "Amazon Elastic Load Balancing",
+        "EMR": "Amazon Elastic MapReduce",
+        "EC": "Amazon ElastiCache",
+        "QS": "Amazon QuickSight",
+        "λ": "AWS Lambda",
+        "SF": "AWS Step Functions",
+        "RS": "Amazon Redshift",
+        "EKS": "Amazon Elastic Kubernetes Service",
+        
+        "CWAI": "Amazon CloudWatch Application Insights",
+        "DDB": "Amazon DynamoDB",
+        "EMRS": "Amazon EMR Serverless",
+        "FS": "Amazon FinSpace",
+        "GL": "Amazon AWS Glue",
+        "S3": "Amazon S3"
+    },
+    "GCP": {
+        "VAI": "Google Cloud VertexAI",
+        "GCML": "Google Cloud Machine Learning",
+        "GAPI": "Google Cloud Apigee API",
+        "GCR": "Google Cloud Run",
+        "BQ": "Google Cloud BigQuery",
+        "ADB": "AlloyDB for PostgreSQL",
+        "GCS": "Google Cloud SQL",
+        "CBT": "Google Cloud Bigtable",
+        "GCE": "Google Cloud Compute Engine",
+        "DP": "Google Cloud Dataproc",
+        "DF": "Google Cloud Dataflow",
+        "GCS": "Google Cloud Storage",
+        "DS": "Google Cloud DataStudio",
+        "DL": "Google Cloud Datalab",
+        "GCC": "Google Cloud Composer",
+        "LSP": "Google Cloud Looker Studio Pro",
+        "RCE": "Google Cloud reCAPTCHA Enterprise",
+        "GCLB": "Google Cloud Load Balancing",
+        "GCDN": "Google Cloud And Media CDN",
+        "GCDNS": "Google Cloud DNS",
+        "GKE": "Google Kubernetes Engine"
+    },
+    "Azure": {
+        "AAD": "Azure Active Directory",
+        "EID": "Microsoft Entra ID",
+        "AADB2C": "Azure Active Directory B2C",
+        "AML": "Azure Machine Learning",
+        "AAI": "Azure AI",
+        "AIS": "Azure AI Search",
+        "AOAI": "Azure OpenAI Service",
+        "APIM": "Azure API Management",
+        "ADB": "Azure Databricks",
+        "ASQLMI": "Azure SQL Managed Instance",
+        "ASDB": "Azure SQL Database",
+        "ACDB": "Azure Cosmos DB",
+        "APS": "Azure Database for PostgreSQL",
+        "AMS": "Azure Database for MySQL",
+        "AB": "Azure Batch",
+        "AAS": "Azure App Service",
+        "AF": "Azure Functions",
+        "PBI": "Azure PowerBI",
+        "ACDN": "Azure CDN",
+        "ASA": "Azure Storage Accounts",
+        "AKS": "Azure Kubernetes Service"
+    },
+    "IBM": {
+        "WP": "IBM Watson Platform",
+        "DSI": "IBM Dedicated Storage Instance",
+        "DE": "IBM Data Engine",
+        "DPH": "IBM Data Product Hub",
+        "DB": "IBM Databases",
+        "DBDS": "IBM Databases for DataStax",
+        "DBEDB": "IBM Databases for EDB",
+        "DBES": "IBM Databases for Elasticsearch",
+        "DBETCD": "IBM Databases for etcd",
+        "DBMONGO": "IBM Databases for MongoDB",
+        "DBMYSQL": "IBM Databases for MySQL",
+        "DBPG": "IBM Databases for PostgreSQL",
+        "DBREDIS": "IBM Databases for Redis",
+        "DS": "IBM DataStage",
+        "DB2": "IBM Db2",
+        "DB2W": "IBM Db2 Warehouse",
+        "WBIA": "IBM watsonx BI Assistant",
+        "FN": "IBM Functions",
+        "COS": "IBM Cloud Object Storage",
+        "CC": "IBM Cloud Console",
+        "K8S": "IBM Kubernetes",
+        "RHOIC": "Red Hat OpenShift on IBM Cloud"
+    },
+    "OCI": {
+        "ADB": "Oracle AutonomousDB 21c",
+        "OS": "Object Storage OCI",
+        "BDS": "Oracle Big Data Service",
+        "OKE": "Oracle Kubernetes Service"
+    },
+    "Snowflake": {
+        "SFAWS": "Snowflake on AWS",
+        "SFAZURE": "Snowflake on Azure",
+        "SFGCP": "Snowflake on GCP"
+    },
+    "Databricks": {
+        "DBS": "Databricks SaaS",
+        "DBW": "Databricks Workspace",
+        "DBML": "Databricks Mlflow",
+        "DBN": "Databricks Notebooks"
+    },
+    "Salesforce": {
+        "SFS": "Salesforce SaaS",
+        "SFSC": "Salesforce Sales Cloud",
+        "SFSERV": "Salesforce Service Cloud",
+        "SFMC": "Salesforce Marketing Cloud",
+        "SFMAP": "Salesforce Mulesoft Anypoint Platform"
+    },
+    "MongoDB": {
+        "MDB": "MongoDB Atlas",
+        "MDBA": "MongoDB Atlas AWS",
+        "MDBAZ": "MongoDB Atlas Azure",
+        "MDBG": "MongoDB Atlas GCP",
+        "MDBS": "MongoDB Atlas Search",
+        "MDBV": "MongoDB Atlas Vector Search",
+        "MDBSP": "MongoDB Atlas Stream Processing",
+        "MDBBI": "MongoDB Atlas BI Connector",
+        "MDBSQL": "MongoDB Atlas SQL"
+    },
+    "Cloudflare": {
+        "CFA": "AnyCast CloudFlare",
+        "CFCDN": "CDN CloudFlare",
+        "CFDNS": "Cloudflare DNS",
+        "CFDDOS": "Cloudflare DDoS Protection"
+    },
+    "Akamai": {
+        "ACDN": "CDN Akamai",
+        "AEC": "Edge Computing Akamai",
+        "AS": "Security Akamai"
+    },
+    "Macrometa": {
+        "MCDN": "CDN Macrometa",
+        "MEC": "Edge Computing Macrometa"
+    }
+}
+
+def get_full_service_name(provider: str, service: str) -> str:
+    """Convert service abbreviation to full name if available"""
+    if provider in service_full_names:
+        # First try exact match
+        if service in service_full_names[provider]:
+            return service_full_names[provider][service]
+        
+        # Then try to match any part of the service name
+        for abbr, full_name in service_full_names[provider].items():
+            if abbr in service or service in full_name:
+                return full_name
+    
+    # Return original if no mapping found
+    return service
+
 def write_outage_summary(outage: OutageInfo, file):
     """Helper function to write outage summary with enhanced fields"""
     file.write(f"Cloud Provider: {outage.cloud_provider}\n")
-    file.write(f"Services: {', '.join(outage.services)}\n")
+    
+    # Convert service abbreviations to full names
+    full_service_names = [get_full_service_name(outage.cloud_provider, service) 
+                         for service in outage.services]
+    file.write(f"Services: {', '.join(full_service_names)}\n")
+    
     file.write(f"Regions: {', '.join(outage.regions)}\n")
     file.write(f"Availability Zones: {', '.join(outage.availability_zones)}\n")
     file.write(f"Start Time: {outage.start_time}\n" if outage.start_time else "")
@@ -472,7 +650,9 @@ def write_outage_summary(outage: OutageInfo, file):
     if outage.incident_id:
         file.write(f"Incident ID: {outage.incident_id}\n")
     if outage.affected_components:
-        file.write(f"Affected Components: {', '.join(outage.affected_components)}\n")
+        full_component_names = [get_full_service_name(outage.cloud_provider, component) 
+                              for component in outage.affected_components]
+        file.write(f"Affected Components: {', '.join(full_component_names)}\n")
     if outage.mitigation_steps:
         file.write("Mitigation Steps:\n")
         for step in outage.mitigation_steps:
@@ -482,6 +662,65 @@ def write_outage_summary(outage: OutageInfo, file):
     if hasattr(outage, 'customer_impact'):
         file.write(f"Customer Impact: {outage.customer_impact}\n")
     file.write("\n---\n\n")
+
+def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
+    """Write outage summary as CSV with one line per service"""
+    csv_file = f'pdf_bot_usebatch/outage_report_summary_{timestamp}.csv'
+    
+    headers = [
+        'timestamp',
+        'cloud_provider',
+        'service',
+        'regions',
+        'availability_zones',
+        'start_time',
+        'end_time',
+        'status',
+        'impact',
+        'duration',
+        'root_cause',
+        'resolution',
+        'downtime_period',
+        'incident_id',
+        'affected_components',
+        'mitigation_steps'
+    ]
+
+    with open(csv_file, 'w', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=headers)
+        writer.writeheader()
+        
+        for outage in outages:
+            # Convert start_time to timestamp if available, otherwise use current time
+            if outage.start_time and isinstance(outage.start_time, datetime):
+                record_timestamp = outage.start_time.timestamp()
+            else:
+                record_timestamp = time()  # Fallback to current time if no start_time
+            
+            # Create base row with common fields
+            base_row = {
+                'timestamp': record_timestamp,
+                'cloud_provider': outage.cloud_provider,
+                'regions': '|'.join(outage.regions),
+                'availability_zones': '|'.join(outage.availability_zones),
+                'start_time': outage.start_time.isoformat() if outage.start_time else '',
+                'end_time': outage.end_time.isoformat() if outage.end_time else '',
+                'status': outage.status,
+                'impact': outage.impact,
+                'duration': outage.duration,
+                'root_cause': outage.root_cause,
+                'resolution': outage.resolution,
+                'downtime_period': outage.downtime_period,
+                'incident_id': outage.incident_id,
+                'affected_components': '|'.join(outage.affected_components),
+                'mitigation_steps': '|'.join(outage.mitigation_steps)
+            }
+            
+            # Write one row per service
+            for service in outage.services:
+                row = base_row.copy()
+                row['service'] = get_full_service_name(outage.cloud_provider, service)
+                writer.writerow(row)
 
 def run_merge_script():
     """Run the merge_text_files script and process the merged output"""
@@ -494,11 +733,15 @@ def run_merge_script():
         outages = extract_outage_info(content)
         
         timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
-        summary_file = f'pdf_bot_usebatch/outage_report_summary_{timestamp}.txt'
         
+        # Write text summary
+        summary_file = f'pdf_bot_usebatch/outage_report_summary_{timestamp}.txt'
         with open(summary_file, 'w') as f:
             for outage in outages:
                 write_outage_summary(outage, f)
+        
+        # Write CSV summary
+        write_outage_csv_summary(outages, timestamp)
                 
     except Exception as e:
         print(f"Error processing merged file: {str(e)}")
