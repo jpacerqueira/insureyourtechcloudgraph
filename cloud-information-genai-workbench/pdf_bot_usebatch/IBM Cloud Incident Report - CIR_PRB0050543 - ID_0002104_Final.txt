@@ -1,0 +1,60 @@
+Here is the response to your query:
+
+**Summary of Outages**
+
+The outage affected IBM Cloud Public IPv4 Network, causing connectivity loss for customer servers in Dallas (DAL12), Tokyo (TOK02), and London (LON06) Data Centers.
+
+**Outage Details by Service and Region**
+
+Dallas (DAL12)
+----------------
+
+* Services impacted: IBM Kubernetes Service, Watson Platform services
+* Regions affected: DAL12
+* Availability zones affected: Not specified
+* Outage duration: 1 hour 43 minutes
+* Start time: 20:51 UTC
+* End time: 22:34 UTC
+* Root cause: Automated procedure in network device configuration management triggered a software defect, causing routing protocol reset and anomalous route advertisement.
+* Downtime period: 1 hour 43 minutes
+
+Tokyo (TOK02)
+----------------
+
+* Services impacted: IBM Kubernetes Service, Watson Platform services
+* Regions affected: TOK02
+* Availability zones affected: Not specified
+* Outage duration: 1 hour 43 minutes
+* Start time: 20:51 UTC
+* End time: 22:34 UTC
+* Root cause: Automated procedure in network device configuration management triggered a software defect, causing routing protocol reset and anomalous route advertisement.
+* Downtime period: 1 hour 43 minutes
+
+London (LON06)
+----------------
+
+* Services impacted: IBM Kubernetes Service, Watson Platform services
+* Regions affected: LON06
+* Availability zones affected: Not specified
+* Outage duration: 1 hour 43 minutes
+* Start time: 20:51 UTC
+* End time: 22:34 UTC
+* Root cause: Automated procedure in network device configuration management triggered a software defect, causing routing protocol reset and anomalous route advertisement.
+* Downtime period: 1 hour 43 minutes
+
+**Overall Summary**
+
+The outage affected IBM Cloud Public IPv4 Network, causing connectivity loss for customer servers in Dallas (DAL12), Tokyo (TOK02), and London (LON06) Data Centers. The root cause was an automated procedure in network device configuration management that triggered a software defect, causing routing protocol reset and anomalous route advertisement.
+
+**Output Table**
+
+| Service | Region | Availability Zones | Outage Duration | Start Time | End Time | Root Cause | Downtime Period |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| IBM Kubernetes Service | DAL12 |  | 1 hour 43 minutes | 20:51 UTC | 22:34 UTC | Automated procedure in network device configuration management triggered a software defect, causing routing protocol reset and anomalous route advertisement. | 1 hour 43 minutes |
+| Watson Platform services | DAL12 |  | 1 hour 43 minutes | 20:51 UTC | 22:34 UTC | Automated procedure in network device configuration management triggered a software defect, causing routing protocol reset and anomalous route advertisement. | 1 hour 43 minutes |
+| IBM Kubernetes Service | TOK02 |  | 1 hour 43 minutes | 20:51 UTC | 22:34 UTC | Automated procedure in network device configuration management triggered a software defect, causing routing protocol reset and anomalous route advertisement. | 1 hour 43 minutes |
+| Watson Platform services | TOK02 |  | 1 hour 43 minutes | 20:51 UTC | 22:34 UTC | Automated procedure in network device configuration management triggered a software defect, causing routing protocol reset and anomalous route advertisement. | 1 hour 43 minutes |
+| IBM Kubernetes Service | LON06 |  | 1 hour 43 minutes | 20:51 UTC | 22:34 UTC | Automated procedure in network device configuration management triggered a software defect, causing routing protocol reset and anomalous route advertisement. | 1 hour 43 minutes |
+| Watson Platform services | LON06 |  | 1 hour 43 minutes | 20:51 UTC | 22:34 UTC | Automated procedure in network device configuration management triggered a software defect, causing routing protocol reset and anomalous route advertisement. | 1 hour 43 minutes |
+
+Note: The table only includes the services and regions mentioned in the original text.
