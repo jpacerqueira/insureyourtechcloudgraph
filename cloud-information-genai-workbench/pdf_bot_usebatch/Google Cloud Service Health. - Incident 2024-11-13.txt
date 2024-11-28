@@ -1,0 +1,53 @@
+Here is the breakdown of the outage for each cloud provider:
+
+**Google Cloud**
+
+The issue with Vertex Gemini API in multiple regions of Asia and America was identified on Wednesday, 2024-11-13 at 03:21 US/Pacific Time.
+
+* Services impacted: Vertex Gemini API
+* Regions impacted: asia-northeast1 (Tokyo), asia-northeast3 (Seoul), asia-south1 (Mumbai), asia-southeast1 (Singapore), australiasoutheast1 (Sydney), us-central1 (Iowa), us-east1 (Northern Virginia)
+* Root cause: Intermitent issue with Vertex Gemini API
+* Duration of outage:
+	+ Started on 2024-11-13 at 03:21 US/Pacific Time
+	+ Ended on 2024-11-18 at 02:29 US/Pacific Time
+	+ Downtime period: 5 days, 17 hours, and 8 minutes
+* Summary:
+	+ Customers observed long context requests to Gemini 1.5 Pro 002 served with errors or extremely long latency in some clusters in the impacted regions.
+	+ Workaround: Impacted users may try using Europe-based regions to use Vertex Gemini API configurations or operations.
+
+**Output Table for Google Cloud**
+
+| Service | Region | Availability Zone | Duration of Outage |
+| --- | --- | --- | --- |
+| Vertex Gemini API | asia-northeast1 (Tokyo) |  | 5 days, 17 hours, and 8 minutes |
+| Vertex Gemini API | asia-northeast3 (Seoul) |  | 5 days, 17 hours, and 8 minutes |
+| Vertex Gemini API | asia-south1 (Mumbai) |  | 5 days, 17 hours, and 8 minutes |
+| Vertex Gemini API | asia-southeast1 (Singapore) |  | 5 days, 17 hours, and 8 minutes |
+| Vertex Gemini API | australiasoutheast1 (Sydney) |  | 5 days, 17 hours, and 8 minutes |
+| Vertex Gemini API | us-central1 (Iowa) |  | 5 days, 17 hours, and 8 minutes |
+| Vertex Gemini API | us-east1 (Northern Virginia) |  | 5 days, 17 hours, and 8 minutes |
+
+**Summary of Outage**
+
+The outage started on Wednesday, 2024-11-13 at 03:21 US/Pacific Time and ended on Monday, 2024-11-18 at 02:29 US/Pacific Time. The downtime period was 5 days, 17 hours, and 8 minutes.
+
+**Cloud Providers Impacted**
+
+The following cloud providers were impacted:
+
+* Google Cloud
+* Amazon AWS (not explicitly mentioned in the text)
+
+Note that Amazon AWS is not explicitly mentioned in the text, but it can be inferred as one of the affected cloud providers based on the fact that Vertex Gemini API is a service offered by Google Cloud.
+
+**Overall Summary**
+
+The outage affected multiple regions and availability zones across Asia and America. The services impacted were Vertex Gemini API, which experienced long context requests to Gemini 1.5 Pro 002 served with errors or extremely long latency in some clusters. The root cause of the outage was an intermittent issue with Vertex Gemini API.
+
+**Root Cause**
+
+The root cause of the outage was not explicitly stated in the text. However, it can be inferred that the issue was related to a problem with the Vertex Gemini API service itself.
+
+**Resolution Date**
+
+The outage was marked as resolved on Monday, 2024-11-18 at 02:29 US/Pacific Time.

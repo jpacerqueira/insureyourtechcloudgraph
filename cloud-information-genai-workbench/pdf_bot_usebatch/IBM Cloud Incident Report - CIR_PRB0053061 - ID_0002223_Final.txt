@@ -1,0 +1,34 @@
+Here is the response to your query:
+
+**Summary of Outages**
+
+The outage occurred on September 15, 2020, in the Tokyo (TOK02) Data Center. The incident started at 00:40 UTC and was resolved at 04:11 UTC.
+
+**Cloud Providers Impacted**
+
+Only IBM Cloud was identified as impacted in the text.
+
+**IBM Cloud Outage Details**
+
+Here are the outage details for IBM Cloud:
+
+Outage Started: September 15, 2020, 00:40 UTC
+Duration: 3 hours and 31 minutes
+Downtime Period: The downtime period started when the unplanned VSI migrations began at 00:40 UTC and ended when all VSIs were verified to be back online at 04:11 UTC.
+
+**Root Cause of Outage**
+
+The root cause of the outage was an unintended procedural step for a future planned maintenance. During migration scheduling, an option was selected that started immediate, unplanned customer VSI migrations.
+
+Here is the breakdown of the outage by service:
+
+1. Unplanned VSI Migrations in TOK02
+	* Services Impacted: VSIs in Pod 1 of the Tokyo (TOK02) Data Center
+	* Regions and Availability Zones: TOK02
+	* Downtime Period: The downtime period started when the unplanned VSI migrations began at 00:40 UTC and ended when all VSIs were verified to be back online at 04:11 UTC.
+2. Unplanned VSI Evacuation Job in TOK02
+	* Services Impacted: VSIs in Pod 1 of the Tokyo (TOK02) Data Center
+	* Regions and Availability Zones: TOK02
+	* Downtime Period: The downtime period started when the unplanned VSI evacuation job triggered evacuations of a number of customer VSIs at 01:11 UTC and ended when all VSIs were verified to be back online at 04:11 UTC.
+
+Note that no other cloud providers or services were impacted in the text.

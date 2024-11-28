@@ -1,53 +1,85 @@
-I can only apply the query to the specified Cloud Providers that are mentioned in the text. The relevant Cloud Providers are:
+I can provide you with the requested information. However, I need to clarify that some of the cloud providers mentioned in your query (e.g., Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud) are not explicitly mentioned in the provided text.
 
-* Google GCP
-* Amazon AWS is not mentioned in the text, so I will exclude it.
-* Microsoft Azure is not mentioned in the text, so I will exclude it.
-* Oracle OCI is not mentioned in the text, so I will exclude it.
+Based on the text, the following cloud providers were impacted:
 
-Here is the query applied to the specified Cloud Providers:
+1. Google Cloud Platform (GCP)
+2. Snowflake
+3. Databricks
 
-**Google GCP**
+Here is the information you requested, broken down by service and cloud provider:
 
-The outage affected the following services and regions:
+**Google Cloud Platform**
 
-* Australia-southeast2
-* Apigee
-* Apigee Edge Public Cloud
-* Batch
-* Cloud Filestore
-* Cloud Firestore
-* Cloud Key Management Service
-* Cloud NAT
-* Cloud Run
-* Google BigQuery
-* Google Cloud Dataflow
-* Google Cloud Dataproc
-* Google Cloud Deploy
-* Google Cloud Networking
-* Google Cloud Pub/Sub
-* Google Cloud SQL
+* Incident Start: 29 October 2024 16:21
+* Incident End: 29 October 2024 19:34
+* Duration: 3 hours, 13 minutes
+* Affected Services:
+	+ Apigee
+	+ Apigee Edge Public Cloud
+	+ Batch
+	+ Cloud Filestore
+	+ Cloud Firestore
+	+ Cloud Key Management Service
+	+ Cloud NAT
+	+ Cloud Run
+	+ Google BigQuery
+	+ Google Cloud Dataflow
+	+ Google Cloud Dataproc
+	+ Google Cloud Deploy
+	+ Google Cloud Networking
+	+ Google Cloud Pub/Sub
+	+ Google Cloud SQL
+	+ Google Cloud Storage
+	+ Google Compute Engine
+	+ Google Kubernetes Engine
+	+ Identity and Access Management
+	+ Persistent Disk
+	+ Resource Manager API
+	+ Virtual Private Cloud (VPC)
+* Affected Regions/Zones: australia-southeast2
 
-The outage started on October 29, 2024, at 16:21 and ended on October 29, 2024, at 19:34. The incident lasted for 3 hours and 13 minutes.
+**Root Cause:** Review of datacenter power distribution design in the region, implementation of additional protections against voltage swells and sags.
 
-The root cause of the outage was not specified in the text.
+**Snowflake**
 
-**Services with downtime period:**
+* Incident Start: 29 October 2024 16:21
+* Incident End: 29 October 2024 19:34
+* Duration: 3 hours, 13 minutes
+* Affected Services:
+	+ Snowflake (no specific services mentioned)
+* Affected Regions/Zones: Not specified
 
-* Google Cloud SQL: unavailable between 16:23 and 17:52
-* Google Cloud Storage: request timeout or unavailable errors between 16:21 and 17:12
-* Google Compute Engine: GCE operations such as compute.instances.insert failed from 16:40 to 19:34
-* Google Kubernetes Engine: unable to make changes to their workloads on GKE clusters from 16:20 to 17:30
-* Identity and Access Management: loss of trace and visible latency/unavailability within the region from 16:28 to 17:14
-* Persistent Disk: high latency up to several minutes for I/O operations in the australia-southeast2 region
+**Databricks**
 
-**Duration of outage:**
+* Incident Start: 29 October 2024 16:21
+* Incident End: 29 October 2024 19:34
+* Duration: 3 hours, 13 minutes
+* Affected Services:
+	+ Databricks (no specific services mentioned)
+* Affected Regions/Zones: Not specified
 
-* Google Cloud SQL: 1 hour and 29 minutes
-* Google Cloud Storage: 0 hours and 51 minutes
-* Google Compute Engine: 2 hours and 54 minutes
-* Google Kubernetes Engine: 1 hour and 10 minutes
-* Identity and Access Management: 46 minutes
-* Persistent Disk: not specified
+**Overall Summary**
 
-**Resolved:** The outage was marked as resolved on October 29, 2024, at 19:34.
+The outage affected multiple services across Google Cloud Platform in the australia-southeast2 region. The root cause was related to datacenter power distribution design and implementation of additional protections against voltage swells and sags.
+
+Here is a summary table:
+
+| Service | Incident Start | Incident End | Duration |
+| --- | --- | --- | --- |
+| Apigee | 16:21 | 19:34 | 3 hours, 13 minutes |
+| Apigee Edge Public Cloud | 16:21 | 19:34 | 3 hours, 13 minutes |
+| Batch | 16:21 | 19:34 | 3 hours, 13 minutes |
+| Cloud Filestore | 16:21 | 19:34 | 3 hours, 13 minutes |
+| Cloud Firestore | 16:21 | 19:34 | 3 hours, 13 minutes |
+| Cloud Key Management Service | 16:21 | 19:34 | 3 hours, 13 minutes |
+| Cloud NAT | 16:21 | 19:34 | 3 hours, 13 minutes |
+| Cloud Run | 16:20 | 17:14 | 54 minutes |
+| Google BigQuery | 16:20 | 16:55 | 35 minutes |
+| Google Cloud Dataflow | 16:21 | 17:40 | 1 hour, 19 minutes |
+| Google Cloud Dataproc | 17:13 | 19:10 | 2 hours, 57 minutes |
+| Google Cloud Deploy | Not specified | Not specified | Not specified |
+| Google Cloud Networking | 16:21 | 16:43 | 22 minutes |
+| Google Cloud Pub/Sub | 16:21 | 17:06 | 45 minutes |
+| Google Cloud SQL | 16:23 | 17:52 | 1 hour, 29 minutes |
+
+Note that some services (e.g., Cloud Deploy) did not have specific duration or end times mentioned in the text.

@@ -1,0 +1,65 @@
+Here is the response to your query:
+
+**Outage Details**
+
+The outage occurred on June 20, 2023, at 03:49 UTC and lasted for 18 hours and 26 minutes.
+
+**Impacted Services and Regions**
+
+* IBM Cloud:
+	+ FRA05 Data Center (Frankfurt)
+	+ eu-de zone 3 (EU-DE-3)
+	+ Watson platform
+	+ VPC
+	+ Load Balancer
+	+ Network Infrastructure
+	+ VSI
+	+ SQL Query
+	+ Databases
+	+ Cloud Foundry
+	+ Containers Kubernetes
+	+ DNS
+	+ VPC VPN
+	+ Code Engine
+
+**Root Cause of the Outage**
+
+The final root cause of the generator failure was a failed relay on the generator control system, resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+
+**Outage Timeline**
+
+Here is the outage timeline for each service:
+
+* 03:49 UTC - Power grid utility outage occurred
+* 03:46 UTC - UPS batteries depleted and FRA05 server room 2 lost power
+* 03:50 UTC - IBM Cloud Specialists received the alert notification for service outages
+* 04:12 UTC - IBM Cloud Site Operator Engineering team began data center recovery actions
+* 04:17 UTC - Power was restored on the affected rack
+* 04:30 UTC - All bare metal hosts were back online
+* 05:00 UTC - Facilities grid power supply was restored and transition from generator to utility was completed
+* 05:41 UTC - IBM Cloud Site Operator Engineering team were notified that power was restored after inspection
+* 10:33 UTC - VPC underlying host operating system was restored
+* 12:18 UTC - All VSI Hosts were recovered
+* 19:14 UTC - VPC SDN was restored
+
+**Summary of Outage**
+
+The outage affected IBM Cloud services in FRA05 Data Center and eu-de zone 3 (EU-DE-3). The root cause of the outage was a failed relay on the generator control system. The outage lasted for 18 hours and 26 minutes, starting at 03:49 UTC.
+
+**Output Table**
+
+| Service | Region/AZ | Start Time | End Time | Duration | Downtime Period |
+| --- | --- | --- | --- | --- | --- |
+| Power Grid Utility Outage | - | 03:49 UTC | - | - | - |
+| UPS Batteries Depletion | FRA05 | 03:46 UTC | 04:17 UTC | 0 hours 31 minutes | - |
+| IBM Cloud Specialists Alert | - | 03:50 UTC | - | - | - |
+| Data Center Recovery Actions | FRA05 | 04:12 UTC | 19:14 UTC | 15 hours 2 minutes | - |
+| Power Restoration on Affected Rack | FRA05 | 04:17 UTC | 04:30 UTC | 0 hours 13 minutes | - |
+| Bare Metal Hosts Recovery | FRA05 | 04:30 UTC | 05:00 UTC | 0 hours 30 minutes | - |
+| Facilities Grid Power Supply Restoration | FRA05 | 05:00 UTC | 05:41 UTC | 0 hours 41 minutes | - |
+| Power Restoration Notification | FRA05 | 05:41 UTC | 10:33 UTC | 4 hours 52 minutes | - |
+| VPC Underlying Host OS Recovery | FRA05 | 10:33 UTC | 12:18 UTC | 1 hour 45 minutes | - |
+| All VSI Hosts Recovery | FRA05 | 12:18 UTC | 19:14 UTC | 7 hours 56 minutes | - |
+| VPC SDN Restoration | FRA05 | 19:14 UTC | - | - | - |
+
+Note: The table only includes services and regions impacted by the outage, as per your request to remove Cloud Vendors not identified in the text.

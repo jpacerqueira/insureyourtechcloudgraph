@@ -1,0 +1,43 @@
+I can only apply the query to IBM Cloud as it is the only cloud provider mentioned in the text.
+
+Here are the results:
+
+**IBM Cloud Outage Details**
+
+The outage started on October 15, 2022, at 07:44 UTC and ended on October 16, 2022, at 20:30 UTC. The incident lasted for 1 day, 12 hours, and 46 minutes.
+
+**Services Impacted**
+
+* All IBM Cloud services
+* Regions: Seoul 01 (SEO01) Data Center
+
+**Root Cause of Outage**
+
+A fire started in one UPS battery room, causing damage to UPS and generator equipment.
+
+**Downtime Period**
+
+The downtime period was from October 15, 2022, at 07:44 UTC to October 16, 2022, at 20:30 UTC.
+
+**Resolution Date**
+
+The outage was marked as resolved on October 16, 2022, at 20:30 UTC.
+
+Here is the breakdown of the outage by service:
+
+* Network connectivity
+	+ Region: Seoul 01 (SEO01) Data Center
+	+ Downtime duration: 1 day, 12 hours, and 46 minutes
+* Core services
+	+ Region: Seoul 01 (SEO01) Data Center
+	+ Downtime duration: 1 day, 12 hours, and 46 minutes
+* Shared services
+	+ Region: Seoul 01 (SEO01) Data Center
+	+ Downtime duration: 1 day, 12 hours, and 46 minutes
+* Customer services
+	+ Region: Seoul 01 (SEO01) Data Center
+	+ Downtime duration: 1 day, 12 hours, and 46 minutes
+
+**Overall Summary**
+
+The IBM Cloud outage affected all services in the Seoul 01 (SEO01) Data Center region. The root cause of the outage was a fire in one UPS battery room, causing damage to equipment. The outage lasted for 1 day, 12 hours, and 46 minutes, with downtime from October 15, 2022, at 07:44 UTC to October 16, 2022, at 20:30 UTC.
