@@ -130,7 +130,7 @@ services = {
     "Microsoft Azure": ["Azure Active Directory AAD","Microsoft Entra ID","Azure Active Directory B2C",
                         "Azure Machine Learning","Azure AI","Azure AI Search","Azure OpenAI Service","Azure API Management","Azure Databricks",
                         "Azure SQL Managed Instance","Azure SQL Database","Azure Cosmos DB","Azure Database for PostgreSQL","Azure Database for MySQL",
-                        "Azure Batch","Azure App Service","Azure Functions","Azure PowerBi App","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)"],
+                        "Azure Batch","Azure App Service","Azure Functions","Azure PowerBI","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)"],
     "IBM Cloud": ["IBM Watson Platform","IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
         "IBM Databases","IBM Databases for DataStax","IBM Databases for EDB",
         "IBM Databases for Elasticsearch","IBM Databases for etcd","IBM Databases for MongoDB",
