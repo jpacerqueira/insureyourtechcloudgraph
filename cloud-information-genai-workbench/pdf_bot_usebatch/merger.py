@@ -485,16 +485,16 @@ def write_outage_summary(outage: OutageInfo, file):
 
 def run_merge_script():
     """Run the merge_text_files script and process the merged output"""
-    os.system('./merge_text_files.sh')
+    os.system('sh pdf_bot_usebatch/merge_text_files ')
     
     try:
-        with open('merge.txt', 'r') as f:
+        with open('pdf_bot_usebatch/merge.txt', 'r') as f:
             content = f.read()
             
         outages = extract_outage_info(content)
         
         timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
-        summary_file = f'outage_summary_{timestamp}.txt'
+        summary_file = f'pdf_bot_usebatch/outage_report_summary_{timestamp}.txt'
         
         with open(summary_file, 'w') as f:
             for outage in outages:
