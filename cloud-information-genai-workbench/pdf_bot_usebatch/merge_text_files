@@ -6,6 +6,7 @@ echo " - Llama-3.2 3B - " > merge.txt.tmp
 echo " - Outage Information - " >> merge.txt.tmp
 rm -f merge.txt
 rm -f merge_*.txt
+rm -f outage_report_summary_*.txt
 #
 for file in  ./*.txt; do
     echo "--" >> merge.txt.tmp
