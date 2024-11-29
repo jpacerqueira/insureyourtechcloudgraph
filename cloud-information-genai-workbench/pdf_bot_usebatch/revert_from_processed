@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Find all files ending with .pdf.PROCESSED and rename them
+for file in *.pdf.PROCESSED; do
+    # Check if files exist matching the pattern
+    if [ -e "$file" ]; then
+        # Get new filename by removing .PROCESSED
+        newname="${file%.PROCESSED}"
+        # Rename the file
+        mv "$file" "$newname"
+        echo "Renamed: $file -> $newname"
+    fi
+done

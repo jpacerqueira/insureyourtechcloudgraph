@@ -1,9 +1,9 @@
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C:CUSTOMER_NAME {
-    name: 'Fuel DataScience BigData Limited AI and Information Solutions - b2b and B2C',
-    project_name: 'Project by Fuel DataScience BigData Limited AI and Information Solutions - b2b and B2C',
-    median_sla_usage_percentage: '250.00%',
-    median_sla_deviation_risk: '994.75',
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company:CUSTOMER_NAME {
+    name: 'Alla.s Beautiful GenAI and AI Company',
+    project_name: 'Project by Alla.s Beautiful GenAI and AI Company',
+    median_sla_usage_percentage: '218.80%',
+    median_sla_deviation_risk: '995.22',
     median_traffic_coefficient: '0.08%',
     median_usage_risk: '996.72',
     median_service_sla: '99.95%',
@@ -36,15 +36,6 @@ CREATE (Salesforce:TECHNOLOGY_PROVIDER {
                     vendor_median_service_sla: '99.99%',
                     vendor_median_annual_downtime: '375.00'
                 })
-CREATE (MongoDB:TECHNOLOGY_PROVIDER {
-                    name: 'MongoDB',
-                    vendor_median_sla_usage_percentage: '5829.53%',
-                    vendor_median_sla_deviation_risk: '937.80',
-                    vendor_median_traffic_coefficient: '0.29%',
-                    vendor_median_usage_risk: '990.26',
-                    vendor_median_service_sla: '100.00%',
-                    vendor_median_annual_downtime: '1532.00'
-                })
 CREATE (Cloudflare:TECHNOLOGY_PROVIDER {
                     name: 'Cloudflare',
                     vendor_median_sla_usage_percentage: '8751.90%',
@@ -53,6 +44,15 @@ CREATE (Cloudflare:TECHNOLOGY_PROVIDER {
                     vendor_median_usage_risk: '998.97',
                     vendor_median_service_sla: '100.00%',
                     vendor_median_annual_downtime: '4.60'
+                })
+CREATE (MongoDB:TECHNOLOGY_PROVIDER {
+                    name: 'MongoDB',
+                    vendor_median_sla_usage_percentage: '5829.53%',
+                    vendor_median_sla_deviation_risk: '937.80',
+                    vendor_median_traffic_coefficient: '0.29%',
+                    vendor_median_usage_risk: '990.26',
+                    vendor_median_service_sla: '100.00%',
+                    vendor_median_annual_downtime: '1532.00'
                 })
 CREATE (Akamai:TECHNOLOGY_PROVIDER {
                     name: 'Akamai',
@@ -74,8 +74,8 @@ CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
                 })
 CREATE (Google_Cloud_GCP:TECHNOLOGY_PROVIDER {
                     name: 'Google Cloud GCP',
-                    vendor_median_sla_usage_percentage: '175.42%',
-                    vendor_median_sla_deviation_risk: '995.87',
+                    vendor_median_sla_usage_percentage: '152.21%',
+                    vendor_median_sla_deviation_risk: '996.22',
                     vendor_median_traffic_coefficient: '0.06%',
                     vendor_median_usage_risk: '997.17',
                     vendor_median_service_sla: '99.95%',
@@ -91,25 +91,6 @@ CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
                     vendor_median_annual_downtime: '400.00'
                 })
 
-CREATE (Amazon_API_Gateway:TECHNOLOGY_SERVICE {
-    name: 'Amazon API Gateway',
-    sla_usage: '919.71%',
-    sla_deviation_risk: '984.719',
-    traffic_coefficient: '0.45986%',
-    usage_risk: '985.218',
-    annual_downtime_minutes: '2417.00',
-    service_sla_tier1: '99.95000',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_API_Gateway)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '919.71%',
-    sla_deviation_risk: '984.719',
-    traffic_coefficient: '0.45986%',
-    usage_risk: '985.218'
-}]->(Amazon_API_Gateway)
-
 CREATE (Amazon_Bedrock:TECHNOLOGY_SERVICE {
     name: 'Amazon Bedrock',
     sla_usage: '152.21%',
@@ -121,7 +102,7 @@ CREATE (Amazon_Bedrock:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_Bedrock)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_Bedrock)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -140,7 +121,7 @@ CREATE (Amazon_CloudFront:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_CloudFront)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_CloudFront)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -159,7 +140,7 @@ CREATE (Amazon_Route_53:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_Route_53)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_Route_53)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -178,7 +159,7 @@ CREATE (Amazon_CloudWatch_Application_Insights:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_CloudWatch_Application_Insights)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_CloudWatch_Application_Insights)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -197,7 +178,7 @@ CREATE (Amazon_CodeGuru_Profiler:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_CodeGuru_Profiler)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_CodeGuru_Profiler)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -216,7 +197,7 @@ CREATE (Amazon_DataZone:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_DataZone)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_DataZone)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -235,7 +216,7 @@ CREATE (Amazon_DocumentDB:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_DocumentDB)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_DocumentDB)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -254,13 +235,32 @@ CREATE (Amazon_DynamoDB:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_DynamoDB)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_DynamoDB)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '218.80%',
     sla_deviation_risk: '995.222',
     traffic_coefficient: '0.10940%',
     usage_risk: '995.721'
 }]->(Amazon_DynamoDB)
+
+CREATE (Amazon_API_Gateway:TECHNOLOGY_SERVICE {
+    name: 'Amazon API Gateway',
+    sla_usage: '919.71%',
+    sla_deviation_risk: '984.719',
+    traffic_coefficient: '0.45986%',
+    usage_risk: '985.218',
+    annual_downtime_minutes: '2417.00',
+    service_sla_tier1: '99.95000',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_API_Gateway)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '919.71%',
+    sla_deviation_risk: '984.719',
+    traffic_coefficient: '0.45986%',
+    usage_risk: '985.218'
+}]->(Amazon_API_Gateway)
 
 CREATE (Amazon_AWS_RDS:TECHNOLOGY_SERVICE {
     name: 'Amazon AWS RDS',
@@ -273,7 +273,7 @@ CREATE (Amazon_AWS_RDS:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_RDS)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_RDS)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '218.80%',
     sla_deviation_risk: '995.222',
@@ -292,7 +292,7 @@ CREATE (Amazon_AWS_Aurora_Serverles:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Aurora_Serverles)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Aurora_Serverles)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '218.80%',
     sla_deviation_risk: '995.222',
@@ -311,7 +311,7 @@ CREATE (Amazon_EC2_Instance_Connect:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_EC2_Instance_Connect)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_EC2_Instance_Connect)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -330,7 +330,7 @@ CREATE (Amazon_Elastic_Compute_Cloud:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Compute_Cloud)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Compute_Cloud)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '156.39%',
     sla_deviation_risk: '996.157',
@@ -349,7 +349,7 @@ CREATE (Amazon_Elastic_Container_Service:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Container_Service)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Container_Service)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -368,7 +368,7 @@ CREATE (Amazon_Elastic_File_System:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_File_System)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_File_System)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -387,32 +387,13 @@ CREATE (Amazon_Elastic_Block_Store:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Block_Store)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Block_Store)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '251.14%',
     sla_deviation_risk: '994.737',
     traffic_coefficient: '0.12557%',
     usage_risk: '995.237'
 }]->(Amazon_Elastic_Block_Store)
-
-CREATE (Amazon_Elastic_Load_Balancing:TECHNOLOGY_SERVICE {
-    name: 'Amazon Elastic Load Balancing',
-    sla_usage: '152.21%',
-    sla_deviation_risk: '996.220',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719',
-    annual_downtime_minutes: '400',
-    service_sla_tier1: '99.95000',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Load_Balancing)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '152.21%',
-    sla_deviation_risk: '996.220',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719'
-}]->(Amazon_Elastic_Load_Balancing)
 
 CREATE (Amazon_Elastic_MapReduce:TECHNOLOGY_SERVICE {
     name: 'Amazon Elastic MapReduce',
@@ -425,13 +406,32 @@ CREATE (Amazon_Elastic_MapReduce:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_MapReduce)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_MapReduce)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '250.00%',
     sla_deviation_risk: '994.754',
     traffic_coefficient: '0.12500%',
     usage_risk: '995.254'
 }]->(Amazon_Elastic_MapReduce)
+
+CREATE (Amazon_Elastic_Load_Balancing:TECHNOLOGY_SERVICE {
+    name: 'Amazon Elastic Load Balancing',
+    sla_usage: '152.21%',
+    sla_deviation_risk: '996.220',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719',
+    annual_downtime_minutes: '400',
+    service_sla_tier1: '99.95000',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Load_Balancing)
+CREATE (Amazon_AWS)-[:CONNECTED_RISK {
+    sla_usage: '152.21%',
+    sla_deviation_risk: '996.220',
+    traffic_coefficient: '0.07610%',
+    usage_risk: '996.719'
+}]->(Amazon_Elastic_Load_Balancing)
 
 CREATE (Amazon_ElastiCache:TECHNOLOGY_SERVICE {
     name: 'Amazon ElastiCache',
@@ -444,7 +444,7 @@ CREATE (Amazon_ElastiCache:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_ElastiCache)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_ElastiCache)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -463,7 +463,7 @@ CREATE (Amazon_EMR_Serverless:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_EMR_Serverless)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_EMR_Serverless)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -482,7 +482,7 @@ CREATE (Amazon_FinSpace:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_FinSpace)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_FinSpace)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -501,7 +501,7 @@ CREATE (Amazon_QuickSight:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_QuickSight)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_QuickSight)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '41.10%',
     sla_deviation_risk: '997.885',
@@ -520,7 +520,7 @@ CREATE (Amazon_AWS_Lambda:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Lambda)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Lambda)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '157.91%',
     sla_deviation_risk: '996.134',
@@ -539,7 +539,7 @@ CREATE (Amazon_AWS_CloudFront:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_CloudFront)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_CloudFront)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '144.60%',
     sla_deviation_risk: '996.334',
@@ -558,7 +558,7 @@ CREATE (Amazon_AWS_Step_Functions:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Step_Functions)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Step_Functions)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '136.99%',
     sla_deviation_risk: '996.448',
@@ -577,7 +577,7 @@ CREATE (Amazon_Redshift:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_Redshift)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_Redshift)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '136.99%',
     sla_deviation_risk: '996.448',
@@ -596,7 +596,7 @@ CREATE (Amazon_AWS_Glue:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Glue)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Glue)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '136.99%',
     sla_deviation_risk: '996.448',
@@ -615,7 +615,7 @@ CREATE (Amazon_s3:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_s3)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_s3)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '136.99%',
     sla_deviation_risk: '996.448',
@@ -634,7 +634,7 @@ CREATE (Amazon_Elastic_Kubernetes_Service:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Kubernetes_Service)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Kubernetes_Service)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
     sla_usage: '913.24%',
     sla_deviation_risk: '984.816',
@@ -653,7 +653,7 @@ CREATE (Google_Cloud_VertexAI:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_VertexAI)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_VertexAI)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -672,7 +672,7 @@ CREATE (Google_Cloud_Machine_Learning:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Machine_Learning)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Machine_Learning)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '152.21%',
     sla_deviation_risk: '996.220',
@@ -691,7 +691,7 @@ CREATE (Google_Cloud_Apigee_API:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Apigee_API)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Apigee_API)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '175.42%',
     sla_deviation_risk: '995.872',
@@ -710,7 +710,7 @@ CREATE (Google_Cloud_Run:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Run)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Run)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '175.42%',
     sla_deviation_risk: '995.872',
@@ -729,7 +729,7 @@ CREATE (Google_Cloud_BigQuery:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_BigQuery)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_BigQuery)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '175.42%',
     sla_deviation_risk: '995.872',
@@ -748,7 +748,7 @@ CREATE (AlloyDB_for_PostgreSQL:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(AlloyDB_for_PostgreSQL)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(AlloyDB_for_PostgreSQL)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '121.77%',
     sla_deviation_risk: '996.676',
@@ -767,7 +767,7 @@ CREATE (Google_Cloud_SQL:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_SQL)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_SQL)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '175.42%',
     sla_deviation_risk: '995.872',
@@ -786,7 +786,7 @@ CREATE (Google_Cloud_Bigtable:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Bigtable)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Bigtable)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '175.42%',
     sla_deviation_risk: '995.872',
@@ -805,7 +805,7 @@ CREATE (Google_Cloud_Compute_Engine:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Compute_Engine)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Compute_Engine)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '175.42%',
     sla_deviation_risk: '995.872',
@@ -824,7 +824,7 @@ CREATE (Google_Cloud_Dataproc:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Dataproc)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Dataproc)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '121.77%',
     sla_deviation_risk: '996.676',
@@ -843,7 +843,7 @@ CREATE (Google_Cloud_Dataflow:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Dataflow)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Dataflow)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '121.77%',
     sla_deviation_risk: '996.676',
@@ -862,7 +862,7 @@ CREATE (Google_Cloud_Storage:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Storage)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Storage)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '121.77%',
     sla_deviation_risk: '996.676',
@@ -881,7 +881,7 @@ CREATE (Google_Cloud_DataStudio:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_DataStudio)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_DataStudio)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '83.71%',
     sla_deviation_risk: '997.246',
@@ -900,13 +900,32 @@ CREATE (Google_Cloud_Datalab:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Datalab)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Datalab)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '83.71%',
     sla_deviation_risk: '997.246',
     traffic_coefficient: '0.04186%',
     usage_risk: '997.746'
 }]->(Google_Cloud_Datalab)
+
+CREATE (Google_Cloud_Composer:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud Composer',
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175',
+    annual_downtime_minutes: '320.00',
+    service_sla_tier1: '99.95000',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Composer)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175'
+}]->(Google_Cloud_Composer)
 
 CREATE (Google_Cloud_Looker_Studio_Pro:TECHNOLOGY_SERVICE {
     name: 'Google Cloud Looker Studio Pro',
@@ -919,13 +938,32 @@ CREATE (Google_Cloud_Looker_Studio_Pro:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Looker_Studio_Pro)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Looker_Studio_Pro)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '83.71%',
     sla_deviation_risk: '997.246',
     traffic_coefficient: '0.04186%',
     usage_risk: '997.746'
 }]->(Google_Cloud_Looker_Studio_Pro)
+
+CREATE (Google_Cloud_reCAPTCHA_Enterprise:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud reCAPTCHA Enterprise',
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175',
+    annual_downtime_minutes: '320.00',
+    service_sla_tier1: '99.95000',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_reCAPTCHA_Enterprise)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '121.77%',
+    sla_deviation_risk: '996.676',
+    traffic_coefficient: '0.06088%',
+    usage_risk: '997.175'
+}]->(Google_Cloud_reCAPTCHA_Enterprise)
 
 CREATE (Google_Cloud_Load_Balancing:TECHNOLOGY_SERVICE {
     name: 'Google Cloud Load Balancing',
@@ -938,7 +976,7 @@ CREATE (Google_Cloud_Load_Balancing:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '50.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Load_Balancing)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Load_Balancing)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '608.83%',
     sla_deviation_risk: '992.210',
@@ -957,7 +995,7 @@ CREATE (Google_Cloud_And_Media_CDN:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '50.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_And_Media_CDN)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_And_Media_CDN)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '608.83%',
     sla_deviation_risk: '992.210',
@@ -976,7 +1014,7 @@ CREATE (Google_Cloud_DNS:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '50.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_DNS)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_DNS)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '60882.80%',
     sla_deviation_risk: '390.172',
@@ -995,7 +1033,7 @@ CREATE (Google_Kubernetes_Engine__GKE_:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Google_Kubernetes_Engine__GKE_)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Google_Kubernetes_Engine__GKE_)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '913.24%',
     sla_deviation_risk: '984.816',
@@ -1014,7 +1052,7 @@ CREATE (Azure_Active_Directory_AAD:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '25.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_Active_Directory_AAD)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_Active_Directory_AAD)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337899.54%',
     sla_deviation_risk: '-42340.950',
@@ -1033,7 +1071,7 @@ CREATE (Microsoft_Entra_ID:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '25.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Microsoft_Entra_ID)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Microsoft_Entra_ID)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337899.54%',
     sla_deviation_risk: '-42340.950',
@@ -1052,7 +1090,7 @@ CREATE (Azure_Active_Directory_B2C:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '25.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_Active_Directory_B2C)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_Active_Directory_B2C)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337899.54%',
     sla_deviation_risk: '-42340.950',
@@ -1071,7 +1109,7 @@ CREATE (Azure_Machine_Learning:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_Machine_Learning)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_Machine_Learning)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1090,7 +1128,7 @@ CREATE (Azure_AI:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_AI)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_AI)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1109,7 +1147,7 @@ CREATE (Azure_AI_Search:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_AI_Search)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_AI_Search)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1128,7 +1166,7 @@ CREATE (Azure_OpenAI_Service:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_OpenAI_Service)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_OpenAI_Service)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1147,7 +1185,7 @@ CREATE (Azure_API_Management:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_API_Management)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_API_Management)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1166,7 +1204,7 @@ CREATE (Azure_Databricks:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_Databricks)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_Databricks)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '433.79%',
     sla_deviation_risk: '989.334',
@@ -1185,7 +1223,7 @@ CREATE (Azure_SQL_Managed_Instance:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_SQL_Managed_Instance)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_SQL_Managed_Instance)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1204,7 +1242,7 @@ CREATE (Azure_SQL_Database:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_SQL_Database)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_SQL_Database)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1223,7 +1261,7 @@ CREATE (Azure_Cosmos_DB:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_Cosmos_DB)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_Cosmos_DB)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1242,7 +1280,7 @@ CREATE (Azure_Database_for_PostgreSQL:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_Database_for_PostgreSQL)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_Database_for_PostgreSQL)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1261,7 +1299,7 @@ CREATE (Azure_Database_for_MySQL:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_Database_for_MySQL)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_Database_for_MySQL)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1280,7 +1318,7 @@ CREATE (Azure_Batch:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_Batch)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_Batch)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1299,7 +1337,7 @@ CREATE (Azure_App_Service:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_App_Service)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_App_Service)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1318,7 +1356,7 @@ CREATE (Azure_Functions:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_Functions)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_Functions)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1326,8 +1364,8 @@ CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     usage_risk: '985.999'
 }]->(Azure_Functions)
 
-CREATE (Azure_PowerBi_App:TECHNOLOGY_SERVICE {
-    name: 'Azure PowerBi App',
+CREATE (Azure_PowerBI:TECHNOLOGY_SERVICE {
+    name: 'Azure PowerBI',
     sla_usage: '13828.01%',
     sla_deviation_risk: '846.944',
     traffic_coefficient: '0.34570%',
@@ -1337,13 +1375,13 @@ CREATE (Azure_PowerBi_App:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_PowerBi_App)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_PowerBI)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '13828.01%',
     sla_deviation_risk: '846.944',
     traffic_coefficient: '0.34570%',
     usage_risk: '967.918'
-}]->(Azure_PowerBi_App)
+}]->(Azure_PowerBI)
 
 CREATE (Azure_CDN:TECHNOLOGY_SERVICE {
     name: 'Azure CDN',
@@ -1356,7 +1394,7 @@ CREATE (Azure_CDN:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_CDN)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_CDN)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1375,7 +1413,7 @@ CREATE (Azure_Storage_Accounts:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_Storage_Accounts)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_Storage_Accounts)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '4337.90%',
     sla_deviation_risk: '951.231',
@@ -1394,7 +1432,7 @@ CREATE (Azure_Kubernetes_Service__AKS_:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Azure_Kubernetes_Service__AKS_)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Azure_Kubernetes_Service__AKS_)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
     sla_usage: '8219.18%',
     sla_deviation_risk: '908.580',
@@ -1413,7 +1451,7 @@ CREATE (CDN_Akamai:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(CDN_Akamai)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(CDN_Akamai)
 CREATE (Akamai)-[:CONNECTED_RISK {
     sla_usage: '8561.64%',
     sla_deviation_risk: '913.461',
@@ -1432,7 +1470,7 @@ CREATE (Edge_Computing_Akamai:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Edge_Computing_Akamai)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Edge_Computing_Akamai)
 CREATE (Akamai)-[:CONNECTED_RISK {
     sla_usage: '8751.90%',
     sla_deviation_risk: '911.560',
@@ -1451,89 +1489,13 @@ CREATE (Security_Akamai:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Security_Akamai)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Security_Akamai)
 CREATE (Akamai)-[:CONNECTED_RISK {
     sla_usage: '8751.90%',
     sla_deviation_risk: '911.560',
     traffic_coefficient: '0.00088%',
     usage_risk: '998.974'
 }]->(Security_Akamai)
-
-CREATE (AnyCast_CloudFlare:TECHNOLOGY_SERVICE {
-    name: 'AnyCast CloudFlare',
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974',
-    annual_downtime_minutes: '4.60',
-    service_sla_tier1: '99.99999',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(AnyCast_CloudFlare)
-CREATE (Cloudflare)-[:CONNECTED_RISK {
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974'
-}]->(AnyCast_CloudFlare)
-
-CREATE (CDN_CloudFlare:TECHNOLOGY_SERVICE {
-    name: 'CDN CloudFlare',
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974',
-    annual_downtime_minutes: '4.60',
-    service_sla_tier1: '99.99999',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(CDN_CloudFlare)
-CREATE (Cloudflare)-[:CONNECTED_RISK {
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974'
-}]->(CDN_CloudFlare)
-
-CREATE (Cloudflare_DNS:TECHNOLOGY_SERVICE {
-    name: 'Cloudflare DNS',
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974',
-    annual_downtime_minutes: '4.60',
-    service_sla_tier1: '99.99999',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Cloudflare_DNS)
-CREATE (Cloudflare)-[:CONNECTED_RISK {
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974'
-}]->(Cloudflare_DNS)
-
-CREATE (Cloudflare_DDoS_Protection:TECHNOLOGY_SERVICE {
-    name: 'Cloudflare DDoS Protection',
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974',
-    annual_downtime_minutes: '4.60',
-    service_sla_tier1: '99.99999',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Cloudflare_DDoS_Protection)
-CREATE (Cloudflare)-[:CONNECTED_RISK {
-    sla_usage: '8751.90%',
-    sla_deviation_risk: '911.560',
-    traffic_coefficient: '0.00088%',
-    usage_risk: '998.974'
-}]->(Cloudflare_DDoS_Protection)
 
 CREATE (MongoDB_Atlas:TECHNOLOGY_SERVICE {
     name: 'MongoDB Atlas',
@@ -1546,7 +1508,7 @@ CREATE (MongoDB_Atlas:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas)
 CREATE (MongoDB)-[:CONNECTED_RISK {
     sla_usage: '5829.53%',
     sla_deviation_risk: '937.801',
@@ -1565,7 +1527,7 @@ CREATE (MongoDB_Atlas_AWS:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_AWS)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_AWS)
 CREATE (MongoDB)-[:CONNECTED_RISK {
     sla_usage: '5829.53%',
     sla_deviation_risk: '937.801',
@@ -1584,7 +1546,7 @@ CREATE (MongoDB_Atlas_Azure:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_Azure)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_Azure)
 CREATE (MongoDB)-[:CONNECTED_RISK {
     sla_usage: '5829.53%',
     sla_deviation_risk: '937.801',
@@ -1603,7 +1565,7 @@ CREATE (MongoDB_Atlas_GCP:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_GCP)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_GCP)
 CREATE (MongoDB)-[:CONNECTED_RISK {
     sla_usage: '5829.53%',
     sla_deviation_risk: '937.801',
@@ -1622,7 +1584,7 @@ CREATE (MongoDB_Atlas_Search:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_Search)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_Search)
 CREATE (MongoDB)-[:CONNECTED_RISK {
     sla_usage: '5829.53%',
     sla_deviation_risk: '937.801',
@@ -1641,7 +1603,7 @@ CREATE (MongoDB_Atlas_Vector_Search:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_Vector_Search)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_Vector_Search)
 CREATE (MongoDB)-[:CONNECTED_RISK {
     sla_usage: '5829.53%',
     sla_deviation_risk: '937.801',
@@ -1660,7 +1622,7 @@ CREATE (MongoDB_Atlas_Stream_Processing:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_Stream_Processing)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_Stream_Processing)
 CREATE (MongoDB)-[:CONNECTED_RISK {
     sla_usage: '5829.53%',
     sla_deviation_risk: '937.801',
@@ -1679,7 +1641,7 @@ CREATE (MongoDB_Atlas_BI_Connector:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_BI_Connector)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_BI_Connector)
 CREATE (MongoDB)-[:CONNECTED_RISK {
     sla_usage: '5829.53%',
     sla_deviation_risk: '937.801',
@@ -1698,13 +1660,70 @@ CREATE (MongoDB_Atlas_SQL:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_SQL)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(MongoDB_Atlas_SQL)
 CREATE (MongoDB)-[:CONNECTED_RISK {
     sla_usage: '5829.53%',
     sla_deviation_risk: '937.801',
     traffic_coefficient: '0.29148%',
     usage_risk: '990.264'
 }]->(MongoDB_Atlas_SQL)
+
+CREATE (AnyCast_CloudFlare:TECHNOLOGY_SERVICE {
+    name: 'AnyCast CloudFlare',
+    sla_usage: '8751.90%',
+    sla_deviation_risk: '911.560',
+    traffic_coefficient: '0.00088%',
+    usage_risk: '998.974',
+    annual_downtime_minutes: '4.60',
+    service_sla_tier1: '99.99999',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(AnyCast_CloudFlare)
+CREATE (Cloudflare)-[:CONNECTED_RISK {
+    sla_usage: '8751.90%',
+    sla_deviation_risk: '911.560',
+    traffic_coefficient: '0.00088%',
+    usage_risk: '998.974'
+}]->(AnyCast_CloudFlare)
+
+CREATE (Cloudflare_DNS:TECHNOLOGY_SERVICE {
+    name: 'Cloudflare DNS',
+    sla_usage: '8751.90%',
+    sla_deviation_risk: '911.560',
+    traffic_coefficient: '0.00088%',
+    usage_risk: '998.974',
+    annual_downtime_minutes: '4.60',
+    service_sla_tier1: '99.99999',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Cloudflare_DNS)
+CREATE (Cloudflare)-[:CONNECTED_RISK {
+    sla_usage: '8751.90%',
+    sla_deviation_risk: '911.560',
+    traffic_coefficient: '0.00088%',
+    usage_risk: '998.974'
+}]->(Cloudflare_DNS)
+
+CREATE (Cloudflare_DDoS_Protection:TECHNOLOGY_SERVICE {
+    name: 'Cloudflare DDoS Protection',
+    sla_usage: '8751.90%',
+    sla_deviation_risk: '911.560',
+    traffic_coefficient: '0.00088%',
+    usage_risk: '998.974',
+    annual_downtime_minutes: '4.60',
+    service_sla_tier1: '99.99999',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Cloudflare_DDoS_Protection)
+CREATE (Cloudflare)-[:CONNECTED_RISK {
+    sla_usage: '8751.90%',
+    sla_deviation_risk: '911.560',
+    traffic_coefficient: '0.00088%',
+    usage_risk: '998.974'
+}]->(Cloudflare_DDoS_Protection)
 
 CREATE (Salesforce_SaaS:TECHNOLOGY_SERVICE {
     name: 'Salesforce SaaS',
@@ -1717,7 +1736,7 @@ CREATE (Salesforce_SaaS:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '5.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Salesforce_SaaS)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Salesforce_SaaS)
 CREATE (Salesforce)-[:CONNECTED_RISK {
     sla_usage: '713.47%',
     sla_deviation_risk: '991.060',
@@ -1736,7 +1755,7 @@ CREATE (Salesforce_Sales_Cloud:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '5.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Sales_Cloud)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Sales_Cloud)
 CREATE (Salesforce)-[:CONNECTED_RISK {
     sla_usage: '713.47%',
     sla_deviation_risk: '991.060',
@@ -1755,7 +1774,7 @@ CREATE (Salesforce_Service_Cloud:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '5.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Service_Cloud)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Service_Cloud)
 CREATE (Salesforce)-[:CONNECTED_RISK {
     sla_usage: '713.47%',
     sla_deviation_risk: '991.060',
@@ -1774,7 +1793,7 @@ CREATE (Salesforce_Marketing_Cloud:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '5.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Marketing_Cloud)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Marketing_Cloud)
 CREATE (Salesforce)-[:CONNECTED_RISK {
     sla_usage: '713.47%',
     sla_deviation_risk: '991.060',
@@ -1793,7 +1812,7 @@ CREATE (Salesforce_Mulesoft_Anypoint_Platform:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '5.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Mulesoft_Anypoint_Platform)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Salesforce_Mulesoft_Anypoint_Platform)
 CREATE (Salesforce)-[:CONNECTED_RISK {
     sla_usage: '142.69%',
     sla_deviation_risk: '996.362',
@@ -1812,7 +1831,7 @@ CREATE (Databricks_SaaS:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Databricks_SaaS)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Databricks_SaaS)
 CREATE (Databricks)-[:CONNECTED_RISK {
     sla_usage: '71.35%',
     sla_deviation_risk: '996.575',
@@ -1831,13 +1850,32 @@ CREATE (Databricks_Workspace:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Databricks_Workspace)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Databricks_Workspace)
 CREATE (Databricks)-[:CONNECTED_RISK {
     sla_usage: '71.35%',
     sla_deviation_risk: '996.575',
     traffic_coefficient: '0.07135%',
     usage_risk: '996.862'
 }]->(Databricks_Workspace)
+
+CREATE (CDN_CloudFlare:TECHNOLOGY_SERVICE {
+    name: 'CDN CloudFlare',
+    sla_usage: '8751.90%',
+    sla_deviation_risk: '911.560',
+    traffic_coefficient: '0.00088%',
+    usage_risk: '998.974',
+    annual_downtime_minutes: '4.60',
+    service_sla_tier1: '99.99999',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(CDN_CloudFlare)
+CREATE (Cloudflare)-[:CONNECTED_RISK {
+    sla_usage: '8751.90%',
+    sla_deviation_risk: '911.560',
+    traffic_coefficient: '0.00088%',
+    usage_risk: '998.974'
+}]->(CDN_CloudFlare)
 
 CREATE (Databricks_Mlflow:TECHNOLOGY_SERVICE {
     name: 'Databricks Mlflow',
@@ -1850,7 +1888,7 @@ CREATE (Databricks_Mlflow:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Databricks_Mlflow)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Databricks_Mlflow)
 CREATE (Databricks)-[:CONNECTED_RISK {
     sla_usage: '71.35%',
     sla_deviation_risk: '996.575',
@@ -1869,7 +1907,7 @@ CREATE (Databricks_Notebooks:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Databricks_Notebooks)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Databricks_Notebooks)
 CREATE (Databricks)-[:CONNECTED_RISK {
     sla_usage: '71.35%',
     sla_deviation_risk: '996.575',
@@ -1888,32 +1926,13 @@ CREATE (Snowflake_on_AWS:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Snowflake_on_AWS)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Snowflake_on_AWS)
 CREATE (Snowflake)-[:CONNECTED_RISK {
     sla_usage: '71.35%',
     sla_deviation_risk: '996.575',
     traffic_coefficient: '0.07135%',
     usage_risk: '996.862'
 }]->(Snowflake_on_AWS)
-
-CREATE (Snowflake_on_GCP:TECHNOLOGY_SERVICE {
-    name: 'Snowflake on GCP',
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862',
-    annual_downtime_minutes: '375',
-    service_sla_tier1: '99.90000',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Snowflake_on_GCP)
-CREATE (Snowflake)-[:CONNECTED_RISK {
-    sla_usage: '71.35%',
-    sla_deviation_risk: '996.575',
-    traffic_coefficient: '0.07135%',
-    usage_risk: '996.862'
-}]->(Snowflake_on_GCP)
 
 CREATE (Snowflake_on_Azure:TECHNOLOGY_SERVICE {
     name: 'Snowflake on Azure',
@@ -1926,10 +1945,29 @@ CREATE (Snowflake_on_Azure:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited_AI_and_Information_Solutions___b2b_and_B2C)-[:CUSTOMER_USES_SERVICE]->(Snowflake_on_Azure)
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Snowflake_on_Azure)
 CREATE (Snowflake)-[:CONNECTED_RISK {
     sla_usage: '71.35%',
     sla_deviation_risk: '996.575',
     traffic_coefficient: '0.07135%',
     usage_risk: '996.862'
 }]->(Snowflake_on_Azure)
+
+CREATE (Snowflake_on_GCP:TECHNOLOGY_SERVICE {
+    name: 'Snowflake on GCP',
+    sla_usage: '71.35%',
+    sla_deviation_risk: '996.575',
+    traffic_coefficient: '0.07135%',
+    usage_risk: '996.862',
+    annual_downtime_minutes: '375',
+    service_sla_tier1: '99.90000',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Alla_s_Beautiful_GenAI_and_AI_Company)-[:CUSTOMER_USES_SERVICE]->(Snowflake_on_GCP)
+CREATE (Snowflake)-[:CONNECTED_RISK {
+    sla_usage: '71.35%',
+    sla_deviation_risk: '996.575',
+    traffic_coefficient: '0.07135%',
+    usage_risk: '996.862'
+}]->(Snowflake_on_GCP)
