@@ -24,6 +24,14 @@ class OutageInfo:
         self.mitigation_steps: List[str] = []
         self.source_outage_report: str = ""
 
+def parse_date(date_str: str) -> Optional[datetime]:
+    """Parse a date string into a datetime object."""
+    try:
+        # Adjust the format according to the expected date format in your logs
+        return datetime.strptime(date_str, '%Y-%m-%d %H:%M %Z')  # Example format
+    except ValueError:
+        return None  # Return None if parsing fails
+
 def extract_outage_info(text: str) -> List[OutageInfo]:
     outages = []
     current_outage = None
@@ -334,6 +342,33 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         r"(?i)(Northern Virginia|Tokyo|Seoul|Singapore|London|Frankfurt|Paris|Sydney)",
     ]
     
+    # New patterns for extracting additional information
+    new_duration_patterns = [
+        r"(?i)Duration:\s*([^\n]+)",
+        r"(?i)(\d+)\s*(?:days?|hours?|minutes?|hrs?|mins?)",
+        r"(?i)lasted\s+(?:for\s+)?(\d+\s+(?:days?|hours?|minutes?|hrs?|mins?)(?:\s+and\s+\d+\s+(?:days?|hours?|minutes?|hrs?|mins?))*)",
+    ]
+
+    new_downtime_patterns = [
+        r"(?i)Downtime period:\s*([^\n]+)",
+        r"(?i)Downtime\s+period:\s*([^\n]+)",
+    ]
+
+    new_root_cause_patterns = [
+        r"(?i)Root cause of the outage:\s*([^\n]+)",
+        r"(?i)Root Cause:\s*([^\n]+)",
+    ]
+
+    new_region_patterns = [
+        r"(?i)Regions?\s+Affected:\s*([^\n]+)",
+        r"(?i)Affected Regions and Availability Zones:\s*([^\n]+)",
+    ]
+    
+    # New patterns for extracting outage details from multi-line tables
+    multi_line_outage_patterns = [
+        r"(?i)Outage\s+\d+:\s*[\s\S]*?Service impacted:\s*([^\n]+)[\s\S]*?Region:\s*([^\n]*)[\s\S]*?Availability Zone:\s*([^\n]*)[\s\S]*?Root cause:\s*([^\n]*)[\s\S]*?Duration:\s*([^\n]*)[\s\S]*?Start date:\s*([^\n]*)[\s\S]*?Downtime period:\s*([^\n]*)[\s\S]*?Resolution date:\s*([^\n]*)",
+    ]
+    
     # Split text into sections by outage
     sections = re.split(r"--\nOutage Filename:", text)
     
@@ -423,7 +458,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
                 match = re.search(pattern, section)
                 if match:
                     try:
-                        timestamp = parse_timestamp(match.group(1))
+                        timestamp = parse_date(match.group(1))
                         if field == "start":
                             outage.start_time = timestamp
                         else:
@@ -452,6 +487,50 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             if match:
                 steps = re.split(r'[;\n]+', match.group(1))
                 outage.mitigation_steps.extend([s.strip() for s in steps if s.strip()])
+        
+        # Extract duration using new patterns
+        for pattern in new_duration_patterns:
+            match = re.search(pattern, section)
+            if match:
+                outage.duration = match.group(1).strip()
+                break
+
+        # Extract downtime period using new patterns
+        for pattern in new_downtime_patterns:
+            match = re.search(pattern, section)
+            if match:
+                outage.downtime_period = match.group(1).strip()
+                break
+
+        # Extract root cause using new patterns
+        for pattern in new_root_cause_patterns:
+            match = re.search(pattern, section)
+            if match:
+                outage.root_cause = match.group(1).strip()
+                break
+
+        # Extract regions using new patterns
+        for pattern in new_region_patterns:
+            match = re.search(pattern, section)
+            if match:
+                regions = re.split(r'[,•*]+', match.group(1))
+                outage.regions.extend([r.strip() for r in regions if r.strip()])
+        
+        # Extract outage details using multi-line patterns
+        for pattern in multi_line_outage_patterns:
+            matches = re.finditer(pattern, section)
+            for match in matches:
+                outage = OutageInfo()  # Create a new OutageInfo object
+                outage.service = match.group(1).strip()
+                outage.region = match.group(2).strip()
+                outage.availability_zone = match.group(3).strip()
+                outage.root_cause = match.group(4).strip()
+                outage.duration = match.group(5).strip()
+                outage.start_time = parse_date(match.group(6).strip())  # Convert to datetime
+                outage.downtime_period = match.group(7).strip()
+                outage.resolution_time = parse_date(match.group(8).strip())  # Convert to datetime
+                outages.append(outage)
+                break  # Exit after the first match
         
         outages.append(outage)
     

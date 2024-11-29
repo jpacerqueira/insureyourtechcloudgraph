@@ -1,138 +1,74 @@
-I can provide you with the requested information. However, I need to clarify that some of the cloud providers mentioned in your query (e.g., Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) are not explicitly mentioned in the provided text.
+After analyzing the text, I found that the following cloud providers were identified: Amazon AWS, Google GCP is not mentioned, Microsoft Azure is not mentioned, Oracle OCI is not mentioned, IBM Cloud is not mentioned, Snowflake is not mentioned, Databricks is not mentioned, MongoDB is not mentioned, Akamai is not mentioned, and Cloudflare is not mentioned.
 
-Based on the text, only Amazon Web Services (AWS) is explicitly mentioned. I will provide the information for AWS services that were impacted by outages.
+Here are the outages for each cloud provider:
 
-**Outage Details:**
+**Amazon AWS**
 
-Here are the outage details for each affected service in AWS:
+* Amazon Elastic Compute Cloud [Increased API errors rates for mutatable VPC calls]
+	+ Region/Availability Zone: us-west-2
+	+ Impact Date: November 10, 2024
+	+ Duration: 3 hours and 13 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 7:55 AM - 11:08 AM PST
+	+ Resolved Date: Not specified
+* Amazon Simple Queue Service [Increased API Error Rates]
+	+ Region/Availability Zone: us-east-1
+	+ Impact Date: August 15, 2024
+	+ Duration: 0 minutes (resolved immediately)
+	+ Root Cause: Not specified
+	+ Downtime Period: 12:50 PM - 12:50 PM PST
+	+ Resolved Date: August 15, 2024
+* Amazon Elastic MapReduce [EMR Cluster Launch Failures]
+	+ Region/Availability Zone: us-east-1
+	+ Impact Date: August 6, 2024
+	+ Duration: 2 hours and 46 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 7:24 PM - 10:11 PM EDT
+	+ Resolved Date: August 6, 2024
+* Multiple services [Increased API Error Rates]
+	+ Region/Availability Zone: us-east-1
+	+ Impact Date: July 30, 2024
+	+ Duration: 9 hours and 15 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 3:40 PM - 12:55 AM EDT
+	+ Resolved Date: July 30, 2024
 
-1. **Amazon Elastic Compute Cloud**
-	* Outage started: November 10, 2024, 7:55 AM PST
-	* Duration: 3 hours and 18 minutes
-	* Root cause: Increased API error rates for mutable VPC calls
-	* Affected regions: ap-northeast-2
-	* Availability zones: Not specified
+**Amazon Bedrock (Oregon)**
 
-2. **AWS Billing Console**
-	* Outage started: November 6, 2024, 3:42 AM PST
-	* Duration: 1 hour and 32 minutes
-	* Root cause: Increased errors performing payments
-	* Affected regions: Not specified
-	* Availability zones: Not specified
+* Amazon Bedrock [Increased API error rates]
+	+ Region/Availability Zone: us-west-2
+	+ Impact Date: November 25, 2024
+	+ Duration: 0 minutes (resolved immediately)
+	+ Root Cause: Not specified
+	+ Downtime Period: 4:31 AM - 4:35 AM PST
+	+ Resolved Date: November 25, 2024
 
-3. **AWS Partner Central**
-	* Outage started: October 29, 2024, 4:13 AM PDT
-	* Duration: 2 hours and 23 minutes
-	* Root cause: Increased error rates
-	* Affected regions: Not specified
-	* Availability zones: Not specified
+**Amazon Health Dashboard**
 
-4. **AWS QuickSight**
-	* Outage started: October 25, 2024, 12:19 PM PDT
-	* Duration: 2 hours and 46 minutes
-	* Root cause: Increased login errors
-	* Affected regions: us-east-1
-	* Availability zones: Not specified
+* Open and recent issues
+	+ Impact Date: December 17, 2023
+	+ Duration: Not specified
+	+ Root Cause: Not specified
+	+ Downtime Period: Not specified
+	+ Resolved Date: Not specified
 
-5. **Multiple services (Increased Latencies and Errors)**
-	* Outage started: September 25, 2024, 2:05 PM PDT
-	* Duration: 10 minutes
-	* Root cause: Increased latencies and errors
-	* Affected regions: us-west-2
-	* Availability zones: Not specified
+Here is the output table:
 
-6. **Multiple services (Increased API Error Rates)**
-	* Outage started: September 11, 2024, 1:34 PM PDT
-	* Duration: 1 hour and 26 minutes
-	* Root cause: Increased error rates
-	* Affected regions: eu-south-1
-	* Availability zones: Not specified
+Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+Amazon AWS | Amazon Elastic Compute Cloud | us-west-2 | November 10, 2024 | 3 hours and 13 minutes | Not specified | 7:55 AM - 11:08 AM PST | Not specified
+Amazon AWS | Amazon Simple Queue Service | us-east-1 | August 15, 2024 | 0 minutes | Not specified | 12:50 PM - 12:50 PM PST | August 15, 2024
+Amazon AWS | Amazon Elastic MapReduce | us-east-1 | August 6, 2024 | 2 hours and 46 minutes | Not specified | 7:24 PM - 10:11 PM EDT | August 6, 2024
+Amazon AWS | Multiple services | us-east-1 | July 30, 2024 | 9 hours and 15 minutes | Not specified | 3:40 PM - 12:55 AM EDT | July 30, 2024
+Amazon Bedrock (Oregon) | Amazon Bedrock | us-west-2 | November 25, 2024 | 0 minutes | Not specified | 4:31 AM - 4:35 AM PST | November 25, 2024
 
-7. **AWS Identity and Access Management**
-	* Outage started: August 29, 2024, 2:31 AM PDT
-	* Duration: 1 hour and 30 minutes
-	* Root cause: Connectivity issues
-	* Affected regions: Not specified
-	* Availability zones: Not specified
+**Summary**
 
-8. **Amazon Simple Queue Service**
-	* Outage started: August 15, 2024, 12:50 PM PDT
-	* Duration: 0 hours and 10 minutes
-	* Root cause: Increased API error rates
-	* Affected regions: us-east-1
-	* Availability zones: Not specified
+Cloud Providers impacted: Amazon AWS
+Services impacted: Amazon Elastic Compute Cloud, Amazon Simple Queue Service, Amazon Elastic MapReduce, Multiple services
+Regions/Availability Zones impacted: us-west-2, us-east-1
+Impact Dates: November 10, 2024, August 15, 2024, August 6, 2024, July 30, 2024, November 25, 2024
+Duration: 3 hours and 13 minutes, 0 minutes, 2 hours and 46 minutes, 9 hours and 15 minutes, 0 minutes
 
-9. **AWS Service Catalog**
-	* Outage started: August 6, 2024, 8:11 PM PDT
-	* Duration: 1 hour and 46 minutes
-	* Root cause: Increased API error rates
-	* Affected regions: us-west-1
-	* Availability zones: Not specified
+**Route Cause**
 
-10. **Amazon Elastic MapReduce**
-	* Outage started: August 6, 2024, 7:24 PM PDT
-	* Duration: 1 hour and 46 minutes
-	* Root cause: EMR cluster launch failures
-	* Affected regions: us-east-1
-	* Availability zones: Not specified
-
-11. **Multiple services (Increased API Error Rates)**
-	* Outage started: July 30, 2024, 3:40 PM PDT
-	* Duration: 9 hours and 15 minutes
-	* Root cause: Increased error rates
-	* Affected regions: us-east-1
-	* Availability zones: Not specified
-
-12. **Amazon Route 53**
-	* Outage started: October 24, 2024, 12:01 PM PDT
-	* Duration: 2 hours and 44 minutes
-	* Root cause: Increased delays associating route 53 private hosted zones to VPC
-	* Affected regions: Not specified
-	* Availability zones: Not specified
-
-13. **AWS Management Console**
-	* Outage started: October 22, 2024, 12:48 PM PDT
-	* Duration: 1 hour and 27 minutes
-	* Root cause: Management console issues
-	* Affected regions: Not specified
-	* Availability zones: Not specified
-
-14. **Multiple services (Increased API Error Rates)**
-	* Outage started: October 7, 2024, 12:46 PM PDT
-	* Duration: 1 hour and 52 minutes
-	* Root cause: Increased error rates
-	* Affected regions: us-east-2
-	* Availability zones: Not specified
-
-15. **Multiple services (Increased target registration)**
-	* Outage started: September 26, 2024, 11:33 AM PDT
-	* Duration: 1 hour and 46 minutes
-	* Root cause: Increased target registration
-	* Affected regions: us-east-1
-	* Availability zones: Not specified
-
-**Overall Summary:**
-
-The outages affected various AWS services across different regions. The most recent outage started on December 17, 2023, at 6:57 AM PST and lasted for approximately 4 hours and 55 minutes.
-
-Here is a summary of the impacted services and regions:
-
-| Service | Region | Availability Zones |
-| --- | --- | --- |
-| Amazon Elastic Compute Cloud | ap-northeast-2 | Not specified |
-| AWS Billing Console | Not specified | Not specified |
-| AWS Partner Central | Not specified | Not specified |
-| AWS QuickSight | us-east-1 | Not specified |
-| Multiple services (Increased Latencies and Errors) | us-west-2 | Not specified |
-| Multiple services (Increased API Error Rates) | eu-south-1 | Not specified |
-| AWS Identity and Access Management | Not specified | Not specified |
-| Amazon Simple Queue Service | us-east-1 | Not specified |
-| AWS Service Catalog | us-west-1 | Not specified |
-| Amazon Elastic MapReduce | us-east-1 | Not specified |
-| Multiple services (Increased API Error Rates) | us-east-1 | Not specified |
-| Amazon Route 53 | Not specified | Not specified |
-| AWS Management Console | Not specified | Not specified |
-| Multiple services (Increased API Error Rates) | us-east-2 | Not specified |
-| Multiple services (Increased target registration) | us-east-1 | Not specified |
-
-Note that the availability zones for some services are not specified in the original text.
+Not specified for all outages.

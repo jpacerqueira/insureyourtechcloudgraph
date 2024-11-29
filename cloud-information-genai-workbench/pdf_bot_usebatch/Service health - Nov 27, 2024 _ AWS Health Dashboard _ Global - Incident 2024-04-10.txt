@@ -1,75 +1,98 @@
-I can only provide information on Amazon AWS as per the given context.
+I can only apply the query to Amazon AWS as it is the only cloud provider mentioned in the text.
 
-Here is the breakdown of the outages for each service in Amazon AWS:
+Here are the details of the outages for each service impacted by Amazon AWS:
 
-**Amazon Elastic Compute Cloud (EC2)**
-Outage started: November 25, 2024, 4:31 AM PST
-Duration: 10 minutes
-Affected services: DescribeInstances, DescribeInstanceStatus APIs and new instance launches/terminations
-Root cause: Increased API error rates
-Downtime period: November 25, 2024, 4:31 AM PST - November 25, 2024, 4:41 AM PST (10 minutes)
-Resolved: November 25, 2024, 4:35 AM PST
+Amazon Elastic Compute Cloud (EC2) Instance Launch Failures
+Ohio (us-east-2)
+Impact Date: August 6, 2024, 7:24:28 PM PDT
+Duration: 3 hours and 46 minutes
+Root Cause: Informational
+Downtime Period: August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT (3 hours and 46 minutes)
+Resolved Date: August 6, 2024, 9:10:29 PM PDT
 
-**Amazon Elastic Compute Cloud (EC2)**
-Outage started: October 29, 2024, 4:13 AM PDT
-Duration: 45 minutes
-Affected services: None specified
-Root cause: Increased Error Rates
-Downtime period: October 29, 2024, 4:13 AM PDT - October 29, 2024, 5:08 AM PDT (45 minutes)
-Resolved: October 29, 2024, 5:08 AM PDT
+Amazon Elastic MapReduce (EMR) Cluster Launch Failures
+us-east-1
+Impact Date: August 6, 2024, 7:24:28 PM PDT
+Duration: 3 hours and 46 minutes
+Root Cause: Informational
+Downtime Period: August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT (3 hours and 46 minutes)
+Resolved Date: August 6, 2024, 9:10:29 PM PDT
 
-**Amazon Elastic Compute Cloud (EC2)**
-Outage started: September 25, 2024, 2:05 PM PDT
-Duration: 10 minutes
-Affected services: None specified
-Root cause: Increased Latencies and Errors
-Downtime period: September 25, 2024, 2:05 PM PDT - September 25, 2024, 2:15 PM PDT (10 minutes)
-Resolved: September 25, 2024, 2:15 PM PDT
+Amazon Elastic Compute Cloud (EC2) Instance Connect
+us-east-1
+Impact Date: August 6, 2024, 7:24:28 PM PDT
+Duration: 3 hours and 46 minutes
+Root Cause: Informational
+Downtime Period: August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT (3 hours and 46 minutes)
+Resolved Date: August 6, 2024, 9:10:29 PM PDT
 
-**Amazon Elastic Compute Cloud (EC2)**
-Outage started: August 29, 2024, 2:31 AM PDT
-Duration: 1 hour and 30 minutes
-Affected services: None specified
-Root cause: Connectivity Issues
-Downtime period: August 29, 2024, 2:31 AM PDT - August 29, 2024, 3:21 AM PDT (1 hour and 30 minutes)
-Resolved: August 29, 2024, 3:21 AM PDT
+Amazon Elastic Kubernetes Service
+us-east-1
+Impact Date: August 6, 2024, 7:24:28 PM PDT
+Duration: 3 hours and 46 minutes
+Root Cause: Informational
+Downtime Period: August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT (3 hours and 46 minutes)
+Resolved Date: August 6, 2024, 9:10:29 PM PDT
 
-**Amazon Elastic Compute Cloud (EC2)**
-Outage started: July 30, 2024, 3:40 PM PDT
-Duration: 10 hours and 15 minutes
-Affected services: None specified
-Root cause: Increased API Error Rates
-Downtime period: July 30, 2024, 3:40 PM PDT - August 19, 2024, 8:55 AM PDT (10 hours and 15 minutes)
-Resolved: August 19, 2024, 8:55 AM PDT
+Amazon Managed Streaming for Apache Kafka
+us-east-1
+Impact Date: August 6, 2024, 7:24:28 PM PDT
+Duration: 3 hours and 46 minutes
+Root Cause: Informational
+Downtime Period: August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT (3 hours and 46 minutes)
+Resolved Date: August 6, 2024, 9:10:29 PM PDT
 
-**Amazon Elastic Compute Cloud (EC2)**
-Outage started: December 17, 2023, 6:57 PM PST
-Duration: 55 minutes
-Affected services: None specified
-Root cause: Increased API Error Rates
-Downtime period: December 17, 2023, 6:57 PM PST - December 17, 2023, 7:52 PM PST (55 minutes)
-Resolved: December 17, 2023, 7:52 PM PST
+Amazon Elastic Compute Cloud (EC2) DescribeInstances
+us-east-1
+Impact Date: April 19, 2024, 12:47:34 PM PDT
+Duration: 5 hours and 41 minutes
+Root Cause: Informational
+Downtime Period: April 19, 2024, 12:47:34 PM - April 19, 2024, 3:28:51 PM PDT (5 hours and 41 minutes)
+Resolved Date: April 19, 2024, 3:28:51 PM PDT
 
-**Amazon Elastic Compute Cloud (EC2)**
-Outage started: April 19, 2024, 12:47 PM PDT
-Duration: 1 hour and 41 minutes
-Affected services: None specified
-Root cause: Increased delays in EC2 instance and Status Check metrics
-Downtime period: April 19, 2024, 12:47 PM PDT - April 19, 2024, 3:28 PM PDT (1 hour and 41 minutes)
-Resolved: April 19, 2024, 3:28 PM PDT
+Amazon Elastic Compute Cloud (EC2) DescribeInstanceStatus
+us-east-1
+Impact Date: April 19, 2024, 12:47:34 PM PDT
+Duration: 5 hours and 41 minutes
+Root Cause: Informational
+Downtime Period: April 19, 2024, 12:47:34 PM - April 19, 2024, 3:28:51 PM PDT (5 hours and 41 minutes)
+Resolved Date: April 19, 2024, 3:28:51 PM PDT
 
-Here is the summary of the outages for Amazon AWS:
+Amazon Elastic Compute Cloud (EC2) New Instance Launches
+us-east-1
+Impact Date: April 19, 2024, 12:47:34 PM PDT
+Duration: 5 hours and 41 minutes
+Root Cause: Informational
+Downtime Period: April 19, 2024, 12:47:34 PM - April 19, 2024, 3:28:51 PM PDT (5 hours and 41 minutes)
+Resolved Date: April 19, 2024, 3:28:51 PM PDT
 
-**Outage Summary**
+Amazon Elastic Compute Cloud (EC2) Instance Terminations
+us-east-1
+Impact Date: April 19, 2024, 12:47:34 PM PDT
+Duration: 5 hours and 41 minutes
+Root Cause: Informational
+Downtime Period: April 19, 2024, 12:47:34 PM - April 19, 2024, 3:28:51 PM PDT (5 hours and 41 minutes)
+Resolved Date: April 19, 2024, 3:28:51 PM PDT
 
-| Service | Outage Started | Duration | Root Cause | Downtime Period |
-| --- | --- | --- | --- | --- |
-| EC2 DescribeInstances and DescribeInstanceStatus APIs | November 25, 2024, 4:31 AM PST | 10 minutes | Increased API error rates | November 25, 2024, 4:31 AM PST - November 25, 2024, 4:41 AM PST |
-| EC2 | October 29, 2024, 4:13 AM PDT | 45 minutes | Increased Error Rates | October 29, 2024, 4:13 AM PDT - October 29, 2024, 5:08 AM PDT |
-| EC2 | September 25, 2024, 2:05 PM PDT | 10 minutes | Increased Latencies and Errors | September 25, 2024, 2:05 PM PDT - September 25, 2024, 2:15 PM PDT |
-| EC2 | August 29, 2024, 2:31 AM PDT | 1 hour and 30 minutes | Connectivity Issues | August 29, 2024, 2:31 AM PDT - August 29, 2024, 3:21 AM PDT |
-| EC2 | July 30, 2024, 3:40 PM PDT | 10 hours and 15 minutes | Increased API Error Rates | July 30, 2024, 3:40 PM PDT - August 19, 2024, 8:55 AM PDT |
-| EC2 | December 17, 2023, 6:57 PM PST | 55 minutes | Increased API Error Rates | December 17, 2023, 6:57 PM PST - December 17, 2023, 7:52 PM PST |
-| EC2 | April 19, 2024, 12:47 PM PDT | 1 hour and 41 minutes | Increased delays in EC2 instance and Status Check metrics | April 19, 2024, 12:47 PM PDT - April 19, 2024, 3:28 PM PDT |
+Here is the output table:
 
-Note that the outages for other services such as AWS Client VPN, AWS Cloud9, AWS Verified Access, Amazon AppStream 2.0, Amazon EC2 Instance Connect, Amazon Elastic Kubernetes Service, Amazon MQ, Amazon Managed Streaming for Apache Kafka are not included in this summary as they were not specified in the original text.
+Amazon AWS | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-----------|--------|-------------------------|------------|----------|-------------|-----------------|-----------------
+EC2        | Instance Launch Failures    | Ohio (us-east-2)          | August 6, 2024 | 3 hours and 46 minutes | Informational | August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT
+EMR        | Cluster Launch Failures    | us-east-1                  | August 6, 2024 | 3 hours and 46 minutes | Informational | August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT
+EC2 Instance Connect|us-east-1|August 6, 2024, 7:24:28 PM PDT|3 hours and 46 minutes|Informational|August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT
+EKS        | Cluster Launch Failures    | us-east-1                  | August 6, 2024 | 3 hours and 46 minutes | Informational | August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT
+Kafka      | Cluster Launch Failures    | us-east-1                  | August 6, 2024 | 3 hours and 46 minutes | Informational | August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT
+EC2 DescribeInstances|us-east-1|April 19, 2024, 12:47:34 PM PDT|5 hours and 41 minutes|Informational|April 19, 2024, 12:47:34 PM - April 19, 2024, 3:28:51 PM PDT
+EC2 DescribeInstanceStatus|us-east-1|April 19, 2024, 12:47:34 PM PDT|5 hours and 41 minutes|Informational|April 19, 2024, 12:47:34 PM - April 19, 2024, 3:28:51 PM PDT
+EC2 New Instance Launches|us-east-1|April 19, 2024, 12:47:34 PM PDT|5 hours and 41 minutes|Informational|April 19, 2024, 12:47:34 PM - April 19, 2024, 3:28:51 PM PDT
+EC2 Instance Terminations|us-east-1|April 19, 2024, 12:47:34 PM PDT|5 hours and 41 minutes|Informational|April 19, 2024, 12:47:34 PM - April 19, 2024, 3:28:51 PM PDT
+
+Summary of outages:
+
+* Amazon AWS experienced a series of outages on August 6, 2024, affecting several services including EC2 Instance Launch Failures, EMR Cluster Launch Failures, EKS Cluster Launch Failures, Kafka Cluster Launch Failures, and EC2 DescribeInstances.
+* The outages lasted for approximately 3 hours and 46 minutes each.
+* The root cause of the outages was not specified as "informational".
+* The downtime periods for each outage were similar, lasting from 7:24:28 PM PDT to 9:10:29 PM PDT.
+
+Note that this summary only includes the outages mentioned in the original text and may not be a comprehensive list of all outages experienced by Amazon AWS.

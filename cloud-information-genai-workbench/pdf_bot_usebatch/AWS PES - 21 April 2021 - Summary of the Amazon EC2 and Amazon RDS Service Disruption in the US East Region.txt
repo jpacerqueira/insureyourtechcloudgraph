@@ -1,36 +1,47 @@
-Here is the breakdown of the outage for each cloud provider:
+Based on the provided text, I can identify the following cloud providers:
 
-**Amazon AWS**
+* Amazon AWS
+* Amazon RDS
 
-Outage Details:
-The outage occurred in the US East Region, specifically in a single Availability Zone.
-The incident started at an unknown time, but it was reported that customers were experiencing issues with EBS-backed EC2 instances on April 21st.
-The outage lasted for approximately 11 hours, until Noon PM PDT.
+The outage occurred in the US East Region.
 
-Root Cause: The root cause of the outage was not explicitly stated in the text, but it was mentioned that a change to the EBS control plane fixed the issue and latencies and error rates for new EBS-backed EC2 instances declined rapidly.
+Here is the breakdown of the outage per service impacted:
 
-Services Impacted:
-- Amazon Elastic Compute Cloud (EC2)
-- Amazon Elastic Block Store (EBS)
+**Amazon EC2**
 
-Regions/Availability Zones: US East Region, single Availability Zone
+* Service: Launching new EBS-backed EC2 instances
+* Region/Availability Zone: US East Region (except for one Availability Zone)
+* Impact Date: April 21st, Noon PM PDT
+* Duration: Approximately 11 hours
+* Root Cause: A specific API in the EBS control plane that is only needed for attaching new instances to volumes was not fine-grained enough
+* Downtime Period: Elevated error rates and latencies for new EBS-backed EC2 instances
+* Resolved Date: April 21st, 11:30 AM PDT
 
-Downtime Period: April 21st, Noon PM PDT - April 22nd, unknown time
+**Amazon RDS**
 
-Resolution Date: April 22nd, Noon PM PDT
+* Service: Not specified
+* Region/Availability Zone: US East Region (except for one Availability Zone)
+* Impact Date: April 21st, Noon PM PDT
+* Duration: Approximately 11 hours
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: April 21st, 11:30 AM PDT
 
-**No other cloud providers were mentioned in the text.**
+Here is the output table:
 
-Here is a summary of the outage:
+Amazon AWS | Amazon EC2 | US East Region (except for one Availability Zone) | April 21st, Noon PM PDT | Approximately 11 hours | A specific API in the EBS control plane that is only needed for attaching new instances to volumes was not fine-grained enough | Elevated error rates and latencies for new EBS-backed EC2 instances | April 21st, 11:30 AM PDT
 
-The outage occurred in the US East Region of Amazon AWS, specifically in a single Availability Zone.
-The incident started on April 21st and lasted for approximately 11 hours.
-The root cause of the outage was not explicitly stated, but a change to the EBS control plane fixed the issue.
+Amazon AWS | Amazon RDS | US East Region (except for one Availability Zone) | April 21st, Noon PM PDT | Approximately 11 hours | Not specified | Not specified | April 21st, 11:30 AM PDT
 
-Here is an output table summarizing the outage:
+**Summary**
 
-| Cloud Provider | Services Impacted | Regions/Availability Zones | Downtime Period | Resolution Date |
-| --- | --- | --- | --- | --- |
-| Amazon AWS | EC2, EBS | US East Region, single Availability Zone | April 21st, Noon PM PDT - April 22nd, unknown time | April 22nd, Noon PM PDT |
+* Cloud Providers impacted: Amazon AWS
+* Services impacted: Amazon EC2 and Amazon RDS
+* Regions/Availability Zones impacted: US East Region (except for one Availability Zone)
+* Impact Dates: April 21st
+* Duration: Approximately 11 hours
+* Root Cause: A specific API in the EBS control plane that is only needed for attaching new instances to volumes was not fine-grained enough
+* Downtime Period: Elevated error rates and latencies for new EBS-backed EC2 instances
+* Resolved Date: April 21st, 11:30 AM PDT
 
-Note: The downtime period for the outage is not explicitly stated in the text, so it cannot be accurately determined.
+Note: The text does not provide information on the root cause of the outage for Amazon RDS.

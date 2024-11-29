@@ -59,7 +59,7 @@ Downtime Period: - Started: September 2, 2021 7:30 AM JST
 Source Outage Report: 20211207-Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region
 Cloud Provider: AWS
 Cloud Services: DNS, EC2 Instance Connect, rs
-Regions: Northern Virginia (US-EAST-1) Region, US-EAST-1, Northern Virginia
+Regions: Northern Virginia (US-EAST-1) Region, US-EAST-1, Northern Virginia, Northern Virginia (US-EAST-1) Region
 Availability Zones: 
 Outage Status: investigating
 Impact Level: 
@@ -153,7 +153,7 @@ Availability Zones:
 Outage Status: 
 Impact Level: 
 Duration: 11 hours and 40 minutes
-Root Cause: 
+Root Cause: Unintentional deletion of Azure Traffic Manager profiles for affected storage accounts.
 Resolution: 
 Downtime Period: - Started at: November 13, 2024, 00:50 UTC
 Affected Components: - East US
@@ -281,7 +281,7 @@ Downtime Period: 2 hours and 15 minutes
 Source Outage Report: Azure_status_history_Microsoft_Azure_p3_2023
 Cloud Provider: Azure
 Cloud Services: Azure SQL Database, Azure Database for PostgreSQL, Azure Database for MySQL, af
-Regions: Multiple regions, Not specified, Southeast Asia, East Asia, West Europe, Southeast Asia and East Asia
+Regions: Multiple regions, Not specified, Southeast Asia, East Asia, West Europe, Southeast Asia and East Asia, Multiple regions
 Availability Zones: Not specified
 Outage Status: resolved
 Impact Level: 
@@ -387,7 +387,7 @@ Availability Zones: - Australia/Sydney (australia-southeast1)
 Outage Status: 
 Impact Level: 
 Duration: 2 hours and 18 minutes
-Root Cause: 
+Root Cause: Requests to Secret Manager might time out for App Engine and Cloud Run customers. Direct calls of some customers to Secret Manager are also impacted.
 Resolution: 
 Downtime Period: - Started on November 8, 2023, at 15:11 US/Pacific Time
 Affected Components: - Australia/Sydney (australia-southeast1)
@@ -446,7 +446,7 @@ Availability Zones:
 Outage Status: resolved
 Impact Level: 
 Duration: 6 hours 37 minutes
-Root Cause: 
+Root Cause: Internal Error
 Resolution: 
 Downtime Period: 6 hours 37 minutes
 
@@ -598,7 +598,7 @@ Affected Components: Google Cloud Tasks
 Source Outage Report: Google Cloud Service Health - Incident 2024-05-29
 Cloud Provider: AWS
 Cloud Services: EC2 Instance Connect, rs
-Regions: northamerica-northeast1 and us-west4, North America (not specified), **, impacted
+Regions: northamerica-northeast1 and us-west4, North America (not specified), **, impacted, northamerica-northeast1 and us-west4
 Availability Zones: Montréal (northamerica-northeast1), Las Vegas (us-west4)
 Outage Status: 
 Impact Level: 
@@ -709,7 +709,7 @@ Availability Zones:
 Outage Status: investigating
 Impact Level: 
 Duration: 3
-Root Cause: 
+Root Cause: Not specified in the text.
 Resolution: 
 Downtime Period: 11:20 US/Pacific Time (resolved)
 Affected Components: Hybrid Connectivity - Cloud Interconnect
@@ -733,7 +733,7 @@ Downtime Period: September 28, 2024, 00:00 - September 30, 2024, 23:59 PDT (5 da
 Source Outage Report: Google Cloud Service Health - Incident 2024-09-99
 Cloud Provider: GCP
 Cloud Services: vai, Google Cloud Looker Studio Pro
-Regions: Global
+Regions: Global, Global
 Availability Zones: Not specified
 Outage Status: investigating
 Impact Level: 
@@ -781,7 +781,7 @@ Availability Zones:
 Outage Status: resolved
 Impact Level: 
 Duration: 2 hours and 48 minutes
-Root Cause: 
+Root Cause: A bug in the automation caused the component to be shut down in all zones where it was still in use.
 Resolution: 
 Downtime Period: - Duration: 2 hours and 48 minutes
 Affected Components: - us-east1-c (peak loss: 3%)
@@ -821,12 +821,12 @@ Affected Components: Google Cloud Bigtable and Google Kubernetes Engine
 Source Outage Report: Google Cloud Service Health - Incident report 2023-12-05
 Cloud Provider: AWS
 Cloud Services: abr, EC2 Instance Connect, rs
-Regions: us-central1, **
+Regions: us-central1, **, us-central1
 Availability Zones: Not specified
 Outage Status: resolved
 Impact Level: 
 Duration: 1
-Root Cause: **
+Root Cause: Underlying networking issue
 Resolution: 
 Downtime Period: December 5, 2023, from 06:17 US/Pacific Time to 07:26 US/Pacific Time (1 hour and 9 minutes)
 Affected Components: us-central1
@@ -851,7 +851,7 @@ Affected Components: Tokyo (asia-northeast1)
 Source Outage Report: Google Cloud Service Health - Incident report 2024-01-24
 Cloud Provider: GCP
 Cloud Services: vai, Google Cloud BigQuery, Google Cloud Storage
-Regions: **, 1. **Google Cloud Logging**, Multiple regions, multiple
+Regions: **, 1. **Google Cloud Logging**, Multiple regions, multiple, Multiple regions
 Availability Zones: Not specified
 Outage Status: 
 Impact Level: 
@@ -971,7 +971,7 @@ Availability Zones:
 Outage Status: resolved
 Impact Level: 
 Duration: 8
-Root Cause: 
+Root Cause: High latency and resource exhausted failures in AutoML translations.
 Resolution: 
 Downtime Period: The engineering team successfully concluded validations and confirmed that the issue had been mitigated on August 2, 2024, at 17:36 PDT.
 Affected Components: - Netherlands (europe-west4)
@@ -1126,7 +1126,7 @@ Source Outage Report: Google Cloud Service Health- Incident 2023-11-30
 Cloud Provider: AWS
 Cloud Services: abr, EC2 Instance Connect, rs
 Regions: southamerica-west1, scl-zone1-7594 and scl-zone2-7594
-- GCP services via scl-zone1-7594 and scl-zone2-7594
+- GCP services via scl-zone1-7594 and scl-zone2-7594, southamerica-west1
 Availability Zones: 
 Outage Status: resolved
 Impact Level: 
@@ -1171,7 +1171,7 @@ Affected Components: Agent Assist features including Proactive Generative Knowle
 Source Outage Report: IBM Cloud Incident Report - CIR_PRB0050543 - ID_0002104_Final
 Cloud Provider: IBM
 Cloud Services: IBM Watson Platform, IBM Kubernetes
-Regions: DAL12, TOK02, LON06, Tokyo, London
+Regions: DAL12, TOK02, LON06, Tokyo, London, DAL12
 Availability Zones: Not specified
 Outage Status: 
 Impact Level: 
@@ -1257,7 +1257,7 @@ Downtime Period:
 Source Outage Report: IBM Cloud Incident Report - CIR_PRB0073933 - ID_0003333_FINAL
 Cloud Provider: IBM
 Cloud Services: ide
-Regions: All regions, All regions., all
+Regions: All regions, All regions., all, All regions.
 Availability Zones: Not specified
 Outage Status: resolved
 Impact Level: 
@@ -1387,7 +1387,7 @@ Affected Components: Amazon Elastic MapReduce
 Source Outage Report: Service health - December 9, 2023 _ AWS Health Dashboard _ Global
 Cloud Provider: AWS
 Cloud Services: abr, Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, EC2 Instance Connect, Amazon ElastiCache, Amazon QuickSight, rs
-Regions: ap-northeast-2, None specified, us-east-1, ap-southeast-2, ** ap-northeast-2, us-east-1, None specified for other regions
+Regions: ap-northeast-2, None specified, us-east-1, ap-southeast-2, ** ap-northeast-2, us-east-1, None specified for other regions, ap-northeast-2
 Availability Zones: None specified
 Outage Status: investigating
 Impact Level: moderate
@@ -1602,18 +1602,31 @@ Affected Components: Amazon AWS Glue, Amazon Data Firehose, Amazon Elastic Conta
 
 ---
 
-Source Outage Report: Supported_Resource_Types_through_Azure_Resource_Health_-_Azure_Service_Health_Microsoft_Learn_02.Nov.2024
-Cloud Provider: Azure
-Cloud Services: Azure Cosmos DB, Af
-Regions: Not specified
-Availability Zones: Not specified
-Outage Status: investigating
+Source Outage Report: 
+Cloud Provider: 
+Cloud Services: 
+Regions: 
+Availability Zones: 
+Outage Status: 
 Impact Level: 
 Duration: Not specified
 Root Cause: Not specified
 Resolution: 
 Downtime Period: Not specified
-Affected Components: IoT Hub
+
+---
+
+Source Outage Report: 
+Cloud Provider: 
+Cloud Services: 
+Regions: 
+Availability Zones: 
+Outage Status: 
+Impact Level: 
+Duration: Not specified
+Root Cause: Not specified
+Resolution: 
+Downtime Period: Not specified
 
 ---
 

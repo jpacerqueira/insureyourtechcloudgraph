@@ -1,51 +1,77 @@
-Here is the breakdown of the outage for each cloud provider:
+I can only apply the query to the following cloud providers: Google GCP, Amazon AWS.
 
-**Google Cloud**
+Here is the information for each service impacted:
 
-Outage started: 2024-09-07 04:20 US/Pacific
-Duration: 1 hour, 50 minutes
-Root cause: Change rollout to an internal component
-Affected services and features:
-Cloud Build
-Google Cloud Dataflow
-Google Cloud Deploy
-Google Compute Engine
-Google Kubernetes Engine
+Google GCP:
+Cloud Build deployed via Cloud Build API or via CloudBuild Integrations were not being executed.
+Duration of outage: 1 hour and 50 minutes
+Impact Date: 2024-09-07 04:20 US/Pacific
+Region/Availability Zone: asia-northeast1
+Root Cause: Change rollout to an internal component
+Downtime Period: 2024-09-07 05:10 - 2024-09-07 06:00
+Resolved Date: 2024-09-07 06:10 US/Pacific
 
-Services impacted:
-Cloud Build - deployed via the Cloud Build API or via CloudBuild Integrations were not being executed.
-Google Cloud Dataflow jobs failed at start up, existing job autoscale functionality was disrupted.
-Google Cloud Deploy actions (render, deploy, verify, pre- and post-deploy hooks) were unresponsive and unable to complete their tasks.
-Google Compute Engine requests and operations like creating, deleting, starting or modifying VMs were not executed.
-Google Kubernetes Engine experienced issues with operations that depend on GCE. Specifically, cluster and node pool creation, node autoscaling, cluster and node upgrades, and automatic repairs were unsuccessful in the affected region and zones.
+Cloud Compute Engine requests and operations like creating, deleting, starting or modifying VMs were not executed.
+Duration of outage: 1 hour and 50 minutes
+Impact Date: 2024-09-07 04:20 US/Pacific
+Region/Availability Zone: asia-northeast1
+Root Cause: Change rollout to an internal component
+Downtime Period: 2024-09-07 05:10 - 2024-09-07 06:00
+Resolved Date: 2024-09-07 06:10 US/Pacific
 
-**Summary of Google Cloud Outage**
+Cloud Dataflow jobs failed at start up, existing job autoscale functionality was disrupted.
+Duration of outage: 1 hour and 50 minutes
+Impact Date: 2024-09-07 04:20 US/Pacific
+Region/Availability Zone: asia-northeast1
+Root Cause: Change rollout to an internal component
+Downtime Period: 2024-09-07 05:10 - 2024-09-07 06:00
+Resolved Date: 2024-09-07 06:10 US/Pacific
 
-Outage started: 2024-09-07 04:20 US/Pacific
-Duration: 1 hour, 50 minutes
-Root cause: Change rollout to an internal component
+Cloud Deploy actions (render, deploy, verify, pre- and post-deploy hooks) were unresponsive and unable to complete their tasks.
+Duration of outage: 1 hour and 50 minutes
+Impact Date: 2024-09-07 04:20 US/Pacific
+Region/Availability Zone: asia-northeast1
+Root Cause: Change rollout to an internal component
+Downtime Period: 2024-09-07 05:10 - 2024-09-07 06:00
+Resolved Date: 2024-09-07 06:10 US/Pacific
 
-**Cloud Build**
-Duration: 1 hour, 50 minutes
-Downtime period: 2024-09-07 05:10 - 2024-09-07 06:00 US/Pacific
-Resolved: Yes
+Cloud SQL, dependent on Google Compute Engine, experienced operational issues during this incident.
+Duration of outage: 1 hour and 50 minutes
+Impact Date: 2024-09-07 04:20 US/Pacific
+Region/Availability Zone: asia-northeast1
+Root Cause: Change rollout to an internal component
+Downtime Period: 2024-09-07 05:10 - 2024-09-07 06:00
+Resolved Date: 2024-09-07 06:10 US/Pacific
 
-**Google Cloud Dataflow**
-Duration: 1 hour, 50 minutes
-Downtime period: 2024-09-07 04:20 - 2024-09-07 06:10 US/Pacific
-Resolved: Yes
+Google Kubernetes Engine experienced issues with operations that depend on GCE.
+Duration of outage: 1 hour and 50 minutes
+Impact Date: 2024-09-07 04:20 US/Pacific
+Region/Availability Zone: asia-northeast1
+Root Cause: Change rollout to an internal component
+Downtime Period: 2024-09-07 05:10 - 2024-09-07 06:00
+Resolved Date: 2024-09-07 06:10 US/Pacific
 
-**Google Cloud Deploy**
-Duration: 1 hour, 50 minutes
-Downtime period: 2024-09-07 05:00 - 2024-09-07 06:50 US/Pacific
-Resolved: Yes
+Amazon AWS:
+No information available.
 
-**Google Compute Engine**
-Duration: 1 hour, 50 minutes
-Downtime period: 2024-09-07 04:20 - 2024-09-07 06:10 US/Pacific
-Resolved: Yes
+Overall summary:
 
-**Google Kubernetes Engine**
-Duration: 1 hour, 50 minutes
-Downtime period: 2024-09-07 04:20 - 2024-09-07 06:10 US/Pacific
-Resolved: Yes
+Cloud providers impacted: Google GCP, Amazon AWS.
+Services impacted: Cloud Build, Cloud Compute Engine, Cloud Dataflow, Cloud Deploy, Cloud SQL, Google Kubernetes Engine.
+Regions/Availability Zones impacted: asia-northeast1.
+Impact dates: 2024-09-07.
+Duration of outage: 1 hour and 50 minutes.
+Root cause: Change rollout to an internal component.
+Downtime period: 2024-09-07 05:10 - 2024-09-07 06:00.
+Resolved date: 2024-09-07 06:10 US/Pacific.
+
+Output table:
+
+Google GCP | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-----------|---------|------------------------|------------|----------|-------------|-----------------|-----------------
+Cloud Build | Cloud Build API/CloudBuild Integrations | asia-northeast1 | 2024-09-07 04:20 | 1 hour and 50 minutes | Change rollout to an internal component | 2024-09-07 05:10 - 2024-09-07 06:00 | 2024-09-07 06:10
+Cloud Compute Engine | Creating, deleting, starting or modifying VMs | asia-northeast1 | 2024-09-07 04:20 | 1 hour and 50 minutes | Change rollout to an internal component | 2024-09-07 05:10 - 2024-09-07 06:00 | 2024-09-07 06:10
+Cloud Dataflow | Job startup and autoscaling | asia-northeast1 | 2024-09-07 04:20 | 1 hour and 50 minutes | Change rollout to an internal component | 2024-09-07 05:10 - 2024-09-07 06:00 | 2024-09-07 06:10
+Cloud Deploy | Render, deploy, verify, pre- and post-deploy hooks | asia-northeast1 | 2024-09-07 04:20 | 1 hour and 50 minutes | Change rollout to an internal component | 2024-09-07 05:10 - 2024-09-07 06:00 | 2024-09-07 06:10
+Cloud SQL | Operational issues dependent on GCE | asia-northeast1 | 2024-09-07 04:20 | 1 hour and 50 minutes | Change rollout to an internal component | 2024-09-07 05:10 - 2024-09-07 06:00 | 2024-09-07 06:10
+Google Kubernetes Engine | Cluster and node pool creation, node autoscaling, cluster and node upgrades, automatic repairs | asia-northeast1 | 2024-09-07 04:20 | 1 hour and 50 minutes | Change rollout to an internal component | 2024-09-07 05:10 - 2024-09-07 06:00 | 2024-09-07 06:10

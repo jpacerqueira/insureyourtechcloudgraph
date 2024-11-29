@@ -1,56 +1,2056 @@
-I can provide you with the requested information based on the provided text.
+After analyzing the text, I found that the following cloud providers were impacted:
 
-**Outage Information**
+* Google GCP
+* Amazon AWS is not mentioned in the text, but it was mentioned as a reference to other cloud providers.
 
-The outage affected Google Cloud Platform (GCP) only, specifically Apigee Sense.
+Here are the details of the outage for each affected service:
 
-**Incident Details**
+**Google GCP**
 
-* **Duration**: 5 hours and 20 minutes
-* **Start Time**: Tuesday, March 12, 2024, at 13:33 US/Pacific Time
-* **End Time**: Tuesday, March 12, 2024, at 17:13 US/Pacific Time
+Apigee Sense API
 
-**Affected Services**
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
 
-* Apigee Sense
-* Apigee Sense API
+**Google GCP**
 
-**Regions and Availability Zones Affected**
+Apigee Sense Protection feature
 
-* asia-east1 (Taiwan)
-* asia-east2 (Hong Kong)
-* asia-northeast1 (Tokyo)
-* asia-northeast2 (Osaka)
-* asia-northeast3 (Seoul)
-* asia-south1 (Mumbai)
-* asia-south2 (Delhi)
-* us-west3 (Salt Lake City)
-* us-west4 (Las Vegas)
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
 
-**Root Cause**
+**Google GCP**
 
-The root cause of the outage was not explicitly stated in the text.
+Apigee Sense
 
-**Workaround**
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
 
-None
+**Google GCP**
 
-**Summary**
+Apigee Sense
 
-Google Cloud Platform's Apigee Sense experienced a 5-hour and 20-minute outage, affecting multiple regions and availability zones. The outage started on Tuesday, March 12, 2024, at 13:33 US/Pacific Time and was resolved at 17:13 US/Pacific Time.
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
 
-**Table Output**
+**Google GCP**
 
-| Service | Region/AZ | Duration | Start Time | End Time |
-| --- | --- | --- | --- | --- |
-| Apigee Sense | asia-east1 (Taiwan) | - | 2024-03-12 13:33 | 2024-03-12 17:13 |
-| Apigee Sense API | asia-east2 (Hong Kong) | - | 2024-03-12 10:00 | 2024-03-12 15:00 |
-| Apigee Sense | asia-northeast1 (Tokyo) | - | 2024-03-12 13:33 | 2024-03-12 17:13 |
-| Apigee Sense | asia-northeast2 (Osaka) | - | 2024-03-12 13:33 | 2024-03-12 17:13 |
-| Apigee Sense | asia-northeast3 (Seoul) | - | 2024-03-12 13:33 | 2024-03-12 17:13 |
-| Apigee Sense | asia-south1 (Mumbai) | - | 2024-03-12 13:33 | 2024-03-12 17:13 |
-| Apigee Sense | asia-south2 (Delhi) | - | 2024-03-12 13:33 | 2024-03-12 17:13 |
-| Apigee Sense API | us-west3 (Salt Lake City) | - | 2024-03-12 10:00 | 2024-03-12 15:00 |
-| Apigee Sense API | us-west4 (Las Vegas) | - | 2024-03-12 10:00 | 2024-03-12 15:00 |
+Apigee Sense
 
-Note: The table output is limited to the services and regions mentioned in the original text.
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection feature
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection feature
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection feature
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:33 US/Pacific
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 US/Pacific (3 hours and 40 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 15:54 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 15:54 - 16:18 US/Pacific (1 hour and 24 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 14:50 US/Pacific
+* Duration: 1 hour and 10 minutes
+* Root Cause: Mitigation work is currently underway by our engineering team
+* Downtime Period: 2024-03-12 14:50 - 16:00 US/Pacific (1 hour and 10 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 13:59 US/Pacific
+* Duration: 1 hour and 14 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 13:59 - 15:54 US/Pacific (1 hour and 14 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense
+
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, us-west3, us-west4
+* Impact Date: 2024-03-12 10:00 US/Pacific
+* Duration: 7 hours and 13 minutes
+* Root Cause: We are experiencing an issue with Apigee Sense beginning at Tuesday, 2024-03-12 10:00 US/Pacific
+* Downtime Period: 2024-03-12 10:00 - 17:13 US/Pacific (7 hours and 13 minutes)
+* Resolved Date: 2024-03-12 16:18 US/Pacific
+
+**Google GCP**
+
+Apigee Sense Protection

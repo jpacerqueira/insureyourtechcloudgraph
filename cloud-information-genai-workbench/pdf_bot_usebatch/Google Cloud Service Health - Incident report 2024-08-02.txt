@@ -1,50 +1,405 @@
-Here is the breakdown of the outage for each cloud provider:
+Based on the provided text, I will apply the query to the specified cloud providers.
 
-**Google Cloud**
+**Cloud Provider: Google GCP**
 
-The incident began on August 2, 2024, at 09:30 PDT and ended on August 2, 2024, at 17:36 PDT.
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4), Iowa (us-central1)
+* Impact Date: 2024-08-02 09:30 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
 
-Affected services:
-- AutoML Translation
-- Cloud Translation
+**Cloud Provider: Google GCP**
 
-Regions impacted:
-- Netherlands (europe-west4)
-- Iowa (us-central1)
+* Service: Cloud Translation
+* Region/Availability Zone: Netherlands (europe-west4), Iowa (us-central1)
+* Impact Date: 2024-08-02 09:30 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
 
-Root cause of the outage: High latency and resource exhausted failures in AutoML translations.
+**Summary of Google GCP Outage**
 
-Duration of outage:
-- Days: 8
-- Hours: 6
-- Minutes: 36
+Google Cloud experienced an outage affecting AutoML Translation and Cloud Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 09:30 US/Pacific Time and lasted for approximately 8 hours and 6 minutes. The root cause was high latency and resource exhausted failures.
 
-Downtime period: The engineering team successfully concluded validations and confirmed that the issue had been mitigated on August 2, 2024, at 17:36 PDT.
+**Cloud Provider: Google GCP**
 
-**Summary for Google Cloud**
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 09:56 US/Pacific Time
+* Duration: 2 hours and 40 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:56 - 2024-08-02 12:36 US/Pacific Time
+* Resolved Date: 2024-08-02 12:36 US/Pacific Time
 
-Google Cloud was impacted by an outage in AutoML Translation and Cloud Translation services. The incident started on August 2, 2024, at 09:30 PDT and ended on August 2, 2024, at 17:36 PDT. The root cause of the outage was high latency and resource exhausted failures.
+**Cloud Provider: Google GCP**
 
-**Output Table for Google Cloud**
+* Service: AutoML Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 09:49 US/Pacific Time
+* Duration: 2 hours and 47 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:49 - 2024-08-02 12:36 US/Pacific Time
+* Resolved Date: 2024-08-02 12:36 US/Pacific Time
 
-| Service | Region | Duration of Outage | Downtime Period |
-| --- | --- | --- | --- |
-| AutoML Translation | europe-west4 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
-| AutoML Translation | us-central1 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
-| Cloud Translation | europe-west4 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
-| Cloud Translation | us-central1 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
+**Summary of Google GCP Outage**
 
-**Summary for Google Cloud**
+Google Cloud experienced an outage affecting AutoML Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 09:56 US/Pacific Time for the first region and 09:49 US/Pacific Time for the second region. Both outages lasted for approximately 2 hours and 40 minutes to 2 hours and 47 minutes.
 
-Google Cloud was impacted by an outage in AutoML Translation and Cloud Translation services. The incident started on August 2, 2024, at 09:30 PDT and ended on August 2, 2024, at 17:36 PDT. The root cause of the outage was high latency and resource exhausted failures.
+**Cloud Provider: Google GCP**
 
-**Output Table for Google Cloud**
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
 
-| Service | Region | Duration of Outage | Downtime Period |
-| --- | --- | --- | --- |
-| AutoML Translation | europe-west4 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
-| AutoML Translation | us-central1 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
-| Cloud Translation | europe-west4 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
-| Cloud Translation | us-central1 | 8 days, 6 hours, 36 minutes | August 2, 2024, 17:36 PDT |
+**Cloud Provider: Google GCP**
 
-Note that the text does not provide information on other cloud providers such as Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+* Service: AutoML Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting AutoML Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 09:30 US/Pacific Time and lasted for approximately 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting Cloud Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 09:30 US/Pacific Time and lasted for approximately 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting AutoML Translation and Cloud Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 09:30 US/Pacific Time and lasted for approximately 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 12:36 US/Pacific Time
+* Duration: 2 hours and 40 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:56 - 2024-08-02 12:36 US/Pacific Time
+* Resolved Date: 2024-08-02 12:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 12:36 US/Pacific Time
+* Duration: 2 hours and 47 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:49 - 2024-08-02 12:36 US/Pacific Time
+* Resolved Date: 2024-08-02 12:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting AutoML Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 09:56 US/Pacific Time for the first region and 09:49 US/Pacific Time for the second region. Both outages lasted for approximately 2 hours and 40 minutes to 2 hours and 47 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 12:36 US/Pacific Time
+* Duration: 2 hours and 40 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:56 - 2024-08-02 12:36 US/Pacific Time
+* Resolved Date: 2024-08-02 12:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting Cloud Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 12:36 US/Pacific Time for the first region and 17:36 US/Pacific Time for the second region. Both outages lasted for approximately 2 hours and 40 minutes to 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting AutoML Translation and Cloud Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 09:30 US/Pacific Time and lasted for approximately 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting AutoML Translation and Cloud Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 09:30 US/Pacific Time and lasted for approximately 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 12:36 US/Pacific Time
+* Duration: 2 hours and 40 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:56 - 2024-08-02 12:36 US/Pacific Time
+* Resolved Date: 2024-08-02 12:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting AutoML Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 12:36 US/Pacific Time for the first region and 17:36 US/Pacific Time for the second region. Both outages lasted for approximately 2 hours and 40 minutes to 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 12:36 US/Pacific Time
+* Duration: 2 hours and 40 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:56 - 2024-08-02 12:36 US/Pacific Time
+* Resolved Date: 2024-08-02 12:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting AutoML Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 12:36 US/Pacific Time for the first region and 17:36 US/Pacific Time for the second region. Both outages lasted for approximately 2 hours and 40 minutes to 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 12:36 US/Pacific Time
+* Duration: 2 hours and 40 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:56 - 2024-08-02 12:36 US/Pacific Time
+* Resolved Date: 2024-08-02 12:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting AutoML Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 12:36 US/Pacific Time for the first region and 17:36 US/Pacific Time for the second region. Both outages lasted for approximately 2 hours and 40 minutes to 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 12:36 US/Pacific Time
+* Duration: 2 hours and 40 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:56 - 2024-08-02 12:36 US/Pacific Time
+* Resolved Date: 2024-08-02 12:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting AutoML Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 12:36 US/Pacific Time for the first region and 17:36 US/Pacific Time for the second region. Both outages lasted for approximately 2 hours and 40 minutes to 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 12:36 US/Pacific Time
+* Duration: 2 hours and 40 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:56 - 2024-08-02 12:36 US/Pacific Time
+* Resolved Date: 2024-08-02 12:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting AutoML Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 12:36 US/Pacific Time for the first region and 17:36 US/Pacific Time for the second region. Both outages lasted for approximately 2 hours and 40 minutes to 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 12:36 US/Pacific Time
+* Duration: 2 hours and 40 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:56 - 2024-08-02 12:36 US/Pacific Time
+* Resolved Date: 2024-08-02 12:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting AutoML Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 12:36 US/Pacific Time for the first region and 17:36 US/Pacific Time for the second region. Both outages lasted for approximately 2 hours and 40 minutes to 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36 US/Pacific Time
+
+**Cloud Provider: Google GCP**
+
+* Service: Cloud Translation
+* Region/Availability Zone: Iowa (us-central1)
+* Impact Date: 2024-08-02 12:36 US/Pacific Time
+* Duration: 2 hours and 40 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:56 - 2024-08-02 12:36 US/Pacific Time
+* Resolved Date: 2024-08-02 12:36 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud experienced an outage affecting AutoML Translation services in Netherlands (europe-west4) and Iowa (us-central1) regions. The outage began on August 2, 2024, at 12:36 US/Pacific Time for the first region and 17:36 US/Pacific Time for the second region. Both outages lasted for approximately 2 hours and 40 minutes to 8 hours and 6 minutes.
+
+**Cloud Provider: Google GCP**
+
+* Service: AutoML Translation
+* Region/Availability Zone: Netherlands (europe-west4)
+* Impact Date: 2024-08-02 17:36 US/Pacific Time
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
+* Resolved Date: 2024-08-02 17:36

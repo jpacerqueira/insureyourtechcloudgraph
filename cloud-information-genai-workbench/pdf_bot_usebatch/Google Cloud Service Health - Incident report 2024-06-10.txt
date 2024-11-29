@@ -1,47 +1,35 @@
-Here is the breakdown of the outage for each cloud provider:
+Based on the provided text, I will apply the query to the identified cloud providers.
 
-**Google Cloud**
+**Cloud Provider:** Google GCP
+**Services Impacted:**
+- BigQuery
+- Cloud Logging
 
-Resume of Outage:
-The outage started on June 10, 2024 at 16:45 PDT and lasted for 3 hours and 15 minutes.
+**Details per Service:**
 
-Affected Services and Regions:
-- Google BigQuery
-- Google Cloud Logging
-- US Multi-region
+BigQuery:
+Region/Availability Zone: US Multi-region
+Impact Date: 2024-06-10 16:45
+Duration: 3 hours and 15 minutes
+Root Cause: Concurrent mitigation of simultaneous degradations, which impacted the BigQuery projects hosted in two degraded clusters.
+Downtime Period: N/A (resolved before downtime period was tracked)
+Resolved Date: 2024-06-10 20:00
 
-Description of Outage:
-BigQuery experienced elevated errors across multiple APIs in the US Multi-region due to the concurrent mitigation of simultaneous degradations, which impacted the BigQuery projects hosted in two degraded clusters. Google will complete a full IR in the following days that will provide a full root cause.
+Cloud Logging:
+Region/Availability Zone: Multi-regions (specifically us-central1 and us-central2)
+Impact Date: 2024-06-10 18:07
+Duration: 3 hours and 15 minutes
+Root Cause: Concurrent mitigation of simultaneous degradations, which impacted the BigQuery projects hosted in two degraded clusters.
+Downtime Period: Up to 2 hours for log ingestion delays
+Resolved Date: 2024-06-10 20:00
 
-Customer Impact:
-- A subset of customers would have experienced HTTP 500 errors while executing calls to insertAll and storage write APIs in the US Multi-region.
-- Some customers may have experienced system errors using the Jobs and Query API.
-- Cloud Logging customers using Log Analytics faced log ingestion delays up to 2 hours for their analytics buckets if they ingested logs via Cloud regions us-central1 or us-central2.
+**Overall Summary:**
 
-Root Cause:
-The root cause of the outage is not yet known, but Google engineers are working on mitigating the problem and observing the error rate for the impacted APIs dropping.
-
-Downtime Period:
-The outage started at 16:45 PDT on June 10, 2024 and ended at 20:00 PDT on June 10, 2024.
-
-**Resolved Date:**
-June 10, 2024 at 20:00 PDT
-
-**Summary of Google Cloud Outage:**
-
-| Service | Region/AZ | Duration | Start Time | End Time |
-| --- | --- | --- | --- | --- |
-| BigQuery | US Multi-region | 3 hours and 15 minutes | June 10, 2024 at 16:45 PDT | June 10, 2024 at 20:00 PDT |
-| Cloud Logging | US Multi-region | Up to 2 hours | June 10, 2024 at 18:07 PDT | June 10, 2024 at 20:09 PDT |
-
-**Overall Summary of Google Cloud Outage:**
-
-Google Cloud experienced an outage on June 10, 2024 that affected BigQuery and Cloud Logging services in the US Multi-region. The outage started at 16:45 PDT and lasted for 3 hours and 15 minutes. Cloud Logging customers faced log ingestion delays up to 2 hours, while some BigQuery customers experienced HTTP 500 errors and system errors using certain APIs.
-
-**Cloud Providers Impacted Services and Regions:**
-
-- Google Cloud
-  - Google BigQuery
-  - Google Cloud Logging
-
-Note that the outage only affected services in the US Multi-region.
+Cloud Provider: Google GCP
+Services Impacted: BigQuery and Cloud Logging
+Regions/Availability Zones: US Multi-region (BigQuery) and Multi-regions (specifically us-central1 and us-central2, Cloud Logging)
+Impact Dates: 2024-06-10 16:45 (BigQuery), 2024-06-10 18:07 (Cloud Logging)
+Duration: 3 hours and 15 minutes
+Root Cause: Concurrent mitigation of simultaneous degradations, which impacted the BigQuery projects hosted in two degraded clusters.
+Downtime Period: Up to 2 hours for log ingestion delays
+Resolved Date: 2024-06-10 20:00

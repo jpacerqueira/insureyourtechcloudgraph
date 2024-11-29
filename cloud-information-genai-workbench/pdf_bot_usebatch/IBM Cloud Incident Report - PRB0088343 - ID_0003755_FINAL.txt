@@ -1,26 +1,23 @@
-Here is the response to your query:
+Based on the provided text, I will resume the outage for IBM Cloud.
 
-**Summary of Outages**
+**IBM Cloud**
 
-The IBM Cloud team experienced an outage on October 24, 2023, which affected the IBM Cloud Console worldwide. The outage started at 06:42 UTC and was resolved at 12:12 UTC.
+* Service: IBM Cloud Console
+* Region/Availability Zone: Worldwide (no specific region or zone mentioned)
+* Impact Date: 24 October 2023 06:42 UTC
+* Duration: 5 hours and 30 minutes
+* Root Cause: Highly distributed denial-of-service (DDoS) attack that partially bypassed existing protections
+* Downtime Period: The IBM Cloud Console was unavailable for approximately 5 hours and 30 minutes.
+* Resolved Date: 24 October 2023 12:12 UTC
 
-**Cloud Providers Impacted**
+Here is the output table:
 
-1. **IBM Cloud**
-	* Services impacted: IBM Cloud Console
-	* Regions impacted: Worldwide
-	* Availability zones impacted: Not specified
-	* Root cause of outage: Highly distributed denial-of-service (DDoS) attack
-	* Duration of outage: 5 hours and 30 minutes
-	* Downtime period: 06:42 UTC - 12:12 UTC
-2. **No other cloud providers were identified in the text**
+IBM Cloud | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-----------|---------|------------------------|-------------|----------|-------------|-----------------|-------------
+IBM Cloud | IBM Cloud Console | Worldwide              | 24 Oct 2023 06:42 UTC | 5 hours and 30 minutes | Highly distributed denial-of-service (DDoS) attack | The IBM Cloud Console was unavailable for approximately 5 hours and 30 minutes. | 24 Oct 2023 12:12 UTC
 
-**Detailed Outage Information**
+**Summary**
 
-Since only IBM Cloud was impacted, there is no additional information to display.
+The outage impacted the IBM Cloud Console worldwide, starting on October 24, 2023, at 06:42 UTC. The outage lasted for approximately 5 hours and 30 minutes due to a highly distributed denial-of-service (DDoS) attack that partially bypassed existing protections. The downtime period was approximately 5 hours and 30 minutes.
 
-However, I can provide a summary of the outage:
-
-The IBM Cloud Console outage started at 06:42 UTC on October 24, 2023, and lasted for 5 hours and 30 minutes. The outage was caused by a highly distributed denial-of-service (DDoS) attack, which partially bypassed IBM's existing protections. The outage was resolved at 12:12 UTC.
-
-Note that the text does not provide information on the regions or availability zones impacted by the outage, as well as the specific services affected within those regions.
+**No other cloud providers were identified in the text**, so there is no additional information to report.

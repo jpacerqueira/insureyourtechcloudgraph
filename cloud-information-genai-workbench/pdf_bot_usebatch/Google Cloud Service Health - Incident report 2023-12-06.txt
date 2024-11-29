@@ -1,71 +1,50 @@
-I can only apply the query to the specified cloud providers, which are Google GCP and Amazon AWS.
+I can only apply the query to the specified cloud providers mentioned in the text, which are:
 
-Here is the result:
+Google GCP
+Amazon AWS is not mentioned in the text
+Microsoft Azure is not mentioned in the text
+Oracle OCI is not mentioned in the text
+IBM Cloud is not mentioned in the text
+Snowflake is not mentioned in the text
+Databricks is not mentioned in the text
+MongoDB is not mentioned in the text
+Akamai is not mentioned in the text
+Cloudflare is not mentioned in the text
+
+Here are the results of the query:
 
 **Google GCP**
 
-The outage started on December 6, 2023, at 14:47 US/Pacific Time (UTC-8) and was resolved on December 6, 2023, at 18:08 US/Pacific Time (UTC-8).
+Dataproc Metastore - Service Issues
 
-Services impacted:
-Tokyo (asia-northeast1)
-Seoul (asia-northeast3)
-Singapore (asia-southeast1)
-Sydney (australia-southeast1)
-Belgium (europe-west1)
-London (europe-west2)
-Frankfurt (europe-west3)
-Milan (europe-west8)
-Montréal (northamerica-northeast1)
-São Paulo (southamerica-east1)
-Iowa (us-central1)
-South Carolina (us-east1)
-Northern Virginia (us-east4)
-Oregon (us-west1)
+* Impact Date: 2023-12-06 14:47 US/Pacific
+* Duration: 1 hour and 21 minutes
+* Root Cause: Unknown
+* Downtime Period: 2023-12-06 14:47 to 2023-12-06 18:08
+* Resolved Date: 2023-12-06 18:02 US/Pacific
 
-Services that were unable to be used:
-Create new DPMS instances
-Update existing DPMS instances involving scaling configuration or tier updates
-Perform full Restore of existing backups
-Import metadata into DPMS Create Dataproc Metastore Federation APIs
+Impact on Services:
+* Create new DPMS instances
+* Update existing DPMS instances involving scaling configuration or tier updates
+* Perform full Restore of existing backups
+* Import metadata into DPMS Create Dataproc Metastore Federation APIs
 
-Root cause: The root cause of the outage was not specified.
+Regions and Availability Zones Impacted:
+* Tokyo (asia-northeast1)
+* Seoul (asia-northeast3)
+* Singapore (asia-southeast1)
+* Sydney (australia-southeast1)
+* Belgium (europe-west1)
+* London (europe-west2)
+* Frankfurt (europe-west3)
+* Milan (europe-west8)
+* Montréal (northamerica-northeast1)
+* São Paulo (southamerica-east1)
+* Iowa (us-central1)
+* South Carolina (us-east1)
+* Northern Virginia (us-east4)
+* Oregon (us-west1)
 
-Duration: 1 hour and 21 minutes (0 days, 1 hours, and 21 minutes)
+**Summary**
 
-Downtime period: 1 hour and 21 minutes
-
-**Amazon AWS**
-
-No information is available for Amazon AWS in the provided text.
-
-However, I can provide a summary of the overall outage:
-
-The outage started on December 6, 2023, at 14:47 US/Pacific Time (UTC-8) and was resolved on December 6, 2023, at 18:08 US/Pacific Time (UTC-8).
-
-Services impacted:
-Tokyo (asia-northeast1)
-Seoul (asia-northeast3)
-Singapore (asia-southeast1)
-Sydney (australia-southeast1)
-Belgium (europe-west1)
-London (europe-west2)
-Frankfurt (europe-west3)
-Milan (europe-west8)
-Montréal (northamerica-northeast1)
-São Paulo (southamerica-east1)
-Iowa (us-central1)
-South Carolina (us-east1)
-Northern Virginia (us-east4)
-Oregon (us-west1)
-
-Services that were unable to be used:
-Create new DPMS instances
-Update existing DPMS instances involving scaling configuration or tier updates
-Perform full Restore of existing backups
-Import metadata into DPMS Create Dataproc Metastore Federation APIs
-
-Root cause: The root cause of the outage was not specified.
-
-Duration: 1 hour and 21 minutes (0 days, 1 hours, and 21 minutes)
-
-Downtime period: 1 hour and 21 minutes
+Google GCP was impacted by a Dataproc Metastore outage on December 6, 2023. The outage started at 14:47 US/Pacific and lasted for 1 hour and 21 minutes. The root cause of the outage is unknown. The services impacted were Create new DPMS instances, Update existing DPMS instances involving scaling configuration or tier updates, Perform full Restore of existing backups, and Import metadata into DPMS Create Dataproc Metastore Federation APIs. The regions and availability zones impacted were Tokyo (asia-northeast1), Seoul (asia-northeast3), Singapore (asia-southeast1), Sydney (australia-southeast1), Belgium (europe-west1), London (europe-west2), Frankfurt (europe-west3), Milan (europe-west8), Montréal (northamerica-northeast1), São Paulo (southamerica-east1), Iowa (us-central1), South Carolina (us-east1), Northern Virginia (us-east4), and Oregon (us-west1). The outage was resolved at 18:02 US/Pacific.

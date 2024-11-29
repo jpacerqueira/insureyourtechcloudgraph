@@ -1,28 +1,33 @@
-Here is the response to your query:
+After analyzing the text, I found that only one cloud provider was mentioned: Amazon AWS.
 
-**Summary of Outages**
+Here is the information about the outage:
 
-The outage occurred in the Tokyo (AP-NORTHEAST-1) Region on September 2, 2021.
+**Amazon AWS**
 
-**Cloud Provider Impacted Services and Regions**
+* Service impacted: Direct Connect
+* Region/Availability Zone: Tokyo (AP-NORTHEAST-1)
+* Impact Date: September 2, 2021
+* Duration:
+	+ Start time: 7:30 AM JST
+	+ End time: 12:30 PM JST and 1:42 PM JST ( partial recovery)
+	+ Total duration: approximately 5 hours and 12 minutes
+* Root Cause: Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
+* Downtime Period:
+	+ Initial impact: 7:30 AM JST - 12:30 PM JST ( partial recovery)
+	+ Full recovery: 1:42 PM JST
+* Resolved Date: September 2, 2021
 
-* Amazon AWS:
-	+ Service: Direct Connect
-	+ Region: Tokyo (AP-NORTHEAST-1)
-	+ Availability Zones: Not specified
-	+ Duration of Outage: 5 hours and 12 minutes
-	+ Downtime Period: 7:30 AM JST to 1:42 PM JST
-* No other cloud providers were impacted.
+Here is the information in a table format:
 
-**Detailed Breakdown of Outages**
+Amazon AWS | Direct Connect | Tokyo (AP-NORTHEAST-1) | September 2, 2021 | 5 hours and 12 minutes | Failure of network devices on one of the network layers | Initial impact: 7:30 AM JST - 12:30 PM JST, Full recovery: 1:42 PM JST | September 2, 2021
 
-Here is the detailed breakdown of the outage for each service in Amazon AWS:
+**Summary**
 
-1. Direct Connect:
-	+ Date Impacted: September 2, 2021
-	+ Time Impacted: 7:30 AM JST to 1:42 PM JST
-	+ Duration: 5 hours and 12 minutes
-	+ Root Cause: Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
-	+ Downtime Period: Customers started seeing recovery by 12:30 PM JST, but connectivity issues were not fully resolved until 1:42 PM JST.
-
-Note: The text does not provide information on specific Availability Zones impacted or other services affected.
+* Cloud Provider: Amazon AWS
+* Service impacted: Direct Connect
+* Region/Availability Zone: Tokyo (AP-NORTHEAST-1)
+* Impact Date: September 2, 2021
+* Duration: approximately 5 hours and 12 minutes
+* Root Cause: Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
+* Downtime Period: Initial impact: 7:30 AM JST - 12:30 PM JST, Full recovery: 1:42 PM JST
+* Resolved Date: September 2, 2021

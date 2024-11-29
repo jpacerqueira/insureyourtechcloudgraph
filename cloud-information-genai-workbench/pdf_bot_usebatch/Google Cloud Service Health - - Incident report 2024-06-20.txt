@@ -1,33 +1,40 @@
-I can provide you with the requested information. However, I need to clarify that some of the cloud providers mentioned in your request (e.g., Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) are not explicitly mentioned in the provided text.
+I can only apply the query to the specified cloud providers mentioned in the text, which are:
 
-Based on the text, the impacted cloud providers are Google GCP. I will provide you with the information for Google GCP only.
+* Google GCP
+* Amazon AWS is not mentioned in the text
+* Microsoft Azure is not mentioned in the text
+* Oracle OCI is not mentioned in the text
+* IBM Cloud is not mentioned in the text
+* Snowflake is not mentioned in the text
+* Databricks is not mentioned in the text
+* MongoDB is not mentioned in the text
+* Akamai is not mentioned in the text
+* Cloudflare is not mentioned in the text
 
-Here is the breakdown of the outage by service, region, and availability zone:
+Here are the results of the query:
 
-**Google GCP Outage Details**
+**Google GCP**
 
-**Service:** Dataplex Catalog
-**Region/Availability Zone:** asia-northeast2, australia-southeast2, us-east9, europe-north1, us-west5, europe-west8, asia-east1, northamerica-northeast1, us-central5, europe-west2, southamerica-east1, africa-south1, me-west1, europe-southwest1, asia-south2, europe-west7, us-west2, europe-west10, us-central3, us-east2, us-east4, us-east7, europe-central2, us-central1, asia-west2, europe-west3, europe-west5, us-east1, europe-west9, europe-west14, us-west8, europe-west, us-central1, google, europe-west11, asia-southeast1, southamerica-west1, us-west4, us-central4, asia-west1, us-west6, us-south1, us-west3, europe-west13, us-west1, me-central2, us-west7, europe-west4, us-east5, europe-west12, us-east8, europe-west6, us-east3, asia-northeast1, europe-west1, me-central1, asia-northeast3, me-central3, asia-south1, asia-southeast2, us-east10, us-central2, asia-east2, europe-north2, northamerica-south1, northamerica-northeast2, us-central
+Dataplex Catalog API and Dataplex Catalog UI in Google Cloud Console returned errors and timeouts on all API calls.
 
-**Duration:** 2 hours and 12 minutes
-**Start Date:** June 20, 2024 10:30 (all times US/Pacific)
-**End Date:** June 20, 2024 12:42
-**Root Cause:** Connectivity issues to a dependent backend service
-**Downtime Period:** 2 hours and 12 minutes
+* Region/Availability Zone: Multi-regions, asia, eu, us
+* Impact Date: 2024-06-20 10:30
+* Duration: 2 hours, 12 minutes
+* Root Cause: Connectivity issues to a dependent backend service
+* Downtime Period: 2 hours, 12 minutes
+* Resolved Date: 2024-06-20 12:42
 
-Here is the summary of the outage:
+**Output Table**
 
-The Google GCP Dataplex Catalog experienced an outage that lasted for 2 hours and 12 minutes. The outage started on June 20, 2024, at 10:30 (all times US/Pacific) and was resolved at 12:42. The root cause of the outage was connectivity issues to a dependent backend service.
+Google GCP | Dataplex Catalog API and UI | asia, eu, us | 2024-06-20 10:30 | 2 hours, 12 minutes | Connectivity issues to a dependent backend service | 2024-06-20 12:42
 
-Here is the summary of the impacted services and regions:
+Overall Summary:
 
-* Dataplex Catalog API and UI in Google Cloud Console returned errors and timeouts on all API calls.
-* Impacted regions/availability zones: asia-northeast2, australia-southeast2, us-east9, europe-north1, us-west5, europe-west8, asia-east1, northamerica-northeast1, us-central5, europe-west2, southamerica-east1, africa-south1, me-west1, europe-southwest1, asia-south2, europe-west7, us-west2, europe-west10, us-central3, us-east2, us-east4, us-east7, europe-central2, us-central1, asia-west2, europe-west3, europe-west5, us-east1, europe-west9, europe-west14, us-west8, europe-west, us-central1, google, europe-west11, asia-southeast1, southamerica-west1, us-west4, us-central4, asia-west1, us-west6, us-south1, us-west3, europe-west13, us-west1, me-central2, us-west7, europe-west4, us-east5, europe-west12, us-east8, europe-west6, us-east3, asia-northeast1, europe-west1, me-central1, asia-northeast3, me-central3, asia-south1, asia-southeast2, us-east10, us-central2, asia-east2, europe-north2, northamerica-south1, northamerica-northeast2, us-central
-
-Here is the summary of the outage in a table format:
-
-| Service | Region/Availability Zone | Duration | Start Date | End Date | Root Cause | Downtime Period |
-| --- | --- | --- | --- | --- | --- | --- |
-| Dataplex Catalog API and UI | asia-northeast2, australia-southeast2, us-east9, europe-north1, us-west5, europe-west8, asia-east1, northamerica-northeast1, us-central5, europe-west2, southamerica-east1, africa-south1, me-west1, europe-southwest1, asia-south2, europe-west7, us-west2, europe-west10, us-central3, us-east2, us-east4, us-east7, europe-central2, us-central1, asia-west2, europe-west3, europe-west5, us-east1, europe-west9, europe-west14, us-west8, europe-west, us-central1, google, europe-west11, asia-southeast1, southamerica-west1, us-west4, us-central4, asia-west1, us-west6, us-south1, us-west3, europe-west13, us-west1, me-central2, us-west7, europe-west4, us-east5, europe-west12, us-east8, europe-west6, us-east3, asia-northeast1, europe-west1, me-central1, asia-northeast3, me-central3, asia-south1, asia-southeast2, us-east10, us-central2, asia-east2, europe-north2, northamerica-south1, northamerica-northeast2, us-central | 2 hours and 12 minutes | June 20, 2024 10:30 | June 20, 2024 12:42 | Connectivity issues to a dependent backend service | 2 hours and 12 minutes |
-
-Note that the table only includes the services and regions impacted by the outage.
+* Cloud Provider: Google GCP
+* Services Impacted: Dataplex Catalog API and UI
+* Regions/Availability Zones: Multi-regions, asia, eu, us
+* Impact Date: 2024-06-20 10:30
+* Duration: 2 hours, 12 minutes
+* Root Cause: Connectivity issues to a dependent backend service
+* Downtime Period: 2 hours, 12 minutes
+* Resolved Date: 2024-06-20 12:42

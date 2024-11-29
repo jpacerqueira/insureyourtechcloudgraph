@@ -1,41 +1,109 @@
-Here is the breakdown of the outage for each cloud provider:
+Here is the information about the outage for the specified cloud providers:
 
 **Google Cloud**
 
-Incident Start: 16 April 2024 02:20
-Incident End: 17 April 2024 03:40
-Duration: 1 day 1 hours, 20 minutes
+* Service: Google Cloud Composer
+* Region/Availability Zone: Global
+* Impact Date: 2024-04-16 02:20 US/Pacific
+* Duration: 1 day, 1 hour, and 20 minutes
+* Root Cause: An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+* Downtime Period: The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific
+* Resolved Date: 2024-04-17 03:40 US/Pacific
 
-Affected Services and Features:
-Google Cloud Composer
-Regions/Zones:
-Global
+**Google Cloud (continued)**
 
-Description:
-Google Cloud Composer users experienced an elevated failure rate when creating, resizing, or upgrading to newer versions of Cloud Composer 2 Environments with Private IP configuration. This was due to an inadvertent issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+* Service: Google Cloud Composer
+* Region/Availability Zone: Taiwan (asia-east1)
+* Impact Date: 2024-04-16 02:20 US/Pacific
+* Duration: 1 day, 1 hour, and 20 minutes
+* Root Cause: An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+* Downtime Period: The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific
+* Resolved Date: 2024-04-17 03:40 US/Pacific
 
-Root Cause:
-The root cause was due to an issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
-The new version of the COS image (M113) moved from iptables-legacy to iptables-nft package as the default, which impacted Konlet (system executing containers)'s handling of iptables to break.
+**Google Cloud (continued)**
 
-Downtime Period:
-Affected environments with Private IP configuration that experienced upgrade failures during the incident will now upgrade successfully.
-Fewer than 20 customer environments encountered upgrade failures and all of the customer environments with Private IP configuration that experienced upgrade failures during the incident will now upgrade successfully.
+* Service: Google Cloud Composer
+* Region/Availability Zone: Hong Kong (asia-east2)
+* Impact Date: 2024-04-16 02:20 US/Pacific
+* Duration: 1 day, 1 hour, and 20 minutes
+* Root Cause: An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+* Downtime Period: The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific
+* Resolved Date: 2024-04-17 03:40 US/Pacific
 
-**Summary:**
+**Google Cloud (continued)**
 
-Google Cloud Composer was impacted in Global regions, with a downtime period of affected environments with Private IP configuration. The root cause was an issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+* Service: Google Cloud Composer
+* Region/Availability Zone: Tokyo (asia-northeast1)
+* Impact Date: 2024-04-16 02:20 US/Pacific
+* Duration: 1 day, 1 hour, and 20 minutes
+* Root Cause: An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+* Downtime Period: The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific
+* Resolved Date: 2024-04-17 03:40 US/Pacific
 
-**Output Table:**
+**Google Cloud (continued)**
 
-| Service | Incident Start | Incident End | Duration | Downtime Period |
-| --- | --- | --- | --- | --- |
-| Google Cloud Composer | 16 April 2024 02:20 | 17 April 2024 03:40 | 1 day 1 hours, 20 minutes | Affected environments with Private IP configuration |
+* Service: Google Cloud Composer
+* Region/Availability Zone: Osaka (asia-northeast2)
+* Impact Date: 2024-04-16 02:20 US/Pacific
+* Duration: 1 day, 1 hour, and 20 minutes
+* Root Cause: An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+* Downtime Period: The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific
+* Resolved Date: 2024-04-17 03:40 US/Pacific
 
-Note: The table only includes the information provided in the text and does not include any additional details that may be relevant to the outage.
+**Google Cloud (continued)**
 
-**Overall Summary:**
+* Service: Google Cloud Composer
+* Region/Availability Zone: Seoul (asia-northeast3)
+* Impact Date: 2024-04-16 02:20 US/Pacific
+* Duration: 1 day, 1 hour, and 20 minutes
+* Root Cause: An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+* Downtime Period: The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific
+* Resolved Date: 2024-04-17 03:40 US/Pacific
 
-Google Cloud Composer was impacted globally, with a downtime period of affected environments with Private IP configuration. The root cause was an issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+**Google Cloud (continued)**
 
-Since no other cloud providers were mentioned in the text, there is no additional information to provide for those services.
+* Service: Google Cloud Composer
+* Region/Availability Zone: Mumbai (asia-south1)
+* Impact Date: 2024-04-16 02:20 US/Pacific
+* Duration: 1 day, 1 hour, and 20 minutes
+* Root Cause: An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+* Downtime Period: The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific
+* Resolved Date: 2024-04-17 03:40 US/Pacific
+
+**Google Cloud (continued)**
+
+* Service: Google Cloud Composer
+* Region/Availability Zone: Singapore (asia-southeast1)
+* Impact Date: 2024-04-16 02:20 US/Pacific
+* Duration: 1 day, 1 hour, and 20 minutes
+* Root Cause: An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+* Downtime Period: The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific
+* Resolved Date: 2024-04-17 03:40 US/Pacific
+
+**Google Cloud (continued)**
+
+* Service: Google Cloud Composer
+* Region/Availability Zone: Jakarta
+* Impact Date: 2024-04-16 02:20 US/Pacific
+* Duration: 1 day, 1 hour, and 20 minutes
+* Root Cause: An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+* Downtime Period: The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific
+* Resolved Date: 2024-04-17 03:40 US/Pacific
+
+**Summary**
+
+The outage affected Google Cloud Composer in multiple regions and availability zones, with a total of 7 services impacted. The root cause was an issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Google Cloud Composer | Global | 2024-04-16 02:20 US/Pacific | 1 day, 1 hour, and 20 minutes | An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads. | The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific | 2024-04-17 03:40 US/Pacific |
+| Google Cloud | Google Cloud Composer | Taiwan (asia-east1) | 2024-04-16 02:20 US/Pacific | 1 day, 1 hour, and 20 minutes | An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads. | The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific | 2024-04-17 03:40 US/Pacific |
+| Google Cloud | Google Cloud Composer | Hong Kong (asia-east2) | 2024-04-16 02:20 US/Pacific | 1 day, 1 hour, and 20 minutes | An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads. | The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific | 2024-04-17 03:40 US/Pacific |
+| Google Cloud | Google Cloud Composer | Tokyo (asia-northeast1) | 2024-04-16 02:20 US/Pacific | 1 day, 1 hour, and 20 minutes | An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads. | The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific | 2024-04-17 03:40 US/Pacific |
+| Google Cloud | Google Cloud Composer | Osaka (asia-northeast2) | 2024-04-16 02:20 US/Pacific | 1 day, 1 hour, and 20 minutes | An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads. | The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific | 2024-04-17 03:40 US/Pacific |
+| Google Cloud | Google Cloud Composer | Seoul (asia-northeast3) | 2024-04-16 02:20 US/Pacific | 1 day, 1 hour, and 20 minutes | An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads. | The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific | 2024-04-17 03:40 US/Pacific |
+| Google Cloud | Google Cloud Composer | Mumbai (asia-south1) | 2024-04-16 02:20 US/Pacific | 1 day, 1 hour, and 20 minutes | An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads. | The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific | 2024-04-17 03:40 US/Pacific |
+| Google Cloud | Google Cloud Composer | Singapore (asia-southeast1) | 2024-04-16 02:20 US/Pacific | 1 day, 1 hour, and 20 minutes | An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads. | The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific | 2024-04-17 03:40 US/Pacific |
+| Google Cloud | Google Cloud Composer | Jakarta | 2024-04-16 02:20 US/Pacific | 1 day, 1 hour, and 20 minutes | An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads. | The outage started at 2024-04-16 02:20 US/Pacific and ended at 2024-04-17 03:40 US/Pacific | 2024-04-17 03:40 US/Pacific |
+
+Note: The above table only includes the services impacted by the outage, but does not include any additional information or context provided in the original text.

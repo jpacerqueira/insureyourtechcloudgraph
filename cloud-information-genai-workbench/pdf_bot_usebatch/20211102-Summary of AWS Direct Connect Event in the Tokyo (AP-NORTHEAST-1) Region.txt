@@ -1,35 +1,29 @@
-Here is the breakdown of the outage for each cloud provider:
+Here is the information about the outage:
+
+**Summary of Outage**
+
+The outage occurred in the Tokyo (AP-NORTHEAST-1) Region on September 2, 2021. The Direct Connect service experienced intermittent connectivity issues and elevated packet loss for customers connecting to the Tokyo Region.
+
+**Cloud Providers Impacted**
+
+* Amazon AWS
+* Google GCP is not mentioned in the text
+
+**Outage Details per Cloud Provider**
 
 **Amazon AWS**
 
-Outage Details:
-The outage started at 7:30 AM JST on September 2, 2021.
-The outage was caused by the failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
-The affected services were Direct Connect trac to and from the Tokyo Region.
-The outage impacted Availability Zones within the Tokyo Region.
-
-Duration:
-- Days: 1
-- Hours: 2.5 (from 7:30 AM JST to 12:30 PM JST)
-- Minutes: 45
-
-Downtime Period:
-- Started: September 2, 2021 7:30 AM JST
-- Ended: September 2, 2021 12:30 PM JST
-
-Resolution Date:
-September 2, 2021 1:42 PM JST
-
-**Summary of AWS Outage**
-
-The outage affected Direct Connect trac to and from the Tokyo Region, causing intermittent connectivity issues and elevated packet loss. The issue was resolved after 2 hours and 45 minutes.
-
-**No other cloud providers were identified in the text as being impacted by this outage.**
-
-Note: I removed Cloud Vendors not identified in the text, as per your request. I also removed apostrophes, characters like “ * | + - .” and provided full words only. The information is presented in a table format below:
-
-**Outage Summary Table**
-
-| Cloud Provider | Service Impacted | Region | Availability Zones | Duration | Downtime Period | Resolution Date |
+| Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
 | --- | --- | --- | --- | --- | --- | --- |
-| Amazon AWS | Direct Connect trac | Tokyo (AP-NORTHEAST-1) |  | 1 day, 2 hours, 45 minutes | September 2, 2021 7:30 AM JST - September 2, 2021 12:30 PM JST | September 2, 2021 1:42 PM JST |
+| Direct Connect | Tokyo (AP-NORTHEAST-1) | September 2, 2021 | 5 hours and 12 minutes | Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region | Elevated packet loss for customers connecting to the Tokyo Region | 7:30 AM JST (September 2, 2021) |
+
+**Amazon AWS**
+
+| Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- |
+| Direct Connect | Tokyo (AP-NORTHEAST-1) | September 2, 2021 | 5 hours and 12 minutes | Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region | Elevated packet loss for customers connecting to the Tokyo Region | 12:30 PM JST (September 2, 2021) |
+| Direct Connect | Tokyo (AP-NORTHEAST-1) | September 2, 2021 | 1 hour and 42 minutes | Recovery of connectivity issues | Connectivity issues fully resolved | 1:42 PM JST (September 2, 2021) |
+
+Note that the outage started at 7:30 AM JST on September 2, 2021, and was marked as resolved at 12:30 PM JST on the same day. The downtime period for Direct Connect customers connecting to the Tokyo Region was approximately 5 hours and 12 minutes.
+
+There is no information about Google GCP or other cloud providers in the text.

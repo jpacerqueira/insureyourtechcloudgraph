@@ -1,34 +1,32 @@
-Here is the response to your query:
+After analyzing the text, I found that only IBM Cloud was mentioned as a cloud provider. Here is the information about the outage:
 
-**Summary of Outages**
+**IBM Cloud**
 
-The outage occurred on September 15, 2020, in the Tokyo (TOK02) Data Center. The incident started at 00:40 UTC and was resolved at 04:11 UTC.
+The incident started on 15 September 2020 at 00:40 UTC.
 
-**Cloud Providers Impacted**
+* Service impacted: Unplanned VSI migrations in TOK02
+* Region/Availability Zone: Tokyo 02 Data Center
+* Impact Date: 15 September 2020
+* Duration:
+	+ Days: 1
+	+ Hours: 3 hours and 31 minutes
+	+ Minutes: 31 minutes
+* Root Cause: An unintended procedural step for a future planned maintenance
+* Downtime Period: The VSIs were powered down and were in a transition state, causing the migrations to be halted.
+* Resolved Date: 15 September 2020 at 04:11 UTC
 
-Only IBM Cloud was identified as impacted in the text.
+Here is the information about the outage displayed as text by line:
 
-**IBM Cloud Outage Details**
+IBM Cloud | Unplanned VSI Migrations | TOK02 | 15 September 2020 | 1 day 3 hours and 31 minutes | An unintended procedural step for a future planned maintenance | The VSIs were powered down and were in a transition state, causing the migrations to be halted. | 15 September 2020 at 04:11
 
-Here are the outage details for IBM Cloud:
+And here is the information displayed as an output table:
 
-Outage Started: September 15, 2020, 00:40 UTC
-Duration: 3 hours and 31 minutes
-Downtime Period: The downtime period started when the unplanned VSI migrations began at 00:40 UTC and ended when all VSIs were verified to be back online at 04:11 UTC.
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| IBM Cloud | Unplanned VSI Migrations | TOK02 | 15 September 2020 | 1 day 3 hours and 31 minutes | An unintended procedural step for a future planned maintenance | The VSIs were powered down and were in a transition state, causing the migrations to be halted. | 15 September 2020 at 04:11 |
 
-**Root Cause of Outage**
+**Summary**
 
-The root cause of the outage was an unintended procedural step for a future planned maintenance. During migration scheduling, an option was selected that started immediate, unplanned customer VSI migrations.
+The outage affected IBM Cloud's Unplanned VSI Migrations service in TOK02 region/availability zone. The incident started on 15 September 2020 at 00:40 UTC and lasted for 1 day, 3 hours, and 31 minutes. The root cause was an unintended procedural step for a future planned maintenance. The downtime period was caused by the VSIs being powered down and in a transition state. The outage was resolved on 15 September 2020 at 04:11 UTC.
 
-Here is the breakdown of the outage by service:
-
-1. Unplanned VSI Migrations in TOK02
-	* Services Impacted: VSIs in Pod 1 of the Tokyo (TOK02) Data Center
-	* Regions and Availability Zones: TOK02
-	* Downtime Period: The downtime period started when the unplanned VSI migrations began at 00:40 UTC and ended when all VSIs were verified to be back online at 04:11 UTC.
-2. Unplanned VSI Evacuation Job in TOK02
-	* Services Impacted: VSIs in Pod 1 of the Tokyo (TOK02) Data Center
-	* Regions and Availability Zones: TOK02
-	* Downtime Period: The downtime period started when the unplanned VSI evacuation job triggered evacuations of a number of customer VSIs at 01:11 UTC and ended when all VSIs were verified to be back online at 04:11 UTC.
-
-Note that no other cloud providers or services were impacted in the text.
+**No other cloud providers were mentioned in the text**, so there is no additional information to display.

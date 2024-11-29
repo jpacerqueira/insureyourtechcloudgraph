@@ -1,52 +1,26 @@
-Here is the response to your query:
+After analyzing the text, I found that only Microsoft Azure was mentioned as a cloud provider. Here is the information about the outage:
 
-**Outages Summary**
+**Summary of Outage**
 
-The following cloud providers were impacted: Microsoft Azure, Cosmos DB.
+* Cloud Provider: Microsoft Azure
+* Services Impacted: Front-end services for other clusters in the region, Cosmos DB, and Azure AD
+* Regions/Availability Zones: West US (multiple availability zones)
+* Impact Date: 03:26 UT C to 10:02 UT C on February 26, 2021
+* Duration: 6 hours and 36 minutes
+* Root Cause: Code defect in a version update of a component that controls network traffic routing between Azure regions
+* Downtime Period: The front-end services for other clusters in the region were timed out due to unavailability, triggering an unhandled failure condition and resulting crash.
+* Resolved Date: 18:45 UT C
 
-**Microsoft Azure Outage**
+**Outage Details**
 
-* **Incident Duration**: 5 hours
-* **Start Time**: 21:30 UTC
-* **End Time**: 02:45 UTC (next day)
-* **Affected Services**: Front-end services for other clusters in the region, including Azur e AD backend services.
-* **Root Cause**: Code defect in a version update of a component that controls network traffic routing between Azure regions.
-* **Downtime Period**: 5 hours
-* **Resolution Time**: 18:45 UTC
+Here is the information about the outage per cloud provider:
 
-**Cosmos DB Outage**
+**Microsoft Azure**
 
-* **Incident Duration**: 4.5 hours
-* **Start Time**: 21:25 UTC
-* **End Time**: 02:10 UTC (next day)
-* **Affected Regions**: West US
-* **Affected Availability Zones**: Not specified
-* **Root Cause**: Service update targeting an internal validation test ring was deployed, causing a crash upon startup in the Azur e AD backend services.
-* **Downtime Period**: 4.5 hours
-* **Resolution Time**: Not specified
+| Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- |
+| Front-end services for other clusters in the region | West US (multiple availability zones) | 03:26 UT C to 10:02 UT C on February 26, 2021 | 6 hours and 36 minutes | Code defect in a version update of a component that controls network traffic routing between Azure regions | The front-end services for other clusters in the region were timed out due to unavailability, triggering an unhandled failure condition and resulting crash. | 18:45 UT C |
 
-**Detailed Outage Information**
+Note: There is only one cloud provider mentioned in the text, which is Microsoft Azure.
 
-Microsoft Azure:
-
-* Front-end services for other clusters in the region:
-	+ Affected Regions: West US
-	+ Affected Availability Zones: Not specified
-	+ Root Cause: Unhandled error condition due to unavailability of calls to impacted cluster's front-end service.
-	+ Downtime Period: 5 hours
-	+ Resolution Time: 18:45 UTC
-* Azur e AD backend services:
-	+ Affected Regions: West US
-	+ Affected Availability Zones: Not specified
-	+ Root Cause: Code defect in a version update of a component that controls network traffic routing between Azure regions.
-	+ Downtime Period: 5 hours
-	+ Resolution Time: 18:45 UTC
-
-Cosmos DB:
-
-* Front-end services:
-	+ Affected Regions: West US
-	+ Affected Availability Zones: Not specified
-	+ Root Cause: Service update targeting an internal validation test ring was deployed, causing a crash upon startup in the Azur e AD backend services.
-	+ Downtime Period: 4.5 hours
-	+ Resolution Time: Not specified
+There are no other cloud providers mentioned in the text, so there is no additional information to display.

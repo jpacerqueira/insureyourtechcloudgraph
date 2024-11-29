@@ -1,30 +1,28 @@
-I can provide you with the information you requested. However, I need to clarify that some of the cloud providers mentioned in your request (Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB) are not explicitly mentioned in the text.
+I can help you with that query.
 
-The text only mentions Google Cloud Service Health and specifically mentions Apigee as the service impacted. Therefore, I will provide information on the outage related to Apigee in Google Cloud.
+After analyzing the text, I found that the following cloud providers were impacted:
 
-Here is the breakdown of the outage:
+* Google GCP
+* Amazon AWS is not mentioned in the text but it was mentioned that some customers may receive errors while trying to access development Apigee portal which is a service of Google Cloud. However since its not explicitly stated as an outage of AWS we will ignore this and focus on the information provided about Google Cloud.
 
-**Apigee Outage**
+Here are the details of the outages per cloud provider:
 
-* **Incident Started:** Tuesday, 2024-04-23 12:25 US/Pacific
-* **Duration:** 2 hours and 28 minutes (15:53 - 14:24 US/Pacific)
-* **Root Cause:** Impacted customers may receive HTML errors instead of correct data while trying to access Apigee portal.
-* **Affected Regions:** asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-west2, us-west3, us-west4
-* **Availability Zones:** Not specified
-* **Services Impacted:** Apigee portal
-* **Workaround:** None at this time
+**Google GCP**
 
-Here is the summary of the outage in a table format:
+* Service: Apigee
+* Region/Availability Zone: Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Osaka (asia-northeast2), Seoul (asia-northeast3), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Jakarta (asia-southeast2), Sydney (australia-southeast1), Melbourne (australia-southeast2), Warsaw (europe-central2), Finland (europe-north1), Madrid (europe-southwest1), Belgium (europe-west1), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Paris (europe-west9), Doha (me-central1), Tel Aviv (me-west1), Montréal (northamerica-northeast1), Toronto (northamerica-northeast2), São Paulo (southamerica-east1), Santiago (southamerica-west1), Iowa (us-central1), South Carolina (us-east1), Northern Virginia (us-east4), Columbus (us-east5), Dallas (us-south1), Oregon (us-west1), Los Angeles (us-west2), Salt Lake City (us-west3), Las Vegas (us-west4)
+* Impact Date: 2024-04-23 12:25 US/Pacific
+* Duration: 2 hours and 18 minutes
+* Root Cause: Impacted customers may receive HTML errors instead of correct data while trying to access Apigee portal.
+* Downtime Period: None specified
+* Resolved Date: 2024-04-23 15:53 US/Pacific
 
-| Date | Time | Duration | Root Cause | Affected Regions | Availability Zones |
-| --- | --- | --- | --- | --- | --- |
-| 2024-04-23 | 12:25 US/Pacific | - | Impacted customers may receive HTML errors instead of correct data while trying to access Apigee portal. | asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-west2, us-west3, us-west4 | - |
-| 2024-04-23 | 15:53 US/Pacific | 2 hours and 28 minutes | Impacted customers may receive HTML errors instead of correct data while trying to access Apigee portal. | asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-west2, us-west3, us-west4 | - |
+**Summary**
 
-Note: The table only includes the information explicitly mentioned in the text.
+Google GCP was impacted by an outage on April 23, 2024. The outage affected multiple regions and availability zones across Asia, Europe, North America, South America, Africa, and Australia. The root cause of the outage was a HTML error issue with Apigee portal.
 
-**Overall Summary**
+Here is the output table:
 
-The Apigee outage affected multiple regions and availability zones in Google Cloud. The outage started on Tuesday, 2024-04-23 at 12:25 US/Pacific and lasted for 2 hours and 28 minutes. The root cause of the outage was related to HTML errors in the Apigee portal. No workaround was available during this time.
-
-Please note that I did not include any information from cloud providers not explicitly mentioned in the text, as per your request.
+Google Cloud | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-----------|--------|-------------------------|------------|----------|-------------|-----------------|-------------
+Google Cloud | Apigee | Taiwan (asia-east1)      | 2024-04-23 | 2 hours 18 minutes | HTML error issue with Apigee portal | None specified | 2024-04-23 15:53 US/Pacific

@@ -1,25 +1,21 @@
-Here is the breakdown of the outage for each cloud provider:
+After analyzing the text, I found that only Google Cloud Service was mentioned as being affected by an outage.
 
-**Google Cloud**
+Here is the breakdown of the outage per service:
 
-Incident began at 2023-11-30 10:47 and ended at 2023-11-30 12:22
-Duration: 0 days, 14 hours, 35 minutes
-Downtime period: 14 hours, 35 minutes
-Root cause: Physical connections issue in Google Cloud Interconnect in Santiago, Chile
+Google Cloud Interconnect in Santiago, Chile
+---------------------------------------------
 
-Affected services:
-- Google Cloud Interconnect in scl-zone1-7594 and scl-zone2-7594
-- GCP services via scl-zone1-7594 and scl-zone2-7594
-Regions affected: southamerica-west1
+* Service: Google Cloud Interconnect
+* Region/Availability Zone: southamerica-west1 (scl-zone1-7594 and scl-zone2-7594)
+* Impact Date: 2023-11-30 10:47 US/Pacific Time
+* Duration: 35 minutes
+* Root Cause: Physical connections issue in Google Cloud Interconnect in Santiago, Chile
+* Downtime Period: 2023-11-30 10:47 - 2023-11-30 12:22 US/Pacific Time (35 minutes)
+* Resolved Date: 2023-11-30 12:20 US/Pacific Time
 
-**Summary of Google Cloud Outage**
+Here is the output table:
 
-Google Cloud experienced an outage on November 30, 2023, starting at 10:47 UTC. The issue was resolved by 12:22 UTC. The outage impacted GCP services via scl-zone1-7594 and scl-zone2-7594 in the southamerica-west1 region.
+Google Cloud | Interconnect | southamerica-west1 | 2023-11-30 10:47 | 35 minutes | Physical connections issue | 2023-11-30 10:47 - 2023-11-30 12:22 | 2023-11-30 12:20
 
-**Cloud Provider Summary**
-
-| Cloud Provider | Affected Services | Regions |
-| --- | --- | --- |
-| Google Cloud | Google Cloud Interconnect, GCP services | southamerica-west1 |
-
-Note: The other cloud providers mentioned in the original text (Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) were not impacted by this outage.
+Overall Summary:
+Only Google Cloud Service was impacted by an outage. The outage affected the Google Cloud Interconnect service in the southamerica-west1 region, specifically in scl-zone1-7594 and scl-zone2-7594. The outage started on November 30, 2023, at 10:47 US/Pacific Time and lasted for 35 minutes. The root cause of the outage was a physical connections issue in Google Cloud Interconnect in Santiago, Chile. The downtime period was from 10:47 to 12:22 US/Pacific Time, and the outage was resolved on November 30, 2023, at 12:20 US/Pacific Time.

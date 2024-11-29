@@ -1,57 +1,81 @@
-Here is the response to your query:
+After analyzing the text, I have identified the following cloud providers and their respective outages:
 
-**Outages Summary**
+**Microsoft Azure**
 
-The following cloud providers were impacted: Microsoft Azure, Amazon AWS was not mentioned in the text but A T&T was mentioned which is a service provided by AT&T (a company that uses AWS) however it was not specified if it was an AWS service or a service of AT&T. 
-
-Microsoft Azure and A T&T experienced outages.
-
-**Outage Details**
-
-**Azure SQL Database and Managed Instance**
-
-* Outage started: 11:45 UTC on July 30, 2024
-* Duration: 8 hours and 58 minutes
-* Root cause: Storage availability failures in various control and data plane clusters
-* Services impacted: Azure SQL DB and Azure SQL Managed Instance customers in the region
-* Downtime period: All unhealthy nodes were detected within one minute of SQL unavailability, and investigation and mitigation workstreams were established
-
-**A T&T**
-
-* Outage started: 11:46 UTC on September 12, 2024
-* Duration: 28 minutes
-* Root cause: Automated systems in the Microsoft network shifted traffic away from A T&T, resulting in issues accessing services
-* Services impacted: A T T customers connecting to Microsoft services
-* Downtime period: Traffic was shifted away at 13:01 UTC, and the issue was resolved after A T T reverted a change at 13:14 UTC
-
-**Azure Front Door (AFD) and Azure Content Delivery Network (CDN)**
-
-* Outage started: Between 11:45 and 13:58 UTC on July 30, 2024
+* Service: Azure SQL Database and Managed Instance
+* Region/Availability Zone: Various control and data plane clusters failed
+* Impact Date: Between 11:45 and 13:58 UTC on July 30, 2024
 * Duration: Approximately 2 hours and 13 minutes
-* Root cause: Intermittent connection errors, timeouts, or latency spikes while connecting to AFD and CDN
-* Services impacted: Microsoft services leveraging AFD and CDN
-* Downtime period: Customers experienced intermittent connection errors, timeouts, or latency spikes
+* Root Cause: Storage availability failures
+* Downtime Period: SQL monitoring detected unhealthy nodes and login failures in the region
+* Resolved Date: Within one minute of storage recovery
 
-**AT&T**
+**Microsoft Azure**
 
-* Outage started: 11:46 UTC on September 12, 2024
-* Duration: 28 minutes
-* Root cause: Automated systems in the Microsoft network shifted traffic away from A T&T, resulting in issues accessing services
-* Services impacted: A T T customers connecting to Microsoft services
-* Downtime period: Traffic was shifted away at 13:01 UTC, and the issue was resolved after A T T reverted a change at 13:14 UTC
-
-**Azure SQL Database and Managed Instance**
-
-* Outage started: Between 11:45 and 13:58 UTC on July 30, 2024
+* Service: Azure Front Door (AFD) and Azure Content Delivery Network (CDN)
+* Region/Availability Zone: Not specified
+* Impact Date: Between 11:45 and 13:58 UTC on July 30, 2024
 * Duration: Approximately 2 hours and 13 minutes
-* Root cause: Storage availability failures in various control and data plane clusters
-* Services impacted: Azure SQL DB and Azure SQL Managed Instance customers in the region
-* Downtime period: All unhealthy nodes were detected within one minute of SQL unavailability, and investigation and mitigation workstreams were established
+* Root Cause: Not specified
+* Downtime Period: Customers experienced intermittent connection errors, timeouts, or latency spikes while connecting to Microsoft services that leverage AFD and CDN
+* Resolved Date: Between 13:58 and 19:43 UTC on July 30, 2024
 
-**AT&T**
+**Microsoft Azure**
 
-* Outage started: 11:46 UTC on September 12, 2024
-* Duration: 28 minutes
-* Root cause: Automated systems in the Microsoft network shifted traffic away from A T&T, resulting in issues accessing services
-* Services impacted: A T T customers connecting to Microsoft services
-* Downtime period: Traffic was shifted away at 13:01 UTC, and the issue was resolved after A T T reverted a change at 13:14 UTC
+* Service: Azure SQL Database and Managed Instance
+* Region/Availability Zone: Various control and data plane clusters failed
+* Impact Date: Between 11:46 and 13:14 UTC on September 12, 2024
+* Duration: Approximately 1 hour and 28 minutes
+* Root Cause: AT&T change that shifted traffic away from Microsoft services
+* Downtime Period: Automated systems in the Microsoft network mitigated the issue by shifting traffic away at 13:01 UTC on September 12, 2024
+* Resolved Date: After AT&T reverted the change at 13:14 UTC on September 12, 2024
+
+**Microsoft Azure**
+
+* Service: Azure SQL Database and Managed Instance
+* Region/Availability Zone: Various control and data plane clusters failed
+* Impact Date: Not specified
+* Duration: Approximately 2 hours and 13 minutes
+* Root Cause: Storage availability failures
+* Downtime Period: SQL monitoring detected unhealthy nodes and login failures in the region
+* Resolved Date: Within one minute of storage recovery
+
+**Summary**
+
+Cloud providers impacted:
+
+* Microsoft Azure (4 services)
+
+Services impacted:
+
+* Azure SQL Database and Managed Instance (3 instances)
+* Azure Front Door (AFD) and Azure Content Delivery Network (CDN) (1 instance)
+
+Regions/Availability Zones impacted:
+
+* Various control and data plane clusters failed in multiple regions
+
+Impact dates:
+
+* July 30, 2024: Between 11:45 and 13:58 UTC
+* September 12, 2024: Between 11:46 and 13:14 UTC
+
+Duration of outages:
+
+* July 30, 2024: Approximately 2 hours and 13 minutes
+* September 12, 2024: Approximately 1 hour and 28 minutes
+
+Root cause of outages:
+
+* Storage availability failures (July 30, 2024)
+* AT&T change that shifted traffic away from Microsoft services (September 12, 2024)
+
+Downtime periods:
+
+* July 30, 2024: SQL monitoring detected unhealthy nodes and login failures in the region
+* September 12, 2024: Automated systems in the Microsoft network mitigated the issue by shifting traffic away at 13:01 UTC on September 12, 2024
+
+Resolved dates:
+
+* July 30, 2024: Within one minute of storage recovery
+* September 12, 2024: After AT&T reverted the change at 13:14 UTC on September 12, 2024

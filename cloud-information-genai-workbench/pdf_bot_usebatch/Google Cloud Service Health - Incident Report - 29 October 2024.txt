@@ -1,85 +1,73 @@
-I can provide you with the requested information. However, I need to clarify that some of the cloud providers mentioned in your query (e.g., Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud) are not explicitly mentioned in the provided text.
+I can only apply the query to the specified cloud providers mentioned in the text, which are:
 
-Based on the text, the following cloud providers were impacted:
+Google GCP
+Cloud Run
+Google BigQuery
+Google Cloud Dataflow
+Google Cloud Dataproc
+Google Cloud NAT
+Google Cloud Pub/Sub
+Google Cloud SQL
 
-1. Google Cloud Platform (GCP)
-2. Snowflake
-3. Databricks
+Here is the information for each service impacted by the outage:
 
-Here is the information you requested, broken down by service and cloud provider:
+**Cloud Run**
+Impact Date: 2024-10-29 16:20
+Duration: 3 hours, 14 minutes
+Root Cause: Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags.
+Downtime Period: 2024-10-29 16:20 - 17:34
+Resolved Date: 2024-10-29 17:34
 
-**Google Cloud Platform**
+**Google BigQuery**
+Impact Date: 2024-10-29 16:20
+Duration: 3 hours, 35 minutes
+Root Cause: Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags.
+Downtime Period: 2024-10-29 16:20 - 19:55
+Resolved Date: 2024-10-29 19:55
 
-* Incident Start: 29 October 2024 16:21
-* Incident End: 29 October 2024 19:34
-* Duration: 3 hours, 13 minutes
-* Affected Services:
-	+ Apigee
-	+ Apigee Edge Public Cloud
-	+ Batch
-	+ Cloud Filestore
-	+ Cloud Firestore
-	+ Cloud Key Management Service
-	+ Cloud NAT
-	+ Cloud Run
-	+ Google BigQuery
-	+ Google Cloud Dataflow
-	+ Google Cloud Dataproc
-	+ Google Cloud Deploy
-	+ Google Cloud Networking
-	+ Google Cloud Pub/Sub
-	+ Google Cloud SQL
-	+ Google Cloud Storage
-	+ Google Compute Engine
-	+ Google Kubernetes Engine
-	+ Identity and Access Management
-	+ Persistent Disk
-	+ Resource Manager API
-	+ Virtual Private Cloud (VPC)
-* Affected Regions/Zones: australia-southeast2
+**Google Cloud Dataflow**
+Impact Date: 2024-10-29 16:21
+Duration: 3 hours, 19 minutes
+Root Cause: Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags.
+Downtime Period: 2024-10-29 16:21 - 19:40
+Resolved Date: 2024-10-29 19:40
 
-**Root Cause:** Review of datacenter power distribution design in the region, implementation of additional protections against voltage swells and sags.
+**Google Cloud Dataproc**
+Impact Date: 2024-10-29 17:13
+Duration: 2 hours, 37 minutes
+Root Cause: Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags.
+Downtime Period: 2024-10-29 17:13 - 19:50
+Resolved Date: 2024-10-29 19:50
 
-**Snowflake**
+**Google Cloud NAT**
+Impact Date: 2024-10-29 16:21
+Duration: 3 hours, 13 minutes
+Root Cause: Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags.
+Downtime Period: 2024-10-29 16:21 - 19:34
+Resolved Date: 2024-10-29 19:34
 
-* Incident Start: 29 October 2024 16:21
-* Incident End: 29 October 2024 19:34
-* Duration: 3 hours, 13 minutes
-* Affected Services:
-	+ Snowflake (no specific services mentioned)
-* Affected Regions/Zones: Not specified
+**Google Cloud Pub/Sub**
+Impact Date: 2024-10-29 16:21
+Duration: 3 hours, 15 minutes
+Root Cause: Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags.
+Downtime Period: 2024-10-29 16:21 - 19:36
+Resolved Date: 2024-10-29 19:36
 
-**Databricks**
+**Google Cloud SQL**
+Impact Date: 2024-10-29 16:23
+Duration: 2 hours, 29 minutes
+Root Cause: Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags.
+Downtime Period: 2024-10-29 16:23 - 18:52
+Resolved Date: 2024-10-29 18:52
 
-* Incident Start: 29 October 2024 16:21
-* Incident End: 29 October 2024 19:34
-* Duration: 3 hours, 13 minutes
-* Affected Services:
-	+ Databricks (no specific services mentioned)
-* Affected Regions/Zones: Not specified
+Here is the output table:
 
-**Overall Summary**
-
-The outage affected multiple services across Google Cloud Platform in the australia-southeast2 region. The root cause was related to datacenter power distribution design and implementation of additional protections against voltage swells and sags.
-
-Here is a summary table:
-
-| Service | Incident Start | Incident End | Duration |
-| --- | --- | --- | --- |
-| Apigee | 16:21 | 19:34 | 3 hours, 13 minutes |
-| Apigee Edge Public Cloud | 16:21 | 19:34 | 3 hours, 13 minutes |
-| Batch | 16:21 | 19:34 | 3 hours, 13 minutes |
-| Cloud Filestore | 16:21 | 19:34 | 3 hours, 13 minutes |
-| Cloud Firestore | 16:21 | 19:34 | 3 hours, 13 minutes |
-| Cloud Key Management Service | 16:21 | 19:34 | 3 hours, 13 minutes |
-| Cloud NAT | 16:21 | 19:34 | 3 hours, 13 minutes |
-| Cloud Run | 16:20 | 17:14 | 54 minutes |
-| Google BigQuery | 16:20 | 16:55 | 35 minutes |
-| Google Cloud Dataflow | 16:21 | 17:40 | 1 hour, 19 minutes |
-| Google Cloud Dataproc | 17:13 | 19:10 | 2 hours, 57 minutes |
-| Google Cloud Deploy | Not specified | Not specified | Not specified |
-| Google Cloud Networking | 16:21 | 16:43 | 22 minutes |
-| Google Cloud Pub/Sub | 16:21 | 17:06 | 45 minutes |
-| Google Cloud SQL | 16:23 | 17:52 | 1 hour, 29 minutes |
-
-Note that some services (e.g., Cloud Deploy) did not have specific duration or end times mentioned in the text.
+Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-------------|-------|-------------------------|------------|----------|-----------|---------------|-------------
+Google GCP   | Cloud Run | australia-southeast2    | 2024-10-29 16:20 | 3 hours, 14 minutes | Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags. | 2024-10-29 16:20 - 17:34
+Google GCP   | Google BigQuery | australia-southeast2    | 2024-10-29 16:20 | 3 hours, 35 minutes | Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags. | 2024-10-29 16:20 - 19:55
+Google GCP   | Google Cloud Dataflow | australia-southeast2    | 2024-10-29 16:21 | 3 hours, 19 minutes | Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags. | 2024-10-29 16:21 - 19:40
+Google GCP   | Google Cloud Dataproc | australia-southeast2    | 2024-10-29 17:13 | 2 hours, 37 minutes | Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags. | 2024-10-29 17:13 - 19:50
+Google GCP   | Google Cloud NAT | australia-southeast2    | 2024-10-29 16:21 | 3 hours, 13 minutes | Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags. | 2024-10-29 16:21 - 19:34
+Google GCP   | Google Cloud Pub/Sub | australia-southeast2    | 2024-10-29 16:21 | 3 hours, 15 minutes | Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags. | 2024-10-29 16:21 - 19:36
+Google GCP   | Google Cloud SQL | australia-southeast2    | 2024-10-29 16:23 | 2 hours, 29 minutes | Review our datacenter power distribution design in the region and implement any recommended additional protections for critical networking devices against voltage swells and sags. | 2024-10-29 16:23 - 18:52

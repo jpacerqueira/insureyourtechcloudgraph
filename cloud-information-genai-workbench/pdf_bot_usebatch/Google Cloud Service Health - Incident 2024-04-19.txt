@@ -1,34 +1,37 @@
-I can provide you with the information you requested. However, I need to clarify that some of the cloud providers mentioned in your original text (e.g., Snowflake, Databricks, MongoDB) are not explicitly mentioned as being affected by the outage.
+I can only apply the query to the specified cloud providers as mentioned in the text. The cloud providers that are identified in the text are:
 
-Assuming the outage only affected Google Cloud Provider, here is the information you requested:
+Google GCP
+Amazon AWS is not mentioned in the text
+Microsoft Azure is not mentioned in the text
+Oracle OCI is not mentioned in the text
+IBM Cloud is not mentioned in the text
+Snowflake is not mentioned in the text
+Databricks is not mentioned in the text
+MongoDB is not mentioned in the text
+Akamai is not mentioned in the text
+Cloudflare is not mentioned in the text
 
-**Outage Details**
+Here are the results of the query:
 
-The outage began on April 19, 2024, at 12:39 PDT and ended on April 19, 2024, at 15:03 PDT. The incident lasted for approximately 1 hour and 24 minutes.
+**Google GCP**
 
-**Affected Services and Regions**
+* Service: Google Distributed Cloud Edge
+* Region/Availability Zone: asia-east2, asia-south1, southamerica-east1, us-west2
+* Impact Date: 2024-04-19 12:39 US/Pacific
+* Duration: 3 hours and 24 minutes
+* Root Cause: Mitigation work was underway by the engineering team
+* Downtime Period: 14:54 - 15:03 US/Pacific
+* Resolved Date: 2024-04-19 14:58 US/Pacific
 
-* Google Distributed Cloud Edge customers may have experienced failures with creation, update, and deletion of Local Control Plane clusters and Nodepool lifecycle operations.
-	+ Affected Locations:
-		- Hong Kong (asia-east2)
-		- Mumbai (asia-south1)
-		- São Paulo (southamerica-east1)
-		- Los Angeles (us-west2)
+**Summary of Google GCP Outage**
 
-**Root Cause**
+Google Distributed Cloud Edge experienced a failure with creation, update, and deletion of Local Control Plane clusters and Nodepool lifecycle operations. The outage impacted existing clusters that could not be updated via the Edge Container API, but they were unaffected by the outage. A workaround was not available at this time.
 
-The root cause of the outage is not explicitly mentioned in the text.
+**Output Table**
 
-**Summary of Outage**
-
-The outage affected Google Distributed Cloud Edge customers, causing failures with creation, update, and deletion of Local Control Plane clusters and Nodepool lifecycle operations. The outage impacted four regions: Hong Kong (asia-east2), Mumbai (asia-south1), São Paulo (southamerica-east1), and Los Angeles (us-west2).
-
-**Table of Outage Details**
-
-| Service | Region | Duration | Start Time | End Time | Downtime Period |
-| --- | --- | --- | --- | --- | --- |
-| Google Distributed Cloud Edge | asia-east2, asia-south1, southamerica-east1, us-west2 | 1 hour 24 minutes | April 19, 2024 12:39 PDT | April 19, 2024 15:03 PDT | 1 day 0 hours |
+Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+Google GCP | Google Distributed Cloud Edge | asia-east2 | 2024-04-19 12:39 US/Pacific | 3 hours and 24 minutes | Mitigation work was underway by the engineering team | 14:54 - 15:03 US/Pacific | 2024-04-19 14:58 US/Pacific
 
 **Overall Summary**
 
-The outage affected Google Distributed Cloud Edge customers in four regions: Hong Kong (asia-east2), Mumbai (asia-south1), São Paulo (southamerica-east1), and Los Angeles (us-west2). The outage lasted for approximately 1 hour and 24 minutes.
+Google GCP experienced a 3-hour and 24-minute outage on April 19, 2024, affecting Google Distributed Cloud Edge in regions asia-east2, asia-south1, southamerica-east1, and us-west2. The root cause of the outage was mitigation work being underway by the engineering team. Existing clusters were unaffected, but they could not be updated via the Edge Container API. A workaround was not available at this time.
