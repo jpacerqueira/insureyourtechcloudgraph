@@ -1,42 +1,67 @@
-I can only provide information on IBM Cloud as per the given text.
+Here is the information about the outage:
 
-**IBM Cloud Outage Details**
+**IBM Cloud**
 
-The outage started on 06 April 2021 at 08:17. The incident lasted for approximately 9 hours and 35 minutes.
+* Service: Data Center
+* Region/Availability Zone: WDC01 (Pod05)
+* Impact Date: 06 April 2021 08:17
+* Duration: 9 hours and 35 minutes
+* Root Cause: Automated power switching logic failed (Programmable Logic Controller – PLC) due to failure of dedicated UPS, resulting in critical load not being transferred from UPS to generator.
+* Downtime Period: 09 hours and 35 minutes
+* Resolved Date: Not specified
 
-**Services Impacted**
+**Cloudant NoSQL DB**
 
-* Cloudant NoSQL DB
-* VSI-San Storage
-* Load Balancers
-* API Connect
+* Service: Cloudant NoSQL DB
+* Region/Availability Zone: WDC01 (Pod05)
+* Impact Date: 06 April 2021 08:17
+* Duration: Partially impacted during power restoration
+* Root Cause: Same as IBM Cloud Data Center
+* Downtime Period: Partially impacted
+* Resolved Date: Not specified
 
-**Root Cause of Outage**
+**VSI-San Storage**
 
-The failure of the dedicated UPS caused the Programmable Logic Controller (PLC) to go offline, resulting in the critical load not being transferred from the UPS to the generator.
+* Service: VSI-San Storage
+* Region/Availability Zone: WDC01 (Pod05)
+* Impact Date: 06 April 2021 08:17
+* Duration: Partially impacted during power restoration
+* Root Cause: Same as IBM Cloud Data Center
+* Downtime Period: Partially impacted
+* Resolved Date: Not specified
 
-**Duration of Outage**
+**Load Balancers**
 
-9 hours and 35 minutes
+* Service: Load Balancers
+* Region/Availability Zone: WDC01 (Pod05)
+* Impact Date: 06 April 2021 08:17
+* Duration: Partially impacted during power restoration
+* Root Cause: Same as IBM Cloud Data Center
+* Downtime Period: Partially impacted
+* Resolved Date: Not specified
 
-**Downtime Period**
+**API Connect**
 
-06 April 2021 08:17 - 18 April 2021 14:12
-
-**Resolved Date**
-
-16 April 2021
-
-
-Here is the outage details in a table format:
-
-| Service | Region/Availability Zone | Impacted Dates | Duration |
-| --- | --- | --- | --- |
-| Cloudant NoSQL DB | WDC01 | 06 April 2021 - 18 April 2021 | 9 hours and 35 minutes |
-| VSI-San Storage | WDC01 | 06 April 2021 - 18 April 2021 | 9 hours and 35 minutes |
-| Load Balancers | WDC01 | 06 April 2021 - 18 April 2021 | 9 hours and 35 minutes |
-| API Connect | WDC01 | 06 April 2021 - 18 April 2021 | 9 hours and 35 minutes |
+* Service: API Connect
+* Region/Availability Zone: WDC01 (Pod05)
+* Impact Date: 06 April 2021 08:17
+* Duration: Partially impacted during power restoration
+* Root Cause: Same as IBM Cloud Data Center
+* Downtime Period: Partially impacted
+* Resolved Date: Not specified
 
 **Overall Summary**
 
-IBM Cloud experienced a power outage in the Washington D.C. area on 06 April 2021, affecting thousands of power customers. The outage impacted several services, including Cloudant NoSQL DB, VSI-San Storage, Load Balancers, and API Connect, in the WDC01 region. The root cause of the outage was the failure of the dedicated UPS, which caused the Programmable Logic Controller (PLC) to go offline. The outage lasted for approximately 9 hours and 35 minutes, with a downtime period from 08:17 on 06 April 2021 to 14:12 on 18 April 2021.
+The outage affected IBM Cloud's WDC01 data center, specifically Pod05, on 06 April 2021 at 08:17. The outage was caused by a failure of the automated power switching logic due to a failure of the dedicated UPS. This resulted in critical load not being transferred from UPS to generator, leading to a partial power outage within the data center.
+
+The outage impacted various services, including Cloudant NoSQL DB, VSI-San Storage, Load Balancers, and API Connect, which were partially impacted during power restoration.
+
+**Table Format**
+
+Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-----------|----------|-----------------------|------------|---------|-------------|---------------|-------------
+IBM Cloud  | Data Center | WDC01 (Pod05)        | 06 April 2021 | 9 hours and 35 minutes | Automated power switching logic failed due to failure of dedicated UPS | Partially impacted | Not specified
+IBM Cloud  | Cloudant NoSQL DB | WDC01 (Pod05)        | 06 April 2021 | Partially impacted during power restoration | Same as IBM Cloud Data Center | Partially impacted | Not specified
+IBM Cloud  | VSI-San Storage | WDC01 (Pod05)        | 06 April 2021 | Partially impacted during power restoration | Same as IBM Cloud Data Center | Partially impacted | Not specified
+IBM Cloud  | Load Balancers | WDC01 (Pod05)        | 06 April 2021 | Partially impacted during power restoration | Same as IBM Cloud Data Center | Partially impacted | Not specified
+IBM Cloud  | API Connect | WDC01 (Pod05)        | 06 April 2021 | Partially impacted during power restoration | Same as IBM Cloud Data Center | Partially impacted | Not specified

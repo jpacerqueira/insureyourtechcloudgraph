@@ -1,15 +1,18 @@
-I can provide you with the information you requested, but I need to clarify that some of the cloud providers mentioned in your text are not present (e.g., Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud). The following cloud providers are actually mentioned:
+I can provide you with the information you requested. However, I need to clarify that some of the cloud providers mentioned in your request are not identified in the text, such as Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
 
-* Google Cloud Platform (GCP)
-* Snowflake
-* Databricks
+Based on the provided text, I will only analyze the outages related to Google Cloud Service Health. Here is the information you requested:
 
-Here is the information you requested, broken down by cloud provider and service impacted:
+**Google Cloud Service Health Outage**
 
-**Google Cloud Platform**
+The outage affected some multiple-table DMLs intermittently not working on MySQL versions 8.0.30+ with query insights enabled.
 
-* Service: Google Cloud SQL
-* Regions/Availability Zones:
+**Outage Details**
+
+* **Incident**: Some multiple-table DMLs intermittently are not working on MySQL versions 8.0.30+ with query insights enabled.
+* **Duration**: The outage lasted for 2 days, 13 hours, and 56 minutes.
+* **Root Cause**: The root cause of the outage is not explicitly stated in the text.
+* **Impact Date**: The outage started at 2023-11-27 05:01 US/Pacific Time.
+* **Regions/Availability Zones**: The following regions and availability zones were affected:
 	+ northamerica-northeast2
 	+ São Paulo (southamerica-east1)
 	+ Santiago (southamerica-west1)
@@ -22,56 +25,10 @@ Here is the information you requested, broken down by cloud provider and service
 	+ Los Angeles (us-west2)
 	+ Salt Lake City (us-west3)
 	+ Las Vegas (us-west4)
-* Impact Date: 2023-11-27 05:01
-* Duration:
-	+ Days: 3
-	+ Hours: 14
-	+ Minutes: 56
-* Downtime Period: 2023-11-29 13:56 PST
-* Resolution Date: 2023-11-29 13:55 US/Pacific
+* **Services**: Google Cloud SQL
+* **Downtime Period**: The downtime period is not explicitly stated in the text.
+* **Resolved Date**: The outage was resolved on 2023-11-29 13:56 US/Pacific Time.
 
-**Snowflake**
+**Summary**
 
-* Service: Not specified (no information available)
-* Regions/Availability Zones:
-	+ No information available
-* Impact Date: Not specified
-* Duration:
-	+ Days: N/A
-	+ Hours: N/A
-	+ Minutes: N/A
-* Downtime Period: Not specified
-* Resolution Date: Not specified
-
-**Databricks**
-
-* Service: Not specified (no information available)
-* Regions/Availability Zones:
-	+ No information available
-* Impact Date: Not specified
-* Duration:
-	+ Days: N/A
-	+ Hours: N/A
-	+ Minutes: N/A
-* Downtime Period: Not specified
-* Resolution Date: Not specified
-
-**Overall Summary**
-
-The following cloud providers were impacted:
-
-* Google Cloud Platform (GCP)
-
-The services impacted were:
-
-* Google Cloud SQL
-
-The regions and availability zones affected were:
-
-* North America (northeast2, us-east1, us-central1)
-* South America (southamerica-east1, southamerica-west1)
-* United States (us-east4, us-south1, us-west1, us-west2, us-west3, us-west4)
-
-The outage started on November 27, 2023, at 05:01 and lasted for 14 hours and 56 minutes. The downtime period was from November 29, 2023, at 13:56 to November 29, 2023, at 13:55.
-
-Note that Snowflake and Databricks were not impacted by the outage, as no information was available about their services being affected.
+The outage affected Google Cloud SQL services in multiple regions and availability zones, including northamerica-northeast2, São Paulo (southamerica-east1), Santiago (southamerica-west1), Iowa (us-central1), South Carolina (us-east1), Northern Virginia (us-east4), Columbus (us-east5), Dallas (us-south1), Oregon (us-west1), Los Angeles (us-west2), Salt Lake City (us-west3), and Las Vegas (us-west4). The outage started on 2023-11-27 05:01 US/Pacific Time and lasted for 2 days, 13 hours, and 56 minutes.

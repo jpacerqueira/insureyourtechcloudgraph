@@ -1,21 +1,24 @@
-I don't know how to apply that query on the given text, as it is not clear what specific information you are looking for or how to extract it from the provided text. The text appears to be a service health page for Google Cloud Platform (GCP) and does not mention any other cloud providers.
+I can only apply the query to Google Cloud Service Health as it is the only cloud provider mentioned in the text.
 
-However, I can try to help you by extracting some relevant information from the text:
+Here are the results:
 
-**Google Cloud Platform (GCP)**
+**Google Cloud Service Health**
 
-* Service impacted: GCVE and Hybrid Connectivity
-* Region impacted: us-central1
-* Availability zone impacted: Iowa
-* Duration of outage: 25 minutes
-* Start time: 2024-09-04 11:55 US/Pacific
-* End time: 2024-09-04 12:20 US/Pacific
-* Root cause: Intermittent connectivity issue with VMWare Engine (GCVE), Cloud Interconnect, and Cloud VPN
-* Downtime period: 25 minutes
-* Resolution time: 2024-09-04 12:20 US/Pacific
+The outage affected GCVE and Hybrid Connectivity services in the us-central1 region.
 
-**Summary of GCP outage**
+Impact Date: 2024-09-04 11:55 US/Pacific
+Duration: 25 minutes
+Root Cause: Intermittent connectivity issues with VMWare Engine (GCVE), Cloud Interconnect, and Cloud VPN.
+Downtime Period: Wednesday, 2024-09-04 12:20 US/Pacific
 
-The outage affected GCVE and Hybrid Connectivity in the us-central1 region. The issue started at 11:55 US/Pacific on September 4, 2024, and lasted for 25 minutes. It was resolved at 12:20 US/Pacific on the same day.
+**Summary**
 
-Unfortunately, I don't have enough information to extract data from other cloud providers as they are not mentioned in the text.
+Google Cloud Service Health experienced an outage affecting GCVE and Hybrid Connectivity services in the us-central1 region. The outage started on September 4, 2024, at 11:55 US/Pacific and lasted for 25 minutes.
+
+Here is the information displayed as a table:
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | GCVE and Hybrid Connectivity | us-central1 | 2024-09-04 11:55 US/Pacific | 25 minutes | Intermittent connectivity issues with VMWare Engine (GCVE), Cloud Interconnect, and Cloud VPN. | Wednesday, 2024-09-04 12:20 US/Pacific |  |
+
+Note that there is no information available on other cloud providers such as Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, or Cloudflare as they were not mentioned in the text.

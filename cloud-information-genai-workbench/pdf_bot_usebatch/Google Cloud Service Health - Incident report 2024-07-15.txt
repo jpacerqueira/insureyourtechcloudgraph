@@ -1,4 +1,4 @@
-I can only apply this query to the cloud providers identified in the text, which are:
+I can only apply the query to the cloud providers identified in the text, which are:
 
 * Google GCP
 * Cloud Bigtable
@@ -8,77 +8,60 @@ Here is the information for each service impacted by the outage:
 
 **Google GCP**
 
-* Service: Cloud Monitoring
-* Region: us-central1
-* Availability Zone: Not specified
-* Incident started: 2024-07-15 09:29 PDT
-* Duration: 2 hours and 21 minutes
-* Downtime period: 2024-07-15 09:29 - 11:50 PDT (2 hours and 21 minutes)
-* Root cause: Query processing service outage
-* Services impacted:
-	+ Cloud Monitoring
-	+ Cloud Spanner
-	+ Google Cloud Bigtable
-	+ Google Kubernetes Engine
+Incident: Elevated Errors and Degraded Query Performance with Monitoring Metrics
+Region/Availability Zone: us-central1
+Impact Date: 2024-07-15 09:29
+Duration: 2 hours 21 minutes
+Root Cause: query processing service was restored, all ad-hoc and precomputed queries, dashboards, alerts, and notifications also returned to normal operation with the exception of data gaps noted for precomputed queries during the outage.
+Downtime Period: 2024-07-15 09:29 - 11:50
+Resolved Date: 2024-07-15 11:50
 
 **Cloud Bigtable**
 
-* Service: Google Cloud Monitoring
-* Region: us-central1
-* Availability Zone: Not specified
-* Incident started: 2024-07-15 09:29 PDT
-* Duration: 2 hours and 21 minutes
-* Downtime period: 2024-07-15 09:29 - 11:50 PDT (2 hours and 21 minutes)
-* Root cause: Query processing service outage
-* Services impacted:
-	+ Google Cloud Monitoring
+Incident: missing Google Cloud Monitoring metrics for bigtable.googleapis.com
+Region/Availability Zone: Global, Iowa (us-central1)
+Impact Date: 2024-07-15 09:29
+Duration: 2 hours 21 minutes
+Root Cause: query processing service was restored, all ad-hoc and precomputed queries, dashboards, alerts, and notifications also returned to normal operation with the exception of data gaps noted for precomputed queries during the outage.
+Downtime Period: 2024-07-15 09:29 - 11:50
+Resolved Date: 2024-07-15 11:50
 
 **Cloud SQL**
 
-* Service: Google Cloud Monitoring
-* Region: Not specified
-* Availability Zone: Not specified
-* Incident started: 2024-07-15 16:21 PDT
-* Duration: 1 hour and 30 minutes
-* Downtime period: 2024-07-15 16:21 - 17:51 PDT (1 hour and 30 minutes)
-* Root cause: Query processing service outage
-* Services impacted:
-	+ Google Cloud Monitoring
+Incident: missing Google Cloud Monitoring metrics cloudsql.googleapis.com
+Region/Availability Zone: Global, Iowa (us-central1)
+Impact Date: 2024-07-15 09:29
+Duration: 2 hours 21 minutes
+Root Cause: query processing service was restored, all ad-hoc and precomputed queries, dashboards, alerts, and notifications also returned to normal operation with the exception of data gaps noted for precomputed queries during the outage.
+Downtime Period: 2024-07-15 09:29 - 11:50
+Resolved Date: 2024-07-15 11:50
 
-Here is the information in a table format:
+**Summary**
 
-| Service | Region | Availability Zone | Incident Started | Duration | Downtime Period | Root Cause |
-| --- | --- | --- | --- | --- | --- | --- |
-| Cloud Monitoring | us-central1 | Not specified | 2024-07-15 09:29 PDT | 2 hours and 21 minutes | 2024-07-15 09:29 - 11:50 PDT | Query processing service outage |
-| Google Cloud Spanner | us-central1 | Not specified | 2024-07-15 09:29 PDT | 2 hours and 21 minutes | 2024-07-15 09:29 - 11:50 PDT | Query processing service outage |
-| Google Cloud Bigtable | us-central1 | Not specified | 2024-07-15 09:29 PDT | 2 hours and 21 minutes | 2024-07-15 09:29 - 11:50 PDT | Query processing service outage |
-| Google Kubernetes Engine | us-central1 | Not specified | 2024-07-15 09:29 PDT | 2 hours and 21 minutes | 2024-07-15 09:29 - 11:50 PDT | Query processing service outage |
-| Google Cloud Monitoring | Not specified | Not specified | 2024-07-15 16:21 PDT | 1 hour and 30 minutes | 2024-07-15 16:21 - 17:51 PDT | Query processing service outage |
+Cloud Providers impacted:
+Google GCP
+Cloud Bigtable
+Cloud SQL
 
-Here is a summary of the cloud providers impacted, services, regions, availability zones, impacted dates and duration:
+Services impacted:
+Monitoring Metrics
+Bigtable.googleapis.com
+Cloudsql.googleapis.com
 
-**Cloud Providers Impacted**
+Regions/Availability Zones impacted:
+us-central1, Global, Iowa (us-central1)
 
-* Google GCP
-	+ Services impacted: Cloud Monitoring, Cloud Spanner, Google Cloud Bigtable, Google Kubernetes Engine
-	+ Regions impacted: us-central1
-	+ Availability zones impacted: Not specified
-	+ Incident started: 2024-07-15 09:29 PDT
-	+ Duration: 2 hours and 21 minutes
+Impact Dates:
+2024-07-15 09:29
 
-**Cloud SQL**
+Duration:
+2 hours 21 minutes
 
-* Service impacted: Google Cloud Monitoring
-* Region not specified
-* Availability zone not specified
-* Incident started: 2024-07-15 16:21 PDT
-* Duration: 1 hour and 30 minutes
-* Downtime period: 2024-07-15 16:21 - 17:51 PDT
+Root Cause:
+query processing service was restored, all ad-hoc and precomputed queries, dashboards, alerts, and notifications also returned to normal operation with the exception of data gaps noted for precomputed queries during the outage.
 
-**Root Cause**
+Downtime Period:
+2024-07-15 09:29 - 11:50
 
-The root cause of the outage was a query processing service outage.
-
-**Summary of Outage**
-
-The outage started on July 15, 2024, at 09:29 PDT and lasted for 2 hours and 21 minutes. The services impacted were Cloud Monitoring, Cloud Spanner, Google Cloud Bigtable, and Google Kubernetes Engine in the us-central1 region. Cloud SQL was also impacted, but its incident details are not specified. The outage was caused by a query processing service outage.
+Resolved Date:
+2024-07-15 11:50
