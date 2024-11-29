@@ -206,6 +206,12 @@
     
 </div>
 
+<div class="container">
+    <h2>Outage Information</h2>
+    <div id="outageChartContainer"></div>
+    <div id="outageComparison"></div>
+</div>
+
 <script>
     // Different options for each variable - Cloud and its Services
 
@@ -473,6 +479,9 @@
 
                     // Add service analysis
                     addServiceAnalysis(service, riskData, i);
+
+                    // Fetch outage data for the selected service
+                    await fetchOutageData(service);
                 } catch (error) {
                     console.error(`Error processing ${service}:`, error);
                 }
@@ -658,9 +667,88 @@
         }
     }
 
+    // Function to fetch outage data and render the chart
+    async function fetchOutageData(service) {
+        try {
+            const response = await fetch(`http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const outageData = await response.json();
+            renderOutageChart(outageData, service);
+            compareMaxExpectedDowntime(service);
+        } catch (error) {
+            console.error(`Error fetching outage data for ${service}:`, error);
+        }
+    }
+
+    // Function to render the outage chart
+    function renderOutageChart(outageData, service) {
+        const ctx = document.createElement('canvas');
+        document.getElementById('outageChartContainer').appendChild(ctx);
+
+        const labels = outageData.map(outage => new Date(outage.outage_start_time).toLocaleString());
+        const data = outageData.map(outage => outage.outage_duration);
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: `Outages for ${service}`,
+                    data: data,
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Duration (minutes)'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Time'
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Function to compare max expected downtime with Tier 1 SLA
+    async function compareMaxExpectedDowntime(service) {
+        try {
+            const response = await fetch(`http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global`);
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const riskData = await response.json();
+
+            const maxExpectedDowntime = riskData.expected_annual_service_minutes_down;
+            const slaTier1 = riskData.service_sla_0_99_9999_for_tier1;
+
+            const comparisonHTML = `
+                <h3>Comparison of Expected Downtime vs SLA Tier 1</h3>
+                <p>Max Expected Downtime: ${maxExpectedDowntime} minutes</p>
+                <p>Tier 1 SLA: ${slaTier1} minutes</p>
+                <p>${maxExpectedDowntime > slaTier1 ? 'Warning: Expected downtime exceeds Tier 1 SLA!' : 'Expected downtime is within Tier 1 SLA.'}</p>
+            `;
+            document.getElementById('outageComparison').innerHTML = comparisonHTML;
+        } catch (error) {
+            console.error(`Error comparing downtime for ${service}:`, error);
+        }
+    }
+
     // Initialize the variable pairs on page load
     window.onload = initializeVariablePairs;
 </script>
+
+<!-- Include Chart.js library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>
 </html>

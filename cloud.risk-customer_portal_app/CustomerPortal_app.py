@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import json
 import re
 import time
+import pandas as pd
 
 import streamlit as st
 from neo4j import GraphDatabase
@@ -60,6 +61,17 @@ def fetch_cloud_risk_data(service_name, region_type):
         return response.json()
     except requests.RequestException as e:
         st.error(f"Error fetching cloud risk data: {str(e)}")
+        return None
+
+# New function to fetch outage data for a specific service
+def fetch_outage_data(service):
+    try:
+        api_url = f"http://node-api:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/{service}"
+        response = requests.get(api_url)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        st.error(f"Error fetching outage data for {service}: {str(e)}")
         return None
 
 # Add sanitize function for Cypher node IDs
@@ -461,6 +473,25 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                     
                     st.text_area(f"AI Analysis - {service}", risk_data.get("remarks_outage_genai", "No analysis available"), height=100)
                     st.divider()
+
+        # Add a new section for displaying outage reports as charts
+        if selected_services:
+            st.subheader("Outage Reports by Selected Services")
+
+            for service in selected_services:
+                # Fetch outage data for each selected service
+                outage_data = fetch_outage_data(service)  # New function to fetch outage data
+
+                if outage_data:
+                    # Create a DataFrame for the outage data
+                    df_outages = pd.DataFrame(outage_data)
+
+                    # Display a chart for the outages
+                    st.line_chart(df_outages['outage_duration'], use_container_width=True)  # Example chart
+
+                    st.write(f"Outage details for {service}:")
+                    st.dataframe(df_outages)  # Display the outage data in a table
+
     else:
         st.warning("Please fill in all required fields")
    

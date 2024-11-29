@@ -180,7 +180,7 @@ router.get('/freemium/outages/list/all', async function (req, res) {
     let connection;
     try {
         connection = await db.connect();
-        // outage_timestamp > 1704067200 = > 01.Jan.2024 0h00
+        // outage_timestamp >= 1704067200 = > 01.Jan.2024 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries
             WHERE outage_timestamp >= 1704067200`
@@ -209,7 +209,7 @@ router.get('/freemium/outages/provider/:provider', async function (req, res) {
     try {
         connection = await db.connect();
         const provider = req.params.provider;
-        // outage_timestamp > 1704067200 = > 01.Jan.2024 0h00
+        // outage_timestamp >= 1704067200 = > 01.Jan.2024 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
              WHERE outage_timestamp >= 1704067200 AND cloud_provider = $1`,
@@ -239,7 +239,7 @@ router.get('/freemium/outages/service/:service', async function (req, res) {
     try {
         connection = await db.connect();
         const service = req.params.service;
-        // outage_timestamp > 1704067200 = > 01.Jan.2024 0h00
+        // outage_timestamp >= 1704067200 = > 01.Jan.2024 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
              WHERE outage_timestamp >= 1704067200 AND cloud_service = $1`,
@@ -269,7 +269,7 @@ router.get('/freemium/outages/region/:region', async function (req, res) {
     try {
         connection = await db.connect();
         const region = req.params.region;
-        // outage_timestamp > 1704067200 = > 01.Jan.2024 0h00
+        // outage_timestamp >= 1704067200 = > 01.Jan.2024 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
              WHERE outage_timestamp >= 1704067200 AND regions LIKE $1`,

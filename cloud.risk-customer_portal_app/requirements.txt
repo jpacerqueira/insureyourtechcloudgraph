@@ -1,5 +1,6 @@
-neo4j
-streamlit
-python-dotenv
-flask
+neo4j==5.26.0
+streamlit==1.40.1
+python-dotenv==1.0.1
+flask==3.1.0
 flask-cors
+pandas==2.2.3

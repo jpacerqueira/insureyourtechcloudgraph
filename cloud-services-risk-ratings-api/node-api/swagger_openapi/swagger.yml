@@ -484,6 +484,70 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
+  /cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/{service}:
+    get:
+      summary: Get outage reports by service (Freemium)
+      description: Retrieves outage reports for a specific cloud service
+      parameters:
+        - name: service
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OutageReport'
+        '404':
+          description: No outage reports found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/region/{region}:
+    get:
+      summary: Get outage reports by region (Freemium)
+      description: Retrieves outage reports for a specific region
+      parameters:
+        - name: region
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OutageReport'
+        '404':
+          description: No outage reports found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
 components:
   schemas:
     BasicRiskRating:
