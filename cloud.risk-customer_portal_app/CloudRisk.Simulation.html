@@ -200,7 +200,7 @@
     <div id="result"></div>
 
     <!-- Link to Authorized users to see detailed results of your submission - Cloud.Risk.Graph your Measured Cloud.Risk RATIO -->
-    <a href="https://workspace-preview.neo4j.io/workspace/query?ntid=google-oauth2%7C100793316574048247943">'Cloud.Risk.Graph - Measured Cloud.Risk RATIO for Cloud and Service pairs'</a>
+    <a href="https://workspace-preview.neo4j.io/workspace/query?ntid=google-oauth2%7C100793316574048247943">'Cloud.Risk.Graph - Measure your Ratings using our prorietary Cloud.Risk Graph for Cloud and Service pairs (with Neo4j) '</a>
 
 
     
@@ -500,7 +500,7 @@
         document.getElementById("customer-sla-deviation").textContent = calculateMedian(metrics.sla_deviation).toFixed(2);
         document.getElementById("customer-traffic-coef").textContent = `${calculateMedian(metrics.traffic_coef).toFixed(2)}%`;
         document.getElementById("customer-usage-risk").textContent = calculateMedian(metrics.usage_risk).toFixed(2);
-        document.getElementById("customer-service-sla-tier1").textContent = `${calculateMedian(metrics.service_sla_tier1).toFixed(2)}%`;
+        document.getElementById("customer-service-sla-tier1").textContent = `${calculateMedian(metrics.service_sla_tier1).toFixed(5)}%`;
         document.getElementById("customer-service-credit-back-tier1").textContent = `${calculateMedian(metrics.service_credit_back_tier1).toFixed(2)}%`;
         document.getElementById("customer-annual-downtime").textContent = calculateMedian(metrics.annual_downtime).toFixed(2);
     }
@@ -537,7 +537,7 @@
                         <div class="metric-column">
                             <div class="metric">
                                 <h4>Median Service SLA Tier 1 %</h4>
-                                <div class="value">${calculateMedian(metrics.service_sla_tier1).toFixed(2)}%</div>
+                                <div class="value">${calculateMedian(metrics.service_sla_tier1).toFixed(5)}%</div>
                             </div>
                             <div class="metric">
                                 <h4>Median Service Credit Back Tier 1 %</h4>
