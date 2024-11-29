@@ -1,42 +1,25 @@
-Here is the response to your query:
+Based on the provided text, I will apply the query to the identified cloud providers: Google GCP.
 
-**Outage Information**
+**Google GCP Outage Details**
 
-The outage affected Google Cloud Platform (GCP) only.
+The outage occurred in the us-central1 region.
 
-**Incident Details**
+Here are the details of the outage:
 
-* Incident Start: 22 April 2024 09:00
-* Incident End: 22 April 2024 22:18
+* Service Impacted: Google Batch
+* Region/Availability Zone: us-central1
+* Impact Date: 2024-04-22 09:00 US/Pacific Time
 * Duration: 13 hours, 18 minutes
+* Root Cause: Increased transaction contention resulting in significant latency increase
+* Downtime Period: The stuck jobs were cleared by restarting them.
+* Resolved Date: 2024-04-22 22:18 US/Pacific Time
 
-**Affected Services and Features**
+**Summary of Google GCP Outage**
 
-* Google Batch (new batch job creation, scheduling of queued jobs)
-* Regions/Zones: us-central1
+The outage affected the Google Batch service in the us-central1 region, causing delays in changing the status of batch jobs from Queued to Scheduled. The root cause was increased transaction contention resulting in significant latency increase.
 
-**Root Cause of Outage**
+Here is the outage information displayed as a table:
 
-* Increased transaction contention resulting in significant latency increase.
-
-**Customer Impact**
-
-* Customers from the affected region trying to use Batch experienced delays while changing the status of their batch jobs from Queued to Scheduled.
-
-**Workaround**
-
-* Impacted customers were advised to try submitting their jobs from another region wherever possible.
-
-**Resolution**
-
-* The issue with Batch has been resolved for all affected users as of Monday, 22 April 2024 22:18 US/Pacific Time.
-
-Here is the outage information displayed in a table format:
-
-| Service | Region/Zone | Incident Start | Incident End | Duration | Root Cause | Customer Impact | Resolution |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Google Batch | us-central1 | 22 April 2024 09:00 | 22 April 2024 22:18 | 13 hours, 18 minutes | Increased transaction contention resulting in significant latency increase. | Customers experienced delays while changing the status of their batch jobs from Queued to Scheduled. | The issue with Batch has been resolved for all affected users as of Monday, 22 April 2024 22:18 US/Pacific Time. |
-
-**Summary**
-
-The outage affected Google Cloud Platform (GCP) only, specifically the Google Batch service in the us-central1 region. The incident started on 22 April 2024 at 09:00 and ended on 22 April 2024 at 22:18. The root cause of the outage was increased transaction contention resulting in significant latency increase. Customers experienced delays while changing the status of their batch jobs from Queued to Scheduled. The issue has been resolved for all affected users as of Monday, 22 April 2024 22:18 US/Pacific Time.
+Google Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+------------------------|---------|-----------------------|-------------|----------|---------------|-----------------|-------------
+Google Cloud Platform  | Google Batch | us-central1          | 2024-04-22 09:00 | 13 hours, 18 minutes | Increased transaction contention resulting in significant latency increase | The stuck jobs were cleared by restarting them. | 2024-04-22 22:18

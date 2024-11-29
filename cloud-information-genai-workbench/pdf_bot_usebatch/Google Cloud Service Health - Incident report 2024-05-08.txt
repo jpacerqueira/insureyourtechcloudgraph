@@ -1,73 +1,24 @@
-Here is the breakdown of the outage for each cloud provider:
+I can only apply the query to Google Cloud Service as it is the only cloud provider mentioned in the text.
 
-**Google Cloud**
+Here are the details of the outage:
 
-The incident began on May 8, 2024, at 16:41 US/Pacific Time and ended on May 9, 2024, at 03:44 US/Pacific Time.
+**Google Cloud Service**
 
-Affected services:
-- Apigee API Platform
-- Impacted customers may experience latency in the completion of their API calls
+The incident began on Wednesday, 2024-05-08 16:41 US/Pacific and ended on Thursday, 2024-05-09 03:44 US/Pacific. The outage affected Apigee API Platform services in multiple regions.
 
-Root cause: Starting Wednesday, May 8, 2024, customers making use of caching policies in their API proxies were experiencing issues with Apigee API Platform services.
+Here are the details of the outage per service:
 
-Duration: The outage lasted for approximately 2 hours and 3 minutes.
+**Apigee API Platform**
 
-Downtime period:
-- May 8, 2024, 16:41 US/Pacific Time to May 9, 2024, 03:44 US/Pacific Time
+* Region/Availability Zone: Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Osaka (asia-northeast2), Seoul (asia-northeast3), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southcentral)
+* Impact Date: Wednesday, 2024-05-08 16:41 US/Pacific
+* Duration: 26 hours and 3 minutes
+* Root Cause: Impacted customers may experience latency in the completion of their API calls.
+* Downtime Period: The outage started on Wednesday, 2024-05-08 16:41 US/Pacific and ended on Thursday, 2024-05-09 03:44 US/Pacific.
+* Resolved Date: Thursday, 2024-05-09 03:40 US/Pacific
 
-Resolved on: May 9, 2024, at 03:40 US/Pacific Time
+Here is the output table:
 
-**Summary of Google Cloud Services and Regions Impacted**
+Google Cloud Service | Apigee API Platform | Taiwan (asia-east1) | Wednesday, 2024-05-08 16:41 US/Pacific | 26 hours and 3 minutes | Impacted customers may experience latency in the completion of their API calls. | Thursday, 2024-05-09 03:44 US/Pacific
 
-- Apigee API Platform
-- asia-east1 (Taiwan)
-- asia-east2 (Hong Kong)
-- asia-northeast1 (Tokyo)
-- asia-northeast2 (Osaka)
-- asia-northeast3 (Seoul)
-- asia-south1 (Mumbai)
-- asia-south2 (Delhi)
-- asia-west2 (Salt Lake City)
-- us-west3 (Las Vegas)
-
-**Output Table for Google Cloud**
-
-| Service | Region | Availability Zone | Duration | Downtime Period | Resolved |
-| --- | --- | --- | --- | --- | --- |
-| Apigee API Platform | asia-east1 |  | 2 hours, 3 minutes | May 8, 2024, 16:41 US/Pacific Time to May 9, 2024, 03:44 US/Pacific Time | May 9, 2024, 03:40 US/Pacific Time |
-
-**Amazon Web Services (AWS)**
-
-No information is available in the text about an outage on AWS.
-
-**Microsoft Azure**
-
-No information is available in the text about an outage on Azure.
-
-**Oracle Cloud Infrastructure (OCI)**
-
-No information is available in the text about an outage on OCI.
-
-**IBM Cloud**
-
-No information is available in the text about an outage on IBM Cloud.
-
-**Snowflake**
-
-No information is available in the text about an outage on Snowflake.
-
-**Databricks**
-
-No information is available in the text about an outage on Databricks.
-
-**MongoDB**
-
-No information is available in the text about an outage on MongoDB.
-
-**Akamai**
-
-No information is available in the text about an outage on Akamai.
-
-**Cloudflare**
-
-No information is available in the text about an outage on Cloudflare.
+Note that there is no information available on other cloud providers such as Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

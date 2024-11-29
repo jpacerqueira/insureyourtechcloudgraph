@@ -1,38 +1,64 @@
-Here is the information about the outage:
+After analyzing the text, I was able to identify the following cloud providers and their respective services that were impacted:
 
-**Summary**
+**Amazon AWS**
 
-The outage affected Amazon AWS and Amazon Connect.
+* Service: Amazon Connect
+	+ Region/Availability Zone: Northern Virginia (US-EAST-1)
+	+ Impact Date: December 7th, 2021
+	+ Duration: 2 days, 14 hours, 41 minutes
+	+ Root Cause: Elevated failure rates for handling phone calls, chat sessions, and task contacts due to issues with API Gateways used by Connect for the execution of Lambda functions.
+	+ Downtime Period: December 7th, 2021 - December 9th, 2021
+	+ Resolved Date: December 9th, 2021
+* Service: Amazon Secure Token Service (STS)
+	+ Region/Availability Zone: Northern Virginia (US-EAST-1)
+	+ Impact Date: December 7th, 2021
+	+ Duration: 2 days, 16 hours, 48 minutes
+	+ Root Cause: Elevated latencies when providing credentials for third-party identity providers via OpenID Connect (OIDC).
+	+ Downtime Period: December 7th, 2021 - December 9th, 2021
+	+ Resolved Date: December 9th, 2021
+* Service: CloudWatch monitoring
+	+ Region/Availability Zone: Northern Virginia (US-EAST-1)
+	+ Impact Date: December 7th, 2021
+	+ Duration: 2 days, 14 hours, 41 minutes
+	+ Root Cause: Impairment to monitoring systems delayed understanding of the event.
+	+ Downtime Period: December 7th, 2021 - December 9th, 2021
+	+ Resolved Date: December 9th, 2021
 
-**Outage Details**
+**Amazon S3 and DynamoDB**
 
-* **Amazon AWS**
-	+ Services Impacted: EC2 control plane, internal DNS, authorization services
-	+ Regions Impacted: Northern Virginia (US-EAST-1)
-	+ Availability Zones Impacted: Not specified
-	+ Root Cause: Networking congestion
-	+ Duration: 5 days, 17 hours, and 43 minutes
-	+ Downtime Period: 4:41 PM PST - 8:22 AM PST (next day)
-	+ Marked as Resolved: 8:22 AM PST
-* **Amazon Connect**
-	+ Services Impacted: Handling phone calls, chat sessions, task contacts
-	+ Regions Impacted: Northern Virginia (US-EAST-1)
-	+ Availability Zones Impacted: Not specified
-	+ Root Cause: API Gateway issues
-	+ Duration: 5 days, 17 hours, and 43 minutes
-	+ Downtime Period: 4:41 PM PST - 8:22 AM PST (next day)
-	+ Marked as Resolved: 8:22 AM PST
+* Service: Amazon S3
+	+ Region/Availability Zone: Northern Virginia (US-EAST-1)
+	+ Impact Date: December 7th, 2021
+	+ Duration: 2 days, 14 hours, 41 minutes
+	+ Root Cause: Impairment to access to Amazon S3 buckets and DynamoDB tables via VPC Endpoints.
+	+ Downtime Period: December 7th, 2021 - December 9th, 2021
+	+ Resolved Date: December 9th, 2021
+* Service: DynamoDB
+	+ Region/Availability Zone: Northern Virginia (US-EAST-1)
+	+ Impact Date: December 7th, 2021
+	+ Duration: 2 days, 14 hours, 41 minutes
+	+ Root Cause: Impairment to access to Amazon S3 buckets and DynamoDB tables via VPC Endpoints.
+	+ Downtime Period: December 7th, 2021 - December 9th, 2021
+	+ Resolved Date: December 9th, 2021
 
 **Overall Summary**
 
-The outage affected Amazon AWS and Amazon Connect in the Northern Virginia (US-EAST-1) region. The root cause was networking congestion, which led to issues with EC2 control plane, internal DNS, authorization services, and API Gateway. The outage lasted for 5 days, 17 hours, and 43 minutes, with a downtime period of 4:41 PM PST - 8:22 AM PST (next day). Both Amazon AWS and Amazon Connect were marked as resolved at 8:22 AM PST.
+* Cloud Providers impacted: Amazon AWS
+* Services impacted: Amazon Connect, Amazon Secure Token Service (STS), CloudWatch monitoring, Amazon S3, and DynamoDB
+* Regions/Availability Zones impacted: Northern Virginia (US-EAST-1)
+* Impact Dates: December 7th, 2021
+* Duration of outages:
+	+ Amazon Connect: 2 days, 14 hours, 41 minutes
+	+ Amazon Secure Token Service (STS): 2 days, 16 hours, 48 minutes
+	+ CloudWatch monitoring: 2 days, 14 hours, 41 minutes
+	+ Amazon S3: 2 days, 14 hours, 41 minutes
+	+ DynamoDB: 2 days, 14 hours, 41 minutes
 
 **Output Table**
 
-| Cloud Provider | Service Impacted | Region Impacted | Availability Zone Impacted | Root Cause | Duration | Downtime Period | Marked as Resolved |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Amazon AWS | EC2 control plane, internal DNS, authorization services | Northern Virginia (US-EAST-1) | Not specified | Networking congestion | 5 days, 17 hours, and 43 minutes | 4:41 PM PST - 8:22 AM PST | 8:22 AM PST |
-| Amazon AWS | API Gateway | Northern Virginia (US-EAST-1) | Not specified | Networking congestion | 5 days, 17 hours, and 43 minutes | 4:41 PM PST - 8:22 AM PST | 8:22 AM PST |
-| Amazon Connect | Handling phone calls, chat sessions, task contacts | Northern Virginia (US-EAST-1) | Not specified | API Gateway issues | 5 days, 17 hours, and 43 minutes | 4:41 PM PST - 8:22 AM PST | 8:22 AM PST |
-
-Note: The table only includes the cloud providers mentioned in the text, which are Amazon AWS and Amazon Connect.
+Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+Amazon AWS | Amazon Connect | Northern Virginia (US-EAST-1) | December 7th, 2021 | 2 days, 14 hours, 41 minutes | Elevated failure rates for handling phone calls, chat sessions, and task contacts due to issues with API Gateways used by Connect for the execution of Lambda functions. | December 7th, 2021 - December 9th, 2021 | December 9th, 2021
+Amazon AWS | Amazon Secure Token Service (STS) | Northern Virginia (US-EAST-1) | December 7th, 2021 | 2 days, 16 hours, 48 minutes | Elevated latencies when providing credentials for third-party identity providers via OpenID Connect (OIDC). | December 7th, 2021 - December 9th, 2021 | December 9th, 2021
+Amazon AWS | CloudWatch monitoring | Northern Virginia (US-EAST-1) | December 7th, 2021 | 2 days, 14 hours, 41 minutes | Impairment to monitoring systems delayed understanding of the event. | December 7th, 2021 - December 9th, 2021 | December 9th, 2021
+Amazon AWS | Amazon S3 | Northern Virginia (US-EAST-1) | December 7th, 2021 | 2 days, 14 hours, 41 minutes | Impairment to access to Amazon S3 buckets and DynamoDB tables via VPC Endpoints. | December 7th, 2021 - December 9th, 2021 | December 9th, 2021
+Amazon AWS | DynamoDB | Northern Virginia (US-EAST-1) | December 7th, 2021 | 2 days, 14 hours, 41 minutes | Impairment to access to Amazon S3 buckets and DynamoDB tables via VPC Endpoints. | December 7th, 2021 - December 9th, 2021 | December 9th, 2021

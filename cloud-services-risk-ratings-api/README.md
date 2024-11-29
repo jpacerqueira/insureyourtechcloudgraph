@@ -25,6 +25,13 @@ The API has the following endpoints:
 
 ## Example Usage
 
+To obtain a sample of all services and of all Outages from the Fremium API
+
+```bash
+curl -X GET http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/list/all/services  > sample_services_api.json
+curl -X GET http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/list/all > sample_outages_api.json
+    ```
+
 To get the risk ratings for all cloud providers, you can make a GET request to the `/cloud-services-risk-ratings/risk-ratings` endpoints , as examples below.
 
 ```bash

@@ -13,10 +13,10 @@ services:
       - LLM=${LLM-llama3.2}
     healthcheck:
       test: ["CMD", "ollama", "list"]  # Check if Ollama is responding
-      interval: 20s                    # Run the health check every 20 seconds
-      timeout: 30s                     # Timeout for the health check is 30 seconds
+      interval: 70s                    # Run the health check every 20 seconds
+      timeout: 20s                     # Timeout for the health check is 30 seconds
       retries: 5                       # Retry 5 times before marking it as unhealthy
-      start_period: 10s                # Wait 10 seconds before starting health checks
+      start_period: 30s                # Wait 10 seconds before starting health checks
     networks:
       - net
 

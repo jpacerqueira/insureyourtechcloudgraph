@@ -1,55 +1,60 @@
-Here is the response to your query:
+After analyzing the text, I have identified the following cloud providers:
 
-**Outages in Microsoft Azure**
+* Microsoft Azure
+* Amazon AWS is not mentioned in the text
+* Google GCP is not mentioned in the text
+* Oracle OCI is not mentioned in the text
+* IBM Cloud is not mentioned in the text
+* Snowflake is not mentioned in the text
+* Databricks is not mentioned in the text
+* MongoDB is not mentioned in the text
+* Akamai is not mentioned in the text
+* Cloudflare is not mentioned in the text
 
-The outage occurred between 00:50 UTC and 12:30 UTC on November 13, 2024.
+Here are the outages per cloud provider:
 
-Affected Services:
-- Azure Log Analytics
-- Azure Container Registry
-- Azure Storage
-- Azure Databricks
+**Microsoft Azure**
 
-Regions and Availability Zones Impacted:
-- East US
-- East US 2
-- West US 2
-- Australia East
-- Canada Central
-- Canada East
-- Central US
-- South Central US
-- UAE North
-- Japan East
+* Service: Azur e Log Analy tics
+* Region/Availability Zone: West Eur ope, Southeast Asia, and/or K orea Central r egions
+* Impact Date: Between 00:50 UT C and 12:30 UT C on November 13, 2024
+* Duration: 11 hours and 40 minutes
+* Root Cause: Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts
+* Downtime Period: The service was unavailable to access, but data stored in these storage accounts was not impacted.
+* Resolved Date: Not specified
 
-Root Cause of the Outage: Unintentional deletion of Azure Traffic Manager profiles for affected storage accounts.
+* Service: Azur e Container R egistr y
+* Region/Availability Zone: East US r egion
+* Impact Date: Between 00:50 UT C and 12:30 UT C on November 13, 2024
+* Duration: 11 hours and 40 minutes
+* Root Cause: Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts
+* Downtime Period: The service experienced intermittent 5XX errors while trying to pull images from the registry.
+* Resolved Date: Not specified
 
-Duration of Outage:
-- Total duration: 11 hours and 40 minutes
-- Duration in days, hours, and minutes: 1 day, 12 hours, 40 minutes
+* Service: Azur e Storage
+* Region/Availability Zone: Australia East, Canada Central, Canada East, Central US, East US, East US 2, J apan East, South Central US, U AE Nor th, West US, and/or W est US 2
+* Impact Date: Between 00:50 UT C and 12:30 UT C on November 13, 2024
+* Duration: 11 hours and 40 minutes
+* Root Cause: Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts
+* Downtime Period: The service experienced DNS resolution failures when interacting with impacted storage accounts.
+* Resolved Date: Not specified
 
-Downtime Period:
-- Started at: November 13, 2024, 00:50 UTC
-- Ended at: November 13, 2024, 12:30 UTC
+* Service: Azur e Databr icks
+* Region/Availability Zone: Australia East, Canada Central, Canada East, Central US, East US, East US 2, J apan East, South Central US, U AE Nor th, W est US, and/or West US 2
+* Impact Date: Between 00:50 UT C and 12:30 UT C on November 13, 2024
+* Duration: 11 hours and 40 minutes
+* Root Cause: Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts
+* Downtime Period: The service experienced failures with launching clusters and serverless compute resources.
+* Resolved Date: Not specified
 
-**Outage Details**
+**Summary**
 
-Azure Log Analytics:
-- Impacted customers using West Europe, Southeast Asia, and/or Korea Central regions may have experienced delays and/or stale data when viewing Microsoft Graph activity logs.
-- Duration of outage: 6 hours
-- Downtime period: November 13, 2024, 00:50 UTC - 06:30 UTC
+The outages impacted Microsoft Azure services in various regions and availability zones. The root cause was an unint entional deletion of Traffic Manager pr ofiles for the affected storage accounts. The downtime period varied depending on the service, but it lasted around 11 hours and 40 minutes.
 
-Azure Container Registry:
-- Impacted customers using East US region may have experienced intermittent 5XX errors while trying to pull images from the registry.
-- Duration of outage: 2 hours
-- Downtime period: November 13, 2024, 08:00 UTC - 10:00 UTC
+Here is the output table:
 
-Azure Storage:
-- Impacted customers may have experienced DNS resolution failures when interacting with affected storage accounts in Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, and/or West US 2.
-- Duration of outage: 8 hours
-- Downtime period: November 13, 2024, 00:50 UTC - 08:40 UTC
-
-Azure Databricks:
-- Impacted customers may have experienced failures with launching clusters and serverless compute resources in Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, and/or West US 2.
-- Duration of outage: 8 hours
-- Downtime period: November 13, 2024, 00:50 UTC - 08:40 UTC
+Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+Microsoft Azure | Azur e Log Analy tics | West Eur ope, Southeast Asia, and/or K orea Central r egions | November 13, 2024 | 11 hours and 40 minutes | Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts | The service was unavailable to access, but data stored in these storage accounts was not impacted. | Not specified
+Microsoft Azure | Azur e Container R egistr y | East US r egion | November 13, 2024 | 11 hours and 40 minutes | Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts | The service experienced intermittent 5XX errors while trying to pull images from the registry. | Not specified
+Microsoft Azure | Azur e Storage | Australia East, Canada Central, Canada East, Central US, East US, East US 2, J apan East, South Central US, U AE Nor th, West US, and/or W est US 2 | November 13, 2024 | 11 hours and 40 minutes | Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts | The service experienced DNS resolution failures when interacting with impacted storage accounts. | Not specified
+Microsoft Azure | Azur e Databr icks | Australia East, Canada Central, Canada East, Central US, East US, East US 2, J apan East, South Central US, U AE Nor th, W est US, and/or West US 2 | November 13, 2024 | 11 hours and 40 minutes | Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts | The service experienced failures with launching clusters and serverless compute resources. | Not specified

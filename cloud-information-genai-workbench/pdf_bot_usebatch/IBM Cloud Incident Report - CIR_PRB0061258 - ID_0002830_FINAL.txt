@@ -1,57 +1,37 @@
-Here is the response to your query:
+Here is the information about the outage:
 
-**Outage Information**
+**IBM Cloud**
 
-The outage affected the following cloud providers: IBM Cloud, Private DNS, and Cloudant.
+* Services impacted: Private DNS, HyperProtect-VS, MqCloud, Mobile Foundation, Hyper Protect DBaaS
+* Regions/Availability Zones: Frankfurt, London, Tokyo, Sydney, US-East, US-South
+* Impact Date: 25 May 2021 13:33 UTC
+* Duration: 12 hours 7 minutes
+* Root Cause: Resource constraints in Cloudant HA Proxy Load Balancers caused by increased database queries from Private DNS
+* Downtime Period: 25 May 2021 01:40 - 26 May 2021 01:40 UTC
+* Resolved Date: 26 May 2021 01:40 UTC
 
-**IBM Cloud Services Impacted**
+**Sequence of Events**
 
-* HyperProtect-VS: Impacted customers experienced provisioning issues in Frankfurt, London, Tokyo, Sydney, US-East, and US-South regions.
-* MqCloud: Impacted customers were unable to provision new or access existing instances of MQ on Cloud in Frankfurt, London, Tokyo, Sydney, US-East, and US-South regions.
-* Mobile Foundation: Impacted customers were unable to upgrade/update the configuration of their service instances in Frankfurt, London, Tokyo, Sydney, US-East, and US-South regions.
-* Hyper Protect DBaaS: Impacted customers experienced provisioning failures in Frankfurt, London, Tokyo, Sydney, US-East, and US-South regions.
+* 25 May 2021 13:33 - IBM Cloudant Specialists received alerts from multiple system areas indicating timeouts and connection loss. Incident started.
+* 25 May 2021 14:20 - Affected clusters were identified.
+* 25 May 2021 15:16 - Disruptive traffic was identified. Isolation activity began for affected clusters.
+* 25 May 2021 15:51 - Isolation and removal of Private DNS traffic allowed cluster traffic to restart in Sydney.
+* 25 May 2021 16:09 - Service recovery in Sydney was confirmed and isolation of traffic continued for other clusters.
+* 26 May 2021 01:28 - Rate-limited updates were rolled out across all affected regions. Limited service resumed.
+* 26 May 2021 01:40 - Cloudant services returned to normal state. Incident ended.
 
-**Private DNS Services Impacted**
+**Summary**
 
-* Private DNS resolution timeouts from IKS clusters in VPC in Frankfurt, London, Tokyo, Sydney, US-East, and US-South regions.
-* Private hostname lookups for VSIs on VPC were not successful in Frankfurt, London, Tokyo, Sydney, US-East, and US-South regions.
-* Any service that uses a Virtual Private Endpoint in VPC was unavailable in Frankfurt, London, Tokyo, Sydney, US-East, and US-South regions.
-
-**Cloudant Services Impacted**
-
-* Cloudant services returned to normal state on 26 May 2021 at 01:40 UTC after being restricted for 12 hours and 7 minutes.
-
-**Root Cause of Outage**
-
-The root cause of the outage was an abnormally high burst of Private DNS traffic that caused resource constraints in the Cloudant HA Proxy Load Balancers, leading to service impact due to congestion on these devices.
-
-**Outage Timeline**
-
-* 25 May 2021 13:33 UTC: Incident started
-* 25 May 2021 14:20 UTC: Affected clusters were identified
-* 25 May 2021 15:16 UTC: Disruptive traffic was identified
-* 25 May 2021 15:51 UTC: Isolation and removal of Private DNS traffic allowed cluster traffic to restart in Sydney
-* 25 May 2021 16:09 UTC: Service recovery in Sydney was confirmed and isolation of traffic continued for other clusters
-* 26 May 2021 01:28 UTC: Rate-limited updates were rolled out across all affected regions
-* 26 May 2021 01:40 UTC: Cloudant services returned to normal state
-
-**Outage Summary**
-
-The outage lasted for 12 hours and 7 minutes, starting on 25 May 2021 at 13:33 UTC. The root cause of the outage was an abnormally high burst of Private DNS traffic that caused resource constraints in the Cloudant HA Proxy Load Balancers.
-
-**Cloud Providers Impacted Regions and Services**
-
-| Cloud Provider | Region | Service |
-| --- | --- | --- |
-| IBM Cloud | Frankfurt, London, Tokyo, Sydney, US-East, US-South | HyperProtect-VS, MqCloud, Mobile Foundation, Hyper Protect DBaaS |
-| Private DNS | Frankfurt, London, Tokyo, Sydney, US-East, US-South | Private DNS resolution timeouts, Private hostname lookups, Virtual Private Endpoint |
-| Cloudant | Frankfurt, London, Tokyo, Sydney, US-East, US-South | Cloudant services |
+The outage impacted IBM Cloud services in multiple regions and availability zones, including Frankfurt, London, Tokyo, Sydney, US-East, and US-South. The root cause of the outage was resource constraints in Cloudant HA Proxy Load Balancers caused by increased database queries from Private DNS. The outage lasted for 12 hours and 7 minutes, with a downtime period of 12 hours and 7 minutes.
 
 **Output Table**
 
-| Date | Time | Duration | Root Cause | Start Time | End Time | Downtime Period |
-| --- | --- | --- | --- | --- | --- | --- |
-| 25 May 2021 | 13:33 UTC | 12 hours 7 minutes | Abnormally high burst of Private DNS traffic | 13:33 UTC | 01:40 UTC | 12 hours 7 minutes |
-| 26 May 2021 | 01:28 UTC | - | Rate-limited updates | 01:28 UTC | 01:40 UTC | 12 minutes |
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| IBM Cloud | Private DNS | Frankfurt, London, Tokyo, Sydney, US-East, US-South | 25 May 2021 13:33 UTC | 12 hours 7 minutes | Resource constraints in Cloudant HA Proxy Load Balancers caused by increased database queries from Private DNS | 25 May 2021 01:40 - 26 May 2021 01:40 UTC | 26 May 2021 01:40 UTC |
+| IBM Cloud | HyperProtect-VS | Frankfurt, London, Tokyo, Sydney, US-East, US-South | 25 May 2021 13:33 UTC | 12 hours 7 minutes | Resource constraints in Cloudant HA Proxy Load Balancers caused by increased database queries from Private DNS | 25 May 2021 01:40 - 26 May 2021 01:40 UTC | 26 May 2021 01:40 UTC |
+| IBM Cloud | MqCloud | Frankfurt, London, Tokyo, Sydney, US-East, US-South | 25 May 2021 13:33 UTC | 12 hours 7 minutes | Resource constraints in Cloudant HA Proxy Load Balancers caused by increased database queries from Private DNS | 25 May 2021 01:40 - 26 May 2021 01:40 UTC | 26 May 2021 01:40 UTC |
+| IBM Cloud | Mobile Foundation | Frankfurt, London, Tokyo, Sydney, US-East, US-South | 25 May 2021 13:33 UTC | 12 hours 7 minutes | Resource constraints in Cloudant HA Proxy Load Balancers caused by increased database queries from Private DNS | 25 May 2021 01:40 - 26 May 2021 01:40 UTC | 26 May 2021 01:40 UTC |
+| IBM Cloud | Hyper Protect DBaaS | Frankfurt, London, Tokyo, Sydney, US-East, US-South | 25 May 2021 13:33 UTC | 12 hours 7 minutes | Resource constraints in Cloudant HA Proxy Load Balancers caused by increased database queries from Private DNS | 25 May 2021 01:40 - 26 May 2021 01:40 UTC | 26 May 2021 01:40 UTC |
 
-Note: The output table only includes the relevant information for Cloudant services, as it was the only service that had a downtime period.
+Note: The table only includes the services and regions impacted by the outage, as per the original text.

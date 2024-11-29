@@ -1,41 +1,33 @@
-I can only provide information on AWS since other cloud providers were not mentioned in the text.
+After analyzing the text, I found that only Amazon AWS was mentioned as a cloud provider. Here is the information about the outage:
 
-Here is the breakdown of the outage for each service in AWS:
+**Amazon AWS**
 
-**Amazon Simple Queue Service (N. Virginia)**
-
-* Outage started: August 15, 2024, 12:50 PM PDT
+* Service: Amazon Simple Queue Service
+* Region/Availability Zone: N. Virginia (us-east-1)
+* Impact Date: August 15, 2024, 12:50 PM PDT
 * Duration: 17 minutes
-* Root cause: Planned configuration change that caused increased API error rates
-* Services impacted: SendMessage, CreateMessage, ChangeMessageAvailability APIs in the US-EAST-1 Region
-* Downtime period: Between 11:10 AM and 12:08 PM PDT ( lasted for 58 minutes)
-* Resolved: Yes
+* Root Cause: Planned configuration change that started at 11:03 AM, but was rolled back automatically at 11:17 AM.
+* Downtime Period: Between 11:10 AM and 12:08 PM PDT (17 minutes)
+* Resolved Date: August 15, 2024, 12:50 PM PDT
 
-**Amazon Elastic Compute Cloud**
+**Summary of Amazon AWS Outage**
 
-No outage was mentioned in the text.
+* Services impacted: Amazon Simple Queue Service
+* Regions/Availability Zones: N. Virginia (us-east-1)
+* Impact dates: August 15, 2024
+* Duration: 17 minutes
+* Root cause: Planned configuration change
+* Downtime period: 17 minutes
 
-**AWS Identity and Access Management**
+Here is the information in a table format:
 
-No outage was mentioned in the text.
+Amazon AWS | Amazon Simple Queue Service | N. Virginia (us-east-1) | August 15, 2024, 12:50 PM PDT | 17 minutes | Planned configuration change | Between 11:10 AM and 12:08 PM PDT | August 15, 2024, 12:50 PM PDT
 
-**AWS Service Catalog**
+**Overall Summary**
 
-No outage was mentioned in the text.
-
-**Amazon Elastic MapReduce**
-
-No outage was mentioned in the text.
-
-Here is a summary of the outages:
-
-* Amazon Simple Queue Service (N. Virginia) had an outage that lasted for 17 minutes, starting on August 15, 2024, at 12:50 PM PDT.
-* The root cause of the outage was a planned configuration change that caused increased API error rates.
-
-Here is a table summarizing the outages:
-
-| Service | Outage Start Time | Duration | Root Cause | Services Impacted | Regions/Availability Zones |
-| --- | --- | --- | --- | --- | --- |
-| Amazon Simple Queue Service (N. Virginia) | August 15, 2024, 12:50 PM PDT | 17 minutes | Planned configuration change | SendMessage, CreateMessage, ChangeMessageAvailability APIs | US-EAST-1 Region |
-
-Note that there were no outages mentioned for other AWS services in the text.
+* Cloud provider: Amazon AWS
+* Services impacted: Amazon Simple Queue Service
+* Regions/Availability Zones: N. Virginia (us-east-1)
+* Impact dates: August 15, 2024
+* Duration: 17 minutes
+* Root cause: Planned configuration change

@@ -1,33 +1,32 @@
-I can only apply the query to Google Cloud Service Health since that is the only cloud provider mentioned in the text.
+I can only apply the query to Google Cloud Service as it is the only cloud provider mentioned in the text.
 
-Here are the results:
+Here are the details of the outage:
 
-**Incident Details**
+**Google Cloud Service**
 
-The incident began on Wednesday, 2024-11-06 01:30 US/Pacific and ended on Wednesday, 2024-11-06 05:30 US/Pacific. The outage lasted for approximately 1 hour and 45 minutes.
+The incident began on Wednesday, 2024-11-06 01:30 US/Pacific and ended on Wednesday, 2024-11-06 05:30 US/Pacific. The impact date was Wednesday, 2024-11-06.
 
-**Affected Services and Regions**
+Here are the details of the outage per service:
 
-Only Looker Studio was impacted in the global region.
+**Looker Studio**
+Region/Availability Zone: Global
+Impact Date: Wednesday, 2024-11-06
+Duration: 6 hours and 51 minutes
+Root Cause: Looker Studio users may observe issues with their dashboards, dashboard components may load slower than usual, they can be stuck in endless loading state.
+Downtime Period: 01:30 - 05:30 US/Pacific
+Resolved Date: Wednesday, 2024-11-06 05:30 US/Pacific
 
-**Root Cause of Outage**
+**Summary of Google Cloud Service Outage**
 
-The root cause of the outage is not specified in the text.
+Cloud Provider: Google Cloud Service
+Services Impacted: Looker Studio
+Regions/Availability Zones: Global
+Impact Dates: Wednesday, 2024-11-06
+Duration: 6 hours and 51 minutes
+Root Cause: Looker Studio users may observe issues with their dashboards, dashboard components may load slower than usual, they can be stuck in endless loading state.
+Downtime Period: 01:30 - 05:30 US/Pacific
+Resolved Date: Wednesday, 2024-11-06 05:30 US/Pacific
 
-**Downtime Period**
+**Overall Summary**
 
-The downtime period started at 2024-11-06 01:30 US/Pacific and ended at 2024-11-06 05:30 US/Pacific.
-
-**Resolution Date**
-
-The incident was marked as resolved on Wednesday, 2024-11-06 05:30 US/Pacific.
-
-Here is the outage details in a table format:
-
-| Service | Region | Availability Zone | Duration | Start Time | End Time | Downtime Period |
-| --- | --- | --- | --- | --- | --- | --- |
-| Looker Studio | Global | N/A | 1 hour 45 minutes | 2024-11-06 01:30 US/Pacific | 2024-11-06 05:30 US/Pacific | 2024-11-06 01:30 US/Pacific - 2024-11-06 05:30 US/Pacific |
-
-**Summary**
-
-Only Google Cloud Service Health was impacted by the outage. The outage affected Looker Studio in the global region, starting at 2024-11-06 01:30 US/Pacific and ending at 2024-11-06 05:30 US/Pacific. The root cause of the outage is not specified.
+One cloud provider was impacted, Google Cloud Service. One service was impacted, Looker Studio. The outage occurred on Wednesday, 2024-11-06 and lasted for 6 hours and 51 minutes. The root cause of the outage was not specified in the text.

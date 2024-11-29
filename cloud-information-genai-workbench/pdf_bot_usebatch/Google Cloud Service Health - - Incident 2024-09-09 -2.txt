@@ -1,39 +1,28 @@
-I can only provide information on Google Cloud Service Health incidents, as that is the only cloud provider mentioned in the text.
+I can only apply the query to Google Cloud Service as it is the only cloud provider mentioned in the text.
 
 Here are the details of the outage:
 
-**Incident Details**
+**Google Cloud Service**
 
-* Incident ID: UbJv334dXk5XQNSgiY48
-* Start Date and Time: 2024-09-09 19:15 PDT
-* End Date and Time: 2024-09-09 19:00 PDT (resolved at 11:30 US/Pacific)
-* Duration: 1 hour and 45 minutes
+The incident began on September 9, 2024, at 09:44 PDT and ended on September 9, 2024, at 19:00 PDT. The impacted services were Looker Studio users who experienced elevated query performance when loading and accessing reports.
 
-**Affected Services**
+Here are the details of the outage per service:
 
-* Looker Studio
+**Looker Studio**
 
-**Root Cause**
+Region/Availability Zone: Global
+Impact Date: September 9, 2024, 09:44 PDT
+Duration: 10 hours and 16 minutes
+Root Cause: Elevated query performance or errors after wait of around 5 minutes
+Downtime Period: 10 hours and 16 minutes
+Resolved Date: September 9, 2024, 19:00 PDT
 
-The root cause of the outage is not specified in the text.
+Here is the output table:
 
-**Impact Regions and Availability Zones**
+Google Cloud Service | Looker Studio | Global | September 9, 2024, 09:44 PDT | 10 hours and 16 minutes | Elevated query performance or errors after wait of around 5 minutes | 10 hours and 16 minutes | September 9, 2024, 19:00 PDT
 
-No specific regions or availability zones are mentioned as being impacted.
+**Summary**
 
-**Workaround**
+Google Cloud Service was impacted by an outage that began on September 9, 2024, at 09:44 PDT and ended on the same day at 19:00 PDT. The impacted service was Looker Studio users who experienced elevated query performance when loading and accessing reports.
 
-None available at this time.
-
-Here is a summary of the outage:
-
-Looker Studio users experienced elevated query performance when loading and accessing reports. The incident started on 2024-09-09 19:15 PDT and ended on 2024-09-09 19:00 PDT, with a duration of 1 hour and 45 minutes.
-
-Here is an output table summarizing the outage:
-
-| Date and Time | Duration | Region/AZ |
-| --- | --- | --- |
-| 2024-09-09 19:15 PDT | 1h 45m | N/A |
-| 2024-09-09 19:00 PDT | 1h 45m | N/A |
-
-Note: The table only includes the information provided in the text and does not include any additional details that may be available on the Google Cloud Service Health page.
+Note: I have removed all cloud providers except Google Cloud Service as per your request.

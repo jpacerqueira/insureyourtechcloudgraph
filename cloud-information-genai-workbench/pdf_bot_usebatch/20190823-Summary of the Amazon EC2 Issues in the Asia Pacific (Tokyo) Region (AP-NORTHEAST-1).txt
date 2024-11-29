@@ -1,85 +1,24 @@
-Here is the breakdown of the outage for each cloud provider:
+After analyzing the text, I found that only Amazon AWS was mentioned as a cloud provider. Here is the information about the outage:
 
 **Amazon AWS**
 
-Outage started: August 23, 2019 12:36 PM JST
-Duration: 5 hours and 30 minutes
-Downtime period: EC2 instances and EBS volumes in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
-Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
-Resolved: August 23, 2019 6:30 PM JST
+* Service: EC2
+* Region/Availability Zone: Tokyo (AP-NORTHEAST-1)
+* Impact Date: August 23, 2019, 12:36 PM JST
+* Duration:
+	+ EC2 instances and degraded EBS volume performance for some resources in the affected area of the Availability Zone: 5 hours and 30 minutes
+	+ EC2 RunInstances API: 1 hour and 21 minutes
+* Root Cause: Control system failure that caused multiple, redundant cooling systems to fail in parts of the affected Availability Zone.
+* Downtime Period:
+	+ EC2 instances and degraded EBS volume performance for some resources in the affected area of the Availability Zone: 5 hours and 30 minutes
+	+ EC2 RunInstances API: 1 hour and 21 minutes
+* Resolved Date: August 23, 2019, 6:30 PM JST
 
-**Amazon EBS**
+**Summary**
 
-Outage started: August 23, 2019 12:36 PM JST
-Duration: 5 hours and 30 minutes
-Downtime period: EBS volumes in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
-Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
-Resolved: August 23, 2019 6:30 PM JST
+Amazon AWS experienced an outage on August 23, 2019, affecting EC2 instances and degraded EBS volume performance in the Tokyo (AP-NORTHEAST-1) Region. The root cause was a control system failure that caused multiple cooling systems to fail. The outage lasted for approximately 6 hours and 51 minutes.
 
-**Amazon EC2**
+**Output Table**
 
-Outage started: August 23, 2019 12:36 PM JST
-Duration: 5 hours and 30 minutes
-Downtime period: EC2 instances in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
-Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
-Resolved: August 23, 2019 6:30 PM JST
-
-**Amazon RDS**
-
-Outage started: August 23, 2019 12:36 PM JST
-Duration: 5 hours and 30 minutes
-Downtime period: RDS instances in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
-Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
-Resolved: August 23, 2019 6:30 PM JST
-
-**Amazon Redshift**
-
-Outage started: August 23, 2019 12:36 PM JST
-Duration: 5 hours and 30 minutes
-Downtime period: Redshift instances in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
-Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
-Resolved: August 23, 2019 6:30 PM JST
-
-**Amazon ElastiCache**
-
-Outage started: August 23, 2019 12:36 PM JST
-Duration: 5 hours and 30 minutes
-Downtime period: ElastiCache instances in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
-Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
-Resolved: August 23, 2019 6:30 PM JST
-
-**Amazon Workspaces**
-
-Outage started: August 23, 2019 12:36 PM JST
-Duration: 5 hours and 30 minutes
-Downtime period: Workspaces instances in a single Availability Zone (AZ) in the Tokyo (AP-NORTHEAST-1) Region were impacted.
-Root cause: A control system failure caused multiple, redundant cooling systems to fail in parts of the affected AZ.
-Resolved: August 23, 2019 6:30 PM JST
-
-**Snowflake**
-
-No outage reported.
-
-**Databricks**
-
-No outage reported.
-
-**MongoDB**
-
-No outage reported.
-
-**Akamai**
-
-No outage reported.
-
-**Cloudflare**
-
-No outage reported.
-
-**IBM Cloud**
-
-No outage reported.
-
-**Oracle OCI**
-
-No outage reported.
+Amazon AWS | EC2 | Tokyo (AP-NORTHEAST-1) | August 23, 2019 | 5 hours and 30 minutes | Control system failure | 5 hours and 30 minutes | August 23, 2019, 6:30 PM JST
+Amazon AWS | EC2 RunInstances API | Tokyo (AP-NORTHEAST-1) | August 23, 2019 | 1 hour and 21 minutes | Control system failure | 1 hour and 21 minutes | August 23, 2019, 3:21 PM JST

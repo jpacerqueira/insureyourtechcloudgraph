@@ -1,30 +1,26 @@
-I can help you with that query. However, I need to clarify that the provided text only mentions Google Cloud Service Health and Looker Studio experiencing data request slowness or timeouts.
+After analyzing the text, I found that only Google Cloud Service was mentioned as being affected by an outage.
 
-Here is the breakdown of the outage for the affected services:
+Here is the breakdown of the outage per service:
 
-**Google Cloud**
+**Google Cloud Service**
 
-The issue with Looker Studio has been resolved for all affected projects as of Friday, 2024-10-25 02:23 US/Pacific.
- 
-Previously affected location(s)
-Global
-DATE TIME DESCRIPTION
-25 Oct 2024 02:23 PDTThe issue with Looker Studio has been resolved for all affected projects as of Friday, 2024-10-25 02:23 US/Pacific.
+Looker Studio experiencing data request slowness or timeouts
+Description: We are experiencing an issue with Looker Studio beginning at Thursday, 2024-10-24 19:30 US/Pacific.
+Our engineering team continues to investigate the issue.
+We will provide an update by Friday, 2024-10-25 03:30 US/Pacific with current details.
+We apologize to all who are affected by the disruption.
 
-Previously affected location(s)
-Global
-DATE TIME DESCRIPTION
-25 Oct 2024 02:23 PDTThe issue with Looker Studio has been resolved for all affected projects as of Friday, 2024-10-25 02:23 US/Pacific.
-We thank you for your patience while we worked on resolving the issue.
+Impact Date: Thursday, 2024-10-24 19:30 US/Pacific
+Duration: 1 day, 7 hours and 53 minutes
+Root Cause: The impacted users may observe the batched data requests experiencing slowness or timeout.
+Downtime Period: Friday, 2024-10-25 02:23 US/Pacific to Thursday, 2024-10-25 03:30 US/Pacific (1 hour and 7 minutes)
+Resolved Date: Friday, 2024-10-25 02:23 US/Pacific
 
-Here is a table summarizing the outage:
+Here is the output table:
 
-| Service | Region/Availability Zone | Start Date | End Date | Duration (Days) | Duration (Hours) | Duration (Minutes) | Downtime Period | Resolution Date |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Looker Studio | Global | 2024-10-24 19:30 US/Pacific | 2024-10-25 02:23 US/Pacific | 1 day | 5 hours | 3 minutes |  | 2024-10-25 02:23 US/Pacific |
+Google Cloud | Looker Studio | Global | Thursday, 2024-10-24 19:30 US/Pacific | 1 day, 7 hours and 53 minutes | The impacted users may observe the batched data requests experiencing slowness or timeout. | Friday, 2024-10-25 02:23 US/Pacific
 
-**Summary**
+Overall Summary:
+Google Cloud Service was impacted by an outage affecting Looker Studio in Global region.
 
-Google Cloud was impacted by an outage in Looker Studio, which started on October 24, 2024, at 19:30 US/Pacific and ended on October 25, 2024, at 02:23 US/Pacific. The outage lasted for approximately 5 hours and 3 minutes.
-
-Since the text only mentions Google Cloud, there are no other cloud providers impacted in this query.
+Note: Since only Google Cloud Service was mentioned as being affected by an outage, the table and summary are limited to that information.

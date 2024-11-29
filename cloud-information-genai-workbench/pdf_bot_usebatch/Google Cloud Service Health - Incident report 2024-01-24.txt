@@ -1,53 +1,25 @@
-I can provide you with the requested information based on the provided text.
+I can only apply the query to Google GCP as it is the only cloud provider mentioned in the text.
 
-**Cloud Providers Impacted:**
+Here are the details of the outage:
 
-The cloud providers impacted are:
+**Google Cloud Provider**
 
-* Google GCP
-* BigQuery, GCS, and Cloud PubSub destinations were impacted in multiple regions.
+The outage affected the following services:
+- Cloud Logging
+- Personalized Service Health (PSH)
 
-**Outages Breakdown by Service and Region:**
+**Outage Details**
 
-Here is the breakdown of outages for each service and region:
+* **Incident Start**: 23 Jan, 2024 09:30
+* **Impact Date**: Multiple regions: Cloud Logging was experiencing issues with displaying log data in Google Cloud Console
+* **Duration**: 5 hours and 30 minutes
+* **Root Cause**: Not specified in the text
+* **Downtime Period**: The PSH dashboard displayed outage status, however the notification system to customers was down during the incident.
+* **Resolved Date**: 2024-01-24 22:00 (all times are US/Pacific)
 
-1. **Google Cloud Logging**
-	* Impact on Services: Log queries, exports of logs (to BigQuery, GCS, or Cloud PubSub destinations), and writing corresponding data points to log-based metrics
-	* Regions Affected: Multiple regions
-	* Availability Zones Affected: Not specified
-	* Outage Duration: 25 hours
-	* Start Date: January 23, 2024, 09:30 PST
-	* End Date: January 24, 2024, 22:00 PST
-	* Root Cause: Not specified
-2. **Personalized Service Health (PSH)**
-	* Impact on Services: PSH dashboard displayed outage status, notification system to customers was down during the incident
-	* Regions Affected: Multiple regions
-	* Availability Zones Affected: Not specified
-	* Outage Duration: 13 hours
-	* Start Date: January 23, 2024, 09:30 PST
-	* End Date: January 24, 2024, 22:00 PST
-	* Root Cause: Not specified
+Here is the table with the outage details:
 
-**Summary of Cloud Providers Impacted Services and Regions:**
-
-The cloud provider Google GCP was impacted by two outages:
-
-1. **Cloud Logging**: Multiple regions were affected, with an outage duration of 25 hours.
-2. **Personalized Service Health (PSH)**: Multiple regions were affected, with an outage duration of 13 hours.
-
-**Summary of Outages and Root Cause:**
-
-The root cause of the outages was not specified in the provided text.
-
-**Overall Summary:**
-
-A single outage occurred on January 23-24, 2024, affecting Google Cloud Logging and Personalized Service Health (PSH) in multiple regions. The outage duration for Cloud Logging was 25 hours, while the outage duration for PSH was 13 hours. The root cause of the outages was not specified.
-
-**Output Table:**
-
-| Service | Region(s) Affected | Availability Zone(s) Affected | Outage Duration | Start Date | End Date | Root Cause |
-| --- | --- | --- | --- | --- | --- | --- |
-| Cloud Logging | Multiple regions | Not specified | 25 hours | January 23, 2024, 09:30 PST | January 24, 2024, 22:00 PST | Not specified |
-| Personalized Service Health (PSH) | Multiple regions | Not specified | 13 hours | January 23, 2024, 09:30 PST | January 24, 2024, 22:00 PST | Not specified |
-
-Note: The table only includes the services and regions mentioned in the provided text.
+Google Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+---------------------|--------|-----------------------|-------------|----------|-------------|-----------------|-------------
+Google Cloud Provider | Cloud Logging | Multiple regions | 23 Jan, 2024 09:30 | 5 hours and 30 minutes | Not specified | The PSH dashboard displayed outage status, however the notification system to customers was down during the incident. | 2024-01-24 22:00
+Google Cloud Provider | Personalized Service Health (PSH) | Multiple regions | 23 Jan, 2024 09:30 | 5 hours and 30 minutes | Not specified | The PSH dashboard displayed outage status, however the notification system to customers was down during the incident. | 2024-01-24 22:00

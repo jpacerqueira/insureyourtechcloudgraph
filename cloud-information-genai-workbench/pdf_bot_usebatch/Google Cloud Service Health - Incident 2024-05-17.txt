@@ -1,27 +1,30 @@
-I can only apply the query to Google Cloud Service Health, Amazon AWS is not mentioned in the text.
+After analyzing the text, I found that only Google Cloud Service was mentioned as being affected by the outage.
 
-Here are the results:
+Here is the breakdown of the outage per cloud provider:
 
-**Google Cloud Services Impacted**
+Google Cloud Service
+-------------------
 
-Increased latency for create task calls in us-east1 for Google Cloud Tasks
------------------------------------------------
+* Service: Google Cloud Tasks
+* Region/Availability Zone: us-east1
+* Impact Date: 2024-05-16 23:38 US/Pacific
+* Duration: 2 hours and 45 minutes (from 01:30 to 02:23)
+* Root Cause: Increased latency for create task calls in us-east1
+* Downtime Period: From 01:50 to 02:23
+* Resolved Date: 2024-05-17 01:45 US/Pacific
 
-* Outage Duration: 3 hours and 53 minutes
-* Start Date: Thursday, 2024-05-16 23:38 US/Pacific Time
-* End Date: Friday, 2024-05-17 01:45 US/Pacific Time
-* Affected Regions: us-east1
-* Affected Availability Zones: N/A
-* Root Cause: Unknown
-* Services Impacted: Google Cloud Tasks
-* Downtime Period: 3 hours and 53 minutes
+Here is the output table:
 
-**Summary of Outage**
+Google Cloud | Google Cloud Tasks | us-east1 | 2024-05-16 23:38 | 2 hours and 45 minutes | Increased latency for create task calls in us-east1 | From 01:50 to 02:23 | 2024-05-17 01:45
 
-The outage started on Thursday, May 16, 2024, at 23:38 US/Pacific Time and lasted for 3 hours and 53 minutes. The issue was resolved on Friday, May 17, 2024, at 01:45 US/Pacific Time.
+Overall Summary:
+-----------------
 
-**Google Cloud Services Impacted**
-
-No other services were impacted by this outage.
-
-Note: I have removed the text from the original message to make it easier to read and understand.
+* Cloud Provider: Google Cloud
+* Services: Google Cloud Tasks
+* Regions/Availability Zones: us-east1
+* Impact Dates: 2024-05-16 and 2024-05-17
+* Duration: 2 hours and 45 minutes
+* Root Cause: Increased latency for create task calls in us-east1
+* Downtime Period: From 01:50 to 02:23
+* Resolved Date: 2024-05-17 01:45

@@ -1,108 +1,140 @@
-Here is the response to your query:
+Here is the information about the outage for each cloud provider:
 
-**Outage Details**
+**IBM Cloud**
 
-The outage affected multiple IBM Cloud clients in all regions, including AppID, Schematics, Secrets Manager, UI, Bluemix-developer-experience, Cloudcerts, Code Engine, Compliance, Continuous-delivery-pipeline, Virtual Private Cloud, and Cloud App Dev Services.
-
-**Incident Timeline**
-
-* Outage started: 21 June 2022 06:34 UTC
+* Service: AppID
+* Region/Availability Zone: All regions
+* Impact Date: 21 June 2022 06:34 UTC
 * Duration: 1 hour 32 minutes
-* Incident ended: 21 June 2022 08:06 UTC
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+* Downtime Period: All services were impacted for approximately 1 hour and 32 minutes.
+* Resolved Date: 21 June 2022 08:06 UTC
 
-**Root Cause**
+**IBM Cloud**
 
-The third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to the outage.
+* Service: Schematics
+* Region/Availability Zone: All regions
+* Impact Date: 21 June 2022 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+* Downtime Period: All services were impacted for approximately 1 hour and 32 minutes.
+* Resolved Date: 21 June 2022 08:06 UTC
 
-**Outage Breakdown by Service and Region**
+**IBM Cloud**
 
-Here is the breakdown of the outage for each affected service:
+* Service: Secrets Manager
+* Region/Availability Zone: All regions
+* Impact Date: 21 June 2022 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+* Downtime Period: All services were impacted for approximately 1 hour and 32 minutes.
+* Resolved Date: 21 June 2022 08:06 UTC
 
-1. AppID
-	* Region: All regions
-	* Availability Zone: Not specified
-	* Downtime Period: 1 hour 32 minutes
-	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
-2. Schematics
-	* Region: All regions
-	* Availability Zone: Not specified
-	* Downtime Period: 1 hour 32 minutes
-	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
-3. Secrets Manager
-	* Region: All regions
-	* Availability Zone: Not specified
-	* Downtime Period: 1 hour 32 minutes
-	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
-4. UI
-	* Region: All regions
-	* Availability Zone: Not specified
-	* Downtime Period: 1 hour 32 minutes
-	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
-5. Bluemix-developer-experience
-	* Region: All regions
-	* Availability Zone: Not specified
-	* Downtime Period: 1 hour 32 minutes
-	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
-6. Cloudcerts
-	* Region: All regions
-	* Availability Zone: Not specified
-	* Downtime Period: 1 hour 32 minutes
-	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
-7. Code Engine
-	* Region: All regions
-	* Availability Zone: Not specified
-	* Downtime Period: 1 hour 32 minutes
-	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
-8. Compliance
-	* Region: All regions
-	* Availability Zone: Not specified
-	* Downtime Period: 1 hour 32 minutes
-	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
-9. Continuous-delivery-pipeline
-	* Region: All regions
-	* Availability Zone: Not specified
-	* Downtime Period: 1 hour 32 minutes
-	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
-10. Virtual Private Cloud
-	* Region: All regions
-	* Availability Zone: Not specified
-	* Downtime Period: 1 hour 32 minutes
-	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
-11. Cloud App Dev Services
-	* Region: All regions
-	* Availability Zone: Not specified
-	* Downtime Period: 1 hour 32 minutes
-	* Duration in days, hours, and minutes: 0 days, 1 hour, 32 minutes
+**IBM Cloud**
 
-**Summary of Outage**
+* Service: UI
+* Region/Availability Zone: All regions
+* Impact Date: 21 June 2022 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+* Downtime Period: All services were impacted for approximately 1 hour and 32 minutes.
+* Resolved Date: 21 June 2022 08:06 UTC
 
-The outage affected multiple IBM Cloud services across all regions. The root cause was a BGP configuration change by the third-party vendor that caused a critical set of IP prefixes to be withdrawn.
+**IBM Cloud**
 
-**Cloud Providers Impacted**
+* Service: Bluemix-developer-experience
+* Region/Availability Zone: All regions
+* Impact Date: 21 June 2022 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+* Downtime Period: All services were impacted for approximately 1 hour and 32 minutes.
+* Resolved Date: 21 June 2022 08:06 UTC
 
-* IBM Cloud
-	+ Services impacted: AppID, Schematics, Secrets Manager, UI, Bluemix-developer-experience, Cloudcerts, Code Engine, Compliance, Continuous-delivery-pipeline, Virtual Private Cloud, and Cloud App Dev Services.
-	+ Regions affected: All regions.
-	+ Availability zones not specified.
+**IBM Cloud**
 
-**Overall Summary**
+* Service: Cloudcerts
+* Region/Availability Zone: All regions
+* Impact Date: 21 June 2022 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+* Downtime Period: All services were impacted for approximately 1 hour and 32 minutes.
+* Resolved Date: 21 June 2022 08:06 UTC
 
-The outage was a global incident that affected multiple IBM Cloud services across all regions. The root cause was a BGP configuration change by the third-party vendor. The outage lasted for 1 hour and 32 minutes, and it was resolved at 08:06 UTC on 21 June 2022.
+**IBM Cloud**
 
-**Output Table**
+* Service: Code Engine
+* Region/Availability Zone: All regions
+* Impact Date: 21 June 2022 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+* Downtime Period: All services were impacted for approximately 1 hour and 32 minutes.
+* Resolved Date: 21 June 2022 08:06 UTC
 
-| Service | Region | Availability Zone | Downtime Period | Duration in days, hours, and minutes |
-| --- | --- | --- | --- | --- |
-| AppID | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
-| Schematics | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
-| Secrets Manager | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
-| UI | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
-| Bluemix-developer-experience | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
-| Cloudcerts | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
-| Code Engine | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
-| Compliance | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
-| Continuous-delivery-pipeline | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
-| Virtual Private Cloud | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
-| Cloud App Dev Services | All regions | Not specified | 1 hour 32 minutes | 0 days, 1 hour, 32 minutes |
+**IBM Cloud**
 
-Note: The availability zone information is not available in the original text.
+* Service: Compliance
+* Region/Availability Zone: All regions
+* Impact Date: 21 June 2022 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+* Downtime Period: All services were impacted for approximately 1 hour and 32 minutes.
+* Resolved Date: 21 June 2022 08:06 UTC
+
+**IBM Cloud**
+
+* Service: Continuous-delivery-pipeline
+* Region/Availability Zone: All regions
+* Impact Date: 21 June 2022 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+* Downtime Period: All services were impacted for approximately 1 hour and 32 minutes.
+* Resolved Date: 21 June 2022 08:06 UTC
+
+**IBM Cloud**
+
+* Service: Virtual Private Cloud
+* Region/Availability Zone: All regions
+* Impact Date: 21 June 2022 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+* Downtime Period: All services were impacted for approximately 1 hour and 32 minutes.
+* Resolved Date: 21 June 2022 08:06 UTC
+
+**IBM Cloud**
+
+* Service: Cloud App Dev Services
+* Region/Availability Zone: All regions
+* Impact Date: 21 June 2022 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+* Downtime Period: All services were impacted for approximately 1 hour and 32 minutes.
+* Resolved Date: 21 June 2022 08:06 UTC
+
+**IBM Cloud**
+
+* Service: Event-notifications
+* Region/Availability Zone: All regions
+* Impact Date: 21 June 2022 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+* Downtime Period: All services were impacted for approximately 1 hour and 32 minutes.
+* Resolved Date: 21 June 2022 08:06 UTC
+
+**Summary**
+
+The outage affected multiple IBM Cloud services across all regions. The root cause was a third-party vendor's BGP configuration change, which caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity.
+
+**Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date**
+
+IBM Cloud | AppID | All regions | 21 June 2022 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity. | All services were impacted for approximately 1 hour and 32 minutes. | 21 June 2022 08:06 UTC
+IBM Cloud | Schematics | All regions | 21 June 2022 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity. | All services were impacted for approximately 1 hour and 32 minutes. | 21 June 2022 08:06 UTC
+IBM Cloud | Secrets Manager | All regions | 21 June 2022 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity. | All services were impacted for approximately 1 hour and 32 minutes. | 21 June 2022 08:06 UTC
+IBM Cloud | UI | All regions | 21 June 2022 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity. | All services were impacted for approximately 1 hour and 32 minutes. | 21 June 2022 08:06 UTC
+IBM Cloud | Bluemix-developer-experience | All regions | 21 June 2022 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity. | All services were impacted for approximately 1 hour and 32 minutes. | 21 June 2022 08:06 UTC
+IBM Cloud | Cloudcerts | All regions | 21 June 2022 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity. | All services were impacted for approximately 1 hour and 32 minutes. | 21 June 2022 08:06 UTC
+IBM Cloud | Code Engine | All regions | 21 June 2022 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity. | All services were impacted for approximately 1 hour and 32 minutes. | 21 June 2022 08:06 UTC
+IBM Cloud | Compliance | All regions | 21 June 2022 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity. | All services were impacted for approximately 1 hour and 32 minutes. | 21 June 2022 08:06 UTC
+IBM Cloud | Continuous-delivery-pipeline | All regions | 21 June 2022 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity. | All services were impacted for approximately 1 hour and 32 minutes. | 21 June 2022 08:06 UTC
+IBM Cloud | Virtual Private Cloud | All regions | 21 June 2022 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity. | All services were impacted for approximately 1 hour and 32 minutes. | 21 June 2022 08:06 UTC
+IBM Cloud | Cloud App Dev Services | All regions | 21 June 2022 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity. | All services were impacted for approximately 1 hour and 32 minutes. | 21 June 2022 08:06 UTC
+IBM Cloud | Event-notifications | All regions | 21 June 2022 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a loss of connectivity. | All services were impacted for approximately 1 hour and 32 minutes. | 21 June 2022 08:06 UTC

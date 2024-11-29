@@ -1,35 +1,53 @@
-Here is the response to your query:
+After analyzing the text, I was able to identify the following cloud providers:
 
-**Summary of Outages**
+* IBM Cloud
+* Amazon AWS (not explicitly mentioned in the text, but implied as a multi-tenant building that houses other cloud service providers)
+* Snowflake (not explicitly mentioned in the text, but implied as a co-lo client)
 
-The outage affected IBM Cloud, which was caused by a cooling problem in a non-IBM owned building that houses the IBM Cloud data center in Sao Paulo, Brazil.
+I will provide the information for these three cloud providers.
 
-**Outage Details**
+**IBM Cloud**
 
-**Incident Timeline**
+The outage started on December 7, 2020, at 07:23 UTC. The incident lasted for 17 hours and 36 minutes, ending on December 8, 2020, at 01:00 UTC.
 
-* 07 December 2020 07:13 - Local IBM technician noticed an increase in temperature in SAO01.
-* 07 December 2020 07:23 - Data Center Aggregate Routers (DARS) auto-shutdown due to high temperature.
-* 08 December 2020 00:15 - IKS services restored.
-* 08 December 2020 01:00 - ROKS restoration completed. All Compute services were restored.
+Services impacted:
 
-**IBM Cloud Services Impacted**
+* IKS services
+* Compute services
 
-| Service | Region/Availability Zone | Downtime Period |
-| --- | --- | --- |
-| IBM Cloud | Sao Paulo 01 DATACENTER | 17 hours 36 minutes |
+Regions/Availability Zones:
 
-**Root Cause of Outage**
+* Sao Paulo 01 DATACENTER (not specified which availability zone)
 
-The root cause of the outage was a cooling problem in the non-IBM owned building that houses the IBM Cloud data center in Sao Paulo, Brazil.
+Root cause:
+The root cause of the outage was an issue with the main water supply that feeds the building's cooling towers. The building vendor did not verify that the valves were closed and did not detect the water tank level alarms.
 
-**Summary of Outage**
+Downtime period: 17 hours and 36 minutes
 
-The outage started on December 7, 2020 at 07:23 and lasted for 17 hours and 36 minutes. The services impacted were all Compute services in the Sao Paulo 01 DATACENTER region.
+Resolved date: December 8, 2020, at 01:00 UTC
 
-Here is a breakdown of the outage by service:
+**Amazon AWS (implied)**
 
-* IKS services: Restored on December 8, 2020 at 00:15
-* ROKS restoration: Completed on December 8, 2020 at 01:00
+Since Amazon AWS is implied as a multi-tenant building that houses other cloud service providers, I will not provide specific information for this provider.
 
-Note that no other cloud providers were identified in the text as being impacted by this outage.
+**Snowflake (implied)**
+
+Similarly, Snowflake is implied as a co-lo client, and I will not provide specific information for this provider.
+
+**Summary**
+
+Cloud Providers impacted: IBM Cloud
+Services impacted: IKS services, Compute services
+Regions/Availability Zones: Sao Paulo 01 DATACENTER
+Root cause: Issue with main water supply that feeds building's cooling towers
+Downtime period: 17 hours and 36 minutes
+Resolved date: December 8, 2020, at 01:00 UTC
+
+**Output Table**
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| IBM Cloud | IKS services | Sao Paulo 01 DATACENTER | December 7, 2020 | 17 hours and 36 minutes | Issue with main water supply that feeds building's cooling towers | 17 hours and 36 minutes | December 8, 2020 |
+| IBM Cloud | Compute services | Sao Paulo 01 DATACENTER | December 7, 2020 | 17 hours and 36 minutes | Issue with main water supply that feeds building's cooling towers | 17 hours and 36 minutes | December 8, 2020 |
+
+Note: The output table only includes the information provided in the text for IBM Cloud. Since Amazon AWS and Snowflake are implied as being impacted but not explicitly mentioned, they are not included in the table.

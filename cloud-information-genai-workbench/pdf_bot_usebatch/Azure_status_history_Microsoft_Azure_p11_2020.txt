@@ -1,55 +1,30 @@
-Here is the analysis of the outages in the specified cloud providers:
+After analyzing the text, I have identified the following outages for the specified cloud providers:
 
 **Microsoft Azure**
 
-Outage 1: Deployment Failures
-- Start Date: June 4, 2020
-- Duration: 2 hours 32 minutes
-- Impact: Azure Resource Manager (ARM) end networking services failed
-- Root Cause: Planned power maintenance activity at the datacenter caused an impact to a storage resource
-- Services Affected: ARM, Virtual Machines in East US region
-- Availability Zones: Not specified
+* Storage: East US
+	+ Impact Date: 11 Jun 2020
+	+ Duration: 3 hours 23 minutes
+	+ Root Cause: Planned power maintenance activity at the datacenter caused an impact to a storage resource
+	+ Downtime Period: 11 Jun 2020 11:57 - 14:20 UTC
+	+ Resolved Date: Not specified
+* SQL Database, Managed Instance, MariaDB, MySQL, PostgreSQL, Synapse Analytics
+	+ Impact Date: 19 May 2020
+	+ Duration: 3 hours 30 minutes
+	+ Root Cause: Intermittent issues with processing service management operations
+	+ Downtime Period: 13:30 - 16:30 UTC
+	+ Resolved Date: Not specified
 
-Outage 2: SQL Database and Other Services
-- Start Date: May 19, 2020
-- Duration: 3 hours 30 minutes
-- Impact: Intermittent timeouts and latency issues with Azure SQL Database, Managed Instance, MariaDB, MySQL, PostgreSQL, and Synapse Analytics services in East US region
-- Root Cause: Not specified
-- Services Affected: Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, Azure Synapse Analytics
-- Availability Zones: Not specified
+**Summary of Azure Outages**
 
-Outage 3: Storage and Virtual Machines
-- Start Date: June 11, 2020
-- Duration: 2 hours 23 minutes
-- Impact: Connection failures with storage resources in East US region, affecting services with dependencies on those resources
-- Root Cause: Planned power maintenance activity at the datacenter caused an impact to a storage resource
-- Services Affected: Storage, Virtual Machines in East US region
-- Availability Zones: Not specified
+* Total outages: 2
+* Services impacted: Storage, SQL Database, Managed Instance, MariaDB, MySQL, PostgreSQL, Synapse Analytics
+* Regions/Availability Zones: East US
+* Impact Dates: 11 Jun 2020, 19 May 2020
+* Durations:
+	+ 3 hours 23 minutes (Storage)
+	+ 3 hours 30 minutes (SQL Database, Managed Instance, MariaDB, MySQL, PostgreSQL, Synapse Analytics)
 
-Outage 4: West Central US Region
-- Start Date: March 15, 2020
-- Duration: 2 hours
-- Impact: Issues connecting to resources in West Central US region
-- Root Cause: Ice storm in the region resulted in a loss of power to both primary and secondary utility power feeds
-- Services Affected: Not specified
-- Availability Zones: Not specified
+**No outages found for other cloud providers**
 
-**Summary**
-
-Microsoft Azure experienced four outages:
-
-1. Deployment Failures (June 4, 2020): 2 hours 32 minutes, ARM end networking services failed.
-2. SQL Database and Other Services (May 19, 2020): 3 hours 30 minutes, intermittent timeouts and latency issues with various services in East US region.
-3. Storage and Virtual Machines (June 11, 2020): 2 hours 23 minutes, connection failures with storage resources in East US region.
-4. West Central US Region (March 15, 2020): 2 hours, issues connecting to resources in West Central US region.
-
-**Microsoft Azure Outage Table**
-
-| Date | Start Time | End Time | Duration | Services Affected | Root Cause | Availability Zones |
-| --- | --- | --- | --- | --- | --- | --- |
-| June 4, 2020 | 07:45 | 10:17 | 2 hours 32 minutes | ARM, Virtual Machines in East US region | Planned power maintenance activity at the datacenter caused an impact to a storage resource | Not specified |
-| May 19, 2020 | 13:30 | 16:00 | 3 hours 30 minutes | Azure SQL Database, Azure SQL Database Managed Instance, Azure Database for MariaDB, Azure Database for MySQL, Azure Database for PostgreSQL, Azure Synapse Analytics in East US region | Not specified | Not specified |
-| June 11, 2020 | 11:57 | 14:20 | 2 hours 23 minutes | Storage, Virtual Machines in East US region | Planned power maintenance activity at the datacenter caused an impact to a storage resource | Not specified |
-| March 15, 2020 | 20:30 | 00:30 | 2 hours | Issues connecting to resources in West Central US region | Ice storm in the region resulted in a loss of power to both primary and secondary utility power feeds | Not specified |
-
-Note that some information is not available in the original text, such as specific services affected or availability zones.
+Note: The text does not provide information on Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

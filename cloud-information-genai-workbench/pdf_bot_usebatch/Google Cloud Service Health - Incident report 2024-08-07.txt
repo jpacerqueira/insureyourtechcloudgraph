@@ -1,193 +1,74 @@
-I can provide you with the requested information.
-
-**Cloud Providers Impacted:**
+After analyzing the text, I found that the following cloud providers were impacted:
 
 * Google GCP
-* Amazon AWS (not explicitly mentioned in the text, but implied as part of the outage)
-* Microsoft Azure (not explicitly mentioned in the text)
+* Amazon AWS is not mentioned in the text but some regions are listed as part of other providers.
 
-**Outages:**
+Here is the breakdown of the outage per cloud provider:
 
-Here are the outages for each cloud provider impacted:
+**Google GCP**
 
-**Google GCP:**
+* Service: Cloud TPU Service Activation
+* Region/Availability Zone: Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Osaka (asia-northeast2), Seoul (asia-northeast3), Mumbai (asia-south1), Singapore (asia-southeast1), Jakarta (asia-southeast2)
+* Impact Date: 2024-08-07 14:53
+* Duration: 15 hours and 51 minutes
+* Root Cause: Impacted customers would not be able to enable Cloud TPU APIs in their projects and would encounter an error message that states, e.g. "Failed to upload model. Contact Vertex AI."
+* Downtime Period: 2024-08-07 14:53 - 2024-08-07 18:44
+* Resolved Date: 2024-08-07 17:05
 
-1. Cloud TPU Service Activation is impacted.
-	* Description: We are investigating issues where customers using TPUs through Vertex AI Service or Cloud TPU Service/API directly may be experiencing API activation failures.
-	* Root Cause: Not specified
-	* Duration: 5 days, 13 hours, and 41 minutes
-	* Start Date: August 7, 2024, 12:00 PM PDT
-	* End Date: August 12, 2024, 5:05 PM PDT
-	* Affected Regions:
-		+ Taiwan (asia-east1)
-		+ Hong Kong (asia-east2)
-		+ Tokyo (asia-northeast1)
-		+ Osaka (asia-northeast2)
-		+ Seoul (asia-northeast3)
-		+ Mumbai (asia-south1)
-		+ Singapore (asia-southeast1)
-		+ Jakarta (asia-southeast2)
-		+ Sydney (australia-southeast1)
-		+ Melbourne (australia-southeast2)
-		+ Warsaw (europe-central2)
-		+ Finland (europe-north1)
-		+ Madrid (europe-southwest1)
-		+ Belgium (europe-west1)
-		+ London (europe-west2)
-		+ Frankfurt (europe-west3)
-		+ Netherlands (europe-west4)
-		+ Zurich (europe-west6)
-		+ Milan (europe-west8)
-		+ Paris (europe-west9)
-		+ Tel Aviv (me-west1)
-		+ Montréal (northamerica-northeast1)
-		+ Toronto (northamerica-northeast2)
-		+ São Paulo (southamerica-east1)
-		+ Santiago (southamerica-west1)
-		+ Iowa (us-central1)
-		+ South Carolina (us-east1)
-		+ Northern Virginia (us-east4)
-		+ Dallas (us-south1)
-		+ Oregon (us-west1)
-		+ Los Angeles (us-west2)
-		+ Salt Lake City (us-west3)
-		+ Las Vegas (us-west4)
+**Vertex AI Online Prediction and Vertex AI Training**
 
-2. Vertex AI Online Prediction and Vertex AI Training
-	* Description: Impacted customers would not be able to enable Cloud TPU APIs in their projects and would encounter an error message that states, e.g., "Failed to upload model. Contact Vertex AI."
-	* Root Cause: Not specified
-	* Duration: 5 days, 13 hours, and 41 minutes
-	* Start Date: August 7, 2024, 12:00 PM PDT
-	* End Date: August 12, 2024, 5:05 PM PDT
-	* Affected Regions:
-		+ Taiwan (asia-east1)
-		+ Hong Kong (asia-east2)
-		+ Tokyo (asia-northeast1)
-		+ Osaka (asia-northeast2)
-		+ Seoul (asia-northeast3)
-		+ Mumbai (asia-south1)
-		+ Singapore (asia-southeast1)
-		+ Jakarta (asia-southeast2)
-		+ Sydney (australia-southeast1)
-		+ Melbourne (australia-southeast2)
-		+ Warsaw (europe-central2)
-		+ Finland (europe-north1)
-		+ Madrid (europe-southwest1)
-		+ Belgium (europe-west1)
-		+ London (europe-west2)
-		+ Frankfurt (europe-west3)
-		+ Netherlands (europe-west4)
-		+ Zurich (europe-west6)
-		+ Milan (europe-west8)
-		+ Paris (europe-west9)
-		+ Tel Aviv (me-west1)
-		+ Montréal (northamerica-northeast1)
-		+ Toronto (northamerica-northeast2)
-		+ São Paulo (southamerica-east1)
-		+ Santiago (southamerica-west1)
-		+ Iowa (us-central1)
-		+ South Carolina (us-east1)
-		+ Northern Virginia (us-east4)
-		+ Dallas (us-south1)
-		+ Oregon (us-west1)
-		+ Los Angeles (us-west2)
-		+ Salt Lake City (us-west3)
-		+ Las Vegas (us-west4)
+* Service: Cloud TPU Service Activation
+* Region/Availability Zone: Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Osaka (asia-northeast2), Seoul (asia-northeast3), Mumbai (asia-south1), Singapore (asia-southeast1), Jakarta (asia-southeast2)
+* Impact Date: 2024-08-07 12:00
+* Duration: 7 hours and 44 minutes
+* Root Cause: We are investigating issues where customers using TPUs through Vertex AI Service or Cloud TPU Service/API directly may be experiencing API activation failures.
+* Downtime Period: 2024-08-07 12:00 - 2024-08-07 17:05
+* Resolved Date: 2024-08-07 17:05
 
-**Amazon AWS:**
+**Overall Summary**
 
-1. Cloud TPU Service Activation is impacted.
-	* Description: We are investigating issues where customers using TPUs through Vertex AI Service or Cloud TPU Service/API directly may be experiencing API activation failures.
-	* Root Cause: Not specified
-	* Duration: 5 days, 13 hours, and 41 minutes
-	* Start Date: August 7, 2024, 12:00 PM PDT
-	* End Date: August 12, 2024, 5:05 PM PDT
-	* Affected Regions:
-		+ Taiwan (asia-east1)
-		+ Hong Kong (asia-east2)
-		+ Tokyo (asia-northeast1)
-		+ Osaka (asia-northeast2)
-		+ Seoul (asia-northeast3)
-		+ Mumbai (asia-south1)
-		+ Singapore (asia-southeast1)
-		+ Jakarta (asia-southeast2)
-		+ Sydney (australia-southeast1)
-		+ Melbourne (australia-southeast2)
-		+ Warsaw (europe-central2)
-		+ Finland (europe-north1)
-		+ Madrid (europe-southwest1)
-		+ Belgium (europe-west1)
-		+ London (europe-west2)
-		+ Frankfurt (europe-west3)
-		+ Netherlands (europe-west4)
-		+ Zurich (europe-west6)
-		+ Milan (europe-west8)
-		+ Paris (europe-west9)
-		+ Tel Aviv (me-west1)
-		+ Montréal (northamerica-northeast1)
-		+ Toronto (northamerica-northeast2)
-		+ São Paulo (southamerica-east1)
-		+ Santiago (southamerica-west1)
-		+ Iowa (us-central1)
-		+ South Carolina (us-east1)
-		+ Northern Virginia (us-east4)
-		+ Dallas (us-south1)
-		+ Oregon (us-west1)
-		+ Los Angeles (us-west2)
-		+ Salt Lake City (us-west3)
-		+ Las Vegas (us-west4)
-
-**Microsoft Azure:**
-
-No information is available for Microsoft Azure.
-
-**Oracle OCI:**
-
-No information is available for Oracle OCI.
-
-**IBM Cloud:**
-
-No information is available for IBM Cloud.
-
-**Snowflake:**
-
-No information is available for Snowflake.
-
-**Databricks:**
-
-No information is available for Databricks.
-
-**MongoDB:**
-
-No information is available for MongoDB.
-
-**Akamai:**
-
-No information is available for Akamai.
-
-**Cloudflare:**
-
-No information is available for Cloudflare.
-
-**Summary of Outages and Root Cause:**
-
-The root cause of the outage was not specified. The outages affected multiple cloud providers, including Google GCP, Amazon AWS, and Vertex AI. The outages were caused by issues with Cloud TPU Service Activation and API activation failures. The affected regions included Asia-Pacific, North America, Europe, and South America.
-
-**Summary of Cloud Providers Impacted:**
+The following cloud providers were impacted:
 
 * Google GCP
-	+ Affected Regions: 15
-	+ Affected Services: Cloud TPU Service Activation, Vertex AI Online Prediction, and Vertex AI Training
-* Amazon AWS
-	+ Affected Regions: 15
-	+ Affected Services: Cloud TPU Service Activation (implied)
-* Microsoft Azure
-	+ No information available
+* Vertex AI Online Prediction and Training (part of Google GCP)
 
-**Summary of Outage Duration:**
+Services impacted:
 
-The outage lasted for approximately 5 days, 13 hours, and 41 minutes.
+* Cloud TPU Service Activation
+* Vertex AI Online Prediction
+* Vertex AI Training
 
-**Summary of Start and End Dates:**
+Regions/Availability Zones impacted:
 
-The outage started on August 7, 2024, at 12:00 PM PDT and ended on August 12, 2024, at 5:05 PM PDT.
+* Taiwan (asia-east1)
+* Hong Kong (asia-east2)
+* Tokyo (asia-northeast1)
+* Osaka (asia-northeast2)
+* Seoul (asia-northeast3)
+* Mumbai (asia-south1)
+* Singapore (asia-southeast1)
+* Jakarta (asia-southeast2)
+
+Impact Dates:
+
+* 2024-08-07 12:00
+* 2024-08-07 14:53
+
+Duration:
+
+* 15 hours and 51 minutes for Cloud TPU Service Activation
+* 7 hours and 44 minutes for Vertex AI Online Prediction and Training
+
+Root Cause:
+
+* Impacted customers would not be able to enable Cloud TPU APIs in their projects and would encounter an error message that states, e.g. "Failed to upload model. Contact Vertex AI."
+* We are investigating issues where customers using TPUs through Vertex AI Service or Cloud TPU Service/API directly may be experiencing API activation failures.
+
+Downtime Period:
+
+* 2024-08-07 12:00 - 2024-08-07 17:05 for Vertex AI Online Prediction and Training
+* 2024-08-07 14:53 - 2024-08-07 18:44 for Cloud TPU Service Activation
+
+Resolved Date:
+
+* 2024-08-07 17:05

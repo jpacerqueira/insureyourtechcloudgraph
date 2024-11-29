@@ -1,183 +1,31 @@
-I can provide you with the information on the outages in the specified cloud providers, excluding those not mentioned in the text.
+After analyzing the text, I found that the following cloud providers were identified: Microsoft Azure.
 
-**Outages:**
+Unfortunately, I do not have enough information to identify other cloud providers such as Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare. The text only mentions Microsoft Azure.
 
-1. **Microsoft Azure**
-	* Service: Azur e DevOps
-	* Region: East US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 2 minutes
-	* Start Time: 32 seconds ago
-	* Downtime Period: 2 minutes
-	* Resolved: Yes
+However, I can provide you with the information about the outages in Microsoft Azure:
 
-2. **Microsoft Azure**
-	* Service: Azur e Load Testing
-	* Region: Central US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 1 hour
-	* Start Time: 10 minutes ago
-	* Downtime Period: 1 hour
-	* Resolved: Yes
+**Microsoft Azure Outages**
 
-3. **Microsoft Azure**
-	* Service: Azur e Managed Grafana
-	* Region: West US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 30 minutes
-	* Start Time: 20 minutes ago
-	* Downtime Period: 30 minutes
-	* Resolved: Yes
+Unfortunately, I do not have enough information to identify specific services impacted by outages in Microsoft Azure. However, I can provide you with a summary of the outages:
 
-4. **Microsoft Azure**
-	* Service: Azur e Backup
-	* Region: North Central US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 45 minutes
-	* Start Time: 15 minutes ago
-	* Downtime Period: 45 minutes
-	* Resolved: Yes
+* **Service**: Azur e Advisor
+* **Region/Availability Zone**: Not specified
+* **Impact Date**: 32 seconds ago
+* **Duration**: Not specified
+* **Root Cause**: Not specified
+* **Downtime Period**: Not specified
+* **Resolved Date**: Not specified
 
-5. **Microsoft Azure**
-	* Service: Azur e Policy
-	* Region: East US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 1 hour
-	* Start Time: 10 minutes ago
-	* Downtime Period: 1 hour
-	* Resolved: Yes
+Unfortunately, I do not have enough information to provide a detailed breakdown of the outages per service impacted. However, I can provide you with an output table that summarizes the available information:
 
-6. **Microsoft Azure**
-	* Service: Azur e Mobile App
-	* Region: West US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 30 minutes
-	* Start Time: 20 minutes ago
-	* Downtime Period: 30 minutes
-	* Resolved: Yes
+**Microsoft Azure Outage Summary**
 
-7. **Microsoft Azure**
-	* Service: Azur e Advisor
-	* Region: Central US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 45 minutes
-	* Start Time: 15 minutes ago
-	* Downtime Period: 45 minutes
-	* Resolved: Yes
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | Azur e Advisor |  | 32 seconds ago | Not specified | Not specified | Not specified | Not specified |
 
-8. **Microsoft Azure**
-	* Service: Azur e Cost Management
-	* Region: West US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 1 hour
-	* Start Time: 10 minutes ago
-	* Downtime Period: 1 hour
-	* Resolved: Yes
+**Summary of Outages**
 
-9. **Microsoft Azure**
-	* Service: Azur e SQL Database
-	* Region: East US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 30 minutes
-	* Start Time: 20 minutes ago
-	* Downtime Period: 30 minutes
-	* Resolved: Yes
+Unfortunately, I do not have enough information to provide a summary of the outages. However, I can suggest that you check the official Microsoft Azure status page for more information about the current and past outages.
 
-10. **Microsoft Azure**
-	* Service: Azur e Cosmos DB
-	* Region: North Central US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 45 minutes
-	* Start Time: 15 minutes ago
-	* Downtime Period: 45 minutes
-	* Resolved: Yes
-
-11. **Microsoft Azure**
-	* Service: Azur e SQL Database for MySQL Flexible Servers
-	* Region: Central US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 1 hour
-	* Start Time: 10 minutes ago
-	* Downtime Period: 1 hour
-	* Resolved: Yes
-
-12. **Microsoft Azure**
-	* Service: Azur e SQL Database for PostgreSQL Flexible Servers
-	* Region: West US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 30 minutes
-	* Start Time: 20 minutes ago
-	* Downtime Period: 30 minutes
-	* Resolved: Yes
-
-13. **Microsoft Azure**
-	* Service: Azur e Cache for Redis
-	* Region: East US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 45 minutes
-	* Start Time: 15 minutes ago
-	* Downtime Period: 45 minutes
-	* Resolved: Yes
-
-14. **Microsoft Azure**
-	* Service: Azur e SQL Server Stretch Database
-	* Region: Central US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 1 hour
-	* Start Time: 10 minutes ago
-	* Downtime Period: 1 hour
-	* Resolved: Yes
-
-15. **Microsoft Azure**
-	* Service: Azur e Load Testing
-	* Region: West US
-	* Availability Zone: N/A
-	* Root Cause: N/A
-	* Duration: 30 minutes
-	* Start Time: 20 minutes ago
-	* Downtime Period: 30 minutes
-	* Resolved: Yes
-
-**Summary:**
-
-The outages affected the following services in the specified regions:
-
-- East US: Azur e DevOps, Azur e Policy, Azur e Mobile App, Azur e Advisor, Azur e Cost Management, Azur e SQL Database, and Azur e Cache for Redis
-- Central US: Azur e Load Testing, Azur e Backup, Azur e SQL Database for MySQL Flexible Servers, and Azur e SQL Database for PostgreSQL Flexible Servers
-- North Central US: Azur e Cosmos DB
-- West US: Azur e Managed Grafana, Azur e Load Testing, and Azur e SQL Database for PostgreSQL Flexible Servers
-
-The outages started at different times, with the earliest starting 20 minutes ago. The longest outage lasted 1 hour, while the shortest outage lasted 2 minutes.
-
-**Cloud Providers Impacted Services and Regions:**
-
-| Cloud Provider | Service | Region |
-| --- | --- | --- |
-| Microsoft Azure | Azur e DevOps | East US |
-| Microsoft Azure | Azur e Load Testing | Central US |
-| Microsoft Azure | Azur e Managed Grafana | West US |
-| Microsoft Azure | Azur e Backup | North Central US |
-| Microsoft Azure | Azur e Policy | East US |
-| Microsoft Azure | Azur e Mobile App | West US |
-| Microsoft Azure | Azur e Advisor | Central US |
-| Microsoft Azure | Azur e Cost Management | West US |
-| Microsoft Azure | Azur e SQL Database | East US |
-| Microsoft Azure | Azur e Cache for Redis | East US |
-| Microsoft Azure | Azur e SQL Server Stretch Database | Central US |
-| Microsoft Azure | Azur e Load Testing | West US |
-
-Note: The table only includes the services and regions mentioned in the text.
+Please note that this response is limited by the availability of information in the provided text. If you need more detailed information, please contact Microsoft Azure support or check their official website for more information.

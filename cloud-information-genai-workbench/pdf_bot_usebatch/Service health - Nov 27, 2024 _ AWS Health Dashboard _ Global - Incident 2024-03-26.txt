@@ -1,92 +1,113 @@
-I can provide you with the requested information. However, I need to clarify that some of the cloud providers mentioned in your query (Google GCP, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) are not explicitly mentioned in the provided text.
+I can only apply the query to Amazon AWS as it is the only cloud provider mentioned in the text.
 
-Based on the text, the following cloud providers are identified: Amazon AWS. I will provide information only for this provider.
+Here are the results:
 
-Here is the breakdown of outages for each service impacted by Amazon AWS:
+**Amazon AWS Outages**
 
-**Amazon Elastic Compute Cloud (EC2)**
+1. **AWS Elastic Compute Cloud**
+	* Region/Availability Zone: N. Virginia (us-east-1)
+	* Impact Date: November 10, 2024
+	* Duration: 2 hours and 38 minutes
+	* Root Cause: Increased API error rates for mutable VPC calls
+	* Downtime Period: 7:55 AM - 10:13 AM PST
+	* Resolved Date: Not specified
 
-* Outage started: November 10, 2024, 7:55 AM PST
-* Duration: 3 hours and 18 minutes
-* Root cause: Increased API error rates for mutable VPC calls
-* Downtime period: November 10, 2024, 8:13 AM - 11:33 AM PST (2 hours and 20 minutes)
-* Resolved: November 10, 2024, 10:13 AM PST
+2. **AWS Billing Console**
+	* Region/Availability Zone: N. Virginia (us-east-1)
+	* Impact Date: November 6, 2024
+	* Duration: 31 minutes
+	* Root Cause: Increased errors performing payments
+	* Downtime Period: 3:42 AM - 4:14 AM PST
+	* Resolved Date: Not specified
 
-**AWS Batch**
+3. **AWS Partner Central**
+	* Region/Availability Zone: N. Virginia (us-east-1)
+	* Impact Date: October 29, 2024
+	* Duration: 54 minutes
+	* Root Cause: Increased error rates
+	* Downtime Period: 4:13 AM - 5:08 AM PDT
+	* Resolved Date: Not specified
 
-* Outage started: Not specified
-* Duration: Not specified
-* Root cause: Not specified
-* Downtime period: Not specified
-* Resolved: Not specified
+4. **AWS QuickSight**
+	* Region/Availability Zone: us-east-1
+	* Impact Date: October 25, 2024
+	* Duration: 2 hours and 44 minutes
+	* Root Cause: Increased login errors
+	* Downtime Period: 12:19 PM - 1:04 PM PDT
+	* Resolved Date: Not specified
 
-**Amazon Elastic Container Service (ECS)**
+5. **Multiple services**
+	* Region/Availability Zone: us-west-2
+	* Impact Date: September 25, 2024
+	* Duration: 1 hour and 17 minutes
+	* Root Cause: Increased latencies and errors
+	* Downtime Period: 2:05 PM - 3:22 PM PDT
+	* Resolved Date: Not specified
 
-* Outage started: Not specified
-* Duration: Not specified
-* Root cause: Not specified
-* Downtime period: Not specified
-* Resolved: Not specified
+6. **Multiple services**
+	* Region/Availability Zone: eu-south-1
+	* Impact Date: September 11, 2024
+	* Duration: 1 hour and 37 minutes
+	* Root Cause: Increased error rates
+	* Downtime Period: 1:34 PM - 3:11 PM PDT
+	* Resolved Date: Not specified
 
-**Amazon Elastic Kubernetes Service (EKS)**
+7. **AWS Identity and Access Management**
+	* Region/Availability Zone: N. Virginia (us-east-1)
+	* Impact Date: August 29, 2024
+	* Duration: 2 hours and 30 minutes
+	* Root Cause: Connectivity issues
+	* Downtime Period: 2:31 AM - 3:01 AM PDT
+	* Resolved Date: Not specified
 
-* Outage started: Not specified
-* Duration: Not specified
-* Root cause: Not specified
-* Downtime period: Not specified
-* Resolved: Not specified
+8. **Amazon Simple Queue Service**
+	* Region/Availability Zone: us-east-1
+	* Impact Date: August 15, 2024
+	* Duration: 0 minutes (resolved immediately)
+	* Root Cause: Increased API error rates
+	* Downtime Period: N/A
+	* Resolved Date: Not specified
 
-**AWS DataSync**
+9. **AWS Service Catalog**
+	* Region/Availability Zone: us-west-1
+	* Impact Date: August 6, 2024
+	* Duration: 1 hour and 45 minutes
+	* Root Cause: Increased API error rates
+	* Downtime Period: 8:11 PM - 9:56 PM PDT
+	* Resolved Date: Not specified
 
-* Outage started: November 10, 2024, 7:55 AM PST
-* Duration: 3 hours and 18 minutes
-* Root cause: Increased API error rates for mutable VPC calls
-* Downtime period: November 10, 2024, 8:13 AM - 11:33 AM PST (2 hours and 20 minutes)
-* Resolved: November 10, 2024, 10:13 AM PST
+10. **Amazon Elastic MapReduce**
+	* Region/Availability Zone: us-east-1
+	* Impact Date: August 6, 2024
+	* Duration: 2 hours and 46 minutes
+	* Root Cause: EMR cluster launch failures
+	* Downtime Period: 7:24 PM - 10:10 PM PDT
+	* Resolved Date: Not specified
 
-**AWS QuickSight**
+11. **Multiple services**
+	* Region/Availability Zone: us-east-1
+	* Impact Date: July 30, 2024
+	* Duration: 6 hours and 15 minutes
+	* Root Cause: Increased API error rates
+	* Downtime Period: 3:40 PM - 10:55 PM EDT
+	* Resolved Date: Not specified
 
-* Outage started: October 25, 2024, 12:19 PM PDT
-* Duration: Not specified
-* Root cause: Increased login errors
-* Downtime period: Not specified
-* Resolved: Not specified
+12. **Amazon DynamoDB**
+	* Region/Availability Zone: us-west-2
+	* Impact Date: December 9, 2023
+	* Duration: 1 hour and 12 minutes
+	* Root Cause: Increased error rates
+	* Downtime Period: 7:17 PM - 8:29 PM PST
+	* Resolved Date: Not specified
 
-**Multiple services (including EC2, DataSync, and others)**
+**Summary**
 
-* Outage started: September 25, 2024, 2:05 PM PDT
-* Duration: 1 hour and 17 minutes
-* Root cause: Increased latencies and errors
-* Downtime period: Not specified
-* Resolved: Not specified
+Amazon AWS was impacted by multiple outages across various services, regions, and availability zones. The most recent outage occurred on July 30, 2024, affecting multiple services in the us-east-1 region.
 
-**Amazon DynamoDB**
+The longest outage lasted for 6 hours and 15 minutes, while the shortest outage lasted for 31 minutes. The root cause of the outages varied, with some being related to increased error rates or connectivity issues.
 
-* Outage started: December 9, 2023, 7:17 PM PST
-* Duration: 2 hours and 12 minutes
-* Root cause: Increased error rates
-* Downtime period: December 9, 2023, 8:29 PM - 10:41 PM PST (2 hours and 12 minutes)
-* Resolved: Not specified
+**Cloud Provider Summary**
 
-Here is the summary of outages for Amazon AWS:
+Amazon AWS was impacted by 12 outages across various services, regions, and availability zones. The most recent outage occurred on July 30, 2024, affecting multiple services in the us-east-1 region.
 
-**Outage Summary**
-
-* Date range: November 6, 2024, to March 26, 2024
-* Services impacted:
-	+ EC2
-	+ DataSync
-	+ Batch (partial outage)
-	+ QuickSight
-	+ Multiple services (including EC2, DataSync, and others)
-	+ DynamoDB
-* Regions impacted:
-	+ N. Virginia (us-east-1)
-	+ us-west-2
-* Root causes:
-	+ Increased API error rates for mutable VPC calls
-	+ Increased login errors
-	+ Increased latencies and errors
-	+ Increased error rates
-
-Note that the root cause of some outages is not specified in the provided text.
+The longest outage lasted for 6 hours and 15 minutes, while the shortest outage lasted for 31 minutes.

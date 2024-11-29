@@ -1,40 +1,33 @@
-I can only apply the query to Google Cloud Service Health since that is the only cloud provider mentioned in the text.
+I can only apply the query to Google Cloud Service as it is the only cloud provider mentioned in the text.
 
-Here are the results:
+Here are the details of the outage:
 
-**Google Cloud Service Health**
+**Google Cloud Service**
 
-The outage started on October 8, 2024, at 12:15 PM PDT and ended on October 8, 2024, at 6:46 PM PDT. The incident lasted for approximately 7 hours and 31 minutes.
+The incident began on Tuesday, 2024-10-08 12:15 US/Pacific and ended on Tuesday, 2024-10-08 18:35 US/Pacific. The impacted service was Google App Engine.
 
-**Affected Services**
+Here is the breakdown of the outage per service impacted:
 
-* Google App Engine
+App Engine customers in us-central1 one may be experiencing an increase in HTTP 429 responses.
+Description: We are experiencing an issue with Google App Engine beginning on Tuesday, 2024-10-08 12:15 US/Pacific.
+Our engineering team has identiied a mitigation strategy. Owing to the mitigation steps implemented thus far, partial recovery has been achieved.
+We will continue to work on the recovery process and provide an update by Tuesday, 2024-10-08 18:30 US/Pacific with current details.
 
-**Affected Regions and Availability Zones**
+Diagnosis: Impacted customers may intermittently encounter a ‘HTTP 429’ response code.
+Workaround: None at this time.
 
-* us-central1 region
-* Iowa (us-central1)
+Here is the information in table format:
 
-**Root Cause of the Outage**
+Google Cloud Service | App Engine | us-central1 | Tuesday, 2024-10-08 12:15 US/Pacific | 3 hours and 20 minutes | Impaired traffic handling | Tuesday, 2024-10-08 18:35 US/Pacific
 
-The root cause of the outage was not specified in the text.
+Here is the summary of the outage:
 
-**Downtime Period**
+**Google Cloud Service**
 
-The downtime period for Google App Engine customers in us-central1 region started on October 8, 2024, at 12:15 PM PDT and ended on October 8, 2024, at 6:46 PM PDT.
-
-**Resolution Date**
-
-The outage was marked as resolved on October 8, 2024, at 6:46 PM PDT.
-
-Here is the information displayed in a table format:
-
-| Service | Region/Availability Zone | Start Time | End Time | Duration | Downtime Period |
-| --- | --- | --- | --- | --- | --- |
-| Google App Engine | us-central1 | 2024-10-08 12:15 PDT | 2024-10-08 18:35 PDT | 7 hours, 20 minutes | 2024-10-08 12:15 PDT - 2024-10-08 18:35 PDT |
-
-**Summary of Outage**
-
-The outage affected Google App Engine customers in the us-central1 region. The incident started on October 8, 2024, at 12:15 PM PDT and ended on October 8, 2024, at 6:46 PM PDT. The root cause of the outage was not specified.
-
-Note that I have removed all cloud providers other than Google Cloud Service Health from the query results.
+* Services impacted: Google App Engine
+* Regions/Availability Zones: us-central1
+* Impact Date: Tuesday, 2024-10-08 12:15 US/Pacific
+* Duration: 3 hours and 20 minutes
+* Root Cause: Impaired traffic handling
+* Downtime Period: Tuesday, 2024-10-08 12:15 US/Pacific to Tuesday, 2024-10-08 18:35 US/Pacific
+* Resolved Date: Tuesday, 2024-10-08 18:35 US/Pacific

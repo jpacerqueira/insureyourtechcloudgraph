@@ -1,61 +1,62 @@
-I can provide you with the requested information based on the provided context.
+I can provide you with the information you requested.
 
-**Cloud Providers Impacted:**
+**Cloud Provider:** MongoDB
+**Service:** Atlas App Services and Device Sync
+**Region/Availability Zone:** Not specified in the text
+**Impact Date:** September 18, 2024
+**Duration:** Not specified in the text
+**Root Cause:** The new services.cloud.mongodb.com API works as expected. Any API call to realm.mongodb.com is returning 401.
+**Downtime Period:** Not specified in the text
+**Resolved Date:** September 18, 2024 (resolved)
 
-The following cloud providers were identified in the text:
+**Cloud Provider:** MongoDB
+**Service:** Realm
+**Region/Availability Zone:** Not specified in the text
+**Impact Date:** September 18, 2024
+**Duration:** Not specified in the text
+**Root Cause:** The issue has been identified and a fix is being implemented.
+**Downtime Period:** Not specified in the text
+**Resolved Date:** September 18, 2024 (resolved)
 
-1. MongoDB
-2. Akamai
-3. Cloudflare
+**Cloud Provider:** MongoDB
+**Service:** API
+**Region/Availability Zone:** Not specified in the text
+**Impact Date:** September 18, 2024
+**Duration:** Not specified in the text
+**Root Cause:** We are currently investigating the issue. Any API call to realm.mongodb.com is returning 401.
+**Downtime Period:** Not specified in the text
+**Resolved Date:** September 18, 2024 (resolved)
 
-**Outage Details:**
+**Summary:**
 
-Here are the outage details for each affected service, broken down by cloud provider and region/availability zone:
+* Cloud Provider: MongoDB
+* Services impacted: Atlas App Services and Device Sync, Realm, API
+* Regions/Availability Zones: Not specified in the text
+* Impact Dates: September 18, 2024
+* Duration: Not specified in the text
+* Root Cause: The new services.cloud.mongodb.com API works as expected. Any API call to realm.mongodb.com is returning 401.
+* Downtime Period: Not specified in the text
+* Resolved Date: September 18, 2024 (resolved)
 
-**MongoDB:**
-```
-Incident Report for MongoDB Cloud
-This incident aﬀected: MongoDB Atlas App Services and Device Sync.
+**Output Table:**
 
-Affected Regions:
-- None specified in the text
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| MongoDB | Atlas App Services and Device Sync |  |  |  | The new services.cloud.mongodb.com API works as expected. Any API call to realm.mongodb.com is returning 401. |  | September 18, 2024 |
+| MongoDB | Realm |  |  |  | The issue has been identified and a fix is being implemented. |  | September 18, 2024 |
+| MongoDB | API |  |  |  | We are currently investigating the issue. Any API call to realm.mongodb.com is returning 401. |  | September 18, 2024 |
 
-Root Cause:
-- The issue has been identiﬁed as an API call to realm.mongodb.com returning 401, while the new services.cloud.mongodb.com API works as expected.
-
-Duration:
-- Duration of outage not explicitly stated
-- Downtime period: Not specified
-- Start Date: September 18, 2024
-- End Date: Not specified
-
-Services Impacted:
-- MongoDB Atlas App Services
-- Device Sync
-```
-
-**Akamai:**
-```
-No information available in the provided text about Akamai being impacted.
-```
-
-**Cloudflare:**
-```
-No information available in the provided text about Cloudflare being impacted.
-```
-
-**Summary of Outages and Root Cause:**
-
-The outage affected MongoDB Atlas App Services and Device Sync, with an API call to realm.mongodb.com returning 401. The new services.cloud.mongodb.com API works as expected.
+Note: The table only includes the information provided in the text and does not include any additional details that may be available about the outage.
 
 **Overall Summary:**
 
-A single incident affected MongoDB Atlas App Services and Device Sync on September 18, 2024. The root cause of the outage was not explicitly stated, but it is believed to be related to an issue with the realm.mongodb.com API. The duration of the outage is unknown, but the downtime period was not specified.
+* Cloud Provider: MongoDB
+* Services impacted: Atlas App Services and Device Sync, Realm, API
+* Regions/Availability Zones: Not specified in the text
+* Impact Dates: September 18, 2024
+* Duration: Not specified in the text
+* Root Cause: The new services.cloud.mongodb.com API works as expected. Any API call to realm.mongodb.com is returning 401.
+* Downtime Period: Not specified in the text
+* Resolved Date: September 18, 2024 (resolved)
 
-**Table Output:**
-
-| Cloud Provider | Service Impacted | Region/Availability Zone | Root Cause | Duration | Downtime Period | Start Date | End Date |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| MongoDB | MongoDB Atlas App Services, Device Sync | - | API call to realm.mongodb.com returning 401 | Unknown | Not specified | September 18, 2024 | - |
-
-Note: The table output is limited by the information available in the provided text.
+The outage affected MongoDB Cloud services, specifically Atlas App Services and Device Sync, Realm, and API. The root cause of the outage was related to an issue with the realm.mongodb.com API, which returned a 401 error for any API call. The outage was resolved on September 18, 2024, but the duration and downtime period were not specified in the text.

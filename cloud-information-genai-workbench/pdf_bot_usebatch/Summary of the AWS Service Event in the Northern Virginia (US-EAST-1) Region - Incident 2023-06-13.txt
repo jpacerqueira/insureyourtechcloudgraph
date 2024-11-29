@@ -1,115 +1,77 @@
-Here is the response to your query:
+Here is the information about the outage:
 
-**Summary of Outages**
+**Summary of Outage**
 
-The following cloud providers were impacted: Amazon AWS, Amazon STS, AWS Management Console, Amazon EKS, Amazon Connect, Amazon EventBridge.
+The outage occurred in the Northern Virginia (US-EAST-1) Region on June 13th, 2023. The incident started at 11:49 AM PDT and lasted for approximately 4 hours and 48 minutes.
 
-**Outage Details**
+**Cloud Providers Impacted**
 
-**Amazon AWS**
+* Amazon AWS
+	+ Service: Lambda function invocations
+	+ Region/Availability Zone: Northern Virginia (US-EAST-1)
+	+ Impact Date: June 13th, 2023, 11:49 AM PDT
+	+ Duration: Approximately 4 hours and 48 minutes
+	+ Root Cause: Latent software defect in the provisioning of underlying compute capacity
+	+ Downtime Period: 11:49 AM - 3:37 PM PDT
+	+ Resolved Date: June 13th, 2023, 3:37 PM PDT
 
-* Region: Northern Virginia (US-EAST-1)
-* Availability Zones: Not specified
-* Services Impacted:
-	+ Lambda function invocations
-	+ Amazon STS
-	+ AWS Management Console
-	+ Amazon EKS
-	+ Amazon Connect
-	+ Amazon EventBridge
-* Root Cause: Latent software defect in the provisioning of underlying compute capacity
-* Duration: 3 hours and 48 minutes (from 11:49 AM PDT to 3:37 PM PDT)
-* Downtime Period:
-	+ Lambda function invocations: 2 hours and 13 minutes
-	+ Amazon STS: 1 hour and 53 minutes
-	+ AWS Management Console: 1 hour and 53 minutes
-	+ Amazon EKS: 1 hour and 53 minutes
-	+ Amazon Connect: 1 hour and 40 minutes
-	+ Amazon EventBridge: 1 hour and 13 minutes
-* Marked as Resolved: 3:37 PM PDT
+**Additional Services Impacted**
 
-**Amazon STS**
+* Amazon STS
+	+ Region/Availability Zone: Northern Virginia (US-EAST-1)
+	+ Impact Date: June 13th, 2023, 11:49 AM PDT
+	+ Duration: Approximately 4 hours and 48 minutes
+	+ Root Cause: Degraded Lambda function invocations
+	+ Downtime Period: 11:49 AM - 3:37 PM PDT
+	+ Resolved Date: June 13th, 2023, 3:37 PM PDT
 
-* Region: Northern Virginia (US-EAST-1)
-* Availability Zones: Not specified
-* Services Impacted:
-	+ AWS Management Console
-	+ Amazon EKS
-	+ Amazon Connect
-	+ Amazon EventBridge
-* Root Cause: Latent software defect in the provisioning of underlying compute capacity
-* Duration: 1 hour and 53 minutes (from 11:49 AM PDT to 1:42 PM PDT)
-* Downtime Period:
-	+ AWS Management Console: 1 hour and 53 minutes
-	+ Amazon EKS: 1 hour and 53 minutes
-	+ Amazon Connect: 1 hour and 40 minutes
-	+ Amazon EventBridge: 1 hour and 13 minutes
-* Marked as Resolved: 1:42 PM PDT
+* Amazon Management Console
+	+ Region/Availability Zone: Northern Virginia (US-EAST-1)
+	+ Impact Date: June 13th, 2023, 11:49 AM PDT
+	+ Duration: Approximately 4 hours and 48 minutes
+	+ Root Cause: Degraded Lambda function invocations
+	+ Downtime Period: 11:49 AM - 2:02 PM PDT
+	+ Resolved Date: June 13th, 2023, 2:02 PM PDT
 
-**AWS Management Console**
+* Amazon EKS
+	+ Region/Availability Zone: Northern Virginia (US-EAST-1)
+	+ Impact Date: June 13th, 2023, 11:49 AM PDT
+	+ Duration: Approximately 4 hours and 48 minutes
+	+ Root Cause: Degraded Lambda function invocations
+	+ Downtime Period: 11:49 AM - 3:37 PM PDT
+	+ Resolved Date: June 13th, 2023, 3:37 PM PDT
 
-* Region: Northern Virginia (US-EAST-1)
-* Availability Zones: Not specified
-* Services Impacted:
-	+ AWS STS
-	+ Amazon EKS
-	+ Amazon Connect
-	+ Amazon EventBridge
-* Root Cause: Latent software defect in the provisioning of underlying compute capacity
-* Duration: 1 hour and 53 minutes (from 11:49 AM PDT to 1:42 PM PDT)
-* Downtime Period:
-	+ AWS STS: 1 hour and 53 minutes
-	+ Amazon EKS: 1 hour and 53 minutes
-	+ Amazon Connect: 1 hour and 40 minutes
-	+ Amazon EventBridge: 1 hour and 13 minutes
-* Marked as Resolved: 1:42 PM PDT
+* Amazon Connect
+	+ Region/Availability Zone: Northern Virginia (US-EAST-1)
+	+ Impact Date: June 13th, 2023, 11:49 AM PDT
+	+ Duration: Approximately 4 hours and 48 minutes
+	+ Root Cause: Degraded Lambda function invocations
+	+ Downtime Period: 11:49 AM - 1:40 PM PDT
+	+ Resolved Date: June 13th, 2023, 1:40 PM PDT
 
-**Amazon EKS**
+* Amazon EventBridge
+	+ Region/Availability Zone: Northern Virginia (US-EAST-1)
+	+ Impact Date: June 13th, 2023, 11:49 AM PDT
+	+ Duration: Approximately 4 hours and 48 minutes
+	+ Root Cause: Degraded Lambda function invocations
+	+ Downtime Period: 11:49 AM - 3:37 PM PDT
+	+ Resolved Date: June 13th, 2023, 3:37 PM PDT
 
-* Region: Northern Virginia (US-EAST-1)
-* Availability Zones: Not specified
-* Services Impacted:
-	+ AWS Management Console
-	+ Amazon STS
-	+ Amazon Connect
-	+ Amazon EventBridge
-* Root Cause: Latent software defect in the provisioning of underlying compute capacity
-* Duration: 1 hour and 53 minutes (from 11:49 AM PDT to 1:42 PM PDT)
-* Downtime Period:
-	+ AWS Management Console: 1 hour and 53 minutes
-	+ Amazon STS: 1 hour and 53 minutes
-	+ Amazon Connect: 1 hour and 40 minutes
-	+ Amazon EventBridge: 1 hour and 13 minutes
-* Marked as Resolved: 1:42 PM PDT
+* AWS Support Center
+	+ Region/Availability Zone: Northern Virginia (US-EAST-1)
+	+ Impact Date: June 13th, 2023, 11:49 AM PDT
+	+ Duration: Approximately 4 hours and 48 minutes
+	+ Root Cause: Degraded Lambda function invocations
+	+ Downtime Period: 11:49 AM - 2:38 PM PDT
+	+ Resolved Date: June 13th, 2023, 2:38 PM PDT
 
-**Amazon Connect**
+**Output Table**
 
-* Region: Northern Virginia (US-EAST-1)
-* Availability Zones: Not specified
-* Services Impacted:
-	+ AWS Management Console
-	+ Amazon EKS
-	+ Amazon EventBridge
-* Root Cause: Latent software defect in the provisioning of underlying compute capacity
-* Duration: 1 hour and 40 minutes (from 11:49 AM PDT to 1:29 PM PDT)
-* Downtime Period:
-	+ AWS Management Console: 1 hour and 53 minutes
-	+ Amazon EKS: 1 hour and 53 minutes
-	+ Amazon EventBridge: 1 hour and 13 minutes
-* Marked as Resolved: 1:29 PM PDT
-
-**Amazon EventBridge**
-
-* Region: Northern Virginia (US-EAST-1)
-* Availability Zones: Not specified
-* Services Impacted:
-	+ AWS Management Console
-	+ Amazon EKS
-	+ Amazon Connect
-* Root Cause: Latent software defect in the provisioning of underlying compute capacity
-* Duration: 1 hour and 13 minutes (from 11:49 AM PDT to 12:02 PM PDT)
-* Downtime Period:
-	+ AWS Management Console: 1 hour and 53 minutes
-	+ Amazon EKS: 1 hour and 53 minutes
-	+ Amazon Connect: 1 hour and 40 minutes
-* Marked as Resolved: 12:02 PM PDT
+Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+Amazon AWS | Lambda function invocations | Northern Virginia (US-EAST-1) | June 13th, 2023, 11:49 AM PDT | Approximately 4 hours and 48 minutes | Latent software defect in the provisioning of underlying compute capacity | 11:49 AM - 3:37 PM PDT | June 13th, 2023, 3:37 PM PDT
+Amazon AWS | STS | Northern Virginia (US-EAST-1) | June 13th, 2023, 11:49 AM PDT | Approximately 4 hours and 48 minutes | Degraded Lambda function invocations | 11:49 AM - 3:37 PM PDT | June 13th, 2023, 3:37 PM PDT
+Amazon AWS | Management Console | Northern Virginia (US-EAST-1) | June 13th, 2023, 11:49 AM PDT | Approximately 4 hours and 48 minutes | Degraded Lambda function invocations | 11:49 AM - 2:02 PM PDT | June 13th, 2023, 2:02 PM PDT
+Amazon AWS | EKS | Northern Virginia (US-EAST-1) | June 13th, 2023, 11:49 AM PDT | Approximately 4 hours and 48 minutes | Degraded Lambda function invocations | 11:49 AM - 3:37 PM PDT | June 13th, 2023, 3:37 PM PDT
+Amazon AWS | Connect | Northern Virginia (US-EAST-1) | June 13th, 2023, 11:49 AM PDT | Approximately 4 hours and 48 minutes | Degraded Lambda function invocations | 11:49 AM - 1:40 PM PDT | June 13th, 2023, 1:40 PM PDT
+Amazon AWS | EventBridge | Northern Virginia (US-EAST-1) | June 13th, 2023, 11:49 AM PDT | Approximately 4 hours and 48 minutes | Degraded Lambda function invocations | 11:49 AM - 3:37 PM PDT | June 13th, 2023, 3:37 PM PDT
+Amazon AWS | Support Center | Northern Virginia (US-EAST-1) | June 13th, 2023, 11:49 AM PDT | Approximately 4 hours and 48 minutes | Degraded Lambda function invocations | 11:49 AM - 2:38 PM PDT | June 13th, 2023, 2:38 PM PDT

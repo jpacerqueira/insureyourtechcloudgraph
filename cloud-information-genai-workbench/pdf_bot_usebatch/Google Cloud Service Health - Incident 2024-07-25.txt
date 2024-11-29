@@ -1,52 +1,45 @@
-I can only apply the query to Google Cloud Provider as per the given text.
+After analyzing the text, I found that the following cloud providers were impacted:
 
-**Google Cloud Provider Outage Details**
+* Google Cloud
+* VMware Engine (part of Google Cloud)
 
-**VMware Engine Service**
+The following services were impacted:
 
-* Services Impacted: VMware Engine
-* Regions/Availability Zones: Tokyo (asia-northeast1), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Sydney (australia-southeast1), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Tel Aviv (me-west1), Montréal (northamerica-northeast1), Toronto (northamerica-northeast2), São Paulo (southamerica-east1), Santiago (southamerica-west1), Iowa (us-central1), Northern Virginia (us-east4), Los Angeles (us-west2)
-* Outage Start Date: 2024-07-25 09:15
-* Duration: 13 hours and 23 minutes
-* Downtime Period: 2024-07-25 14:30 - 2024-07-25 14:45
+* Google Compute Engine
+* VMware Engine
+
+Here is the breakdown of the outage per service impacted:
+
+**Google Compute Engine**
+
+* Region/Availability Zone: Tokyo (asia-northeast1), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Sydney (australia-southeast1), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Tel Aviv (me-west1), Montréal (northamerica-northeast1), Toronto (northamerica-northeast2), São Paulo (southamerica-east1), Santiago (southamerica-west1), Iowa (us-central1), Northern Virginia (us-east4), Los Angeles (us-west2)
+* Impact Date: 2024-07-25 09:15
+* Duration: 19 hours and 23 minutes
 * Root Cause: Mitigation work is currently underway by our engineering team.
-* Resolved Date: 2024-07-25 14:38
+* Downtime Period: Thursday, 2024-07-25 14:30 - Thursday, 2024-07-25 14:45
+* Resolved Date: Thursday, 2024-07-25 14:38
 
-**Google Cloud Console**
+**VMware Engine**
 
-* Services Impacted: Google Cloud Console
-* Regions/Availability Zones: All regions
-* Outage Start Date: 2024-07-25 12:34
-* Duration: 2 hours and 4 minutes
-* Downtime Period: 2024-07-25 14:30 - 2024-07-25 15:15
-* Root Cause: Customers may be unable to access the landing page reference link to VMware Engine in Cloud Console.
-* Resolved Date: 2024-07-25 14:38
-
-**Google Cloud VMware Engine Landing Page**
-
-* Services Impacted: Google Cloud VMware Engine Landing Page
-* Regions/Availability Zones: All regions
-* Outage Start Date: 2024-07-25 12:34
-* Duration: 2 hours and 4 minutes
-* Downtime Period: 2024-07-25 14:30 - 2024-07-25 15:15
+* Region/Availability Zone: Tokyo (asia-northeast1), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Sydney (australia-southeast1), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Tel Aviv (me-west1), Montréal (northamerica-northeast1), Toronto (northamerica-northeast2), São Paulo (southamerica-east1), Santiago (southamerica-west1), Iowa (us-central1), Northern Virginia (us-east4), Los Angeles (us-west2)
+* Impact Date: 2024-07-25 09:15
+* Duration: 19 hours and 23 minutes
 * Root Cause: Mitigation work is currently underway by our engineering team.
-* Resolved Date: 2024-07-25 14:38
+* Downtime Period: Thursday, 2024-07-25 14:30 - Thursday, 2024-07-25 14:45
+* Resolved Date: Thursday, 2024-07-25 14:38
 
-**Overall Summary**
+Here is the output table:
 
-Google Cloud Provider was impacted by two outages:
+Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+Google Cloud | Google Compute Engine | Tokyo (asia-northeast1), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Sydney (australia-southeast1), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Tel Aviv (me-west1), Montréal (northamerica-northeast1), Toronto (northamerica-northeast2), São Paulo (southamerica-east1), Santiago (southamerica-west1), Iowa (us-central1), Northern Virginia (us-east4), Los Angeles (us-west2) | 2024-07-25 09:15 | 19 hours and 23 minutes | Mitigation work is currently underway by our engineering team. | Thursday, 2024-07-25 14:30 - Thursday, 2024-07-25 14:45 | Thursday, 2024-07-25 14:38
+Google Cloud | VMware Engine | Tokyo (asia-northeast1), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Sydney (australia-southeast1), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Tel Aviv (me-west1), Montréal (northamerica-northeast1), Toronto (northamerica-northeast2), São Paulo (southamerica-east1), Santiago (southamerica-west1), Iowa (us-central1), Northern Virginia (us-east4), Los Angeles (us-west2) | 2024-07-25 09:15 | 19 hours and 23 minutes | Mitigation work is currently underway by our engineering team. | Thursday, 2024-07-25 14:30 - Thursday, 2024-07-25 14:45 | Thursday, 2024-07-25 14:38
 
-1. VMware Engine Service outage:
-	* Services Impacted: VMware Engine
-	* Regions/Availability Zones: Multiple regions and availability zones
-	* Outage Start Date: 2024-07-25 09:15
-	* Duration: 13 hours and 23 minutes
-	* Downtime Period: 2024-07-25 14:30 - 2024-07-25 14:45
-2. Google Cloud Console outage:
-	* Services Impacted: Google Cloud Console
-	* Regions/Availability Zones: All regions
-	* Outage Start Date: 2024-07-25 12:34
-	* Duration: 2 hours and 4 minutes
-	* Downtime Period: 2024-07-25 14:30 - 2024-07-25 15:15
+Overall summary:
 
-Note that the other cloud providers mentioned in the original text (Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) were not impacted by any outages.
+* Cloud Providers impacted: Google Cloud
+* Services impacted: Google Compute Engine, VMware Engine
+* Regions and Availability Zones impacted: Tokyo (asia-northeast1), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Sydney (australia-southeast1), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Tel Aviv (me-west1), Montréal (northamerica-northeast1), Toronto (northamerica-northeast2), São Paulo (southamerica-east1), Santiago (southamerica-west1), Iowa (us-central1), Northern Virginia (us-east4), Los Angeles (us-west2)
+* Impact Dates: 2024-07-25
+* Duration: 19 hours and 23 minutes
+
+Note: The outage was caused by mitigation work being underway by the engineering team, but the root cause is not explicitly stated in the text.
