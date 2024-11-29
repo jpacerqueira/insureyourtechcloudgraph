@@ -592,7 +592,10 @@ service_full_names = {
         "EMRS": "Amazon EMR Serverless",
         "FS": "Amazon FinSpace",
         "GL": "Amazon AWS Glue",
-        "S3": "Amazon S3"
+        "RDS": "Amazon AWS RDS",
+        "rds": "Amazon AWS RDS",
+        "s3": "Amazon s3",
+        "S3": "Amazon s3"
     },
     "GCP": {
         "VAI": "Google Cloud VertexAI",
