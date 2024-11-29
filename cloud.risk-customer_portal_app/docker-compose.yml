@@ -33,7 +33,7 @@ services:
       - 17473:7473
       - 17687:7687 
     volumes:
-      - ./neo4_data:/data
+      - ./neo4j_data:/data
       - ./neo4j_customer_submission:/var/lib/neo4j/import
     environment:
       - NEO4J_AUTH=${NEO4J_USERNAME-neo4j}/${NEO4J_PASSWORD-password}
