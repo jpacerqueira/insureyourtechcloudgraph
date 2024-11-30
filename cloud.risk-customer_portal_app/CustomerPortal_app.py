@@ -485,13 +485,12 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                 if outage_data:
                     # Create a DataFrame for the outage data
                     df_outages = pd.DataFrame(outage_data)
-
+                    # Display the outage data in a table
+                    st.write(f"Outage details for {service}:")
+                    st.dataframe(df_outages)
                     # Display a chart for the outages
                     # Follow chronological order with outage_timestamp
                     st.line_chart(df_outages['outage_timestamp'], use_container_width=True)  # Example chart
-
-                    st.write(f"Outage details for {service}:")
-                    st.dataframe(df_outages)  # Display the outage data in a table
 
     else:
         st.warning("Please fill in all required fields")

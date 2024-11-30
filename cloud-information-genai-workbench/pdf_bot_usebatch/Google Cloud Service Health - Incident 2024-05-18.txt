@@ -1,0 +1,23 @@
+Based on the provided text, I will apply the query to the following cloud providers: Google GCP and Microsoft Azure.
+
+**Google GCP**
+
+* Service: Google Cloud Tasks
+* Region/Availability Zone: us-east1
+* Impact Date: 2024-05-18 07:44 US/Pacific
+* Duration: 2 hours 24 minutes
+* Root Cause: Increased latency for create task calls in us-east1 region
+* Downtime Period: 2024-05-18 09:52 - 2024-05-18 11:08
+* Resolved Date: 2024-05-18 10:36 US/Pacific
+
+**Microsoft Azure**
+
+No information is available for Microsoft Azure in the provided text.
+
+**Summary of impacted cloud providers, services, regions, availability zones, and duration**
+
+Google GCP was impacted by Google Cloud Tasks in us-east1 region. The outage started on May 18, 2024, at 07:44 US/Pacific and lasted for 2 hours and 24 minutes. The downtime period was from May 18, 2024, at 09:52 to May 18, 2024, at 11:08.
+
+**Output table**
+
+Google GCP | Google Cloud Tasks | us-east1 | 2024-05-18 07:44 US/Pacific | 2 hours 24 minutes | Increased latency for create task calls in us-east1 region | 2024-05-18 09:52 - 2024-05-18 11:08 | 2024-05-18 10:36 US/Pacific
