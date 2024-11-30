@@ -29,4 +29,5 @@ information/pdf-outages/*.pdf
 images/.DS_Store
 ./*/images/.DS_Store
 ./*/*/images/.DS_Store
+cloud.risk-customer_portal_app/neo4j_data/**
 cloud.risk-customer_portal_app/neo4_data/**

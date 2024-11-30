@@ -1,151 +1,74 @@
 
-CREATE (cust_Minhaj_Mobeen_Company_of_AI___B2B___Comparisson:CUSTOMER_NAME {
-    name: 'Minhaj Mobeen Company of AI - B2B - Comparisson',
-    project_name: 'Project by Minhaj Mobeen Company of AI - B2B - Comparisson',
-    median_sla_usage_percentage: '152.21%',
-    median_sla_deviation_risk: '996.22',
-    median_traffic_coefficient: '0.08%',
-    median_usage_risk: '996.72',
+CREATE (cust_Fuel_DataScience_BigData_Limited:CUSTOMER_NAME {
+    name: 'Fuel DataScience BigData Limited',
+    project_name: 'Project by Fuel DataScience BigData Limited',
+    median_sla_usage_percentage: '175.51%',
+    median_sla_deviation_risk: '995.87',
+    median_traffic_coefficient: '0.09%',
+    median_usage_risk: '996.37',
     median_service_sla: '99.95%',
-    median_annual_downtime: '400.00'
+    median_annual_downtime: '461.00'
     })
+CREATE (Akamai:TECHNOLOGY_PROVIDER {
+                    name: 'Akamai',
+                    vendor_median_sla_usage_percentage: '8561.64%',
+                    vendor_median_sla_deviation_risk: '913.46',
+                    vendor_median_traffic_coefficient: '0.00%',
+                    vendor_median_usage_risk: '998.97',
+                    vendor_median_service_sla: '100.00%',
+                    vendor_median_annual_downtime: '4.50'
+                })
+CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
+                    name: 'Microsoft Azure',
+                    vendor_median_sla_usage_percentage: '13829.39%',
+                    vendor_median_sla_deviation_risk: '846.93',
+                    vendor_median_traffic_coefficient: '0.35%',
+                    vendor_median_usage_risk: '967.92',
+                    vendor_median_service_sla: '99.99%',
+                    vendor_median_annual_downtime: '7268.00'
+                })
 CREATE (Google_Cloud_GCP:TECHNOLOGY_PROVIDER {
                     name: 'Google Cloud GCP',
-                    vendor_median_sla_usage_percentage: '152.21%',
-                    vendor_median_sla_deviation_risk: '996.68',
-                    vendor_median_traffic_coefficient: '0.08%',
-                    vendor_median_usage_risk: '997.17',
+                    vendor_median_sla_usage_percentage: '175.51%',
+                    vendor_median_sla_deviation_risk: '995.87',
+                    vendor_median_traffic_coefficient: '0.09%',
+                    vendor_median_usage_risk: '996.37',
                     vendor_median_service_sla: '99.95%',
-                    vendor_median_annual_downtime: '400.00'
+                    vendor_median_annual_downtime: '461.00'
                 })
 CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
                     name: 'Amazon AWS',
-                    vendor_median_sla_usage_percentage: '218.80%',
-                    vendor_median_sla_deviation_risk: '995.22',
-                    vendor_median_traffic_coefficient: '0.11%',
-                    vendor_median_usage_risk: '995.72',
+                    vendor_median_sla_usage_percentage: '156.47%',
+                    vendor_median_sla_deviation_risk: '996.16',
+                    vendor_median_traffic_coefficient: '0.08%',
+                    vendor_median_usage_risk: '996.66',
                     vendor_median_service_sla: '99.95%',
-                    vendor_median_annual_downtime: '575.00'
+                    vendor_median_annual_downtime: '411.00'
                 })
 
-CREATE (Amazon_API_Gateway:TECHNOLOGY_SERVICE {
-    name: 'Amazon API Gateway',
-    sla_usage: '919.71%',
-    sla_deviation_risk: '984.719',
-    traffic_coefficient: '0.45986%',
-    usage_risk: '985.218',
-    annual_downtime_minutes: '2417.00',
+CREATE (Amazon_Elastic_Compute_Cloud:TECHNOLOGY_SERVICE {
+    name: 'Amazon Elastic Compute Cloud',
+    sla_usage: '156.47%',
+    sla_deviation_risk: '996.156',
+    traffic_coefficient: '0.07820%',
+    usage_risk: '996.656',
+    annual_downtime_minutes: '411.00',
     service_sla_tier1: '99.95000',
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Minhaj_Mobeen_Company_of_AI___B2B___Comparisson)-[:CUSTOMER_USES_SERVICE]->(Amazon_API_Gateway)
+CREATE (cust_Fuel_DataScience_BigData_Limited)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Compute_Cloud)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '919.71%',
-    sla_deviation_risk: '984.719',
-    traffic_coefficient: '0.45986%',
-    usage_risk: '985.218'
-}]->(Amazon_API_Gateway)
+    sla_usage: '156.47%',
+    sla_deviation_risk: '996.156',
+    traffic_coefficient: '0.07820%',
+    usage_risk: '996.656'
+}]->(Amazon_Elastic_Compute_Cloud)
 
-CREATE (Amazon_Bedrock:TECHNOLOGY_SERVICE {
-    name: 'Amazon Bedrock',
-    sla_usage: '152.21%',
-    sla_deviation_risk: '996.220',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719',
-    annual_downtime_minutes: '400',
-    service_sla_tier1: '99.95000',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Minhaj_Mobeen_Company_of_AI___B2B___Comparisson)-[:CUSTOMER_USES_SERVICE]->(Amazon_Bedrock)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '152.21%',
-    sla_deviation_risk: '996.220',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719'
-}]->(Amazon_Bedrock)
-
-CREATE (Amazon_AWS_RDS:TECHNOLOGY_SERVICE {
-    name: 'Amazon AWS RDS',
-    sla_usage: '218.80%',
-    sla_deviation_risk: '995.222',
-    traffic_coefficient: '0.10940%',
-    usage_risk: '995.721',
-    annual_downtime_minutes: '575.00',
-    service_sla_tier1: '99.95000',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Minhaj_Mobeen_Company_of_AI___B2B___Comparisson)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_RDS)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '218.80%',
-    sla_deviation_risk: '995.222',
-    traffic_coefficient: '0.10940%',
-    usage_risk: '995.721'
-}]->(Amazon_AWS_RDS)
-
-CREATE (Amazon_Elastic_MapReduce:TECHNOLOGY_SERVICE {
-    name: 'Amazon Elastic MapReduce',
-    sla_usage: '250.00%',
-    sla_deviation_risk: '994.754',
-    traffic_coefficient: '0.12500%',
-    usage_risk: '995.254',
-    annual_downtime_minutes: '657.00',
-    service_sla_tier1: '99.95000',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Minhaj_Mobeen_Company_of_AI___B2B___Comparisson)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_MapReduce)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '250.00%',
-    sla_deviation_risk: '994.754',
-    traffic_coefficient: '0.12500%',
-    usage_risk: '995.254'
-}]->(Amazon_Elastic_MapReduce)
-
-CREATE (Amazon_s3:TECHNOLOGY_SERVICE {
-    name: 'Amazon s3',
-    sla_usage: '136.99%',
-    sla_deviation_risk: '996.448',
-    traffic_coefficient: '0.06849%',
-    usage_risk: '996.947',
-    annual_downtime_minutes: '360.00',
-    service_sla_tier1: '99.95000',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Minhaj_Mobeen_Company_of_AI___B2B___Comparisson)-[:CUSTOMER_USES_SERVICE]->(Amazon_s3)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '136.99%',
-    sla_deviation_risk: '996.448',
-    traffic_coefficient: '0.06849%',
-    usage_risk: '996.947'
-}]->(Amazon_s3)
-
-CREATE (Google_Cloud_VertexAI:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud VertexAI',
-    sla_usage: '152.21%',
-    sla_deviation_risk: '996.220',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719',
-    annual_downtime_minutes: '400',
-    service_sla_tier1: '99.95000',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Minhaj_Mobeen_Company_of_AI___B2B___Comparisson)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_VertexAI)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '152.21%',
-    sla_deviation_risk: '996.220',
-    traffic_coefficient: '0.07610%',
-    usage_risk: '996.719'
-}]->(Google_Cloud_VertexAI)
-
-CREATE (Google_Cloud_SQL:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud SQL',
-    sla_usage: '175.42%',
-    sla_deviation_risk: '995.872',
+CREATE (Google_Cloud_BigQuery:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud BigQuery',
+    sla_usage: '175.51%',
+    sla_deviation_risk: '995.871',
     traffic_coefficient: '0.08771%',
     usage_risk: '996.371',
     annual_downtime_minutes: '461.00',
@@ -153,48 +76,67 @@ CREATE (Google_Cloud_SQL:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Minhaj_Mobeen_Company_of_AI___B2B___Comparisson)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_SQL)
+CREATE (cust_Fuel_DataScience_BigData_Limited)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_BigQuery)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '175.42%',
-    sla_deviation_risk: '995.872',
+    sla_usage: '175.51%',
+    sla_deviation_risk: '995.871',
+    traffic_coefficient: '0.08771%',
+    usage_risk: '996.371'
+}]->(Google_Cloud_BigQuery)
+
+CREATE (Azure_PowerBI:TECHNOLOGY_SERVICE {
+    name: 'Azure PowerBI',
+    sla_usage: '13829.39%',
+    sla_deviation_risk: '846.929',
+    traffic_coefficient: '0.34570%',
+    usage_risk: '967.917',
+    annual_downtime_minutes: '7268.00',
+    service_sla_tier1: '99.99000',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Fuel_DataScience_BigData_Limited)-[:CUSTOMER_USES_SERVICE]->(Azure_PowerBI)
+CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
+    sla_usage: '13829.39%',
+    sla_deviation_risk: '846.929',
+    traffic_coefficient: '0.34570%',
+    usage_risk: '967.917'
+}]->(Azure_PowerBI)
+
+CREATE (CDN_Akamai:TECHNOLOGY_SERVICE {
+    name: 'CDN Akamai',
+    sla_usage: '8561.64%',
+    sla_deviation_risk: '913.461',
+    traffic_coefficient: '0.00086%',
+    usage_risk: '998.974',
+    annual_downtime_minutes: '4.50',
+    service_sla_tier1: '99.99999',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Fuel_DataScience_BigData_Limited)-[:CUSTOMER_USES_SERVICE]->(CDN_Akamai)
+CREATE (Akamai)-[:CONNECTED_RISK {
+    sla_usage: '8561.64%',
+    sla_deviation_risk: '913.461',
+    traffic_coefficient: '0.00086%',
+    usage_risk: '998.974'
+}]->(CDN_Akamai)
+
+CREATE (Google_Cloud_SQL:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud SQL',
+    sla_usage: '175.51%',
+    sla_deviation_risk: '995.871',
+    traffic_coefficient: '0.08771%',
+    usage_risk: '996.371',
+    annual_downtime_minutes: '461.00',
+    service_sla_tier1: '99.95000',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Fuel_DataScience_BigData_Limited)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_SQL)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '175.51%',
+    sla_deviation_risk: '995.871',
     traffic_coefficient: '0.08771%',
     usage_risk: '996.371'
 }]->(Google_Cloud_SQL)
-
-CREATE (Google_Cloud_Dataproc:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud Dataproc',
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175',
-    annual_downtime_minutes: '320.00',
-    service_sla_tier1: '99.95000',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Minhaj_Mobeen_Company_of_AI___B2B___Comparisson)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Dataproc)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175'
-}]->(Google_Cloud_Dataproc)
-
-CREATE (Google_Cloud_Storage:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud Storage',
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175',
-    annual_downtime_minutes: '320.00',
-    service_sla_tier1: '99.95000',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Minhaj_Mobeen_Company_of_AI___B2B___Comparisson)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Storage)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '121.77%',
-    sla_deviation_risk: '996.676',
-    traffic_coefficient: '0.06088%',
-    usage_risk: '997.175'
-}]->(Google_Cloud_Storage)

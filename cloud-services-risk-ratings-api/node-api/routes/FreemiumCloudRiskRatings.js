@@ -41,7 +41,7 @@ router.get('/freemium/fetch/service/id/:id', async function (req, res, next) {
             service_sla_0_99_9999_for_tier1, service_sla_0_99_9999_for_tier2, service_sla_0_99_9999_for_tier3, service_sla_0_99_9999_for_tier4,
             percentage_service_credit_back_tier1, percentage_service_credit_back_tier2, percentage_service_credit_back_tier3, percentage_service_credit_back_tier4,
             expected_annual_service_minutes_down,
-            webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
+            webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_inside_agreed_sla_tier1,
             actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage, service_traffic_coef_by_percent_down,
             sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, annual_outage_time_days_hours_mins, remarks_outage_genai 
                FROM "${process.env.DB_NAME}".service_risk_ratings WHERE database_key_id = '${id}'`
@@ -76,7 +76,7 @@ router.get('/freemium/fetch/service/service_provider/:service_provider', async f
             service_sla_0_99_9999_for_tier1, service_sla_0_99_9999_for_tier2, service_sla_0_99_9999_for_tier3, service_sla_0_99_9999_for_tier4,
             percentage_service_credit_back_tier1, percentage_service_credit_back_tier2, percentage_service_credit_back_tier3, percentage_service_credit_back_tier4,
             expected_annual_service_minutes_down,
-            webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
+            webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_inside_agreed_sla_tier1,
             actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage, service_traffic_coef_by_percent_down,
             sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, annual_outage_time_days_hours_mins, remarks_outage_genai  
             FROM "${process.env.DB_NAME}".service_risk_ratings WHERE service_provider = '${service_provider}'`
@@ -111,7 +111,7 @@ router.get('/freemium/fetch/service/service_name/:service_name', async function 
             service_sla_0_99_9999_for_tier1, service_sla_0_99_9999_for_tier2, service_sla_0_99_9999_for_tier3, service_sla_0_99_9999_for_tier4,
             percentage_service_credit_back_tier1, percentage_service_credit_back_tier2, percentage_service_credit_back_tier3, percentage_service_credit_back_tier4, 
             expected_annual_service_minutes_down,
-            webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
+            webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_inside_agreed_sla_tier1,
             actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage, service_traffic_coef_by_percent_down,
             sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, annual_outage_time_days_hours_mins, remarks_outage_genai 
             FROM "${process.env.DB_NAME}".service_risk_ratings WHERE service_name = '${service_name}'`
@@ -151,7 +151,7 @@ router.get('/freemium/fetch/service/service_name/:service_name/global_or_by_regi
             service_sla_0_99_9999_for_tier1, service_sla_0_99_9999_for_tier2, service_sla_0_99_9999_for_tier3, service_sla_0_99_9999_for_tier4,
             percentage_service_credit_back_tier1, percentage_service_credit_back_tier2, percentage_service_credit_back_tier3, percentage_service_credit_back_tier4,
             expected_annual_service_minutes_down,
-            webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_on_agreed_sla,
+            webscraper_annual_period_service_down_per_year_in_minutes, expected_percentage_mins_down_inside_agreed_sla_tier1,
             actual_percentage_total_mins_down_from_webscraping, service_sla_usage_percentage, service_traffic_coef_by_percent_down,
             sla_deviation_connected_risk_0_999, usage_connected_risk_0_999, annual_outage_time_days_hours_mins, remarks_outage_genai 
             FROM "${process.env.DB_NAME}".service_risk_ratings WHERE service_name = '${service_name}' AND global_or_by_regions = '${global_or_by_regions}'`
@@ -180,8 +180,10 @@ router.get('/freemium/outages/list/all', async function (req, res) {
     let connection;
     try {
         connection = await db.connect();
+        // outage_timestamp >= 1704067200 = > 01.Jan.2024 0h00
         const result = await connection.query(
-            `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries`
+            `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries
+            WHERE outage_timestamp >= 1704067200`
         );
         
         const rows = Array.isArray(result) ? result[0] : result.rows;
@@ -207,9 +209,10 @@ router.get('/freemium/outages/provider/:provider', async function (req, res) {
     try {
         connection = await db.connect();
         const provider = req.params.provider;
+        // outage_timestamp >= 1704067200 = > 01.Jan.2024 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
-             WHERE cloud_provider = $1`,
+             WHERE outage_timestamp >= 1704067200 AND cloud_provider = $1`,
             [provider]
         );
         
@@ -236,9 +239,10 @@ router.get('/freemium/outages/service/:service', async function (req, res) {
     try {
         connection = await db.connect();
         const service = req.params.service;
+        // outage_timestamp >= 1704067200 = > 01.Jan.2024 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
-             WHERE cloud_service = $1`,
+             WHERE outage_timestamp >= 1704067200 AND cloud_service = $1`,
             [service]
         );
         
@@ -265,9 +269,10 @@ router.get('/freemium/outages/region/:region', async function (req, res) {
     try {
         connection = await db.connect();
         const region = req.params.region;
+        // outage_timestamp >= 1704067200 = > 01.Jan.2024 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
-             WHERE regions LIKE $1`,
+             WHERE outage_timestamp >= 1704067200 AND regions LIKE $1`,
             [`%${region}%`]
         );
         
