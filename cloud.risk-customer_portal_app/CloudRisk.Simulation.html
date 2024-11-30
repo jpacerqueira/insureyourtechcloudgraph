@@ -685,7 +685,7 @@
         const ctx = document.createElement('canvas');
         document.getElementById('outageChartContainer').appendChild(ctx);
 
-        const labels = outageData.map(outage => new Date(outage.outage_timestamp).toLocaleString());
+        const labels = outageData.map(outage => outage.start_time);
         const data = outageData.map(outage => outage.outage_duration);
 
         new Chart(ctx, {
