@@ -245,6 +245,21 @@ Downtime Period: 19:10 - 21:32 UTC
 
 ---
 
+Source Outage Report: Azure_status_history_Microsoft_Azure_p13_2019
+Cloud Provider: Azure
+Cloud Services: Azure Databricks, Azure Functions, Azure Functions, AzurE CDN, Azure CDN
+Regions: 
+Availability Zones: Not specified
+Outage Status: resolved
+Impact Level: 
+Duration: 4 hours
+Root Cause: Azure CDN providers use staged deployment processes to deploy configuration changes across the network.
+Resolution: 
+Downtime Period: Yes
+Affected Components: Microsoft Azure
+
+---
+
 Source Outage Report: Azure_status_history_Microsoft_Azure_p1_2024
 Cloud Provider: Azure
 Cloud Services: Azure SQL Database, Azure Functions, Azure Functions, Azure Functions, Content Delivery Network
@@ -884,6 +899,20 @@ Downtime Period: N/A (resolved before downtime period was tracked)
 
 ---
 
+Source Outage Report: Google Cloud Service Health - Incident report 2024-07-11
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, ds
+Regions: eu, Warsaw (europe-central2), Finland (europe-north1), Madrid (europe-southwest1), Belgium (europe-west1), Berlin (europe-west10), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Paris (europe-west9), Doha (me-central1), Dammam (me-central2), Tel Aviv (me-west1), eu, Warsaw (europe-central2), Finland (europe-north1), Madrid (europe-southwest1), Belgium (europe-west1), Berlin (europe-west10), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Paris (europe-west9), Doha (me-central1), Dammam (me-central2), Tel Aviv (me-west1), us, Iowa (us-central1), South Carolina (us-east1), Northern Virginia (us-east4), Columbus (us-east5), Dallas (us-south1), Oregon (us-west1), Los Angeles (us-west2), Salt Lake City (us-west3), Las Vegas (us-west4), eu | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific, multiple, Tokyo, Seoul, Singapore, Sydney, London, Frankfurt, Paris, Northern Virginia
+Availability Zones: Johannesburg (africa-south1), Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Osaka (asia-northeast2), Seoul (asia-northeast3), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Jakarta (asia-southeast2), Sydney (australia-southeast1), Melbourne (australia-southeast2)
+Outage Status: resolved
+Impact Level: 
+Duration: 7 days, 11 hours, 5 minutes
+Root Cause: Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system.
+Resolution: 
+Downtime Period: None at this time
+
+---
+
 Source Outage Report: Google Cloud Service Health - Incident report 2024-07-15
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Cloud SQL, Google Cloud Bigtable, bigtable, ds
@@ -1014,6 +1043,21 @@ Root Cause: Impaired traffic handling
 Resolution: 
 Downtime Period: Tuesday, 2024-10-08 12:15 US/Pacific to Tuesday, 2024-10-08 18:35 US/Pacific
 Affected Components: App Engine customers in us-central1 one may be experiencing an increase in HTTP 429 responses.
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-10-09
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: 
+Availability Zones: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, europe-central2, europe-west1, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central1, us-east1, us-east4, us-west1, us-west2, us-west3, us-west4
+Outage Status: resolved
+Impact Level: 
+Duration: 9 hours and 21 minutes (from 14:57 to 17:18)
+Root Cause: None at this time
+Resolution: 
+Downtime Period: 9 hours and 21 minutes
+Affected Components: Google Cloud VertexAI
 
 ---
 
@@ -1334,6 +1378,21 @@ Duration: 3 hours and 28 minutes
 Root Cause: Not specified
 Resolution: 
 Downtime Period: 7:55 AM - 11:23 AM PST (November 10, 2024)
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - - Incident 2024-10-25
+Cloud Provider: AWS
+Cloud Services: Amazon Elastic Compute Cloud, Direct Connect, Amazon QuickSight, rs
+Regions: ap-northeast-2, us-east-1, US-EAST-1
+Availability Zones: ap-northeast-2
+Outage Status: resolved
+Impact Level: 
+Duration: 1 hour and 33 minutes
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 7:55 AM - 9:28 AM (November 10, 2024)
+Affected Components: Amazon AWS RDS
 
 ---
 

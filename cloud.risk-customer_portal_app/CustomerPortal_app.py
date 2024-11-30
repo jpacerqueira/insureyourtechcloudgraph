@@ -487,7 +487,8 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                     df_outages = pd.DataFrame(outage_data)
 
                     # Display a chart for the outages
-                    st.line_chart(df_outages['outage_duration'], use_container_width=True)  # Example chart
+                    # Follow chronological order with outage_timestamp
+                    st.line_chart(df_outages['outage_timestamp'], use_container_width=True)  # Example chart
 
                     st.write(f"Outage details for {service}:")
                     st.dataframe(df_outages)  # Display the outage data in a table

@@ -686,6 +686,63 @@ Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | R
 Azure      | Platform  | South Central US     | 28 Feb 2020 | 2h 22m | Config change | 19:10 - 21:32 UTC | 22:28 UTC
 Azure      | Network Router | South Central US     | 28 Feb 2020 | 1h 44m | Update config | 20:40 - 22:24 UTC | 00:53 UTC on 29 Feb 2020  
 --
+Outage Filename: ./Azure_status_history_Microsoft_Azure_p13_2019.txt
+--
+After analyzing the text, I found that the following cloud providers were impacted:
+
+* Microsoft Azure
+* Verizon (not a traditional cloud provider but used as an ISP)
+* Akamai (used as a CDN)
+
+Here is the information about each outage, broken down by service and cloud provider:
+
+**Microsoft Azure**
+
+* Service: AzurE CDN
+* Region/Availability Zone: Not specified
+* Impact Date: Between 17:24 and 18:48 UTC on December 11, 2019
+* Duration: 4 hours
+* Root Cause: Azure CDN providers use staged deployment processes to deploy configuration changes across the network.
+* Downtime Period: Yes
+* Resolved Date: Not specified
+
+**Verizon**
+
+* Service: Verizon endpoints
+* Region/Availability Zone: Not specified
+* Impact Date: Between 17:24 and 18:48 UTC on December 11, 2019
+* Duration: 4 hours
+* Root Cause: Staged deployment processes used by Azure CDN providers affected the network.
+* Downtime Period: Yes
+* Resolved Date: Not specified
+
+**Akamai**
+
+* Service: Akamai CDN
+* Region/Availability Zone: Not specified
+* Impact Date: Between 09:45 and 16:26 UTC on December 12, 2019
+* Duration: 6 hours and 41 minutes
+* Root Cause: Routing protocol metric change within an ISP backbone network affected the network.
+* Downtime Period: Yes
+* Resolved Date: Not specified
+
+Here is the output in a table format:
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | AzurE CDN |  | Between 17:24 and 18:48 UTC on December 11, 2019 | 4 hours | Staged deployment processes used by Azure CDN providers affected the network. | Yes | Not specified |
+| Verizon | Verizon endpoints |  | Between 17:24 and 18:48 UTC on December 11, 2019 | 4 hours | Staged deployment processes used by Azure CDN providers affected the network. | Yes | Not specified |
+| Akamai | Akamai CDN |  | Between 09:45 and 16:26 UTC on December 12, 2019 | 6 hours and 41 minutes | Routing protocol metric change within an ISP backbone network affected the network. | Yes | Not specified |
+
+Here is a summary of the cloud providers impacted:
+
+* Microsoft Azure: AzurE CDN experienced a 4-hour outage due to staged deployment processes used by Azure CDN providers.
+* Verizon: Verizon endpoints experienced a 4-hour outage due to staged deployment processes used by Azure CDN providers.
+
+There were two outages reported, one on December 11, 2019, and another on December 12, 2019. The root cause of the first outage was related to staged deployment processes used by Azure CDN providers, while the second outage was caused by a routing protocol metric change within an ISP backbone network.
+
+Note that Snowflake, Google GCP, Oracle OCI, IBM Cloud, Databricks, MongoDB, and Akamai were not mentioned in the original text.  
+--
 Outage Filename: ./Azure_status_history_Microsoft_Azure_p1_2024.txt
 --
 After analyzing the text, I have identified the following cloud providers and their respective outages:
@@ -4606,6 +4663,82 @@ Root Cause: Concurrent mitigation of simultaneous degradations, which impacted t
 Downtime Period: Up to 2 hours for log ingestion delays
 Resolved Date: 2024-06-10 20:00  
 --
+Outage Filename: ./Google Cloud Service Health - Incident report 2024-07-11.txt
+--
+Here is the information about the outages for the specified cloud providers:
+
+**Google Cloud**
+
+* Service: BigQuery
+* Region/Availability Zone: Johannesburg (africa-south1), Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Osaka (asia-northeast2), Seoul (asia-northeast3), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Jakarta (asia-southeast2), Sydney (australia-southeast1), Melbourne (australia-southeast2)
+* Impact Date: 2024-07-11
+* Duration: 7 days, 11 hours, 5 minutes
+* Root Cause: Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system.
+* Downtime Period: None at this time
+* Resolved Date: 2024-07-17 11:05 US/Pacific
+
+**Google Cloud**
+
+* Service: BigQuery
+* Region/Availability Zone: Multi-region: eu, Warsaw (europe-central2), Finland (europe-north1), Madrid (europe-southwest1), Belgium (europe-west1), Berlin (europe-west10), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Paris (europe-west9), Doha (me-central1), Dammam (me-central2), Tel Aviv (me-west1)
+* Impact Date: 2024-07-11
+* Duration: 7 days, 11 hours, 5 minutes
+* Root Cause: Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system.
+* Downtime Period: None at this time
+* Resolved Date: 2024-07-17 11:05 US/Pacific
+
+**Google Cloud**
+
+* Service: BigQuery
+* Region/Availability Zone: Multi-region: us, Iowa (us-central1), South Carolina (us-east1), Northern Virginia (us-east4), Columbus (us-east5), Dallas (us-south1), Oregon (us-west1), Los Angeles (us-west2), Salt Lake City (us-west3), Las Vegas (us-west4)
+* Impact Date: 2024-07-11
+* Duration: 7 days, 11 hours, 5 minutes
+* Root Cause: Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system.
+* Downtime Period: None at this time
+* Resolved Date: 2024-07-17 11:05 US/Pacific
+
+**Summary**
+
+The outages affected Google Cloud services in multiple regions and availability zones. The root cause was configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. The outages lasted for 7 days, 11 hours, and 5 minutes.
+
+Here is a summary of the impacted dates and duration:
+
+* Impact Date: 2024-07-11
+* Duration: 7 days, 11 hours, 5 minutes
+
+**Output Table**
+
+Google Cloud | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-----------|--------|-----------------------|------------|----------|-------------|-----------------|-------------
+Google Cloud | BigQuery | Johannesburg (africa-south1) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Taiwan (asia-east1) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Hong Kong (asia-east2) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Tokyo (asia-northeast1) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Osaka (asia-northeast2) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Seoul (asia-northeast3) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Mumbai (asia-south1) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Delhi (asia-south2) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Singapore (asia-southeast1) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Jakarta (asia-southeast2) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Sydney (australia-southeast1) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Melbourne (australia-southeast2) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Multi-region: eu | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Warsaw (europe-central2) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Finland (europe-north1) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Madrid (europe-southwest1) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Belgium (europe-west1) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Berlin (europe-west10) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Turin (europe-west12) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | London (europe-west2) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Frankfurt (europe-west3) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Netherlands (europe-west4) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Zurich (europe-west6) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Milan (europe-west8) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Paris (europe-west9) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Doha (me-central1) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Dammam (me-central2) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific
+Google Cloud | BigQuery | Tel Aviv (me-west1) | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific  
+--
 Outage Filename: ./Google Cloud Service Health - Incident report 2024-07-15.txt
 --
 I can only apply the query to the cloud providers identified in the text, which are:
@@ -5414,6 +5547,44 @@ Here is the summary of the outage:
 * Root Cause: Impaired traffic handling
 * Downtime Period: Tuesday, 2024-10-08 12:15 US/Pacific to Tuesday, 2024-10-08 18:35 US/Pacific
 * Resolved Date: Tuesday, 2024-10-08 18:35 US/Pacific  
+--
+Outage Filename: ./Google Cloud Service Health - Incident report 2024-10-09.txt
+--
+Here is the breakdown of the outage per cloud provider:
+
+**Google Cloud**
+
+* Service: AppEngine Flexible
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, europe-central2, europe-west1, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central1, us-east1, us-east4, us-west1, us-west2, us-west3, us-west4
+* Impact Date: 2024-10-09 14:57
+* Duration: 9 hours and 21 minutes (from 14:57 to 17:18)
+* Root Cause: None at this time
+* Downtime Period: 9 hours and 21 minutes
+* Resolved Date: 2024-10-09 17:18
+
+**Google Cloud**
+
+* Service: AppEngine Flexible
+* Region/Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, europe-central2, europe-west1, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central1, us-east1, us-east4, us-west1, us-west2, us-west3, us-west4
+* Impact Date: 2024-10-09 18:27
+* Duration: 0 hours and 41 minutes (resolved)
+* Root Cause: The issue with Google AppEngine Flexible has been resolved for all affected users as of Wednesday, 2024-10-09 17:18 US/Pacific Time.
+* Downtime Period: 0 hours and 41 minutes
+* Resolved Date: 2024-10-09 17:18
+
+**Summary**
+
+Cloud Providers impacted: Google Cloud
+Services impacted: AppEngine Flexible
+Regions/Availability Zones impacted: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, europe-central2, europe-west1, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central1, us-east1, us-east4, us-west1, us-west2, us-west3, us-west4
+Impact Dates: 2024-10-09 14:57 and 2024-10-09 18:27
+Duration: 9 hours and 21 minutes
+
+**Output Table**
+
+Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+Google Cloud | AppEngine Flexible | asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, europe-central2, europe-west1, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central1, us-east1, us-east4, us-west1, us-west2, us-west3, us-west4 | 2024-10-09 14:57 | 9 hours and 21 minutes | None at this time | 9 hours and 21 minutes | 2024-10-09 17:18
+Google Cloud | AppEngine Flexible | asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, europe-central2, europe-west1, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central1, us-east1, us-east4, us-west1, us-west2, us-west3, us-west4 | 2024-10-09 18:27 | 0 hours and 41 minutes | The issue with Google AppEngine Flexible has been resolved for all affected users as of Wednesday, 2024-10-09 17:18 US/Pacific Time. | 0 hours and 41 minutes | 2024-10-09 17:18  
 --
 Outage Filename: ./Google Cloud Service Health - Incident report 2024-10-29.txt
 --
@@ -6973,6 +7144,62 @@ No data available.
 No data available.
 
 Note that the root cause of the issues is not specified in the provided information.  
+--
+Outage Filename: ./Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - - Incident 2024-10-25.txt
+--
+After analyzing the text, I found that the following cloud providers were impacted:
+
+* Amazon AWS
+* US East-1 (N. Virginia)
+
+The services impacted by these outages are as follows:
+
+**Amazon AWS**
+
+* Service: Amazon Elastic Compute Cloud [Increased API errors rates for mutatable VPC calls]
+	+ Region/Availability Zone: ap-northeast-2
+	+ Impact Date: November 10, 2024
+	+ Duration: 1 hour and 33 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 7:55 AM - 9:28 AM (November 10, 2024)
+	+ Resolved Date: Not specified
+* Service: AWS Billing Console [Increased Errors Performing Payments]
+	+ Region/Availability Zone: Not specified
+	+ Impact Date: November 6, 2024
+	+ Duration: 32 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 3:42 AM - 4:14 AM (November 6, 2024)
+	+ Resolved Date: Not specified
+
+**Amazon AWS**
+
+* Service: Amazon QuickSight [Increased Login Errors]
+	+ Region/Availability Zone: us-east-1
+	+ Impact Date: October 25, 2024
+	+ Duration: 48 minutes
+	+ Root Cause: IAM users that had authentication directories housed in US-EAST-1 were experiencing errors.
+	+ Downtime Period: 9:56 AM - 10:44 AM (October 25, 2024)
+	+ Resolved Date: 9:50 AM (October 25, 2024)
+
+Here is the output table:
+
+Amazon AWS | Amazon Elastic Compute Cloud | ap-northeast-2 | November 10, 2024 | 1 hour and 33 minutes | Not specified | 7:55 AM - 9:28 AM | 
+Amazon AWS | AWS Billing Console | Not specified | November 6, 2024 | 32 minutes | Not specified | 3:42 AM - 4:14 AM | 
+Amazon AWS | Amazon QuickSight | us-east-1 | October 25, 2024 | 48 minutes | IAM users that had authentication directories housed in US-EAST-1 were experiencing errors. | 9:56 AM - 10:44 AM | 9:50 AM 
+
+Overall Summary:
+
+* Cloud Providers impacted: Amazon AWS
+* Services impacted: Amazon Elastic Compute Cloud, AWS Billing Console, and Amazon QuickSight
+* Regions/Availability Zones impacted: ap-northeast-2 (Amazon Elastic Compute Cloud) and us-east-1 (Amazon QuickSight)
+* Impact Dates:
+	+ November 10, 2024 (Amazon Elastic Compute Cloud)
+	+ November 6, 2024 (AWS Billing Console)
+	+ October 25, 2024 (Amazon QuickSight)
+* Duration of outages:
+	+ Amazon Elastic Compute Cloud: 1 hour and 33 minutes
+	+ AWS Billing Console: 32 minutes
+	+ Amazon QuickSight: 48 minutes  
 --
 Outage Filename: ./Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2023-12-09.txt
 --

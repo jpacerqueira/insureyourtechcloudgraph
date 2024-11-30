@@ -26,7 +26,7 @@ elif [[ "$BUILD_METHOD" == "3" ]]; then
    docker volume rm -f cloud-services-risk-ratings-api_postgres_data
    echo "populate database"
    head -n 2000000 ../information/datamodel/cloud-risk-datamodel-services-above-sla-outage.csv > data/cloud_service_risk_ratings.csv
-   head -n 2000000 ../cloud-information-genai-workbench/pdf_bot_usebatch/outage_report_summary_20241129162715.csv > data/outage_report_summaries.csv
+   head -n 2000000 ../cloud-information-genai-workbench/pdf_bot_usebatch/outage_report_summary_20241130000258.csv > data/outage_report_summaries.csv
    docker compose up --build --force-recreate
 elif [[ "$BUILD_METHOD" == "4" ]]; then
    docker compose down
@@ -37,7 +37,7 @@ elif [[ "$BUILD_METHOD" == "4" ]]; then
    docker volume rm -f cloud-services-risk-ratings-api_postgres_data
    echo "populate database"
    head -n 2000000 ../information/datamodel/cloud-risk-datamodel-services-above-sla-outage.csv > data/cloud_service_risk_ratings.csv
-   head -n 2000000 ../cloud-information-genai-workbench/pdf_bot_usebatch/outage_report_summary_20241129162715.csv > data/outage_report_summaries.csv
+   head -n 2000000 ../cloud-information-genai-workbench/pdf_bot_usebatch/outage_report_summary_20241130000258.csv > data/outage_report_summaries.csv
    docker compose up -d --build --force-recreate > /dev/null 2>&1
    echo "Customer Backend API , built! Now, wait 10 seconds for the database to be ready."
 else

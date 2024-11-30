@@ -1,0 +1,54 @@
+After analyzing the text, I found that the following cloud providers were impacted:
+
+* Microsoft Azure
+* Verizon (not a traditional cloud provider but used as an ISP)
+* Akamai (used as a CDN)
+
+Here is the information about each outage, broken down by service and cloud provider:
+
+**Microsoft Azure**
+
+* Service: AzurE CDN
+* Region/Availability Zone: Not specified
+* Impact Date: Between 17:24 and 18:48 UTC on December 11, 2019
+* Duration: 4 hours
+* Root Cause: Azure CDN providers use staged deployment processes to deploy configuration changes across the network.
+* Downtime Period: Yes
+* Resolved Date: Not specified
+
+**Verizon**
+
+* Service: Verizon endpoints
+* Region/Availability Zone: Not specified
+* Impact Date: Between 17:24 and 18:48 UTC on December 11, 2019
+* Duration: 4 hours
+* Root Cause: Staged deployment processes used by Azure CDN providers affected the network.
+* Downtime Period: Yes
+* Resolved Date: Not specified
+
+**Akamai**
+
+* Service: Akamai CDN
+* Region/Availability Zone: Not specified
+* Impact Date: Between 09:45 and 16:26 UTC on December 12, 2019
+* Duration: 6 hours and 41 minutes
+* Root Cause: Routing protocol metric change within an ISP backbone network affected the network.
+* Downtime Period: Yes
+* Resolved Date: Not specified
+
+Here is the output in a table format:
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | AzurE CDN |  | Between 17:24 and 18:48 UTC on December 11, 2019 | 4 hours | Staged deployment processes used by Azure CDN providers affected the network. | Yes | Not specified |
+| Verizon | Verizon endpoints |  | Between 17:24 and 18:48 UTC on December 11, 2019 | 4 hours | Staged deployment processes used by Azure CDN providers affected the network. | Yes | Not specified |
+| Akamai | Akamai CDN |  | Between 09:45 and 16:26 UTC on December 12, 2019 | 6 hours and 41 minutes | Routing protocol metric change within an ISP backbone network affected the network. | Yes | Not specified |
+
+Here is a summary of the cloud providers impacted:
+
+* Microsoft Azure: AzurE CDN experienced a 4-hour outage due to staged deployment processes used by Azure CDN providers.
+* Verizon: Verizon endpoints experienced a 4-hour outage due to staged deployment processes used by Azure CDN providers.
+
+There were two outages reported, one on December 11, 2019, and another on December 12, 2019. The root cause of the first outage was related to staged deployment processes used by Azure CDN providers, while the second outage was caused by a routing protocol metric change within an ISP backbone network.
+
+Note that Snowflake, Google GCP, Oracle OCI, IBM Cloud, Databricks, MongoDB, and Akamai were not mentioned in the original text.

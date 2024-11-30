@@ -1,6 +1,6 @@
 import os
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, List, Optional
 import csv
 from time import time
@@ -818,7 +818,10 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
             if outage.start_time and isinstance(outage.start_time, datetime):
                 record_timestamp = outage.start_time.timestamp()
             else:
-                record_timestamp = time()  # Fallback to current time if no start_time
+                record_timestamp = time() # Fallback to time() if no start_time
+
+            default_startime = datetime(2024, 1, 1, 0, 0)
+            default_endtime = datetime(2024, 1, 1, 0, 0)
             
             # Create base row with common fields
             base_row = {
@@ -827,8 +830,8 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
                 'cloud_provider': clean_text(outage.cloud_provider),
                 'regions': clean_list(outage.regions),
                 'availability_zones': clean_list(outage.availability_zones),
-                'start_time': outage.start_time.isoformat() if outage.start_time else '',
-                'end_time': outage.end_time.isoformat() if outage.end_time else '',
+                'start_time': outage.start_time.isoformat() if outage.start_time else default_startime,
+                'end_time': outage.end_time.isoformat() if outage.end_time else default_endtime,
                 'outage_status': clean_text(outage.status),
                 'impact': clean_text(outage.impact),
                 'duration': clean_text(outage.duration),
