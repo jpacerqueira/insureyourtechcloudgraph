@@ -2,30 +2,21 @@
 CREATE (cust_Fuel_DataScience_BigData_Limited:CUSTOMER_NAME {
     name: 'Fuel DataScience BigData Limited',
     project_name: 'Project by Fuel DataScience BigData Limited',
-    median_sla_usage_percentage: '175.51%',
+    median_sla_usage_percentage: '4338.33%',
     median_sla_deviation_risk: '995.87',
-    median_traffic_coefficient: '0.09%',
+    median_traffic_coefficient: '0.43%',
     median_usage_risk: '996.37',
-    median_service_sla: '99.95%',
-    median_annual_downtime: '461.00'
+    median_service_sla: '99.99%',
+    median_annual_downtime: '2280.00'
     })
-CREATE (Akamai:TECHNOLOGY_PROVIDER {
-                    name: 'Akamai',
-                    vendor_median_sla_usage_percentage: '8561.64%',
-                    vendor_median_sla_deviation_risk: '913.46',
-                    vendor_median_traffic_coefficient: '0.00%',
-                    vendor_median_usage_risk: '998.97',
-                    vendor_median_service_sla: '100.00%',
-                    vendor_median_annual_downtime: '4.50'
-                })
 CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
                     name: 'Microsoft Azure',
-                    vendor_median_sla_usage_percentage: '13829.39%',
-                    vendor_median_sla_deviation_risk: '846.93',
-                    vendor_median_traffic_coefficient: '0.35%',
-                    vendor_median_usage_risk: '967.92',
+                    vendor_median_sla_usage_percentage: '4338.33%',
+                    vendor_median_sla_deviation_risk: '951.23',
+                    vendor_median_traffic_coefficient: '0.43%',
+                    vendor_median_usage_risk: '986.00',
                     vendor_median_service_sla: '99.99%',
-                    vendor_median_annual_downtime: '7268.00'
+                    vendor_median_annual_downtime: '2280.00'
                 })
 CREATE (Google_Cloud_GCP:TECHNOLOGY_PROVIDER {
                     name: 'Google Cloud GCP',
@@ -36,34 +27,6 @@ CREATE (Google_Cloud_GCP:TECHNOLOGY_PROVIDER {
                     vendor_median_service_sla: '99.95%',
                     vendor_median_annual_downtime: '461.00'
                 })
-CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
-                    name: 'Amazon AWS',
-                    vendor_median_sla_usage_percentage: '156.47%',
-                    vendor_median_sla_deviation_risk: '996.16',
-                    vendor_median_traffic_coefficient: '0.08%',
-                    vendor_median_usage_risk: '996.66',
-                    vendor_median_service_sla: '99.95%',
-                    vendor_median_annual_downtime: '411.00'
-                })
-
-CREATE (Amazon_Elastic_Compute_Cloud:TECHNOLOGY_SERVICE {
-    name: 'Amazon Elastic Compute Cloud',
-    sla_usage: '156.47%',
-    sla_deviation_risk: '996.156',
-    traffic_coefficient: '0.07820%',
-    usage_risk: '996.656',
-    annual_downtime_minutes: '411.00',
-    service_sla_tier1: '99.95000',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Fuel_DataScience_BigData_Limited)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Compute_Cloud)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '156.47%',
-    sla_deviation_risk: '996.156',
-    traffic_coefficient: '0.07820%',
-    usage_risk: '996.656'
-}]->(Amazon_Elastic_Compute_Cloud)
 
 CREATE (Google_Cloud_BigQuery:TECHNOLOGY_SERVICE {
     name: 'Google Cloud BigQuery',
@@ -84,59 +47,21 @@ CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     usage_risk: '996.371'
 }]->(Google_Cloud_BigQuery)
 
-CREATE (Azure_PowerBI:TECHNOLOGY_SERVICE {
-    name: 'Azure PowerBI',
-    sla_usage: '13829.39%',
-    sla_deviation_risk: '846.929',
-    traffic_coefficient: '0.34570%',
-    usage_risk: '967.917',
-    annual_downtime_minutes: '7268.00',
+CREATE (Azure_Batch:TECHNOLOGY_SERVICE {
+    name: 'Azure Batch',
+    sla_usage: '4338.33%',
+    sla_deviation_risk: '951.226',
+    traffic_coefficient: '0.43379%',
+    usage_risk: '985.999',
+    annual_downtime_minutes: '2280.00',
     service_sla_tier1: '99.99000',
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited)-[:CUSTOMER_USES_SERVICE]->(Azure_PowerBI)
+CREATE (cust_Fuel_DataScience_BigData_Limited)-[:CUSTOMER_USES_SERVICE]->(Azure_Batch)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
-    sla_usage: '13829.39%',
-    sla_deviation_risk: '846.929',
-    traffic_coefficient: '0.34570%',
-    usage_risk: '967.917'
-}]->(Azure_PowerBI)
-
-CREATE (CDN_Akamai:TECHNOLOGY_SERVICE {
-    name: 'CDN Akamai',
-    sla_usage: '8561.64%',
-    sla_deviation_risk: '913.461',
-    traffic_coefficient: '0.00086%',
-    usage_risk: '998.974',
-    annual_downtime_minutes: '4.50',
-    service_sla_tier1: '99.99999',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Fuel_DataScience_BigData_Limited)-[:CUSTOMER_USES_SERVICE]->(CDN_Akamai)
-CREATE (Akamai)-[:CONNECTED_RISK {
-    sla_usage: '8561.64%',
-    sla_deviation_risk: '913.461',
-    traffic_coefficient: '0.00086%',
-    usage_risk: '998.974'
-}]->(CDN_Akamai)
-
-CREATE (Google_Cloud_SQL:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud SQL',
-    sla_usage: '175.51%',
-    sla_deviation_risk: '995.871',
-    traffic_coefficient: '0.08771%',
-    usage_risk: '996.371',
-    annual_downtime_minutes: '461.00',
-    service_sla_tier1: '99.95000',
-    service_credit_back_tier1: '10.000'
-})
-
-CREATE (cust_Fuel_DataScience_BigData_Limited)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_SQL)
-CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
-    sla_usage: '175.51%',
-    sla_deviation_risk: '995.871',
-    traffic_coefficient: '0.08771%',
-    usage_risk: '996.371'
-}]->(Google_Cloud_SQL)
+    sla_usage: '4338.33%',
+    sla_deviation_risk: '951.226',
+    traffic_coefficient: '0.43379%',
+    usage_risk: '985.999'
+}]->(Azure_Batch)
