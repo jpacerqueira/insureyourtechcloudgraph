@@ -63,11 +63,13 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Amazon Direct Connect|Direct Connect|Direct Connect trac|DC)",
             # AI/ML Services
             r"(?i)(Amazon Bedrock|Bedrock|ABR)",
+            # Serverless Messaging
+            r"(?i)(Amazon Kinesis|Kinesis|AKN)",
             # CDN & DNS Services
             r"(?i)(Amazon CloudFront|CloudFront|CF)",
             r"(?i)(Amazon Route 53|Route 53|R53|DNS)",
             # Monitoring & Insights
-            r"(?i)(Amazon CloudWatch|CloudWatch|CW|CloudWatch Application Insights)",
+            r"(?i)(Amazon CloudWatch|CloudWatch|CW|CloudWatch Application Insights|CloudWatch Events and EventBridge)",
             r"(?i)(Amazon CodeGuru Profiler|CodeGuru|CGP)",
             # Data Services
             r"(?i)(Amazon DataZone|DataZone|ADZ)",
@@ -332,6 +334,12 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)Resolved:\s*(\w+\s+\d{1,2}(?:st|nd|rd|th)?,\s*\d{4}.*?(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
             r"(?i)Resolution\s+date:\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?\s*(?:UTC|PDT|PST|JST|CST))",
             r"(?i)Resolved at\s*:\s*([^\n]+)",
+        ],
+        "impact": [
+            r"(?i)Impact\s+Date:\s*([^\n]+)",
+            r"(?i)(\d{1,2}:\d{2}(?::\d{2})?\s*(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
+            r"(?i)(\w+ \d{1,2}(?:st|nd|rd|th)?,\s*\d{4}\s+at\s+\d{1,2}:\d{2}\s*(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
+            r"(?i)(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?\s*(?:UTC|PDT|PST|JST|CST))",
         ]
     }
     
@@ -385,6 +393,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         r"(?i)Outage\s+\d+:\s*[\s\S]*?Service impacted:\s*([^\n]+)[\s\S]*?Region:\s*([^\n]*)[\s\S]*?Availability Zone:\s*([^\n]*)[\s\S]*?Root cause:\s*([^\n]*)[\s\S]*?Duration:\s*([^\n]*)[\s\S]*?Start date:\s*([^\n]*)[\s\S]*?Downtime period:\s*([^\n]*)[\s\S]*?Resolution date:\s*([^\n]*)",
         r"(?i)Outage\s+\d+:\s*[\s\S]*?Service affected:\s*([^\n]+)[\s\S]*?Region impacted:\s*([^\n]*)[\s\S]*?Root cause identified:\s*([^\n]*)[\s\S]*?Duration of outage:\s*([^\n]*)",
     ]
+    
     
     # Split text into sections by outage
     sections = re.split(r"--\nOutage Filename:", text)
@@ -580,6 +589,7 @@ service_full_names = {
     "AWS": {
         "AGW": "Amazon API Gateway",
         "ABR": "Amazon Bedrock",
+        "AKN": "Amazon Kinesis",
         "DC": "Direct Connect",
         "CF": "Amazon CloudFront",
         "R53": "Amazon Route 53",

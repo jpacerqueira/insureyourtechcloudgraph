@@ -28,7 +28,7 @@ Downtime Period: EC2 instances and degraded EBS volume performance for some reso
 
 Source Outage Report: 20201125-Summary of the Amazon Kinesis Event in the Northern Virginia (US-EAST-1) Region
 Cloud Provider: AWS
-Cloud Services: Amazon CloudWatch, Direct Connect, AWS Lambda, rs
+Cloud Services: Amazon Kinesis, Amazon Kinesis, Amazon CloudWatch, Direct Connect, AWS Lambda, rs
 Regions: US-EAST-1, Northern Virginia
 Availability Zones: Northern Virginia (US-EAST-1)
 Outage Status: resolved
@@ -116,7 +116,7 @@ Affected Components: Amazon AWS (US-EAST-1 Region)
 
 Source Outage Report: 20240730-Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region
 Cloud Provider: AWS
-Cloud Services: Amazon CloudWatch, Amazon Elastic Container Service, Amazon Elastic Container Service, Amazon ElastiCache, Direct Connect, AWS Lambda, rs, Amazon Redshift, Amazon AWS Glue, Amazon s3
+Cloud Services: Amazon Kinesis, Amazon CloudWatch, Amazon Elastic Container Service, Amazon Elastic Container Service, Amazon ElastiCache, Direct Connect, AWS Lambda, rs, Amazon Redshift, Amazon AWS Glue, Amazon s3
 Regions: US-EAST-1, Northern Virginia
 Availability Zones: Northern Virginia (US-EAST-1)
 Outage Status: investigating
@@ -1501,6 +1501,7 @@ Cloud Provider: IBM
 Cloud Services: ide, IBM Cloud Object Storage
 Regions: 
 Availability Zones: MEX01 Data Center
+End Time: 2021-02-16 21:40:00
 Outage Status: resolved
 Impact Level: 
 Duration: 6
@@ -1700,7 +1701,7 @@ Downtime Period: July 30, 2024, 3:40:53 PM - August 7, 2024, 9:55:52 PM (PDT)
 
 Source Outage Report: Service health - December 9, 2023 _ AWS Health Dashboard _ Global
 Cloud Provider: AWS
-Cloud Services: Amazon Route 53, Amazon Route 53, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon ElastiCache, Direct Connect, rs
+Cloud Services: Amazon Kinesis, Amazon Route 53, Amazon Route 53, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon ElastiCache, Direct Connect, rs
 Regions: ap-northeast-2, eu-south-1, us-east-1, us-east-2
 Availability Zones: ap-northeast-2
 Outage Status: investigating
@@ -1714,7 +1715,7 @@ Downtime Period: November 10, 2024, 8:13 AM PST - November 11, 2024, 12:13 PM PS
 
 Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - - Incident 2024-10-07
 Cloud Provider: AWS
-Cloud Services: Amazon CloudFront, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Load Balancing, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, eC, AWS Lambda, rs, Amazon Redshift, Simple Storage Service, Amazon s3
+Cloud Services: Amazon Kinesis, Amazon CloudFront, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Load Balancing, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, eC, AWS Lambda, rs, Amazon Redshift, Simple Storage Service, Amazon s3
 Regions: us-west-2, us-east-1
 Availability Zones: us-west-2
 Outage Status: investigating
@@ -1844,7 +1845,7 @@ Downtime Period: August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT (3 
 
 Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-06-25
 Cloud Provider: AWS
-Cloud Services: Amazon Elastic Compute Cloud, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs
+Cloud Services: Amazon Kinesis, Amazon Elastic Compute Cloud, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs
 Regions: US-EAST-1, ap-northeast-2, us-east-1, us-west-2, eu-south-1, us-west-1
 Availability Zones: US-EAST-1
 Outage Status: investigating
@@ -1978,7 +1979,7 @@ Downtime Period: 11:49 AM - 3:37 PM PDT
 
 Source Outage Report: Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region - Incident 2024-07-30
 Cloud Provider: AWS
-Cloud Services: Amazon CloudWatch, Amazon Elastic Container Service, Amazon Elastic Container Service, Direct Connect, Amazon ElastiCache, AWS Lambda, rs, Amazon Redshift, Amazon AWS Glue, Amazon AWS Glue
+Cloud Services: Amazon Kinesis, Amazon Kinesis, Amazon CloudWatch, Amazon Elastic Container Service, Amazon Elastic Container Service, Direct Connect, Amazon ElastiCache, AWS Lambda, rs, Amazon Redshift, Amazon AWS Glue, Amazon AWS Glue
 Regions: US-EAST-1, Northern Virginia
 Availability Zones: Northern Virginia (US-EAST-1)
 Outage Status: investigating
