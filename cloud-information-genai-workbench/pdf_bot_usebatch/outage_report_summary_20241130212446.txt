@@ -1090,16 +1090,16 @@ Downtime Period: The outage started at 2024-04-16 02:20 US/Pacific and ended at 
 ---
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-05-03
-Cloud Provider: AWS
-Cloud Services: abr, Direct Connect, rs
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
 Regions: 
-Availability Zones: 
-Outage Status: investigating
+Availability Zones: Global
+Outage Status: resolved
 Impact Level: 
-Duration: 10 hours and 12 minutes
+Duration: 2 hours and 12 minutes
 Root Cause: A few customers with sign-in redirect now may see sign-in errors in the browser.
 Resolution: 
-Downtime Period: Customers are advised to follow the best practices as noted here : https://rebase.google.com/docs/auth/web/redirect-best-practices
+Downtime Period: Customers were advised to follow best practices as noted here https://rebase.google.com/docs/auth/web/redirect-best-practices
 
 ---
 

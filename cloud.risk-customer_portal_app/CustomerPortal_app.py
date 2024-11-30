@@ -293,16 +293,24 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                         # Add annual downtime to vendor metrics
                         annual_downtime = float(risk_data.get('webscraper_annual_period_service_down_per_year_in_minutes', 0.0))
                         vendor_metrics[vendor].setdefault('annual_downtime', []).append(annual_downtime)
-                        
+
                         # Convert to float and remove % and ,
                         sla_usage = float(risk_data.get('service_sla_usage_percentage', 0.0).rstrip('%').replace(',', '.'))
                         sla_deviation = float(risk_data.get('sla_deviation_connected_risk_0_999', 0.0).rstrip('%').replace(',', '.'))
                         traffic_coef = float(risk_data.get('service_traffic_coef_by_percent_down', 0.0).rstrip('%').replace(',', '.'))
                         usage_risk = float(risk_data.get('usage_connected_risk_0_999', 0.0).rstrip('%').replace(',', '.'))
-                        # Add service_sla to vendor metrics
-                        service_sla = float(risk_data.get('service_sla_0_99_9999_for_tier1', 0.0).rstrip('%').replace(',', '.'))
-                        vendor_metrics[vendor].setdefault('service_sla', []).append(service_sla)
-                        
+
+                        # Add service_sla to vendor metrics for all tiers
+                        service_sla_tier1 = float(risk_data.get('service_sla_0_99_9999_for_tier1', 0.0).rstrip('%').replace(',', '.'))
+                        service_sla_tier2 = float(risk_data.get('service_sla_0_99_9999_for_tier2', 0.0).rstrip('%').replace(',', '.'))
+                        service_sla_tier3 = float(risk_data.get('service_sla_0_99_9999_for_tier3', 0.0).rstrip('%').replace(',', '.'))
+                        service_sla_tier4 = float(risk_data.get('service_sla_0_99_9999_for_tier4', 0.0).rstrip('%').replace(',', '.'))
+
+                        vendor_metrics[vendor].setdefault('service_sla_tier1', []).append(service_sla_tier1)
+                        vendor_metrics[vendor].setdefault('service_sla_tier2', []).append(service_sla_tier2)
+                        vendor_metrics[vendor].setdefault('service_sla_tier3', []).append(service_sla_tier3)
+                        vendor_metrics[vendor].setdefault('service_sla_tier4', []).append(service_sla_tier4)
+
                         vendor_metrics[vendor]['sla_usage'].append(sla_usage)
                         vendor_metrics[vendor]['sla_deviation'].append(sla_deviation)
                         vendor_metrics[vendor]['traffic_coef'].append(traffic_coef)
@@ -441,9 +449,31 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                 if risk_data:
                     col1, col2, col3, col4 = st.columns(4)
 
-                    # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
-                    # Formula: when SLA usage is 100% or more, then the credit back is XXX%-100% of the SLA usage , divide by 12 for monthy approach
-                    estimated_cloud_services_credit_money_back = 0.0 if float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%')) <= 100 else (float(risk_data.get("service_sla_usage_percentage", 0.0).rstrip('%'))-100)/100*float(risk_data.get("percentage_service_credit_back_tier1", 0.0).rstrip('%'))/100*service_costs[service]
+                    # Update the formula for estimated_cloud_services_credit_money_back
+                    estimated_cloud_services_credit_money_back = 0.0
+                    
+                    # Calculate credit back based on SLA usage and tier percentages
+                    sla_usage_percentage = float(risk_data.get("service_sla_usage_percentage"), 0.0)
+                    creditBackPercentage_tier1 = float(risk_data.get("riskData.percentage_service_credit_back_tier1"), 0.0)
+                    creditBackPercentage_tier2 = float(risk_data.get("riskData.percentage_service_credit_back_tier2"), 0.0)
+                    creditBackPercentage_tier3 = float(risk_data.get("riskData.percentage_service_credit_back_tier3"), 0.0)
+                    creditBackPercentage_tier4 = float(risk_data.get("riskData.percentage_service_credit_back_tier4"), 0.0)
+                    expectedAnnualMinsDown_tier1 = float(risk_data.get("expected_annual_service_minutes_down_by_sla_tier1"), 0.0)
+                    expectedAnnualMinsDown_tier2 = float(risk_data.get("expected_annual_service_minutes_down_by_sla_tier2"), 0.0)
+                    expectedAnnualMinsDown_tier3 = float(risk_data.get("expected_annual_service_minutes_down_by_sla_tier3"), 0.0)
+                    expectedAnnualMinsDown_tier4 = float(risk_data.get("expected_annual_service_minutes_down_by_sla_tier4"), 0.0)
+                    annualActualDowntime = float(risk_data.get("webscraper_annual_period_service_down_per_year_in_minutes"), 0.0)
+                    if sla_usage_percentage > 100:
+                        # Calculate credit back for each tier
+                        if (sla_usage_percentage > 100 and expectedAnnualMinsDown_tier1 >= annualActualDowntime and annualActualDowntime < expectedAnnualMinsDown_tier2 ):
+                            estimated_cloud_services_credit_money_back += (sla_usage_percentage - 100) * creditBackPercentage_tier1 / 100 * service_costs[service]
+                        if (sla_usage_percentage > 100 and expectedAnnualMinsDown_tier2 >= annualActualDowntime and annualActualDowntime < expectedAnnualMinsDown_tier3):
+                            estimated_cloud_services_credit_money_back += (sla_usage_percentage - 110) * creditBackPercentage_tier2 / 100 * service_costs[service]
+                        if (sla_usage_percentage > 100 and expectedAnnualMinsDown_tier3 >= annualActualDowntime and annualActualDowntime < expectedAnnualMinsDown_tier4 ):
+                            estimated_cloud_services_credit_money_back += (sla_usage_percentage - 120) * creditBackPercentage_tier3 / 100 * service_costs[service]
+                        if (sla_usage_percentage > 100 and annualActualDowntime >= expectedAnnualMinsDown_tier4):
+                            estimated_cloud_services_credit_money_back += (sla_usage_percentage - 130) * creditBackPercentage_tier1 / 100 * service_costs[service]
+                    
                     estimated_cloud_services_credit_money_back = round(estimated_cloud_services_credit_money_back, 2)
                     # Limit the credit back to 1000.00 per month
                     # TODO: change to ASK_CUSTOMER_HOW_MUCH=1000 when ready
@@ -454,13 +484,13 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                     estimated_cloud_services_credit_money_back = min(estimated_cloud_services_credit_money_back, service_costs[service])
 
                     with col1:
-                        st.metric("SLA Usage %", risk_data.get("service_sla_usage_percentage", "N/A"))
                         st.metric("Rating Cloud.Risk SLA Deviation", risk_data.get("sla_deviation_connected_risk_0_999", "N/A"))
+                        st.metric("SLA Usage %", risk_data.get("service_sla_usage_percentage", "N/A"))
                     
                     with col2:
-                        st.metric("Traffic Coefficient %", risk_data.get("service_traffic_coef_by_percent_down", "N/A"))
                         st.metric("Rating Cloud.Risk Usage", risk_data.get("usage_connected_risk_0_999", "N/A"))
-                    
+                        st.metric("Traffic Coefficient %", risk_data.get("service_traffic_coef_by_percent_down", "N/A"))
+
                     with col3:
                         st.metric("Annual Downtime (minutes)", risk_data.get("webscraper_annual_period_service_down_per_year_in_minutes", "N/A"))
                         st.metric("By SLA Expected Annual Downtime (minutes)", risk_data.get("expected_annual_service_minutes_down_by_sla_tier1", "N/A"))
@@ -468,6 +498,13 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                     with col4:
                         st.metric("Service SLA Tier 1 (99.99999%)", risk_data.get("service_sla_0_99_9999_for_tier1", "N/A") +"%")
                         st.metric("Service Credit Back Tier 1 (%)", str(risk_data.get("percentage_service_credit_back_tier1", "N/A"))+"%")
+                        st.metric("Service SLA Tier 2 (99.99999%)", risk_data.get("service_sla_0_99_9999_for_tier2", "N/A") +"%")
+                        st.metric("Service Credit Back Tier 2 (%)", str(risk_data.get("percentage_service_credit_back_tier2", "N/A"))+"%")
+                        st.metric("Service SLA Tier 3 (99.99999%)", risk_data.get("service_sla_0_99_9999_for_tier3", "N/A") +"%")
+                        st.metric("Service Credit Back Tier 3 (%)", str(risk_data.get("percentage_service_credit_back_tier3", "N/A"))+"%")
+                        st.metric("Service SLA Tier 4 (99.99999%)", risk_data.get("service_sla_0_99_9999_for_tier4", "N/A") +"%")
+                        st.metric("Service Credit Back Tier 4 (%)", str(risk_data.get("percentage_service_credit_back_tier4", "N/A"))+"%")
+                        st.metric("Monthly Service cost", "$"+str(service_costs[service]))
                         st.metric("Monthly Credit Back max. for Service ", "$"+str(estimated_cloud_services_credit_money_back))
                         st.caption(warning_max_credit_back)
                     
