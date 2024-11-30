@@ -856,10 +856,10 @@ def cleanup_merge_file():
         lines = file.readlines()
     
     # Filter out lines with the specified expression
-    cleaned_lines = [line for line in lines if ( "is not mentioned in the text" or "the other cloud providers mentioned" or "The other cloud providers mentioned" ) not in line]
+    cleaned_lines = [line for line in lines if ( "is not mentioned in the text" or "the other cloud providers mentioned" or "The other cloud providers mentioned" or "identify other cloud providers") not in line]
 
     # Update incorrect patterns replace "Azur e" by "Azure", "Googl e" by "Google", "AW S" by "AWS"
-    cleaned_lines = [line.replace("Azur e", "Azure").replace("Googl e", "Google").replace("AW S", "AWS") for line in cleaned_lines]
+    cleaned_lines = [line.replace("Azur e", "Azure").replace("AzurE", "Azure").replace("Googl e", "Google").replace("AW S", "AWS").replace("*","").replace("+","") for line in cleaned_lines]
     
     with open(file_path, 'w') as file:
         file.writelines(cleaned_lines)

@@ -5773,15 +5773,6 @@ I can help you with that query.
 After analyzing the text, I found that the following cloud providers were impacted:
 
 * Google GCP
-* Amazon AWS is not mentioned in the text
-* Microsoft Azure is not mentioned in the text
-* Oracle OCI is not mentioned in the text
-* IBM Cloud is not mentioned in the text
-* Snowflake is not mentioned in the text
-* Databricks is not mentioned in the text
-* MongoDB is not mentioned in the text
-* Akamai is not mentioned in the text
-* Cloudflare is not mentioned in the text
 
 Here are the results of the query:
 
