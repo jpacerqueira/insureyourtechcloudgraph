@@ -87,7 +87,7 @@ Affected Components: Support Contact Center
 
 Source Outage Report: 20211210-Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region
 Cloud Provider: AWS
-Cloud Services: Amazon API Gateway, Direct Connect, Amazon CloudWatch, Amazon DynamoDB, Direct Connect, AWS Lambda, rs
+Cloud Services: Amazon API Gateway, Direct Connect, Amazon CloudWatch, Amazon DynamoDB, Direct Connect, AWS Lambda, rs, Amazon s3
 Regions: US-EAST-1, Northern Virginia
 Availability Zones: Northern Virginia (US-EAST-1)
 Outage Status: investigating
@@ -117,7 +117,7 @@ Affected Components: Amazon AWS (US-EAST-1 Region)
 
 Source Outage Report: 20240730-Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region
 Cloud Provider: AWS
-Cloud Services: abr, Amazon CloudWatch, Amazon Elastic Container Service, Amazon Elastic Container Service, Direct Connect, Amazon ElastiCache, AWS Lambda, rs, Amazon Redshift, Amazon AWS Glue, Amazon AWS Fargate
+Cloud Services: abr, Amazon CloudWatch, Amazon Elastic Container Service, Amazon Elastic Container Service, Direct Connect, Amazon ElastiCache, AWS Lambda, rs, Amazon Redshift, Amazon AWS Glue, Amazon AWS Fargate, Amazon s3, Amazon s3
 Regions: US-EAST-1, Northern Virginia
 Availability Zones: 
 Outage Status: investigating
@@ -161,7 +161,7 @@ Affected Components: Amazon Elastic Compute Cloud
 
 Source Outage Report: Azure status history _ 13 November 2024 - Preliminary Incident Report  _ Microsoft Azure
 Cloud Provider: Azure
-Cloud Services: ad, Azure Databricks, Azure Functions, Azure Functions, Azure Storage Accounts
+Cloud Services: Azure Active Directory, Azure Databricks, Azure Functions, Azure Functions, Azure Storage Accounts
 Regions: various
 Availability Zones: West Eur ope, Southeast Asia, and/or K orea Central r egions
 Outage Status: investigating
@@ -175,7 +175,7 @@ Downtime Period: The service was unavailable to access, but data stored in these
 
 Source Outage Report: Azure_status_history_Microsoft_Azure_p10_2020
 Cloud Provider: Azure
-Cloud Services: ad, Azure SQL Database, SQL DB, ams, Azure Functions
+Cloud Services: Azure Active Directory, Azure SQL Database, SQL DB, ams, Azure Functions, ala
 Regions: 
 Availability Zones: Japan East
 Outage Status: investigating
@@ -189,7 +189,7 @@ Downtime Period: Between 09:24 and 11:15 UTC on July 1, 2020
 
 Source Outage Report: Azure_status_history_Microsoft_Azure_p10_2021
 Cloud Provider: Azure
-Cloud Services: Azure AD, ad, Azure Cosmos DB, Azure Functions, Azure Functions
+Cloud Services: Azure Active Directory, Azure Active Directory, Azure Cosmos DB, Azure Functions, Azure Functions
 Regions: the, a version update of a component that controls network traffic routing between Azure
 Availability Zones: West US (multiple availability zones)
 Outage Status: resolved
@@ -198,7 +198,7 @@ Duration: 6 hours and 36 minutes
 Root Cause: Code defect in a version update of a component that controls network traffic routing between Azure regions
 Resolution: 
 Downtime Period: The front-end services for other clusters in the region were timed out due to unavailability, triggering an unhandled failure condition and resulting crash.
-Affected Components: Front-end services for other clusters in the region, Azure Cosmos DB, and Azure AD
+Affected Components: Front-end services for other clusters in the region, Azure Cosmos DB, Azure Active Directory
 
 ---
 
@@ -233,7 +233,7 @@ Downtime Period: 19:10 - 21:32 UTC
 
 Source Outage Report: Azure_status_history_Microsoft_Azure_p13_2019
 Cloud Provider: Azure
-Cloud Services: ad, Azure Databricks, Azure Functions, Azure Functions, Azure CDN
+Cloud Services: Azure Active Directory, Azure Databricks, Azure Functions, Azure Functions, Azure CDN
 Regions: 
 Availability Zones: Not specified
 Outage Status: resolved
@@ -307,7 +307,7 @@ Downtime Period: Regional failover for accounts with multiple regions enabled
 
 Source Outage Report: Azure_status_history_Microsoft_Azure_p7_2021
 Cloud Provider: Azure
-Cloud Services: ad, Azure Functions, Azure CDN
+Cloud Services: Azure Active Directory, Azure Functions, Azure CDN
 Regions: 
 Availability Zones: East US, Japan East, Japan West, Korea South, Korea Central, and West US regions
 Outage Status: investigating
@@ -335,7 +335,7 @@ Downtime Period: 16 minutes
 
 Source Outage Report: Azure_status_history_Microsoft_Azure_p9_2020
 Cloud Provider: Azure
-Cloud Services: ad, Azure Functions
+Cloud Services: Azure Active Directory, Azure Functions
 Regions: the, a version update of a component that controls network traffic routing between Azure
 Availability Zones: 
 Outage Status: resolved
@@ -349,7 +349,7 @@ Downtime Period: The downtime period was approximately 6 hours and 36 minutes.
 
 Source Outage Report: Google Cloud Service Health  - Incident 2023-11-08
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Functions
 Regions: Sydney
 Availability Zones: Sydney (australia-southeast1), Belgium (europe-west1)
 Outage Status: resolved
@@ -408,7 +408,7 @@ Affected Components: Google Kubernetes Engine, Cloud Key Management Service, Goo
 
 Source Outage Report: Google Cloud Service Health - - Incident report 2024-02-15
 Cloud Provider: GCP
-Cloud Services: ds
+Cloud Services: Google Cloud DataStudio
 Regions: London, Frankfurt
 Availability Zones: 
 Outage Status: resolved
@@ -452,7 +452,7 @@ Affected Components: Google Batch
 
 Source Outage Report: Google Cloud Service Health - - Incident report 2024-04-23
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, ds
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud DataStudio
 Regions: Tokyo, Seoul, Singapore, Sydney, London, Frankfurt, Paris, Northern Virginia
 Availability Zones: Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Osaka (asia-northeast2), Seoul (asia-northeast3), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Jakarta (asia-southeast2), Sydney (australia-southeast1), Melbourne (australia-southeast2), Warsaw (europe-central2), Finland (europe-north1), Madrid (europe-southwest1), Belgium (europe-west1), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Paris (europe-west9), Doha (me-central1), Tel Aviv (me-west1), Montréal (northamerica-northeast1), Toronto (northamerica-northeast2), São Paulo (southamerica-east1), Santiago (southamerica-west1), Iowa (us-central1), South Carolina (us-east1), Northern Virginia (us-east4), Columbus (us-east5), Dallas (us-south1), Oregon (us-west1), Los Angeles (us-west2), Salt Lake City (us-west3), Las Vegas (us-west4)
 Outage Status: resolved
@@ -496,7 +496,7 @@ Downtime Period: From 2024-08-07 23:55 UTC-7 to 2024-08-08 17:18 UTC-7 (17 hours
 
 Source Outage Report: Google Cloud Service Health - - Incident report 2024-11-16
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Dataflow, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine
+Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Dataflow, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine, Google Cloud Pub/Sub
 Regions: asia-southeast-2
 Availability Zones: asia-southeast-2
 Outage Status: investigating
@@ -612,7 +612,7 @@ Downtime Period:
 
 Source Outage Report: Google Cloud Service Health - Incident 2024-07-25
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Compute Engine, ds
+Cloud Services: Google Cloud VertexAI, Google Cloud Compute Engine, Google Cloud DataStudio
 Regions: Tokyo, Singapore, Sydney, London, Frankfurt, Northern Virginia
 Availability Zones: Tokyo (asia-northeast1), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Sydney (australia-southeast1), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Tel Aviv (me-west1), Montréal (northamerica-northeast1), Toronto (northamerica-northeast2), São Paulo (southamerica-east1), Santiago (southamerica-west1), Iowa (us-central1), Northern Virginia (us-east4), Los Angeles (us-west2)
 Outage Status: resolved
@@ -743,7 +743,7 @@ Downtime Period: Friday, 2024-10-25 02:23 US/Pacific to Thursday, 2024-10-25 03:
 
 Source Outage Report: Google Cloud Service Health - Incident 2024-11-06
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, ds, dl, Google Cloud Looker Studio Pro
+Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Cloud Datalab, Google Cloud Looker Studio Pro
 Regions: 
 Availability Zones: Global
 Outage Status: investigating
@@ -758,7 +758,7 @@ Affected Components: Google Cloud Looker Studio Pro
 
 Source Outage Report: Google Cloud Service Health - Incident GCP - 16 May 2024 
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, AlloyDB for PostgreSQL, Google Cloud SQL, df, ds, Google Cloud Load Balancing
+Cloud Services: Google Cloud VertexAI, AlloyDB for PostgreSQL, Google Cloud SQL, df, Google Cloud DataStudio, Google Cloud Load Balancing, Google Cloud Functions
 Regions: multiple
 Availability Zones: south1), Oregon (us-west1), Los Angeles (us-west2), Salt Lake City (us-west3), Las Vegas (us-west4)
 Outage Status: investigating
@@ -773,7 +773,7 @@ Affected Components: Google Cloud VertexAI
 
 Source Outage Report: Google Cloud Service Health - Incident Report - 29 October 2024
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Dataproc, Google Cloud Dataflow
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Pub/Sub
 Regions: the
 Availability Zones: 
 Outage Status: resolved
@@ -860,7 +860,7 @@ Affected Components: Artifact Registry, Certificate Authority Service, Cloud Bui
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-04-16
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, ds, Google Cloud Composer, Google Cloud Composer
+Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Cloud Composer, Google Cloud Composer
 Regions: multiple, Tokyo, Seoul, Singapore
 Availability Zones: Global
 Outage Status: resolved
@@ -917,7 +917,7 @@ Affected Components: - BigQuery
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-07-11
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, ds
+Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, Google Cloud DataStudio
 Regions: eu, Warsaw (europe-central2), Finland (europe-north1), Madrid (europe-southwest1), Belgium (europe-west1), Berlin (europe-west10), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Paris (europe-west9), Doha (me-central1), Dammam (me-central2), Tel Aviv (me-west1), eu, Warsaw (europe-central2), Finland (europe-north1), Madrid (europe-southwest1), Belgium (europe-west1), Berlin (europe-west10), Turin (europe-west12), London (europe-west2), Frankfurt (europe-west3), Netherlands (europe-west4), Zurich (europe-west6), Milan (europe-west8), Paris (europe-west9), Doha (me-central1), Dammam (me-central2), Tel Aviv (me-west1), us, Iowa (us-central1), South Carolina (us-east1), Northern Virginia (us-east4), Columbus (us-east5), Dallas (us-south1), Oregon (us-west1), Los Angeles (us-west2), Salt Lake City (us-west3), Las Vegas (us-west4), eu | 2024-07-11 | 7 days, 11 hours, 5 minutes | Configuration changes that temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system. | None at this time | 2024-07-17 11:05 US/Pacific, multiple, Tokyo, Seoul, Singapore, Sydney, London, Frankfurt, Paris, Northern Virginia
 Availability Zones: Johannesburg (africa-south1), Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Osaka (asia-northeast2), Seoul (asia-northeast3), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Jakarta (asia-southeast2), Sydney (australia-southeast1), Melbourne (australia-southeast2)
 Outage Status: resolved
@@ -931,7 +931,7 @@ Downtime Period: None at this time
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-07-15
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Cloud SQL, Google Cloud Bigtable, bigtable, ds
+Cloud Services: Google Cloud VertexAI, Cloud SQL, Google Cloud Bigtable, bigtable, Google Cloud DataStudio
 Regions: 
 Availability Zones: us-central1
 Outage Status: investigating
@@ -947,7 +947,7 @@ Affected Components: Google GCP
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-08-02
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, ds, rce
+Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, rce
 Regions: 
 Availability Zones: Netherlands (europe-west4), Iowa (us-central1)
 Outage Status: resolved
@@ -961,7 +961,7 @@ Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 US/Pacific Time
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, Google Kubernetes Engine
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, Google Kubernetes Engine, Pub/Sub
 Regions: 
 Availability Zones: europe-west9-a
 Outage Status: resolved
@@ -1005,7 +1005,7 @@ Downtime Period: 2024-08-16 11:44 US/Pacific to 2024-08-16 16:23 US/Pacific
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-09-04
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Composer, Google Cloud Composer
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Composer, Google Cloud Composer, Google Cloud Functions
 Regions: 
 Availability Zones: Global
 Outage Status: resolved
@@ -1049,7 +1049,7 @@ Downtime Period: 2024-10-01 09:28 - 2024-10-01 10:03 US/Pacific Time
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-10-08
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, dl
+Cloud Services: Google Cloud VertexAI, Google Cloud Datalab
 Regions: 
 Availability Zones: us-central1
 Outage Status: resolved
@@ -1079,7 +1079,7 @@ Affected Components: Google Cloud VertexAI
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-10-23
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Cloud SQL, Google Cloud Dataproc, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Dataflow
+Cloud Services: Google Cloud VertexAI, Cloud SQL, Google Cloud Dataproc, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Dataflow, Google Cloud Pub/Sub, Pub/Sub
 Regions: 
 Availability Zones: 
 Outage Status: resolved
@@ -1093,7 +1093,7 @@ Downtime Period:
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
 Regions: one of the campuses supporting the australia-southeast2, australia-southeast2
 Availability Zones: australia-southeast2
 Outage Status: resolved
@@ -1385,7 +1385,7 @@ Affected Components: Atlas App Services and Device Sync, Realm, API
 
 Source Outage Report: Service health - April 19, 2024 _ AWS Health Dashboard _ Global
 Cloud Provider: AWS
-Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Direct Connect, Amazon QuickSight, rs
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs
 Regions: Errors, us-east-1, ap-northeast-2
 Availability Zones: us-east-1
 Outage Status: investigating
@@ -1413,7 +1413,7 @@ Downtime Period: November 10, 2024, 8:13 AM PST - November 11, 2024, 12:13 PM PS
 
 Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - - Incident 2024-10-07
 Cloud Provider: AWS
-Cloud Services: Amazon CloudFront, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Load Balancing, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Direct Connect, eC, AWS Lambda, rs, Amazon Redshift
+Cloud Services: Amazon CloudFront, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Load Balancing, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, eC, AWS Lambda, rs, Amazon Redshift, Simple Storage Service, Amazon s3
 Regions: us-west-2, us-east-1
 Availability Zones: us-west-2
 Outage Status: investigating
@@ -1442,7 +1442,7 @@ Affected Components: Amazon AWS RDS
 
 Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2023-12-09
 Cloud Provider: AWS
-Cloud Services: Amazon DynamoDB, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Direct Connect, rs
+Cloud Services: Amazon DynamoDB, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, rs
 Regions: us-west-2, eu-south-1, us-east-1, us-west-1
 Availability Zones: Oregon (us-west-2)
 Outage Status: investigating
@@ -1471,7 +1471,7 @@ Affected Components: AWS Amplify, AWS Amplify Admin, AWS Cloud9, AWS CloudFormat
 
 Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-01-30
 Cloud Provider: AWS
-Cloud Services: Amazon Bedrock, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Direct Connect, Amazon QuickSight, rs
+Cloud Services: Amazon Bedrock, Amazon DynamoDB, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs
 Regions: Errors, ap-northeast-2, us-west-2, us-east-1
 Availability Zones: ap-northeast-2
 Outage Status: investigating
@@ -1486,7 +1486,7 @@ Affected Components: Amazon Elastic Compute Cloud, Amazon DynamoDB, Amazon Quick
 
 Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-02-07
 Cloud Provider: AWS
-Cloud Services: abr, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Direct Connect, Amazon ElastiCache, Amazon QuickSight, rs
+Cloud Services: abr, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon ElastiCache, Amazon QuickSight, rs
 Regions: us-west-2, us-east-1
 Availability Zones: us-west-2
 Outage Status: investigating
@@ -1500,7 +1500,7 @@ Downtime Period: Not specified
 
 Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-03-26
 Cloud Provider: AWS
-Cloud Services: Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Direct Connect, Amazon QuickSight, rs
+Cloud Services: Amazon DynamoDB, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs
 Regions: us-east-1, us-west-2, eu-south-1, us-west-1
 Availability Zones: N. Virginia (us-east-1)
 Outage Status: investigating
@@ -1514,7 +1514,7 @@ Downtime Period: 7:55 AM - 10:13 AM PST
 
 Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-04-10
 Cloud Provider: AWS
-Cloud Services: EC2 Instance Connect, EC2 Instance Connect, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon ElastiCache, Direct Connect, rs, Amazon Elastic Kubernetes Service, Amazon Elastic Kubernetes Service
+Cloud Services: EC2 Instance Connect, EC2 Instance Connect, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon ElastiCache, Direct Connect, rs, Amazon Elastic Kubernetes Service, Amazon Elastic Kubernetes Service
 Regions: us-east-2, us-east-1
 Availability Zones: 
 Outage Status: resolved
@@ -1528,7 +1528,7 @@ Downtime Period: August 6, 2024, 7:24:28 PM - August 6, 2024, 9:10:29 PM PDT (3 
 
 Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-06-25
 Cloud Provider: AWS
-Cloud Services: Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Direct Connect, Amazon QuickSight, rs
+Cloud Services: Amazon Elastic Compute Cloud, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs
 Regions: US-EAST-1, ap-northeast-2, us-east-1, us-west-2, eu-south-1, us-west-1
 Availability Zones: US-EAST-1
 Outage Status: investigating
@@ -1573,7 +1573,7 @@ Affected Components: Amazon Elastic Compute Cloud
 
 Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-11-25
 Cloud Provider: AWS
-Cloud Services: abr, Amazon Bedrock, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Direct Connect, rs
+Cloud Services: abr, Amazon Bedrock, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, rs
 Regions: us-west-2, us-east-1
 Availability Zones: us-west-2
 Outage Status: investigating
@@ -1588,7 +1588,7 @@ Affected Components: Amazon AWS RDS
 
 Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global- Incident 2024-08-06
 Cloud Provider: AWS
-Cloud Services: abr, Amazon Bedrock, DNs, Amazon Route 53, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Direct Connect, Amazon QuickSight, rs
+Cloud Services: abr, Amazon Bedrock, DNs, Amazon Route 53, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs
 Regions: us-east-1, us-west-1
 Availability Zones: Not specified
 Outage Status: investigating
@@ -1631,7 +1631,7 @@ Downtime Period: Until normal operations were restored to the Kinesis Data Strea
 
 Source Outage Report: Supported_Resource_Types_through_Azure_Resource_Health_-_Azure_Service_Health_Microsoft_Learn_02.Nov.2024
 Cloud Provider: Azure
-Cloud Services: aD, aDB, Azure Cosmos DB, Azure Batch
+Cloud Services: Azure Active Directory, Azure Databricks, Azure Cosmos DB, Azure Batch
 Regions: 
 Availability Zones: Not specified
 Outage Status: resolved

@@ -41,7 +41,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
     
     # Extended provider patterns
     provider_patterns = {
-        "AWS": r"(?i)(Amazon AWS|AWS|Amazon Web Services)",
+        "AWS": r"(?i)(Amazon AWS|AWS|Amazon Web Services|AWS Cloud)",
         "Azure": r"(?i)(Microsoft Azure|Azure)",
         "GCP": r"(?i)(Google GCP|Google Cloud|GCP)",
         "IBM": r"(?i)(IBM Cloud)",
@@ -52,7 +52,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         "Databricks": r"(?i)(Databricks)",
         "Salesforce": r"(?i)(Salesforce|SFDC)",
         "Snowflake": r"(?i)(Snowflake|Snowflake Inc)",
-        "Oracle": r"(?i)(Oracle Cloud|OCI|Oracle Corporation)",
+        "Oracle": r"(?i)(Oracle Cloud|OCI|Oracle Corporation|Oracle Database)",
     }
     
     # Extended service patterns for specific providers
@@ -98,7 +98,8 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Amazon AWS Glue|AWS Glue|Glue)",
             # Container Services
             r"(?i)(Amazon AWS Fargate|AWS Fargate|Fargate)",
-            r"(?i)(Amazon Elastic Kubernetes Service|Amazon EKS|EKS|Elastic Kubernetes Service)",
+            r"(?i)(Amazon Elastic Kubernetes Service|Amazon EKS|EKS|Elastic Kubernetes Service|Kubernetes Service)",
+            r"(?i)(Amazon s3|Amazon S3|s3|S3|Simple Storage Service)",
         ],
         "GCP": [
             # AI/ML Services
@@ -132,6 +133,8 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Google Cloud DNS|Cloud DNS|GCDNS)",
             # Container Services
             r"(?i)(Google Kubernetes Engine|GKE)",
+            r"(?i)(Google Cloud Functions|Cloud Functions|GCF)",
+            r"(?i)(Google Cloud Pub/Sub|Pub/Sub|GCP Pub/Sub)",
         ],
         "Azure": [
             # Identity Services
@@ -164,6 +167,8 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Azure Storage Accounts|Azure Storage|ASA)",
             # Container Services
             r"(?i)(Azure Kubernetes Service|AKS)",
+            r"(?i)(Azure Blob Storage|Blob Storage|ABS)",
+            r"(?i)(Azure Logic Apps|Logic Apps|ALA)",
         ],
         "IBM": [
             # AI/ML Services
@@ -253,8 +258,8 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
     
     # Extended status patterns to include more granular states
     status_patterns = {
-        "investigating": r"(?i)(investigating|identified|monitoring|increased error rates|elevated delays|issues|disruption|degradation|intermittent connectivity)",
-        "resolved": r"(?i)(resolved|restored|recovered|mitigated|marked as resolved|normal operations)",
+        "investigating": r"(?i)(investigating|identified|monitoring|increased error rates|elevated delays|issues|disruption|degradation|intermittent connectivity|under review)",
+        "resolved": r"(?i)(resolved|restored|recovered|mitigated|marked as resolved|normal operations|issue fixed)",
         "outage": r"(?i)(complete outage|service disruption|unavailable|increased api errors|increased latencies|service unavailable)",
         "degraded": r"(?i)(degraded performance|degraded service|partial outage|intermittent connectivity|elevated packet loss|impaired|congestion)",
         "maintenance": r"(?i)(scheduled maintenance|planned downtime|maintenance window)",
@@ -266,8 +271,8 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
     
     # Extended impact patterns to include more specific levels
     impact_patterns = {
-        "critical": r"(?i)(critical impact|severe impact|major outage|complete failure|service unavailable|widespread disruption)",
-        "high": r"(?i)(high impact|significant impact|service degradation|multiple services affected)",
+        "critical": r"(?i)(critical impact|severe impact|major outage|complete failure|service unavailable|widespread disruption|total service failure)",
+        "high": r"(?i)(high impact|significant impact|service degradation|multiple services affected|major service disruption)",
         "moderate": r"(?i)(moderate impact|partial impact|minor outage|increased error rates|intermittent issues)",
         "minimal": r"(?i)(minimal impact|slight impact|limited disruption|elevated delays|degraded performance)",
         "none": r"(?i)(no impact|no outage reported|normal operation)",
@@ -280,14 +285,16 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
     incident_patterns = [
         r"(?i)Incident(?:\s+ID)?:\s*([^\n]+)",
         r"(?i)Event(?:\s+ID)?:\s*([^\n]+)",
-        r"(?i)Reference(?:\s+Number)?:\s*([^\n]+)"
+        r"(?i)Reference(?:\s+Number)?:\s*([^\n]+)",
+        r"(?i)Incident Number:\s*([^\n]+)",
     ]
     
     # Enhanced affected components patterns
     affected_components_patterns = [
         r"(?i)Affected(?:\s+Components?)?:\s*([^\n]+)",
         r"(?i)Impacted(?:\s+Components?)?:\s*([^\n]+)",
-        r"(?i)Components?\s+Affected:\s*([^\n]+)"
+        r"(?i)Components?\s+Affected:\s*([^\n]+)",
+        r"(?i)Impacted Components:\s*([^\n]+)",
     ]
     
     # Enhanced mitigation steps patterns
@@ -295,7 +302,8 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         r"(?i)Mitigation(?:\s+Steps?)?:\s*([^\n]+)",
         r"(?i)Resolution(?:\s+Steps?)?:\s*([^\n]+)",
         r"(?i)Steps?\s+Taken:\s*([^\n]+)",
-        r"(?i)Actions?\s+Taken:\s*([^\n]+)"
+        r"(?i)Actions?\s+Taken:\s*([^\n]+)",
+        r"(?i)Actions Taken:\s*([^\n]+)",
     ]
     
     # Enhanced timestamp patterns
@@ -312,6 +320,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(\w+ \d{1,2}(?:st|nd|rd|th)?,\s*\d{4}\s+at\s+\d{1,2}:\d{2}\s*(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
             r"(?i)(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?\s*(?:UTC|PDT|PST|JST|CST))",
             r"(?i)on\s+(\w+\s+\d{1,2}(?:st|nd|rd|th)?,\s*\d{4})",
+            r"(?i)Outage began at\s*:\s*([^\n]+)",
         ],
         "end": [
             r"(?i)End(?:ed)?(?:\s+Time)?:\s*([^\n]+)",
@@ -322,6 +331,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)Resolution\s+date:\s*([^\n]+)",
             r"(?i)Resolved:\s*(\w+\s+\d{1,2}(?:st|nd|rd|th)?,\s*\d{4}.*?(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
             r"(?i)Resolution\s+date:\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?\s*(?:UTC|PDT|PST|JST|CST))",
+            r"(?i)Resolved at\s*:\s*([^\n]+)",
         ]
     }
     
@@ -333,6 +343,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         r"(?i)Duration:\s*(\d+\s+(?:days?|hours?|minutes?|hrs?|mins?)(?:\s+and\s+\d+\s+(?:days?|hours?|minutes?|hrs?|mins?))*)",
         r"(?i)lasted\s+(?:for\s+)?(\d+\s+(?:days?|hours?|minutes?|hrs?|mins?)(?:\s+and\s+\d+\s+(?:days?|hours?|minutes?|hrs?|mins?))*)",
         r"(?i)(\d+)\s*(?:days?|hours?|minutes?|hrs?|mins?)\s+and\s+(\d+)\s*(?:days?|hours?|minutes?|hrs?|mins?)",
+        r"(?i)Lasted for\s*:\s*([^\n]+)",
     ]
     
     # Add region extraction patterns
@@ -341,6 +352,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         r"(?i)in\s+(?:the\s+)?([\w\s-]+)\s+Region",
         r"(?i)((?:us|eu|ap|sa|ca|me)-(?:east|west|north|south|central|southeast|northeast)-\d+)",
         r"(?i)(Northern Virginia|Tokyo|Seoul|Singapore|London|Frankfurt|Paris|Sydney)",
+        r"(?i)Regions impacted:\s*([^\n]+)",
     ]
     
     # New patterns for extracting additional information
@@ -348,11 +360,13 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         r"(?i)Duration:\s*([^\n]+)",
         r"(?i)(\d+)\s*(?:days?|hours?|minutes?|hrs?|mins?)",
         r"(?i)lasted\s+(?:for\s+)?(\d+\s+(?:days?|hours?|minutes?|hrs?|mins?)(?:\s+and\s+\d+\s+(?:days?|hours?|minutes?|hrs?|mins?))*)",
+        r"(?i)Total Duration:\s*([^\n]+)",
     ]
 
     new_downtime_patterns = [
         r"(?i)Downtime period:\s*([^\n]+)",
         r"(?i)Downtime\s+period:\s*([^\n]+)",
+        r"(?i)Downtime Duration:\s*([^\n]+)",
     ]
 
     new_root_cause_patterns = [
@@ -363,11 +377,13 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
     new_region_patterns = [
         r"(?i)Regions?\s+Affected:\s*([^\n]+)",
         r"(?i)Affected Regions and Availability Zones:\s*([^\n]+)",
+        r"(?i)Affected Regions:\s*([^\n]+)",
     ]
     
     # New patterns for extracting outage details from multi-line tables
     multi_line_outage_patterns = [
         r"(?i)Outage\s+\d+:\s*[\s\S]*?Service impacted:\s*([^\n]+)[\s\S]*?Region:\s*([^\n]*)[\s\S]*?Availability Zone:\s*([^\n]*)[\s\S]*?Root cause:\s*([^\n]*)[\s\S]*?Duration:\s*([^\n]*)[\s\S]*?Start date:\s*([^\n]*)[\s\S]*?Downtime period:\s*([^\n]*)[\s\S]*?Resolution date:\s*([^\n]*)",
+        r"(?i)Outage\s+\d+:\s*[\s\S]*?Service affected:\s*([^\n]+)[\s\S]*?Region impacted:\s*([^\n]*)[\s\S]*?Root cause identified:\s*([^\n]*)[\s\S]*?Duration of outage:\s*([^\n]*)",
     ]
     
     # Split text into sections by outage
@@ -592,6 +608,7 @@ service_full_names = {
         "CWAI": "Amazon CloudWatch Application Insights",
         "DDB": "Amazon DynamoDB",
         "EMRS": "Amazon EMR Serverless",
+        "EMR": "Amazon Elastic Mapreduce",
         "FS": "Amazon FinSpace",
         "GL": "Amazon AWS Glue",
         "RDS": "Amazon AWS RDS",
@@ -614,7 +631,9 @@ service_full_names = {
         "DF": "Google Cloud Dataflow",
         "GCS": "Google Cloud Storage",
         "DS": "Google Cloud DataStudio",
+        "ds": "Google Cloud DataStudio",
         "DL": "Google Cloud Datalab",
+        "dl": "Google Cloud Datalab",
         "GCC": "Google Cloud Composer",
         "LSP": "Google Cloud Looker Studio Pro",
         "RCE": "Google Cloud reCAPTCHA Enterprise",
@@ -625,6 +644,9 @@ service_full_names = {
     },
     "Azure": {
         "AAD": "Azure Active Directory",
+        "AD": "Azure Active Directory",
+        "ad": "Azure Active Directory",
+        "aD": "Azure Active Directory",
         "EID": "Microsoft Entra ID",
         "AADB2C": "Azure Active Directory B2C",
         "AML": "Azure Machine Learning",
@@ -633,6 +655,7 @@ service_full_names = {
         "AOAI": "Azure OpenAI Service",
         "APIM": "Azure API Management",
         "ADB": "Azure Databricks",
+        "aDB": "Azure Databricks",
         "ASQLMI": "Azure SQL Managed Instance",
         "ASDB": "Azure SQL Database",
         "ACDB": "Azure Cosmos DB",
