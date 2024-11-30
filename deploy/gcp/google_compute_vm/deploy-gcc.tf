@@ -1,10 +1,10 @@
 # This code is compatible with Terraform 4.25.0 and versions that are backward compatible to 4.25.0.
 # For information about validating this Terraform code, see https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/google-cloud-platform-build#format-and-validate-the-configuration
 
-resource "google_compute_instance" "instance-20241130-233558" {
+resource "google_compute_instance" "instance-20241130-235231" {
   boot_disk {
     auto_delete = true
-    device_name = "instance-20241130-233558"
+    device_name = "instance-20241130-235231"
 
     initialize_params {
       image = "projects/debian-cloud/global/images/debian-12-bookworm-v20241112"
@@ -15,22 +15,32 @@ resource "google_compute_instance" "instance-20241130-233558" {
     mode = "READ_WRITE"
   }
 
-  can_ip_forward      = false
+  can_ip_forward      = true
   deletion_protection = false
-  enable_display      = true
+  enable_display      = false
+  hostname            = "insureyourtechcloud.cloud.risk.graph"
 
   labels = {
-    goog-ec-src = "vm_add-tf"
+    goog-ec-src           = "vm_add-tf"
+    goog-ops-agent-policy = "v2-x86-template-1-3-0"
   }
 
-  machine_type = "e2-custom-8-16384"
-  name         = "instance-20241130-233558"
+  machine_type = "e2-medium"
+
+  metadata = {
+    enable-osconfig = "TRUE"
+  }
+
+  name = "instance-20241130-235231"
 
   network_interface {
     access_config {
-      network_tier = "PREMIUM"
+      nat_ip                 = "35.246.26.10"
+      network_tier           = "PREMIUM"
+      public_ptr_domain_name = "insureyourtech.cloud."
     }
 
+    nic_type    = "GVNIC"
     queue_count = 0
     stack_type  = "IPV4_ONLY"
     subnetwork  = "projects/fuelbigdata-test1/regions/europe-west2/subnetworks/default"
@@ -45,7 +55,7 @@ resource "google_compute_instance" "instance-20241130-233558" {
 
   service_account {
     email  = "1063610512413-compute@developer.gserviceaccount.com"
-    scopes = ["https://www.googleapis.com/auth/cloud-platform"]
+    scopes = ["https://www.googleapis.com/auth/devstorage.read_only", "https://www.googleapis.com/auth/logging.write", "https://www.googleapis.com/auth/monitoring.write", "https://www.googleapis.com/auth/service.management.readonly", "https://www.googleapis.com/auth/servicecontrol", "https://www.googleapis.com/auth/trace.append"]
   }
 
   shielded_instance_config {
@@ -56,5 +66,24 @@ resource "google_compute_instance" "instance-20241130-233558" {
 
   tags = ["http-server", "https-server", "lb-health-check"]
   zone = "europe-west2-a"
+}
+
+module "ops_agent_policy" {
+  source          = "github.com/terraform-google-modules/terraform-google-cloud-operations/modules/ops-agent-policy"
+  project         = "fuelbigdata-test1"
+  zone            = "europe-west2-a"
+  assignment_id   = "goog-ops-agent-v2-x86-template-1-3-0-europe-west2-a"
+  agents_rule = {
+    package_state = "installed"
+    version = "latest"
+  }
+  instance_filter = {
+    all = false
+    inclusion_labels = [{
+      labels = {
+        goog-ops-agent-policy = "v2-x86-template-1-3-0"
+      }
+    }]
+  }
 }
 
