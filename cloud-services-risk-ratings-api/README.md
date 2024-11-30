@@ -28,8 +28,14 @@ The API has the following endpoints:
 To obtain a sample of all services and of all Outages from the Fremium API
 
 ```bash
-curl -X GET http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/list/all/services  > sample_services_api.json
-curl -X GET http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/list/all > sample_outages_api.json
+admin@Admins-MacBook-Pro insureyourtechcloudgraph % curl -X GET  http://localhost:8000/cloud-services-risk-ratings/risk-ratings/list/all/services/ > list_all_services_api.json
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  638k  100  638k    0     0  13.0M      0 --:--:-- --:--:-- --:--:-- 13.2M
+admin@Admins-MacBook-Pro insureyourtechcloudgraph % curl -X GET  http://localhost:8000/cloud-services-risk-ratings/risk-ratings/outages/list/all/ > sample_list_all_outages_api.json
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  558k  100  558k    0     0  6560k      0 --:--:-- --:--:-- --:--:-- 6572k
     ```
 
 To get the risk ratings for all cloud providers, you can make a GET request to the `/cloud-services-risk-ratings/risk-ratings` endpoints , as examples below.
