@@ -20,17 +20,11 @@ resource "google_compute_instance" "instance-20241130-233558" {
   enable_display      = true
 
   labels = {
-    goog-ec-src           = "vm_add-tf"
-    goog-ops-agent-policy = "v2-x86-template-1-3-0"
+    goog-ec-src = "vm_add-tf"
   }
 
   machine_type = "e2-custom-8-16384"
-
-  metadata = {
-    enable-osconfig = "TRUE"
-  }
-
-  name = "instance-20241130-233558"
+  name         = "instance-20241130-233558"
 
   network_interface {
     access_config {
@@ -39,7 +33,7 @@ resource "google_compute_instance" "instance-20241130-233558" {
 
     queue_count = 0
     stack_type  = "IPV4_ONLY"
-    subnetwork  = "projects/fuelbigdata-test1/regions/us-central1/subnetworks/default"
+    subnetwork  = "projects/fuelbigdata-test1/regions/europe-west2/subnetworks/default"
   }
 
   scheduling {
@@ -61,25 +55,6 @@ resource "google_compute_instance" "instance-20241130-233558" {
   }
 
   tags = ["http-server", "https-server", "lb-health-check"]
-  zone = "us-central1-b"
-}
-
-module "ops_agent_policy" {
-  source          = "github.com/terraform-google-modules/terraform-google-cloud-operations/modules/ops-agent-policy"
-  project         = "fuelbigdata-test1"
-  zone            = "us-central1-b"
-  assignment_id   = "goog-ops-agent-v2-x86-template-1-3-0-us-central1-b"
-  agents_rule = {
-    package_state = "installed"
-    version = "latest"
-  }
-  instance_filter = {
-    all = false
-    inclusion_labels = [{
-      labels = {
-        goog-ops-agent-policy = "v2-x86-template-1-3-0"
-      }
-    }]
-  }
+  zone = "europe-west2-a"
 }
 
