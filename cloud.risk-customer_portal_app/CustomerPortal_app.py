@@ -188,9 +188,9 @@ if selected_services:
             service_costs[service] = st.number_input(
                 f"Monthly cost estimate for {service} ($)",
                 min_value=1.0,
-                max_value=10000.0,
+                max_value=100000.0,
                 value=1000.0,
-                step=100.0,
+                step=50.0,
                 key=f"cost_{service}"
             )
 
