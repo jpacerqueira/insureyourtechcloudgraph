@@ -1,0 +1,19 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+Firebase authentication failures for few customers.
+Impact Date: 2024-05-03 11:25 US/Pacific
+Duration: 10 hours and 12 minutes
+Root Cause: A few customers with sign-in redirect now may see sign-in errors in the browser.
+Downtime Period: Customers are advised to follow the best practices as noted here : https://rebase.google.com/docs/auth/web/redirect-best-practices
+
+Here is the output table:
+
+Google Cloud | Firebase Authentication | Global | 2024-05-03 11:25 US/Pacific | 10 hours and 12 minutes | A few customers with sign-in redirect now may see sign-in errors in the browser. | Customers are advised to follow the best practices as noted here : https://rebase.google.com/docs/auth/web/redirect-best-practices
+
+Here is an overall summary of the outage:
+
+Google Cloud Service was impacted by a Firebase authentication failure incident that started on May 3, 2024, at 11:25 US/Pacific. The issue affected customers globally and lasted for approximately 10 hours and 12 minutes. The root cause of the outage was related to sign-in errors in the browser due to redirect issues.
+
+Note: I removed references to cloud providers not mentioned in the text provided, such as Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

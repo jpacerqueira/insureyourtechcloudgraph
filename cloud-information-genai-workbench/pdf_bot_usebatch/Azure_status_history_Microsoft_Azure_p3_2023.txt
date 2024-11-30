@@ -1,0 +1,147 @@
+Here is the information about the outages for the specified cloud providers:
+
+**Microsoft Azure**
+
+* Application Gateway: Southeast Asia region, Availability Zone AZ1 - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Bastion: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Container Apps: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Database Services (MySQL - Flexible Server, Postgres - Flexible Server): Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* ExpressRoute: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* HDInsight: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Open AI: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* SQL Managed Instance: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Stream Analytics: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* VMs: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+
+**Microsoft Azure (continued)**
+
+* Application Insights: West Europe region - 09:44 UTC on January 18, 2023 to 13:10 UTC on January 18, 2023 (5 hours)
+	+ Root cause: Planned power maintenance
+	+ Downtime period: 5 hours
+	+ Resolved date: Not specified
+* Azure Automation: West Europe region - 09:44 UTC on January 18, 2023 to 13:10 UTC on January 18, 2023 (5 hours)
+	+ Root cause: Planned power maintenance
+	+ Downtime period: 5 hours
+	+ Resolved date: Not specified
+* Azure Container Registry: West Europe region - 09:44 UTC on January 18, 2023 to 13:10 UTC on January 18, 2023 (5 hours)
+	+ Root cause: Planned power maintenance
+	+ Downtime period: 5 hours
+	+ Resolved date: Not specified
+* Azure Database for MySQL: West Europe region - 09:44 UTC on January 18, 2023 to 13:10 UTC on January 18, 2023 (5 hours)
+	+ Root cause: Planned power maintenance
+	+ Downtime period: 5 hours
+	+ Resolved date: Not specified
+* Azure Database for PostgreSQL: West Europe region - 09:44 UTC on January 18, 2023 to 13:10 UTC on January 18, 2023 (5 hours)
+	+ Root cause: Planned power maintenance
+	+ Downtime period: 5 hours
+	+ Resolved date: Not specified
+* Azure Red Hat OpenShift: West Europe region - 09:44 UTC on January 18, 2023 to 13:10 UTC on January 18, 2023 (5 hours)
+	+ Root cause: Planned power maintenance
+	+ Downtime period: 5 hours
+	+ Resolved date: Not specified
+* Azure Search: West Europe region - 09:44 UTC on January 18, 2023 to 13:10 UTC on January 18, 2023 (5 hours)
+	+ Root cause: Planned power maintenance
+	+ Downtime period: 5 hours
+	+ Resolved date: Not specified
+* Azure SQL Database: West Europe region - 09:44 UTC on January 18, 2023 to 13:10 UTC on January 18, 2023 (5 hours)
+	+ Root cause: Planned power maintenance
+	+ Downtime period: 5 hours
+	+ Resolved date: Not specified
+* Azure Virtual Machines (VMs): West Europe region - 09:44 UTC on January 18, 2023 to 13:10 UTC on January 18, 2023 (5 hours)
+	+ Root cause: Planned power maintenance
+	+ Downtime period: 5 hours
+	+ Resolved date: Not specified
+
+**Microsoft Azure (continued)**
+
+* Storage Services in West Europe region - 09:44 UTC on January 18, 2023 to 13:10 UTC on January 18, 2023 (5 hours)
+	+ Root cause: Planned power maintenance
+	+ Downtime period: 5 hours
+	+ Resolved date: Not specified
+
+**Summary**
+
+* Cloud Provider: Microsoft Azure
+* Services impacted: Application Gateway, Bastion, Container Apps, Database Services, ExpressRoute, HDInsight, Open AI, SQL Managed Instance, Stream Analytics, VMs, Storage Services
+* Regions impacted: Southeast Asia and West Europe
+* Root cause: Cooling failure in one Availability Zone (Application Gateway, Bastion, Container Apps, Database Services, ExpressRoute, HDInsight, Open AI, SQL Managed Instance, Stream Analytics, VMs)
+* Downtime period: 2 days, 11 hours
+* Resolved date: Not specified
+
+**Microsoft Azure (continued)**
+
+* Application Insights: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Azure Automation: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Azure Container Registry: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Azure Database for MySQL: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Azure Database for PostgreSQL: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Azure Red Hat OpenShift: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Azure Search: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Azure SQL Database: Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+* Azure Virtual Machines (VMs): Southeast Asia region - 20:19 UTC on February 7, 2023 to 04:30 UTC on February 9, 2023 (2 days, 11 hours)
+	+ Root cause: Cooling failure in one Availability Zone
+	+ Downtime period: 2 days, 11 hours
+	+ Resolved date: Not specified
+
+**Summary**
+
+* Cloud Provider: Microsoft Azure
+* Services impacted: Application Gateway, Bastion, Container Apps, Database Services, ExpressRoute, HDInsight, Open AI, SQL Managed Instance, Stream Analytics, VMs
+* Regions impacted: Southeast Asia
+* Root cause: Cooling failure in one Availability Zone (Application Gateway, Bastion, Container Apps, Database Services, ExpressRoute, HDInsight, Open AI, SQL Managed Instance, Stream Analytics, VMs)
+* Downtime period: 2 days, 11 hours
+* Resolved date: Not specified

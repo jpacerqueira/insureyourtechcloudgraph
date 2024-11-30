@@ -1,0 +1,109 @@
+Here is the information about the outages for the specified cloud providers:
+
+**Microsoft Azure**
+
+* Service: Cosmos DB
+* Region/Availability Zone: China (chinacloudapp.cn and chinacloudsites.cn domains)
+* Impact Date: 03:45 CST to 06:00 CST on April 23, 2024
+* Duration: 2 hours and 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: Full recovery was declared after verifying that traffic for the services and affected DNS zones had recovered back to pre-incident levels.
+* Resolved Date: 05:13 CST on April 23, 2024
+
+**Azure Virtual Desktop**
+* Service: Azure Virtual Desktop
+* Region/Availability Zone: China (chinacloudapp.cn and chinacloudsites.cn domains)
+* Impact Date: 03:45 CST to 06:00 CST on April 23, 2024
+* Duration: 2 hours and 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: Full recovery was declared after verifying that traffic for the services and affected DNS zones had recovered back to pre-incident levels.
+* Resolved Date: 05:13 CST on April 23, 2024
+
+**Azure Databricks**
+* Service: Azure Databricks
+* Region/Availability Zone: China (chinacloudapp.cn and chinacloudsites.cn domains)
+* Impact Date: 03:45 CST to 06:00 CST on April 23, 2024
+* Duration: 2 hours and 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: Full recovery was declared after verifying that traffic for the services and affected DNS zones had recovered back to pre-incident levels.
+* Resolved Date: 05:13 CST on April 23, 2024
+
+**Azure IoT Hub**
+* Service: Azure IoT Hub
+* Region/Availability Zone: China (chinacloudapp.cn and chinacloudsites.cn domains)
+* Impact Date: 03:45 CST to 06:00 CST on April 23, 2024
+* Duration: 2 hours and 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: Full recovery was declared after verifying that traffic for the services and affected DNS zones had recovered back to pre-incident levels.
+* Resolved Date: 05:13 CST on April 23, 2024
+
+**Azure Policy**
+* Service: Azure Policy
+* Region/Availability Zone: China (chinacloudapp.cn and chinacloudsites.cn domains)
+* Impact Date: 03:45 CST to 06:00 CST on April 23, 2024
+* Duration: 2 hours and 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: Full recovery was declared after verifying that traffic for the services and affected DNS zones had recovered back to pre-incident levels.
+* Resolved Date: 05:13 CST on April 23, 2024
+
+**Azure Kuberentes Services**
+* Service: Azure Kubernetes Services
+* Region/Availability Zone: China (chinacloudapp.cn and chinacloudsites.cn domains)
+* Impact Date: 03:45 CST to 06:00 CST on April 23, 2024
+* Duration: 2 hours and 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: Full recovery was declared after verifying that traffic for the services and affected DNS zones had recovered back to pre-incident levels.
+* Resolved Date: 05:13 CST on April 23, 2024
+
+**Azure Service Bus**
+* Service: Azure Service Bus
+* Region/Availability Zone: China (chinacloudapp.cn and chinacloudsites.cn domains)
+* Impact Date: 03:45 CST to 06:00 CST on April 23, 2024
+* Duration: 2 hours and 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: Full recovery was declared after verifying that traffic for the services and affected DNS zones had recovered back to pre-incident levels.
+* Resolved Date: 05:13 CST on April 23, 2024
+
+**Azure Logic Apps**
+* Service: Azure Logic Apps
+* Region/Availability Zone: China (chinacloudapp.cn and chinacloudsites.cn domains)
+* Impact Date: 03:45 CST to 06:00 CST on April 23, 2024
+* Duration: 2 hours and 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: Full recovery was declared after verifying that traffic for the services and affected DNS zones had recovered back to pre-incident levels.
+* Resolved Date: 05:13 CST on April 23, 2024
+
+**Azure Data Factory**
+* Service: Azure Data Factory
+* Region/Availability Zone: China (chinacloudapp.cn and chinacloudsites.cn domains)
+* Impact Date: 03:45 CST to 06:00 CST on April 23, 2024
+* Duration: 2 hours and 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: Full recovery was declared after verifying that traffic for the services and affected DNS zones had recovered back to pre-incident levels.
+* Resolved Date: 05:13 CST on April 23, 2024
+
+**Azure AI Speech Services**
+* Service: Azure AI Speech Services
+* Region/Availability Zone: China (chinacloudapp.cn and chinacloudsites.cn domains)
+* Impact Date: 03:45 CST to 06:00 CST on April 23, 2024
+* Duration: 2 hours and 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: Full recovery was declared after verifying that traffic for the services and affected DNS zones had recovered back to pre-incident levels.
+* Resolved Date: 05:13 CST on April 23, 2024
+
+**Overall Summary**
+
+The outage impacted multiple services across Azure in China, including Cosmos DB, Azure Virtual Desktop, Azure Databricks, Azure IoT Hub, Azure Policy, Azure Kubernetes Services, Azure Service Bus, Azure Logic Apps, Azure Data Factory, and Azure AI Speech Services. The outage occurred between 03:45 CST and 06:00 CST on April 23, 2024, and lasted for approximately 2 hours and 15 minutes.
+
+**Root Cause**
+
+The root cause of the outage was a configuration change through a domain registrar that resulted in a service disruption.
+
+**Recommendations**
+
+To prevent similar outages in the future, it is recommended to:
+
+* Implement additional validations to obtain nameserver verification by directly resolving the zone over internet
+* Ensure that the right people in your organization will be notified about any future service issues - by configuring Azure Service Health alerts
+
+Note: The outage was resolved on April 23, 2024, at 05:13 CST.

@@ -1,0 +1,131 @@
+Here is the information about the outage:
+
+**Google Cloud Provider**
+
+* Service: Cloud CDN
+* Region/Availability Zone: europe-west2 (London)
+* Impact Date: 2024-08-12 06:20 US/Pacific Time
+* Duration: 2 hours, 12 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes
+* Resolved Date: 2024-08-12 08:19 US/Pacific Time
+
+**Google Cloud Provider**
+
+* Service: Cloud Load Balancing
+* Region/Availability Zone: europe-west2 (London)
+* Impact Date: 2024-08-12 06:20 US/Pacific Time
+* Duration: 2 hours, 12 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes
+* Resolved Date: 2024-08-12 08:19 US/Pacific Time
+
+**Google Cloud Provider**
+
+* Service: Hybrid Connectivity
+* Region/Availability Zone: europe-west2 (London)
+* Impact Date: 2024-08-12 06:20 US/Pacific Time
+* Duration: 2 hours, 12 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes
+* Resolved Date: 2024-08-12 08:19 US/Pacific Time
+
+**Google Cloud Provider**
+
+* Service: Virtual Private Cloud (VPC)
+* Region/Availability Zone: europe-west2 (London)
+* Impact Date: 2024-08-12 06:20 US/Pacific Time
+* Duration: 2 hours, 12 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes
+* Resolved Date: 2024-08-12 08:19 US/Pacific Time
+
+**Google Workspace Services**
+
+* Service: Gmail
+* Region/Availability Zone: europe-west2 (London)
+* Impact Date: 2024-08-12 06:20 US/Pacific Time
+* Duration: 40 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes
+* Resolved Date: 2024-08-12 07:00 US/Pacific Time
+
+**Google Workspace Services**
+
+* Service: Google Calendar
+* Region/Availability Zone: europe-west2 (London)
+* Impact Date: 2024-08-12 06:20 US/Pacific Time
+* Duration: 40 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes
+* Resolved Date: 2024-08-12 07:00 US/Pacific Time
+
+**Google Workspace Services**
+
+* Service: Google Chat
+* Region/Availability Zone: europe-west2 (London)
+* Impact Date: 2024-08-12 06:20 US/Pacific Time
+* Duration: 40 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes
+* Resolved Date: 2024-08-12 07:00 US/Pacific Time
+
+**Google Workspace Services**
+
+* Service: Google Docs
+* Region/Availability Zone: europe-west2 (London)
+* Impact Date: 2024-08-12 06:20 US/Pacific Time
+* Duration: 40 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes
+* Resolved Date: 2024-08-12 07:00 US/Pacific Time
+
+**Google Workspace Services**
+
+* Service: Google Drive
+* Region/Availability Zone: europe-west2 (London)
+* Impact Date: 2024-08-12 06:20 US/Pacific Time
+* Duration: 40 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes
+* Resolved Date: 2024-08-12 07:00 US/Pacific Time
+
+**Google Workspace Services**
+
+* Service: Google Meet
+* Region/Availability Zone: europe-west2 (London)
+* Impact Date: 2024-08-12 06:20 US/Pacific Time
+* Duration: 40 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes
+* Resolved Date: 2024-08-12 07:00 US/Pacific Time
+
+**Google Workspace Services**
+
+* Service: Google Tasks
+* Region/Availability Zone: europe-west2 (London)
+* Impact Date: 2024-08-12 06:20 US/Pacific Time
+* Duration: 40 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes
+* Resolved Date: 2024-08-12 07:00 US/Pacific Time
+
+**Summary**
+
+The outage affected Google Cloud Provider services, including Cloud CDN, Cloud Load Balancing, Hybrid Connectivity, Virtual Private Cloud (VPC), Gmail, Google Calendar, Google Chat, Google Docs, Google Drive, Google Meet, and Google Tasks. The outage occurred on August 12, 2024, at 06:20 US/Pacific Time and lasted for 2 hours and 12 minutes. The root cause was a loss of power to networking equipment in the London data center.
+
+**Cloud Provider Summary**
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Cloud CDN | europe-west2 (London) | 2024-08-12 06:20 US/Pacific Time | 2 hours, 12 minutes | Loss of power to networking equipment in the London data center | 40 minutes | 2024-08-12 08:19 US/Pacific Time |
+| Google Cloud | Cloud Load Balancing | europe-west2 (London) | 2024-08-12 06:20 US/Pacific Time | 2 hours, 12 minutes | Loss of power to networking equipment in the London data center | 40 minutes | 2024-08-12 08:19 US/Pacific Time |
+| Google Cloud | Hybrid Connectivity | europe-west2 (London) | 2024-08-12 06:20 US/Pacific Time | 2 hours, 12 minutes | Loss of power to networking equipment in the London data center | 40 minutes | 2024-08-12 08:19 US/Pacific Time |
+| Google Cloud | Virtual Private Cloud (VPC) | europe-west2 (London) | 2024-08-12 06:20 US/Pacific Time | 2 hours, 12 minutes | Loss of power to networking equipment in the London data center | 40 minutes | 2024-08-12 08:19 US/Pacific Time |
+| Google Workspace | Gmail | europe-west2 (London) | 2024-08-12 06:20 US/Pacific Time | 40 minutes | Loss of power to networking equipment in the London data center | 40 minutes | 2024-08-12 07:00 US/Pacific Time |
+| Google Workspace | Google Calendar | europe-west2 (London) | 2024-08-12 06:20 US/Pacific Time | 40 minutes | Loss of power to networking equipment in the London data center | 40 minutes | 2024-08-12 07:00 US/Pacific Time |
+| Google Workspace | Google Chat | europe-west2 (London) | 2024-08-12 06:20 US/Pacific Time | 40 minutes | Loss of power to networking equipment in the London data center | 40 minutes | 2024-08-12 07:00 US/Pacific Time |
+| Google Workspace | Google Docs | europe-west2 (London) | 2024-08-12 06:20 US/Pacific Time | 40 minutes | Loss of power to networking equipment in the London data center | 40 minutes | 2024-08-12 07:00 US/Pacific Time |
+| Google Workspace | Google Drive | europe-west2 (London) | 2024-08-12 06:20 US/Pacific Time | 40 minutes | Loss of power to networking equipment in the London data center | 40 minutes | 2024-08-12 07:00 US/Pacific Time |
+| Google Workspace | Google Meet | europe-west2 (London) | 2024-08-12 06:20 US/Pacific Time | 40 minutes | Loss of power to networking equipment in the London data center | 40 minutes | 2024-08-12 07:00 US/Pacific Time |
+| Google Workspace | Google Tasks | europe-west2 (London) | 2024-08-12 06:20 US/Pacific Time | 40 minutes | Loss of power to networking equipment in the London data center | 40 minutes | 2024-08-12 07:00 US/Pacific Time |

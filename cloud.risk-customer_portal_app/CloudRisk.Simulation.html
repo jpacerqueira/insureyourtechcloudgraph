@@ -622,7 +622,7 @@
                     </div>
                     <div class="metric">
                         <h4>Expected Annual Downtime (minutes)</h4>
-                        <div class="value">${riskData.expected_annual_service_minutes_down}</div>
+                        <div class="value">${riskData.expected_annual_service_minutes_down_by_sla_tier1}</div>
                     </div>
                 </div>
                 <div class="metric-column">
@@ -638,6 +638,27 @@
                         <h4>Monthly Credit Back max. of Service</h4>
                         <div class="value">$${estimatedCreditBack}</div>
                         ${warningMessage}
+                    </div>
+                </div>
+                 <div class="metric-column">
+                    <div class="metric">
+                        <h4>Service SLA Tier 2</h4>
+                        <div class="value">${riskData.service_sla_0_99_9999_for_tier2}%</div>
+                    </div>
+                    <div class="metric">
+                        <h4>Service Credit Back Tier 2</h4>
+                        <div class="value">${riskData.percentage_service_credit_back_tier2}%</div>
+                    </div>
+                </div>
+                </div>
+                 <div class="metric-column">
+                    <div class="metric">
+                        <h4>Service SLA Tier 3</h4>
+                        <div class="value">${riskData.service_sla_0_99_9999_for_tier3}%</div>
+                    </div>
+                    <div class="metric">
+                        <h4>Service Credit Back Tier 2</h4>
+                        <div class="value">${riskData.percentage_service_credit_back_tier3}%</div>
                     </div>
                 </div>
             </div>
@@ -728,14 +749,14 @@
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const riskData = await response.json();
 
-            const maxExpectedDowntime = riskData.expected_annual_service_minutes_down;
-            const slaTier1 = riskData.service_sla_0_99_9999_for_tier1;
+            const maxExpectedDowntime =  parseFloat(riskData.expected_annual_service_minutes_down_by_sla_tier1) ;
+            const actualDowntime = parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes) ;
 
             const comparisonHTML = `
                 <h3>Comparison of Expected Downtime vs SLA Tier 1</h3>
                 <p>Max Expected Downtime: ${maxExpectedDowntime} minutes</p>
-                <p>Tier 1 SLA: ${slaTier1} minutes</p>
-                <p>${maxExpectedDowntime > slaTier1 ? 'Warning: Expected downtime exceeds Tier 1 SLA!' : 'Expected downtime is within Tier 1 SLA.'}</p>
+                <p>Tier 1 SLA: ${actualDowntime} minutes</p>
+                <p>${maxExpectedDowntime > actualDowntime ? 'Warning: Expected downtime exceeds Tier 1 SLA!' : 'Expected downtime is within Tier 1 SLA.'}</p>
             `;
             document.getElementById('outageComparison').innerHTML = comparisonHTML;
         } catch (error) {

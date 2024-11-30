@@ -463,7 +463,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                     
                     with col3:
                         st.metric("Annual Downtime (minutes)", risk_data.get("webscraper_annual_period_service_down_per_year_in_minutes", "N/A"))
-                        st.metric("By SLA Expected Annual Downtime (minutes)", risk_data.get("expected_annual_service_minutes_down", "N/A"))
+                        st.metric("By SLA Expected Annual Downtime (minutes)", risk_data.get("expected_annual_service_minutes_down_by_sla_tier1", "N/A"))
                     
                     with col4:
                         st.metric("Service SLA Tier 1 (99.99999%)", risk_data.get("service_sla_0_99_9999_for_tier1", "N/A") +"%")

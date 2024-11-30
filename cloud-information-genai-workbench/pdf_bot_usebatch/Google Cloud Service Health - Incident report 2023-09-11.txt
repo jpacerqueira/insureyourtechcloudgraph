@@ -1,0 +1,19 @@
+Here is the information about the outage:
+
+**Apigee Integrated Developer Portal**
+
+* Service: Apigee Edge and Apigee X
+* Region/Availability Zone: Global (Taiwan, Hong Kong, Tokyo, Osaka, Seoul, Mumbai, Delhi, Singapore)
+* Impact Date: 2023-09-11 04:00 US/Pacific Time
+* Duration: 8 hours, 25 minutes
+* Root Cause: Misconfiguration of internal Apigee load balancers
+* Downtime Period: Elevated 5xx responses, issues authenticating to API, and updating portals
+* Resolved Date: 2023-09-11 12:25 US/Pacific Time
+
+**Summary**
+
+The outage affected the Apigee Integrated Developer Portal, which is part of Google Cloud. The issue started on September 11, 2023, at 04:00 US/Pacific Time and lasted for 8 hours and 25 minutes. The root cause was a misconfiguration of internal Apigee load balancers.
+
+**Output Table**
+
+Google Cloud | Apigee Edge and Apigee X | Global | 2023-09-11 04:00 US/Pacific Time | 8 hours, 25 minutes | Misconfiguration of internal Apigee load balancers | Elevated 5xx responses, issues authenticating to API, and updating portals | 2023-09-11 12:25 US/Pacific Time

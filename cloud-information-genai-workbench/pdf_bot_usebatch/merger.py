@@ -167,7 +167,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Azure Storage Accounts|Azure Storage|ASA)",
             # Container Services
             r"(?i)(Azure Kubernetes Service|AKS)",
-            r"(?i)(Azure Blob Storage|Blob Storage|ABS)",
+            r"(?i)(Azure Blob Storage|Blob Storage|ABS|ADLS|ADLS2)",
             r"(?i)(Azure Logic Apps|Logic Apps|ALA)",
         ],
         "IBM": [
@@ -669,7 +669,10 @@ service_full_names = {
         "PBI": "Azure PowerBI",
         "ACDN": "Azure CDN",
         "ASA": "Azure Storage Accounts",
-        "AKS": "Azure Kubernetes Service"
+        "AKS": "Azure Kubernetes Service",
+        "ABS": "Azure Blob Storage",
+        "ADLS": "Azure Blob Storage",
+        "ADLS2": "Azure Blog Storage"
     },
     "IBM": {
         "WP": "IBM Watson Platform",
@@ -881,7 +884,7 @@ def cleanup_merge_file():
         lines = file.readlines()
     
     # Filter out lines with the specified expression
-    cleaned_lines = [line for line in lines if ( "is not mentioned in the text" or "the other cloud providers mentioned" or "The other cloud providers mentioned" or "identify other cloud providers") not in line]
+    cleaned_lines = [line for line in lines if ( "is not mentioned in the text" or "the other cloud providers mentioned" or "The other cloud providers mentioned" or "identify other cloud providers" or "No outages were reported" or "no outages were reported") not in line]
 
     # Update incorrect patterns replace "Azur e" by "Azure", "Googl e" by "Google", "AW S" by "AWS"
     cleaned_lines = [line.replace("Azur e", "Azure").replace("AzurE", "Azure").replace("Databr icks","Databricks").replace("Googl e", "Google").replace("AW S", "AWS").replace("*","").replace("+","") for line in cleaned_lines]

@@ -1,0 +1,31 @@
+Based on the provided text, I will apply the query to the following cloud providers: Google GCP, Amazon AWS is not present in the text, Microsoft Azure is not present in the text, Oracle OCI is not present in the text, IBM Cloud is not present in the text, Snowflake is not present in the text, Databricks is not present in the text, MongoDB is not present in the text, Akamai is not present in the text, and Cloudflare is not present in the text.
+
+Here are the results:
+
+**Google GCP**
+
+* Service: Google Distributed Cloud Edge
+* Region/Availability Zone: Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Seoul (asia-northeast3), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Jakarta (asia-southeast2)
+* Impact Date: 2024-08-15 10:45 US/Pacific
+* Duration: 2 hours and 6 minutes
+* Root Cause: Unknown
+* Downtime Period: 17:01 - 17:51 PDT
+* Resolved Date: 2024-08-15 17:46 US/Pacific
+
+**Summary for Google GCP**
+
+* Services impacted: Google Distributed Cloud Edge
+* Regions/Availability Zones impacted: asia-east1, asia-east2, asia-northeast1, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-southeast2
+* Impact dates: 2024-08-15
+* Duration: 2 hours and 6 minutes
+
+**Google GCP Outage Details**
+
+* Google Distributed Cloud Edge | asia-east1 | 2024-08-15 10:45 US/Pacific | 2 hours and 6 minutes | Unknown | 17:01 - 17:51 PDT | 2024-08-15 17:46 US/Pacific
+* Google Distributed Cloud Edge | asia-east2 | 2024-08-15 10:45 US/Pacific | 2 hours and 6 minutes | Unknown | 17:01 - 17:51 PDT | 2024-08-15 17:46 US/Pacific
+* Google Distributed Cloud Edge | asia-northeast1 | 2024-08-15 10:45 US/Pacific | 2 hours and 6 minutes | Unknown | 17:01 - 17:51 PDT | 2024-08-15 17:46 US/Pacific
+* Google Distributed Cloud Edge | asia-northeast3 | 2024-08-15 10:45 US/Pacific | 2 hours and 6 minutes | Unknown | 17:01 - 17:51 PDT | 2024-08-15 17:46 US/Pacific
+* Google Distributed Cloud Edge | asia-south1 | 2024-08-15 10:45 US/Pacific | 2 hours and 6 minutes | Unknown | 17:01 - 17:51 PDT | 2024-08-15 17:46 US/Pacific
+* Google Distributed Cloud Edge | asia-south2 | 2024-08-15 10:45 US/Pacific | 2 hours and 6 minutes | Unknown | 17:01 - 17:51 PDT | 2024-08-15 17:46 US/Pacific
+* Google Distributed Cloud Edge | asia-southeast1 | 2024-08-15 10:45 US/Pacific | 2 hours and 6 minutes | Unknown | 17:01 - 17:51 PDT | 2024-08-15 17:46 US/Pacific
+* Google Distributed Cloud Edge | asia-southeast2 | 2024-08-15 10:45 US/Pacific | 2 hours and 6 minutes | Unknown | 17:01 - 17:51 PDT | 2024-08-15 17:46 US/Pacific

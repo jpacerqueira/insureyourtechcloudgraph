@@ -1,0 +1,25 @@
+Here is the breakdown of the outage per cloud provider:
+
+**Google GCP**
+
+* Service: Cloud Pub/Sub
+* Region/Availability Zone: Finland (europe-north1), Santiago (southamerica-west1), Los Angeles (us-west2)
+* Impact Date: 2024-04-15 13:00 US/Pacific Time
+* Duration: 35 minutes
+* Root Cause: Bad configuration change
+* Downtime Period: 13:00 - 13:35 US/Pacific Time
+* Resolved Date: 2024-04-15 13:35 US/Pacific Time
+
+**Summary of Google GCP Outage**
+
+Google Cloud Pub/Sub customers in Finland (europe-north1), Santiago (southamerica-west1), and Los Angeles (us-west2) experienced permission denied errors for all API methods, including methods used to publish and subscribe. The outage was caused by a bad configuration change, which was immediately rolled back and the impact was fully mitigated at 13:35.
+
+**Summary of Outage**
+
+The outage occurred on April 15, 2024, starting at 13:00 US/Pacific Time and lasted for 35 minutes. The root cause of the outage was a bad configuration change, which was identified by internal monitoring tools. The outage affected Cloud Pub/Sub customers in Finland (europe-north1), Santiago (southamerica-west1), and Los Angeles (us-west2). The downtime period was from 13:00 to 13:35 US/Pacific Time, and the outage was resolved at 13:35 US/Pacific Time.
+
+Here is the output table:
+
+Google GCP | Cloud Pub/Sub | europe-north1 | 2024-04-15 13:00 | 35 minutes | Bad configuration change | 13:00 - 13:35 | 2024-04-15 13:35
+
+Note: I removed references to cloud providers not mentioned in the text, such as Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

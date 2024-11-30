@@ -1,0 +1,47 @@
+Here is the information about the outage:
+
+**Summary**
+
+The outage affected Google Cloud Service Health, specifically Vertex AI Online Prediction (Vertex Model Garden Deployments) in most regions except asia-southeast1, europe-west4, us-central1, us-east1, and us-east4.
+
+**Outage Details**
+
+**Google Cloud**
+
+* Service: Large Vertex Model Garden Deployment
+* Region/Availability Zone: All regions except asia-southeast1, europe-west4, us-central1, us-east1, and us-east4
+* Impact Date: 2024-10-22 14:08 US/Pacific
+* Duration: 13 days, 6 hours, 22 minutes
+* Root Cause: Internal storage provisioning configuration error
+* Downtime Period: Model server never became ready during deployments
+* Resolved Date: 2024-11-04 20:30 US/Pacific
+
+**Incident Report**
+
+Mini Incident Report:
+
+We apologize for the inconvenience this service disruption/outage may have caused. We would like to provide some information about this incident below.
+
+* Incident Start: 22 October 2024, 14:08
+* Duration: 13 days, 6 hours, 22 minutes
+* Affecting Services and Features: Vertex AI Online Prediction (Vertex Model Garden Deployments)
+* Regions/Zones: All regions except asia-southeast1, europe-west4, us-central1, us-east1, us-east4
+* Description:
+Deployment of large models (those that require more than 100GB of disk size) in Vertex AI Online Prediction (Vertex Model Garden Deployments) failed in most of the regions for a duration of up to 13 days, 6 hours, 22 minutes starting on Tuesday, 22 October 2024 at 14:08 US/Pacific.
+From preliminary analysis, the root cause of the issue is an internal storage provisioning configuration error that was implemented as part of a recent change.
+
+**Workaround**
+
+As a workaround, customers were able to deploy in one of the non-impacted regions noted above.
+
+**Summary of Outage**
+
+The outage started on October 22, 2024, at 14:08 US/Pacific and lasted for 13 days, 6 hours, 22 minutes. The root cause was an internal storage provisioning configuration error. The downtime period was during deployments when customers received errors stating "Model server never became ready". The outage was resolved on November 4, 2024, at 20:30 US/Pacific.
+
+**Output Table**
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Large Vertex Model Garden Deployment | All regions except asia-southeast1, europe-west4, us-central1, us-east1, and us-east4 | 2024-10-22 14:08 US/Pacific | 13 days, 6 hours, 22 minutes | Internal storage provisioning configuration error | Model server never became ready during deployments | 2024-11-04 20:30 US/Pacific |
+
+Note: The table only includes the information provided in the original text and does not include any additional information that may be available.
