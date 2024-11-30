@@ -4563,6 +4563,195 @@ Google Cloud Service | Apigee API Platform | Taiwan (asia-east1) | Wednesday, 20
 
 Note that there is no information available on other cloud providers such as Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.  
 --
+Outage Filename: ./Google Cloud Service Health - Incident report 2024-05-16.txt
+--
+I can only apply the query to the specified cloud providers based on the provided text. Here is the information for the affected cloud providers:
+
+Google GCP:
+AlloyDB for PostgreSQL
+Apigee
+Backup and DR
+Batch
+Cloud Build
+Cloud Data Fusion
+Cloud Developer Tools
+Cloud Filestore
+Cloud Load Balancing
+Cloud Machine Learning
+Cloud Memorystore
+Cloud NAT
+Cloud Run
+Cloud Workstations
+Colab Enterprise
+Contact Center AI Platform
+Dataproc Metastore
+Firebase Test Lab
+Google App Engine
+Google Cloud Composer
+
+
+Here is the information for Google GCP:
+
+Resume of outages:
+The outage started on 16 May, 2024 at 15:22 and lasted for 2 hours and 48 minutes. The root cause was a bug in maintenance automation that caused a shutdown in many locations where it was still in use.
+
+Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-----------|----------|-------------|-----------------|-------------
+16 May, 2024 | 2 hours 48 minutes | Bug in maintenance automation | Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes. | 16 May, 2024 18:10
+
+Here is the information broken down by service:
+
+AlloyDB for PostgreSQL
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Apigee
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Backup and DR
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Batch
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Cloud Build
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Cloud Data Fusion
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Cloud Developer Tools
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Cloud Filestore
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Cloud Load Balancing
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Cloud Machine Learning
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Cloud Memorystore
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Cloud NAT
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Cloud Run
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Cloud Workstations
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Colab Enterprise
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Contact Center AI Platform
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Dataproc Metastore
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Firebase Test Lab
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Google App Engine
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Google Cloud Composer
+Impact Date: 16 May, 2024
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+Resolved Date: 16 May, 2024 18:10
+
+Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+
+Here is the summary:
+
+Summary:
+- Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+- The root cause was a bug in maintenance automation.
+- All affected services were resolved by 16 May, 2024 18:10.
+
+Note that the actual downtime may have been longer than 2 hours and 48 minutes due to various factors such as network congestion or server load.  
+--
 Outage Filename: ./Google Cloud Service Health - Incident report 2024-06-10.txt
 --
 Based on the provided text, I will apply the query to the identified cloud providers.
@@ -7883,6 +8072,66 @@ Overall Summary
  Impact dates: August 15, 2024
  Duration: 17 minutes
  Root cause: Planned configuration change  
+--
+Outage Filename: ./Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-11-10.txt
+--
+I can only apply the query to Amazon AWS as it is the only cloud provider mentioned in the text.
+
+Here are the details of the outage:
+
+Amazon AWS
+
+ Services impacted: 
+	 Amazon Elastic Compute Cloud
+	 Amazon Bedrock
+	 AWS Billing Console
+	 AWS Partner Central
+	 AWS QuickSight
+	 Multiple services (including Amazon Elastic Container Service, Amazon Elastic Kubernetes Service, and Amazon Elastic Load Balancing)
+ Regions/Availability Zones:
+	 Seoul (ap-northeast-2)
+	 us-west-2
+	 us-east-1
+ Impact Date: November 10, 2024, 7:55:00 AM PST
+ Duration: 6 hours and 18 minutes
+ Root Cause: Increased API errors rates for mutatable VPC calls
+ Downtime Period: November 10, 2024, 7:55:00 AM PST to November 10, 2024, 12:13:00 PM PST (6 hours and 18 minutes)
+ Resolved Date: November 10, 2024, 12:13:00 PM PST
+
+Here is the output in a table format:
+
+Amazon AWS | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-----------|---------|------------------------|-------------|----------|---------------|-----------------|-------------
+AWS        | EC2     | ap-northeast-2         | 2024-11-10  | 6 hours  | API errors    | 2024-11-10 12:13 | 2024-11-10 12:13
+AWS        | Bedrock | us-west-2              | 2024-11-25  | 1 hour   | API errors    | 2024-11-25 04:31 | 2024-11-25 04:35
+AWS        | Billing| us-east-1              | 2024-11-06  | 2 hours  | Errors        | 2024-11-06 03:42 | 2024-11-06 04:14
+AWS        | Partner| us-west-2              | 2024-10-29  | 1 hour   | API errors    | 2024-10-29 04:13 | 2024-10-29 05:08
+AWS        | QuickSight| us-east-1              | 2024-10-25  | 2 hours  | Login errors  | 2024-10-25 12:19 | 2024-10-25 12:19
+
+Summary
+
+ Cloud Provider: Amazon AWS
+ Services impacted: 
+	 Amazon Elastic Compute Cloud
+	 Amazon Bedrock
+	 AWS Billing Console
+	 AWS Partner Central
+	 AWS QuickSight
+	 Multiple services (including Amazon Elastic Container Service, Amazon Elastic Kubernetes Service, and Amazon Elastic Load Balancing)
+ Regions/Availability Zones:
+	 Seoul (ap-northeast-2)
+	 us-west-2
+	 us-east-1
+ Impact Dates: November 10, 2024, and November 25, 2024
+ Duration: 
+	 November 10, 2024: 6 hours and 18 minutes
+	 November 25, 2024: 1 hour
+ Root Cause: Increased API errors rates for mutatable VPC calls
+ Downtime Period:
+	 November 10, 2024: 7:55:00 AM PST to 12:13:00 PM PST (6 hours and 18 minutes)
+	 November 25, 2024: 4:31:00 AM PST to 4:35:06 AM PST (1 hour)
+
+Note that the text does not provide information on other cloud providers or services impacted.  
 --
 Outage Filename: ./Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-11-25.txt
 --

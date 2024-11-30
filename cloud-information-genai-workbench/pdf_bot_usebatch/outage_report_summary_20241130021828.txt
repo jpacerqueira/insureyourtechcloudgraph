@@ -886,6 +886,20 @@ Downtime Period: The outage started on Wednesday, 2024-05-08 16:41 US/Pacific an
 
 ---
 
+Source Outage Report: Google Cloud Service Health - Incident report 2024-05-16
+Cloud Provider: GCP
+Cloud Services: Google Cloud Apigee API, Google Cloud Run, AlloyDB for PostgreSQL, Google Cloud Dataproc, Google Cloud Composer, Google Cloud Load Balancing
+Regions: 
+Availability Zones: 
+Outage Status: investigating
+Impact Level: 
+Duration: 2 hours 48 minutes
+Root Cause: Bug in maintenance automation
+Resolution: 
+Downtime Period: Multiple Google Cloud products experienced network connectivity issues and service outage of varying impact for a duration of up to 2 hours and 48 minutes.
+
+---
+
 Source Outage Report: Google Cloud Service Health - Incident report 2024-06-10
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery
@@ -1511,6 +1525,21 @@ Root Cause: Planned configuration change that started at 11:03 AM, but was rolle
 Resolution: 
 Downtime Period: Between 11:10 AM and 12:08 PM PDT (17 minutes)
 Affected Components: Amazon Simple Queue Service
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-11-10
+Cloud Provider: AWS
+Cloud Services: Amazon Bedrock, Amazon Bedrock, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Load Balancing, Amazon ElastiCache, Amazon QuickSight, rs, Amazon Elastic Kubernetes Service
+Regions: ap-northeast-2, us-west-2, us-east-1, Seoul
+Availability Zones: Seoul (ap-northeast-2)
+Outage Status: resolved
+Impact Level: 
+Duration: 6 hours and 18 minutes
+Root Cause: Increased API errors rates for mutatable VPC calls
+Resolution: 
+Downtime Period: November 10, 2024, 7:55:00 AM PST to November 10, 2024, 12:13:00 PM PST (6 hours and 18 minutes)
+Affected Components: Amazon Elastic Compute Cloud
 
 ---
 
