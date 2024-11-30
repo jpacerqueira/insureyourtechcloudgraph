@@ -76,14 +76,14 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Amazon RDS|RDS|Relational Database Service)",
             r"(?i)(Amazon Aurora Serverless|Aurora|AAS)",
             # Compute Services
-            r"(?i)(EC2 Instance Connect|Instance Connect|EIC)",
-            r"(?i)(Amazon EC2|EC2|Elastic Compute Cloud)",
+            r"(?i)(Amazon EC2 Instance Connect|EC2 Instance Connect|Instance Connect|EIC)",
+            r"(?i)(Aazon Elastic Compute Cloud|Amazon EC2|EC2|Elastic Compute Cloud)",
             r"(?i)(Amazon ECS|ECS|Elastic Container Service)",
             # Storage Services
-            r"(?i)(Amazon EFS|EFS|Elastic File System)",
-            r"(?i)(Amazon EBS|EBS|Elastic Block Store)",
+            r"(?i)(Amazon Elastic File System|Amazon EFS|EFS|Elastic File System)",
+            r"(?i)(Amazon Elastic Block Store|Amazon EBS|EBS|Elastic Block Store)",
             # Load Balancing
-            r"(?i)(Amazon ELB|ELB|Elastic Load Balancing)",
+            r"(?i)(Amazon Elastic Load Balancing|Amazon ELB|ELB|Elastic Load Balancing)",
             # Analytics Services
             r"(?i)(Amazon EMR|EMR|Elastic MapReduce)",
             r"(?i)(Amazon EMR Serverless|EMR Serverless)",
@@ -91,13 +91,14 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Amazon FinSpace|FinSpace)",
             r"(?i)(Amazon QuickSight|QuickSight|QS)",
             # Serverless
-            r"(?i)(AWS Lambda|Lambda|λ)",
-            r"(?i)(AWS Step Functions|Step Functions|SF)",
+            r"(?i)(Amazon AWS Lambda|AWS Lambda|Lambda|λ)",
+            r"(?i)(Amazon AWS Step Functions|AWS Step Functions|Step Functions|SF)",
             # Data Processing
             r"(?i)(Amazon Redshift|Redshift|RS)",
-            r"(?i)(AWS Glue|Glue)",
+            r"(?i)(Amazon AWS Glue|AWS Glue|Glue)",
             # Container Services
-            r"(?i)(Amazon EKS|EKS|Elastic Kubernetes Service)",
+            r"(?i)(Amazon AWS Fargate|AWS Fargate|Fargate)",
+            r"(?i)(Amazon Elastic Kubernetes Service|Amazon EKS|EKS|Elastic Kubernetes Service)",
         ],
         "GCP": [
             # AI/ML Services
@@ -134,7 +135,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         ],
         "Azure": [
             # Identity Services
-            r"(?i)(Azure Active Directory|Azure AD|AAD)",
+            r"(?i)(Azure Active Directory AAD|Azure Active Directory|Azure AD|AAD|AD)",
             r"(?i)(Microsoft Entra ID|Entra ID|EID)",
             r"(?i)(Azure Active Directory B2C|Azure AD B2C|AAD B2C)",
             # AI/ML Services
@@ -582,6 +583,7 @@ service_full_names = {
         "EMR": "Amazon Elastic MapReduce",
         "EC": "Amazon ElastiCache",
         "QS": "Amazon QuickSight",
+        "Fargate": "Amazon AWS Fargate",
         "λ": "AWS Lambda",
         "SF": "AWS Step Functions",
         "RS": "Amazon Redshift",
@@ -859,7 +861,7 @@ def cleanup_merge_file():
     cleaned_lines = [line for line in lines if ( "is not mentioned in the text" or "the other cloud providers mentioned" or "The other cloud providers mentioned" or "identify other cloud providers") not in line]
 
     # Update incorrect patterns replace "Azur e" by "Azure", "Googl e" by "Google", "AW S" by "AWS"
-    cleaned_lines = [line.replace("Azur e", "Azure").replace("AzurE", "Azure").replace("Googl e", "Google").replace("AW S", "AWS").replace("*","").replace("+","") for line in cleaned_lines]
+    cleaned_lines = [line.replace("Azur e", "Azure").replace("AzurE", "Azure").replace("Databr icks","Databricks").replace("Googl e", "Google").replace("AW S", "AWS").replace("*","").replace("+","") for line in cleaned_lines]
     
     with open(file_path, 'w') as file:
         file.writelines(cleaned_lines)

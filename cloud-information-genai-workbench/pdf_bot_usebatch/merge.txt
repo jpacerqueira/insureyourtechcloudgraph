@@ -442,7 +442,7 @@ Microsoft Azure
  Downtime Period: The service experienced DNS resolution failures when interacting with impacted storage accounts.
  Resolved Date: Not specified
 
- Service: Azure Databr icks
+ Service: Azure Databricks
  Region/Availability Zone: Australia East, Canada Central, Canada East, Central US, East US, East US 2, J apan East, South Central US, U AE Nor th, W est US, and/or West US 2
  Impact Date: Between 00:50 UT C and 12:30 UT C on November 13, 2024
  Duration: 11 hours and 40 minutes
@@ -460,41 +460,7 @@ Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | R
 Microsoft Azure | Azure Log Analy tics | West Eur ope, Southeast Asia, and/or K orea Central r egions | November 13, 2024 | 11 hours and 40 minutes | Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts | The service was unavailable to access, but data stored in these storage accounts was not impacted. | Not specified
 Microsoft Azure | Azure Container R egistr y | East US r egion | November 13, 2024 | 11 hours and 40 minutes | Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts | The service experienced intermittent 5XX errors while trying to pull images from the registry. | Not specified
 Microsoft Azure | Azure Storage | Australia East, Canada Central, Canada East, Central US, East US, East US 2, J apan East, South Central US, U AE Nor th, West US, and/or W est US 2 | November 13, 2024 | 11 hours and 40 minutes | Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts | The service experienced DNS resolution failures when interacting with impacted storage accounts. | Not specified
-Microsoft Azure | Azure Databr icks | Australia East, Canada Central, Canada East, Central US, East US, East US 2, J apan East, South Central US, U AE Nor th, W est US, and/or West US 2 | November 13, 2024 | 11 hours and 40 minutes | Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts | The service experienced failures with launching clusters and serverless compute resources. | Not specified  
---
-Outage Filename: ./Azure_status_-_29_October_2024.txt
---
-After analyzing the text, I found that the following cloud providers were identified: Microsoft Azure.
-
-Unfortunately, I do not have enough information to identify other cloud providers such as Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare. The text only mentions Microsoft Azure.
-
-However, I can provide you with the information about the outages in Microsoft Azure:
-
-Microsoft Azure Outages
-
-Unfortunately, I do not have enough information to identify specific services impacted by outages in Microsoft Azure. However, I can provide you with a summary of the outages:
-
- Service: Azure Advisor
- Region/Availability Zone: Not specified
- Impact Date: 32 seconds ago
- Duration: Not specified
- Root Cause: Not specified
- Downtime Period: Not specified
- Resolved Date: Not specified
-
-Unfortunately, I do not have enough information to provide a detailed breakdown of the outages per service impacted. However, I can provide you with an output table that summarizes the available information:
-
-Microsoft Azure Outage Summary
-
-| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Microsoft Azure | Azure Advisor |  | 32 seconds ago | Not specified | Not specified | Not specified | Not specified |
-
-Summary of Outages
-
-Unfortunately, I do not have enough information to provide a summary of the outages. However, I can suggest that you check the official Microsoft Azure status page for more information about the current and past outages.
-
-Please note that this response is limited by the availability of information in the provided text. If you need more detailed information, please contact Microsoft Azure support or check their official website for more information.  
+Microsoft Azure | Azure Databricks | Australia East, Canada Central, Canada East, Central US, East US, East US 2, J apan East, South Central US, U AE Nor th, W est US, and/or West US 2 | November 13, 2024 | 11 hours and 40 minutes | Unint entional deletion of Traffic Manager pr ofiles for the imp acted st orage accounts | The service experienced failures with launching clusters and serverless compute resources. | Not specified  
 --
 Outage Filename: ./Azure_status_history_Microsoft_Azure_p10_2020.txt
 --
@@ -3598,6 +3564,32 @@ Overall Summary:
  Downtime Period: From 01:50 to 02:23
  Resolved Date: 2024-05-17 01:45  
 --
+Outage Filename: ./Google Cloud Service Health - Incident 2024-05-18.txt
+--
+Based on the provided text, I will apply the query to the following cloud providers: Google GCP and Microsoft Azure.
+
+Google GCP
+
+ Service: Google Cloud Tasks
+ Region/Availability Zone: us-east1
+ Impact Date: 2024-05-18 07:44 US/Pacific
+ Duration: 2 hours 24 minutes
+ Root Cause: Increased latency for create task calls in us-east1 region
+ Downtime Period: 2024-05-18 09:52 - 2024-05-18 11:08
+ Resolved Date: 2024-05-18 10:36 US/Pacific
+
+Microsoft Azure
+
+No information is available for Microsoft Azure in the provided text.
+
+Summary of impacted cloud providers, services, regions, availability zones, and duration
+
+Google GCP was impacted by Google Cloud Tasks in us-east1 region. The outage started on May 18, 2024, at 07:44 US/Pacific and lasted for 2 hours and 24 minutes. The downtime period was from May 18, 2024, at 09:52 to May 18, 2024, at 11:08.
+
+Output table
+
+Google GCP | Google Cloud Tasks | us-east1 | 2024-05-18 07:44 US/Pacific | 2 hours 24 minutes | Increased latency for create task calls in us-east1 region | 2024-05-18 09:52 - 2024-05-18 11:08 | 2024-05-18 10:36 US/Pacific  
+--
 Outage Filename: ./Google Cloud Service Health - Incident 2024-05-29.txt
 --
 I can only apply the query to Google Cloud Service as it is the only cloud provider mentioned in the text.
@@ -5712,6 +5704,46 @@ Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | R
 Google Cloud | AppEngine Flexible | asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, europe-central2, europe-west1, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central1, us-east1, us-east4, us-west1, us-west2, us-west3, us-west4 | 2024-10-09 14:57 | 9 hours and 21 minutes | None at this time | 9 hours and 21 minutes | 2024-10-09 17:18
 Google Cloud | AppEngine Flexible | asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, europe-central2, europe-west1, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central1, us-east1, us-east4, us-west1, us-west2, us-west3, us-west4 | 2024-10-09 18:27 | 0 hours and 41 minutes | The issue with Google AppEngine Flexible has been resolved for all affected users as of Wednesday, 2024-10-09 17:18 US/Pacific Time. | 0 hours and 41 minutes | 2024-10-09 17:18  
 --
+Outage Filename: ./Google Cloud Service Health - Incident report 2024-10-23.txt
+--
+Here is the information about the outage:
+
+Google Cloud
+
+The incident began on October 23, 2024, at 18:22 US/Pacific Time and ended on October 24, 2024, at 02:01 US/Pacific Time.
+
+The impacted services were:
+- Google Cloud Dataflow
+- Google Cloud Dataproc
+- Google Cloud Pub/Sub
+- Vertex AI Batch Prediction
+- Cloud SQL
+
+The root cause of the outage was a misconfiguration and triggered by the outage in europe-west3-c. To prevent a recurrence of this issue, engineers have hardened this component against zonal outages in europe-west3.
+
+The downtime period for each service was:
+- Google Cloud Dataflow: 19:05 US/Pacific Time to 23:55 US/Pacific Time (6 hours and 50 minutes)
+- Google Cloud Dataproc: 19:12 US/Pacific Time to 22:00 US/Pacific Time (2 hours and 48 minutes)
+- Google Cloud Pub/Sub: 18:25 US/Pacific Time to 18:41 US/Pacific Time (16 minutes) and elevated latency for push subscriptions from 22:57 US/Pacific Time to 00:11 US/Pacific Time (1 hour and 14 minutes)
+- Vertex AI Batch Prediction: 19:45 US/Pacific Time to 23:30 US/Pacific Time (3 hours and 45 minutes)
+- Cloud SQL: 18:35 US/Pacific Time to 24 October 2024, 23:28 US/Pacific Time (5 hours and 53 minutes)
+
+The outage was marked as resolved on October 24, 2024.
+
+Summary
+
+Google Cloud was impacted by an outage that began on October 23, 2024, at 18:22 US/Pacific Time and ended on October 24, 2024, at 02:01 US/Pacific Time. The services affected were Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Pub/Sub, Vertex AI Batch Prediction, and Cloud SQL.
+
+Output Table
+
+Google Cloud | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-----------|--------|-----------------------|------------|----------|-------------|---------------|-------------
+Google Cloud | Dataflow | europe-west3-c | 2024-10-23 19:05 | 6 hours 50 minutes | Misconfiguration and zonal outage in europe-west3-c | 2024-10-24 02:01 | 2024-10-24 02:01
+Google Cloud | Dataproc | europe-west3-c | 2024-10-23 19:12 | 2 hours 48 minutes | Misconfiguration and zonal outage in europe-west3-c | 2024-10-24 02:01 | 2024-10-24 02:01
+Google Cloud | Pub/Sub | europe-west3-c | 2024-10-23 18:25 | 16 minutes | Misconfiguration and zonal outage in europe-west3-c | 2024-10-24 02:01 | 2024-10-24 02:01
+Google Cloud | Vertex AI Batch Prediction | europe-west3-c | 2024-10-23 19:45 | 3 hours 45 minutes | Misconfiguration and zonal outage in europe-west3-c | 2024-10-24 02:01 | 2024-10-24 02:01
+Google Cloud | SQL | europe-west3 | 2024-10-23 18:35 | 5 hours 53 minutes | Misconfiguration and zonal outage in europe-west3-c | 2024-10-24 02:01 | 2024-10-24 02:01  
+--
 Outage Filename: ./Google Cloud Service Health - Incident report 2024-10-29.txt
 --
 Here is the information about the outage:
@@ -6031,6 +6063,53 @@ Summary
 The outage affected IBM Cloud's Unplanned VSI Migrations service in TOK02 region/availability zone. The incident started on 15 September 2020 at 00:40 UTC and lasted for 1 day, 3 hours, and 31 minutes. The root cause was an unintended procedural step for a future planned maintenance. The downtime period was caused by the VSIs being powered down and in a transition state. The outage was resolved on 15 September 2020 at 04:11 UTC.
 
 No other cloud providers were mentioned in the text, so there is no additional information to display.  
+--
+Outage Filename: ./IBM Cloud Incident Report - CIR_PRB0054540 - ID_0002665_FINAL.txt
+--
+Here is the information about the outage:
+
+IBM Cloud
+
+The IBM Cloud service was impacted on 28 October 2020 at 23:05 UTC.
+
+ Service: WDC04
+ Region/Availability Zone: Not specified
+ Duration: 3 hours and 3 minutes
+ Root Cause: Rare software defect triggered by physical link to mbr01b.wdc04
+ Downtime Period: 28 October 2020 at 23:05 - 02:08 UTC
+ Resolved Date: 29 October 2020 at 02:08 UTC
+
+Upgrade Software
+
+The IBM Cloud service was upgraded on 30 March 2021.
+
+ Service: WDC04
+ Region/Availability Zone: Not specified
+ Duration: Not specified
+ Root Cause: Upgrade software to mitigate future issues
+ Downtime Period: Not specified
+ Resolved Date: Not specified
+
+IBM Cloud Services
+
+The IBM Cloud Services service was impacted on 28 October 2020 at 23:05 UTC.
+
+ Service: WDC04
+ Region/Availability Zone: Not specified
+ Duration: 3 hours and 3 minutes
+ Root Cause: Rare software defect triggered by physical link to mbr01b.wdc04
+ Downtime Period: 28 October 2020 at 23:05 - 02:08 UTC
+ Resolved Date: 29 October 2020 at 02:08 UTC
+
+Summary
+
+The IBM Cloud service was impacted on 28 October 2020 at 23:05 UTC due to a rare software defect triggered by a physical link to mbr01b.wdc04. The outage lasted for 3 hours and 3 minutes, and the downtime period started at 23:05 UTC and ended at 02:08 UTC.
+
+Output Table
+
+IBM Cloud | WDC04 | Not specified | 28 October 2020 | 3 hours 3 minutes | Rare software defect triggered by physical link to mbr01b.wdc04 | 28 October 2020 23:05 - 02:08 | 29 October 2020 02:08
+
+IBM Cloud Services | WDC04 | Not specified | 28 October 2020 | 3 hours 3 minutes | Rare software defect triggered by physical link to mbr01b.wdc04 | 28 October 2020 23:05 - 02:08 | 29 October 2020 02:08  
 --
 Outage Filename: ./IBM Cloud Incident Report - CIR_PRB0055726 - ID_0002411_Final.txt
 --

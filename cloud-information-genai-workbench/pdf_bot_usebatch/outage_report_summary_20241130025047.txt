@@ -117,7 +117,7 @@ Affected Components: Amazon AWS (US-EAST-1 Region)
 
 Source Outage Report: 20240730-Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region
 Cloud Provider: AWS
-Cloud Services: abr, Amazon CloudWatch, Amazon Elastic Container Service, Amazon Elastic Container Service, Direct Connect, Amazon ElastiCache, AWS Lambda, rs, Amazon Redshift, Amazon AWS Glue
+Cloud Services: abr, Amazon CloudWatch, Amazon Elastic Container Service, Amazon Elastic Container Service, Direct Connect, Amazon ElastiCache, AWS Lambda, rs, Amazon Redshift, Amazon AWS Glue, Amazon AWS Fargate
 Regions: US-EAST-1, Northern Virginia
 Availability Zones: 
 Outage Status: investigating
@@ -131,7 +131,7 @@ Downtime Period: 7 hours and 52 minutes
 
 Source Outage Report: 20241110-Service health - Nov 25, 2024 _ AWS Health Dashboard _ Global
 Cloud Provider: AWS
-Cloud Services: abr, Amazon Elastic Container Service, Direct Connect, Amazon ElastiCache, rs, Amazon Elastic Kubernetes Service
+Cloud Services: abr, Amazon Elastic Container Service, Direct Connect, Amazon ElastiCache, rs, Amazon AWS Fargate, Amazon Elastic Kubernetes Service
 Regions: Seoul (ap-northeast-2), ap-northeast-2, Seoul
 Availability Zones: Not specified
 Outage Status: investigating
@@ -140,7 +140,7 @@ Duration: 3 hours and 18 minutes
 Root Cause: Database component causing the impairment
 Resolution: 
 Downtime Period: 3 hours and 18 minutes
-Affected Components: ALB, Amazon Elastic Container Service, Amazon Elastic Kubernetes Service, Fargate
+Affected Components: ALB, Amazon Elastic Container Service, Amazon Elastic Kubernetes Service, Amazon AWS Fargate
 
 ---
 
@@ -161,7 +161,7 @@ Affected Components: Amazon Elastic Compute Cloud
 
 Source Outage Report: Azure status history _ 13 November 2024 - Preliminary Incident Report  _ Microsoft Azure
 Cloud Provider: Azure
-Cloud Services: Azure Functions, Azure Functions, Azure Storage Accounts
+Cloud Services: ad, Azure Databricks, Azure Functions, Azure Functions, Azure Storage Accounts
 Regions: various
 Availability Zones: West Eur ope, Southeast Asia, and/or K orea Central r egions
 Outage Status: investigating
@@ -173,23 +173,9 @@ Downtime Period: The service was unavailable to access, but data stored in these
 
 ---
 
-Source Outage Report: Azure_status_-_29_October_2024
-Cloud Provider: AWS
-Cloud Services: abr, ebs, Direct Connect, rs
-Regions: 
-Availability Zones: Not specified
-Outage Status: investigating
-Impact Level: service-specific
-Duration: Not specified
-Root Cause: Not specified
-Resolution: 
-Downtime Period: Not specified
-
----
-
 Source Outage Report: Azure_status_history_Microsoft_Azure_p10_2020
 Cloud Provider: Azure
-Cloud Services: Azure SQL Database, SQL DB, ams, Azure Functions
+Cloud Services: ad, Azure SQL Database, SQL DB, ams, Azure Functions
 Regions: 
 Availability Zones: Japan East
 Outage Status: investigating
@@ -203,7 +189,7 @@ Downtime Period: Between 09:24 and 11:15 UTC on July 1, 2020
 
 Source Outage Report: Azure_status_history_Microsoft_Azure_p10_2021
 Cloud Provider: Azure
-Cloud Services: Azure AD, Azure Cosmos DB, Azure Functions, Azure Functions
+Cloud Services: Azure AD, ad, Azure Cosmos DB, Azure Functions, Azure Functions
 Regions: the, a version update of a component that controls network traffic routing between Azure
 Availability Zones: West US (multiple availability zones)
 Outage Status: resolved
@@ -247,7 +233,7 @@ Downtime Period: 19:10 - 21:32 UTC
 
 Source Outage Report: Azure_status_history_Microsoft_Azure_p13_2019
 Cloud Provider: Azure
-Cloud Services: Azure Databricks, Azure Functions, Azure Functions, Azure CDN
+Cloud Services: ad, Azure Databricks, Azure Functions, Azure Functions, Azure CDN
 Regions: 
 Availability Zones: Not specified
 Outage Status: resolved
@@ -321,7 +307,7 @@ Downtime Period: Regional failover for accounts with multiple regions enabled
 
 Source Outage Report: Azure_status_history_Microsoft_Azure_p7_2021
 Cloud Provider: Azure
-Cloud Services: Azure Functions, Azure CDN
+Cloud Services: ad, Azure Functions, Azure CDN
 Regions: 
 Availability Zones: East US, Japan East, Japan West, Korea South, Korea Central, and West US regions
 Outage Status: investigating
@@ -349,7 +335,7 @@ Downtime Period: 16 minutes
 
 Source Outage Report: Azure_status_history_Microsoft_Azure_p9_2020
 Cloud Provider: Azure
-Cloud Services: Azure Functions
+Cloud Services: ad, Azure Functions
 Regions: the, a version update of a component that controls network traffic routing between Azure
 Availability Zones: 
 Outage Status: resolved
@@ -579,6 +565,20 @@ Duration: 2 hours and 45 minutes (from 01:30 to 02:23)
 Root Cause: Increased latency for create task calls in us-east1
 Resolution: 
 Downtime Period: From 01:50 to 02:23
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-05-18
+Cloud Provider: Azure
+Cloud Services: 
+Regions: us-east1
+Availability Zones: us-east1
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours 24 minutes
+Root Cause: Increased latency for create task calls in us-east1 region
+Resolution: 
+Downtime Period: 2024-05-18 09:52 - 2024-05-18 11:08
 
 ---
 
@@ -1077,6 +1077,20 @@ Affected Components: Google Cloud VertexAI
 
 ---
 
+Source Outage Report: Google Cloud Service Health - Incident report 2024-10-23
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Cloud SQL, Google Cloud Dataproc, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Dataflow
+Regions: 
+Availability Zones: 
+Outage Status: resolved
+Impact Level: 
+Duration: 6
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
 Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine
@@ -1177,6 +1191,20 @@ Root Cause: An unintended procedural step for a future planned maintenance
 Resolution: 
 Downtime Period: The VSIs were powered down and were in a transition state, causing the migrations to be halted.
 Affected Components: Unplanned VSI migrations in TOK02
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - CIR_PRB0054540 - ID_0002665_FINAL
+Cloud Provider: IBM
+Cloud Services: 
+Regions: 
+Availability Zones: Not specified
+Outage Status: investigating
+Impact Level: 
+Duration: 3 hours and 3 minutes
+Root Cause: Rare software defect triggered by physical link to mbr01b.wdc04
+Resolution: 
+Downtime Period: 28 October 2020 at 23:05 - 02:08 UTC
 
 ---
 
@@ -1603,7 +1631,7 @@ Downtime Period: Until normal operations were restored to the Kinesis Data Strea
 
 Source Outage Report: Supported_Resource_Types_through_Azure_Resource_Health_-_Azure_Service_Health_Microsoft_Learn_02.Nov.2024
 Cloud Provider: Azure
-Cloud Services: aDB, Azure Cosmos DB, Azure Batch
+Cloud Services: aD, aDB, Azure Cosmos DB, Azure Batch
 Regions: 
 Availability Zones: Not specified
 Outage Status: resolved

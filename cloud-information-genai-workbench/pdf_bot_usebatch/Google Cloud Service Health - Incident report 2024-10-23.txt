@@ -1,0 +1,37 @@
+Here is the information about the outage:
+
+**Google Cloud**
+
+The incident began on October 23, 2024, at 18:22 US/Pacific Time and ended on October 24, 2024, at 02:01 US/Pacific Time.
+
+The impacted services were:
+- Google Cloud Dataflow
+- Google Cloud Dataproc
+- Google Cloud Pub/Sub
+- Vertex AI Batch Prediction
+- Cloud SQL
+
+The root cause of the outage was a misconfiguration and triggered by the outage in europe-west3-c. To prevent a recurrence of this issue, engineers have hardened this component against zonal outages in europe-west3.
+
+The downtime period for each service was:
+- Google Cloud Dataflow: 19:05 US/Pacific Time to 23:55 US/Pacific Time (6 hours and 50 minutes)
+- Google Cloud Dataproc: 19:12 US/Pacific Time to 22:00 US/Pacific Time (2 hours and 48 minutes)
+- Google Cloud Pub/Sub: 18:25 US/Pacific Time to 18:41 US/Pacific Time (16 minutes) and elevated latency for push subscriptions from 22:57 US/Pacific Time to 00:11 US/Pacific Time (1 hour and 14 minutes)
+- Vertex AI Batch Prediction: 19:45 US/Pacific Time to 23:30 US/Pacific Time (3 hours and 45 minutes)
+- Cloud SQL: 18:35 US/Pacific Time to 24 October 2024, 23:28 US/Pacific Time (5 hours and 53 minutes)
+
+The outage was marked as resolved on October 24, 2024.
+
+**Summary**
+
+Google Cloud was impacted by an outage that began on October 23, 2024, at 18:22 US/Pacific Time and ended on October 24, 2024, at 02:01 US/Pacific Time. The services affected were Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Pub/Sub, Vertex AI Batch Prediction, and Cloud SQL.
+
+**Output Table**
+
+Google Cloud | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-----------|--------|-----------------------|------------|----------|-------------|---------------|-------------
+Google Cloud | Dataflow | europe-west3-c | 2024-10-23 19:05 | 6 hours 50 minutes | Misconfiguration and zonal outage in europe-west3-c | 2024-10-24 02:01 | 2024-10-24 02:01
+Google Cloud | Dataproc | europe-west3-c | 2024-10-23 19:12 | 2 hours 48 minutes | Misconfiguration and zonal outage in europe-west3-c | 2024-10-24 02:01 | 2024-10-24 02:01
+Google Cloud | Pub/Sub | europe-west3-c | 2024-10-23 18:25 | 16 minutes | Misconfiguration and zonal outage in europe-west3-c | 2024-10-24 02:01 | 2024-10-24 02:01
+Google Cloud | Vertex AI Batch Prediction | europe-west3-c | 2024-10-23 19:45 | 3 hours 45 minutes | Misconfiguration and zonal outage in europe-west3-c | 2024-10-24 02:01 | 2024-10-24 02:01
+Google Cloud | SQL | europe-west3 | 2024-10-23 18:35 | 5 hours 53 minutes | Misconfiguration and zonal outage in europe-west3-c | 2024-10-24 02:01 | 2024-10-24 02:01
