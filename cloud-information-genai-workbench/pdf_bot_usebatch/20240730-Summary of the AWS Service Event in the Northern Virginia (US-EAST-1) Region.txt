@@ -1,39 +1,142 @@
-Here is the information about the outage for the specified cloud providers:
+Here is the breakdown of the outage per cloud provider:
 
 **Amazon AWS**
 
-* Outage duration: 7 hours and 52 minutes
-* Start time of outage: July 30th, 2024 at 2:45 PM PDT
-* End time of outage: July 31st, 2024 at 9:37 PM PDT
-* Impacted services:
-	+ CloudWatch Logs (Northern Virginia US-EAST-1 Region)
-	+ Amazon Data Firehose (Northern Virginia US-EAST-1 Region)
-	+ Event framework that publishes Amazon S3 events (Northern Virginia US-EAST-1 Region)
-	+ Amazon Elastic Container Service (ECS) (Northern Virginia US-EAST-1 Region)
-	+ AWS Lambda (Northern Virginia US-EAST-1 Region)
-	+ Amazon Redshift (Northern Virginia US-EAST-1 Region)
-	+ AWS Glue (Northern Virginia US-EAST-1 Region)
-* Root cause of outage: Degradation of one of the internally-used cells of the Amazon Kinesis Data Streams service
-* Downtime period: 7 hours and 52 minutes
+* Service: Amazon Data Firehose
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 2:38 AM PDT on August 1st
+* Resolved Date: 9:37 PM PDT
 
-**Amazon AWS**
+* Service: CloudWatch Logs
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 7:21 PM PDT
+* Resolved Date: 9:37 PM PDT
 
-* Outage duration: 2 hours and 52 minutes
-* Start time of outage: July 30th, 2024 at 5:39 PM PDT
-* End time of outage: July 31st, 2024 at 8:31 PM PDT
-* Impacted services:
-	+ Managed Workflows for Apache Airflow (MWAA) and AWS Glue customers (Northern Virginia US-EAST-1 Region)
-* Root cause of outage: Fargate task launch errors and CloudWatch Logs availability improvement
-* Downtime period: 2 hours and 52 minutes
+* Service: AWS Lambda
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 7:21 PM PDT
+* Resolved Date: 9:37 PM PDT
 
-**Amazon AWS**
+* Service: Amazon Elastic Container Service (ECS)
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 7:21 PM PDT
+* Resolved Date: 9:37 PM PDT
 
-* Outage duration: 4 hours and 38 minutes
-* Start time of outage: July 30th, 2024 at 2:45 PM PDT
-* End time of outage: August 1st, 2024 at 6:23 AM PDT
-* Impacted services:
-	+ S3 event delivery (Northern Virginia US-EAST-1 Region)
-* Root cause of outage: Degradation of one of the internally-used cells of the Amazon Kinesis Data Streams service
-* Downtime period: 4 hours and 38 minutes
+* Service: AWS Glue
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 7:21 PM PDT
+* Resolved Date: 9:37 PM PDT
 
-Note that I have removed Google Cloud Platform, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare from the list as they were not mentioned in the original text.
+**Amazon AWS (continued)**
+
+* Service: Amazon Redshift
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 7:21 PM PDT
+* Resolved Date: 9:37 PM PDT
+
+**Amazon AWS (continued)**
+
+* Service: event framework that publishes Amazon S3 events
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 7:21 PM PDT
+* Resolved Date: 9:37 PM PDT
+
+**Amazon AWS (continued)**
+
+* Service: AWS Lambda
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 7:21 PM PDT
+* Resolved Date: 9:37 PM PDT
+
+**Amazon AWS (continued)**
+
+* Service: CloudWatch Logs
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 7:21 PM PDT
+* Resolved Date: 9:37 PM PDT
+
+**Amazon AWS (continued)**
+
+* Service: Amazon Elastic Container Service (ECS)
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 7:21 PM PDT
+* Resolved Date: 9:37 PM PDT
+
+**Amazon AWS (continued)**
+
+* Service: AWS Glue
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 7:21 PM PDT
+* Resolved Date: 9:37 PM PDT
+
+**Amazon AWS (continued)**
+
+* Service: Amazon Redshift
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 7:21 PM PDT
+* Resolved Date: 9:37 PM PDT
+
+**Amazon AWS (continued)**
+
+* Service: event framework that publishes Amazon S3 events
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: 2:45 PM PDT
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 7:21 PM PDT
+* Resolved Date: 9:37 PM PDT
+
+**Summary**
+
+The outage affected services in the Northern Virginia (US-EAST-1) Region. The impacted services included CloudWatch Logs, Amazon Data Firehose, event framework that publishes Amazon S3 events, Amazon Elastic Container Service (ECS), AWS Lambda, Amazon Redshift, and AWS Glue.
+
+**Overall Summary**
+
+Amazon AWS experienced an outage in the Northern Virginia (US-EAST-1) Region. The outage was caused by a degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service. The outage lasted for 6 hours and 52 minutes, with the downtime period starting at 2:38 AM PDT on August 1st and ending at 9:37 PM PDT.
+
+**Output Table**
+
+Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+Amazon AWS | CloudWatch Logs | Northern Virginia (US-EAST-1) | 2:45 PM PDT | 6 hours and 52 minutes | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | 7:21 PM PDT | 9:37 PM PDT
+Amazon AWS | Amazon Data Firehose | Northern Virginia (US-EAST-1) | 2:45 PM PDT | 6 hours and 52 minutes | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | 7:21 PM PDT | 9:37 PM PDT
+Amazon AWS | event framework that publishes Amazon S3 events | Northern Virginia (US-EAST-1) | 2:45 PM PDT | 6 hours and 52 minutes | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | 7:21 PM PDT | 9:37 PM PDT
+Amazon AWS | Amazon Elastic Container Service (ECS) | Northern Virginia (US-EAST-1) | 2:45 PM PDT | 6 hours and 52 minutes | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | 7:21 PM PDT | 9:37 PM PDT
+Amazon AWS | AWS Lambda | Northern Virginia (US-EAST-1) | 2:45 PM PDT | 6 hours and 52 minutes | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | 7:21 PM PDT | 9:37 PM PDT
+Amazon AWS | Amazon Redshift | Northern Virginia (US-EAST-1) | 2:45 PM PDT | 6 hours and 52 minutes | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | 7:21 PM PDT | 9:37 PM PDT
+Amazon AWS | AWS Glue | Northern Virginia (US-EAST-1) | 2:45 PM PDT | 6 hours and 52 minutes | Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service | 7:21 PM PDT | 9:37 PM PDT

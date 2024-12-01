@@ -1,33 +1,54 @@
-Here is the summary of outages for the specified cloud providers:
+Here is the information about the outages for the specified cloud providers:
 
 **Microsoft Azure**
 
-* Outage: Between 17:21 and 17:37 UTC on March 9, 2021
-* Impacted services: Traffic into and out of Argentina and Uruguay
-* Regions/Availability Zones: Argentina and Uruguay
-* Root cause: Regional networking fiber cut
-* Duration: 16 minutes
-* Downtime period: 16 minutes
-* Marked as resolved: After deploying new VMs, mitigations were completed by 01:50 UTC on March 19, 2021
+* Service: Key Vault
+* Region/Availability Zone: West Europe, North Europe
+* Impact Date: 18 March 2021 23:00 UTC
+* Duration:
+	+ 19 March 2021 01:50 UTC (mitigation completed)
+	+ 19 March 2021 02:15 UTC (West Europe fully recovered)
+	+ 19 March 2021 00:00 UTC (North Europe fully recovered)
+* Root Cause: Network resource exhaustion due to a surge of requests to the Data Plane for a specific type of resource, caused by a code defect and under-provisioning in West Europe and North Europe.
+* Downtime Period: 18-19 March 2021
+* Resolved Date: 19 March 2021
 
-**Microsoft Azure (Key Vault)**
+**Microsoft Azure**
 
-* Outage: Between 23:00 and 23:10 UTC on March 18, 2021
-* Impacted services: West Europe Key Vault service failed to connect to North Europe
-* Regions/Availability Zones: West Europe and North Europe
-* Root cause: Network resource exhaustion due to a surge of requests to the Data Plane for a specific type of resource
-* Duration: 10 minutes
-* Downtime period: 10 minutes
-* Marked as resolved: After mitigations were completed by deploying new VMs, North Europe was fully recovered at 02:15 UTC on March 19, 2021
+* Service: DNS
+* Region/Availability Zone: Multiple regions (impact observed across multiple regions)
+* Impact Date: Between 21:21 UTC and 22:00 UTC on 1 April 2021
+* Duration:
+	+ 22:30 UTC (majority of services recovered)
+* Root Cause: Anomalous surge in DNS queries from across the globe targeting a set of domains hosted on Azure.
+* Downtime Period: 1-2 April 2021
+* Resolved Date: Not specified
 
-**Microsoft Azure (Key Vault - updated root cause)**
+**Microsoft Azure**
 
-* Outage: Between 23:00 and 23:10 UTC on March 18, 2021
-* Impacted services: West Europe Key Vault service failed to connect to North Europe
-* Regions/Availability Zones: West Europe and North Europe
-* Root cause: Network resource exhaustion due to a surge of requests to the Data Plane for a specific type of resource, which was triggered by a code defect and under-provisioning in West Europe and North Europe
-* Duration: 10 minutes
-* Downtime period: 10 minutes
-* Marked as resolved: After mitigations were completed by deploying new VMs, North Europe was fully recovered at 02:15 UTC on March 19, 2021
+* Service: Active Directory
+* Region/Availability Zone: Multiple regions (impact observed for some downstream services)
+* Impact Date: Between 17:21 and 17:37 UTC on 9 March 2021
+* Duration:
+	+ Not specified (communication via Service Health was attempted, but not successful for all impacted downstream services)
+* Root Cause: Regional networking fiber cut resulting in brief loss of connectivity to Microsoft resources.
+* Downtime Period: 9 March 2021
+* Resolved Date: Not specified
 
-Note that I removed the following cloud providers from the original text: Amazon AWS, Google GCP, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.
+**Summary**
+
+The outages affected the following cloud providers and services:
+
+* Microsoft Azure (Key Vault, DNS, Active Directory)
+	+ Regions/Availability Zones: West Europe, North Europe, Multiple regions
+	+ Impact Dates: 18 March 2021, 1 April 2021, 9 March 2021
+	+ Durations:
+		- Key Vault: 19 March 2021 (mitigation completed), 19 March 2021 (West Europe fully recovered), 19 March 2021 (North Europe fully recovered)
+		- DNS: Not specified
+		- Active Directory: Not specified
+* Services impacted:
+	+ Key Vault: West Europe, North Europe
+	+ DNS: Multiple regions
+	+ Active Directory: Multiple regions
+
+Note that the outages for Azure DNS and Active Directory were not fully resolved at the time of writing.

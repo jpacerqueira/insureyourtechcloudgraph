@@ -1,0 +1,131 @@
+Here is the information about the outage:
+
+**IBM Cloud**
+
+Watson platform - Impacted customers experienced intermittent 5xx errors when using the following Watson AI services: 
+- Watson Assistant 
+- Discovery 
+- Natural Language Understanding 
+- Language Translator 
+- Knowledge Studio 
+
+Region/Availability Zone: FRA05 and EU-DE-3
+
+Impact Date: 20 June 2023 03:49 UTC
+Duration: 18 hours 26 minutes
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Downtime Period: 20 June 2023 04:12 - 22 June 2023 05:41 UTC
+Resolved Date: 20 June 2023 05:41 UTC
+
+VPC - Impacted VSI customers experienced an inability to access, manage, and provision VSIs. Any customer workloads running on these VSIs were impacted.
+Region/Availability Zone: FRA05 and EU-DE-3
+Impact Date: 20 June 2023 03:50 UTC
+Duration: 18 hours 26 minutes
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Downtime Period: 20 June 2023 04:12 - 22 June 2023 05:41 UTC
+Resolved Date: 20 June 2023 05:41 UTC
+
+Load Balancer - Data plane and control plane for Load Balancers were impacted.
+Region/Availability Zone: FRA05 and EU-DE-3
+Impact Date: 20 June 2023 03:49 UTC
+Duration: 18 hours 26 minutes
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Downtime Period: 20 June 2023 04:12 - 22 June 2023 05:41 UTC
+Resolved Date: 20 June 2023 05:41 UTC
+
+Network Infrastructure - All IBM Cloud services experienced connectivity issues.
+Region/Availability Zone: FRA05 and EU-DE-3
+Impact Date: 20 June 2023 03:49 UTC
+Duration: 18 hours 26 minutes
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Downtime Period: 20 June 2023 04:12 - 22 June 2023 05:41 UTC
+Resolved Date: 20 June 2023 05:41 UTC
+
+VSI - Impacted customer VSIs experienced an outage.
+Region/Availability Zone: FRA05 and EU-DE-3
+Impact Date: 20 June 2023 03:50 UTC
+Duration: 18 hours 26 minutes
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Downtime Period: 20 June 2023 04:12 - 22 June 2023 05:41 UTC
+Resolved Date: 20 June 2023 05:41 UTC
+
+SQL Query - SQL jobs/queries experienced long delays and eventually failures for all submitted jobs. Streaming jobs were running as normal where the impact was limited to SQL batch jobs.
+Region/Availability Zone: FRA05 and EU-DE-3
+Impact Date: 20 June 2023 03:49 UTC
+Duration: 18 hours 26 minutes
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Downtime Period: 20 June 2023 04:12 - 22 June 2023 05:41 UTC
+Resolved Date: 20 June 2023 05:41 UTC
+
+Databases - IBM Cloud Databases had an impact due to worker nodes were in critical status.
+Region/Availability Zone: FRA05 and EU-DE-3
+Impact Date: 20 June 2023 03:49 UTC
+Duration: 18 hours 26 minutes
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Downtime Period: 20 June 2023 04:12 - 22 June 2023 05:41 UTC
+Resolved Date: 20 June 2023 05:41 UTC
+
+Cloud Foundry - Impacted customers experienced issues with CF command.
+Region/Availability Zone: FRA05 and EU-DE-3
+Impact Date: 20 June 2023 03:49 UTC
+Duration: 18 hours 26 minutes
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Downtime Period: 20 June 2023 04:12 - 22 June 2023 05:41 UTC
+Resolved Date: 20 June 2023 05:41 UTC
+
+Containers Kubernetes - Multiple nodes and carriers went down.
+Region/Availability Zone: FRA05 and EU-DE-3
+Impact Date: 20 June 2023 03:49 UTC
+Duration: 18 hours 26 minutes
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Downtime Period: 20 June 2023 04:12 - 22 June 2023 05:41 UTC
+Resolved Date: 20 June 2023 05:41 UTC
+
+DNS - Service degradation experienced for appliance custom-resolver and origin healthcheck. Customers with HA deployment configuration of custom-resolvers would not have seen any impacts.
+Region/Availability Zone: FRA05 and EU-DE-3
+Impact Date: 20 June 2023 03:49 UTC
+Duration: 18 hours 26 minutes
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Downtime Period: 20 June 2023 04:12 - 22 June 2023 05:41 UTC
+Resolved Date: 20 June 2023 05:41 UTC
+
+VPC VPN - Impacted customers experienced VPN Gateway provisioning failures and VSI was stuck in pending status.
+Region/Availability Zone: FRA05 and EU-DE-3
+Impact Date: 20 June 2023 03:50 UTC
+Duration: 18 hours 26 minutes
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Downtime Period: 20 June 2023 04:12 - 22 June 2023 05:41 UTC
+Resolved Date: 20 June 2023 05:41 UTC
+
+Code Engine - Impacted customers experienced delays in creating or updating applications, due to the degraded performance of the system.
+Region/Availability Zone: FRA05 and EU-DE-3
+Impact Date: 20 June 2023 03:49 UTC
+Duration: 18 hours 26 minutes
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Downtime Period: 20 June 2023 04:12 - 22 June 2023 05:41 UTC
+Resolved Date: 20 June 2023 05:41 UTC
+
+**Summary of Outage**
+
+IBM Cloud was impacted by a utility grid outage that started on 20 June 2023 03:49 UTC and lasted for 18 hours 26 minutes. The root cause of the outage was a failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+
+The impacted services were:
+
+* Watson platform
+* VPC
+* Load Balancer
+* Network Infrastructure
+* VSI
+* SQL Query
+* Databases
+* Cloud Foundry
+* Containers Kubernetes
+* DNS
+* VPC VPN
+* Code Engine
+
+The outage affected the FRA05 and EU-DE-3 regions/availability zones.
+
+**Overall Summary**
+
+IBM Cloud was impacted by a utility grid outage that started on 20 June 2023 03:49 UTC and lasted for 18 hours 26 minutes. The root cause of the outage was a failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems. The impacted services were affected by the outage, which resulted in degraded performance and delays in creating or updating applications.

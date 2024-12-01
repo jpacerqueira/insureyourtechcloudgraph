@@ -22,6 +22,7 @@ cloud-information-genai-workbench/pdf_bot_usebatch/*.pdf
 cloud-information-genai-workbench/pdf_bot_usebatch/*.pdf.PROCESSED
 information/pdf-outages/public_cloud_sla_s/*.pdf
 information/pdf-outages/*.pdf
+cloud-information-genai-workbench/post_processed/**
 *.DS_Store
 */.DS_Store
 */*/.DS_Store

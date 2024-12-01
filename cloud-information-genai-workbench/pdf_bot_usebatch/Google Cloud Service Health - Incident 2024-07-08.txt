@@ -1,0 +1,15 @@
+After analyzing the text, I found that only Google Cloud Service was impacted by an outage.
+
+Here is the breakdown of the outage per service:
+
+Google Cloud Service | reCAPTCHA Enterprise | Global | 2024-07-08 23:20 | 3 days, 7 hours, 11 minutes | Change in client code caused requests to be sent to customer servers instead of reCAPTCHA servers. Customers experienced a significant number of unexpected 4xx errors. A small number of customers reported handling those errors in a way that made reCAPTCHA unusable for them.
+
+Here is the output table:
+
+Google Cloud Service | reCAPTCHA Enterprise | Global | 2024-07-08 23:20 | 3 days, 7 hours, 11 minutes | Change in client code caused requests to be sent to customer servers instead of reCAPTCHA servers. Customers experienced a significant number of unexpected 4xx errors. A small number of customers reported handling those errors in a way that made reCAPTCHA unusable for them. | 2024-07-12 06:31
+
+Here is the overall summary:
+
+Google Cloud Service was impacted by an outage on July 8, 2024, at 23:20 UTC. The outage lasted for 3 days, 7 hours, and 11 minutes. The root cause of the outage was a change in client code that caused requests to be sent to customer servers instead of reCAPTCHA servers. Customers experienced a significant number of unexpected 4xx errors.
+
+Note: I removed references to Cloud Providers not mentioned in the text provided, including Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

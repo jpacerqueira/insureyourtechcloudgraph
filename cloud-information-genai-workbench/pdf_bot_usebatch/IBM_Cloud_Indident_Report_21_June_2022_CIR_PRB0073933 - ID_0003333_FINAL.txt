@@ -1,16 +1,21 @@
-Based on the provided text, I will resume the outage for the following cloud providers: IBM Cloud.
+Here is the information about the outage:
 
-**Incident Details**
+**IBM Cloud**
 
-* Incident ID: INC5295851
-* Outage Start Time: 21 June 2022 06:34 UTC
-* Outage End Time: 21 June 2022 08:06 UTC
-* Duration: 1 hour and 32 minutes
-* Downtime Period: The services were unavailable for approximately 1 hour and 32 minutes.
+The third-party vendor applied changes to their BGP configuration at 21 June 2022 06:27.
+IBM Cloud Specialists were alerted to HTTP 500 errors on their applications protected by Internet Services at 21 June 2022 06:34.
+The third-party vendor notified IBM about a Global outage on their global PoPs at 21 June 2022 06:44.
+The third-party vendor reverted all changes at 21 June 2022 07:42.
+Customers and service teams reported restoration of services at 21 June 2022 08:06.
 
-**Impacted Services**
+Impact Date: 21 June 2022
+Duration: 1 hour 32 minutes
+Root Cause: The third-party vendor updated a BGP configuration that caused a critical set of IP prefixes to be withdrawn.
+Downtime Period: From 06:34 UTC to 08:06 UTC
+Resolved Date: 21 June 2022
 
-* IBM Cloud Internet Services
+**Services Impacted**
+
 * AppID
 * Schematics
 * Secrets Manager
@@ -24,18 +29,25 @@ Based on the provided text, I will resume the outage for the following cloud pro
 * Cloud App Dev Services
 * Event-notifications
 
-**Root Cause**
+**Summary of Outage**
 
-The third-party vendor's change to their BGP configuration caused a critical set of IP prefixes to be withdrawn, leading to the outage.
+The outage affected multiple IBM Cloud services in all regions. The third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn, leading to a global outage on their PoPs. The outage was resolved after the vendor reverted all changes.
 
-**Timeline of Events**
+Here is the information about the outage in a table format:
 
-1. 21 June 2022 06:27 - The third-party vendor applied changes to their BGP configuration.
-2. 21 June 2022 06:34 - IBM Cloud Specialists were alerted to HTTP 500 errors on their applications protected by Internet Services. Incident started.
-3. 21 June 2022 06:44 - The third-party vendor notified IBM about a Global outage on their global PoPs.
-4. 21 June 2022 07:42 - The third-party vendor reverted all changes.
-5. 21 June 2022 08:06 - Customers and service teams reported restoration of services. Incident ended.
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| IBM Cloud | AppID |  | 21 June 2022 06:34 | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | From 06:34 UTC to 08:06 UTC | 21 June 2022 |
+| IBM Cloud | Schematics |  | 21 June 2022 06:34 | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | From 06:34 UTC to 08:06 UTC | 21 June 2022 |
+| IBM Cloud | Secrets Manager |  | 21 June 2022 06:34 | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | From 06:34 UTC to 08:06 UTC | 21 June 2022 |
+| IBM Cloud | UI |  | 21 June 2022 06:34 | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | From 06:34 UTC to 08:06 UTC | 21 June 2022 |
+| IBM Cloud | Bluemix-developer-experience |  | 21 June 2022 06:34 | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | From 06:34 UTC to 08:06 UTC | 21 June 2022 |
+| IBM Cloud | Cloudcerts |  | 21 June 2022 06:34 | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | From 06:34 UTC to 08:06 UTC | 21 June 2022 |
+| IBM Cloud | Code Engine |  | 21 June 2022 06:34 | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | From 06:34 UTC to 08:06 UTC | 21 June 2022 |
+| IBM Cloud | Compliance |  | 21 June 2022 06:34 | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | From 06:34 UTC to 08:06 UTC | 21 June 2022 |
+| IBM Cloud | Continuous-delivery-pipeline |  | 21 June 2022 06:34 | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | From 06:34 UTC to 08:06 UTC | 21 June 2022 |
+| IBM Cloud | Virtual Private Cloud |  | 21 June 2022 06:34 | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | From 06:34 UTC to 08:06 UTC | 21 June 2022 |
+| IBM Cloud | Cloud App Dev Services |  | 21 June 2022 06:34 | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | From 06:34 UTC to 08:06 UTC | 21 June 2022 |
+| IBM Cloud | Event-notifications |  | 21 June 2022 06:34 | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | From 06:34 UTC to 08:06 UTC | 21 June 2022 |
 
-**Additional Information**
-
-The incident was classified as a recurring event, but in this instance, it was not. The third-party vendor will make improvements to their change management procedure by 21 September 2022.
+Note that IBM Cloud is the only cloud provider mentioned in the text, so there are no other cloud providers listed.

@@ -1,22 +1,48 @@
-Based on the provided text, I can only identify one cloud provider: Amazon AWS.
-
 Here is the information about the outage:
 
-**Cloud Provider:** Amazon AWS
-**Services Impacted:** Amazon Kinesis, Lambda, CloudWatch Events and EventBridge, Elastic Container Service (ECS), Elastic Kubernetes Service (EKS)
+**Summary of Outage**
 
-**Regions and Availability Zones:** Northern Virginia (US-EAST-1) Region
+The outage occurred on November 25th, 2020, and affected several services across Amazon AWS.
 
-**Root Cause of Outage:** A relatively small addition of capacity that began to be added to the service at 2:44 AM PST, finishing at 3:47 AM PST.
+**Services Impacted**
 
-**Duration of Outage:**
+* Amazon Kinesis
+* Lambda
+* CloudWatch Events and EventBridge
 
-* Start Time: 2:44 AM PST
-* End Time: 5:47 PM PST (approximately 9 hours and 3 minutes)
-* Duration in Days: 1 day
-* Duration in Hours: 9 hours
-* Duration in Minutes: 63 minutes
+**Outage Details**
 
-**Downtime Period:** The outage started at 2:44 AM PST and was resolved when CloudWatch metrics began to recover at 5:47 PM PST.
+**Amazon Kinesis**
 
-Note that the text does not provide information on the specific services impacted by the outage, such as MongoDB, Akamai, or Cloudflare. These services are not mentioned in the provided text.
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: November 25th, 2020, at 2:44 AM PST
+* Duration: Approximately 5 hours and 47 minutes
+* Root Cause: A relatively small addition of capacity that began to be added to the service
+* Downtime Period: The outage started at 2:44 AM PST and ended at 8:31 AM PST
+* Resolved Date: November 25th, 2020, at 5:47 PM PST
+
+**Lambda**
+
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: November 25th, 2020, at 6:15 AM PST
+* Duration: Approximately 4 hours and 21 minutes
+* Root Cause: Memory contention on the underlying service hosts used for Lambda function invocations
+* Downtime Period: The outage started at 6:15 AM PST and ended at 10:36 AM PST
+* Resolved Date: November 25th, 2020, at 10:36 AM PST
+
+**CloudWatch Events and EventBridge**
+
+* Region/Availability Zone: Northern Virginia (US-EAST-1)
+* Impact Date: November 25th, 2020, at 5:15 AM PST
+* Duration: Approximately 4 hours and 32 minutes
+* Root Cause: Increased API errors and delays in event processing due to the outage of Kinesis
+* Downtime Period: The outage started at 5:15 AM PST and ended at 9:47 AM PST
+* Resolved Date: November 25th, 2020, at 9:47 AM PST
+
+**Output Table**
+
+Amazon AWS | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-----------|--------|----------------------|------------|----------|-------------|---------------|-------------
+AWS        | Kinesis | US-EAST-1            | 2020-11-25 | 5 hours 47 minutes | Capacity addition | 2:44 AM PST - 8:31 AM PST | 2020-11-25 05:47 PM PST
+AWS        | Lambda | US-EAST-1            | 2020-11-25 | 4 hours 21 minutes | Memory contention | 6:15 AM PST - 10:36 AM PST | 2020-11-25 10:36 AM PST
+AWS        | CloudWatch Events and EventBridge | US-EAST-1 | 2020-11-25 | 4 hours 32 minutes | API errors and delays | 5:15 AM PST - 9:47 AM PST | 2020-11-25 09:47 AM PST

@@ -1,20 +1,49 @@
-Based on the provided text, I will resume the outage for Microsoft Azure.
+After analyzing the text, I found that the following cloud providers were impacted:
 
-**Outage Details:**
+* Microsoft Azure
+* Cosmos DB
 
-* **Incident Duration:** The incident lasted for approximately 6 hours and 36 minutes.
-* **Start Time:** The outage started at 21:30 UTC.
-* **End Time:** The outage was resolved by 03:26 UTC on February 26, 2021.
-* **Impacted Services:** Front-end services for other clusters in the region also made calls to the impacted cluster's front-end service to obtain configuration. These calls were timed out due to unavailability, triggering the same unhandled failure condition and resulting crash.
+Here is the breakdown of the outage per service impacted:
 
-**Root Cause:**
+**Microsoft Azure**
 
-The root cause of the outage was a code defect in a version update of a component that controls network traffic routing between Azure regions. The main parameters of the new code were invoked only at production scale and scope levels, which led to the prevention of anomaly detection from occurring. This resulted in an abnormal, sudden increase in the number of unhealthy devices and forced a health validation of those devices before removing routes from the network.
+* Service: Front-end services for other clusters in the region
+* Region/Availability Zone: Not specified
+* Impact Date: 21:30 UTC
+* Duration:
+	+ Started: 21:30 UTC
+	+ Ended: 18:45 UTC (next day)
+	+ Total duration: 1 day, 3 hours, and 15 minutes
+* Root Cause: Code defect in a version update of a component that controls network traffic routing between Azure regions
+* Downtime Period: The front-end services crashed due to unhandled failure condition and resulted in cascading effect impacting most West US Cosmos DB front-end services.
+* Resolved Date: 18:45 UTC (next day)
 
-**Downtime Period:**
+**Cosmos DB**
 
-The downtime period was approximately 6 hours and 36 minutes.
+* Service: Front-end services for other clusters in the region
+* Region/Availability Zone: Not specified
+* Impact Date: 21:30 UTC
+* Duration:
+	+ Started: 21:30 UTC
+	+ Ended: 18:45 UTC (next day)
+	+ Total duration: 1 day, 3 hours, and 15 minutes
+* Root Cause: Same as Microsoft Azure front-end services
+* Downtime Period: The Cosmos DB internal monitoring detected the failures and triggered high-severity alerts. The appropriate teams responded immediately and began investigating.
+* Resolved Date: 18:45 UTC (next day)
 
-**Resolution Time:**
+**Overall Summary**
 
-The outage was marked as resolved by 03:26 UTC on February 26, 2021.
+The outage impacted Microsoft Azure and Cosmos DB services in the West US region, specifically front-end services for other clusters. The outage started at 21:30 UTC on February 26, 2021, and ended at 18:45 UTC on February 27, 2021. The total duration was 1 day, 3 hours, and 15 minutes.
+
+**Root Cause**
+
+The root cause of the outage was a code defect in a version update of a component that controls network traffic routing between Azure regions.
+
+**Route Case with Dates Impacted**
+
+Here is a summary of the route case with dates impacted:
+
+* February 26, 2021: 21:30 UTC - Outage started
+* February 27, 2021: 18:45 UTC - Outage ended
+
+Note that the text does not provide information on the specific regions or availability zones affected by the outage.

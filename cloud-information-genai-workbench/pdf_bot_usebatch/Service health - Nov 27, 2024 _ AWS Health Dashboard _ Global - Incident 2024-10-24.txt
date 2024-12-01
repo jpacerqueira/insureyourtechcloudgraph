@@ -1,0 +1,60 @@
+After analyzing the text, I found that the following cloud providers were impacted:
+
+* Amazon AWS
+* Amazon Route 53 (not a separate provider but a service of Amazon AWS)
+
+The other services mentioned are not cloud providers.
+
+Here is the breakdown of outages per cloud provider:
+
+**Amazon AWS**
+
+* Service: Amazon Elastic Compute Cloud
+	+ Region/Availability Zone: ap-northeast-2
+	+ Impact Date: November 10, 2024
+	+ Duration: 3 hours and 18 minutes
+	+ Root Cause: Increased API error rates for mutatable VPC calls
+	+ Downtime Period: November 10, 2024, 7:55:00 AM - 11:13:00 AM PST
+	+ Resolved Date: November 10, 2024, 10:13:00 AM PST
+* Service: Amazon Elastic File System
+	+ Region/Availability Zone: ap-northeast-2
+	+ Impact Date: November 10, 2024
+	+ Duration: 3 hours and 18 minutes
+	+ Root Cause: Increased API error rates for mutatable VPC calls
+	+ Downtime Period: November 10, 2024, 7:55:00 AM - 11:13:00 AM PST
+	+ Resolved Date: November 10, 2024, 10:13:00 AM PST
+* Service: Amazon Elastic Kubernetes Service
+	+ Region/Availability Zone: ap-northeast-2
+	+ Impact Date: November 10, 2024
+	+ Duration: 3 hours and 18 minutes
+	+ Root Cause: Increased API error rates for mutatable VPC calls
+	+ Downtime Period: November 10, 2024, 7:55:00 AM - 11:13:00 AM PST
+	+ Resolved Date: November 10, 2024, 10:13:00 AM PST
+
+**Amazon Route 53**
+
+* Service: Amazon Route 53
+	+ Region/Availability Zone: Global
+	+ Impact Date: October 24, 2024
+	+ Duration: 2 hours and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: October 24, 2024, 12:01:00 PM - 2:45:54 PM PDT
+	+ Resolved Date: October 24, 2024, 1:45:55 PM PDT
+
+Here is the output table:
+
+Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+Amazon AWS | Amazon Elastic Compute Cloud | ap-northeast-2 | November 10, 2024 | 3 hours and 18 minutes | Increased API error rates for mutatable VPC calls | November 10, 2024, 7:55:00 AM - 11:13:00 AM PST | November 10, 2024, 10:13:00 AM PST
+Amazon AWS | Amazon Elastic File System | ap-northeast-2 | November 10, 2024 | 3 hours and 18 minutes | Increased API error rates for mutatable VPC calls | November 10, 2024, 7:55:00 AM - 11:13:00 AM PST | November 10, 2024, 10:13:00 AM PST
+Amazon AWS | Amazon Elastic Kubernetes Service | ap-northeast-2 | November 10, 2024 | 3 hours and 18 minutes | Increased API error rates for mutatable VPC calls | November 10, 2024, 7:55:00 AM - 11:13:00 AM PST | November 10, 2024, 10:13:00 AM PST
+Amazon Route 53 | Amazon Route 53 | Global | October 24, 2024 | 2 hours and 44 minutes | Increased Delays Associating Route 53 Private Hosted Zones to VPC | October 24, 2024, 12:01:00 PM - 2:45:54 PM PDT | October 24, 2024, 1:45:55 PM PDT
+
+Overall summary:
+
+* Amazon AWS was impacted by three services in the ap-northeast-2 region.
+* Amazon Route 53 was impacted by one service globally.
+
+The outages occurred on the following dates:
+
+* November 10, 2024
+* October 24, 2024

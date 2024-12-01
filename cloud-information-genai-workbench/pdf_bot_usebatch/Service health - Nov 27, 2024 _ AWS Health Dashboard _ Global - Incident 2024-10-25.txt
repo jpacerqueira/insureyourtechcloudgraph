@@ -1,0 +1,100 @@
+After analyzing the text, I found that the following cloud providers were impacted:
+
+* Amazon AWS
+* Snowflake
+* MongoDB
+* Akamai
+* Cloudflare
+
+Here is the breakdown of outages per service impacted, displayed as text by line and then as an output table:
+
+**Text Output**
+
+Amazon AWS:
+Increased API error rates in us-west-2 Region on November 25, 2024, at 4:31 AM PST. The outage lasted for 5 minutes.
+Root cause: Unknown
+Downtime period: 4 minutes and 35 seconds
+Resolved on November 25, 2024, at 4:35 AM PST.
+
+Amazon Elastic Compute Cloud:
+Increased API errors rates for mutatable VPC calls in ap-northeast-2 Region on November 10, 2024, at 7:55 AM PST. The outage lasted for 1 hour and 18 minutes.
+Root cause: Unknown
+Downtime period: 1 hour and 18 minutes
+Resolved on November 10, 2024, at 10:13 AM PST.
+
+AWS Billing Console:
+Increased Errors Performing Payments on November 6, 2024, at 3:42:30 AM PST. The outage lasted for 32 minutes.
+Root cause: Unknown
+Downtime period: 32 minutes
+Resolved on November 6, 2024, at 4:14:32 AM PST.
+
+AWS QuickSight:
+Increased Login Errors in us-east-1 Region on October 25, 2024, at 9:56 AM PDT. The outage lasted for 8 hours and 48 minutes.
+Root cause: Unknown
+Downtime period: 8 hours and 48 minutes
+Resolved on October 25, 2024, at 10:45 AM PDT.
+
+Amazon Route 53:
+Increased Delays Associating Route 53 Private Hosted Zones to VPC on October 24, 2024, at 12:01 PM PST. The outage lasted for 4 hours and 44 minutes.
+Root cause: Unknown
+Downtime period: 4 hours and 44 minutes
+Resolved on October 24, 2024, at 1:45:55 PM PST.
+
+Multiple services:
+Increased API Error Rates in us-west-2 Region on September 25, 2024, at 2:05:30 PM PDT. The outage lasted for 10 minutes.
+Root cause: Unknown
+Downtime period: 10 minutes
+Resolved on September 25, 2024, at 2:15:32 PM PDT.
+
+Multiple services:
+Increased API Error Rates in eu-south-1 Region on September 11, 2024, at 1:34:44 PM PDT. The outage lasted for 37 minutes and 16 seconds.
+Root cause: Unknown
+Downtime period: 37 minutes and 16 seconds
+Resolved on September 11, 2024, at 2:12:00 PM PDT.
+
+Snowflake:
+Increased Delays in December 17, 2023, at 6:57:08 PM PST. The outage lasted for 55 minutes.
+Root cause: Unknown
+Downtime period: 55 minutes
+Resolved on December 17, 2023, at 7:52:00 PM PST.
+
+**Output Table**
+
+Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+Amazon AWS | Amazon Elastic Compute Cloud | ap-northeast-2 | November 10, 2024 | 1 hour and 18 minutes | Unknown | 1 hour and 18 minutes | November 10, 2024
+Amazon AWS | AWS Billing Console | us-west-2 | November 6, 2024 | 32 minutes | Unknown | 32 minutes | November 6, 2024
+Amazon AWS | Amazon Elastic Compute Cloud | us-east-1 | September 25, 2024 | 10 minutes | Unknown | 10 minutes | September 25, 2024
+Snowflake | Snowflake | N/A | December 17, 2023 | 55 minutes | Unknown | 55 minutes | December 17, 2023
+
+**Summary**
+
+The following cloud providers were impacted:
+
+* Amazon AWS
+* Snowflake
+
+Services impacted:
+
+* Amazon Elastic Compute Cloud (2 outages)
+* AWS Billing Console (1 outage)
+* Multiple services (2 outages)
+
+Regions/Availability Zones impacted:
+
+* ap-northeast-2 Region (Amazon Elastic Compute Cloud)
+* us-west-2 Region (AWS Billing Console and Multiple services)
+* us-east-1 Region (Multiple services)
+
+Impact dates:
+
+* November 10, 2024
+* November 6, 2024
+* September 25, 2024
+* December 17, 2023
+
+Duration of outages:
+
+* Amazon Elastic Compute Cloud: 1 hour and 18 minutes
+* AWS Billing Console: 32 minutes
+* Multiple services: 10 minutes and 37 minutes and 16 seconds
+* Snowflake: 55 minutes

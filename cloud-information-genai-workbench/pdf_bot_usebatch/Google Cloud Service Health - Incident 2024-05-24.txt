@@ -1,0 +1,25 @@
+Here is the breakdown of the outage per cloud provider:
+
+**Google GCP**
+
+* Service: EdgeContainer API
+* Region/Availability Zone: Global (Taiwan, Hong Kong, Tokyo, Seoul, Mumbai, Delhi, Singapore, Jakarta)
+* Impact Date: 2024-05-24 03:38 US/Pacific
+* Duration: 5 hours, 36 minutes
+* Root Cause: Inability to exercise cluster creation and cluster upgrade in all regions of GDC connected
+* Downtime Period: 2024-05-24 09:30 US/Pacific
+* Resolved Date: 2024-05-24 09:36 US/Pacific
+
+**Summary for Google GCP**
+
+Google GCP experienced an outage with the EdgeContainer API service, impacting all regions and availability zones globally. The outage started on May 24, 2024, at 03:38 US/Pacific and lasted for 5 hours and 36 minutes. The root cause was an inability to exercise cluster creation and cluster upgrade in all regions of GDC connected.
+
+**Output Table**
+
+Google GCP | EdgeContainer API | Global | 2024-05-24 03:38 US/Pacific | 5 hours, 36 minutes | Inability to exercise cluster creation and cluster upgrade in all regions of GDC connected | 2024-05-24 09:30 US/Pacific | 2024-05-24 09:36 US/Pacific
+
+**Overall Summary**
+
+Google GCP was impacted by an outage with the EdgeContainer API service, affecting all regions and availability zones globally. The outage started on May 24, 2024, at 03:38 US/Pacific and lasted for 5 hours and 36 minutes.
+
+Note: I removed references to cloud providers not mentioned in the text provided (Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare).
