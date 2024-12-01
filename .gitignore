@@ -12,6 +12,7 @@ _deps
 CMakeUserPresets.json
 .vscode/**
 .idea/**
+*.zip
 cloud-information-genai-workbench/embedding_model/**
 cloud-information-genai-workbench/embedding_model/models--sentence-transformers--all-MiniLM-L6-v2/*
 cloud-information-genai-workbench/data/**
