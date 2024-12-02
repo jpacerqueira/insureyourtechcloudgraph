@@ -8,27 +8,39 @@
 
 BUILD_METHOD="${1:-0}" # 1 or 0
 
+
+DOCKER_PODMAN="${2:-0}" # 1 or 0
+
+if [[ "$DOCKER_PODMAN" == "1" ]]; then
+   echo "Using Docker Podman"
+   DOCKER_COMPOSE_CMD="podman-compose"
+   DOCKER_CMD="podman"
+else
+   echo "Using Docker"
+   DOCKER_COMPOSE_CMD="docker compose"
+   DOCKER_CMD="docker"
+fi
+
 if [[ "$BUILD_METHOD" == "1" ]]; then
-   docker compose down
-   docker compose up
+   $DOCKER_COMPOSE_CMD down
+   $DOCKER_COMPOSE_CMD up
 elif [[ "$BUILD_METHOD" == "2" ]]; then
-   docker compose down
-   docker system prune -f
-   docker volume prune -f
-   docker compose up --build
+   $DOCKER_COMPOSE_CMD down
+   $DOCKER_COMPOSE_CMD rm -sfv # just remove containers and volumes of the compose project
+   $DOCKER_COMPOSE_CMD up --build
 elif [[ "$BUILD_METHOD" == "3" ]]; then
-   docker compose down
-   docker compose rm -sfv # just remove containers and volumes of the compose project
-   #docker system prune -f
-   #docker volume prune -f
-   docker compose up --build --force-recreate
+   $DOCKER_COMPOSE_CMD down
+   $DOCKER_COMPOSE_CMD rm -sfv # just remove containers and volumes of the compose project
+   #$DOCKER_CMD system prune -f
+   #$DOCKER_CMD volume prune -f
+   $DOCKER_COMPOSE_CMD up --build --force-recreate
 elif [[ "$BUILD_METHOD" == "4" ]]; then
-   docker compose down
-   docker compose rm -sfv # just remove containers and volumes of the compose project
-   #docker system prune -f
-   #docker volume prune -f
-   docker compose up -d --build --force-recreate > /dev/null 2>&1
+   $DOCKER_COMPOSE_CMD down
+   $DOCKER_COMPOSE_CMD rm -sfv # just remove containers and volumes of the compose project
+   #$DOCKER_CMD system prune -f
+   #$DOCKER_CMD volume prune -f
+   $DOCKER_COMPOSE_CMD up -d --build --force-recreate > /dev/null 2>&1
    echo "Outage Webscraping , pdf file samples extracted, built! Now, wait 10 seconds for the database to be ready."
 else
-   docker compose ps
+   $DOCKER_COMPOSE_CMD ps
 fi
