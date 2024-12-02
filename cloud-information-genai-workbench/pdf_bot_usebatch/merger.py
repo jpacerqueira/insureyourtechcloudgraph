@@ -1197,7 +1197,20 @@ def calculate_downtime_minutes(outage: OutageInfo) -> int:
     Calculate downtime in minutes using various fields from the outage info.
     Tries multiple approaches to get the most accurate duration.
     """
-    # Try to calculate from start_time and end_time if both are available
+        
+    # Try to calculate from duration string - more reliable method 1
+    if outage.duration:
+        minutes = calculate_duration_in_minutes(outage.duration)
+        if minutes > 0:
+            return minutes
+            
+    # Try to calculate from downtime_period - more reliable method 2
+    if outage.downtime_period:
+        minutes = calculate_duration_in_minutes(outage.downtime_period)
+        if minutes > 0:
+            return minutes
+
+    # Try to calculate from start_time and end_time if both are available - less reliable method 3
     if outage.start_time and outage.end_time:
         # Ensure both datetimes are timezone-aware
         start_time = outage.start_time
@@ -1215,19 +1228,6 @@ def calculate_downtime_minutes(outage: OutageInfo) -> int:
         
         delta = end_time - start_time
         return int(delta.total_seconds() / 60)
-        
-    # Try to calculate from duration string
-    if outage.duration:
-        minutes = calculate_duration_in_minutes(outage.duration)
-        if minutes > 0:
-            return minutes
-            
-    # Try to calculate from downtime_period
-    if outage.downtime_period:
-        minutes = calculate_duration_in_minutes(outage.downtime_period)
-        if minutes > 0:
-            return minutes
-    
     return 0
 
 def write_outage_summary(outage: OutageInfo, file):
