@@ -1,9 +1,185 @@
 import os
 import re
-from datetime import datetime, timezone
-from typing import Dict, List, Optional
+from datetime import datetime, timezone, timedelta
+from typing import Dict, List, Optional, Tuple
 import csv
 from time import time
+from dateutil import parser
+import pytz
+
+# Map common timezone abbreviations to pytz timezones
+TIMEZONE_MAP = {
+    'UTC': 'UTC',
+    'GMT': 'GMT',
+    'EST': 'America/New_York',
+    'EDT': 'America/New_York',
+    'CST': 'America/Chicago',
+    'CDT': 'America/Chicago',
+    'MST': 'America/Denver',
+    'MDT': 'America/Denver',
+    'PST': 'America/Los_Angeles',
+    'PDT': 'America/Los_Angeles',
+    'AKST': 'America/Anchorage',
+    'AKDT': 'America/Anchorage',
+    'HST': 'Pacific/Honolulu',
+    'HAST': 'Pacific/Honolulu',
+    'HADT': 'Pacific/Honolulu',
+    'AST': 'America/Halifax',
+    'ADT': 'America/Halifax',
+    'NST': 'America/St_Johns',
+    'NDT': 'America/St_Johns',
+    'BST': 'Europe/London',
+    'CET': 'Europe/Paris',
+    'CEST': 'Europe/Paris',
+    'EET': 'Europe/Athens',
+    'EEST': 'Europe/Athens',
+    'IST': 'Asia/Kolkata',
+    'JST': 'Asia/Tokyo',
+    'KST': 'Asia/Seoul',
+    'AEST': 'Australia/Sydney',
+    'AEDT': 'Australia/Sydney',
+    'ACST': 'Australia/Adelaide',
+    'ACDT': 'Australia/Adelaide',
+    'AWST': 'Australia/Perth',
+    'NZST': 'Pacific/Auckland',
+    'NZDT': 'Pacific/Auckland',
+    'UT': 'UTC',
+    'US': 'UTC',
+    # Add more mappings as needed
+}
+
+# Define valid regions for each cloud provider
+valid_regions = {
+    "AWS": [
+        # Global
+        "global-default",
+        # US Regions
+        "us-east-1", "us-east-2", "us-west-1", "us-west-2",
+        "us-gov-east-1", "us-gov-west-1",
+        # Americas
+        "ca-central-1", "sa-east-1",
+        # Europe/Middle East/Africa
+        "eu-central-1", "eu-central-2", "eu-west-1", "eu-west-2", "eu-west-3",
+        "eu-north-1", "eu-south-1", "eu-south-2",
+        "me-south-1", "me-central-1", "af-south-1",
+        # Asia Pacific
+        "ap-east-1", "ap-south-1", "ap-south-2",
+        "ap-southeast-1", "ap-southeast-2", "ap-southeast-3", "ap-southeast-4",
+        "ap-northeast-1", "ap-northeast-2", "ap-northeast-3",
+        # China
+        "cn-north-1", "cn-northwest-1",
+        # Israel
+        "il-central-1",
+    ],
+    "Azure": [
+        # Global
+        "global-default",
+        # Americas
+        "eastus", "eastus2", "eastus3", "westus", "westus2", "westus3",
+        "centralus", "northcentralus", "southcentralus",
+        "canadacentral", "canadaeast",
+        "brazilsouth", "brazilsoutheast",
+        # Europe
+        "northeurope", "westeurope", "centraleurope",
+        "uksouth", "ukwest",
+        "francecentral", "francesouth",
+        "germanywestcentral", "germanynorth",
+        "swedencentral", "swedensouth",
+        "norwayeast", "norwaywest",
+        "switzerlandnorth", "switzerlandwest",
+        "italynorth",
+        # Asia Pacific
+        "eastasia", "southeastasia",
+        "australiaeast", "australiasoutheast", "australiacentral", "australiacentral2",
+        "japaneast", "japanwest","japan east","japan west",
+        "koreacentral", "koreasouth",
+        # Middle East/Africa
+        "uaenorth", "uaecentral",
+        "southafricanorth", "southafricawest",
+        "qatarcentral",
+        # India
+        "centralindia", "southindia", "westindia",
+        # China
+        "chinanorth", "chinanorth2", "chinanorth3", "chinaeast", "chinaeast2", "chinaeast3", "chinacloudapp.cn","chinacloudsites.cn",
+        # Government
+        "usgovvirginia", "usgovtexas", "usgovarizona",
+    ],
+    "Google Cloud Platform": [
+        # Global
+        "global-default",
+        # Americas
+        "us-central1", "us-east1", "us-east4", "us-east5",
+        "us-west1", "us-west2", "us-west3", "us-west4",
+        "us-south1",
+        "northamerica-northeast1", "northamerica-northeast2",
+        "southamerica-east1", "southamerica-west1",
+        # Europe
+        "europe-central2", "europe-north1",
+        "europe-west1", "europe-west2", "europe-west3",
+        "europe-west4", "europe-west6", "europe-west8", "europe-west9",
+        "europe-southwest1",
+        # Asia Pacific
+        "asia-east1", "asia-east2",
+        "asia-northeast1", "asia-northeast2", "asia-northeast3",
+        "asia-south1", "asia-south2",
+        "asia-southeast1", "asia-southeast2",
+        "australia-southeast1", "australia-southeast2",
+        # Middle East
+        "me-west1", "me-central1",
+    ],
+    "Oracle Cloud": [
+        # Global
+        "global-default",
+        # Americas
+        "us-ashburn-1", "us-phoenix-1", "us-sanjose-1",
+        "ca-montreal-1", "ca-toronto-1",
+        "sa-saopaulo-1", "sa-vinhedo-1", "sa-santiago-1",
+        # Europe
+        "uk-london-1", "uk-cardiff-1",
+        "eu-frankfurt-1", "eu-amsterdam-1", "eu-zurich-1",
+        "eu-madrid-1", "eu-marseille-1", "eu-milan-1", "eu-paris-1",
+        "eu-stockholm-1",
+        # Middle East/Africa
+        "me-dubai-1", "me-jeddah-1",
+        "af-johannesburg-1",
+        # Asia Pacific
+        "ap-mumbai-1", "ap-hyderabad-1",
+        "ap-tokyo-1", "ap-osaka-1",
+        "ap-seoul-1", "ap-chuncheon-1",
+        "ap-singapore-1",
+        "ap-sydney-1", "ap-melbourne-1",
+        # Government
+        "us-gov-ashburn-1", "us-gov-chicago-1", "us-gov-phoenix-1",
+    ],
+    "IBM Cloud": [
+        # Global
+        "global-default",
+        # Americas
+        "us-south", "us-east",
+        "br-sao",
+        "ca-tor",
+        # Europe
+        "eu-gb", "eu-de", "eu-es",
+        # Asia Pacific
+        "au-syd",
+        "jp-tok", "jp-osa",
+        "kr-seo",
+        # Government
+        "us-south-govt", "us-east-govt",
+        # Multi-zone regions
+        "dal10", "dal12", "dal13",
+        "wdc04", "wdc06", "wdc07",
+        "lon04", "lon05", "lon06",
+        "fra02", "fra04", "fra05",
+        "syd04", "syd05",
+        "tok02", "tok04", "tok05",
+        "osa21", "osa22", "osa23",
+        "sao01", "sao04", "sao05",
+        "tor01", "tor04", "tor05",
+        "mad02", "mad04", "mad05",
+    ],
+    # Add regions for other cloud providers
+}
 
 class OutageInfo:
     def __init__(self):
@@ -23,18 +199,78 @@ class OutageInfo:
         self.affected_components: List[str] = []
         self.mitigation_steps: List[str] = []
         self.source_outage_report: str = ""
+        self.outage_timestamp: float = 0.0
 
 def parse_date(date_str: str) -> Optional[datetime]:
-    """Parse a date string into a datetime object."""
+    """
+    Flexible date parser that handles various formats found in the logs.
+    Returns None if parsing fails.
+    """
     try:
-        # Adjust the format according to the expected date format in your logs
-        return datetime.strptime(date_str, '%Y-%m-%d %H:%M %Z')  # Example format
-    except ValueError:
-        return None  # Return None if parsing fails
+        # Replace any double spaces and normalize whitespace
+        date_str = re.sub(r'\s+', ' ', date_str.strip())
+        
+        # Build tzinfos dictionary for dateutil parser
+        tzinfos = {abbr: pytz.timezone(tz_name) for abbr, tz_name in TIMEZONE_MAP.items()}
+        
+        # Handle cases like "10:35 AM - 12:52 PM US/Pacific"
+        if '-' in date_str:
+            parts = date_str.split('-')
+            date_str = parts[0].strip()
+        
+        dt = parser.parse(date_str, fuzzy=True, tzinfos=tzinfos)
+        
+        # If the datetime is naive (no timezone), assume UTC
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=pytz.utc)
+        else:
+            # Convert to UTC
+            dt = dt.astimezone(pytz.utc)
+        
+        return dt
+    except Exception as e:
+        # Optionally log e for debugging
+        return None
+
+def speculate_region_from_az(provider: str, az: str) -> Optional[str]:
+    """
+    Attempt to speculate the region from an availability zone string.
+    Returns None if no match found.
+    """
+    az = az.lower().strip()
+    
+    # Common AZ to region mapping patterns
+    az_patterns = {
+        "AWS": {
+            r"(\w+-\w+-\d+)[a-z]": lambda x: x.group(1),  # us-east-1a -> us-east-1
+            r"(us|eu|ap|sa|ca|me|af)(\d+)-az\d+": lambda x: f"{x.group(1)}-{x.group(2)}",  # us1-az2 -> us-1
+        },
+        "Azure": {
+            r"(\w+)\s*zone\s*\d+": lambda x: x.group(1),  # eastus zone 1 -> eastus
+            r"(\w+)-az-\d+": lambda x: x.group(1),  # eastus-az-1 -> eastus
+        },
+        "Google Cloud Platform": {
+            r"(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # us-central1-a -> us-central1
+            r"zone\s+(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # zone us-central1-a -> us-central1
+        }
+    }
+    
+    if provider in az_patterns:
+        for pattern, transform in az_patterns[provider].items():
+            match = re.match(pattern, az)
+            if match:
+                return transform(match)
+    
+    # If no pattern matches, return the AZ as is
+    return az
 
 def extract_outage_info(text: str) -> List[OutageInfo]:
+    """
+    Extract outage information from the merged text content.
+    """
     outages = []
-    current_filename = ""
+    current_filename = "Unknown"
+    default_time = datetime(2024, 1, 1, tzinfo=pytz.UTC)
 
     #TODO: Add more patterns of analysis based on the latest data generated by the LLM 
     # A new LLM for pattern creations may be needed and source it as input file
@@ -308,53 +544,40 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         r"(?i)Actions Taken:\s*([^\n]+)",
     ]
     
-    # Enhanced timestamp patterns
+    # Enhanced timestamp patterns with more flexibility
     time_patterns = {
         "start": [
             r"(?i)Start(?:ed)?(?:\s+Time)?:\s*([^\n]+)",
-            r"(?i)Between\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST).*?)(?:and|to|-)",
-            r"(?i)at\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
-            r"(?i)started.*?at\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
-            r"(?i)(\d{1,2}:\d{2}(?:\s*(?:AM|PM))?\s*(?:UTC|PDT|PST|JST|CST))",
-            r"(?i)Outage\s+started:\s*([^\n]+)",
-            r"(?i)Start\s+date:\s*([^\n]+)",
-            r"(?i)(\d{1,2}:\d{2}(?::\d{2})?\s*(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
-            r"(?i)(\w+ \d{1,2}(?:st|nd|rd|th)?,\s*\d{4}\s+at\s+\d{1,2}:\d{2}\s*(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
-            r"(?i)(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?\s*(?:UTC|PDT|PST|JST|CST))",
-            r"(?i)on\s+(\w+\s+\d{1,2}(?:st|nd|rd|th)?,\s*\d{4})",
-            r"(?i)Outage began at\s*:\s*([^\n]+)",
+            r"(?i)Impact Date(?: and Time)?:\s*([^\n]+)",
+            r"(?i)The outage started (?:at)?\s*([^\n]+)",
+            r"(?i)Downtime Period:\s*The outage started (?:on)?\s*([^\n]+)\s*and ended",
+            r"(?i)Downtime Period:\s*([\w\s,:\-\/]+)(?:\sand\s|\sto\s|\s-\s)(?:[\w\s,:\-\/]+)",
+            r"(?i)Outage\s+started[:\s]*\s*([^\n]+)",
+            r"(?i)Began\s+on\s*([^\n]+)",
         ],
         "end": [
             r"(?i)End(?:ed)?(?:\s+Time)?:\s*([^\n]+)",
-            r"(?i)and\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
-            r"(?i)resolved.*?at\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
-            r"(?i)until\s+([\d:]+\s*(?:AM|PM|UTC|PDT|PST|JST|CST))",
-            r"(?i)Resolved:\s*([^\n]+)",
-            r"(?i)Resolution\s+date:\s*([^\n]+)",
-            r"(?i)Resolved:\s*(\w+\s+\d{1,2}(?:st|nd|rd|th)?,\s*\d{4}.*?(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
-            r"(?i)Resolution\s+date:\s*(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?\s*(?:UTC|PDT|PST|JST|CST))",
-            r"(?i)Resolved at\s*:\s*([^\n]+)",
-        ],
-        "impact": [
-            r"(?i)Impact\s+Date:\s*([^\n]+)",
-            r"(?i)(\d{1,2}:\d{2}(?::\d{2})?\s*(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
-            r"(?i)(\w+ \d{1,2}(?:st|nd|rd|th)?,\s*\d{4}\s+at\s+\d{1,2}:\d{2}\s*(?:AM|PM)\s*(?:UTC|PDT|PST|JST|CST))",
-            r"(?i)(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?\s*(?:UTC|PDT|PST|JST|CST))",
+            r"(?i)Resolved(?: Date(?: and Time)?)?:\s*([^\n]+)",
+            r"(?i)The outage (?:ended|resolved) (?:at)?\s*([^\n]+)",
+            r"(?i)Downtime Period:.*?and ended (?:on)?\s*([^\n]+)",
+            r"(?i)Downtime Period:\s*(?:[\w\s,:\-\/]+)\s*(?:\sand\s|\sto\s|\s-\s)\s*([\w\s,:\-\/]+)",
+            r"(?i)Resolved\s+Date:\s*([^\n]+)",
+            r"(?i)Restored at\s*([^\n]+)",
         ]
     }
     
-    # Add duration extraction patterns
+    # Enhanced duration patterns to account for variations and incorrect formats
     duration_patterns = [
+        r"(?i)Duration(?: of outage)?:\s*([^\n]+)",
         r"(?i)Duration:\s*([^\n]+)",
-        r"(?i)(\d+)\s*(?:days?|hours?|minutes?|hrs?|mins?)",
-        r"(?i)approximately\s+(\d+\s+(?:days?|hours?|minutes?|hrs?|mins?)(?:\s+and\s+\d+\s+(?:days?|hours?|minutes?|hrs?|mins?))*)",
-        r"(?i)Duration:\s*(\d+\s+(?:days?|hours?|minutes?|hrs?|mins?)(?:\s+and\s+\d+\s+(?:days?|hours?|minutes?|hrs?|mins?))*)",
-        r"(?i)lasted\s+(?:for\s+)?(\d+\s+(?:days?|hours?|minutes?|hrs?|mins?)(?:\s+and\s+\d+\s+(?:days?|hours?|minutes?|hrs?|mins?))*)",
-        r"(?i)(\d+)\s*(?:days?|hours?|minutes?|hrs?|mins?)\s+and\s+(\d+)\s*(?:days?|hours?|minutes?|hrs?|mins?)",
-        r"(?i)Lasted for\s*:\s*([^\n]+)",
+        r"(?i)Lasted for[:\s]*\s*([^\n]+)",
+        r"(?i)(\d+\s*(?:day|days|hour|hours|minute|minutes|hrs|mins)[,\s]*(?:and\s*)?\d*\s*(?:day|days|hour|hours|minute|minutes|hrs|mins)?[,\s]*(?:and\s*)?\d*\s*(?:day|days|hour|hours|minute|minutes|hrs|mins)?)",
+        r"(?i)Downtime Period:\s*.*?\(([\d\s]+(?:day|days|hour|hours|minute|minutes|hrs|mins)[^\)]*)\)",
+        r"(?i)Total Duration:\s*([^\n]+)",
+        r"(?i)Duration of impact:\s*([^\n]+)",
     ]
-    
-    # Add region extraction patterns
+
+    # Enhanced region patterns
     region_patterns = [
         r"(?i)Region(?:s)?(?:\s+Affected)?:\s*([^\n]+)",
         r"(?i)in\s+(?:the\s+)?([\w\s-]+)\s+Region",
@@ -362,7 +585,19 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         r"(?i)(Northern Virginia|Tokyo|Seoul|Singapore|London|Frankfurt|Paris|Sydney)",
         r"(?i)Regions impacted:\s*([^\n]+)",
     ]
-    
+
+    # Enhanced root cause patterns
+    root_cause_patterns = [
+        r"(?i)Root Cause(?: of the outage)?:\s*([^\n]+)",
+        r"(?i)Root cause:\s*([^\n]+)"
+    ]
+
+    # Enhanced multi-line outage patterns
+    multi_line_outage_patterns = [
+        r"(?i)Outage\s+\d+:\s*[\s\S]*?Service impacted:\s*([^\n]+)[\s\S]*?Region:\s*([^\n]*)[\s\S]*?Availability Zone:\s*([^\n]*)[\s\S]*?Root cause:\s*([^\n]*)[\s\S]*?Duration:\s*([^\n]*)[\s\S]*?Start date:\s*([^\n]*)[\s\S]*?Downtime period:\s*([^\n]*)[\s\S]*?Resolution date:\s*([^\n]*)",
+        r"(?i)Outage\s+\d+:\s*[\s\S]*?Service affected:\s*([^\n]+)[\s\S]*?Region impacted:\s*([^\n]*)[\s\S]*?Root cause identified:\s*([^\n]*)[\s\S]*?Duration of outage:\s*([^\n]*)",
+    ]
+
     # New patterns for extracting additional information
     new_duration_patterns = [
         r"(?i)Duration:\s*([^\n]+)",
@@ -388,16 +623,66 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         r"(?i)Affected Regions:\s*([^\n]+)",
     ]
     
-    # New patterns for extracting outage details from multi-line tables
-    multi_line_outage_patterns = [
-        r"(?i)Outage\s+\d+:\s*[\s\S]*?Service impacted:\s*([^\n]+)[\s\S]*?Region:\s*([^\n]*)[\s\S]*?Availability Zone:\s*([^\n]*)[\s\S]*?Root cause:\s*([^\n]*)[\s\S]*?Duration:\s*([^\n]*)[\s\S]*?Start date:\s*([^\n]*)[\s\S]*?Downtime period:\s*([^\n]*)[\s\S]*?Resolution date:\s*([^\n]*)",
-        r"(?i)Outage\s+\d+:\s*[\s\S]*?Service affected:\s*([^\n]+)[\s\S]*?Region impacted:\s*([^\n]*)[\s\S]*?Root cause identified:\s*([^\n]*)[\s\S]*?Duration of outage:\s*([^\n]*)",
-    ]
-    
-    
     # Split text into sections by outage
     sections = re.split(r"--\nOutage Filename:", text)
     
+    # Before adding regions to outage.regions, standardize the region names
+    # For example, map "Northern Virginia" to "us-east-1" for AWS
+
+    # Add this function inside 'merger.py'
+    def standardize_region_name(provider: str, region_name: str) -> str:
+        """Standardize region names based on provider."""
+        region_name = region_name.strip()
+        if not provider or not region_name:
+            return region_name
+        provider_regions = valid_regions.get(provider, [])
+        # Map 'Northern Virginia' to 'us-east-1' for AWS, etc.
+        region_aliases = {
+            "AWS": {
+                "Northern Virginia": "us-east-1",
+                "Ohio": "us-east-2",
+                "Oregon": "us-west-2",
+                "N. California": "us-west-1",
+                "Tokyo": "ap-northeast-1",
+                # Add more aliases as needed
+            },
+            "Azure": {
+                "East US": "eastus",
+                "West US 2": "westus2",
+                # Add more aliases as needed
+            },
+            "Google Cloud Platform": {
+                "Iowa": "us-central1",
+                "South Carolina": "us-east1",
+                # Add more aliases as needed
+            },
+            # Add aliases for other providers
+        }
+        aliases = region_aliases.get(provider, {})
+        standardized_name = aliases.get(region_name, region_name)
+        return standardized_name
+
+    # Add helper function to handle unspecified regions
+    def handle_unspecified_region(provider: str, region_text: str) -> List[str]:
+        """Handle cases where region is marked as unspecified/unknown"""
+        if not region_text or region_text.lower() in ['not specified', 'not declared', 'unknown', '', 'none']:
+            # Return all valid regions for the provider as a fallback
+            return valid_regions.get(provider, [])
+        
+        # Split and clean the region text
+        regions = re.split(r'[,•*]+', region_text)
+        cleaned_regions = []
+        
+        for region in regions:
+            region = region.strip()
+            if region and region.lower() not in ['not specified', 'not declared', 'unknown', '', 'none']:
+                standardized = standardize_region_name(provider, region)
+                if standardized:
+                    cleaned_regions.append(standardized)
+        
+        # If no valid regions found after cleaning, return all valid regions
+        return cleaned_regions if cleaned_regions else valid_regions.get(provider, [])
+
     for section in sections:
         # Skip empty sections
         if not section.strip():
@@ -456,16 +741,16 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
                 break
         
         # Extract common fields using patterns
-        patterns = {
+        common_patterns = {
             "regions": r"(?i)Regions?(?:\s+Affected)?:\s*([^\n]+)",
             "availability_zones": r"(?i)Availability Zones?(?:\s+Affected)?:\s*([^\n]+)",
-            "root_cause": r"(?i)Root Cause:\s*([^\n]+)",
-            "duration": r"(?i)Duration:\s*([^\n]+)",
-            "downtime_period": r"(?i)Downtime Period:\s*([^\n]+)",
-            "resolution": r"(?i)Resolution:\s*([^\n]+)"
+            "root_cause": r"(?i)Root Cause(?: of the outage)?:\s*([^\n]+)",
+            "duration": r"(?i)Duration(?: of outage)?:\s*([^\n]+)",
+            "downtime_period": r"(?i)Downtime Period(?: of outage)?:\s*([^\n]+)",
+            "resolved_date": r"(?i)Resolved Date(?: and Time)?:\s*([^\n]+)"
         }
         
-        for field, pattern in patterns.items():
+        for field, pattern in common_patterns.items():
             match = re.search(pattern, section)
             if match:
                 value = match.group(1).strip()
@@ -480,9 +765,18 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         for pattern in region_patterns:
             matches = re.finditer(pattern, section)
             for match in matches:
-                region = match.group(1).strip()
-                if region and region not in outage.regions:
-                    outage.regions.append(region)
+                region_text = match.group(1).strip()
+                regions = handle_unspecified_region(outage.cloud_provider, region_text)
+                for region in regions:
+                    if region not in outage.regions:
+                        outage.regions.append(region)
+        
+        # If no regions were found, add all valid regions for the provider
+        if not outage.regions and outage.cloud_provider:
+            outage.regions = valid_regions.get(outage.cloud_provider, [])
+            # Use just the first region
+            if outage.regions:
+                outage.regions = [outage.regions[0]]
         
         # Extract duration using multiple patterns
         for pattern in duration_patterns:
@@ -491,20 +785,31 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
                 outage.duration = match.group(1).strip()
                 break
         
-        # Extract timestamps using multiple patterns
+        # Extract start and end times using updated patterns
         for field, patterns in time_patterns.items():
             for pattern in patterns:
                 match = re.search(pattern, section)
                 if match:
-                    try:
-                        timestamp = parse_date(match.group(1))
+                    timestamp_str = match.group(1).strip()
+                    timestamp = parse_date(timestamp_str)
+                    if timestamp:
                         if field == "start":
                             outage.start_time = timestamp
-                        else:
+                        elif field == "end":
                             outage.end_time = timestamp
-                        break
-                    except:
-                        continue
+                        break  # Exit the loop if a timestamp is found
+                        
+        # Calculate missing start_time or end_time using duration or downtime_period
+        if outage.start_time is None and outage.end_time is not None and outage.duration:
+            outage.start_time = outage.end_time - timedelta(minutes=calculate_duration_in_minutes(outage.duration))
+        elif outage.end_time is None and outage.start_time is not None and outage.duration:
+            outage.end_time = outage.start_time + timedelta(minutes=calculate_duration_in_minutes(outage.duration))
+        
+        # If duration is not available, try using downtime_period
+        if outage.start_time is None and outage.end_time is not None and outage.downtime_period:
+            outage.start_time = outage.end_time - timedelta(minutes=calculate_duration_in_minutes(outage.downtime_period))
+        elif outage.end_time is None and outage.start_time is not None and outage.downtime_period:
+            outage.end_time = outage.start_time + timedelta(minutes=calculate_duration_in_minutes(outage.downtime_period))
         
         # Extract incident ID
         for pattern in incident_patterns:
@@ -527,27 +832,23 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
                 steps = re.split(r'[;\n]+', match.group(1))
                 outage.mitigation_steps.extend([s.strip() for s in steps if s.strip()])
         
-        # Extract duration using new patterns
-        for pattern in new_duration_patterns:
-            match = re.search(pattern, section)
-            if match:
-                outage.duration = match.group(1).strip()
-                break
-
+        # Extract additional fields using new patterns
+        # Duration extraction already handled above
+        
         # Extract downtime period using new patterns
         for pattern in new_downtime_patterns:
             match = re.search(pattern, section)
             if match:
                 outage.downtime_period = match.group(1).strip()
                 break
-
+        
         # Extract root cause using new patterns
-        for pattern in new_root_cause_patterns:
+        for pattern in root_cause_patterns:
             match = re.search(pattern, section)
             if match:
                 outage.root_cause = match.group(1).strip()
                 break
-
+        
         # Extract regions using new patterns
         for pattern in new_region_patterns:
             match = re.search(pattern, section)
@@ -559,30 +860,105 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         for pattern in multi_line_outage_patterns:
             matches = re.finditer(pattern, section)
             for match in matches:
-                outage = OutageInfo()  # Create a new OutageInfo object
-                outage.service = match.group(1).strip()
-                outage.region = match.group(2).strip()
-                outage.availability_zone = match.group(3).strip()
-                outage.root_cause = match.group(4).strip()
-                outage.duration = match.group(5).strip()
-                outage.start_time = parse_date(match.group(6).strip())  # Convert to datetime
-                outage.downtime_period = match.group(7).strip()
-                outage.resolution_time = parse_date(match.group(8).strip())  # Convert to datetime
-                outages.append(outage)
+                detailed_outage = OutageInfo()  # Create a new OutageInfo object
+                detailed_outage.service = match.group(1).strip()
+                detailed_outage.region = match.group(2).strip()
+                detailed_outage.availability_zone = match.group(3).strip()
+                detailed_outage.root_cause = match.group(4).strip()
+                detailed_outage.duration = match.group(5).strip()
+                detailed_outage.start_time = parse_date(match.group(6).strip())  # Convert to datetime
+                detailed_outage.downtime_period = match.group(7).strip()
+                detailed_outage.resolution_time = parse_date(match.group(8).strip())  # Convert to datetime
+                outages.append(detailed_outage)
                 break  # Exit after the first match
         
+        # After parsing start_time and end_time
+        # Ensure they are in UTC
+        if outage.start_time and outage.start_time.tzinfo is not None:
+            outage.start_time = outage.start_time.astimezone(pytz.utc)
+        if outage.end_time and outage.end_time.tzinfo is not None:
+            outage.end_time = outage.end_time.astimezone(pytz.utc)
+        
+        # If start_time and end_time are still None, try to parse them from downtime_period
+        if outage.start_time is None or outage.end_time is None:
+            if outage.downtime_period:
+                parsed_times = parse_downtime_period(outage.downtime_period)
+                if parsed_times:
+                    outage.start_time, outage.end_time = parsed_times
+        
+        # Calculate outage_timestamp (as epoch time in UTC)
+        if outage.start_time:
+            outage.outage_timestamp = outage.start_time.timestamp()
+        else:
+            outage.outage_timestamp = 0.0  # Default if start_time is missing
+        
+        # Normalize regions to lowercase and remove duplicates
+        outage.regions = list(set(region.lower() for region in outage.regions))
+
+        # Normalize availability zones to lowercase and remove duplicates
+        outage.availability_zones = list(set(zone.lower() for zone in outage.availability_zones))
+
+        # If no regions but have availability zones, try to speculate regions
+        if (not outage.regions or outage.regions == [""]) and outage.availability_zones:
+            speculated_regions = set()
+            
+            for az in outage.availability_zones:
+                # Try to speculate region from AZ
+                speculated_region = speculate_region_from_az(outage.cloud_provider, az)
+                if speculated_region:
+                    # Verify if it's a valid region for the provider
+                    if outage.cloud_provider in valid_regions:
+                        valid_provider_regions = [r.lower() for r in valid_regions[outage.cloud_provider]]
+                        if speculated_region.lower() in valid_provider_regions:
+                            speculated_regions.add(speculated_region)
+                        else:
+                            # If speculation doesn't match valid regions, use AZ as is
+                            speculated_regions.add(az)
+                    else:
+                        # If provider not in valid_regions, use AZ as is
+                        speculated_regions.add(az)
+            
+            # Update regions with speculated ones
+            if speculated_regions:
+                outage.regions = list(speculated_regions)
+
         outages.append(outage)
     
     return outages
 
 def parse_timestamp(timestamp_str: str) -> Optional[datetime]:
     """
-    Flexible timestamp parser that handles various formats found in the logs
-    Returns None if parsing fails
+    Flexible timestamp parser that handles various formats found in the logs.
+    Returns None if parsing fails.
     """
-    # Add timestamp parsing logic here
-    # This is a placeholder - implement based on your specific timestamp formats
-    return None
+    try:
+        # Clean the timestamp string
+        timestamp_str = timestamp_str.strip().rstrip('.')
+
+        # Handle common timezone abbreviations and replace them with UTC offsets
+        timezone_mappings = {
+            'PDT': 'UTC-7',
+            'PST': 'UTC-8',
+            'US/Pacific': 'UTC-8',
+            'JST': 'UTC+9',
+            'CST': 'UTC-6',
+            'CDT': 'UTC-5',
+            'EDT': 'UTC-4',
+            'EST': 'UTC-5',
+            'UTC-7': 'UTC-7',
+            'UTC-8': 'UTC-8',
+            'UTC+9': 'UTC+9',
+        }
+
+        for tz_abbr, tz_offset in timezone_mappings.items():
+            if tz_abbr in timestamp_str:
+                timestamp_str = timestamp_str.replace(tz_abbr, tz_offset)
+                break  # Replace only the first matching abbreviation
+
+        # Parse the timestamp
+        return parser.parse(timestamp_str, fuzzy=True)
+    except Exception:
+        return None
 
 # Add this mapping dictionary after the service_patterns
 service_full_names = {
@@ -775,6 +1151,84 @@ def get_full_service_name(provider: str, service: str) -> str:
     # Return original if no mapping found
     return service
 
+def calculate_duration_in_minutes(duration_str: str) -> int:
+    """
+    Calculate the duration in minutes from various duration string formats found in merge.txt.
+    Returns 0 if duration cannot be parsed.
+    """
+    if not duration_str:
+        return 0
+        
+    duration_str = duration_str.lower().strip()
+    total_minutes = 0
+
+    # Replace commas and 'and' with spaces for easier parsing
+    duration_str = duration_str.replace(',', ' ').replace('and', ' ')
+    # Split the duration string into parts
+    parts = duration_str.split()
+    
+    time_dict = {'day': 0, 'hour': 0, 'minute': 0}
+    i = 0
+    while i < len(parts):
+        try:
+            value = int(parts[i])
+            unit = parts[i + 1]
+            if 'day' in unit:
+                time_dict['day'] += value
+            elif 'hour' in unit:
+                time_dict['hour'] += value
+            elif 'minute' in unit:
+                time_dict['minute'] += value
+            i += 2
+        except (IndexError, ValueError):
+            i += 1  # Skip if parsing fails
+
+    total_minutes = (
+        time_dict['day'] * 1440 +
+        time_dict['hour'] * 60 +
+        time_dict['minute']
+    )
+    
+    return total_minutes if total_minutes > 0 else 0
+
+def calculate_downtime_minutes(outage: OutageInfo) -> int:
+    """
+    Calculate downtime in minutes using various fields from the outage info.
+    Tries multiple approaches to get the most accurate duration.
+    """
+    # Try to calculate from start_time and end_time if both are available
+    if outage.start_time and outage.end_time:
+        # Ensure both datetimes are timezone-aware
+        start_time = outage.start_time
+        end_time = outage.end_time
+        
+        if start_time.tzinfo is None:
+            start_time = start_time.replace(tzinfo=pytz.utc)
+        else:
+            start_time = start_time.astimezone(pytz.utc)
+        
+        if end_time.tzinfo is None:
+            end_time = end_time.replace(tzinfo=pytz.utc)
+        else:
+            end_time = end_time.astimezone(pytz.utc)
+        
+        delta = end_time - start_time
+        return int(delta.total_seconds() / 60)
+        
+    # Try to calculate from duration string
+    if outage.duration:
+        minutes = calculate_duration_in_minutes(outage.duration)
+        if minutes > 0:
+            return minutes
+            
+    # Try to calculate from downtime_period
+    if outage.downtime_period:
+        minutes = calculate_duration_in_minutes(outage.downtime_period)
+        if minutes > 0:
+            return minutes
+    
+    return 0
+
 def write_outage_summary(outage: OutageInfo, file):
     """Helper function to write outage summary with enhanced fields"""
     file.write(f"Source Outage Report: {outage.source_outage_report}\n")
@@ -792,6 +1246,11 @@ def write_outage_summary(outage: OutageInfo, file):
     file.write(f"Outage Status: {outage.status}\n")
     file.write(f"Impact Level: {outage.impact}\n")
     file.write(f"Duration: {outage.duration}\n")
+    
+    # Calculate and write duration in minutes
+    duration_minutes = calculate_duration_in_minutes(outage.duration)
+    file.write(f"Duration (minutes): {duration_minutes}\n")
+    
     file.write(f"Root Cause: {outage.root_cause}\n")
     file.write(f"Resolution: {outage.resolution}\n")
     file.write(f"Downtime Period: {outage.downtime_period}\n")
@@ -811,8 +1270,134 @@ def write_outage_summary(outage: OutageInfo, file):
         file.write(f"Customer Impact: {outage.customer_impact}\n")
     file.write("\n---\n\n")
 
+def extract_date_from_text(text: str) -> Optional[datetime]:
+    """
+    Extract date from the text content of merge.txt.
+    Returns None if no valid date pattern is found.
+    """
+    # Define patterns to search for dates in the text
+    date_patterns = [
+        r'(\d{4}-\d{2}-\d{2})',  # YYYY-MM-DD
+        r'(\d{8})',              # YYYYMMDD
+        r'(\d{2}\.\w{3}\.\d{4})',  # DD.MMM.YYYY
+        r'(\w{3,9} \d{1,2},? \d{4})'  # Month DD, YYYY
+    ]
+    
+    for pattern in date_patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            try:
+                date_str = match.group(1)
+                # Try parsing with dateutil as last resort
+                return parser.parse(date_str)
+            except:
+                continue
+                
+    return None
+
+def parse_filename_date(filename: str) -> Optional[datetime]:
+    """
+    Extract date from filename patterns found in merge.txt
+    Returns None if no valid date pattern is found
+    """
+    if not filename:
+        return None
+        
+    # Normalize filename
+    filename = filename.strip().replace('\\', '/').replace('./','')
+    
+    patterns = [
+        # Pattern 1: YYYYMMDD-Summary format
+        (r'(\d{8})-Summary.*\.txt$', '%Y%m%d'),
+        
+        # Pattern 2: Incident YYYY-MM-DD format
+        (r'Incident (\d{4}-\d{2}-\d{2})\.txt$', '%Y-%m-%d'),
+        
+        # Pattern 3: YYYY-MM-DD in parentheses
+        (r'\((\d{4}-\d{2}-\d{2})\)\.txt$', '%Y-%m-%d'),
+        
+        # Pattern 4: Service Health - Incident YYYY-MM-DD
+        (r'Service Health - Incident (\d{4}-\d{2}-\d{2})\.txt$', '%Y-%m-%d'),
+        
+        # Pattern 5: DD.MMM.YYYY format
+        (r'(\d{2}\.(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\.\d{4})\.txt$', '%d.%b.%Y'),
+        
+        # Pattern 6: YYYYMMDD in middle of filename
+        (r'.*?(\d{8}).*?\.txt$', '%Y%m%d'),
+        
+        # Pattern 7: Month DD, YYYY format
+        (r'(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* (\d{1,2}),? \d{4}', '%B %d %Y'),
+        
+        # Pattern 8: YYYY-MM-DD anywhere in filename
+        (r'.*?(\d{4}-\d{2}-\d{2}).*?\.txt$', '%Y-%m-%d'),
+    ]
+    
+    for pattern, date_format in patterns:
+        match = re.search(pattern, filename, re.IGNORECASE)
+        if match:
+            try:
+                date_str = match.group(1)
+                # Handle special case for DD.MMM.YYYY format
+                if '.%b.' in date_format:
+                    # Convert abbreviated month to full name
+                    date_str = date_str.replace('.', ' ')
+                    return datetime.strptime(date_str, '%d %b %Y')
+                return datetime.strptime(date_str, date_format)
+            except ValueError:
+                continue
+    
+    return None
+
+def format_outage_text(outage: OutageInfo) -> str:
+    """
+    Format outage information as a multi-line string for genai output
+    """
+    lines = []
+    lines.append(f"Source Outage Report: {outage.source_outage_report}")
+    lines.append(f"Cloud Provider: {outage.cloud_provider}")
+    
+    # Convert service abbreviations to full names
+    full_service_names = [get_full_service_name(outage.cloud_provider, service) 
+                         for service in outage.services]
+    lines.append(f"Cloud Services: {', '.join(full_service_names)}")
+    
+    lines.append(f"Regions: {', '.join(outage.regions)}")
+    lines.append(f"Availability Zones: {', '.join(outage.availability_zones)}")
+    
+    if outage.start_time:
+        lines.append(f"Start Time: {outage.start_time}")
+    if outage.end_time:
+        lines.append(f"End Time: {outage.end_time}")
+        
+    lines.append(f"Outage Status: {outage.status}")
+    lines.append(f"Impact Level: {outage.impact}")
+    lines.append(f"Duration: {outage.duration}")
+    
+    # Calculate and add duration in minutes
+    duration_minutes = calculate_downtime_minutes(outage)
+    lines.append(f"Duration (minutes): {duration_minutes}")
+    
+    lines.append(f"Root Cause: {outage.root_cause}")
+    lines.append(f"Resolution: {outage.resolution}")
+    lines.append(f"Downtime Period: {outage.downtime_period}")
+    
+    if outage.incident_id:
+        lines.append(f"Incident ID: {outage.incident_id}")
+        
+    if outage.affected_components:
+        full_component_names = [get_full_service_name(outage.cloud_provider, component) 
+                              for component in outage.affected_components]
+        lines.append(f"Affected Components: {', '.join(full_component_names)}")
+        
+    if outage.mitigation_steps:
+        lines.append("Mitigation Steps:")
+        for step in outage.mitigation_steps:
+            lines.append(f"- {step}")
+            
+    return "\n".join(lines)
+
 def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
-    """Write outage summary as CSV with one line per service"""
+    """Write outage summary as CSV with one line per service per region"""
     csv_file = f'pdf_bot_usebatch/outage_report_summary_{timestamp}.csv'
     
     headers = [
@@ -827,12 +1412,14 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
         'outage_status',
         'impact',
         'duration',
+        'duration_minutes',
         'root_cause',
         'resolution',
         'downtime_period',
         'incident_id',
         'affected_components',
-        'mitigation_steps'
+        'mitigation_steps',
+        'cloudrisk_genai_output'  # New column
     ]
 
     def clean_text(text):
@@ -847,7 +1434,7 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
             return " ".join(clean_text(item) for item in items)
         return ""
 
-    with open(csv_file, 'w', newline='') as f:
+    with open(csv_file, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=headers)
         writer.writeheader()
         
@@ -856,36 +1443,97 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
             if outage.start_time and isinstance(outage.start_time, datetime):
                 record_timestamp = outage.start_time.timestamp()
             else:
-                record_timestamp = time() # Fallback to time() if no start_time
+                record_timestamp = time() # Fallback to time()
 
-            default_startime = datetime(2024, 1, 1, 0, 0)
-            default_endtime = datetime(2024, 1, 1, 0, 0)
+            # Try to get date from merge.txt content
+            text_date = extract_date_from_text(outage.source_outage_report)
             
-            # Create base row with common fields
-            base_row = {
-                'outage_timestamp': record_timestamp,
-                'source_outage_report': clean_text(outage.source_outage_report),
-                'cloud_provider': clean_text(outage.cloud_provider),
-                'regions': clean_list(outage.regions),
-                'availability_zones': clean_list(outage.availability_zones),
-                'start_time': outage.start_time.isoformat() if outage.start_time else default_startime,
-                'end_time': outage.end_time.isoformat() if outage.end_time else default_endtime,
-                'outage_status': clean_text(outage.status),
-                'impact': clean_text(outage.impact),
-                'duration': clean_text(outage.duration),
-                'root_cause': clean_text(outage.root_cause),
-                'resolution': clean_text(outage.resolution),
-                'downtime_period': clean_text(outage.downtime_period),
-                'incident_id': clean_text(outage.incident_id),
-                'affected_components': clean_list(outage.affected_components),
-                'mitigation_steps': clean_list(outage.mitigation_steps)
-            }
+            # If no date found in text, try to get date from filename
+            if not text_date and outage.source_outage_report:
+                text_date = parse_filename_date(outage.source_outage_report)
+
+            # Use 2024-01-01 as the last resort
+            default_time = text_date if text_date else datetime(2024, 1, 1, 0, 0)
             
-            # Write one row per service
+            # Calculate downtime in minutes using enhanced logic
+            downtime_minutes = calculate_downtime_minutes(outage)
+            
+            # Format the complete outage text for genai output
+            genai_output = format_outage_text(outage)
+
+            # Prepare region list
+            regions = outage.regions if outage.regions else [""]  # Leave empty if no regions
+
+            # Validate regions based on cloud provider
+            provider = outage.cloud_provider or ""
+            valid_provider_regions = valid_regions.get(provider, [])
+
+            # Iterate over services
             for service in outage.services:
-                row = base_row.copy()
-                row['cloud_service'] = clean_text(get_full_service_name(outage.cloud_provider, service))
-                writer.writerow(row)
+                service_name = clean_text(get_full_service_name(provider, service))
+
+                # If no regions, create a single record with empty region
+                if not regions or regions == [""]:
+                    row = {
+                        'outage_timestamp': record_timestamp,
+                        'source_outage_report': clean_text(outage.source_outage_report),
+                        'cloud_provider': clean_text(provider),
+                        'cloud_service': service_name,
+                        'regions': "",
+                        'availability_zones': clean_list(outage.availability_zones),
+                        'start_time': outage.start_time.isoformat() if outage.start_time else default_time.isoformat(),
+                        'end_time': outage.end_time.isoformat() if outage.end_time else default_time.isoformat(),
+                        'outage_status': clean_text(outage.status),
+                        'impact': clean_text(outage.impact),
+                        'duration': clean_text(outage.duration),
+                        'duration_minutes': downtime_minutes,
+                        'root_cause': clean_text(outage.root_cause),
+                        'resolution': clean_text(outage.resolution),
+                        'downtime_period': clean_text(outage.downtime_period),
+                        'incident_id': clean_text(outage.incident_id),
+                        'affected_components': clean_list(outage.affected_components),
+                        'mitigation_steps': clean_list(outage.mitigation_steps),
+                        'cloudrisk_genai_output': clean_text(genai_output)
+                    }
+                    writer.writerow(row)
+                else:
+                    # Iterate over regions
+                    for region in regions:
+                        region_clean = clean_text(region)
+                        # Perform validation if region is not empty
+                        if region_clean and valid_provider_regions:
+                            # Check if region matches any of the valid regions
+                            if region_clean not in valid_provider_regions:
+                                # Attempt to match region with known regions (case-insensitive)
+                                if not any(region_clean.lower() == vr.lower() for vr in valid_provider_regions):
+                                    # Region does not match any known region for the provider
+                                    # Optionally, you can skip this record or include it with a note
+                                    # For this example, we'll include it but you can modify as needed
+                                    pass
+
+                        # Create the record
+                        row = {
+                            'outage_timestamp': record_timestamp,
+                            'source_outage_report': clean_text(outage.source_outage_report),
+                            'cloud_provider': clean_text(provider),
+                            'cloud_service': service_name,
+                            'regions': region_clean,
+                            'availability_zones': clean_list(outage.availability_zones),
+                            'start_time': outage.start_time.isoformat() if outage.start_time else default_time.isoformat(),
+                            'end_time': outage.end_time.isoformat() if outage.end_time else default_time.isoformat(),
+                            'outage_status': clean_text(outage.status),
+                            'impact': clean_text(outage.impact),
+                            'duration': clean_text(outage.duration),
+                            'duration_minutes': downtime_minutes,
+                            'root_cause': clean_text(outage.root_cause),
+                            'resolution': clean_text(outage.resolution),
+                            'downtime_period': clean_text(outage.downtime_period),
+                            'incident_id': clean_text(outage.incident_id),
+                            'affected_components': clean_list(outage.affected_components),
+                            'mitigation_steps': clean_list(outage.mitigation_steps),
+                            'cloudrisk_genai_output': clean_text(genai_output)
+                        }
+                        writer.writerow(row)
 
 def cleanup_merge_file():
     """Remove lines containing 'is not mentioned in the text' from the merge.txt file."""
@@ -893,11 +1541,33 @@ def cleanup_merge_file():
     with open(file_path, 'r') as file:
         lines = file.readlines()
     
-    # Filter out lines with the specified expression
-    cleaned_lines = [line for line in lines if ( "is not mentioned in the text" or "the other cloud providers mentioned" or "The other cloud providers mentioned" or "identify other cloud providers" or "No outages were reported" or "no outages were reported") not in line]
+    # Define patterns to exclude
+    exclude_patterns = [
+        "is not mentioned in the text",
+        "the other cloud providers mentioned",
+        "The other cloud providers mentioned",
+        "identify other cloud providers",
+        "No outages were reported",
+        "no outages were reported"
+    ]
+    
+    # Filter out lines with the specified expressions
+    cleaned_lines = [
+        line for line in lines 
+        if not any(pattern in line for pattern in exclude_patterns)
+    ]
 
-    # Update incorrect patterns replace "Azur e" by "Azure", "Googl e" by "Google", "AW S" by "AWS"
-    cleaned_lines = [line.replace("Azur e", "Azure").replace("AzurE", "Azure").replace("Databr icks","Databricks").replace("Googl e", "Google").replace("AW S", "AWS").replace("*","").replace("+","") for line in cleaned_lines]
+    # Update incorrect patterns: fix common typos and standardize
+    cleaned_lines = [
+        line.replace("Azur e", "Azure")
+            .replace("AzurE", "Azure")
+            .replace("Databr icks", "Databricks")
+            .replace("Googl e", "Google")
+            .replace("AW S", "AWS")
+            .replace("*", "")
+            .replace("+", "")
+            for line in cleaned_lines
+    ]
     
     with open(file_path, 'w') as file:
         file.writelines(cleaned_lines)
@@ -931,6 +1601,41 @@ def run_merge_script():
     except Exception as e:
         print(f"Error processing merged file: {str(e)}")
 
+def parse_downtime_period(downtime_str: str) -> Optional[Tuple[datetime, datetime]]:
+    """
+    Parses the downtime_period string to extract start and end times.
+    Returns a tuple of (start_time, end_time) or None if parsing fails.
+    """
+    time_patterns = [
+        # Pattern: From [start_time] to [end_time]
+        r"(?i)from\s+(.*?)\s+to\s+(.*?)(?:$|\s*\()",
+        # Pattern: The outage started on [start_time] and ended on [end_time]
+        r"(?i)The outage started on\s+(.*?)\s*(?:and|&)\s*(?:ended|resolved)\s*(?:on\s*)?(.*?)(?:$|\s*\()",
+        # Pattern: Started at [start_time] and ended at [end_time]
+        r"(?i)Started at\s+(.*?)\s*(?:and|&)\s*ended at\s+(.*?)(?:$|\s*\()",
+        # Pattern: Downtime Period: [start_time] - [end_time]
+        r"(?i)Downtime Period:\s*(.*?)\s*-\s*(.*?)(?:$|\s*\()",
+    ]
+
+    for pattern in time_patterns:
+        match = re.search(pattern, downtime_str)
+        if match:
+            start_str = match.group(1).strip()
+            end_str = match.group(2).strip()
+            start_time = parse_timestamp(start_str)
+            end_time = parse_timestamp(end_str)
+            if start_time and end_time:
+                # Ensure both times are timezone-aware and in UTC
+                if start_time.tzinfo is None:
+                    start_time = start_time.replace(tzinfo=pytz.utc)
+                else:
+                    start_time = start_time.astimezone(pytz.utc)
+                if end_time.tzinfo is None:
+                    end_time = end_time.replace(tzinfo=pytz.utc)
+                else:
+                    end_time = end_time.astimezone(pytz.utc)
+                return start_time, end_time
+    return None
 
 if __name__ == "__main__":
     run_merge_script()

@@ -5,6 +5,7 @@ import json
 import re
 import time
 import pandas as pd
+import plotly.graph_objects as go
 
 import streamlit as st
 from neo4j import GraphDatabase
@@ -148,7 +149,7 @@ services = {
         "IBM Databases for Elasticsearch","IBM Databases for etcd","IBM Databases for MongoDB",
         "IBM Databases for MySQL","IBM Databases for PostgreSQL","IBM Databases for Redis",
         "IBM DataStage","IBM Db2","IBM Db2 Warehouse","IBM watsonx BI Assistant",
-        "IBM Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Kubernetes",
+        "IBM Managed Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Kubernetes",
         "Red Hat OpenShift on IBM Cloud"],
     "Oracle Cloud OCI": ["Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)"],
     "Snowflake": ["Snowflake on AWS","Snowflake on Azure","Snowflake on GCP"],
@@ -525,12 +526,62 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                 if outage_data:
                     # Create a DataFrame for the outage data
                     df_outages = pd.DataFrame(outage_data)
+                    # Convert 'outage_timestamp' to datetime
+                    df_outages['outage_timestamp'] = pd.to_datetime(df_outages['outage_timestamp'], unit='s')
+                    # Sort data by 'outage_timestamp'
+                    df_outages = df_outages.sort_values('outage_timestamp')
+                    # Create labels combining date and source report
+                    df_outages['formatted_label'] = df_outages['outage_timestamp'].dt.strftime('%Y-%b-%d') + '\n' + df_outages['source_outage_report'].fillna('Indexed Report Source')
+
+                    # Prepare hover text
+                    df_outages['hover_text'] = df_outages.apply(lambda row: f"""
+Start Date: {row.get('start_time', '')}
+End Date: {row.get('end_time', '')}
+Duration: {row.get('duration_minutes', '')} minutes
+Downtime Period: {row.get('downtime_period', '')}
+Root Cause: {row.get('root_cause', 'Not specified')}
+Status: {row.get('outage_status', '')}
+Report Source: {row.get('source_outage_report', 'Unknown Source')}
+""", axis=1)
+
+                    # Create figure
+                    fig = go.Figure()
+
+                    fig.add_trace(go.Scatter(
+                        x=df_outages['outage_timestamp'],
+                        y=df_outages['duration_minutes'],
+                        mode='lines+markers',
+                        name=f'Outages for {service}',
+                        line=dict(color='rgba(255, 99, 132, 1)'),
+                        fill='tozeroy',
+                        text=df_outages['hover_text'],
+                        hoverinfo='text'
+                    ))
+
+                    fig.update_layout(
+                        xaxis_title='Report Date and Report Name',
+                        yaxis_title='Downtime Duration (minutes)',
+                        xaxis=dict(
+                            tickformat='%Y-%b-%d',
+                            tickangle=45,
+                            title_font=dict(size=14, family='bold')
+                        ),
+                        yaxis=dict(
+                            title_font=dict(size=14, family='bold')
+                        ),
+                        title=f'Outages for {service}',
+                        legend=dict(
+                            font=dict(
+                                size=14
+                            )
+                        )
+                    )
+
+                    st.plotly_chart(fig, use_container_width=True)
+
                     # Display the outage data in a table
                     st.write(f"Outage details for {service}:")
                     st.dataframe(df_outages)
-                    # Display a chart for the outages
-                    # Follow chronological order with outage_timestamp
-                    st.line_chart(df_outages['outage_timestamp'], use_container_width=True)  # Example chart
 
     else:
         st.warning("Please fill in all required fields")

@@ -227,7 +227,7 @@
         "IBM Databases for Elasticsearch","IBM Databases for etcd","IBM Databases for MongoDB",
         "IBM Databases for MySQL","IBM Databases for PostgreSQL","IBM Databases for Redis",
         "IBM DataStage","IBM Db2","IBM Db2 Warehouse","IBM watsonx BI Assistant",
-        "IBM Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Kubernetes",
+        "IBM Managed Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Kubernetes",
         "Red Hat OpenShift on IBM Cloud",
         "Google Cloud VertexAI","Google Cloud Machine Learning","Google Cloud Apigee","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL","Google Cloud SQL",
         "Google Cloud Bigtable","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud DataStudio","Google Cloud Datalab","Google Cloud Composer","Google Cloud Looker Studio Pro","Google Cloud reCAPTCHA Enterprise",
@@ -807,8 +807,8 @@
             const response = await fetch(`http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const outageData = await response.json();
-            compareMaxExpectedDowntime(service);
-            renderOutageChart(outageData, service);       
+            renderOutageChart(outageData, service);
+            compareMaxExpectedDowntime(service);         
         } catch (error) {
             console.error(`Error fetching outage data for ${service}:`, error);
         }
@@ -819,8 +819,21 @@
         const ctx = document.createElement('canvas');
         document.getElementById('outageChartContainer').appendChild(ctx);
 
-        const labels = outageData.map(outage => outage.start_time);
-        const data = outageData.map(outage => outage.outage_duration);
+        // Sort data chronologically by outage_timestamp
+        outageData.sort((a, b) => new Date(a.outage_timestamp) - new Date(b.outage_timestamp));
+
+        const labels = outageData.map(outage => {
+            // Convert Python timestamp to JavaScript Date
+            const date = new Date(outage.outage_timestamp * 1000);
+            // Format date and combine with source report
+            return `${new Intl.DateTimeFormat('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                timeZone: 'UTC'
+            }).format(date)}\n${outage.source_output_report || 'Index Source'}`;
+        });
+        const data = outageData.map(outage => outage.duration_minutes);
 
         new Chart(ctx, {
             type: 'line',
@@ -832,6 +845,8 @@
                     borderColor: 'rgba(255, 99, 132, 1)',
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     fill: true,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
                 }]
             },
             options: {
@@ -841,13 +856,56 @@
                         beginAtZero: true,
                         title: {
                             display: true,
-                            text: 'Duration (minutes)'
+                            text: 'Downtime Duration (minutes)',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
                         }
                     },
                     x: {
                         title: {
                             display: true,
-                            text: 'Time'
+                            text: 'Report Date and Report Name',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        },
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45,
+                            callback: function(value, index) {
+                                // Split the label into multiple lines for better readability
+                                const label = this.getLabelForValue(value);
+                                const [date, source] = label.split('\n');
+                                return [date, source];
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const outage = outageData[context.dataIndex];
+                                return [
+                                    `Start Date: ${outage.start_time}`,
+                                    `End Date: ${outage.end_time}`,
+                                    `Duration: ${outage.duration_minutes} minutes`,
+                                    `Downtime Period: ${outage.downtime_period}`,
+                                    `Root Cause: ${outage.root_cause || 'Not specified'}`,
+                                    `Status: ${outage.outage_status}`,
+                                    `Report Source: ${outage.source_outage_report || 'Indexed Report Source'}`
+                                ];
+                            }
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            font: {
+                                size: 14
+                            }
                         }
                     }
                 }
@@ -870,18 +928,18 @@
 
             const comparisonHTML = `
                 <h3>Comparison of Expected Downtime vs SLA</h3>
-                <p>Tier 1 - Max Expected Downtime: ${maxExpectedDowntimeTier1} minutes</p>
-                <p>Tier 1 - Actual Downtime: ${actualDowntime} minutes</p>
-                <p>${maxExpectedDowntimeTier1 > actualDowntime ? 'Warning: Expected downtime exceeds Tier 1 SLA!' : 'Expected downtime is within Tier 1 SLA.'}</p>
-                <p>Tier 2 - Max Expected Downtime: ${maxExpectedDowntimeTier2} minutes</p>
-                <p>Tier 2 - Actual Downtime: ${actualDowntime} minutes</p>
-                <p>${maxExpectedDowntimeTier2 > actualDowntime ? 'Warning: Expected downtime exceeds Tier 2 SLA!' : 'Expected downtime is within Tier 2 SLA.'}</p>
-                <p>Tier 3 - Max Expected Downtime: ${maxExpectedDowntimeTier3} minutes</p>
-                <p>Tier 3 - Actual Downtime: ${actualDowntime} minutes</p>
-                <p>${maxExpectedDowntimeTier3 > actualDowntime ? 'Warning: Expected downtime exceeds Tier 3 SLA!' : 'Expected downtime is within Tier 3 SLA.'}</p>
-                <p>Tier 4 - Max Expected Downtime: ${maxExpectedDowntimeTier4} minutes</p>
-                <p>Tier 4 - Actual Downtime: ${actualDowntime} minutes</p>
-                <p>${maxExpectedDowntimeTier4 > actualDowntime ? 'Warning: Expected downtime exceeds Tier 4 SLA!' : 'Expected downtime is within Tier 4 SLA.'}</p>
+                <p>${service} - Tier 1 - Max Expected Downtime: ${maxExpectedDowntimeTier1} minutes</p>
+                <p>${service} - Tier 1 - Actual Downtime: ${actualDowntime} minutes</p>
+                <p>${actualDowntime > maxExpectedDowntimeTier1 ? 'Warning: Expected downtime exceeds Tier 1 SLA!' : 'Expected downtime is within Tier 1 SLA.'}</p>
+                <p>${service} - Tier 2 - Max Expected Downtime: ${maxExpectedDowntimeTier2} minutes</p>
+                <p>${service} - Tier 2 - Actual Downtime: ${actualDowntime} minutes</p>
+                <p>${actualDowntime > maxExpectedDowntimeTier2 ? 'Warning: Expected downtime exceeds Tier 2 SLA!' : 'Expected downtime is within Tier 2 SLA.'}</p>
+                <p>${service} - Tier 3 - Max Expected Downtime: ${maxExpectedDowntimeTier3} minutes</p>
+                <p>${service} - Tier 3 - Actual Downtime: ${actualDowntime} minutes</p>
+                <p>${actualDowntime > maxExpectedDowntimeTier3 ? 'Warning: Expected downtime exceeds Tier 3 SLA!' : 'Expected downtime is within Tier 3 SLA.'}</p>
+                <p>${service} - Tier 4 - Max Expected Downtime: ${maxExpectedDowntimeTier4} minutes</p>
+                <p>${service} - Tier 4 - Actual Downtime: ${actualDowntime} minutes</p>
+                <p>${actualDowntime > maxExpectedDowntimeTier4 ? 'Warning: Expected downtime exceeds Tier 4 SLA!' : 'Expected downtime is within Tier 4 SLA.'}</p>
             `;
             document.getElementById('outageComparison').innerHTML = comparisonHTML;
         } catch (error) {

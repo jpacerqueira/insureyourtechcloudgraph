@@ -99,12 +99,14 @@ CREATE TABLE cloud_service_risk_ratings.outage_report_summaries (
     outage_status TEXT,
     impact TEXT,
     duration TEXT,
+    duration_minutes DECIMAL(16,6),
     root_cause TEXT,
     resolution TEXT,
     downtime_period TEXT,
     incident_id TEXT,
     affected_components TEXT,
-    mitigation_steps TEXT
+    mitigation_steps TEXT,
+    cloudrisk_genai_output TEXT
 );
 
 --
@@ -157,20 +159,46 @@ INSERT INTO cloud_service_risk_ratings.outage_report_summaries (
     outage_status,
     impact,
     duration,
+    duration_minutes,
     root_cause,
     resolution,
     downtime_period,
     incident_id,
     affected_components,
-    mitigation_steps
+    mitigation_steps,
+    cloudrisk_genai_output
 ) VALUES (
-   1732977404.127922,
+   1575244800.0,
    '20190823-Summary of the Amazon EC2 Issues in the Asia Pacific (Tokyo) Region (AP-NORTHEAST-1)',
-   'AWS','Amazon Elastic Compute Cloud','AP-NORTHEAST-1 Tokyo','Tokyo (AP-NORTHEAST-1)',
-   '2024-01-01 00:00:00','2024-01-01 00:00:00','resolved','',
-   'EC2 instances and degraded EBS volume performance for some resources in the affected area of the Availability Zone: 5 hours and 30 minutes ',
-   '"Control system failure that caused multiple, redundant cooling systems to fail in parts of the affected Availability Zone."','',
-   'EC2 instances and degraded EBS volume performance for some resources in the affected area of the Availability Zone: 5 hours and 30 minutes','','',''
+   'AWS',
+   'Amazon Elastic Compute Cloud',
+   'AP-NORTHEAST-1 Tokyo',
+   'Tokyo (AP-NORTHEAST-1)',
+   '2019-12-02T00:00:00+00:00',
+   '2019-08-23T00:00:00',
+   'resolved',
+   '',
+   'EC2 instances and degraded EBS volume performance for some resources in the affected area of the Availability Zone: 5 hours and 30 minutes',
+   330,
+   '"Control system failure that caused multiple, redundant cooling systems to fail in parts of the affected Availability Zone."',
+   '',
+   'EC2 instances and degraded EBS volume performance for some resources in the affected area of the Availability Zone: 5 hours and 30 minutes',
+   '',
+   '',
+   '',
+   '"Source Outage Report: 20190823-Summary of the Amazon EC2 Issues in the Asia Pacific (Tokyo) Region (AP-NORTHEAST-1)
+Cloud Provider: AWS
+Cloud Services: Amazon Elastic Compute Cloud, Amazon Elastic Block Store, Amazon ElastiCache, Direct Connect, rs
+Regions: AP-NORTHEAST-1, Tokyo
+Availability Zones: Tokyo (AP-NORTHEAST-1)
+Start Time: 2019-12-02 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: EC2 instances and degraded EBS volume performance for some resources in the affected area of the Availability Zone: 5 hours and 30 minutes
+Duration (minutes): 330
+Root Cause: Control system failure that caused multiple, redundant cooling systems to fail in parts of the affected Availability Zone.
+Resolution: 
+Downtime Period: EC2 instances and degraded EBS volume performance for some resources in the affected area of the Availability Zone: 5 hours and 30 minutes"'
 );
 
 SELECT * FROM cloud_service_risk_ratings.service_risk_ratings;
