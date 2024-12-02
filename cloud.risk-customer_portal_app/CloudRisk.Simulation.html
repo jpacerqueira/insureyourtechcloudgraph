@@ -807,24 +807,33 @@
             const response = await fetch(`http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const outageData = await response.json();
-
             renderOutageChart(outageData, service);
-            compareMaxExpectedDowntime(service);
-                   
+            compareMaxExpectedDowntime(service);         
         } catch (error) {
             console.error(`Error fetching outage data for ${service}:`, error);
         }
     }
 
     // Function to render the outage chart
-    async function renderOutageChart(outageData, service) {
+    function renderOutageChart(outageData, service) {
         const ctx = document.createElement('canvas');
         document.getElementById('outageChartContainer').appendChild(ctx);
 
-        const labels = outageData.map(outage => outage.outage_timestamp);
-        const data = outageData.map(outage => [outage.source_outage_report,outage.cloud_provider,outage.cloud_service,
-        outage.regions,outage.availability_zones,outage.start_time,outage.end_time,outage.outage_status,
-        outage.impact,outage.duration,outage.root_cause,outage.resolution,outage.downtime_period,outage.incident_id,outage.affected_components,outage.mitigation_steps]);
+        // Sort data chronologically by outage_timestamp
+        outageData.sort((a, b) => new Date(a.outage_timestamp) - new Date(b.outage_timestamp));
+
+        const labels = outageData.map(outage => {
+            // Convert Python timestamp to JavaScript Date
+            const date = new Date(outage.outage_timestamp * 1000);
+            // Format date and combine with source report
+            return `${new Intl.DateTimeFormat('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                timeZone: 'UTC'
+            }).format(date)}\n${outage.source_output_report || 'Index Source'}`;
+        });
+        const data = outageData.map(outage => outage.duration_minutes);
 
         new Chart(ctx, {
             type: 'line',
@@ -836,6 +845,8 @@
                     borderColor: 'rgba(255, 99, 132, 1)',
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     fill: true,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
                 }]
             },
             options: {
@@ -845,13 +856,56 @@
                         beginAtZero: true,
                         title: {
                             display: true,
-                            text: 'Duration (minutes)'
+                            text: 'Downtime Duration (minutes)',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
                         }
                     },
                     x: {
                         title: {
                             display: true,
-                            text: 'Time'
+                            text: 'Report Date and Report Name',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        },
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45,
+                            callback: function(value, index) {
+                                // Split the label into multiple lines for better readability
+                                const label = this.getLabelForValue(value);
+                                const [date, source] = label.split('\n');
+                                return [date, source];
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const outage = outageData[context.dataIndex];
+                                return [
+                                    `Start Date: ${outage.start_time}`,
+                                    `End Date: ${outage.end_time}`,
+                                    `Duration: ${outage.duration_minutes} minutes`,
+                                    `Downtime Period: ${outage.downtime_period}`,
+                                    `Root Cause: ${outage.root_cause || 'Not specified'}`,
+                                    `Status: ${outage.outage_status}`,
+                                    `Report Source: ${outage.source_outage_report || 'Unknown Source'}`
+                                ];
+                            }
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            font: {
+                                size: 14
+                            }
                         }
                     }
                 }
