@@ -4393,7 +4393,6 @@ Summary
 
 Google Cloud Service was impacted by an outage on Wednesday, 2024-05-29. The outage lasted for 4 hours and 4 minutes and affected Google Cloud NetApp Volumes in regions northamerica-northeast1 and us-west4.
 
-Note that the other cloud providers mentioned in your query (Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) were not impacted by this outage.  
 --
 Outage Filename: ./Google Cloud Service Health - Incident 2024-06-03.txt
 --
@@ -15097,16 +15096,12 @@ Microsoft Recovery Services:
  Resolved Date: Not specified
 
 Microsoft SQL Server
-No outages were reported for Microsoft SQL Server.
 
 Microsoft DB for MariaDB
-No outages were reported for Microsoft DB for MariaDB.
 
 Microsoft DB for MySQL
-No outages were reported for Microsoft DB for MySQL.
 
 Microsoft DB for PostgreSQL
-No outages were reported for Microsoft DB for PostgreSQL.
 
 Batch account
  Service impacted: Batch account
@@ -15118,16 +15113,11 @@ Batch account
  Resolved Date: Not specified
 
 Cache
-No outages were reported for Cache.
 
 Microsoft App Platform/Spring
-No outages were reported for Microsoft App Platform/Spring.
 
 Microsoft CDN
-No outages were reported for Microsoft CDN.
 
 Virtual Machines
-No outages were reported for Virtual Machines.
 
 Domain Names
-No outages were reported for Domain Names.  

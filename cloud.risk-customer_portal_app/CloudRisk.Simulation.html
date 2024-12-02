@@ -807,20 +807,24 @@
             const response = await fetch(`http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const outageData = await response.json();
+
             renderOutageChart(outageData, service);
-            compareMaxExpectedDowntime(service);       
+            compareMaxExpectedDowntime(service);
+                   
         } catch (error) {
             console.error(`Error fetching outage data for ${service}:`, error);
         }
     }
 
     // Function to render the outage chart
-    function renderOutageChart(outageData, service) {
+    async function renderOutageChart(outageData, service) {
         const ctx = document.createElement('canvas');
         document.getElementById('outageChartContainer').appendChild(ctx);
 
-        const labels = outageData.map(outage => outage.start_time);
-        const data = outageData.map(outage => outage.outage_duration);
+        const labels = outageData.map(outage => outage.outage_timestamp);
+        const data = outageData.map(outage => [outage.source_outage_report,outage.cloud_provider,outage.cloud_service,
+        outage.regions,outage.availability_zones,outage.start_time,outage.end_time,outage.outage_status,
+        outage.impact,outage.duration,outage.root_cause,outage.resolution,outage.downtime_period,outage.incident_id,outage.affected_components,outage.mitigation_steps]);
 
         new Chart(ctx, {
             type: 'line',
