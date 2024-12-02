@@ -69,6 +69,9 @@ def fetch_outage_data(service):
     try:
         api_url = f"http://node-api:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/{service}"
         response = requests.get(api_url)
+        if response.status_code == 404:
+            st.info(f"Outage not found in database for {service}")
+            return None
         response.raise_for_status()
         return response.json()
     except requests.RequestException as e:
@@ -527,7 +530,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                     # Create a DataFrame for the outage data
                     df_outages = pd.DataFrame(outage_data)
                     # Convert 'outage_timestamp' to datetime
-                    df_outages['outage_timestamp'] = pd.to_datetime(df_outages['outage_timestamp'], unit='s')
+                    df_outages['outage_timestamp'] = pd.to_datetime(df_outages['outage_timestamp'].astype(float), unit='s')
                     # Sort data by 'outage_timestamp'
                     df_outages = df_outages.sort_values('outage_timestamp')
                     # Create labels combining date and source report

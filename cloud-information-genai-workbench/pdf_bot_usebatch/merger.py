@@ -774,7 +774,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         # If no regions were found, add all valid regions for the provider
         if not outage.regions and outage.cloud_provider:
             outage.regions = valid_regions.get(outage.cloud_provider, [])
-            # Use just the first region
+            # Use just the first region
             if outage.regions:
                 outage.regions = [outage.regions[0]]
         
@@ -1154,7 +1154,7 @@ def get_full_service_name(provider: str, service: str) -> str:
 def calculate_duration_in_minutes(duration_str: str) -> int:
     """
     Calculate the duration in minutes from various duration string formats found in merge.txt.
-    Returns 0 if duration cannot be parsed.
+    Returns 0 if duration cannot be parsed or if the calculated duration is negative.
     """
     if not duration_str:
         return 0
@@ -1173,11 +1173,11 @@ def calculate_duration_in_minutes(duration_str: str) -> int:
         try:
             value = int(parts[i])
             unit = parts[i + 1]
-            if 'day' in unit:
+            if 'day' or 'days' in unit:
                 time_dict['day'] += value
-            elif 'hour' in unit:
+            elif 'hour' or 'hours' in unit:
                 time_dict['hour'] += value
-            elif 'minute' in unit:
+            elif 'minute' or 'minutes' in unit:
                 time_dict['minute'] += value
             i += 2
         except (IndexError, ValueError):
@@ -1189,7 +1189,8 @@ def calculate_duration_in_minutes(duration_str: str) -> int:
         time_dict['minute']
     )
     
-    return total_minutes if total_minutes > 0 else 0
+    # Ensure the total minutes is not negative
+    return max(total_minutes, 0)
 
 def calculate_downtime_minutes(outage: OutageInfo) -> int:
     """
@@ -1404,7 +1405,7 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
         'outage_timestamp',
         'source_outage_report',
         'cloud_provider',
-        'cloud_service',
+        'cloud_service',  
         'regions',
         'availability_zones',
         'start_time',
@@ -1417,9 +1418,9 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
         'resolution',
         'downtime_period',
         'incident_id',
-        'affected_components',
+        'affected_components',  # Restored affected_components column
         'mitigation_steps',
-        'cloudrisk_genai_output'  # New column
+        'cloudrisk_genai_output'
     ]
 
     def clean_text(text):
@@ -1439,40 +1440,51 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
         writer.writeheader()
         
         for outage in outages:
-            # Convert start_time to timestamp if available, otherwise use current time
+            # Get timestamp
             if outage.start_time and isinstance(outage.start_time, datetime):
                 record_timestamp = outage.start_time.timestamp()
             else:
-                record_timestamp = time() # Fallback to time()
+                record_timestamp = time()
 
-            # Try to get date from merge.txt content
+            # Get date from text or filename
             text_date = extract_date_from_text(outage.source_outage_report)
-            
-            # If no date found in text, try to get date from filename
             if not text_date and outage.source_outage_report:
                 text_date = parse_filename_date(outage.source_outage_report)
-
-            # Use 2024-01-01 as the last resort
             default_time = text_date if text_date else datetime(2024, 1, 1, 0, 0)
             
-            # Calculate downtime in minutes using enhanced logic
+            # Calculate downtime
             downtime_minutes = calculate_downtime_minutes(outage)
             
-            # Format the complete outage text for genai output
+            # Format genai output
             genai_output = format_outage_text(outage)
 
-            # Prepare region list
-            regions = outage.regions if outage.regions else [""]  # Leave empty if no regions
-
-            # Validate regions based on cloud provider
+            # Get regions
+            regions = outage.regions if outage.regions else [""]
+            
+            # Get provider and validate regions
             provider = outage.cloud_provider or ""
             valid_provider_regions = valid_regions.get(provider, [])
 
-            # Iterate over services
+            # Process services
+            all_services = set()
             for service in outage.services:
-                service_name = clean_text(get_full_service_name(provider, service))
+                all_services.add(get_full_service_name(provider, service))
+            
+            # If no services found, add at least one empty record
+            if not all_services:
+                all_services.add("")
 
-                # If no regions, create a single record with empty region
+            # Format affected components separately
+            affected_components_str = ", ".join(
+                get_full_service_name(provider, component) 
+                for component in outage.affected_components
+            )
+
+            # Create records for each service and region combination
+            for service in all_services:
+                service_name = clean_text(service)
+                
+                # If no regions, create single record
                 if not regions or regions == [""]:
                     row = {
                         'outage_timestamp': record_timestamp,
@@ -1491,27 +1503,16 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
                         'resolution': clean_text(outage.resolution),
                         'downtime_period': clean_text(outage.downtime_period),
                         'incident_id': clean_text(outage.incident_id),
-                        'affected_components': clean_list(outage.affected_components),
+                        'affected_components': clean_text(affected_components_str),  # Added back
                         'mitigation_steps': clean_list(outage.mitigation_steps),
                         'cloudrisk_genai_output': clean_text(genai_output)
                     }
                     writer.writerow(row)
                 else:
-                    # Iterate over regions
+                    # Create record for each region
                     for region in regions:
                         region_clean = clean_text(region)
-                        # Perform validation if region is not empty
-                        if region_clean and valid_provider_regions:
-                            # Check if region matches any of the valid regions
-                            if region_clean not in valid_provider_regions:
-                                # Attempt to match region with known regions (case-insensitive)
-                                if not any(region_clean.lower() == vr.lower() for vr in valid_provider_regions):
-                                    # Region does not match any known region for the provider
-                                    # Optionally, you can skip this record or include it with a note
-                                    # For this example, we'll include it but you can modify as needed
-                                    pass
-
-                        # Create the record
+                        
                         row = {
                             'outage_timestamp': record_timestamp,
                             'source_outage_report': clean_text(outage.source_outage_report),
@@ -1529,7 +1530,7 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
                             'resolution': clean_text(outage.resolution),
                             'downtime_period': clean_text(outage.downtime_period),
                             'incident_id': clean_text(outage.incident_id),
-                            'affected_components': clean_list(outage.affected_components),
+                            'affected_components': clean_text(affected_components_str),  # Added back
                             'mitigation_steps': clean_list(outage.mitigation_steps),
                             'cloudrisk_genai_output': clean_text(genai_output)
                         }
