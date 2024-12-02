@@ -1,5 +1,7 @@
 all: config_where_am_I_running webscraping backend_server customer_app workbench_apps riskgraph
 
+gcp_deploy: config_where_am_I_running backend_server customer_app
+
 check:
 	whoami ; id; pwd; ls -listarh; docker ps
 	echo "make check - Warning : Has No specific - rule to make target 'check'.  just continue."

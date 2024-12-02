@@ -807,8 +807,8 @@
             const response = await fetch(`http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const outageData = await response.json();
-            compareMaxExpectedDowntime(service);
-            renderOutageChart(outageData, service);       
+            renderOutageChart(outageData, service);
+            compareMaxExpectedDowntime(service);       
         } catch (error) {
             console.error(`Error fetching outage data for ${service}:`, error);
         }
@@ -870,18 +870,18 @@
 
             const comparisonHTML = `
                 <h3>Comparison of Expected Downtime vs SLA</h3>
-                <p>Tier 1 - Max Expected Downtime: ${maxExpectedDowntimeTier1} minutes</p>
-                <p>Tier 1 - Actual Downtime: ${actualDowntime} minutes</p>
-                <p>${maxExpectedDowntimeTier1 > actualDowntime ? 'Warning: Expected downtime exceeds Tier 1 SLA!' : 'Expected downtime is within Tier 1 SLA.'}</p>
-                <p>Tier 2 - Max Expected Downtime: ${maxExpectedDowntimeTier2} minutes</p>
-                <p>Tier 2 - Actual Downtime: ${actualDowntime} minutes</p>
-                <p>${maxExpectedDowntimeTier2 > actualDowntime ? 'Warning: Expected downtime exceeds Tier 2 SLA!' : 'Expected downtime is within Tier 2 SLA.'}</p>
-                <p>Tier 3 - Max Expected Downtime: ${maxExpectedDowntimeTier3} minutes</p>
-                <p>Tier 3 - Actual Downtime: ${actualDowntime} minutes</p>
-                <p>${maxExpectedDowntimeTier3 > actualDowntime ? 'Warning: Expected downtime exceeds Tier 3 SLA!' : 'Expected downtime is within Tier 3 SLA.'}</p>
-                <p>Tier 4 - Max Expected Downtime: ${maxExpectedDowntimeTier4} minutes</p>
-                <p>Tier 4 - Actual Downtime: ${actualDowntime} minutes</p>
-                <p>${maxExpectedDowntimeTier4 > actualDowntime ? 'Warning: Expected downtime exceeds Tier 4 SLA!' : 'Expected downtime is within Tier 4 SLA.'}</p>
+                <p>${service} - Tier 1 - Max Expected Downtime: ${maxExpectedDowntimeTier1} minutes</p>
+                <p>${service} - Tier 1 - Actual Downtime: ${actualDowntime} minutes</p>
+                <p>${actualDowntime > maxExpectedDowntimeTier1 ? 'Warning: Expected downtime exceeds Tier 1 SLA!' : 'Expected downtime is within Tier 1 SLA.'}</p>
+                <p>${service} - Tier 2 - Max Expected Downtime: ${maxExpectedDowntimeTier2} minutes</p>
+                <p>${service} - Tier 2 - Actual Downtime: ${actualDowntime} minutes</p>
+                <p>${actualDowntime > maxExpectedDowntimeTier2 ? 'Warning: Expected downtime exceeds Tier 2 SLA!' : 'Expected downtime is within Tier 2 SLA.'}</p>
+                <p>${service} - Tier 3 - Max Expected Downtime: ${maxExpectedDowntimeTier3} minutes</p>
+                <p>${service} - Tier 3 - Actual Downtime: ${actualDowntime} minutes</p>
+                <p>${actualDowntime > maxExpectedDowntimeTier3 ? 'Warning: Expected downtime exceeds Tier 3 SLA!' : 'Expected downtime is within Tier 3 SLA.'}</p>
+                <p>${service} - Tier 4 - Max Expected Downtime: ${maxExpectedDowntimeTier4} minutes</p>
+                <p>${service} - Tier 4 - Actual Downtime: ${actualDowntime} minutes</p>
+                <p>${actualDowntime > maxExpectedDowntimeTier4 ? 'Warning: Expected downtime exceeds Tier 4 SLA!' : 'Expected downtime is within Tier 4 SLA.'}</p>
             `;
             document.getElementById('outageComparison').innerHTML = comparisonHTML;
         } catch (error) {
