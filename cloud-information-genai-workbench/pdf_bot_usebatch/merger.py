@@ -48,6 +48,139 @@ TIMEZONE_MAP = {
     # Add more mappings as needed
 }
 
+# Define valid regions for each cloud provider
+valid_regions = {
+    "AWS": [
+        # Global
+        "global-default",
+        # US Regions
+        "us-east-1", "us-east-2", "us-west-1", "us-west-2",
+        "us-gov-east-1", "us-gov-west-1",
+        # Americas
+        "ca-central-1", "sa-east-1",
+        # Europe/Middle East/Africa
+        "eu-central-1", "eu-central-2", "eu-west-1", "eu-west-2", "eu-west-3",
+        "eu-north-1", "eu-south-1", "eu-south-2",
+        "me-south-1", "me-central-1", "af-south-1",
+        # Asia Pacific
+        "ap-east-1", "ap-south-1", "ap-south-2",
+        "ap-southeast-1", "ap-southeast-2", "ap-southeast-3", "ap-southeast-4",
+        "ap-northeast-1", "ap-northeast-2", "ap-northeast-3",
+        # China
+        "cn-north-1", "cn-northwest-1",
+        # Israel
+        "il-central-1",
+    ],
+    "Azure": [
+        # Global
+        "global-default",
+        # Americas
+        "eastus", "eastus2", "eastus3", "westus", "westus2", "westus3",
+        "centralus", "northcentralus", "southcentralus",
+        "canadacentral", "canadaeast",
+        "brazilsouth", "brazilsoutheast",
+        # Europe
+        "northeurope", "westeurope", "centraleurope",
+        "uksouth", "ukwest",
+        "francecentral", "francesouth",
+        "germanywestcentral", "germanynorth",
+        "swedencentral", "swedensouth",
+        "norwayeast", "norwaywest",
+        "switzerlandnorth", "switzerlandwest",
+        "italynorth",
+        # Asia Pacific
+        "eastasia", "southeastasia",
+        "australiaeast", "australiasoutheast", "australiacentral", "australiacentral2",
+        "japaneast", "japanwest","japan east","japan west",
+        "koreacentral", "koreasouth",
+        # Middle East/Africa
+        "uaenorth", "uaecentral",
+        "southafricanorth", "southafricawest",
+        "qatarcentral",
+        # India
+        "centralindia", "southindia", "westindia",
+        # China
+        "chinanorth", "chinanorth2", "chinanorth3", "chinaeast", "chinaeast2", "chinaeast3", "chinacloudapp.cn","chinacloudsites.cn",
+        # Government
+        "usgovvirginia", "usgovtexas", "usgovarizona",
+    ],
+    "Google Cloud Platform": [
+        # Global
+        "global-default",
+        # Americas
+        "us-central1", "us-east1", "us-east4", "us-east5",
+        "us-west1", "us-west2", "us-west3", "us-west4",
+        "us-south1",
+        "northamerica-northeast1", "northamerica-northeast2",
+        "southamerica-east1", "southamerica-west1",
+        # Europe
+        "europe-central2", "europe-north1",
+        "europe-west1", "europe-west2", "europe-west3",
+        "europe-west4", "europe-west6", "europe-west8", "europe-west9",
+        "europe-southwest1",
+        # Asia Pacific
+        "asia-east1", "asia-east2",
+        "asia-northeast1", "asia-northeast2", "asia-northeast3",
+        "asia-south1", "asia-south2",
+        "asia-southeast1", "asia-southeast2",
+        "australia-southeast1", "australia-southeast2",
+        # Middle East
+        "me-west1", "me-central1",
+    ],
+    "Oracle Cloud": [
+        # Global
+        "global-default",
+        # Americas
+        "us-ashburn-1", "us-phoenix-1", "us-sanjose-1",
+        "ca-montreal-1", "ca-toronto-1",
+        "sa-saopaulo-1", "sa-vinhedo-1", "sa-santiago-1",
+        # Europe
+        "uk-london-1", "uk-cardiff-1",
+        "eu-frankfurt-1", "eu-amsterdam-1", "eu-zurich-1",
+        "eu-madrid-1", "eu-marseille-1", "eu-milan-1", "eu-paris-1",
+        "eu-stockholm-1",
+        # Middle East/Africa
+        "me-dubai-1", "me-jeddah-1",
+        "af-johannesburg-1",
+        # Asia Pacific
+        "ap-mumbai-1", "ap-hyderabad-1",
+        "ap-tokyo-1", "ap-osaka-1",
+        "ap-seoul-1", "ap-chuncheon-1",
+        "ap-singapore-1",
+        "ap-sydney-1", "ap-melbourne-1",
+        # Government
+        "us-gov-ashburn-1", "us-gov-chicago-1", "us-gov-phoenix-1",
+    ],
+    "IBM Cloud": [
+        # Global
+        "global-default",
+        # Americas
+        "us-south", "us-east",
+        "br-sao",
+        "ca-tor",
+        # Europe
+        "eu-gb", "eu-de", "eu-es",
+        # Asia Pacific
+        "au-syd",
+        "jp-tok", "jp-osa",
+        "kr-seo",
+        # Government
+        "us-south-govt", "us-east-govt",
+        # Multi-zone regions
+        "dal10", "dal12", "dal13",
+        "wdc04", "wdc06", "wdc07",
+        "lon04", "lon05", "lon06",
+        "fra02", "fra04", "fra05",
+        "syd04", "syd05",
+        "tok02", "tok04", "tok05",
+        "osa21", "osa22", "osa23",
+        "sao01", "sao04", "sao05",
+        "tor01", "tor04", "tor05",
+        "mad02", "mad04", "mad05",
+    ],
+    # Add regions for other cloud providers
+}
+
 class OutageInfo:
     def __init__(self):
         self.cloud_provider: str = ""
@@ -98,6 +231,38 @@ def parse_date(date_str: str) -> Optional[datetime]:
     except Exception as e:
         # Optionally log e for debugging
         return None
+
+def speculate_region_from_az(provider: str, az: str) -> Optional[str]:
+    """
+    Attempt to speculate the region from an availability zone string.
+    Returns None if no match found.
+    """
+    az = az.lower().strip()
+    
+    # Common AZ to region mapping patterns
+    az_patterns = {
+        "AWS": {
+            r"(\w+-\w+-\d+)[a-z]": lambda x: x.group(1),  # us-east-1a -> us-east-1
+            r"(us|eu|ap|sa|ca|me|af)(\d+)-az\d+": lambda x: f"{x.group(1)}-{x.group(2)}",  # us1-az2 -> us-1
+        },
+        "Azure": {
+            r"(\w+)\s*zone\s*\d+": lambda x: x.group(1),  # eastus zone 1 -> eastus
+            r"(\w+)-az-\d+": lambda x: x.group(1),  # eastus-az-1 -> eastus
+        },
+        "Google Cloud Platform": {
+            r"(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # us-central1-a -> us-central1
+            r"zone\s+(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # zone us-central1-a -> us-central1
+        }
+    }
+    
+    if provider in az_patterns:
+        for pattern, transform in az_patterns[provider].items():
+            match = re.match(pattern, az)
+            if match:
+                return transform(match)
+    
+    # If no pattern matches, return the AZ as is
+    return az
 
 def extract_outage_info(text: str) -> List[OutageInfo]:
     """
@@ -461,6 +626,63 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
     # Split text into sections by outage
     sections = re.split(r"--\nOutage Filename:", text)
     
+    # Before adding regions to outage.regions, standardize the region names
+    # For example, map "Northern Virginia" to "us-east-1" for AWS
+
+    # Add this function inside 'merger.py'
+    def standardize_region_name(provider: str, region_name: str) -> str:
+        """Standardize region names based on provider."""
+        region_name = region_name.strip()
+        if not provider or not region_name:
+            return region_name
+        provider_regions = valid_regions.get(provider, [])
+        # Map 'Northern Virginia' to 'us-east-1' for AWS, etc.
+        region_aliases = {
+            "AWS": {
+                "Northern Virginia": "us-east-1",
+                "Ohio": "us-east-2",
+                "Oregon": "us-west-2",
+                "N. California": "us-west-1",
+                "Tokyo": "ap-northeast-1",
+                # Add more aliases as needed
+            },
+            "Azure": {
+                "East US": "eastus",
+                "West US 2": "westus2",
+                # Add more aliases as needed
+            },
+            "Google Cloud Platform": {
+                "Iowa": "us-central1",
+                "South Carolina": "us-east1",
+                # Add more aliases as needed
+            },
+            # Add aliases for other providers
+        }
+        aliases = region_aliases.get(provider, {})
+        standardized_name = aliases.get(region_name, region_name)
+        return standardized_name
+
+    # Add helper function to handle unspecified regions
+    def handle_unspecified_region(provider: str, region_text: str) -> List[str]:
+        """Handle cases where region is marked as unspecified/unknown"""
+        if not region_text or region_text.lower() in ['not specified', 'not declared', 'unknown', '', 'none']:
+            # Return all valid regions for the provider as a fallback
+            return valid_regions.get(provider, [])
+        
+        # Split and clean the region text
+        regions = re.split(r'[,•*]+', region_text)
+        cleaned_regions = []
+        
+        for region in regions:
+            region = region.strip()
+            if region and region.lower() not in ['not specified', 'not declared', 'unknown', '', 'none']:
+                standardized = standardize_region_name(provider, region)
+                if standardized:
+                    cleaned_regions.append(standardized)
+        
+        # If no valid regions found after cleaning, return all valid regions
+        return cleaned_regions if cleaned_regions else valid_regions.get(provider, [])
+
     for section in sections:
         # Skip empty sections
         if not section.strip():
@@ -543,9 +765,18 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         for pattern in region_patterns:
             matches = re.finditer(pattern, section)
             for match in matches:
-                region = match.group(1).strip()
-                if region and region not in outage.regions:
-                    outage.regions.append(region)
+                region_text = match.group(1).strip()
+                regions = handle_unspecified_region(outage.cloud_provider, region_text)
+                for region in regions:
+                    if region not in outage.regions:
+                        outage.regions.append(region)
+        
+        # If no regions were found, add all valid regions for the provider
+        if not outage.regions and outage.cloud_provider:
+            outage.regions = valid_regions.get(outage.cloud_provider, [])
+            # Use just the first region
+            if outage.regions:
+                outage.regions = [outage.regions[0]]
         
         # Extract duration using multiple patterns
         for pattern in duration_patterns:
@@ -661,6 +892,36 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         else:
             outage.outage_timestamp = 0.0  # Default if start_time is missing
         
+        # Normalize regions to lowercase and remove duplicates
+        outage.regions = list(set(region.lower() for region in outage.regions))
+
+        # Normalize availability zones to lowercase and remove duplicates
+        outage.availability_zones = list(set(zone.lower() for zone in outage.availability_zones))
+
+        # If no regions but have availability zones, try to speculate regions
+        if (not outage.regions or outage.regions == [""]) and outage.availability_zones:
+            speculated_regions = set()
+            
+            for az in outage.availability_zones:
+                # Try to speculate region from AZ
+                speculated_region = speculate_region_from_az(outage.cloud_provider, az)
+                if speculated_region:
+                    # Verify if it's a valid region for the provider
+                    if outage.cloud_provider in valid_regions:
+                        valid_provider_regions = [r.lower() for r in valid_regions[outage.cloud_provider]]
+                        if speculated_region.lower() in valid_provider_regions:
+                            speculated_regions.add(speculated_region)
+                        else:
+                            # If speculation doesn't match valid regions, use AZ as is
+                            speculated_regions.add(az)
+                    else:
+                        # If provider not in valid_regions, use AZ as is
+                        speculated_regions.add(az)
+            
+            # Update regions with speculated ones
+            if speculated_regions:
+                outage.regions = list(speculated_regions)
+
         outages.append(outage)
     
     return outages
@@ -1136,7 +1397,7 @@ def format_outage_text(outage: OutageInfo) -> str:
     return "\n".join(lines)
 
 def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
-    """Write outage summary as CSV with one line per service"""
+    """Write outage summary as CSV with one line per service per region"""
     csv_file = f'pdf_bot_usebatch/outage_report_summary_{timestamp}.csv'
     
     headers = [
@@ -1199,34 +1460,80 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
             
             # Format the complete outage text for genai output
             genai_output = format_outage_text(outage)
-            
-            # Create base row with common fields
-            base_row = {
-                'outage_timestamp': record_timestamp,
-                'source_outage_report': clean_text(outage.source_outage_report),
-                'cloud_provider': clean_text(outage.cloud_provider),
-                'regions': clean_list(outage.regions),
-                'availability_zones': clean_list(outage.availability_zones),
-                'start_time': outage.start_time.isoformat() if outage.start_time else default_time.isoformat(),
-                'end_time': outage.end_time.isoformat() if outage.end_time else default_time.isoformat(),
-                'outage_status': clean_text(outage.status),
-                'impact': clean_text(outage.impact),
-                'duration': clean_text(outage.duration),
-                'duration_minutes': downtime_minutes,
-                'root_cause': clean_text(outage.root_cause),
-                'resolution': clean_text(outage.resolution),
-                'downtime_period': clean_text(outage.downtime_period),
-                'incident_id': clean_text(outage.incident_id),
-                'affected_components': clean_list(outage.affected_components),
-                'mitigation_steps': clean_list(outage.mitigation_steps),
-                'cloudrisk_genai_output': clean_text(genai_output)  # Add formatted text output
-            }
-            
-            # Write one row per service
+
+            # Prepare region list
+            regions = outage.regions if outage.regions else [""]  # Leave empty if no regions
+
+            # Validate regions based on cloud provider
+            provider = outage.cloud_provider or ""
+            valid_provider_regions = valid_regions.get(provider, [])
+
+            # Iterate over services
             for service in outage.services:
-                row = base_row.copy()
-                row['cloud_service'] = clean_text(get_full_service_name(outage.cloud_provider, service))
-                writer.writerow(row)
+                service_name = clean_text(get_full_service_name(provider, service))
+
+                # If no regions, create a single record with empty region
+                if not regions or regions == [""]:
+                    row = {
+                        'outage_timestamp': record_timestamp,
+                        'source_outage_report': clean_text(outage.source_outage_report),
+                        'cloud_provider': clean_text(provider),
+                        'cloud_service': service_name,
+                        'regions': "",
+                        'availability_zones': clean_list(outage.availability_zones),
+                        'start_time': outage.start_time.isoformat() if outage.start_time else default_time.isoformat(),
+                        'end_time': outage.end_time.isoformat() if outage.end_time else default_time.isoformat(),
+                        'outage_status': clean_text(outage.status),
+                        'impact': clean_text(outage.impact),
+                        'duration': clean_text(outage.duration),
+                        'duration_minutes': downtime_minutes,
+                        'root_cause': clean_text(outage.root_cause),
+                        'resolution': clean_text(outage.resolution),
+                        'downtime_period': clean_text(outage.downtime_period),
+                        'incident_id': clean_text(outage.incident_id),
+                        'affected_components': clean_list(outage.affected_components),
+                        'mitigation_steps': clean_list(outage.mitigation_steps),
+                        'cloudrisk_genai_output': clean_text(genai_output)
+                    }
+                    writer.writerow(row)
+                else:
+                    # Iterate over regions
+                    for region in regions:
+                        region_clean = clean_text(region)
+                        # Perform validation if region is not empty
+                        if region_clean and valid_provider_regions:
+                            # Check if region matches any of the valid regions
+                            if region_clean not in valid_provider_regions:
+                                # Attempt to match region with known regions (case-insensitive)
+                                if not any(region_clean.lower() == vr.lower() for vr in valid_provider_regions):
+                                    # Region does not match any known region for the provider
+                                    # Optionally, you can skip this record or include it with a note
+                                    # For this example, we'll include it but you can modify as needed
+                                    pass
+
+                        # Create the record
+                        row = {
+                            'outage_timestamp': record_timestamp,
+                            'source_outage_report': clean_text(outage.source_outage_report),
+                            'cloud_provider': clean_text(provider),
+                            'cloud_service': service_name,
+                            'regions': region_clean,
+                            'availability_zones': clean_list(outage.availability_zones),
+                            'start_time': outage.start_time.isoformat() if outage.start_time else default_time.isoformat(),
+                            'end_time': outage.end_time.isoformat() if outage.end_time else default_time.isoformat(),
+                            'outage_status': clean_text(outage.status),
+                            'impact': clean_text(outage.impact),
+                            'duration': clean_text(outage.duration),
+                            'duration_minutes': downtime_minutes,
+                            'root_cause': clean_text(outage.root_cause),
+                            'resolution': clean_text(outage.resolution),
+                            'downtime_period': clean_text(outage.downtime_period),
+                            'incident_id': clean_text(outage.incident_id),
+                            'affected_components': clean_list(outage.affected_components),
+                            'mitigation_steps': clean_list(outage.mitigation_steps),
+                            'cloudrisk_genai_output': clean_text(genai_output)
+                        }
+                        writer.writerow(row)
 
 def cleanup_merge_file():
     """Remove lines containing 'is not mentioned in the text' from the merge.txt file."""

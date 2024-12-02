@@ -149,7 +149,7 @@ services = {
         "IBM Databases for Elasticsearch","IBM Databases for etcd","IBM Databases for MongoDB",
         "IBM Databases for MySQL","IBM Databases for PostgreSQL","IBM Databases for Redis",
         "IBM DataStage","IBM Db2","IBM Db2 Warehouse","IBM watsonx BI Assistant",
-        "IBM Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Kubernetes",
+        "IBM Managed Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Kubernetes",
         "Red Hat OpenShift on IBM Cloud"],
     "Oracle Cloud OCI": ["Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)"],
     "Snowflake": ["Snowflake on AWS","Snowflake on Azure","Snowflake on GCP"],
@@ -531,7 +531,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                     # Sort data by 'outage_timestamp'
                     df_outages = df_outages.sort_values('outage_timestamp')
                     # Create labels combining date and source report
-                    df_outages['formatted_label'] = df_outages['outage_timestamp'].dt.strftime('%Y-%b-%d') + '\n' + df_outages['source_output_report'].fillna('Unknown Source')
+                    df_outages['formatted_label'] = df_outages['outage_timestamp'].dt.strftime('%Y-%b-%d') + '\n' + df_outages['source_outage_report'].fillna('Indexed Report Source')
 
                     # Prepare hover text
                     df_outages['hover_text'] = df_outages.apply(lambda row: f"""
@@ -578,6 +578,10 @@ Report Source: {row.get('source_outage_report', 'Unknown Source')}
                     )
 
                     st.plotly_chart(fig, use_container_width=True)
+
+                    # Display the outage data in a table
+                    st.write(f"Outage details for {service}:")
+                    st.dataframe(df_outages)
 
     else:
         st.warning("Please fill in all required fields")
