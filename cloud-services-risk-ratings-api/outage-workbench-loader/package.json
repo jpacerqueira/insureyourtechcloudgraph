@@ -1,0 +1,19 @@
+{
+    "name": "outage-workbench-loader",
+    "version": "1.0.0",
+    "description": "A service to inject CSV data into a PostgreSQL database",
+    "main": "outage-data-loader.js",
+    "scripts": {
+      "start": "node outage-data-loader.js"
+    },
+    "dependencies": {
+      "dotenv": "^16.4.5",
+      "pg": "^8.10.0",
+      "csv-parser": "^3.0.0"
+    },
+    "engines": {
+      "node": ">=14.0.0"
+    },
+    "author": "FuelBigData.com",
+    "license": "MIT"
+  }
