@@ -2,6 +2,7 @@ services:
 
   customer_portal_app:
     build:
+      context: .
       dockerfile: CustomerPortal_app.Dockerfile
     env_file:
       - .env
