@@ -87,6 +87,9 @@ CREATE TABLE cloud_service_risk_ratings.service_risk_ratings (
     notes text
 );
 
+SELECT public.truncate_if_exists('outage_report_summaries', 'cloud_service_risk_ratings');
+DROP TABLE IF EXISTS cloud_service_risk_ratings.outage_report_summaries;
+
 CREATE TABLE cloud_service_risk_ratings.outage_report_summaries (
     outage_timestamp DECIMAL(16,6),
     source_outage_report TEXT,
