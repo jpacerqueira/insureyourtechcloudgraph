@@ -7,8 +7,20 @@ const path = require('path');
 // Load environment variables
 dotenv.config();
 
+var https = require('https');
+var http = require('http');
+var fs = require('fs');
+
 const app = express();
 const port = process.env.PORT || 8184;
+
+var options = {
+    key: fs.readFileSync('./certs/key.pem'),
+    cert: fs.readFileSync('./certs/cert.pem')
+  };
+  
+http.createServer(app).listen(port);
+https.createServer(options, app).listen(443);
 
 // Middleware
 app.use(express.json());

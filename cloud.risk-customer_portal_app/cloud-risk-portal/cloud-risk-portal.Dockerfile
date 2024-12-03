@@ -15,6 +15,6 @@ COPY . .
 
 # Expose the port that the Node.js app will run on
 EXPOSE 8184
-
+EXPOSE 443
 # Define the command to run the application
 CMD ["npm", "start"]
