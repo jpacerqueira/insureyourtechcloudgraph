@@ -23,7 +23,7 @@ app.use('/cloud-services-risk-ratings/risk-ratings', riskRatingsRouter);
 app.use('/cloud-services-risk-ratings/risk-ratings-freemium', freemiumRiskRatingsRouter);
 
 // Start the server
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8183;
 const DB_HOST = process.env.DB_HOST || 'postgres-db'; // localhost
 const DB_PORT = process.env.DB_PORT || 5432;
 const DB_USER = process.env.DB_USER || 'dbusername';

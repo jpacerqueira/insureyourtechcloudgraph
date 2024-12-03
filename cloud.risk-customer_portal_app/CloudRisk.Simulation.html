@@ -470,7 +470,7 @@
             if (vendor && service && region) {
                 try {
                     const response = await fetch(
-                        `http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`
+                        `http://localhost:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`
                     );
                     
                     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -804,7 +804,7 @@
     // Function to fetch outage data and render the chart
     async function fetchOutageData(service) {
         try {
-            const response = await fetch(`http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`);
+            const response = await fetch(`http://localhost:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const outageData = await response.json();
             renderOutageChart(outageData, service);
@@ -920,7 +920,7 @@
     // Function to compare max expected downtime with Tier 1 SLA
     async function compareMaxExpectedDowntime(service) {
         try {
-            const response = await fetch(`http://localhost:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global`);
+            const response = await fetch(`http://localhost:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const riskData = await response.json();
 

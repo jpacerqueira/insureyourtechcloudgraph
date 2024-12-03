@@ -56,7 +56,7 @@ def fetch_nodes_by_label(driver, label):
 # Add new API endpoint function
 def fetch_cloud_risk_data(service_name, region_type):
     try:
-        api_url = f"http://node-api:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/{service_name}/global_or_by_regions/{region_type}"
+        api_url = f"http://node-api:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/{service_name}/global_or_by_regions/{region_type}"
         response = requests.get(api_url)
         response.raise_for_status()
         return response.json()
@@ -67,7 +67,7 @@ def fetch_cloud_risk_data(service_name, region_type):
 # New function to fetch outage data for a specific service
 def fetch_outage_data(service):
     try:
-        api_url = f"http://node-api:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/{service}"
+        api_url = f"http://node-api:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/{service}"
         response = requests.get(api_url)
         if response.status_code == 404:
             st.info(f"Outage not found in database for {service}")
