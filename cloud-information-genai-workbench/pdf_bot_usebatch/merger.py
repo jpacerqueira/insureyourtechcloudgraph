@@ -104,7 +104,7 @@ valid_regions = {
         # Government
         "usgovvirginia", "usgovtexas", "usgovarizona",
     ],
-    "Google Cloud Platform": [
+    "GCP": [
         # Global
         "global-default",
         # Americas
@@ -127,7 +127,7 @@ valid_regions = {
         # Middle East
         "me-west1", "me-central1",
     ],
-    "Oracle Cloud": [
+    "Oracle": [
         # Global
         "global-default",
         # Americas
@@ -151,7 +151,7 @@ valid_regions = {
         # Government
         "us-gov-ashburn-1", "us-gov-chicago-1", "us-gov-phoenix-1",
     ],
-    "IBM Cloud": [
+    "IBM": [
         # Global
         "global-default",
         # Americas
@@ -179,6 +179,79 @@ valid_regions = {
         "mad02", "mad04", "mad05",
     ],
     # Add regions for other cloud providers
+    # MongoDB Cloud Operates on AWS , Azure and Google Cloud Platform
+    "MongoDB": [
+        # Global
+        "global-default",
+        # Azure Regions
+        # US Regions
+        "us-east-1", "us-east-2", "us-west-1", "us-west-2",
+        "us-gov-east-1", "us-gov-west-1",
+        # Americas
+        "ca-central-1", "sa-east-1",
+        # Europe/Middle East/Africa
+        "eu-central-1", "eu-central-2", "eu-west-1", "eu-west-2", "eu-west-3",
+        "eu-north-1", "eu-south-1", "eu-south-2",
+        "me-south-1", "me-central-1", "af-south-1",
+        # Asia Pacific
+        "ap-east-1", "ap-south-1", "ap-south-2",
+        "ap-southeast-1", "ap-southeast-2", "ap-southeast-3", "ap-southeast-4",
+        "ap-northeast-1", "ap-northeast-2", "ap-northeast-3",
+        # China
+        "cn-north-1", "cn-northwest-1",
+        # Israel
+        "il-central-1",
+        # AWS Regions
+        # Americas
+        "eastus", "eastus2", "eastus3", "westus", "westus2", "westus3",
+        "centralus", "northcentralus", "southcentralus",
+        "canadacentral", "canadaeast",
+        "brazilsouth", "brazilsoutheast",
+        # Europe
+        "northeurope", "westeurope", "centraleurope",
+        "uksouth", "ukwest",
+        "francecentral", "francesouth",
+        "germanywestcentral", "germanynorth",
+        "swedencentral", "swedensouth",
+        "norwayeast", "norwaywest",
+        "switzerlandnorth", "switzerlandwest",
+        "italynorth",
+        # Asia Pacific
+        "eastasia", "southeastasia",
+        "australiaeast", "australiasoutheast", "australiacentral", "australiacentral2",
+        "japaneast", "japanwest","japan east","japan west",
+        "koreacentral", "koreasouth",
+        # Middle East/Africa
+        "uaenorth", "uaecentral",
+        "southafricanorth", "southafricawest",
+        "qatarcentral",
+        # India
+        "centralindia", "southindia", "westindia",
+        # China
+        "chinanorth", "chinanorth2", "chinanorth3", "chinaeast", "chinaeast2", "chinaeast3", "chinacloudapp.cn","chinacloudsites.cn",
+        # Government
+        "usgovvirginia", "usgovtexas", "usgovarizona",
+        # Google Cloud Platform Regions
+        # Americas
+        "us-central1", "us-east1", "us-east4", "us-east5",
+        "us-west1", "us-west2", "us-west3", "us-west4",
+        "us-south1",
+        "northamerica-northeast1", "northamerica-northeast2",
+        "southamerica-east1", "southamerica-west1",
+        # Europe
+        "europe-central2", "europe-north1",
+        "europe-west1", "europe-west2", "europe-west3",
+        "europe-west4", "europe-west6", "europe-west8", "europe-west9",
+        "europe-southwest1",
+        # Asia Pacific
+        "asia-east1", "asia-east2",
+        "asia-northeast1", "asia-northeast2", "asia-northeast3",
+        "asia-south1", "asia-south2",
+        "asia-southeast1", "asia-southeast2",
+        "australia-southeast1", "australia-southeast2",
+        # Middle East
+        "me-west1", "me-central1",
+    ],
 }
 
 class OutageInfo:
@@ -249,10 +322,37 @@ def speculate_region_from_az(provider: str, az: str) -> Optional[str]:
             r"(\w+)\s*zone\s*\d+": lambda x: x.group(1),  # eastus zone 1 -> eastus
             r"(\w+)-az-\d+": lambda x: x.group(1),  # eastus-az-1 -> eastus
         },
-        "Google Cloud Platform": {
+        "GCP" or "Google Cloud Platform": {
             r"(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # us-central1-a -> us-central1
             r"zone\s+(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # zone us-central1-a -> us-central1
-        }
+        },
+        "Akamai": {
+            r"(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # us-central1-a -> us-central1
+        },
+        "Macrometa": {
+            r"(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # us-central1-a -> us-central1
+        },
+        "Cloudflare": {
+            r"(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # us-central1-a -> us-central1
+        },
+        "Databricks": {
+            r"(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # us-central1-a -> us-central1
+        },
+        "Salesforce": {
+            r"(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # us-central1-a -> us-central1
+        },
+        "Snowflake": {
+            r"(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # us-central1-a -> us-central1
+        },
+        "Oracle": {
+            r"(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # us-central1-a -> us-central1
+        },
+        "IBM": {
+            r"(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # us-central1-a -> us-central1
+        },
+        "MongoDB": {
+            r"(\w+-\w+-\w+)-\w": lambda x: x.group(1),  # us-central1-a -> us-central1
+        },
     }
     
     if provider in az_patterns:
@@ -277,19 +377,19 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
     
     # Extended provider patterns
     provider_patterns = {
-        "AWS": r"(?i)(Amazon AWS|AWS|Amazon Web Services|AWS Cloud)",
-        "Azure": r"(?i)(Microsoft Azure|Azure)",
-        "GCP": r"(?i)(Google GCP|Google Cloud|GCP)",
-        "IBM": r"(?i)(IBM Cloud)",
-        "MongoDB": r"(?i)(MongoDB|MongoDB Atlas)",
-        "Akamai": r"(?i)(Akamai|Akamai Technologies)",
-        "Macrometa": r"(?i)(Macrometa|Macrometa GDN)",
-        "Cloudflare": r"(?i)(Cloudflare|CloudFlare Inc)",
-        "Databricks": r"(?i)(Databricks)",
-        "Salesforce": r"(?i)(Salesforce|SFDC)",
-        "Snowflake": r"(?i)(Snowflake|Snowflake Inc)",
-        "Oracle": r"(?i)(Oracle Cloud|OCI|Oracle Corporation|Oracle Database)",
-    }
+            "AWS": r"(?i)(Amazon AWS|AWS|Amazon Web Services|Amazon|AWS Cloud)",
+            "Azure": r"(?i)(Microsoft Azure|Microsoft|Azure)",
+            "GCP": r"(?i)(Google GCP|Google Cloud|Google|GCP)",
+            "IBM": r"(?i)(IBM Cloud|IBM)",
+            "MongoDB": r"(?i)(MongoDB|MongoDB Cloud|MongoDB Atlas)",
+            "Akamai": r"(?i)(Akamai|Akamai Technologies)",
+            "Macrometa": r"(?i)(Macrometa|Macrometa GDN)",
+            "Cloudflare": r"(?i)(Cloudflare|CloudFlare Inc)",
+            "Databricks": r"(?i)(Databricks)",
+            "Salesforce": r"(?i)(Salesforce|SFDC)",
+            "Snowflake": r"(?i)(Snowflake|Snowflake Inc)",
+            "Oracle": r"(?i)(Oracle Cloud|OCI|Oracle Corporation|Oracle Database)",
+        }
     
     # Extended service patterns for specific providers
     service_patterns = {
@@ -467,14 +567,14 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Salesforce Mulesoft Anypoint Platform|Mulesoft|MAP)",
         ],
         "MongoDB": [
-            r"(?i)(MongoDB Atlas|Atlas)",
-            r"(?i)(MongoDB Atlas AWS|Atlas AWS)",
-            r"(?i)(MongoDB Atlas Azure|Atlas Azure)",
-            r"(?i)(MongoDB Atlas GCP|Atlas GCP)",
-            r"(?i)(MongoDB Atlas Search|Atlas Search)",
-            r"(?i)(MongoDB Atlas Vector Search|Vector Search)",
-            r"(?i)(MongoDB Atlas Stream Processing|Stream Processing)",
-            r"(?i)(MongoDB Atlas BI Connector|BI Connector)",
+            r"(?i)(MongoDB Atlas|MongoDB|MongoDB Cloud Atlas|Atlas)",
+            r"(?i)(MongoDB Atlas AWS|MongoDB AWS|Atlas AWS)",
+            r"(?i)(MongoDB Atlas Azure|MongoDB Azure|Atlas Azure)",
+            r"(?i)(MongoDB Atlas GCP|MongoDB GCP|Atlas GCP)",
+            r"(?i)(MongoDB Atlas Search|MongoDB Search|Search|Atlas Search)",
+            r"(?i)(MongoDB Atlas Vector Search|MongoDB Vector Search|Vector Search|Atlas Vector Search)",
+            r"(?i)(MongoDB Atlas Stream Processing|MongoDB Stream Processing|Stream Processing|Atlas Stream Processing)",
+            r"(?i)(MongoDB Atlas BI Connector|MongoDB BI Connector|BI Connector|Atlas BI Connector)",
             r"(?i)(MongoDB Atlas SQL|Atlas SQL)",
         ],
         "Cloudflare": [
@@ -484,7 +584,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Cloudflare DDoS Protection|CF DDoS)",
         ],
         "Akamai": [
-            r"(?i)(CDN Akamai|Akamai CDN)",
+            r"(?i)(CDN Akamai|Akamai CDN| Akamai)", # Generic Akamai from where it is used by other crossing cloud providers , cross analysis
             r"(?i)(Edge Computing Akamai|Akamai Edge)",
             r"(?i)(Security Akamai|Akamai Security)",
         ],
@@ -636,30 +736,164 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         if not provider or not region_name:
             return region_name
         provider_regions = valid_regions.get(provider, [])
-        # Map 'Northern Virginia' to 'us-east-1' for AWS, etc.
+
+        # Map common names to standardized region IDs
         region_aliases = {
             "AWS": {
+                # US Regions
                 "Northern Virginia": "us-east-1",
                 "Ohio": "us-east-2",
-                "Oregon": "us-west-2",
                 "N. California": "us-west-1",
+                "Northern California": "us-west-1",
+                "Oregon": "us-west-2",
+                # Asia Pacific
                 "Tokyo": "ap-northeast-1",
-                # Add more aliases as needed
+                "Seoul": "ap-northeast-2",
+                "Osaka": "ap-northeast-3",
+                "Singapore": "ap-southeast-1",
+                "Sydney": "ap-southeast-2",
+                "Mumbai": "ap-south-1",
+                # Europe
+                "Ireland": "eu-west-1",
+                "London": "eu-west-2",
+                "Paris": "eu-west-3",
+                "Frankfurt": "eu-central-1",
+                "Stockholm": "eu-north-1",
+                # Other
+                "São Paulo": "sa-east-1",
+                "Sao Paulo": "sa-east-1",
+                "Canada": "ca-central-1",
             },
             "Azure": {
+                # US Regions
                 "East US": "eastus",
+                "East US 2": "eastus2",
+                "Central US": "centralus",
+                "North Central US": "northcentralus",
+                "South Central US": "southcentralus",
+                "West US": "westus",
                 "West US 2": "westus2",
-                # Add more aliases as needed
+                "West US 3": "westus3",
+                # Europe
+                "North Europe": "northeurope",
+                "West Europe": "westeurope",
+                "UK South": "uksouth",
+                "UK West": "ukwest",
+                # Asia Pacific
+                "East Asia": "eastasia",
+                "Southeast Asia": "southeastasia",
+                "Japan East": "japaneast",
+                "Japan West": "japanwest",
+                "Australia East": "australiaeast",
+                "Australia Southeast": "australiasoutheast",
             },
-            "Google Cloud Platform": {
+            "GCP": {
+                # US Regions
                 "Iowa": "us-central1",
                 "South Carolina": "us-east1",
-                # Add more aliases as needed
+                "Northern Virginia": "us-east4",
+                "Oregon": "us-west1",
+                "Los Angeles": "us-west2",
+                "Salt Lake City": "us-west3",
+                "Las Vegas": "us-west4",
+                # Europe
+                "Belgium": "europe-west1",
+                "London": "europe-west2",
+                "Frankfurt": "europe-west3",
+                "Netherlands": "europe-west4",
+                "Zurich": "europe-west6",
+                "Milan": "europe-west8",
+                "Paris": "europe-west9",
+                # Asia Pacific
+                "Taiwan": "asia-east1",
+                "Hong Kong": "asia-east2",
+                "Tokyo": "asia-northeast1",
+                "Osaka": "asia-northeast2",
+                "Seoul": "asia-northeast3",
+                "Mumbai": "asia-south1",
+                "Delhi": "asia-south2",
+                "Singapore": "asia-southeast1",
+                "Jakarta": "asia-southeast2",
             },
-            # Add aliases for other providers
+            "Oracle": {
+                # US Regions
+                "Ashburn": "us-ashburn-1",
+                "Phoenix": "us-phoenix-1",
+                "San Jose": "us-sanjose-1",
+                "Chicago": "us-chicago-1",
+                # Europe
+                "Frankfurt": "eu-frankfurt-1",
+                "London": "uk-london-1",
+                "Amsterdam": "nl-amsterdam-1",
+                "Zurich": "eu-zurich-1",
+                "Paris": "eu-paris-1",
+                "Marseille": "eu-marseille-1",
+                "Milan": "eu-milan-1",
+                "Stockholm": "eu-stockholm-1",
+                # Asia Pacific
+                "Tokyo": "ap-tokyo-1",
+                "Osaka": "ap-osaka-1",
+                "Seoul": "ap-seoul-1",
+                "Chuncheon": "ap-chuncheon-1",
+                "Singapore": "ap-singapore-1",
+                "Mumbai": "ap-mumbai-1",
+                "Hyderabad": "ap-hyderabad-1",
+            },
+            "IBM": {
+                # US Regions
+                "Dallas": "us-south",
+                "Washington DC": "us-east",
+                # Europe
+                "London": "eu-gb",
+                "Frankfurt": "eu-de",
+                # Asia Pacific
+                "Sydney": "au-syd",
+                "Tokyo": "jp-tok",
+                "Osaka": "jp-osa",
+                "Seoul": "kr-seo",
+            },
+            "MongoDB": {
+                # Using AWS region names since MongoDB Atlas runs on AWS
+                "N. Virginia": "us-east-1",
+                "Oregon": "us-west-2",
+                "Ireland": "eu-west-1",
+                "Frankfurt": "eu-central-1",
+                "Mumbai": "ap-south-1",
+                "Singapore": "ap-southeast-1",
+            },
+            "Snowflake": {
+                # Mapped to underlying cloud provider regions
+                "US East": "aws-us-east-1",
+                "US West": "aws-us-west-2",
+                "EU Central": "azure-westeurope",
+                "Asia Pacific": "gcp-asia-southeast1",
+            },
+            "Databricks": {
+                # Using underlying cloud provider regions
+                "US East": "aws-us-east-1",
+                "EU West": "azure-westeurope",
+                "Asia Southeast": "gcp-asia-southeast1",
+            },
+            "Salesforce": {
+                # Generic region mapping
+                "North America": "na1",
+                "Europe": "eu1",
+                "Asia Pacific": "ap1",
+            }
         }
+
+        # Get provider-specific aliases
         aliases = region_aliases.get(provider, {})
+        
+        # Try to match the region name directly
         standardized_name = aliases.get(region_name, region_name)
+        
+        # If no direct match, try case-insensitive matching
+        if standardized_name == region_name:
+            for alias, std_name in aliases.items():
+                if region_name.lower() == alias.lower():
+                    return std_name
+        
         return standardized_name
 
     # Add helper function to handle unspecified regions
@@ -715,10 +949,39 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         if len(identified_providers) > 1:
             identified_providers = [provider for provider in identified_providers if provider not in excluded_providers]
 
-        # Assign the first identified provider if any
-        if identified_providers:
-            outage.cloud_provider = identified_providers[0]
+        # Assign the first N identified provider if any
+        # TODO : Changed logic to capture multi-cloud incidents like JULY Azure impacting MongoDB, Databricks and others.
+        # Extended provider patterns
+        provider_patterns = {
+            "AWS": r"(?i)(Amazon AWS|AWS|Amazon Web Services|Amazon|AWS Cloud)",
+            "Azure": r"(?i)(Microsoft Azure|Microsoft|Azure)",
+            "GCP": r"(?i)(Google GCP|Google Cloud|Google|GCP)",
+            "IBM": r"(?i)(IBM Cloud|IBM)",
+            "MongoDB": r"(?i)(MongoDB|MongoDB Cloud|MongoDB Atlas)",
+            "Akamai": r"(?i)(Akamai|Akamai Technologies)",
+            "Macrometa": r"(?i)(Macrometa|Macrometa GDN)",
+            "Cloudflare": r"(?i)(Cloudflare|CloudFlare Inc)",
+            "Databricks": r"(?i)(Databricks)",
+            "Salesforce": r"(?i)(Salesforce|SFDC)",
+            "Snowflake": r"(?i)(Snowflake|Snowflake Inc)",
+            "Oracle": r"(?i)(Oracle Cloud|OCI|Oracle Corporation|Oracle Database)",
+        }
+
+        # First check if provider can be determined from filename
+        provider_from_filename = None
+        if current_filename:
+            for provider, pattern in provider_patterns.items():
+                # Match to outage.source_outage_report
+                if re.search(pattern, outage.source_outage_report , re.IGNORECASE): 
+                    provider_from_filename = provider
+                    break
         
+        # Assign provider with priority to filename match
+        if provider_from_filename:
+            outage.cloud_provider = provider_from_filename
+        elif identified_providers:
+            outage.cloud_provider = identified_providers[0]
+
         # Extract services using provider-specific patterns
         if outage.cloud_provider in service_patterns:
             for pattern in service_patterns[outage.cloud_provider]:
