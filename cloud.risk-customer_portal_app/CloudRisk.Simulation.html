@@ -217,7 +217,7 @@
 
     const optionsForVariable1 = ["Amazon AWS", "Google Cloud GCP", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai", "Macrometa"];
     const optionsForVariable2 = ["AnyCast CloudFlare","CDN CloudFlare","CDN Akamai","Security Akamai","Edge Computing Akamai","CDN Macrometa","Edge Computing Macrometa",
-        "Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)",
+        "Oracle Cloud Infrastructure Virtual Cloud Network (VCN)","Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)",
         "Azure Active Directory AAD","Microsoft Entra ID","Azure Active Directory B2C",
         "Azure Machine Learning","Azure AI","Azure AI Search","Azure OpenAI Service","Azure API Management","Azure Databricks",
         "Azure SQL Managed Instance","Azure SQL Database","Azure Cosmos DB","Azure Database for PostgreSQL","Azure Database for MySQL",
@@ -866,7 +866,7 @@
                     x: {
                         title: {
                             display: true,
-                            text: 'Report Date and Report Name',
+                            text: 'Report Analysis ',
                             font: {
                                 size: 14,
                                 weight: 'bold'
@@ -894,6 +894,10 @@
                                     `End Date: ${outage.end_time}`,
                                     `Duration: ${outage.duration_minutes} minutes`,
                                     `Downtime Period: ${outage.downtime_period}`,
+                                    `Cloud Provider: ${outage.cloud_provider}`,
+                                    `Service: ${outage.service}`,
+                                    `Region: ${outage.region}`,
+                                    `Availability Zone: ${outage.availability_zone}`,
                                     `Root Cause: ${outage.root_cause || 'Not specified'}`,
                                     `Status: ${outage.outage_status}`,
                                     `Report Source: ${outage.source_outage_report || 'Indexed Report Source'}`

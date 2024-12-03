@@ -69,6 +69,9 @@ def fetch_outage_data(service):
     try:
         api_url = f"http://node-api:8000/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/{service}"
         response = requests.get(api_url)
+        if response.status_code == 404:
+            st.info(f"Outage not found in database for {service}")
+            return None
         response.raise_for_status()
         return response.json()
     except requests.RequestException as e:
@@ -151,7 +154,7 @@ services = {
         "IBM DataStage","IBM Db2","IBM Db2 Warehouse","IBM watsonx BI Assistant",
         "IBM Managed Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Kubernetes",
         "Red Hat OpenShift on IBM Cloud"],
-    "Oracle Cloud OCI": ["Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)"],
+    "Oracle Cloud OCI": ["Oracle Cloud Infrastructure Virtual Cloud Network (VCN)","Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)"],
     "Snowflake": ["Snowflake on AWS","Snowflake on Azure","Snowflake on GCP"],
     "Databricks": ["Databricks SaaS","Databricks Workspace", "Databricks Mlflow", "Databricks Notebooks"],
     "Salesforce": ["Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud","Salesforce Mulesoft Anypoint Platform"],
@@ -527,7 +530,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
                     # Create a DataFrame for the outage data
                     df_outages = pd.DataFrame(outage_data)
                     # Convert 'outage_timestamp' to datetime
-                    df_outages['outage_timestamp'] = pd.to_datetime(df_outages['outage_timestamp'], unit='s')
+                    df_outages['outage_timestamp'] = pd.to_datetime(df_outages['outage_timestamp'].astype(float), unit='s')
                     # Sort data by 'outage_timestamp'
                     df_outages = df_outages.sort_values('outage_timestamp')
                     # Create labels combining date and source report

@@ -774,7 +774,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         # If no regions were found, add all valid regions for the provider
         if not outage.regions and outage.cloud_provider:
             outage.regions = valid_regions.get(outage.cloud_provider, [])
-            # Use just the first region
+            # Use just the first region
             if outage.regions:
                 outage.regions = [outage.regions[0]]
         
@@ -1154,7 +1154,7 @@ def get_full_service_name(provider: str, service: str) -> str:
 def calculate_duration_in_minutes(duration_str: str) -> int:
     """
     Calculate the duration in minutes from various duration string formats found in merge.txt.
-    Returns 0 if duration cannot be parsed.
+    Returns 0 if duration cannot be parsed or if the calculated duration is negative.
     """
     if not duration_str:
         return 0
@@ -1162,8 +1162,8 @@ def calculate_duration_in_minutes(duration_str: str) -> int:
     duration_str = duration_str.lower().strip()
     total_minutes = 0
 
-    # Replace commas and 'and' with spaces for easier parsing
-    duration_str = duration_str.replace(',', ' ').replace('and', ' ')
+    # Replace commas and 'and' with spaces for easier parsing make it singular
+    duration_str = duration_str.replace(',', ' ').replace('and', ' ').replace('s', '')
     # Split the duration string into parts
     parts = duration_str.split()
     
@@ -1173,7 +1173,7 @@ def calculate_duration_in_minutes(duration_str: str) -> int:
         try:
             value = int(parts[i])
             unit = parts[i + 1]
-            if 'day' in unit:
+            if 'day'  in unit:
                 time_dict['day'] += value
             elif 'hour' in unit:
                 time_dict['hour'] += value
@@ -1189,15 +1189,35 @@ def calculate_duration_in_minutes(duration_str: str) -> int:
         time_dict['minute']
     )
     
-    return total_minutes if total_minutes > 0 else 0
+    # Ensure the total minutes is not negative
+    return max(total_minutes, 0)
 
 def calculate_downtime_minutes(outage: OutageInfo) -> int:
     """
     Calculate downtime in minutes using various fields from the outage info.
     Tries multiple approaches to get the most accurate duration.
     """
-    # Try to calculate from start_time and end_time if both are available
-    if outage.start_time and outage.end_time:
+        
+    # Try to calculate from duration string - more reliable method 1
+    if outage.duration:
+        minutes = calculate_duration_in_minutes(outage.duration)
+        if minutes > 0:
+            minutes = minutes
+        else:
+            minutes = 0
+        return minutes
+            
+    # Try to calculate from downtime_period - more reliable method 2
+    elif outage.downtime_period:
+        minutes = calculate_duration_in_minutes(outage.downtime_period)
+        if minutes > 0:
+            minutes = minutes
+        else:
+            minutes = 0
+        return minutes
+
+    # Try to calculate from start_time and end_time if both are available - less reliable method 3
+    elif outage.start_time and outage.end_time:
         # Ensure both datetimes are timezone-aware
         start_time = outage.start_time
         end_time = outage.end_time
@@ -1214,19 +1234,8 @@ def calculate_downtime_minutes(outage: OutageInfo) -> int:
         
         delta = end_time - start_time
         return int(delta.total_seconds() / 60)
-        
-    # Try to calculate from duration string
-    if outage.duration:
-        minutes = calculate_duration_in_minutes(outage.duration)
-        if minutes > 0:
-            return minutes
-            
-    # Try to calculate from downtime_period
-    if outage.downtime_period:
-        minutes = calculate_duration_in_minutes(outage.downtime_period)
-        if minutes > 0:
-            return minutes
-    
+    else:
+        return 0
     return 0
 
 def write_outage_summary(outage: OutageInfo, file):
@@ -1348,6 +1357,42 @@ def parse_filename_date(filename: str) -> Optional[datetime]:
     
     return None
 
+def parse_downtime_period(downtime_str: str) -> Optional[Tuple[datetime, datetime]]:
+    """
+    Parses the downtime_period string to extract start and end times.
+    Returns a tuple of (start_time, end_time) or None if parsing fails.
+    """
+    time_patterns = [
+        # Pattern: From [start_time] to [end_time]
+        r"(?i)from\s+(.*?)\s+to\s+(.*?)(?:$|\s*\()",
+        # Pattern: The outage started on [start_time] and ended on [end_time]
+        r"(?i)The outage started on\s+(.*?)\s*(?:and|&)\s*(?:ended|resolved)\s*(?:on\s*)?(.*?)(?:$|\s*\()",
+        # Pattern: Started at [start_time] and ended at [end_time]
+        r"(?i)Started at\s+(.*?)\s*(?:and|&)\s*ended at\s+(.*?)(?:$|\s*\()",
+        # Pattern: Downtime Period: [start_time] - [end_time]
+        r"(?i)Downtime Period:\s*(.*?)\s*-\s*(.*?)(?:$|\s*\()",
+    ]
+
+    for pattern in time_patterns:
+        match = re.search(pattern, downtime_str)
+        if match:
+            start_str = match.group(1).strip()
+            end_str = match.group(2).strip()
+            start_time = parse_timestamp(start_str)
+            end_time = parse_timestamp(end_str)
+            if start_time and end_time:
+                # Ensure both times are timezone-aware and in UTC
+                if start_time.tzinfo is None:
+                    start_time = start_time.replace(tzinfo=pytz.utc)
+                else:
+                    start_time = start_time.astimezone(pytz.utc)
+                if end_time.tzinfo is None:
+                    end_time = end_time.replace(tzinfo=pytz.utc)
+                else:
+                    end_time = end_time.astimezone(pytz.utc)
+                return start_time, end_time
+    return None
+
 def format_outage_text(outage: OutageInfo) -> str:
     """
     Format outage information as a multi-line string for genai output
@@ -1404,7 +1449,7 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
         'outage_timestamp',
         'source_outage_report',
         'cloud_provider',
-        'cloud_service',
+        'cloud_service',  
         'regions',
         'availability_zones',
         'start_time',
@@ -1417,9 +1462,9 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
         'resolution',
         'downtime_period',
         'incident_id',
-        'affected_components',
+        'affected_components',  # Restored affected_components column
         'mitigation_steps',
-        'cloudrisk_genai_output'  # New column
+        'cloudrisk_genai_output'
     ]
 
     def clean_text(text):
@@ -1439,40 +1484,51 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
         writer.writeheader()
         
         for outage in outages:
-            # Convert start_time to timestamp if available, otherwise use current time
+            # Get timestamp
             if outage.start_time and isinstance(outage.start_time, datetime):
                 record_timestamp = outage.start_time.timestamp()
             else:
-                record_timestamp = time() # Fallback to time()
+                record_timestamp = time()
 
-            # Try to get date from merge.txt content
+            # Get date from text or filename
             text_date = extract_date_from_text(outage.source_outage_report)
-            
-            # If no date found in text, try to get date from filename
             if not text_date and outage.source_outage_report:
                 text_date = parse_filename_date(outage.source_outage_report)
-
-            # Use 2024-01-01 as the last resort
             default_time = text_date if text_date else datetime(2024, 1, 1, 0, 0)
             
-            # Calculate downtime in minutes using enhanced logic
+            # Calculate downtime
             downtime_minutes = calculate_downtime_minutes(outage)
             
-            # Format the complete outage text for genai output
+            # Format genai output
             genai_output = format_outage_text(outage)
 
-            # Prepare region list
-            regions = outage.regions if outage.regions else [""]  # Leave empty if no regions
-
-            # Validate regions based on cloud provider
+            # Get regions
+            regions = outage.regions if outage.regions else [""]
+            
+            # Get provider and validate regions
             provider = outage.cloud_provider or ""
             valid_provider_regions = valid_regions.get(provider, [])
 
-            # Iterate over services
+            # Process services
+            all_services = set()
             for service in outage.services:
-                service_name = clean_text(get_full_service_name(provider, service))
+                all_services.add(get_full_service_name(provider, service))
+            
+            # If no services found, add at least one empty record
+            if not all_services:
+                all_services.add("")
 
-                # If no regions, create a single record with empty region
+            # Format affected components separately
+            affected_components_str = ", ".join(
+                get_full_service_name(provider, component) 
+                for component in outage.affected_components
+            )
+
+            # Create records for each service and region combination
+            for service in all_services:
+                service_name = clean_text(service)
+                
+                # If no regions, create single record
                 if not regions or regions == [""]:
                     row = {
                         'outage_timestamp': record_timestamp,
@@ -1491,27 +1547,16 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
                         'resolution': clean_text(outage.resolution),
                         'downtime_period': clean_text(outage.downtime_period),
                         'incident_id': clean_text(outage.incident_id),
-                        'affected_components': clean_list(outage.affected_components),
+                        'affected_components': clean_text(affected_components_str),  # Added back
                         'mitigation_steps': clean_list(outage.mitigation_steps),
                         'cloudrisk_genai_output': clean_text(genai_output)
                     }
                     writer.writerow(row)
                 else:
-                    # Iterate over regions
+                    # Create record for each region
                     for region in regions:
                         region_clean = clean_text(region)
-                        # Perform validation if region is not empty
-                        if region_clean and valid_provider_regions:
-                            # Check if region matches any of the valid regions
-                            if region_clean not in valid_provider_regions:
-                                # Attempt to match region with known regions (case-insensitive)
-                                if not any(region_clean.lower() == vr.lower() for vr in valid_provider_regions):
-                                    # Region does not match any known region for the provider
-                                    # Optionally, you can skip this record or include it with a note
-                                    # For this example, we'll include it but you can modify as needed
-                                    pass
-
-                        # Create the record
+                        
                         row = {
                             'outage_timestamp': record_timestamp,
                             'source_outage_report': clean_text(outage.source_outage_report),
@@ -1529,7 +1574,7 @@ def write_outage_csv_summary(outages: List[OutageInfo], timestamp: str):
                             'resolution': clean_text(outage.resolution),
                             'downtime_period': clean_text(outage.downtime_period),
                             'incident_id': clean_text(outage.incident_id),
-                            'affected_components': clean_list(outage.affected_components),
+                            'affected_components': clean_text(affected_components_str),  # Added back
                             'mitigation_steps': clean_list(outage.mitigation_steps),
                             'cloudrisk_genai_output': clean_text(genai_output)
                         }
@@ -1600,42 +1645,6 @@ def run_merge_script():
                 
     except Exception as e:
         print(f"Error processing merged file: {str(e)}")
-
-def parse_downtime_period(downtime_str: str) -> Optional[Tuple[datetime, datetime]]:
-    """
-    Parses the downtime_period string to extract start and end times.
-    Returns a tuple of (start_time, end_time) or None if parsing fails.
-    """
-    time_patterns = [
-        # Pattern: From [start_time] to [end_time]
-        r"(?i)from\s+(.*?)\s+to\s+(.*?)(?:$|\s*\()",
-        # Pattern: The outage started on [start_time] and ended on [end_time]
-        r"(?i)The outage started on\s+(.*?)\s*(?:and|&)\s*(?:ended|resolved)\s*(?:on\s*)?(.*?)(?:$|\s*\()",
-        # Pattern: Started at [start_time] and ended at [end_time]
-        r"(?i)Started at\s+(.*?)\s*(?:and|&)\s*ended at\s+(.*?)(?:$|\s*\()",
-        # Pattern: Downtime Period: [start_time] - [end_time]
-        r"(?i)Downtime Period:\s*(.*?)\s*-\s*(.*?)(?:$|\s*\()",
-    ]
-
-    for pattern in time_patterns:
-        match = re.search(pattern, downtime_str)
-        if match:
-            start_str = match.group(1).strip()
-            end_str = match.group(2).strip()
-            start_time = parse_timestamp(start_str)
-            end_time = parse_timestamp(end_str)
-            if start_time and end_time:
-                # Ensure both times are timezone-aware and in UTC
-                if start_time.tzinfo is None:
-                    start_time = start_time.replace(tzinfo=pytz.utc)
-                else:
-                    start_time = start_time.astimezone(pytz.utc)
-                if end_time.tzinfo is None:
-                    end_time = end_time.replace(tzinfo=pytz.utc)
-                else:
-                    end_time = end_time.astimezone(pytz.utc)
-                return start_time, end_time
-    return None
 
 if __name__ == "__main__":
     run_merge_script()
