@@ -30,17 +30,17 @@ backend_server:
 
 backend_server_gcp:
 	sleep 1
-	cd cloud-services-risk-ratings-api ; bash -x build-api-cluster 4 1 ; cd ..
+	cd cloud-services-risk-ratings-api ; bash -x build-api-cluster 4 1 1 ; cd ..
 	sleep 90 # wait for the database to be ready
 
 customer_app:
 	sleep 1
-	cd cloud.risk-customer_portal_app ; bash -x customer_app_start 4 0 1 ; cd ..
+	cd cloud.risk-customer_portal_app ; bash -x customer_app_start 4 0 ; cd ..
 	sleep 90 # wait for the database to be ready
 
 customer_app_gcp:
 	sleep 1
-	cd cloud.risk-customer_portal_app ; bash -x customer_app_start 4 1 ; cd ..
+	cd cloud.risk-customer_portal_app ; bash -x customer_app_start 4 1 1 ; cd ..
 	sleep 90 # wait for the database to be ready
 
 workbench_apps:
