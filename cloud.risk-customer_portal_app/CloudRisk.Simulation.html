@@ -895,11 +895,11 @@
                                     `Duration: ${outage.duration_minutes} minutes`,
                                     `Downtime Period: ${outage.downtime_period}`,
                                     `Cloud Provider: ${outage.cloud_provider}`,
-                                    `Service: ${outage.service}`,
-                                    `Region: ${outage.region}`,
-                                    `Availability Zone: ${outage.availability_zone}`,
+                                    `Service: ${outage.cloud_service}`,
+                                    `Region: ${outage.regions || 'Not specified'}`,
+                                    `Availability Zone: ${outage.availability_zone || 'Unknown'}`,
                                     `Root Cause: ${outage.root_cause || 'Not specified'}`,
-                                    `Status: ${outage.outage_status}`,
+                                    `Status: ${outage.outage_status || 'Unknown'}`,
                                     `Report Source: ${outage.source_outage_report || 'Indexed Report Source'}`
                                 ];
                             }
