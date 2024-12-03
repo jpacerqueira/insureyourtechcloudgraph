@@ -35,7 +35,7 @@ backend_server_gcp:
 
 customer_app:
 	sleep 1
-	cd cloud.risk-customer_portal_app ; bash -x customer_app_start 4 0 ; cd ..
+	cd cloud.risk-customer_portal_app ; bash -x customer_app_start 4 0 1 ; cd ..
 	sleep 90 # wait for the database to be ready
 
 customer_app_gcp:
