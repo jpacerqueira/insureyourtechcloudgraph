@@ -72,6 +72,30 @@ services:
       /data/cloud_service_risk_ratings.csv service_risk_ratings
       /data/outage_report_summaries.csv outage_report_summaries"
 
+outage-workbench-loader:
+    build:
+      context: ./outage-workbench-loader:
+      dockerfile: outage-workbench-loader.Dockerfile
+    container_name: outage-workbench-loader:
+    environment:
+      - DB_HOST=postgres-db
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=password
+      - DB_NAME=cloud_service_risk_ratings
+    volumes:
+      - ./outage-workbench-loader:/outage-workbench-loader
+      - ./data:/data
+    working_dir: /app
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+      csv-loader:
+        condition: service_finished
+    networks:
+      - backend
+    command: >
+      sh -c "node /app/outage-data-loader.js"
 
 volumes:
   postgres-data:
