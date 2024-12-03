@@ -15,7 +15,7 @@ DOCKER_PODMAN="${2:-0}" # 1 or 0
 
 if [[ "$DOCKER_PODMAN" == "1" ]]; then
    echo "Using Docker Podman"
-   DOCKER_COMPOSE_CMD="podman-compose"
+   DOCKER_COMPOSE_CMD="docker-compose"
    DOCKER_CMD="podman"
 else
    echo "Using Docker"

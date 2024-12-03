@@ -1,6 +1,6 @@
 all: config_where_am_I_running webscraping backend_server customer_app workbench_apps riskgraph
 
-gcp_deploy: config_where_am_I_running backend_server_gcp customer_app_gcp
+gcp_deploy: gcp_config_where_am_I_running backend_server_gcp customer_app_gcp
 
 check:
 	whoami ; id; pwd; ls -listarh; docker ps
@@ -13,6 +13,10 @@ distcheck:
 config_where_am_I_running:
 	whoami ; id ; pwd ; ls -listarh ; docker ps
 	echo "make config_where_am_I_running - Warning : Has No specific - rule to make target 'config_where_am_I_running'.  just continue."
+
+gcp_config_where_am_I_running:
+	whoami ; id ; pwd ; ls -listarh ; docker ps
+	echo "make gcp_config_where_am_I_running - Warning : Has No specific - rule to make target 'gcp_config_where_am_I_running'.  just continue."
 
 webscraping:
 	sleep 1

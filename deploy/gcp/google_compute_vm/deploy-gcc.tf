@@ -1,10 +1,10 @@
 # This code is compatible with Terraform 4.25.0 and versions that are backward compatible to 4.25.0.
 # For information about validating this Terraform code, see https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/google-cloud-platform-build#format-and-validate-the-configuration
 
-resource "google_compute_instance" "instance-20241130-235231" {
+resource "google_compute_instance" "instance-20241203-144331" {
   boot_disk {
     auto_delete = true
-    device_name = "instance-20241130-235231"
+    device_name = "instance-20241203-144331"
 
     initialize_params {
       image = "projects/debian-cloud/global/images/debian-12-bookworm-v20241112"
@@ -18,7 +18,7 @@ resource "google_compute_instance" "instance-20241130-235231" {
   can_ip_forward      = true
   deletion_protection = false
   enable_display      = false
-  hostname            = "insureyourtechcloud.cloud.risk.graph"
+  hostname            = "insureyourtech.cloud.fuelbigdata.env1.vm"
 
   labels = {
     goog-ec-src           = "vm_add-tf"
@@ -31,16 +31,13 @@ resource "google_compute_instance" "instance-20241130-235231" {
     enable-osconfig = "TRUE"
   }
 
-  name = "instance-20241130-235231"
+  name = "instance-20241203-144331"
 
   network_interface {
     access_config {
-      nat_ip                 = "35.246.26.10"
-      network_tier           = "PREMIUM"
-      public_ptr_domain_name = "insureyourtech.cloud."
+      network_tier = "PREMIUM"
     }
 
-    nic_type    = "GVNIC"
     queue_count = 0
     stack_type  = "IPV4_ONLY"
     subnetwork  = "projects/fuelbigdata-test1/regions/europe-west2/subnetworks/default"
@@ -60,7 +57,7 @@ resource "google_compute_instance" "instance-20241130-235231" {
 
   shielded_instance_config {
     enable_integrity_monitoring = true
-    enable_secure_boot          = false
+    enable_secure_boot          = true
     enable_vtpm                 = true
   }
 
@@ -86,4 +83,3 @@ module "ops_agent_policy" {
     }]
   }
 }
-
