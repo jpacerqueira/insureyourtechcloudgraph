@@ -16,7 +16,7 @@
         }
         .container {
             width: 90%;
-            max-width: 2200px;
+            max-width: 1700px;
             background-color: #353b48;  /* Slightly lighter grey for container */
             padding: 2rem;
             border-radius: 10px;
@@ -900,7 +900,8 @@
                                     `Availability Zone: ${outage.availability_zone || 'Unknown'}`,
                                     `Root Cause: ${outage.root_cause || 'Not specified'}`,
                                     `Status: ${outage.outage_status || 'Unknown'}`,
-                                    `Report Source: ${outage.source_outage_report || 'Indexed Report Source'}`
+                                    `Report Source: ${outage.source_outage_report || 'Indexed Report Source'}`,
+                                    `Report GenAI Analysis: ${outage.cloudrisk_genai_output || 'Not specified'}`
                                 ];
                             }
                         }
