@@ -1162,8 +1162,8 @@ def calculate_duration_in_minutes(duration_str: str) -> int:
     duration_str = duration_str.lower().strip()
     total_minutes = 0
 
-    # Replace commas and 'and' with spaces for easier parsing
-    duration_str = duration_str.replace(',', ' ').replace('and', ' ')
+    # Replace commas and 'and' with spaces for easier parsing make it singular
+    duration_str = duration_str.replace(',', ' ').replace('and', ' ').replace('s', '')
     # Split the duration string into parts
     parts = duration_str.split()
     
@@ -1173,11 +1173,11 @@ def calculate_duration_in_minutes(duration_str: str) -> int:
         try:
             value = int(parts[i])
             unit = parts[i + 1]
-            if 'day' or 'days' in unit:
+            if 'day'  in unit:
                 time_dict['day'] += value
-            elif 'hour' or 'hours' in unit:
+            elif 'hour' in unit:
                 time_dict['hour'] += value
-            elif 'minute' or 'minutes' in unit:
+            elif 'minute' in unit:
                 time_dict['minute'] += value
             i += 2
         except (IndexError, ValueError):
@@ -1202,16 +1202,22 @@ def calculate_downtime_minutes(outage: OutageInfo) -> int:
     if outage.duration:
         minutes = calculate_duration_in_minutes(outage.duration)
         if minutes > 0:
-            return minutes
+            minutes = minutes
+        else:
+            minutes = 0
+        return minutes
             
     # Try to calculate from downtime_period - more reliable method 2
-    if outage.downtime_period:
+    elif outage.downtime_period:
         minutes = calculate_duration_in_minutes(outage.downtime_period)
         if minutes > 0:
-            return minutes
+            minutes = minutes
+        else:
+            minutes = 0
+        return minutes
 
     # Try to calculate from start_time and end_time if both are available - less reliable method 3
-    if outage.start_time and outage.end_time:
+    elif outage.start_time and outage.end_time:
         # Ensure both datetimes are timezone-aware
         start_time = outage.start_time
         end_time = outage.end_time
@@ -1228,6 +1234,8 @@ def calculate_downtime_minutes(outage: OutageInfo) -> int:
         
         delta = end_time - start_time
         return int(delta.total_seconds() / 60)
+    else:
+        return 0
     return 0
 
 def write_outage_summary(outage: OutageInfo, file):
@@ -1347,6 +1355,42 @@ def parse_filename_date(filename: str) -> Optional[datetime]:
             except ValueError:
                 continue
     
+    return None
+
+def parse_downtime_period(downtime_str: str) -> Optional[Tuple[datetime, datetime]]:
+    """
+    Parses the downtime_period string to extract start and end times.
+    Returns a tuple of (start_time, end_time) or None if parsing fails.
+    """
+    time_patterns = [
+        # Pattern: From [start_time] to [end_time]
+        r"(?i)from\s+(.*?)\s+to\s+(.*?)(?:$|\s*\()",
+        # Pattern: The outage started on [start_time] and ended on [end_time]
+        r"(?i)The outage started on\s+(.*?)\s*(?:and|&)\s*(?:ended|resolved)\s*(?:on\s*)?(.*?)(?:$|\s*\()",
+        # Pattern: Started at [start_time] and ended at [end_time]
+        r"(?i)Started at\s+(.*?)\s*(?:and|&)\s*ended at\s+(.*?)(?:$|\s*\()",
+        # Pattern: Downtime Period: [start_time] - [end_time]
+        r"(?i)Downtime Period:\s*(.*?)\s*-\s*(.*?)(?:$|\s*\()",
+    ]
+
+    for pattern in time_patterns:
+        match = re.search(pattern, downtime_str)
+        if match:
+            start_str = match.group(1).strip()
+            end_str = match.group(2).strip()
+            start_time = parse_timestamp(start_str)
+            end_time = parse_timestamp(end_str)
+            if start_time and end_time:
+                # Ensure both times are timezone-aware and in UTC
+                if start_time.tzinfo is None:
+                    start_time = start_time.replace(tzinfo=pytz.utc)
+                else:
+                    start_time = start_time.astimezone(pytz.utc)
+                if end_time.tzinfo is None:
+                    end_time = end_time.replace(tzinfo=pytz.utc)
+                else:
+                    end_time = end_time.astimezone(pytz.utc)
+                return start_time, end_time
     return None
 
 def format_outage_text(outage: OutageInfo) -> str:
@@ -1601,42 +1645,6 @@ def run_merge_script():
                 
     except Exception as e:
         print(f"Error processing merged file: {str(e)}")
-
-def parse_downtime_period(downtime_str: str) -> Optional[Tuple[datetime, datetime]]:
-    """
-    Parses the downtime_period string to extract start and end times.
-    Returns a tuple of (start_time, end_time) or None if parsing fails.
-    """
-    time_patterns = [
-        # Pattern: From [start_time] to [end_time]
-        r"(?i)from\s+(.*?)\s+to\s+(.*?)(?:$|\s*\()",
-        # Pattern: The outage started on [start_time] and ended on [end_time]
-        r"(?i)The outage started on\s+(.*?)\s*(?:and|&)\s*(?:ended|resolved)\s*(?:on\s*)?(.*?)(?:$|\s*\()",
-        # Pattern: Started at [start_time] and ended at [end_time]
-        r"(?i)Started at\s+(.*?)\s*(?:and|&)\s*ended at\s+(.*?)(?:$|\s*\()",
-        # Pattern: Downtime Period: [start_time] - [end_time]
-        r"(?i)Downtime Period:\s*(.*?)\s*-\s*(.*?)(?:$|\s*\()",
-    ]
-
-    for pattern in time_patterns:
-        match = re.search(pattern, downtime_str)
-        if match:
-            start_str = match.group(1).strip()
-            end_str = match.group(2).strip()
-            start_time = parse_timestamp(start_str)
-            end_time = parse_timestamp(end_str)
-            if start_time and end_time:
-                # Ensure both times are timezone-aware and in UTC
-                if start_time.tzinfo is None:
-                    start_time = start_time.replace(tzinfo=pytz.utc)
-                else:
-                    start_time = start_time.astimezone(pytz.utc)
-                if end_time.tzinfo is None:
-                    end_time = end_time.replace(tzinfo=pytz.utc)
-                else:
-                    end_time = end_time.astimezone(pytz.utc)
-                return start_time, end_time
-    return None
 
 if __name__ == "__main__":
     run_merge_script()
