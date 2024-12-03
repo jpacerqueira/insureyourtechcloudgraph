@@ -15,11 +15,13 @@ const app = express();
 const port = process.env.PORT || 8184;
 
 var options = {
-    key: fs.readFileSync('./certs/key.pem'),
-    cert: fs.readFileSync('./certs/cert.pem')
+    key: fs.readFileSync('/app/certs/server.key'),
+    cert: fs.readFileSync('/app/certs/server.cert')
   };
   
+http.createServer(app).listen(80);
 http.createServer(app).listen(port);
+https.createServer(options, app).listen(port);
 https.createServer(options, app).listen(443);
 
 // Middleware
