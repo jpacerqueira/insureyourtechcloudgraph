@@ -509,24 +509,22 @@
 
             if (vendor && service && region) {
                 try {
-                    const  riskData = fetchCloudRiskData(service, region);
+                    const riskData = await fetchCloudRiskData(service, region);
 
-                    // Process metrics for customer
-                    customerMetrics.sla_usage.push(parseFloat(riskData.service_sla_usage_percentage));
-                    customerMetrics.sla_deviation.push(parseFloat(riskData.sla_deviation_connected_risk_0_999));
-                    customerMetrics.traffic_coef.push(parseFloat(riskData.service_traffic_coef_by_percent_down));
-                    customerMetrics.usage_risk.push(parseFloat(riskData.usage_connected_risk_0_999));
-                    customerMetrics.service_sla_tier1.push(parseFloat(riskData.service_sla_0_99_9999_for_tier1));
-                    customerMetrics.service_sla_tier2.push(parseFloat(riskData.service_sla_0_99_9999_for_tier2));
-                    customerMetrics.service_sla_tier3.push(parseFloat(riskData.service_sla_0_99_9999_for_tier3));
-                    customerMetrics.service_sla_tier4.push(parseFloat(riskData.service_sla_0_99_9999_for_tier4));
-                    customerMetrics.service_credit_back_tier1.push(parseFloat(riskData.percentage_service_credit_back_tier1));
-                    customerMetrics.service_credit_back_tier2.push(parseFloat(riskData.percentage_service_credit_back_tier2));
-                    customerMetrics.service_credit_back_tier3.push(parseFloat(riskData.percentage_service_credit_back_tier3));
-                    customerMetrics.service_credit_back_tier4.push(parseFloat(riskData.percentage_service_credit_back_tier4));
-                    customerMetrics.annual_downtime.push(parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes));
+                    customerMetrics.sla_usage.push(Number(riskData?.service_sla_usage_percentage) || 0);
+                    customerMetrics.sla_deviation.push(Number(riskData?.sla_deviation_connected_risk_0_999) || 0);
+                    customerMetrics.traffic_coef.push(Number(riskData?.service_traffic_coef_by_percent_down) || 0);
+                    customerMetrics.usage_risk.push(Number(riskData?.usage_connected_risk_0_999) || 0);
+                    customerMetrics.service_sla_tier1.push(Number(riskData?.service_sla_0_99_9999_for_tier1) || 0);
+                    customerMetrics.service_sla_tier2.push(Number(riskData?.service_sla_0_99_9999_for_tier2) || 0);
+                    customerMetrics.service_sla_tier3.push(Number(riskData?.service_sla_0_99_9999_for_tier3) || 0);
+                    customerMetrics.service_sla_tier4.push(Number(riskData?.service_sla_0_99_9999_for_tier4) || 0);
+                    customerMetrics.service_credit_back_tier1.push(Number(riskData?.percentage_service_credit_back_tier1) || 0);
+                    customerMetrics.service_credit_back_tier2.push(Number(riskData?.percentage_service_credit_back_tier2) || 0);
+                    customerMetrics.service_credit_back_tier3.push(Number(riskData?.percentage_service_credit_back_tier3) || 0);
+                    customerMetrics.service_credit_back_tier4.push(Number(riskData?.percentage_service_credit_back_tier4) || 0);
+                    customerMetrics.annual_downtime.push(Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0);
 
-                    // Process metrics for vendor
                     if (!vendorMetrics[vendor]) {
                         vendorMetrics[vendor] = {
                             sla_usage: [],
@@ -545,25 +543,22 @@
                         };
                     }
                     
-                    // Add metrics to vendor
-                    vendorMetrics[vendor].sla_usage.push(parseFloat(riskData.service_sla_usage_percentage));
-                    vendorMetrics[vendor].sla_deviation.push(parseFloat(riskData.sla_deviation_connected_risk_0_999));
-                    vendorMetrics[vendor].traffic_coef.push(parseFloat(riskData.service_traffic_coef_by_percent_down));
-                    vendorMetrics[vendor].usage_risk.push(parseFloat(riskData.usage_connected_risk_0_999));
-                    vendorMetrics[vendor].service_sla_tier1.push(parseFloat(riskData.service_sla_0_99_9999_for_tier1));
-                    vendorMetrics[vendor].service_sla_tier2.push(parseFloat(riskData.service_sla_0_99_9999_for_tier2));
-                    vendorMetrics[vendor].service_sla_tier3.push(parseFloat(riskData.service_sla_0_99_9999_for_tier3));
-                    vendorMetrics[vendor].service_sla_tier4.push(parseFloat(riskData.service_sla_0_99_9999_for_tier4));
-                    vendorMetrics[vendor].service_credit_back_tier1.push(parseFloat(riskData.percentage_service_credit_back_tier1));
-                    vendorMetrics[vendor].service_credit_back_tier2.push(parseFloat(riskData.percentage_service_credit_back_tier2));
-                    vendorMetrics[vendor].service_credit_back_tier3.push(parseFloat(riskData.percentage_service_credit_back_tier3));
-                    vendorMetrics[vendor].service_credit_back_tier4.push(parseFloat(riskData.percentage_service_credit_back_tier4));
-                    vendorMetrics[vendor].annual_downtime.push(parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes));
+                    vendorMetrics[vendor].sla_usage.push(Number(riskData?.service_sla_usage_percentage) || 0);
+                    vendorMetrics[vendor].sla_deviation.push(Number(riskData?.sla_deviation_connected_risk_0_999) || 0);
+                    vendorMetrics[vendor].traffic_coef.push(Number(riskData?.service_traffic_coef_by_percent_down) || 0);
+                    vendorMetrics[vendor].usage_risk.push(Number(riskData?.usage_connected_risk_0_999) || 0);
+                    vendorMetrics[vendor].service_sla_tier1.push(Number(riskData?.service_sla_0_99_9999_for_tier1) || 0);
+                    vendorMetrics[vendor].service_sla_tier2.push(Number(riskData?.service_sla_0_99_9999_for_tier2) || 0);
+                    vendorMetrics[vendor].service_sla_tier3.push(Number(riskData?.service_sla_0_99_9999_for_tier3) || 0);
+                    vendorMetrics[vendor].service_sla_tier4.push(Number(riskData?.service_sla_0_99_9999_for_tier4) || 0);
+                    vendorMetrics[vendor].service_credit_back_tier1.push(Number(riskData?.percentage_service_credit_back_tier1) || 0);
+                    vendorMetrics[vendor].service_credit_back_tier2.push(Number(riskData?.percentage_service_credit_back_tier2) || 0);
+                    vendorMetrics[vendor].service_credit_back_tier3.push(Number(riskData?.percentage_service_credit_back_tier3) || 0);
+                    vendorMetrics[vendor].service_credit_back_tier4.push(Number(riskData?.percentage_service_credit_back_tier4) || 0);
+                    vendorMetrics[vendor].annual_downtime.push(Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0);
 
-                    // Add service analysis
                     addServiceAnalysis(service, riskData, i);
 
-                    // Fetch outage data for the selected service
                     await fetchOutageData(service);
                 } catch (error) {
                     console.error(`Error processing ${service}:`, error);
@@ -571,10 +566,8 @@
             }
         }
 
-        // Update customer metrics display
         updateCustomerMetrics(customerMetrics);
         
-        // Update vendor metrics display
         updateVendorMetrics(vendorMetrics);
     }
 
@@ -943,13 +936,13 @@
     // Function to compare max expected downtime with Tier 1 SLA
     async function compareMaxExpectedDowntime(service) {
         try {
-            const  riskData = fetchCloudRiskData(service, `global`);
+            const riskData = await fetchCloudRiskData(service, 'global');
 
-            const maxExpectedDowntimeTier1 = parseFloat(riskData.expected_annual_service_minutes_down_by_sla_tier1);
-            const actualDowntime = parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes);
-            const maxExpectedDowntimeTier2 = parseFloat(riskData.expected_annual_service_minutes_down_by_sla_tier2);
-            const maxExpectedDowntimeTier3 = parseFloat(riskData.expected_annual_service_minutes_down_by_sla_tier3);
-            const maxExpectedDowntimeTier4 = parseFloat(riskData.expected_annual_service_minutes_down_by_sla_tier4);
+            const maxExpectedDowntimeTier1 = Number(riskData?.expected_annual_service_minutes_down_by_sla_tier1) || 0;
+            const actualDowntime = Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0;
+            const maxExpectedDowntimeTier2 = Number(riskData?.expected_annual_service_minutes_down_by_sla_tier2) || 0;
+            const maxExpectedDowntimeTier3 = Number(riskData?.expected_annual_service_minutes_down_by_sla_tier3) || 0;
+            const maxExpectedDowntimeTier4 = Number(riskData?.expected_annual_service_minutes_down_by_sla_tier4) || 0;
 
             const comparisonHTML = `
                 <h3>Comparison of Expected Downtime vs SLA</h3>
