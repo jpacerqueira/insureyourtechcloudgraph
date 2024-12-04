@@ -7,7 +7,7 @@
     <script>
         // Initialize ENV with default values
         window.ENV = window.ENV || {
-            apiBaseUrl: 'http://0.0.0.0:8183' // Default fallback URL
+            apiBaseUrl: 'https://0.0.0.0:8183' // Default fallback URL
             //apiBaseUrl: 'https://35.189.111.101:8183' // #PROD fallback
         };
     </script>
@@ -302,7 +302,7 @@
             return window.ENV.apiBaseUrl;
         } catch (error) {
             console.error('Error accessing API base URL:', error);
-            return 'http://0.0.0.0:8183'; // DEV fallback
+            return 'https://0.0.0.0:8183'; // DEV fallback
             //return 'https://35.189.111.101:8183'; // #PROD fallback
         }
     }
