@@ -111,7 +111,6 @@ services:
       - backend
     depends_on:
       - node-api
-    command: "/etc/init.d/nginx start ; /etc/init.d/nginx restart"
 
 volumes:
   postgres-data:
