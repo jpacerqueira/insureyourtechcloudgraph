@@ -33,8 +33,8 @@ app.use(cors({
         'http://host.docker.internal:17474',
         'https://simulation.localhost',
         'https://api.localhost',
-        'https://cloud.risk.simulation.insureyourtech.cloud/',
-        'https://cloud.risk.api.insureyourtech.cloud/',
+        'https://simulation.cloud.risk.insureyourtech.cloud/',
+        'https://api.cloud.risk.insureyourtech.cloud/',
         'http://cloudriskgraph.insureyourtech.cloud:17474',
         'https://cloudriskgraph.insureyourtech.cloud:17474'
     ],
@@ -67,6 +67,8 @@ app.get('/', (req, res) => {
         isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
         isDevelopment: process.env.IS_PROD !== "true" ? true : false
     };
+    // Serve the chart.js library
+    app.use(express.static(path.join(__dirname, 'node_modules', 'chart.js', 'dist')));
     
     // Read the HTML file
     let html = fs.readFileSync(path.join(__dirname, 'public', 'index.html'), 'utf8');

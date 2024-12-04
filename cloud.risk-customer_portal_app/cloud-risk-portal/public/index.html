@@ -8,7 +8,7 @@
         // Initialize ENV with default values
         window.ENV = window.ENV || {
             apiBaseUrl: 'https://api.localhost', // Default fallback URL # DEV
-            //apiBaseUrl: 'https://cloud.risk.api.insureyourtech.cloud', // #PROD fallback
+            //apiBaseUrl: 'https://api.cloud.risk.insureyourtech.cloud', // #PROD fallback
             isDevelopment: true, // Add development flag # DEV
             //isDevelopment: false, // Add development flag # PROD 
             isSSLBypassed: true // Add SSL bypass flag
@@ -306,7 +306,7 @@
             console.error('Error accessing API base URL:', error);
             return window.ENV.isDevelopment ? 
                 'https://api.localhost' : // DEV fallback
-                'https://cloud.risk.api.insureyourtech.cloud'; // PROD fallback
+                'https://api.cloud.risk.insureyourtech.cloud'; // PROD fallback
         }
     }
     
@@ -1023,7 +1023,8 @@
 </script>
 
 <!-- Include Chart.js library -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 
+</script>
 </body>
 </html>
