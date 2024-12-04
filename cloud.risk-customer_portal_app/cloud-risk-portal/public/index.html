@@ -9,6 +9,8 @@
         window.ENV = window.ENV || {
             apiBaseUrl: 'https://0.0.0.0:8183', // Default fallback URL
             //apiBaseUrl: 'https://35.189.111.101:8183', // #PROD fallback
+            isDevelopment: true, // Add development flag
+            //isDevelopment: false, // Add development flag // #PROD fallback
             isSSLBypassed: true // Add SSL bypass flag
         };
     </script>
@@ -302,7 +304,7 @@
             return window.ENV.apiBaseUrl;
         } catch (error) {
             console.error('Error accessing API base URL:', error);
-            return window.ENV.isSSLBypassed ? 
+            return window.ENV.isDevelopment ? 
                 'https://0.0.0.0:8183' : // DEV fallback
                 'https://35.189.111.101:8183'; // PROD fallback
         }

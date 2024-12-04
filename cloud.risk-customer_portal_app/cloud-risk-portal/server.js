@@ -61,7 +61,8 @@ const initNeo4jConnection = async () => {
 app.get('/', (req, res) => {
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
-        isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true
+        isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
+        isDevelopment: process.env.IS_PROD !== "true" ? true : false
     };
     
     // Read the HTML file
@@ -172,6 +173,8 @@ const fetchOutageData = async (service) => {
 //});
 // Start server
 if (isProd) {
+    https.createServer(options, app).listen(port);
+} else if (process.env.SSL_ENABLED === "true") {
     https.createServer(options, app).listen(port);
 } else {
     http.createServer(app).listen(port);
