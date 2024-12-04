@@ -61,7 +61,7 @@ const initNeo4jConnection = async () => {
 };
 
 // Routes
-app.get('/simulation/cloud-risk-portal/', (req, res) => {
+app.get('/simulation/', (req, res) => {
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
         isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
