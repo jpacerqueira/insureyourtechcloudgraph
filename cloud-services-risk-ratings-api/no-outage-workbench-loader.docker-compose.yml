@@ -72,6 +72,21 @@ services:
       /data/cloud_service_risk_ratings.csv service_risk_ratings
       /data/outage_report_summaries.csv outage_report_summaries"
 
+  nginx-proxy:
+    build:
+      context: .
+      dockerfile: nginx-proxy.Dockerfile
+    container_name: nginx-proxy
+    ports:
+      - "443:443"  # Expose HTTPS port
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certs:/etc/nginx/certs:ro
+    networks:
+      - backend
+    depends_on:
+      - node-api
+    command: "/etc/init.d/nginx start ; /etc/init.d/nginx restart"
 
 volumes:
   postgres-data:
