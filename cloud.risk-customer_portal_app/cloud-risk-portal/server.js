@@ -20,8 +20,6 @@ var options = {
   };
   
 http.createServer(app).listen(80);
-http.createServer(app).listen(port);
-https.createServer(options, app).listen(port);
 https.createServer(options, app).listen(443);
 
 // Middleware
@@ -34,7 +32,7 @@ app.use(cors({
         'bolt://localhost:17687',
         'bolt://host.docker.internal:17687',
         'http://host.docker.internal:17474',
-        'https://customerportal.cloudriskgraph.insureyourtech.cloud',
+        'https://cloud.risk.simulation.insureyourtech.cloud/',
         'http://cloudriskgraph.insureyourtech.cloud:17474',
         'https://cloudriskgraph.insureyourtech.cloud:17474'
     ],
@@ -68,6 +66,15 @@ app.get('/', (req, res) => {
 // API Routes
 const apiRouter = express.Router();
 
+
+apiRouter.get('/api/get/env', async (req, res) => {
+    try {
+        const apiBaseUrl = process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL;
+        res.json({ apiBaseUrl: apiBaseUrl });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
 // Cloud Risk Data API
 apiRouter.get('/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/:serviceName/global_or_by_regions/:regionType', async (req, res) => {
     try {

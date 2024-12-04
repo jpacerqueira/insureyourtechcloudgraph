@@ -54,6 +54,7 @@ services:
     ports:
       - 8184:8184 # Expose API to port 8183
       - 443:443 # Expose HTTPS to port 443
+      - 80:80 # Expose HTTP to port 80
     depends_on:
       - customer_graph
     volumes:

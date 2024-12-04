@@ -282,8 +282,14 @@
         }
     }
 
+    function fetchAPIBaseUrl() {
+        const response =  fetch('/api/get/env');
+        const data = response.json();
+        return data.apiBaseUrl;
+    }
+
     // Update API endpoints to use relative paths
-    const API_BASE_URL = 'http://0.0.0.0:8183';
+    const API_BASE_URL = fetchAPIBaseUrl();
     
     // Copy and modify the JavaScript from CloudRisk.Simulation.html
     // Update fetch calls to use API_BASE_URL
