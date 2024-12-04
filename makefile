@@ -1,6 +1,6 @@
 all: config_where_am_I_running webscraping backend_server customer_app workbench_apps riskgraph
 
-gcp_deploy: config_where_am_I_running backend_server_gcp customer_app_gcp
+gcp_deploy: gcp_config_where_am_I_running backend_server_gcp customer_app_gcp
 
 check:
 	whoami ; id; pwd; ls -listarh; docker ps
@@ -14,6 +14,10 @@ config_where_am_I_running:
 	whoami ; id ; pwd ; ls -listarh ; docker ps
 	echo "make config_where_am_I_running - Warning : Has No specific - rule to make target 'config_where_am_I_running'.  just continue."
 
+gcp_config_where_am_I_running:
+	whoami ; id ; pwd ; ls -listarh ; docker ps
+	echo "make gcp_config_where_am_I_running - Warning : Has No specific - rule to make target 'gcp_config_where_am_I_running'.  just continue."
+
 webscraping:
 	sleep 1
 	cd information/outages/webscraping/outage-webscraping ; bash -x run-webscraping 4 0 ; cd ../../..
@@ -26,7 +30,7 @@ backend_server:
 
 backend_server_gcp:
 	sleep 1
-	cd cloud-services-risk-ratings-api ; bash -x build-api-cluster 4 1 ; cd ..
+	cd cloud-services-risk-ratings-api ; bash -x build-api-cluster 4 1 1 ; cd ..
 	sleep 90 # wait for the database to be ready
 
 customer_app:
@@ -36,7 +40,7 @@ customer_app:
 
 customer_app_gcp:
 	sleep 1
-	cd cloud.risk-customer_portal_app ; bash -x customer_app_start 4 1 ; cd ..
+	cd cloud.risk-customer_portal_app ; bash -x customer_app_start 4 1 1 ; cd ..
 	sleep 90 # wait for the database to be ready
 
 workbench_apps:

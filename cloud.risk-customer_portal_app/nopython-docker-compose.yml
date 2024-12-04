@@ -1,0 +1,27 @@
+services:
+
+  cloud-risk-portal:
+    build:
+      context: ./cloud-risk-portal
+      dockerfile: cloud-risk-portal.Dockerfile
+    container_name: cloud-risk-portal
+    environment:
+      - NEO4J_CLIENT_URI=bolt://host.docker.internal:17687
+      - NEO4J_USERNAME=neo4j
+      - NEO4J_PASSWORD=password
+      - PORT=8184
+    ports:
+      - 8184:8184 # Expose API to port 8183
+      - 443:443 # Expose HTTPS to port 443
+      - 80:80 # Expose HTTP to port 80
+    volumes:
+      - ./cloud-risk-portal:/cloud-risk-portal
+    working_dir: /app
+    networks:
+      - cloud-services-risk-ratings-api_backend # backend
+    command: "npm start" # You can modify this if you're using a custom start script
+    restart: unless-stopped
+
+networks:
+  cloud-services-risk-ratings-api_backend: # backend
+    external: true
