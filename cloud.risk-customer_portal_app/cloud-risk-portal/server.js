@@ -61,7 +61,7 @@ const initNeo4jConnection = async () => {
 };
 
 // Routes
-app.get('/', (req, res) => {
+app.get('/simulation/cloud-risk-portal/', (req, res) => {
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
         isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
@@ -84,93 +84,6 @@ app.get('/', (req, res) => {
 
 // API Routes
 const apiRouter = express.Router();
-
-
-apiRouter.get('/api/get/env', async (req, res) => {
-    try {
-        const apiBaseUrl = process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL;
-        res.status(200).json({ apiBaseUrl: apiBaseUrl });
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-// Cloud Risk Data API
-apiRouter.get('/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/:serviceName/global_or_by_regions/:regionType', async (req, res) => {
-    try {
-        const { serviceName, regionType } = req.params;
-        // Implement your risk data fetching logic here
-        // This would replace the Python fetch_cloud_risk_data function
-        const riskData = await fetchCloudRiskData(serviceName, regionType);
-        res.status(200).json(riskData);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-// Outage Data API
-apiRouter.get('/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/:service', async (req, res) => {
-    try {
-        const { service } = req.params;
-        // Implement your outage data fetching logic here
-        // This would replace the Python fetch_outage_data function
-        const outageData = await fetchOutageData(service);
-        if (!outageData) {
-            return res.status(404).json({ message: `Outage not found in database for ${service}` });
-        }
-        res.status(200).json(outageData);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-// Neo4j Operations
-apiRouter.post('/graph/insert', async (req, res) => {
-    const { nodeType, properties } = req.body;
-    try {
-        const driver = await initNeo4jConnection();
-        if (!driver) {
-            return res.status(500).json({ error: 'Neo4j connection failed' });
-        }
-        
-        const result = await insertRecord(driver, nodeType, properties);
-        res.json(result);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-app.use('/api', apiRouter);
-
-// Helper Functions
-const sanitizeCypherIdentifier = (text) => {
-    let sanitized = text.replace(/[^a-zA-Z0-9_]/g, '_');
-    if (/^\d/.test(sanitized)) {
-        sanitized = 'n' + sanitized;
-    }
-    return sanitized;
-};
-
-const insertRecord = async (driver, nodeType, properties) => {
-    const session = driver.session();
-    try {
-        const query = `CREATE (n:${nodeType} $properties) RETURN n`;
-        const result = await session.run(query, { properties });
-        return result.records[0].get('n');
-    } finally {
-        await session.close();
-    }
-};
-
-// Data fetching functions
-const fetchCloudRiskData = async (serviceName, regionType) => {
-    // Implement your cloud risk data fetching logic here
-    // This could be from a database, external API, etc.
-};
-
-const fetchOutageData = async (service) => {
-    // Implement your outage data fetching logic here
-    // This could be from a database, external API, etc.
-};
 
 // Start server
 //app.listen(port, () => {
