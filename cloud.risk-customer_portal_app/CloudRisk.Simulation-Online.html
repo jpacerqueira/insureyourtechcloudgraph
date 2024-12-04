@@ -471,7 +471,8 @@
                     }
 
                     const response = await fetch(
-                        `https://cloud.risk.api.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`,
+                        //`https://cloud.risk.api.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`,
+                        `https://35.189.111.101:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`,
                         fetchOptions
                     );
                     
@@ -803,7 +804,7 @@
                 fetchOptions.rejectUnauthorized = false;
             }
 
-            const response = await fetch(`https://cloud.risk.api.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`,
+            const response = await fetch(`https://35.189.111.101:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`,
                 fetchOptions
             );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -928,7 +929,7 @@
                 fetchOptions.rejectUnauthorized = false;
             }
 
-            const response = await fetch(`https://cloud.risk.api.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global`,
+            const response = await fetch(`https://35.189.111.101:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global`,
                 fetchOptions
             );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);

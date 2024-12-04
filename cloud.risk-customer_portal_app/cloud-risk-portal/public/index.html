@@ -9,6 +9,7 @@
         window.ENV = window.ENV || {
             apiBaseUrl: 'https://api.localhost', // Default fallback URL # DEV
             //apiBaseUrl: 'https://api.cloud.risk.insureyourtech.cloud', // #PROD fallback
+            //apiBaseUrl: 'https://35.189.111.101:8183', // #RPOD IP fallback
             isDevelopment: true, // Add development flag # DEV
             //isDevelopment: false, // Add development flag # PROD 
             isSSLBypassed: true // Add SSL bypass flag
@@ -297,7 +298,7 @@
     async function fetchAPIBaseUrl() {
         try {
             if (!window.ENV || !window.ENV.apiBaseUrl) {
-                const response = await fetch('/api/get/env');
+                const response = await fetch('/customer-portal/api/get/env');
                 const data = await response.json();
                 return data.apiBaseUrl;
             }
@@ -307,6 +308,7 @@
             return window.ENV.isDevelopment ? 
                 'https://api.localhost' : // DEV fallback
                 'https://api.cloud.risk.insureyourtech.cloud'; // PROD fallback
+                //'https://35.189.111.101:8183/' // PROD IP fallback
         }
     }
     

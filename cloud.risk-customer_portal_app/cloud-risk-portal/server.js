@@ -60,6 +60,10 @@ const initNeo4jConnection = async () => {
     }
 };
 
+
+// API Routes
+const apiRouter = express.Router();
+
 // Routes
 app.get('/simulation/', (req, res) => {
     const envVars = {
@@ -82,8 +86,16 @@ app.get('/simulation/', (req, res) => {
     res.send(html);
 });
 
-// API Routes
-const apiRouter = express.Router();
+
+apiRouter.get('/customer-portal/api/get/env', async (req, res) => {
+    try {
+        const apiBaseUrl = process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL;
+        res.status(200).json({ apiBaseUrl: apiBaseUrl });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+// Cloud Risk Data API
 
 // Start server
 //app.listen(port, () => {
