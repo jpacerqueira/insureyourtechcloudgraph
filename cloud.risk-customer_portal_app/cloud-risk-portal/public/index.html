@@ -298,7 +298,7 @@
     async function fetchAPIBaseUrl() {
         try {
             if (!window.ENV || !window.ENV.apiBaseUrl) {
-                const response = await fetch('/customer-portal/api/get/env');
+                const response = await fetch('/simulation/customer-portal/api/get/env');
                 const data = await response.json();
                 return data.apiBaseUrl;
             }

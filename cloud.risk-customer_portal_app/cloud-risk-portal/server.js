@@ -87,7 +87,7 @@ app.get('/simulation/', (req, res) => {
 });
 
 
-apiRouter.get('/customer-portal/api/get/env', async (req, res) => {
+apiRouter.get('/simulation/customer-portal/api/get/env', async (req, res) => {
     try {
         const apiBaseUrl = process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL;
         res.status(200).json({ apiBaseUrl: apiBaseUrl });
