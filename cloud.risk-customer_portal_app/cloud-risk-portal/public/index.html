@@ -7,8 +7,8 @@
     <script>
         // Initialize ENV with default values
         window.ENV = window.ENV || {
-            apiBaseUrl: 'https://0.0.0.0:8183', // Default fallback URL # DEV
-            //apiBaseUrl: 'https://35.189.111.101:8183', // #PROD fallback
+            apiBaseUrl: 'https://api.localhost', // Default fallback URL # DEV
+            //apiBaseUrl: 'https://cloud.risk.api.insureyourtech.cloud', // #PROD fallback
             isDevelopment: true, // Add development flag # DEV
             //isDevelopment: false, // Add development flag # PROD 
             isSSLBypassed: true // Add SSL bypass flag
@@ -305,8 +305,8 @@
         } catch (error) {
             console.error('Error accessing API base URL:', error);
             return window.ENV.isDevelopment ? 
-                'https://0.0.0.0:8183' : // DEV fallback
-                'https://35.189.111.101:8183'; // PROD fallback
+                'https://api.localhost' : // DEV fallback
+                'https://cloud.risk.api.insureyourtech.cloud'; // PROD fallback
         }
     }
     

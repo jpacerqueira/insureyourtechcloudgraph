@@ -31,7 +31,10 @@ app.use(cors({
         'bolt://localhost:17687',
         'bolt://host.docker.internal:17687',
         'http://host.docker.internal:17474',
+        'https://simulation.localhost',
+        'https://api.localhost',
         'https://cloud.risk.simulation.insureyourtech.cloud/',
+        'https://cloud.risk.api.insureyourtech.cloud/',
         'http://cloudriskgraph.insureyourtech.cloud:17474',
         'https://cloudriskgraph.insureyourtech.cloud:17474'
     ],
