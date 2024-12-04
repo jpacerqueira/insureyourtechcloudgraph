@@ -61,7 +61,7 @@ const initNeo4jConnection = async () => {
 app.get('/', (req, res) => {
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
-        // Add any other env vars you want to pass
+        isDevelopment: process.env.IS_PROD !== "true"
     };
     
     // Read the HTML file

@@ -7,8 +7,9 @@
     <script>
         // Initialize ENV with default values
         window.ENV = window.ENV || {
-            apiBaseUrl: 'https://0.0.0.0:8183' // Default fallback URL
-            //apiBaseUrl: 'https://35.189.111.101:8183' // #PROD fallback
+            apiBaseUrl: 'https://0.0.0.0:8183', // Default fallback URL
+            //apiBaseUrl: 'https://35.189.111.101:8183', // #PROD fallback
+            isDevelopment: true // Add development flag
         };
     </script>
     <style>
@@ -294,7 +295,6 @@
     async function fetchAPIBaseUrl() {
         try {
             if (!window.ENV || !window.ENV.apiBaseUrl) {
-                // If ENV is not set, make an API call to get it
                 const response = await fetch('/api/get/env');
                 const data = await response.json();
                 return data.apiBaseUrl;
@@ -302,8 +302,9 @@
             return window.ENV.apiBaseUrl;
         } catch (error) {
             console.error('Error accessing API base URL:', error);
-            return 'https://0.0.0.0:8183'; // DEV fallback
-            //return 'https://35.189.111.101:8183'; // #PROD fallback
+            return window.ENV.isDevelopment ? 
+                'https://0.0.0.0:8183' : // DEV fallback
+                'https://35.189.111.101:8183'; // PROD fallback
         }
     }
     
@@ -311,11 +312,23 @@
     // Update fetch calls to use API_BASE_URL
     
     async function fetchCloudRiskData(service, region) {
-        // Update API endpoints to use relative paths
         const API_BASE_URL = await fetchAPIBaseUrl();
         try {
+            const fetchOptions = {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            };
+            
+            // Add rejectUnauthorized: false for development environment
+            if (window.ENV.isDevelopment) {
+                fetchOptions.rejectUnauthorized = false;
+            }
+
             const response = await fetch(
-                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`
+                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${encodeURIComponent(service)}/global_or_by_regions/${encodeURIComponent(region)}`,
+                fetchOptions
             );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return await response.json();
@@ -327,11 +340,23 @@
     
     // Function to fetch outage data and render the chart
     async function fetchOutageData(service) {
-        // Update API endpoints to use relative paths
         const API_BASE_URL = await fetchAPIBaseUrl();
         try {
+            const fetchOptions = {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            };
+            
+            // Add rejectUnauthorized: false for development environment
+            if (window.ENV.isDevelopment) {
+                fetchOptions.rejectUnauthorized = false;
+            }
+
             const response = await fetch(
-                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`
+                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${encodeURIComponent(service)}`,
+                fetchOptions
             );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const outageData = await response.json();
