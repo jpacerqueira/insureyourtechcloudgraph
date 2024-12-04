@@ -216,6 +216,7 @@
 </div>
 
 <script>
+
     // Different options for each variable - Cloud and its Services
 
     const optionsForVariable1 = ["Amazon AWS", "Google Cloud GCP", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai", "Macrometa"];
@@ -282,19 +283,27 @@
         }
     }
 
-    function fetchAPIBaseUrl() {
-        const response =  fetch('/api/get/env');
-        const data = response.json();
-        return data.apiBaseUrl;
-    }
 
-    // Update API endpoints to use relative paths
-    const API_BASE_URL = fetchAPIBaseUrl();
+    // Fetch the API base URL from the server
+    async function fetchAPIBaseUrl() {
+        try {
+            const response = await fetch('/api/get/env');
+            const data = await response.json();
+            console.log('API Base URL data:', data);
+            return data.apiBaseUrl;
+        } catch (error) {
+            console.error('Error fetching API base URL:', error);
+            return 'http://0.0.0.0:8183'; // #DEV
+            // return 'https://35.189.111.101:8183'; // #PROD
+        }
+    }
     
     // Copy and modify the JavaScript from CloudRisk.Simulation.html
     // Update fetch calls to use API_BASE_URL
     
     async function fetchCloudRiskData(service, region) {
+        // Update API endpoints to use relative paths
+        const API_BASE_URL = await fetchAPIBaseUrl();
         try {
             const response = await fetch(
                 `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`
@@ -309,6 +318,8 @@
     
     // Function to fetch outage data and render the chart
     async function fetchOutageData(service) {
+        // Update API endpoints to use relative paths
+        const API_BASE_URL = await fetchAPIBaseUrl();
         try {
             const response = await fetch(
                 `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`

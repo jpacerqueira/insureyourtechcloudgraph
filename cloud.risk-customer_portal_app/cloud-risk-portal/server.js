@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const path = require('path');
 
 // Load environment variables
-dotenv.config();
+dotenv.config({ path: '.env' });
 
 var https = require('https');
 var http = require('http');
@@ -18,9 +18,8 @@ var options = {
     key: fs.readFileSync('/app/certs/server.key'),
     cert: fs.readFileSync('/app/certs/server.cert')
   };
-  
-http.createServer(app).listen(80);
-https.createServer(options, app).listen(443);
+
+const isProd = process.env.IS_PROD === "true";
 
 // Middleware
 app.use(express.json());
@@ -70,7 +69,7 @@ const apiRouter = express.Router();
 apiRouter.get('/api/get/env', async (req, res) => {
     try {
         const apiBaseUrl = process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL;
-        res.json({ apiBaseUrl: apiBaseUrl });
+        res.status(200).json({ apiBaseUrl: apiBaseUrl });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -82,7 +81,7 @@ apiRouter.get('/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch
         // Implement your risk data fetching logic here
         // This would replace the Python fetch_cloud_risk_data function
         const riskData = await fetchCloudRiskData(serviceName, regionType);
-        res.json(riskData);
+        res.status(200).json(riskData);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -98,7 +97,7 @@ apiRouter.get('/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outag
         if (!outageData) {
             return res.status(404).json({ message: `Outage not found in database for ${service}` });
         }
-        res.json(outageData);
+        res.status(200).json(outageData);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -154,6 +153,12 @@ const fetchOutageData = async (service) => {
 };
 
 // Start server
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-});
+//app.listen(port, () => {
+//    console.log(`Server running on port ${port}`);
+//});
+// Start server
+if (isProd) {
+    https.createServer(options, app).listen(port);
+} else {
+    http.createServer(app).listen(port);
+}
