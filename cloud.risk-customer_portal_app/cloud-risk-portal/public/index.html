@@ -9,7 +9,7 @@
         window.ENV = window.ENV || {
             apiBaseUrl: 'https://0.0.0.0:8183', // Default fallback URL
             //apiBaseUrl: 'https://35.189.111.101:8183', // #PROD fallback
-            isDevelopment: true // Add development flag
+            isSSLBypassed: true // Add SSL bypass flag
         };
     </script>
     <style>
@@ -302,7 +302,7 @@
             return window.ENV.apiBaseUrl;
         } catch (error) {
             console.error('Error accessing API base URL:', error);
-            return window.ENV.isDevelopment ? 
+            return window.ENV.isSSLBypassed ? 
                 'https://0.0.0.0:8183' : // DEV fallback
                 'https://35.189.111.101:8183'; // PROD fallback
         }
@@ -322,7 +322,7 @@
             };
             
             // Add rejectUnauthorized: false for development environment
-            if (window.ENV.isDevelopment) {
+            if (window.ENV.isSSLBypassed) {
                 fetchOptions.rejectUnauthorized = false;
             }
 
@@ -350,7 +350,7 @@
             };
             
             // Add rejectUnauthorized: false for development environment
-            if (window.ENV.isDevelopment) {
+            if (window.ENV.isSSLBypassed) {
                 fetchOptions.rejectUnauthorized = false;
             }
 
