@@ -59,7 +59,21 @@ const initNeo4jConnection = async () => {
 
 // Routes
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    const envVars = {
+        apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
+        // Add any other env vars you want to pass
+    };
+    
+    // Read the HTML file
+    let html = fs.readFileSync(path.join(__dirname, 'public', 'index.html'), 'utf8');
+    
+    // Insert the environment variables as a global object
+    const envScript = `<script>window.ENV = ${JSON.stringify(envVars)};</script>`;
+    
+    // Insert the script just after the <head> tag
+    html = html.replace('<head>', '<head>' + envScript);
+    
+    res.send(html);
 });
 
 // API Routes

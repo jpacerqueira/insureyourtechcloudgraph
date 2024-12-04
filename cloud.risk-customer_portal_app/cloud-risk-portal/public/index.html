@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud.Risk.Graph - Customer Portal</title>
-    <!-- Include the same CSS from CloudRisk.Simulation.html -->
+    <script>
+        // Initialize ENV with default values
+        window.ENV = window.ENV || {
+            apiBaseUrl: 'http://0.0.0.0:8183' // Default fallback URL
+            //apiBaseUrl: 'https://35.189.111.101:8183' // #PROD fallback
+        };
+    </script>
     <style>
         /* Copy all the CSS from CloudRisk.Simulation.html */
         body {
@@ -284,17 +290,20 @@
     }
 
 
-    // Fetch the API base URL from the server
+    // Access the environment variables from the global ENV object
     async function fetchAPIBaseUrl() {
         try {
-            const response = await fetch('/api/get/env');
-            const data = await response.json();
-            console.log('API Base URL data:', data);
-            return data.apiBaseUrl;
+            if (!window.ENV || !window.ENV.apiBaseUrl) {
+                // If ENV is not set, make an API call to get it
+                const response = await fetch('/api/get/env');
+                const data = await response.json();
+                return data.apiBaseUrl;
+            }
+            return window.ENV.apiBaseUrl;
         } catch (error) {
-            console.error('Error fetching API base URL:', error);
-            return 'http://0.0.0.0:8183'; // #DEV
-            // return 'https://35.189.111.101:8183'; // #PROD
+            console.error('Error accessing API base URL:', error);
+            return 'http://0.0.0.0:8183'; // DEV fallback
+            //return 'https://35.189.111.101:8183'; // #PROD fallback
         }
     }
     
