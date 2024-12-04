@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CloudRisk.Simulation</title>
+    <script>
+        // Initialize ENV with default values
+        window.ENV = window.ENV || {
+            isSSLBypassed: true // Add SSL bypass flag
+        };
+    </script>
     <style>
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -11,13 +17,13 @@
             flex-direction: column;
             align-items: center;
             margin-top: 20px;
-            background-color: #2f3542;  /* Dark grey background */
-            color: #f1f2f6;  /* Light grey text */
+            background-color: #2f3542;  
+            color: #f1f2f6; 
         }
         .container {
             width: 90%;
             max-width: 2200px;
-            background-color: #353b48;  /* Slightly lighter grey for container */
+            background-color: #353b48;  
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -28,7 +34,7 @@
             justify-content: space-between;
             margin: 15px 0;
             padding: 10px;
-            background-color: #2c3039;  /* Darker grey for pairs */
+            background-color: #2c3039;  
             border-radius: 5px;
         }
         .variable-pair label {
@@ -142,7 +148,7 @@
         }
 
         .metric .ai-analysis-content.expanded {
-            max-height: 1000px; /* or any height that would accommodate your content */
+            max-height: 1000px; 
         }
 
         .expand-button {
@@ -199,10 +205,6 @@
     <!-- Div to Display Submission Result -->
     <div id="result"></div>
 
-    <!-- Link to Authorized users to see detailed results of your submission - Cloud.Risk.Graph your Measured Cloud.Risk RATIO -->
-    <a href="https://workspace-preview.neo4j.io/workspace/query?ntid=google-oauth2%7C100793316574048247943">'Cloud.Risk.Graph - Measure your Ratings using our prorietary Cloud.Risk Graph for Cloud and Service pairs (with Neo4j) '</a>
-
-
     
 </div>
 
@@ -213,7 +215,6 @@
 </div>
 
 <script>
-    // Different options for each variable - Cloud and its Services
 
     const optionsForVariable1 = ["Amazon AWS", "Google Cloud GCP", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai", "Macrometa"];
     const optionsForVariable2 = ["AnyCast CloudFlare","CDN CloudFlare","CDN Akamai","Security Akamai","Edge Computing Akamai","CDN Macrometa","Edge Computing Macrometa",
@@ -255,12 +256,10 @@
         return options.map(option => `<option value="${option}">${option}</option>`).join("");
     }
 
-    // Generate dropdown options
     const dropdownOptions1 = createDropdownOptions(optionsForVariable1);
     const dropdownOptions2 = createDropdownOptions(optionsForVariable2);
     const dropdownOptions3 = createDropdownOptions(optionsForVariable3);
 
-    // Update functions to handle trios
     function addVariablePair() {
         if (trioCount < maxTrios) {
             trioCount++;
@@ -279,7 +278,6 @@
         }
     }
 
-    // Update function to render a variable trio with default region
     function renderVariableTrio(trioNumber) {
         const container = document.getElementById("variableContainer");
 
@@ -316,25 +314,21 @@
 
         container.appendChild(variableTrioDiv);
 
-        // Set default value to "global"
         document.getElementById(`variable3_${trioNumber}`).value = "global";
     }
 
-    // New helper function to create region options with "global" selected
     function createRegionOptions() {
         return optionsForVariable3
             .map(option => `<option value="${option}" ${option === "global" ? "selected" : ""}>${option}</option>`)
             .join("");
     }
 
-    // Update initialization
     function initializeVariablePairs() {
         for (let i = 1; i <= trioCount; i++) {
             renderVariableTrio(i);
         }
     }
 
-    // Update submit function to handle metrics calculation and display
     async function submitData() {
         const companyName = document.getElementById("companyName").value.trim();
         const projectName = document.getElementById("projectName").value.trim() || companyName;
@@ -350,7 +344,6 @@
             variableTrios: []
         };
 
-        // Initialize metrics storage
         const vendorMetrics = {};
         const customerMetrics = {
             sla_usage: [],
@@ -368,7 +361,6 @@
             annual_downtime: []
         };
 
-        // Create results container
         let resultsHTML = `
             <div class="results-container">
                 <h2>Customer Summary</h2>
@@ -441,7 +433,6 @@
                 <div id="services-analysis"></div>
             </div>`;
 
-        // Add explanation section
         const explanationHTML = `
             <h2>Cloud.Risk Ratings</h2>
             <h3>Understanding Cloud.Risk Ratings for Services: Based on SLA and Traffic Coef.</h3>
@@ -461,7 +452,6 @@
 
         document.getElementById("result").innerHTML = resultsHTML + explanationHTML;
 
-        // Process each service and collect metrics
         for (let i = 1; i <= trioCount; i++) {
             const vendor = document.getElementById(`variable1_${i}`).value;
             const service = document.getElementById(`variable2_${i}`).value;
@@ -469,14 +459,25 @@
 
             if (vendor && service && region) {
                 try {
+                    const fetchOptions = {
+                        method: 'GET',
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    };
+            
+                    if (window.ENV.isSSLBypassed) {
+                        fetchOptions.rejectUnauthorized = false;
+                    }
+
                     const response = await fetch(
-                        `https://35.189.111.101:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`
+                        `https://cloud.risk.api.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`,
+                        fetchOptions
                     );
                     
                     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     const riskData = await response.json();
 
-                    // Process metrics for customer
                     customerMetrics.sla_usage.push(parseFloat(riskData.service_sla_usage_percentage));
                     customerMetrics.sla_deviation.push(parseFloat(riskData.sla_deviation_connected_risk_0_999));
                     customerMetrics.traffic_coef.push(parseFloat(riskData.service_traffic_coef_by_percent_down));
@@ -491,7 +492,6 @@
                     customerMetrics.service_credit_back_tier4.push(parseFloat(riskData.percentage_service_credit_back_tier4));
                     customerMetrics.annual_downtime.push(parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes));
 
-                    // Process metrics for vendor
                     if (!vendorMetrics[vendor]) {
                         vendorMetrics[vendor] = {
                             sla_usage: [],
@@ -510,7 +510,6 @@
                         };
                     }
                     
-                    // Add metrics to vendor
                     vendorMetrics[vendor].sla_usage.push(parseFloat(riskData.service_sla_usage_percentage));
                     vendorMetrics[vendor].sla_deviation.push(parseFloat(riskData.sla_deviation_connected_risk_0_999));
                     vendorMetrics[vendor].traffic_coef.push(parseFloat(riskData.service_traffic_coef_by_percent_down));
@@ -525,10 +524,7 @@
                     vendorMetrics[vendor].service_credit_back_tier4.push(parseFloat(riskData.percentage_service_credit_back_tier4));
                     vendorMetrics[vendor].annual_downtime.push(parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes));
 
-                    // Add service analysis
                     addServiceAnalysis(service, riskData, i);
-
-                    // Fetch outage data for the selected service
                     await fetchOutageData(service);
                 } catch (error) {
                     console.error(`Error processing ${service}:`, error);
@@ -643,13 +639,10 @@
 
     function addServiceAnalysis(service, riskData, trioNumber) {
         const servicesContainer = document.getElementById("services-analysis");
-        
-        // Get the monthly cost from the input
         const monthlyCostInput = document.getElementById(`monthlyCost_${trioNumber}`);
         const monthy_customer_service_spent = parseFloat(monthlyCostInput?.value || 1000.00);
         let monthy_service_cost = monthy_customer_service_spent;
 
-        // Calculate estimated credit money back
         let estimatedCreditBack = 0.0;
         const slaUsage = parseFloat(riskData.service_sla_usage_percentage);
         const creditBackPercentage_tier1 = parseFloat(riskData.percentage_service_credit_back_tier1 || 0);
@@ -679,16 +672,13 @@
             estimatedCreditBack = Math.min(Math.round(creditBackPercentage_tier4 * 100) / 100, monthy_customer_service_spent);
         }
 
-        // Warning message for max credit back
         const warningMessage = estimatedCreditBack >= monthy_customer_service_spent ? 
             `<div class='value' style='color: #ff6b6b; margin-top: 5px;'>Warning: Max. credit back was above the $${monthy_customer_service_spent.toFixed(2)} of service estimated cost per month</div>` : "";
 
-        // Format AI Analysis text with line breaks
         const aiAnalysis = riskData.remarks_outage_genai
             ? riskData.remarks_outage_genai.split('\n').join('<br>')
             : 'No analysis available';
 
-        // Create service analysis section
         const serviceSection = document.createElement("div");
         serviceSection.className = "vendor-section";
         
@@ -787,7 +777,6 @@
         servicesContainer.appendChild(serviceSection);
     }
 
-    // Add this function to handle the expansion
     function toggleAnalysis(serviceId) {
         const content = document.getElementById(`analysis-${serviceId}`);
         const button = content.nextElementSibling;
@@ -801,10 +790,22 @@
         }
     }
 
-    // Function to fetch outage data and render the chart
     async function fetchOutageData(service) {
         try {
-            const response = await fetch(`https://35.189.111.101:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`);
+            const fetchOptions = {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            };
+
+            if (window.ENV.isSSLBypassed) {
+                fetchOptions.rejectUnauthorized = false;
+            }
+
+            const response = await fetch(`https://cloud.risk.api.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`,
+                fetchOptions
+            );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const outageData = await response.json();
             renderOutageChart(outageData, service);
@@ -814,12 +815,10 @@
         }
     }
 
-    // Function to render the outage chart
     function renderOutageChart(outageData, service) {
         const ctx = document.createElement('canvas');
         document.getElementById('outageChartContainer').appendChild(ctx);
 
-        // Sort data chronologically by outage_timestamp
         outageData.sort((a, b) => new Date(a.outage_timestamp) - new Date(b.outage_timestamp));
 
         const labels = outageData.map(outage => {
@@ -917,11 +916,21 @@
             }
         });
     }
-
-    // Function to compare max expected downtime with Tier 1 SLA
     async function compareMaxExpectedDowntime(service) {
         try {
-            const response = await fetch(`https://35.189.111.101:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global`);
+            const fetchOptions = {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            };
+            if (window.ENV.isSSLBypassed) {
+                fetchOptions.rejectUnauthorized = false;
+            }
+
+            const response = await fetch(`https://cloud.risk.api.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global`,
+                fetchOptions
+            );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const riskData = await response.json();
 
@@ -951,13 +960,10 @@
             console.error(`Error comparing downtime for ${service}:`, error);
         }
     }
-
     // Initialize the variable pairs on page load
     window.onload = initializeVariablePairs;
 </script>
-
 <!-- Include Chart.js library -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </body>
 </html>
