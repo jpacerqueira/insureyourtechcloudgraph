@@ -8,5 +8,22 @@
     - update docker-compose file to use certs
 
  Run the following to generate key and cert , with a 10 year expiration
- 
-  openssl req  -days 3650 -nodes -new -x509 -keyout server.key -out server.cert
+   
+
+cat >> openssl.cnf <<EOF
+[ req ]
+prompt = no
+distinguished_name = api_imsureyourtech_dotcloud 
+
+[ api_imsureyourtech_dotcloud ]
+C = GB
+ST = London
+L = London
+O = InsureYourTech
+OU = Cloud Services
+CN = api.cloud.risk.insureyourtech.cloud
+emailAddress = business@insureyourtech.com
+EOF
+
+ # openssl req  -config openssl.cnf   -days 3650 -nodes -new -x509 -keyout server8183.key -out server8183.cert
+
