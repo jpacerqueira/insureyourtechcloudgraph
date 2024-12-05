@@ -7,8 +7,10 @@
     <script>
         // Initialize ENV with default values
         window.ENV = window.ENV || {
-            apiBaseUrl: 'https://0.0.0.0:8183', // Default fallback URL # DEV
-            //apiBaseUrl: 'https://35.189.111.101:8183', // #PROD fallback
+            //apiBaseUrl: 'https://api.localhost', // Default fallback URL #DEV
+            apiBaseUrl: 'https://0.0.0.0:8183', // #DEV IP fallback 
+            //apiBaseUrl: 'https://api.cloud.risk.insureyourtech.cloud', // #PROD fallback
+            //apiBaseUrl: 'https://35.189.111.101:8183', // #PROD IP fallback
             isDevelopment: true, // Add development flag # DEV
             //isDevelopment: false, // Add development flag # PROD 
             isSSLBypassed: true // Add SSL bypass flag
@@ -297,7 +299,7 @@
     async function fetchAPIBaseUrl() {
         try {
             if (!window.ENV || !window.ENV.apiBaseUrl) {
-                const response = await fetch('/api/get/env');
+                const response = await fetch('/simulation/customer-portal/api/get/env');
                 const data = await response.json();
                 return data.apiBaseUrl;
             }
@@ -305,8 +307,9 @@
         } catch (error) {
             console.error('Error accessing API base URL:', error);
             return window.ENV.isDevelopment ? 
-                'https://0.0.0.0:8183' : // DEV fallback
-                'https://35.189.111.101:8183'; // PROD fallback
+                'https://api.localhost' : // DEV fallback
+                //'https://api.cloud.risk.insureyourtech.cloud'; // PROD fallback
+                'https://35.189.111.101:8183/'; // PROD IP fallback
         }
     }
     
@@ -1023,7 +1026,8 @@
 </script>
 
 <!-- Include Chart.js library -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 
+</script>
 </body>
 </html>

@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CloudRisk.Simulation</title>
+    <script>
+        // Initialize ENV with default values
+        window.ENV = window.ENV || {
+            isSSLBypassed: true // Add SSL bypass flag
+        };
+    </script>
     <style>
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -469,8 +475,20 @@
 
             if (vendor && service && region) {
                 try {
+                    const fetchOptions = {
+                        method: 'GET',
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    };
+            
+                    if (window.ENV.isSSLBypassed) {
+                        fetchOptions.rejectUnauthorized = false;
+                    }
+
                     const response = await fetch(
-                        `http://localhost:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`
+                        `https://api.localhost/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`,
+                        fetchOptions
                     );
                     
                     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -804,7 +822,20 @@
     // Function to fetch outage data and render the chart
     async function fetchOutageData(service) {
         try {
-            const response = await fetch(`http://localhost:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`);
+            const fetchOptions = {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            };
+
+            if (window.ENV.isSSLBypassed) {
+                fetchOptions.rejectUnauthorized = false;
+            }
+
+            const response = await fetch(`https://api.localhost/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`,
+                fetchOptions
+            );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const outageData = await response.json();
             renderOutageChart(outageData, service);
@@ -921,7 +952,19 @@
     // Function to compare max expected downtime with Tier 1 SLA
     async function compareMaxExpectedDowntime(service) {
         try {
-            const response = await fetch(`http://localhost:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global`);
+            const fetchOptions = {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            };
+            if (window.ENV.isSSLBypassed) {
+                fetchOptions.rejectUnauthorized = false;
+            }
+
+            const response = await fetch(`https://api.localhost/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global`,
+                fetchOptions
+            );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             const riskData = await response.json();
 
@@ -957,7 +1000,7 @@
 </script>
 
 <!-- Include Chart.js library -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 
 </body>
 </html>

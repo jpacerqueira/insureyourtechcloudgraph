@@ -15,8 +15,8 @@ const app = express();
 const port = process.env.PORT || 8184;
 
 var options = {
-    key: fs.readFileSync('/app/certs/server.key'),
-    cert: fs.readFileSync('/app/certs/server.cert')
+    key: fs.readFileSync('/app/certs/server8184.key'),
+    cert: fs.readFileSync('/app/certs/server8184.cert')
   };
 
 const isProd = process.env.IS_PROD === "true";
@@ -31,7 +31,10 @@ app.use(cors({
         'bolt://localhost:17687',
         'bolt://host.docker.internal:17687',
         'http://host.docker.internal:17474',
-        'https://cloud.risk.simulation.insureyourtech.cloud/',
+        'https://simulation.localhost',
+        'https://api.localhost',
+        'https://simulation.cloud.risk.insureyourtech.cloud/',
+        'https://api.cloud.risk.insureyourtech.cloud/',
         'http://cloudriskgraph.insureyourtech.cloud:17474',
         'https://cloudriskgraph.insureyourtech.cloud:17474'
     ],
@@ -57,13 +60,19 @@ const initNeo4jConnection = async () => {
     }
 };
 
+
+// API Routes
+const apiRouter = express.Router();
+
 // Routes
-app.get('/', (req, res) => {
+app.get('/simulation/', (req, res) => {
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
         isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
         isDevelopment: process.env.IS_PROD !== "true" ? true : false
     };
+    // Serve the chart.js library
+    app.use(express.static(path.join(__dirname, 'node_modules', 'chart.js', 'dist')));
     
     // Read the HTML file
     let html = fs.readFileSync(path.join(__dirname, 'public', 'index.html'), 'utf8');
@@ -77,11 +86,8 @@ app.get('/', (req, res) => {
     res.send(html);
 });
 
-// API Routes
-const apiRouter = express.Router();
 
-
-apiRouter.get('/api/get/env', async (req, res) => {
+apiRouter.get('/simulation/customer-portal/api/get/env', async (req, res) => {
     try {
         const apiBaseUrl = process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL;
         res.status(200).json({ apiBaseUrl: apiBaseUrl });
@@ -90,87 +96,7 @@ apiRouter.get('/api/get/env', async (req, res) => {
     }
 });
 // Cloud Risk Data API
-apiRouter.get('/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/:serviceName/global_or_by_regions/:regionType', async (req, res) => {
-    try {
-        const { serviceName, regionType } = req.params;
-        // Implement your risk data fetching logic here
-        // This would replace the Python fetch_cloud_risk_data function
-        const riskData = await fetchCloudRiskData(serviceName, regionType);
-        res.status(200).json(riskData);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
 
-// Outage Data API
-apiRouter.get('/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/:service', async (req, res) => {
-    try {
-        const { service } = req.params;
-        // Implement your outage data fetching logic here
-        // This would replace the Python fetch_outage_data function
-        const outageData = await fetchOutageData(service);
-        if (!outageData) {
-            return res.status(404).json({ message: `Outage not found in database for ${service}` });
-        }
-        res.status(200).json(outageData);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-// Neo4j Operations
-apiRouter.post('/graph/insert', async (req, res) => {
-    const { nodeType, properties } = req.body;
-    try {
-        const driver = await initNeo4jConnection();
-        if (!driver) {
-            return res.status(500).json({ error: 'Neo4j connection failed' });
-        }
-        
-        const result = await insertRecord(driver, nodeType, properties);
-        res.json(result);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
-app.use('/api', apiRouter);
-
-// Helper Functions
-const sanitizeCypherIdentifier = (text) => {
-    let sanitized = text.replace(/[^a-zA-Z0-9_]/g, '_');
-    if (/^\d/.test(sanitized)) {
-        sanitized = 'n' + sanitized;
-    }
-    return sanitized;
-};
-
-const insertRecord = async (driver, nodeType, properties) => {
-    const session = driver.session();
-    try {
-        const query = `CREATE (n:${nodeType} $properties) RETURN n`;
-        const result = await session.run(query, { properties });
-        return result.records[0].get('n');
-    } finally {
-        await session.close();
-    }
-};
-
-// Data fetching functions
-const fetchCloudRiskData = async (serviceName, regionType) => {
-    // Implement your cloud risk data fetching logic here
-    // This could be from a database, external API, etc.
-};
-
-const fetchOutageData = async (service) => {
-    // Implement your outage data fetching logic here
-    // This could be from a database, external API, etc.
-};
-
-// Start server
-//app.listen(port, () => {
-//    console.log(`Server running on port ${port}`);
-//});
 // Start server
 if (isProd) {
     https.createServer(options, app).listen(port);

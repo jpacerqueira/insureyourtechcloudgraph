@@ -47,7 +47,7 @@ elif [[ "$BUILD_METHOD" == "3" ]]; then
    head -n 2000000 ../information/datamodel/cloud-risk-datamodel-services-above-sla-outage.csv > data/cloud_service_risk_ratings.csv
    LATEST_REPORT=$(ls -1 ../cloud-information-genai-workbench/pdf_bot_usebatch/outage_report_summary_*.csv | sort -r | head -n1)
    head -n 2000000 "$LATEST_REPORT" > data/outage_report_summaries.csv
-   $DOCKER_COMPOSE_CMD -f $DOCKER_FILE up --build --force-recreate
+   $DOCKER_COMPOSE_CMD -f $DOCKER_FILE up --build --force-recreate --remove-orphans
 elif [[ "$BUILD_METHOD" == "4" ]]; then
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE down
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE rm -sfv # just remove containers and volumes of the compose project
@@ -59,7 +59,7 @@ elif [[ "$BUILD_METHOD" == "4" ]]; then
    head -n 2000000 ../information/datamodel/cloud-risk-datamodel-services-above-sla-outage.csv > data/cloud_service_risk_ratings.csv
    LATEST_REPORT=$(ls -1 ../cloud-information-genai-workbench/pdf_bot_usebatch/outage_report_summary_*.csv | sort -r | head -n1)
    head -n 2000000 "$LATEST_REPORT" > data/outage_report_summaries.csv
-   $DOCKER_COMPOSE_CMD -f $DOCKER_FILE up -d --build --force-recreate > /dev/null 2>&1
+   $DOCKER_COMPOSE_CMD -f $DOCKER_FILE up -d --build --force-recreate --remove-orphans > /dev/null 2>&1
    echo "Customer Backend API , built! Now, wait 10 seconds for the database to be ready."
 else
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE ps

@@ -8,7 +8,9 @@ WORKDIR /app
 COPY package*.json ./
 
 # Copy certs
+# Copy certs and set permissions
 COPY certs ./certs
+RUN chmod 600 /app/certs/server8184.key /app/certs/server8184.cert
 
 # Install the dependencies
 RUN npm install
@@ -18,7 +20,6 @@ COPY . .
 
 # Expose the port that the Node.js app will run on
 EXPOSE 8184
-EXPOSE 443
-EXPOSE 80
+
 # Define the command to run the application
 CMD ["npm", "start"]
