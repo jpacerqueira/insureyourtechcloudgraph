@@ -8,7 +8,9 @@ WORKDIR /app
 COPY package*.json ./
 
 # Copy certs
+# Copy certs and set permissions
 COPY certs ./certs
+RUN chmod 600 /app/certs/server8185.key /app/certs/server8185.cert
 
 # Install the dependencies
 RUN npm install

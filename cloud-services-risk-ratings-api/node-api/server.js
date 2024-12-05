@@ -11,8 +11,8 @@ var fs = require('fs');
 
 
 var options = {
-  key: fs.readFileSync('/app/certs/server.key'),
-  cert: fs.readFileSync('/app/certs/server.cert')
+  key: fs.readFileSync('/app/certs/server8183.key'),
+  cert: fs.readFileSync('/app/certs/server8183.cert')
 };
 
 // Variables to start the server
@@ -46,10 +46,11 @@ app.use('/cloud-services-risk-ratings/risk-ratings-freemium', freemiumRiskRating
 //console.log(`Server is running on http://localhost:${PORT}`);
 //});
 
-// Start the server
+// Start server
 if (IS_PROD) {
+  https.createServer(options, app).listen(PORT);
+} else if (process.env.SSL_ENABLED === "true") {
   https.createServer(options, app).listen(PORT);
 } else {
   http.createServer(app).listen(PORT);
 }
-

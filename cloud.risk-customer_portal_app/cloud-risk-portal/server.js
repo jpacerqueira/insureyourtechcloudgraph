@@ -15,8 +15,8 @@ const app = express();
 const port = process.env.PORT || 8184;
 
 var options = {
-    key: fs.readFileSync('/app/certs/server.key'),
-    cert: fs.readFileSync('/app/certs/server.cert')
+    key: fs.readFileSync('/app/certs/server8185.key'),
+    cert: fs.readFileSync('/app/certs/server8185.cert')
   };
 
 const isProd = process.env.IS_PROD === "true";
@@ -97,10 +97,6 @@ apiRouter.get('/simulation/customer-portal/api/get/env', async (req, res) => {
 });
 // Cloud Risk Data API
 
-// Start server
-//app.listen(port, () => {
-//    console.log(`Server running on port ${port}`);
-//});
 // Start server
 if (isProd) {
     https.createServer(options, app).listen(port);
