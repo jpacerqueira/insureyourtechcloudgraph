@@ -7,9 +7,10 @@
     <script>
         // Initialize ENV with default values
         window.ENV = window.ENV || {
-            apiBaseUrl: 'https://api.localhost', // Default fallback URL # DEV
+            //apiBaseUrl: 'https://api.localhost', // Default fallback URL #DEV
+            apiBaseUrl: 'https://0.0.0.0:8183', // #DEV IP fallback 
             //apiBaseUrl: 'https://api.cloud.risk.insureyourtech.cloud', // #PROD fallback
-            //apiBaseUrl: 'https://35.189.111.101:8183', // #RPOD IP fallback
+            //apiBaseUrl: 'https://35.189.111.101:8183', // #PROD IP fallback
             isDevelopment: true, // Add development flag # DEV
             //isDevelopment: false, // Add development flag # PROD 
             isSSLBypassed: true // Add SSL bypass flag
