@@ -10,7 +10,7 @@ COPY package*.json ./
 # Copy certs
 # Copy certs and set permissions
 COPY certs ./certs
-RUN chmod 600 /app/certs/server8184.key /app/certs/server8184.cert
+RUN chmod 400 /app/certs/server8184.key /app/certs/server8184.cert
 
 # Install the dependencies
 RUN npm install
