@@ -25,50 +25,17 @@ const isProd = process.env.IS_PROD === "true";
 app.use(express.json());
 app.use(express.static('public'));
 app.use(cors({
-    origin: function(origin, callback) {
-        // Allow requests with no origin (like mobile apps or curl requests)
-        if (!origin) return callback(null, true);
-        
-        const allowedOrigins = [
-            'http://localhost:8184',
-            'http://localhost:17474',
-            'https://localhost:8184',
-            'https://localhost:17474',
-            'bolt://localhost:17687',
-            'bolt://host.docker.internal:17687',
-            'http://host.docker.internal:17474',
-            'https://host.docker.internal:17474',
-            'https://simulation.localhost',
-            'https://api.localhost',
-            'https://simulation.cloud.risk.insureyourtech.cloud',
-            'https://api.cloud.risk.insureyourtech.cloud',
-            'http://cloudriskgraph.insureyourtech.cloud:17474',
-            'https://cloudriskgraph.insureyourtech.cloud:17474'
-        ];
-        
-        if (allowedOrigins.indexOf(origin) !== -1 || origin.match(/^https?:\/\/localhost(:\d+)?$/)) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin', 'Origin', 'Accept', 'X-Requested-With'],
-    exposedHeaders: ['Access-Control-Allow-Origin'],
-    credentials: true,
-    preflightContinue: true,
-    optionsSuccessStatus: 204
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: false
 }));
 
-// Add CORS preflight handler
-app.options('*', cors());
-
-// Add headers middleware
+// Simplified headers middleware
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', req.headers.origin);
-    res.header('Access-Control-Allow-Credentials', true);
+    res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Origin');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
 });
 
