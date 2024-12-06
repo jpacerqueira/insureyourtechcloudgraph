@@ -12,9 +12,9 @@
 cat >> openssl.cnf <<EOF
 [ req ]
 prompt = no
-distinguished_name = simulation_imsureyourtech_dotcloud 
+distinguished_name = simulation_insureyourtech_dotcloud 
 
-[ simulation_imsureyourtech_dotcloud ]
+[ simulation_insureyourtech_dotcloud ]
 C = GB
 ST = London
 L = London
