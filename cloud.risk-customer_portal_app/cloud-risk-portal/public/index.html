@@ -323,8 +323,12 @@
             const fetchOptions = {
                 method: 'GET',
                 headers: {
-                    'Accept': 'application/json'
-                }
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Origin': window.location.origin
+                },
+                credentials: 'include',
+                mode: 'cors'
             };
             
             // Add rejectUnauthorized: false for development environment
@@ -351,8 +355,12 @@
             const fetchOptions = {
                 method: 'GET',
                 headers: {
-                    'Accept': 'application/json'
-                }
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Origin': window.location.origin
+                },
+                credentials: 'include',
+                mode: 'cors'
             };
             
             // Add rejectUnauthorized: false for development environment
