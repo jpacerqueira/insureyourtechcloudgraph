@@ -10,7 +10,7 @@
             apiBaseUrl: 'https://api.localhost', // #DEV fallback # nginx.conf
             //apiBaseUrl: 'https://0.0.0.0:8183', //      
             //apiBaseUrl: 'https://api.cloud.risk.insureyourtech.cloud', // #PROD fallback # nginx.conf
-            //apiBaseUrl: 'https://35.189.111.101:8183' //
+            //apiBaseUrl: 'https://35.189.111.101:8183', //
             isDevelopment: true, // Add development flag # DEV
             //isDevelopment: false, // Add development flag # PROD 
             //isSSLBypassed: true // Add SSL bypass flag
@@ -323,8 +323,10 @@
             const fetchOptions = {
                 method: 'GET',
                 headers: {
-                    'Accept': 'application/json'
-                }
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                mode: 'cors'
             };
             
             // Add rejectUnauthorized: false for development environment
@@ -351,8 +353,10 @@
             const fetchOptions = {
                 method: 'GET',
                 headers: {
-                    'Accept': 'application/json'
-                }
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                mode: 'cors'
             };
             
             // Add rejectUnauthorized: false for development environment

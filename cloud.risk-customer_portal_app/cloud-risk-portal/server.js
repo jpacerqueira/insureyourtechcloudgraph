@@ -25,24 +25,19 @@ const isProd = process.env.IS_PROD === "true";
 app.use(express.json());
 app.use(express.static('public'));
 app.use(cors({
-    origin: [
-        'http://localhost:8184',
-        'http://localhost:17474',
-        'bolt://localhost:17687',
-        'bolt://host.docker.internal:17687',
-        'http://host.docker.internal:17474',
-        'https://simulation.localhost',
-        'https://api.localhost',
-        'https://simulation.cloud.risk.insureyourtech.cloud/',
-        'https://api.cloud.risk.insureyourtech.cloud/',
-        'http://cloudriskgraph.insureyourtech.cloud:17474',
-        'https://cloudriskgraph.insureyourtech.cloud:17474'
-    ],
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'Access-Control-Allow-Origin'],
-    exposedHeaders: ['Access-Control-Allow-Origin'],
-    credentials: true
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: false
 }));
+
+// Simplified headers middleware
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+});
 
 // Neo4j connection
 const initNeo4jConnection = async () => {
