@@ -1,6 +1,6 @@
 #syntax = docker/dockerfile:1.4
 
-FROM ollama/ollama:0.4.3 AS ollama
+FROM ollama/ollama:0.5.1 AS ollama
 
 COPY ./run-ollama_llm.sh /root/run-ollama_llm.sh
 
