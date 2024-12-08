@@ -44,8 +44,11 @@ class StreamHandler(BaseCallbackHandler):
         self.text += token
         self.container.markdown(self.text)
 
-
-llm = load_llm(llm_name, logger=logger, config={"ollama_base_url": ollama_base_url,"temperature": 0.7,})
+#"temperature": 0.0 # for more accurate results
+#"temperature": 0.1 # for more accurate results
+#"temperature": 0.7 # for more creative results
+#"temperature": 1.0 # for more creative results
+llm = load_llm(llm_name, logger=logger, config={"ollama_base_url": ollama_base_url,"temperature": 0.1,})
 
 
 def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, output_dir=None):
