@@ -1,0 +1,56 @@
+I can help you with that query.
+
+After analyzing the text, I found that the following Cloud Providers were impacted:
+
+* Google GCP
+* Amazon AWS is not mentioned in the text, so it will be excluded from the output.
+* Microsoft Azure is not mentioned in the text, so it will be excluded from the output.
+* Oracle OCI is not mentioned in the text, so it will be excluded from the output.
+* IBM Cloud is not mentioned in the text, so it will be excluded from the output.
+* Snowflake is not a cloud provider, but rather a cloud-based database service. It will be excluded from the output.
+* Databricks is not a cloud provider, but rather a cloud-based platform for data science and machine learning. It will be excluded from the output.
+* MongoDB is not a cloud provider, but rather a NoSQL document-oriented database. It will be excluded from the output.
+* Akamai and Cloudflare are not cloud providers, but rather content delivery networks (CDNs). They will be excluded from the output.
+
+Here is the breakdown of the outages per cloud provider:
+
+**Google GCP**
+
+* Service: Dataproc Metastore
+* Region: asia-northeast1, asia-northeast3, asia-southeast1, australia-southeast1, europe-west1, europe-west2, europe-west3, europe-west8, northamerica-northeast1, southamerica-east1, us-central1, us-east1, us-east4, us-west1
+* Availability Zone: Not specified
+* Impact Date: 2023-12-06 14:47 UTC
+* Duration: 2 hours and 21 minutes
+* Root Cause: Not specified
+* Downtime Period: 2 hours and 21 minutes
+* Resolved Date: 2023-12-06 18:08 UTC
+
+**Google GCP**
+
+* Service: Dataproc Metastore
+* Region: asia-northeast1, asia-northeast3, asia-southeast1, australia-southeast1, europe-west1, europe-west2, europe-west3, europe-west8, northamerica-northeast1, southamerica-east1, us-central1, us-east1, us-east4, us-west1
+* Availability Zone: Not specified
+* Impact Date: 2023-12-06 17:23 UTC
+* Duration: 45 minutes
+* Root Cause: Not specified
+* Downtime Period: 45 minutes
+* Resolved Date: 2023-12-06 18:08 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google GCP | Dataproc Metastore | asia-northeast1 |  | 2023-12-06 14:47 UTC | 2 hours and 21 minutes | Not specified | 2 hours and 21 minutes | 2023-12-06 18:08 UTC |
+| Google GCP | Dataproc Metastore | asia-northeast1 |  | 2023-12-06 17:23 UTC | 45 minutes | Not specified | 45 minutes | 2023-12-06 18:08 UTC |
+
+**Summary**
+
+* Cloud Providers impacted: Google GCP
+* Services impacted: Dataproc Metastore
+* Regions impacted: asia-northeast1, asia-northeast3, asia-southeast1, australia-southeast1, europe-west1, europe-west2, europe-west3, europe-west8, northamerica-northeast1, southamerica-east1, us-central1, us-east1, us-east4, us-west1
+* Availability Zones impacted: Not specified
+* Impact Dates: 2023-12-06 14:47 UTC and 2023-12-06 17:23 UTC
+* Durations: 2 hours and 21 minutes and 45 minutes
+* Root Causes: Not specified
+* Downtime Periods: 2 hours and 21 minutes and 45 minutes
+* Resolved Dates: 2023-12-06 18:08 UTC

@@ -1,0 +1,628 @@
+After analyzing the incident report, I have identified the following outages:
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking Console
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 03:36 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Networking
+* Region: asia-southeast-2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to several simultaneous power cuts, combined with the malfunction of a backbone networking router which had to be removed from service.
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024

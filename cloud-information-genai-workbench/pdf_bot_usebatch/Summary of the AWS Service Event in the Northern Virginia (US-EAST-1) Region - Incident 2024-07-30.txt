@@ -1,0 +1,85 @@
+After analyzing the text, I found that the following Cloud Providers were impacted:
+
+* Amazon AWS
+* Amazon S3
+* Amazon Data Firehose
+* Amazon ECS
+* Amazon Lambda
+* Amazon Redshift
+* Amazon Glue
+* Amazon Kinesis Data Streams
+
+Here is the breakdown of each service impacted, with the requested information:
+
+**Amazon AWS**
+
+1. CloudWatch Logs
+	+ Region: Northern Virginia (us-east-1)
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-07-30 14:45 UTC
+	+ Duration: 6 hours and 52 minutes
+	+ Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	+ Downtime Period: 2024-07-30 14:45 UTC - 2024-07-31 01:37 UTC
+	+ Resolved Date: 2024-07-31 01:37 UTC
+2. Amazon Data Firehose
+	+ Region: Northern Virginia (us-east-1)
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-07-30 14:45 UTC
+	+ Duration: 7 hours and 42 minutes
+	+ Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	+ Downtime Period: 2024-07-30 14:45 UTC - 2024-07-31 22:21 UTC
+	+ Resolved Date: 2024-07-31 22:21 UTC
+3. Amazon ECS
+	+ Region: Northern Virginia (us-east-1)
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-07-30 14:45 UTC
+	+ Duration: 6 hours and 52 minutes
+	+ Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	+ Downtime Period: 2024-07-30 14:45 UTC - 2024-07-31 01:37 UTC
+	+ Resolved Date: 2024-07-31 01:37 UTC
+4. Amazon Lambda
+	+ Region: Northern Virginia (us-east-1)
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-07-30 14:45 UTC
+	+ Duration: 6 hours and 52 minutes
+	+ Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	+ Downtime Period: 2024-07-30 14:45 UTC - 2024-07-31 01:37 UTC
+	+ Resolved Date: 2024-07-31 01:37 UTC
+5. Amazon Redshift
+	+ Region: Northern Virginia (us-east-1)
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-07-30 14:45 UTC
+	+ Duration: 6 hours and 52 minutes
+	+ Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	+ Downtime Period: 2024-07-30 14:45 UTC - 2024-07-31 01:37 UTC
+	+ Resolved Date: 2024-07-31 01:37 UTC
+6. Amazon Glue
+	+ Region: Northern Virginia (us-east-1)
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-07-30 14:45 UTC
+	+ Duration: 6 hours and 52 minutes
+	+ Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+	+ Downtime Period: 2024-07-30 14:45 UTC - 2024-07-31 01:37 UTC
+	+ Resolved Date: 2024-07-31 01:37 UTC
+
+**Summary**
+
+* Cloud Provider: Amazon AWS
+* Services Impacted: CloudWatch Logs, Amazon Data Firehose, Amazon ECS, Amazon Lambda, Amazon Redshift, and Amazon Glue
+* Regions Impacted: Northern Virginia (us-east-1)
+* Availability Zones Not Specified
+* Impact Dates: 2024-07-30 14:45 UTC
+* Duration: 6 hours and 52 minutes
+* Root Cause: Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service
+* Downtime Period: 2024-07-30 14:45 UTC - 2024-07-31 01:37 UTC
+* Resolved Date: 2024-07-31 01:37 UTC
+
+**Output Table**
+
+Cloud Provider, Service, Region, Availability Zone, Impact Date, Duration, Root Cause, Downtime Period, Resolved Date
+Amazon AWS, CloudWatch Logs, us-east-1, Not Specified, 2024-07-30 14:45 UTC, 6 hours and 52 minutes, Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service, 2024-07-30 14:45 UTC - 2024-07-31 01:37 UTC, 2024-07-31 01:37 UTC
+Amazon AWS, Amazon Data Firehose, us-east-1, Not Specified, 2024-07-30 14:45 UTC, 7 hours and 42 minutes, Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service, 2024-07-30 14:45 UTC - 2024-07-31 22:21 UTC, 2024-07-31 22:21 UTC
+Amazon AWS, Amazon ECS, us-east-1, Not Specified, 2024-07-30 14:45 UTC, 6 hours and 52 minutes, Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service, 2024-07-30 14:45 UTC - 2024-07-31 01:37 UTC, 2024-07-31 01:37 UTC
+Amazon AWS, Amazon Lambda, us-east-1, Not Specified, 2024-07-30 14:45 UTC, 6 hours and 52 minutes, Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service, 2024-07-30 14:45 UTC - 2024-07-31 01:37 UTC, 2024-07-31 01:37 UTC
+Amazon AWS, Amazon Redshift, us-east-1, Not Specified, 2024-07-30 14:45 UTC, 6 hours and 52 minutes, Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service, 2024-07-30 14:45 UTC - 2024-07-31 01:37 UTC, 2024-07-31 01:37 UTC
+Amazon AWS, Amazon Glue, us-east-1, Not Specified, 2024-07-30 14:45 UTC, 6 hours and 52 minutes, Degradation of one of our internally-used cells of the Amazon Kinesis Data Streams service, 2024-07-30 14:45 UTC - 2024-07-31 01:37 UTC, 2024-07-31 01:37 UTC

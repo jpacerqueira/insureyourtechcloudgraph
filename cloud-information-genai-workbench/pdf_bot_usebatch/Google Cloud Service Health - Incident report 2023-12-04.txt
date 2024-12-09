@@ -1,0 +1,30 @@
+Based on the provided text, I will resume the outages identified in the text, including the services impacted, regions, availability zones, impact date, duration, root cause, downtime period, and resolved date.
+
+**Summary of Outages**
+
+The outage affected Google Cloud Bigtable customers experiencing errors and increased latency in us-central1 region. The incident began on December 4, 2023, at 20:00 UTC and ended on December 6, 2023, at 03:55 UTC.
+
+**Outage Details per Service**
+
+Google Cloud Bigtable
+------------------------
+
+* Region: us-central1
+* Availability Zone: Not specified
+* Impact Date: December 4, 2023, at 20:00 UTC
+* Duration: 15 hours and 5 minutes (partial mitigation), 1 day, 8 hours, 5 minutes (full mitigation)
+* Root Cause: Network issue causing customers to experience elevated errors and increased latency across multiple services in us-central1 region.
+* Downtime Period: December 4, 2023, at 20:00 UTC - December 6, 2023, at 03:55 UTC
+* Resolved Date: December 6, 2023, at 03:55 UTC
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Bigtable | us-central1 |  | December 4, 2023, 20:00 UTC | 15 hours and 5 minutes (partial), 1 day, 8 hours, 5 minutes (full) | Network issue | December 4, 2023, 20:00 UTC - December 6, 2023, 03:55 UTC | December 6, 2023, 03:55 UTC |
+
+Note: The availability zone is not specified in the original text, so it was not included in the output table.
+
+**Summary of Cloud Providers Impacted**
+
+The outage affected Google Cloud only.
