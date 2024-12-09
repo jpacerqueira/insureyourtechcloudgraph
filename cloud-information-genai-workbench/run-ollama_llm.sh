@@ -9,7 +9,7 @@ done
 #
 ollama list
 #
-DEFAULT_LLM=llama3.2
+DEFAULT_LLM=Llama-3.2-3B-Instruct
 LLM=${LLM:=DEFAULT_LLM}
 #
 ollama pull $LLM
