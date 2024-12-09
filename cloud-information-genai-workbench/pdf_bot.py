@@ -93,7 +93,7 @@ def main():
 
         if query:
             stream_handler = StreamHandler(st.empty())
-            qa.run(query, callbacks=[stream_handler])
+            qa.invoke({"query": query}, callbacks=[stream_handler])["result"]
 
 
 if __name__ == "__main__":

@@ -85,7 +85,7 @@ def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, outpu
     enhanced_query = f"For {cloud_vendor} apply this query: {query}" if cloud_vendor else f"For all cloud vendors {cloud_vendor} apply this query: {query}"
     logger.info(f"In pdf_path: {pdf_path} - running query: {enhanced_query}")
     try:
-        response = qa.run(enhanced_query)
+        response = qa.invoke({"query": enhanced_query})["result"]
         logger.info(f"In pdf_path: {pdf_path} - response: {response}")    
         if save_output and output_dir:
             output_path = os.path.join(output_dir, os.path.splitext(os.path.basename(pdf_path))[0] + ".txt")
