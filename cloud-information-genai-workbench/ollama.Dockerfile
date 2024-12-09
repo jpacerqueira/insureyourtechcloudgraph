@@ -3,7 +3,8 @@
 #FROM ollama/ollama:0.4.2 AS ollama
 #FROM ollama/ollama:0.4.3 AS ollama
 #FROM ollama/ollama:0.5.0 AS ollama #
-FROM ollama/ollama:0.5.0-rc1-rocm AS ollama # rocm is for AMD GPU support NO NVIDIA Drivers
+### rocm is for AMD GPU support NO NVIDIA Drivers
+FROM ollama/ollama:0.5.0-rc1-rocm AS ollama 
  
 COPY ./run-ollama_llm.sh /root/run-ollama_llm.sh
 
