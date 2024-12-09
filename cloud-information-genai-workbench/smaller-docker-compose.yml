@@ -52,7 +52,7 @@ services:
 #    environment:
 #      - HOME=${HOME-/root/}
 #      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL-http://ollama-llm:11434} # host.docker.internal:11434}
-#      - LLM=${LLM-llama2}
+#      - LLM=${LLM-llama3.2}
 #    networks:
 #      - net
 #    tty: true
