@@ -23,8 +23,7 @@ cloud-information-genai-workbench/pdf_bot_usebatch/*.pdf
 cloud-information-genai-workbench/pdf_bot_usebatch/*.pdf.PROCESSED
 information/pdf-outages/public_cloud_sla_s/*.pdf
 information/pdf-outages/*.pdf
-cloud-information-genai-workbench/pdf_bot_usebatch/post_processed_pdf/
-**
+cloud-information-genai-workbench/pdf_bot_usebatch/post_processed_pdf/**
 *.DS_Store
 */.DS_Store
 */*/.DS_Store
@@ -34,3 +33,14 @@ images/.DS_Store
 ./*/*/images/.DS_Store
 cloud.risk-customer_portal_app/neo4j_data/**
 cloud.risk-customer_portal_app/neo4_data/**
+cloud-services-risk-ratings-api/certs/server8183.cert
+cloud-services-risk-ratings-api/certs/server8183.key
+cloud-services-risk-ratings-api/certs/server8184.cert
+cloud-services-risk-ratings-api/certs/server8184.key
+cloud-services-risk-ratings-api/node-api/certs/openssl.cnf
+cloud-services-risk-ratings-api/node-api/certs/server8183.cert
+cloud-services-risk-ratings-api/node-api/certs/server8183.key
+cloud.risk-customer_portal_app/cloud-risk-portal/certs/openssl.cnf
+cloud.risk-customer_portal_app/cloud-risk-portal/certs/server8184.cert
+cloud.risk-customer_portal_app/cloud-risk-portal/certs/server8184.key
+
