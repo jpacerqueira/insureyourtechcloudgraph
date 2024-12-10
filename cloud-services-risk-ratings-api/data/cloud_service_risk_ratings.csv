@@ -1482,7 +1482,7 @@ The outage started at an unknown time, but it was resolved when a change to the 
 
 **Duration of the outage:** 11 hours and 30 minutes",,,AWS RDS in Serverless Mode
 10000000000096,Amazon EC2 Instance Connect,Amazon AWS,global,,,4,0,24,365,99.95000,99.00000,95.00000,95.00000,10.000,25.000,100.000,100.000,400,525600.000,525337.200,520344.000,499320.000,499320.000,262.800,5256.000,26280.000,26280.000,-137.200,0.050000%,0.07610350%,0.07614157%,-0.026142%,0.026142%,152.28%,0.07610%,996.219,996.719,,,,,
-10000000000097,Amazon Elastic Compute Cloud,Amazon AWS,global,,,4,0,24,365,99.95000,99.00000,95.00000,95.00000,10.000,25.000,100.000,100.000,411.00,525600.000,525337.200,520344.000,499320.000,499320.000,262.800,5256.000,26280.000,26280.000,-148.200,0.050000%,0.07819635%,0.07823546%,-0.028235%,0.028235%,156.47%,0.07820%,996.156,996.656,0 days 6h51 down,"Lllama3.2-B Outage Analysis  
+10000000000097,Amazon Elastic Compute Cloud,Amazon AWS,global,,,4,0,24,365,99.95000,99.00000,95.00000,95.00000,10.000,25.000,100.000,100.000,598.00,525600.000,525337.200,520344.000,499320.000,499320.000,262.800,5256.000,26280.000,26280.000,-335.200,0.050000%,0.11377473%,0.11383165%,-0.063832%,0.063832%,227.66%,0.11377%,995.089,995.590,0 days 6h51 down,"Lllama3.2-B Outage Analysis  
 - About last Amazon Elastic Compute Cloud EC2 Outage -
  in 
 context, Based on the provided context, I will attempt to answer your query. Please note that this is a manual analysis of the provided data, and there might be some limitations or inaccuracies.
