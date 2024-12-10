@@ -1,0 +1,35 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+Google Cloud Service
+-------------------
+
+* Service: Virtual Private Cloud (VPC)
+* Region: us-central1
+* Availability Zone: 
+* Impact Date: 2024-09-04 06:29 UTC
+* Duration: 6 hours and 10 minutes
+* Root Cause: VPC network data for newly created VMs or networks might not be available when requests to Google APIs originate from these VMs/networks.
+* Downtime Period: 
+* Resolved Date: 2024-09-04 11:06 UTC
+
+Here is the output in a fixed table format:
+
+```
+Cloud Provider, Service, Region, Availability Zone, Impact Date, Duration, Root Cause, Downtime Period, Resolved Date
+Google Cloud, Virtual Private Cloud (VPC), us-central1, , 2024-09-04 06:29 UTC, 6 hours and 10 minutes, VPC network data for newly created VMs or networks might not be available when requests to Google APIs originate from these VMs/networks., , 2024-09-04 11:06 UTC
+```
+
+Here is the overall summary of the Cloud Provider impacted:
+
+* Cloud Provider: Google Cloud
+* Services Impacted: Virtual Private Cloud (VPC)
+* Regions Impacted: us-central1
+* Availability Zones Impacted: 
+* Impact Dates: 2024-09-04
+* Duration: 6 hours and 10 minutes
+
+Here is the summary of the outage:
+
+The outage started on September 4, 2024, at 06:29 UTC. The issue was resolved on the same day at 11:06 UTC. The root cause of the outage was related to VPC network data for newly created VMs or networks not being available when requests to Google APIs originated from these VMs/networks.

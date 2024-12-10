@@ -1,0 +1,42 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**IBM Cloud**
+
+* Service: Cooling Infrastructure
+* Region: saopaulo01
+* Availability Zone: Not specified
+* Impact Date: 2020-12-07 07:13 UTC
+* Duration: 17 hours 36 minutes
+* Root Cause: Issue with the main water supply that feeds the building's cooling towers
+* Downtime Period: 2020-12-08 00:15 - 01:00 UTC
+* Resolved Date: 2020-12-08 01:00 UTC
+
+**No other cloud providers were mentioned in the text**
+
+However, I noticed that some services were impacted by the outage, but their names were not specified. If you could provide more information about the affected services, I would be happy to help.
+
+Here is a summary of the outage:
+
+* Cloud Provider: IBM Cloud
+* Services Impacted: Cooling Infrastructure
+* Regions and Availability Zones: saopaulo01 (not specified)
+* Impact Dates: 2020-12-07 07:13 UTC - 2020-12-08 01:00 UTC
+* Duration: 17 hours 36 minutes
+
+Here is the output in the requested format:
+
+**Table Format**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| IBM Cloud | Cooling Infrastructure | saopaulo01 |  | 2020-12-07 07:13 UTC | 17 hours 36 minutes | Issue with the main water supply that feeds the building's cooling towers | 2020-12-08 00:15 - 01:00 UTC | 2020-12-08 01:00 UTC |
+
+**Summary**
+
+* Cloud Providers Impacted: IBM Cloud
+* Services Impacted: Cooling Infrastructure
+* Regions and Availability Zones: saopaulo01 (not specified)
+* Impact Dates: 2020-12-07 07:13 UTC - 2020-12-08 01:00 UTC
+* Duration: 17 hours 36 minutes
+
+Note that the text does not provide information about other cloud providers, services, regions, or availability zones. Therefore, I was only able to extract data for IBM Cloud and its Cooling Infrastructure service.
