@@ -1,0 +1,56 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Google Cloud**
+
+* Dataplex Catalog
+	+ Regions: asia, eu, us
+	+ Availability Zones: multi-regions (no specific zones mentioned)
+	+ Impact Date: 2024-06-20 10:30 UTC
+	+ Duration: 2 hours, 12 minutes
+	+ Root Cause: connectivity issues to a dependent backend service
+	+ Downtime Period: 2024-06-20 10:30 UTC - 2024-06-20 12:42 UTC
+	+ Resolved Date: 2024-06-20 12:42 UTC
+
+**Google Cloud (continued)**
+
+* Google Cloud Service Health
+	+ Regions: us-east4, europe-west8, asia-east1, northamerica-northeast1, us-central5, europe-west2, southamerica-east1, africa-south1, me-west1, europe-southwest1, asia-south2, europe-west7, us-west2, europe-west10, us-central3, us-east2, us-east4, us-east7, europe-central2, us-central1, asia-west2, europe-west3, europe-west5, us-east1, europe-west9, europe-west14, us-west8, europe-west, us-central1, google, europe-west11, asia-southeast1, southamerica-west1, us-west4, us-central4, asia-west1, us-west6, us-south1, us-west3, europe-west13, us-west1, me-central2, us-west7, europe-west4, us-east5, europe-west12, us-east8, europe-west6
+	+ Regions: multi-regions (no specific zones mentioned)
+	+ Impact Date: 2024-06-20 10:30 UTC
+	+ Duration: 2 hours, 12 minutes
+	+ Root Cause: connectivity issues to a dependent backend service
+	+ Downtime Period: 2024-06-20 10:30 UTC - 2024-06-20 12:42 UTC
+	+ Resolved Date: 2024-06-20 12:42 UTC
+
+**Google Cloud (continued)**
+
+* Google Data Catalog customer may experience availability issues.
+	+ Regions: asia-northeast2, australia-southeast2, us-east9, europe-north1, us-west5, europe-west8, asia-east1, northamerica-northeast1, us-central5, europe-west2, southamerica-east1, africa-south1, me-west1, europe-southwest1, asia-south2, europe-west7, us-west2, europe-west10, us-central3, us-east2, us-east4, us-east7, europe-central2, us-central1, asia-west2, europe-west3, europe-west5, us-east1, europe-west9, europe-west14, us-west8, europe-west, us-central1, google, europe-west11, asia-southeast1, southamerica-west1, us-west4, us-central4, asia-west1, us-west6, us-south1, us-west3, europe-west13, us-west1, me-central2, us-west7, europe-west4, us-east5, europe-west12, us-east8, europe-west6
+	+ Regions: multi-regions (no specific zones mentioned)
+	+ Impact Date: 2024-06-20 10:30 UTC
+	+ Duration: 2 hours, 12 minutes
+	+ Root Cause: connectivity issues to a dependent backend service
+	+ Downtime Period: 2024-06-20 10:30 UTC - 2024-06-20 12:42 UTC
+	+ Resolved Date: 2024-06-20 12:42 UTC
+
+**Summary**
+
+* Cloud Providers impacted: Google Cloud
+* Services impacted: Dataplex Catalog, Google Cloud Service Health, Google Data Catalog
+* Regions impacted: asia, eu, us (multi-regions)
+* Availability Zones impacted: multi-regions (no specific zones mentioned)
+* Impact Dates: 2024-06-20 10:30 UTC
+* Durations: 2 hours, 12 minutes
+* Root Causes: connectivity issues to a dependent backend service
+* Downtime Periods: 2024-06-20 10:30 UTC - 2024-06-20 12:42 UTC
+* Resolved Dates: 2024-06-20 12:42 UTC
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Dataplex Catalog | asia, eu, us | multi-regions | 2024-06-20 10:30 UTC | 2 hours, 12 minutes | connectivity issues to a dependent backend service | 2024-06-20 10:30 UTC - 2024-06-20 12:42 UTC | 2024-06-20 12:42 UTC |
+| Google Cloud | Google Cloud Service Health | us-east4, europe-west8, asia-east1, northamerica-northeast1, us-central5, europe-west2, southamerica-east1, africa-south1, me-west1, europe-southwest1, asia-south2, europe-west7, us-west2, europe-west10, us-central3, us-east2, us-east4, us-east7, europe-central2, us-central1, asia-west2, europe-west3, europe-west5, us-east1, europe-west9, europe-west14, us-west8, europe-west, us-central1, google, europe-west11, asia-southeast1, southamerica-west1, us-west4, us-central4, asia-west1, us-west6, us-south1, us-west3, europe-west13, us-west1, me-central2, us-west7, europe-west4, us-east5, europe-west12, us-east8, europe-west6 | multi-regions | 2024-06-20 10:30 UTC | 2 hours, 12 minutes | connectivity issues to a dependent backend service | 2024-06-20 10:30 UTC - 2024-06-20 12:42 UTC | 2024-06-20 12:42 UTC |
+| Google Cloud | Google Data Catalog customer may experience availability issues. | asia-northeast2, australia-southeast2, us-east9, europe-north1, us-west5, europe-west8, asia-east1, northamerica-northeast1, us-central5, europe-west2, southamerica-east1, africa-south1, me-west1, europe-southwest1, asia-south2, europe-west7, us-west2, europe-west10, us-central3, us-east2, us-east4, us-east7, europe-central2, us-central1, asia-west2, europe-west3, europe-west5, us-east1, europe-west9, europe-west14, us-west8, europe-west, us-central1, google, europe-west11, asia-southeast1, southamerica-west1, us-west4, us-central4, asia-west1, us-west6, us-south1, us-west3, europe-west13, us-west1, me-central2, us-west7, europe-west4, us-east5, europe-west12, us-east8, europe-west6 | multi-regions | 2024-06-20 10:30 UTC | 2 hours, 12 minutes | connectivity issues to a dependent backend service | 2024-06-20 10:30 UTC - 2024-06-20 12:42 UTC | 2024-06-20 12:42 UTC |
+
+Note: The output table only includes the services and regions that were impacted by the downtime.
