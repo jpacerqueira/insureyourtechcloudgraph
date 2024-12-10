@@ -1,0 +1,87 @@
+I can provide you with the information you requested.
+
+**Cloud Providers Impacted:**
+
+The incident affected MongoDB Atlas App Services and Device Sync.
+
+**Services Impacted:**
+
+* MongoDB Cloud
+* MongoDB Atlas App Services
+* MongoDB Device Sync
+
+**Regions and Availability Zones:**
+
+* asia-east
+* us-east
+* us-west
+* europe-north
+* us-central
+
+**Impact Dates and Duration:**
+
+The outage started on September 18, 2024, at 12:50 UTC. The duration of the outage was 2 days, 14 hours, and 30 minutes.
+
+**Root Cause:**
+
+The root cause of the outage is currently being investigated.
+
+**Downtime Period:**
+
+The downtime period for MongoDB Cloud was from September 18, 2024, at 12:50 UTC to September 20, 2024, at 13:20 UTC.
+
+**Resolved Date:**
+
+The incident has been resolved.
+
+Here is the information displayed as a table:
+
+```
+Cloud Provider , Service , Region , Availability Zone , Impact Date , Duration , Root Cause , Downtime Period , Resolved Date 
+MongoDB , MongoDB Cloud , asia-east , n/a , 2024-09-18T12:50:00Z , 2 days, 14 hours, 30 minutes , n/a , 2024-09-20T13:20:00Z
+MongoDB , MongoDB Atlas App Services , us-east , n/a , 2024-09-18T12:50:00Z , 2 days, 14 hours, 30 minutes , n/a , 2024-09-20T13:20:00Z
+MongoDB , MongoDB Device Sync , us-west , n/a , 2024-09-18T12:50:00Z , 2 days, 14 hours, 30 minutes , n/a , 2024-09-20T13:20:00Z
+```
+
+**Summary of Outage:**
+
+The outage started on September 18, 2024, at 12:50 UTC and affected MongoDB Cloud, MongoDB Atlas App Services, and MongoDB Device Sync in the regions asia-east, us-east, and us-west. The duration of the outage was 2 days, 14 hours, and 30 minutes. The root cause of the outage is currently being investigated.
+
+**Root Cause Update:**
+
+The issue has been identified and a fix is being implemented.
+
+Here is the updated table:
+
+```
+Cloud Provider , Service , Region , Availability Zone , Impact Date , Duration , Root Cause , Downtime Period , Resolved Date 
+MongoDB , MongoDB Cloud , asia-east , n/a , 2024-09-18T12:50:00Z , 2 days, 14 hours, 30 minutes , n/a , 2024-09-20T13:20:00Z
+MongoDB , MongoDB Atlas App Services , us-east , n/a , 2024-09-18T12:50:00Z , 2 days, 14 hours, 30 minutes , n/a , 2024-09-20T13:20:00Z
+MongoDB , MongoDB Device Sync , us-west , n/a , 2024-09-18T12:50:00Z , 2 days, 14 hours, 30 minutes , n/a , 2024-09-20T13:20:00Z
+```
+
+**Resolved Update:**
+
+A fix has been implemented and the incident is being monitored.
+
+Here is the updated table:
+
+```
+Cloud Provider , Service , Region , Availability Zone , Impact Date , Duration , Root Cause , Downtime Period , Resolved Date 
+MongoDB , MongoDB Cloud , asia-east , n/a , 2024-09-18T12:50:00Z , 2 days, 14 hours, 30 minutes , n/a , 2024-09-20T13:20:00Z
+MongoDB , MongoDB Atlas App Services , us-east , n/a , 2024-09-18T12:50:00Z , 2 days, 14 hours, 30 minutes , n/a , 2024-09-20T13:20:00Z
+MongoDB , MongoDB Device Sync , us-west , n/a , 2024-09-18T12:50:00Z , 2 days, 14 hours, 30 minutes , n/a , 2024-09-20T13:20:00Z
+```
+
+**Final Update:**
+
+The incident has been resolved.
+
+Here is the final table:
+
+```
+Cloud Provider , Service , Region , Availability Zone , Impact Date , Duration , Root Cause , Downtime Period , Resolved Date 
+MongoDB , MongoDB Cloud , asia-east , n/a , 2024-09-18T12:50:00Z , 2 days, 14 hours, 30 minutes , n/a , 2024-09-20T13:20:00Z
+MongoDB , MongoDB Atlas App Services , us-east , n/a , 2024-09-18T12:50:00Z , 2 days, 14 hours, 30 minutes , n/a , 2024-09-20T13:20:00Z
+MongoDB , MongoDB Device Sync , us-west , n/a , 2024-09-18T12:50:00Z , 2 days, 14 hours, 30 minutes , n/a , 2024-09-20T13:20:00Z
+```
