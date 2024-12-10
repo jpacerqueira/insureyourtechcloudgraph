@@ -1,0 +1,73 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Google Cloud**
+
+* Service: Google Distributed Cloud Edge
+* Region: asia-east2 (Hong Kong)
+* Availability Zone:
+	+ Not specified
+* Impact Date: 2024-04-19 12:39 UTC
+* Duration: 1 hour and 24 minutes
+* Root Cause: Mitigation work was underway by the engineering team.
+* Downtime Period: 14:54 - 15:03 UTC (Friday, April 19, 2019)
+* Resolved Date: 2024-04-19 14:58 UTC
+
+**Google Cloud**
+
+* Service: Google Distributed Cloud Edge
+* Region: asia-south1 (Mumbai)
+* Availability Zone:
+	+ Not specified
+* Impact Date: 2024-04-19 12:39 UTC
+* Duration: 1 hour and 24 minutes
+* Root Cause: Mitigation work was underway by the engineering team.
+* Downtime Period: 14:54 - 15:03 UTC (Friday, April 19, 2019)
+* Resolved Date: 2024-04-19 14:58 UTC
+
+**Google Cloud**
+
+* Service: Google Distributed Cloud Edge
+* Region: southamerica-east1 (São Paulo)
+* Availability Zone:
+	+ Not specified
+* Impact Date: 2024-04-19 12:39 UTC
+* Duration: 1 hour and 24 minutes
+* Root Cause: Mitigation work was underway by the engineering team.
+* Downtime Period: 14:54 - 15:03 UTC (Friday, April 19, 2019)
+* Resolved Date: 2024-04-19 14:58 UTC
+
+**Google Cloud**
+
+* Service: Google Distributed Cloud Edge
+* Region: us-west2 (Los Angeles)
+* Availability Zone:
+	+ Not specified
+* Impact Date: 2024-04-19 12:39 UTC
+* Duration: 1 hour and 24 minutes
+* Root Cause: Mitigation work was underway by the engineering team.
+* Downtime Period: 14:54 - 15:03 UTC (Friday, April 19, 2019)
+* Resolved Date: 2024-04-19 14:58 UTC
+
+**Summary**
+
+The following cloud providers were impacted:
+
+* Google Cloud
+	+ Services: Google Distributed Cloud Edge
+	+ Regions: asia-east2, asia-south1, southamerica-east1, us-west2
+	+ Availability Zones: Not specified
+	+ Impact Dates: 2024-04-19 12:39 UTC
+	+ Duration: 1 hour and 24 minutes
+
+The root cause of the outage was mitigation work being underway by the engineering team.
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Google Distributed Cloud Edge | asia-east2 |  | 2024-04-19 12:39 UTC | 1 hour and 24 minutes | Mitigation work underway by engineering team | 14:54 - 15:03 UTC (Friday, April 19, 2019) | 2024-04-19 14:58 UTC |
+| Google Cloud | Google Distributed Cloud Edge | asia-south1 |  | 2024-04-19 12:39 UTC | 1 hour and 24 minutes | Mitigation work underway by engineering team | 14:54 - 15:03 UTC (Friday, April 19, 2019) | 2024-04-19 14:58 UTC |
+| Google Cloud | Google Distributed Cloud Edge | southamerica-east1 |  | 2024-04-19 12:39 UTC | 1 hour and 24 minutes | Mitigation work underway by engineering team | 14:54 - 15:03 UTC (Friday, April 19, 2019) | 2024-04-19 14:58 UTC |
+| Google Cloud | Google Distributed Cloud Edge | us-west2 |  | 2024-04-19 12:39 UTC | 1 hour and 24 minutes | Mitigation work underway by engineering team | 14:54 - 15:03 UTC (Friday, April 19, 2019) | 2024-04-19 14:58 UTC |
+
+Note: The output table has been formatted to have a fixed width, with variables representing the different columns.

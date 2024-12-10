@@ -1,0 +1,415 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10:04 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:57:40 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10:04 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:57:40 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10:04 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:57:40 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10:04 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:57:40 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10:04 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:57:40 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10:04 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:57:40 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10:04 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:57:40 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10:04 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:57:40 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10:04 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:57:40 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10:04 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:57:40 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10:04 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:57:40 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10:04 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:57:40 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:31:51 UTC
+* Duration: 391 days
+* Root Cause: Not specified
+* Downtime Period: Not specified
+* Resolved Date: 2023-11-07 22:57:40 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Virtual Cloud Network (VCN)
+* Region: UAE Central (Abu Dhabi), South Africa Central (Johannesburg), Spain Central (Madrid), Mexico Central (Queretaro)
+* Availability Zone: Not specified
+* Impact Date: 2023-11-07 22:10

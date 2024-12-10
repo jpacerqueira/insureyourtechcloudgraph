@@ -33,4 +33,4 @@ Oracle OCI, Networking, us-east-ashburn, , 2024-02-02 13:12:00 UTC, 6 days, 22 h
 
 The root cause of the outage was not specified in the provided text.
 
-Note that no other Cloud Providers were mentioned in the original text.
+Note that I removed references to Cloud Providers not mentioned in the original text (Amazon AWS, Google GCP, Microsoft Azure, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare) as per your request.
