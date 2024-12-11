@@ -1,14 +1,14 @@
 # This code is compatible with Terraform 4.25.0 and versions that are backward compatible to 4.25.0.
 # For information about validating this Terraform code, see https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/google-cloud-platform-build#format-and-validate-the-configuration
 
-resource "google_compute_instance" "instance-20241211-135046" {
+resource "google_compute_instance" "insureyourtech-cloud-20241211-141306" {
   boot_disk {
     auto_delete = true
-    device_name = "instance-20241211-135046"
+    device_name = "insureyourtech-cloud-20241211-141306"
 
     initialize_params {
       image = "projects/debian-cloud/global/images/debian-12-bookworm-v20241210"
-      size  = 500
+      size  = 300
       type  = "pd-balanced"
     }
 
@@ -18,19 +18,18 @@ resource "google_compute_instance" "instance-20241211-135046" {
   can_ip_forward      = true
   deletion_protection = false
   enable_display      = false
-  hostname            = "insureyourtech.cloud"
+  hostname            = "insureyourtechcloud.fuelbigdata-test1.com"
 
   labels = {
     goog-ec-src = "vm_add-tf"
   }
 
   machine_type = "e2-standard-2"
-  name         = "instance-20241211-135046"
+  name         = "insureyourtech-cloud-20241211-141306"
 
   network_interface {
     access_config {
-      network_tier           = "PREMIUM"
-      public_ptr_domain_name = "insureyourtech.cloud."
+      network_tier = "PREMIUM"
     }
 
     queue_count = 0

@@ -1,21 +1,19 @@
-gcloud compute instances create instance-20241211-135046 \
+gcloud compute instances create insureyourtech-cloud-20241211-141306 \
     --project=fuelbigdata-test1 \
     --zone=europe-west2-a \
     --machine-type=e2-standard-2 \
     --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default \
-    --public-ptr \
-    --public-ptr-domain=insureyourtech.cloud. \
     --can-ip-forward \
     --maintenance-policy=MIGRATE \
     --provisioning-model=STANDARD \
-    --instance-termination-action=STOP \
-    --termination-time=2025-01-25T00:00:00.000Z \
     --service-account=1063610512413-compute@developer.gserviceaccount.com \
     --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/trace.append \
     --tags=http-server,https-server,lb-health-check \
-    --create-disk=auto-delete=yes,boot=yes,device-name=instance-20241211-135046,image=projects/debian-cloud/global/images/debian-12-bookworm-v20241210,mode=rw,size=500,type=pd-balanced \
+    --create-disk=auto-delete=yes,boot=yes,device-name=insureyourtech-cloud-20241211-141306,image=projects/debian-cloud/global/images/debian-12-bookworm-v20241210,mode=rw,size=300,type=pd-balanced \
     --no-shielded-secure-boot \
     --shielded-vtpm \
     --shielded-integrity-monitoring \
     --labels=goog-ec-src=vm_add-gcloud \
-    --reservation-affinity=any
+    --reservation-affinity=any \
+    --threads-per-core=2 \
+    --visible-core-count=1
