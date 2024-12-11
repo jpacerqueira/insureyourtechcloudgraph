@@ -471,8 +471,8 @@
                     }
 
                     const response = await fetch(
-                        //`https://cloud.risk.api.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`,
-                        `https://35.189.111.101:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`,
+                        //`https://api-cloud-risk.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`,
+                        `https://35.234.146.132:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/${region}`,
                         fetchOptions
                     );
                     
@@ -805,8 +805,8 @@
             }
 
             const response = await fetch(
-                //'https://cloud.risk.api.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}' // PROD DNS fallback
-                `https://35.189.111.101:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`,
+                //'https://api-cloud-risk.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}' // PROD DNS fallback
+                `https://35.234.146.132:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`,
                 fetchOptions
             );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -932,8 +932,8 @@
             }
 
             const response = await fetch(
-                //'https://cloud.risk.api.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global' // PROD DNS fallback
-                `https://35.189.111.101:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global`,
+                //'https://api-cloud-risk.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global' // PROD DNS fallback
+                `https://35.234.146.132:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${service}/global_or_by_regions/global`,
                 fetchOptions
             );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
