@@ -1,0 +1,33 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud Service**
+
+* **Apigee Sense**
+	+ Region: asia-east1
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-03-12 13:33 UTC
+	+ Duration: 3 hours and 40 minutes
+	+ Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+	+ Downtime Period: 2024-03-12 13:33 - 17:13 UTC
+	+ Resolved Date: 2024-03-12 16:18 UTC
+
+**Summary**
+
+* Cloud Provider: Google Cloud Service
+* Services Impacted: Apigee Sense
+* Regions and Availability Zones: asia-east1 (not specified)
+* Impact Dates: 2024-03-12 13:33 UTC
+* Duration: 3 hours and 40 minutes
+* Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+* Downtime Period: 2024-03-12 13:33 - 17:13 UTC
+* Resolved Date: 2024-03-12 16:18 UTC
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud Service | Apigee Sense | asia-east1 |  | 2024-03-12 13:33 UTC | 3 hours and 40 minutes | Impacted customers may experience delays in bot detection which may in turn affect blocking rules | 2024-03-12 13:33 - 17:13 UTC | 2024-03-12 16:18 UTC |
+
+Note: I removed references to Cloud Providers not mentioned in the text, normalized variables like regions and availability zones to standard lowercase official names of cloud vendors, and applied international standard name conventions for all variables.

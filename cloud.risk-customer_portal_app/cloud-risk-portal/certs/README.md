@@ -25,14 +25,13 @@ stateOrProvinceName       = London
 localityName              = London
 0.organizationName        = FUEL DATASCIENCE BIGDATA LIMITED
 organizationalUnitName    = InsureYourTech.Cloud
-commonName                = simulation.cloud.risk.insureyourtech.cloud
+commonName                = simulation-cloud-risk.insureyourtech.cloud
 emailAddress              = business@insureyourtech.com
 
 [sans_list]
-DNS.1                     = simulation.cloud.risk.insureyourtech.cloud
-DNS.2                     = api.cloud.risk.insureyourtech.cloud
-DNS.3                     = customer.cloud.risk.insureyourtech.cloud
-DNS.4                     = insureyourtech.cloud
+DNS.1                     = simulation-cloud-risk.insureyourtech.cloud
+DNS.2                     = api-cloud-risk.insureyourtech.cloud
+DNS.3                     = customer-cloud-risk.insureyourtech.cloud
 
 EOF
 
