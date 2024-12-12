@@ -123,8 +123,37 @@ CREATE (${vendorId})-[:CONNECTED_RISK {
     return cypher;
 }
 
-// Update saveNeo4jQuery function to include timestamp in filename
-function saveNeo4jQuery(data) {
+// Middleware to handle sessions
+const session = require('express-session');
+app.use(session({
+    secret: 'your-secret-key',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: isProd }
+}));
+
+// Function to delete previous Neo4j data
+async function deletePreviousNeo4jData(sessionId) {
+    const driver = await initNeo4jConnection();
+    if (driver) {
+        const session = driver.session();
+        try {
+            const deleteQuery = `
+                MATCH (c:CUSTOMER_NAME {session_id: '${sessionId}'})-[r:CUSTOMER_USES_SERVICE]->(s:TECHNOLOGY_SERVICE)
+                DETACH DELETE c, r, s
+            `;
+            await session.run(deleteQuery);
+            console.log('Previous Neo4j data deleted successfully');
+        } catch (error) {
+            console.error('Error deleting previous Neo4j data:', error);
+        } finally {
+            await session.close();
+        }
+    }
+}
+
+// Update saveNeo4jQuery function to include session ID
+function saveNeo4jQuery(data, sessionId) {
     const outputDir = path.join(__dirname, 'neo4j_customer_submission');
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
     const filename = `Cloud.Risk.graph_${data.companyName.replace(/[^a-zA-Z0-9]/g, '_')}_${timestamp}.cypher`;
@@ -138,6 +167,10 @@ function saveNeo4jQuery(data) {
     // Generate Cypher query
     let cypher = generateCypherQuery(data);
 
+    // Add session ID to customer node
+    cypher = cypher.replace('CREATE (cust_', `CREATE (cust_${sessionId}_`);
+    cypher = cypher.replace('CREATE (cust_', `CREATE (cust_${sessionId}_`);
+
     // Write to file
     fs.writeFileSync(fullPath, cypher);
     return fullPath;
@@ -145,10 +178,15 @@ function saveNeo4jQuery(data) {
 
 // Update API endpoint to handle Neo4j file generation
 app.post('/customer-portal/api/save-neo4j-query', async (req, res) => {
+    const sessionId = req.sessionID;
     try {
-        const filePath = saveNeo4jQuery(req.body);
-        
-        // If Neo4j connection is enabled, execute the query
+        // Delete previous data
+        await deletePreviousNeo4jData(sessionId);
+
+        // Save new data
+        const filePath = saveNeo4jQuery(req.body, sessionId);
+
+        // Execute the new query
         const driver = await initNeo4jConnection();
         if (driver) {
             const cypher = generateCypherQuery(req.body);
