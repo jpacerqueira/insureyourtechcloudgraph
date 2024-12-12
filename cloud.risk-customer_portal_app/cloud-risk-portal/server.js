@@ -64,6 +64,11 @@ function generateCypherQuery(data) {
 
     // Create customer node with all metrics
     cypher += `
+// DELETE PREVIOUS RECORDS
+MATCH (cust_${companyId}:CUSTOMER_NAME)
+DETACH DELETE cust_${companyId};
+
+// CREATE NEW RECORDS
 CREATE (cust_${companyId}:CUSTOMER_NAME {
     name: '${companyName}',
     project_name: '${projectName}',
@@ -83,6 +88,11 @@ CREATE (cust_${companyId}:CUSTOMER_NAME {
         const vendorId = service.vendor.replace(/[^a-zA-Z0-9]/g, '_');
 
         cypher += `
+// DELETE PREVIOUS RECORDS
+MATCH (${serviceId}:TECHNOLOGY_SERVICE)
+DETACH DELETE ${serviceId};
+
+// CREATE NEW RECORDS
 CREATE (${serviceId}:TECHNOLOGY_SERVICE {
     name: '${service.name}',
     region: '${service.region}',
@@ -95,7 +105,11 @@ CREATE (${serviceId}:TECHNOLOGY_SERVICE {
     service_sla_tier1: '${service.metrics.serviceSla}%',
     service_credit_back_tier1: '${service.metrics.creditBack}%'
 })
+// DELETE PREVIOUS RECORDS
+MATCH (${vendorId}:TECHNOLOGY_PROVIDER)
+DETACH DELETE ${vendorId};
 
+// CREATE NEW RECORDS
 CREATE (${vendorId}:TECHNOLOGY_PROVIDER {
     name: '${service.vendor}',
     vendor_median_sla_usage_percentage: '${metrics.vendorMedians[service.vendor].slaUsage}%',
@@ -105,12 +119,21 @@ CREATE (${vendorId}:TECHNOLOGY_PROVIDER {
     vendor_median_service_sla: '${metrics.vendorMedians[service.vendor].serviceSla}%',
     vendor_median_annual_downtime: '${metrics.vendorMedians[service.vendor].annualDowntime}'
 })
+// DELETE PREVIOUS RECORDS
+MATCH (cust_${companyId})-[:CUSTOMER_USES_SERVICE]->(${serviceId})
+DETACH DELETE (cust_${companyId})-[:CUSTOMER_USES_SERVICE]->(${serviceId});
 
+// CREATE NEW RECORDS
 CREATE (cust_${companyId})-[:CUSTOMER_USES_SERVICE {
     monthly_cost: ${service.monthlyCost},
     region: '${service.region}'
 }]->(${serviceId})
 
+// DELETE PREVIOUS RECORDS
+MATCH (${vendorId})-[:CONNECTED_RISK]->(${serviceId})
+DETACH DELETE (${vendorId})-[:CONNECTED_RISK]->(${serviceId});
+
+// CREATE NEW RECORDS
 CREATE (${vendorId})-[:CONNECTED_RISK {
     sla_usage: '${service.metrics.slaUsage}%',
     sla_deviation_risk: '${service.metrics.slaDeviation}',
