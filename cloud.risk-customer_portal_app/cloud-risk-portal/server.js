@@ -64,11 +64,6 @@ function generateCypherQuery(data) {
 
     // Create customer node with all metrics
     cypher += `
-// ERASE PREVIOUS RECORDS
-MATCH (N)
-DETACH DELETE N;
-
-// CREATE NEW RECORDS
 CREATE (cust_${companyId}:CUSTOMER_NAME {
     name: '${companyName}',
     project_name: '${projectName}',
