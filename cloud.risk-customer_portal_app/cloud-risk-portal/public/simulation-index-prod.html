@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud.Risk - Simulation</title>
-    <link rel="icon" type="image/x-icon" href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://insureyourtech.cloud&size=16">
+    <link rel="icon" type="image/x-icon" href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://insureyourtech.cloud&size=18">
     <script>
         // Initialize ENV with default values
         window.ENV = window.ENV || {
@@ -993,9 +993,9 @@
     }
 
     // Function to compare max expected downtime with Tier 1 SLA
-    async function compareMaxExpectedDowntime(service) {
+    function compareMaxExpectedDowntime(service) {
         try {
-            const riskData = await fetchCloudRiskData(service, 'global');
+            const riskData = fetchCloudRiskData(service, 'global');
 
             const maxExpectedDowntimeTier1 = Number(riskData?.expected_annual_service_minutes_down_by_sla_tier1) || 0;
             const actualDowntime = Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0;

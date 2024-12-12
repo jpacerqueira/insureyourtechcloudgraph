@@ -276,7 +276,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /cloud-services-risk-ratings/risk-ratings-premium/preemium/list/all/services:
+  /cloud-services-risk-ratings/risk-ratings-premium/premium/list/all/services:
     get:
       summary: Get all risk ratings (Premium)
       description: Retrieves a list of all cloud service risk ratings with full details (limited to 100000 records)
@@ -296,7 +296,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /cloud-services-risk-ratings/risk-ratings-premium/preemium/fetch/service/id/{id}:
+  /cloud-services-risk-ratings/risk-ratings-premium/premium/fetch/service/id/{id}:
     get:
       summary: Get risk rating by ID (Premium)
       description: Retrieves detailed risk rating information for a specific service by ID
@@ -326,7 +326,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /cloud-services-risk-ratings/risk-ratings-premium/preemium/fetch/service/service_provider/{service_provider}:
+  /cloud-services-risk-ratings/risk-ratings-premium/premium/fetch/service/service_provider/{service_provider}:
     get:
       summary: Get risk rating by service provider (Premium)
       description: Retrieves detailed risk rating information for a specific service provider
@@ -358,7 +358,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /cloud-services-risk-ratings/risk-ratings-premium/preemium/fetch/service/service_name/{service_name}:
+  /cloud-services-risk-ratings/risk-ratings-premium/premium/fetch/service/service_name/{service_name}:
     get:
       summary: Get risk rating by service name (Premium)
       description: Retrieves detailed risk rating information for a specific service name
@@ -390,7 +390,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /cloud-services-risk-ratings/risk-ratings-premium/preemium/fetch/service/service_name/{service_name}/global_or_by_regions/{global_or_by_regions}:
+  /cloud-services-risk-ratings/risk-ratings-premium/premium/fetch/service/service_name/{service_name}/global_or_by_regions/{global_or_by_regions}:
     get:
       summary: Get risk rating by service name and region type (Premium)
       description: Retrieves detailed risk rating information for a specific service name and region type
@@ -432,7 +432,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /cloud-services-risk-ratings/risk-ratings-premium/preemium/outages/list/all:
+  /cloud-services-risk-ratings/risk-ratings-premium/premium/outages/list/all:
     get:
       summary: Get all outage reports (Premium)
       description: Retrieves a list of all cloud service outage reports (limited to 100000 records)
@@ -452,7 +452,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /cloud-services-risk-ratings/risk-ratings-premium/preemium/outages/provider/{provider}:
+  /cloud-services-risk-ratings/risk-ratings-premium/premium/outages/provider/{provider}:
     get:
       summary: Get outage reports by provider (Premium)
       description: Retrieves outage reports for a specific cloud provider
@@ -484,7 +484,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /cloud-services-risk-ratings/risk-ratings-premium/preemium/outages/service/{service}:
+  /cloud-services-risk-ratings/risk-ratings-premium/premium/outages/service/{service}:
     get:
       summary: Get outage reports by service (Premium)
       description: Retrieves outage reports for a specific cloud service
@@ -516,7 +516,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
-  /cloud-services-risk-ratings/risk-ratings-premium/preemium/outages/region/{region}:
+  /cloud-services-risk-ratings/risk-ratings-premium/premium/outages/region/{region}:
     get:
       summary: Get outage reports by region (Premium)
       description: Retrieves outage reports for a specific region

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud.Risk - Customer Portal</title>
-    <link rel="icon" type="image/x-icon" href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://insureyourtech.cloud&size=16">
+    <link rel="icon" type="image/x-icon" href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://insureyourtech.cloud&size=18">
     <script>
         // Initialize ENV with default values
         window.ENV = window.ENV || {
@@ -409,7 +409,7 @@
             }
 
             const response = await fetch(
-                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${encodeURIComponent(service)}/global_or_by_regions/${encodeURIComponent(region)}`,
+                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/fetch/service/service_name/${encodeURIComponent(service)}/global_or_by_regions/${encodeURIComponent(region)}`,
                 fetchOptions
             );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -439,7 +439,7 @@
             }
 
             const response = await fetch(
-                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${encodeURIComponent(service)}`,
+                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/outages/service/${encodeURIComponent(service)}`,
                 fetchOptions
             );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -527,6 +527,10 @@
     };
 
     const vendorMetrics = {};
+
+
+    // Initialize the variable pairs on page load
+    window.onload = initializeVariablePairs;
 
     // Update submit function to handle metrics calculation and display
     async function submitData() {
@@ -1161,9 +1165,9 @@
     }
 
     // Function to compare max expected downtime with Tier 1 SLA
-    async function compareMaxExpectedDowntime(service) {
+    function compareMaxExpectedDowntime(service) {
         try {
-            const riskData = await fetchCloudRiskData(service, 'global');
+            const riskData = fetchCloudRiskData(service, 'global');
 
             const maxExpectedDowntimeTier1 = Number(riskData?.expected_annual_service_minutes_down_by_sla_tier1) || 0;
             const actualDowntime = Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0;
@@ -1192,11 +1196,8 @@
         }
     }
 
-    // Initialize the variable pairs on page load
-    window.onload = initializeVariablePairs;
-
     // Add to existing JavaScript
-    async function displayOutageData(service, outageData) {
+    function displayOutageData(service, outageData) {
         // Create table rows
         const tbody = document.querySelector('#outageTable tbody');
         const row = document.createElement('tr');
