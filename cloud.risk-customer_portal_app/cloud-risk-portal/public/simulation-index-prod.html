@@ -993,9 +993,9 @@
     }
 
     // Function to compare max expected downtime with Tier 1 SLA
-    function compareMaxExpectedDowntime(service) {
+    async function compareMaxExpectedDowntime(service) {
         try {
-            const riskData = fetchCloudRiskData(service, 'global');
+            const riskData = await fetchCloudRiskData(service, 'global');
 
             const maxExpectedDowntimeTier1 = Number(riskData?.expected_annual_service_minutes_down_by_sla_tier1) || 0;
             const actualDowntime = Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0;
