@@ -40,6 +40,7 @@ services:
       - NEO4J_AUTH=${NEO4J_USERNAME-neo4j}/${NEO4J_PASSWORD-password}
     networks:
       - cloud-services-risk-ratings-api_backend # backend
+    restart: unless-stopped
 
   cloud-risk-portal:
     build:
@@ -52,7 +53,7 @@ services:
       - NEO4J_PASSWORD=password
       - PORT=8184
     ports:
-      - 8184:8184 # Expose API to port 8183
+      - 8184:8184 
     depends_on:
       - customer_graph
     volumes:

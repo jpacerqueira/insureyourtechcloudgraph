@@ -1,5 +1,20 @@
 services:
 
+  customer_graph:
+    image: neo4j:5.25.1-community
+    ports:
+      - 17474:7474
+      - 17473:7473
+      - 17687:7687 
+    volumes:
+      - ./neo4j_data:/data
+      - ./neo4j_customer_submission:/var/lib/neo4j/import
+    environment:
+      - NEO4J_AUTH=${NEO4J_USERNAME-neo4j}/${NEO4J_PASSWORD-password}
+    networks:
+      - cloud-services-risk-ratings-api_backend # backend
+    restart: unless-stopped
+
   cloud-risk-portal:
     build:
       context: ./cloud-risk-portal
@@ -11,7 +26,9 @@ services:
       - NEO4J_PASSWORD=password
       - PORT=8184
     ports:
-      - 8184:8184 # Expose API to port 8183
+      - 8184:8184
+    depends_on:
+      - customer_graph
     volumes:
       - ./cloud-risk-portal:/cloud-risk-portal
     working_dir: /app

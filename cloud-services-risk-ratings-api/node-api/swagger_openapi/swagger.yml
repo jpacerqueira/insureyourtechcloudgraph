@@ -10,7 +10,7 @@ servers:
 paths:
   /cloud-services-risk-ratings/risk-ratings-freemium/freemium/list/all/services:
     get:
-      summary: Get all risk ratings
+      summary: Get all risk ratings (Freemium)
       description: Retrieves a list of all cloud service risk ratings (limited to 100000 records)
       responses:
         '200':
@@ -30,7 +30,7 @@ paths:
 
   /cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/id/{id}:
     get:
-      summary: Get risk rating by ID
+      summary: Get risk rating by ID (Freemium)
       description: Retrieves detailed risk rating information for a specific service by ID
       parameters:
         - name: id
@@ -60,7 +60,7 @@ paths:
 
   /cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_provider/{service_provider}:
     get:
-      summary: Get risk rating by service provider
+      summary: Get risk rating by service provider (Freemium)
       description: Retrieves detailed risk rating information for a specific service provider
       parameters:
         - name: service_provider
@@ -90,7 +90,7 @@ paths:
 
   /cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/{service_name}:
     get:
-      summary: Get risk rating by service name
+      summary: Get risk rating by service name (Freemium)
       description: Retrieves detailed risk rating information for a specific service name
       parameters:
         - name: service_name
@@ -120,7 +120,7 @@ paths:
 
   /cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/{service_name}/global_or_by_regions/{global_or_by_regions}:
     get:
-      summary: Get risk rating by service name and region type
+      summary: Get risk rating by service name and region type (Freemium)
       description: Retrieves detailed risk rating information for a specific service name and region type (global or regional)
       parameters:
         - name: service_name
@@ -149,278 +149,6 @@ paths:
                 $ref: '#/components/schemas/Error'
         '404':
           description: Risk rating not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        '500':
-          description: Server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
-  /cloud-services-risk-ratings/risk-ratings/list/all/services:
-    get:
-      summary: Get all risk ratings (Premium)
-      description: Retrieves a list of all cloud service risk ratings with full details (limited to 100000 records)
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/DetailedRiskRating'
-        '500':
-          description: Server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
-  /cloud-services-risk-ratings/risk-ratings/fetch/service/id/{id}:
-    get:
-      summary: Get risk rating by ID (Premium)
-      description: Retrieves detailed risk rating information for a specific service by ID
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/DetailedRiskRating'
-        '404':
-          description: Risk rating not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        '500':
-          description: Server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
-  /cloud-services-risk-ratings/risk-ratings/fetch/service/service_provider/{service_provider}:
-    get:
-      summary: Get risk rating by service provider (Premium)
-      description: Retrieves detailed risk rating information for a specific service provider
-      parameters:
-        - name: service_provider
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/DetailedRiskRating'
-        '404':
-          description: Risk rating not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        '500':
-          description: Server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
-  /cloud-services-risk-ratings/risk-ratings/fetch/service/service_name/{service_name}:
-    get:
-      summary: Get risk rating by service name (Premium)
-      description: Retrieves detailed risk rating information for a specific service name
-      parameters:
-        - name: service_name
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/DetailedRiskRating'
-        '404':
-          description: Risk rating not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        '500':
-          description: Server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
-  /cloud-services-risk-ratings/risk-ratings/fetch/service/service_name/{service_name}/global_or_by_regions/{global_or_by_regions}:
-    get:
-      summary: Get risk rating by service name and region type (Premium)
-      description: Retrieves detailed risk rating information for a specific service name and region type
-      parameters:
-        - name: service_name
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: global_or_by_regions
-          in: path
-          required: true
-          schema:
-            type: string
-            enum: [global, regional]
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/DetailedRiskRating'
-        '400':
-          description: Invalid global_or_by_regions parameter
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        '404':
-          description: Risk rating not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        '500':
-          description: Server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
-  /cloud-services-risk-ratings/risk-ratings/outages/list/all:
-    get:
-      summary: Get all outage reports (Premium)
-      description: Retrieves a list of all cloud service outage reports (limited to 100000 records)
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/OutageReport'
-        '500':
-          description: Server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
-  /cloud-services-risk-ratings/risk-ratings/outages/provider/{provider}:
-    get:
-      summary: Get outage reports by provider (Premium)
-      description: Retrieves outage reports for a specific cloud provider
-      parameters:
-        - name: provider
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/OutageReport'
-        '404':
-          description: No outage reports found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        '500':
-          description: Server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
-  /cloud-services-risk-ratings/risk-ratings/outages/service/{service}:
-    get:
-      summary: Get outage reports by service (Premium)
-      description: Retrieves outage reports for a specific cloud service
-      parameters:
-        - name: service
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/OutageReport'
-        '404':
-          description: No outage reports found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        '500':
-          description: Server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
-  /cloud-services-risk-ratings/risk-ratings/outages/region/{region}:
-    get:
-      summary: Get outage reports by region (Premium)
-      description: Retrieves outage reports for a specific region
-      parameters:
-        - name: region
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/OutageReport'
-        '404':
-          description: No outage reports found
           content:
             application/json:
               schema:
@@ -548,6 +276,278 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
+  /cloud-services-risk-ratings/risk-ratings-premium/preemium/list/all/services:
+    get:
+      summary: Get all risk ratings (Premium)
+      description: Retrieves a list of all cloud service risk ratings with full details (limited to 100000 records)
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DetailedRiskRating'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings-premium/preemium/fetch/service/id/{id}:
+    get:
+      summary: Get risk rating by ID (Premium)
+      description: Retrieves detailed risk rating information for a specific service by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DetailedRiskRating'
+        '404':
+          description: Risk rating not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings-premium/preemium/fetch/service/service_provider/{service_provider}:
+    get:
+      summary: Get risk rating by service provider (Premium)
+      description: Retrieves detailed risk rating information for a specific service provider
+      parameters:
+        - name: service_provider
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DetailedRiskRating'
+        '404':
+          description: Risk rating not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings-premium/preemium/fetch/service/service_name/{service_name}:
+    get:
+      summary: Get risk rating by service name (Premium)
+      description: Retrieves detailed risk rating information for a specific service name
+      parameters:
+        - name: service_name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DetailedRiskRating'
+        '404':
+          description: Risk rating not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings-premium/preemium/fetch/service/service_name/{service_name}/global_or_by_regions/{global_or_by_regions}:
+    get:
+      summary: Get risk rating by service name and region type (Premium)
+      description: Retrieves detailed risk rating information for a specific service name and region type
+      parameters:
+        - name: service_name
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: global_or_by_regions
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [global, regional]
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DetailedRiskRating'
+        '400':
+          description: Invalid global_or_by_regions parameter
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Risk rating not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings-premium/preemium/outages/list/all:
+    get:
+      summary: Get all outage reports (Premium)
+      description: Retrieves a list of all cloud service outage reports (limited to 100000 records)
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OutageReport'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings-premium/preemium/outages/provider/{provider}:
+    get:
+      summary: Get outage reports by provider (Premium)
+      description: Retrieves outage reports for a specific cloud provider
+      parameters:
+        - name: provider
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OutageReport'
+        '404':
+          description: No outage reports found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings-premium/preemium/outages/service/{service}:
+    get:
+      summary: Get outage reports by service (Premium)
+      description: Retrieves outage reports for a specific cloud service
+      parameters:
+        - name: service
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OutageReport'
+        '404':
+          description: No outage reports found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings-premium/preemium/outages/region/{region}:
+    get:
+      summary: Get outage reports by region (Premium)
+      description: Retrieves outage reports for a specific region
+      parameters:
+        - name: region
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/OutageReport'
+        '404':
+          description: No outage reports found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
 components:
   schemas:
     BasicRiskRating:
@@ -577,9 +577,31 @@ components:
           type: string
         region:
           type: string
-        service_sla_0_99_9999_for_60min_times_24h_365days:
+        service_sla_0_99_9999_for_tier1:
           type: number
-        percentage_service_credit_back:
+        service_sla_0_99_9999_for_tier2:
+          type: number
+        service_sla_0_99_9999_for_tier3:
+          type: number
+        service_sla_0_99_9999_for_tier4:
+          type: number
+        percentage_service_credit_back_tier1:
+          type: number
+        percentage_service_credit_back_tier2:
+          type: number
+        percentage_service_credit_back_tier3:
+          type: number
+        percentage_service_credit_back_tier4:
+          type: number
+        expected_annual_service_minutes_down_by_sla_tier1:
+          type: number
+        expected_annual_service_minutes_down_by_sla_tier2:
+          type: number
+        expected_annual_service_minutes_down_by_sla_tier3:
+          type: number
+        expected_annual_service_minutes_down_by_sla_tier4:
+          type: number
+        expected_percentage_mins_down_inside_agreed_sla_tier1:
           type: number
         webscraper_annual_period_service_down_per_year_in_minutes:
           type: number

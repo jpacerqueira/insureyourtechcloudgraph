@@ -55,6 +55,127 @@ const initNeo4jConnection = async () => {
     }
 };
 
+function generateCypherQuery(data) {
+    const { companyName, projectName, services, metrics } = data;
+    let cypher = '';
+
+    // Sanitize company name for Cypher
+    const companyId = companyName.replace(/[^a-zA-Z0-9]/g, '_');
+
+    // Create customer node with all metrics
+    cypher += `
+CREATE (cust_${companyId}:CUSTOMER_NAME {
+    name: '${companyName}',
+    project_name: '${projectName}',
+    median_sla_usage_percentage: '${metrics.customerMedian.slaUsage}%',
+    median_sla_deviation_risk: '${metrics.customerMedian.slaDeviation}',
+    median_traffic_coefficient: '${metrics.customerMedian.trafficCoef}%',
+    median_usage_risk: '${metrics.customerMedian.usageRisk}',
+    median_service_sla: '${metrics.customerMedian.serviceSla}%',
+    median_annual_downtime: '${metrics.customerMedian.annualDowntime}',
+    submission_date: '${new Date().toISOString()}'
+})
+`;
+
+    // Add vendor and service nodes with complete metrics
+    services.forEach(service => {
+        const serviceId = service.name.replace(/[^a-zA-Z0-9]/g, '_');
+        const vendorId = service.vendor.replace(/[^a-zA-Z0-9]/g, '_');
+
+        cypher += `
+CREATE (${serviceId}:TECHNOLOGY_SERVICE {
+    name: '${service.name}',
+    region: '${service.region}',
+    monthly_cost: ${service.monthlyCost},
+    sla_usage: '${service.metrics.slaUsage}%',
+    sla_deviation_risk: '${service.metrics.slaDeviation}',
+    traffic_coefficient: '${service.metrics.trafficCoef}%',
+    usage_risk: '${service.metrics.usageRisk}',
+    annual_downtime_minutes: '${service.metrics.annualDowntime}',
+    service_sla_tier1: '${service.metrics.serviceSla}%',
+    service_credit_back_tier1: '${service.metrics.creditBack}%'
+})
+
+CREATE (${vendorId}:TECHNOLOGY_PROVIDER {
+    name: '${service.vendor}',
+    vendor_median_sla_usage_percentage: '${metrics.vendorMedians[service.vendor].slaUsage}%',
+    vendor_median_sla_deviation_risk: '${metrics.vendorMedians[service.vendor].slaDeviation}',
+    vendor_median_traffic_coefficient: '${metrics.vendorMedians[service.vendor].trafficCoef}%',
+    vendor_median_usage_risk: '${metrics.vendorMedians[service.vendor].usageRisk}',
+    vendor_median_service_sla: '${metrics.vendorMedians[service.vendor].serviceSla}%',
+    vendor_median_annual_downtime: '${metrics.vendorMedians[service.vendor].annualDowntime}'
+})
+
+CREATE (cust_${companyId})-[:CUSTOMER_USES_SERVICE {
+    monthly_cost: ${service.monthlyCost},
+    region: '${service.region}'
+}]->(${serviceId})
+
+CREATE (${vendorId})-[:CONNECTED_RISK {
+    sla_usage: '${service.metrics.slaUsage}%',
+    sla_deviation_risk: '${service.metrics.slaDeviation}',
+    traffic_coefficient: '${service.metrics.trafficCoef}%',
+    usage_risk: '${service.metrics.usageRisk}'
+}]->(${serviceId})
+`;
+    });
+
+    return cypher;
+}
+
+// Update saveNeo4jQuery function to include timestamp in filename
+function saveNeo4jQuery(data) {
+    const outputDir = path.join(__dirname, 'neo4j_customer_submission');
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const filename = `Cloud.Risk.graph_${data.companyName.replace(/[^a-zA-Z0-9]/g, '_')}_${timestamp}.cypher`;
+    const fullPath = path.join(outputDir, filename);
+
+    // Create directory if it doesn't exist
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    // Generate Cypher query
+    let cypher = generateCypherQuery(data);
+
+    // Write to file
+    fs.writeFileSync(fullPath, cypher);
+    return fullPath;
+}
+
+// Update API endpoint to handle Neo4j file generation
+app.post('/customer-portal/api/save-neo4j-query', async (req, res) => {
+    try {
+        const filePath = saveNeo4jQuery(req.body);
+        
+        // If Neo4j connection is enabled, execute the query
+        const driver = await initNeo4jConnection();
+        if (driver) {
+            const cypher = generateCypherQuery(req.body);
+            const session = driver.session();
+            try {
+                await session.run(cypher);
+                console.log('Neo4j query executed successfully');
+            } catch (error) {
+                console.error('Error executing Neo4j query:', error);
+            } finally {
+                await session.close();
+            }
+        }
+
+        res.json({ 
+            success: true, 
+            filePath,
+            message: 'Data saved successfully' 
+        });
+    } catch (error) {
+        console.error('Error saving Neo4j query:', error);
+        res.status(500).json({ 
+            error: error.message,
+            details: 'Error saving or executing Neo4j query'
+        });
+    }
+});
 
 // API Routes
 const apiRouter = express.Router();
