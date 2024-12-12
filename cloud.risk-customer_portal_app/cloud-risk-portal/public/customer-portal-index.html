@@ -590,23 +590,23 @@
             })),
             metrics: {
                 customerMedian: {
-                    slaUsage: calculateMedian(customerMetrics.sla_usage),
-                    slaDeviation: calculateMedian(customerMetrics.sla_deviation),
-                    trafficCoef: calculateMedian(customerMetrics.traffic_coef),
-                    usageRisk: calculateMedian(customerMetrics.usage_risk),
-                    serviceSla: calculateMedian(customerMetrics.service_sla_tier1),
-                    annualDowntime: calculateMedian(customerMetrics.annual_downtime)
+                    slaUsage: calculateMedian(customerMetrics.sla_usage) || 0,
+                    slaDeviation: calculateMedian(customerMetrics.sla_deviation) || 0,
+                    trafficCoef: calculateMedian(customerMetrics.traffic_coef) || 0,
+                    usageRisk: calculateMedian(customerMetrics.usage_risk) || 0,
+                    serviceSla: calculateMedian(customerMetrics.service_sla_tier1) || 0,
+                    annualDowntime: calculateMedian(customerMetrics.annual_downtime) || 0
                 },
                 vendorMedians: Object.fromEntries(
                     Object.entries(vendorMetrics).map(([vendor, metrics]) => [
                         vendor,
                         {
-                            slaUsage: calculateMedian(metrics.sla_usage),
-                            slaDeviation: calculateMedian(metrics.sla_deviation),
-                            trafficCoef: calculateMedian(metrics.traffic_coef),
-                            usageRisk: calculateMedian(metrics.usage_risk),
-                            serviceSla: calculateMedian(metrics.service_sla_tier1),
-                            annualDowntime: calculateMedian(metrics.annual_downtime)
+                            slaUsage: calculateMedian(metrics.sla_usage) || 0,
+                            slaDeviation: calculateMedian(metrics.sla_deviation) || 0,
+                            trafficCoef: calculateMedian(metrics.traffic_coef) || 0,
+                            usageRisk: calculateMedian(metrics.usage_risk) || 0,
+                            serviceSla: calculateMedian(metrics.service_sla_tier1) || 0,
+                            annualDowntime: calculateMedian(metrics.annual_downtime) || 0
                         }
                     ])
                 )
@@ -907,7 +907,7 @@
 
         // Calculate estimated credit money back
         let estimatedCreditBack = 0.0;
-        const slaUsage = parseFloat(riskData.service_sla_usage_percentage);
+        const slaUsage = parseFloat(riskData.service_sla_usage_percentage || 0);
         const creditBackPercentage_tier1 = parseFloat(riskData.percentage_service_credit_back_tier1 || 0);
         const creditBackPercentage_tier2 = parseFloat(riskData.percentage_service_credit_back_tier2 || 0);
         const creditBackPercentage_tier3 = parseFloat(riskData.percentage_service_credit_back_tier3 || 0);
