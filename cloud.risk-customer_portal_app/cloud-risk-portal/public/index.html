@@ -7,10 +7,8 @@
     <script>
         // Initialize ENV with default values
         window.ENV = window.ENV || {
-            apiBaseUrl: 'https://api.localhost', // #DEV fallback # nginx.conf
-            //apiBaseUrl: 'https://0.0.0.0:8183', //      
+            apiBaseUrl: 'https://api-cloud-risk.localhost', // #DEV fallback # nginx.conf     
             //apiBaseUrl: 'https://api-cloud-risk.insureyourtech.cloud', // #PROD fallback # nginx.conf
-            //apiBaseUrl: 'https://35.234.146.132:8183', //
             isDevelopment: true, // Add development flag # DEV
             //isDevelopment: false, // Add development flag # PROD 
             //isSSLBypassed: true // Add SSL bypass flag
@@ -310,7 +308,6 @@
             return window.ENV.isDevelopment ? 
                 'https://api.localhost' : // DEV fallback
                 'https://api-cloud-risk.insureyourtech.cloud'; // PROD fallback
-                //'https://35.234.146.132:8183/'; // PROD IP fallback
         }
     }
     
