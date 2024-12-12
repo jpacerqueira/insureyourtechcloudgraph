@@ -1,14 +1,14 @@
 # This code is compatible with Terraform 4.25.0 and versions that are backward compatible to 4.25.0.
 # For information about validating this Terraform code, see https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/google-cloud-platform-build#format-and-validate-the-configuration
 
-resource "google_compute_instance" "instance-20241203-144331" {
+resource "google_compute_instance" "insureyourtech-cloud-20241211-141306" {
   boot_disk {
     auto_delete = true
-    device_name = "instance-20241203-144331"
+    device_name = "insureyourtech-cloud-20241211-141306"
 
     initialize_params {
-      image = "projects/debian-cloud/global/images/debian-12-bookworm-v20241112"
-      size  = 10
+      image = "projects/debian-cloud/global/images/debian-12-bookworm-v20241210"
+      size  = 300
       type  = "pd-balanced"
     }
 
@@ -18,20 +18,14 @@ resource "google_compute_instance" "instance-20241203-144331" {
   can_ip_forward      = true
   deletion_protection = false
   enable_display      = false
-  hostname            = "insureyourtech.cloud.fuelbigdata.env1.vm"
+  hostname            = "insureyourtechcloud.fuelbigdata-test1.com"
 
   labels = {
-    goog-ec-src           = "vm_add-tf"
-    goog-ops-agent-policy = "v2-x86-template-1-3-0"
+    goog-ec-src = "vm_add-tf"
   }
 
-  machine_type = "e2-medium"
-
-  metadata = {
-    enable-osconfig = "TRUE"
-  }
-
-  name = "instance-20241203-144331"
+  machine_type = "e2-standard-2"
+  name         = "insureyourtech-cloud-20241211-141306"
 
   network_interface {
     access_config {
@@ -57,29 +51,10 @@ resource "google_compute_instance" "instance-20241203-144331" {
 
   shielded_instance_config {
     enable_integrity_monitoring = true
-    enable_secure_boot          = true
+    enable_secure_boot          = false
     enable_vtpm                 = true
   }
 
   tags = ["http-server", "https-server", "lb-health-check"]
   zone = "europe-west2-a"
-}
-
-module "ops_agent_policy" {
-  source          = "github.com/terraform-google-modules/terraform-google-cloud-operations/modules/ops-agent-policy"
-  project         = "fuelbigdata-test1"
-  zone            = "europe-west2-a"
-  assignment_id   = "goog-ops-agent-v2-x86-template-1-3-0-europe-west2-a"
-  agents_rule = {
-    package_state = "installed"
-    version = "latest"
-  }
-  instance_filter = {
-    all = false
-    inclusion_labels = [{
-      labels = {
-        goog-ops-agent-policy = "v2-x86-template-1-3-0"
-      }
-    }]
-  }
 }

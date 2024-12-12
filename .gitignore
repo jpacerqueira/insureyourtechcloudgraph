@@ -43,4 +43,6 @@ cloud-services-risk-ratings-api/node-api/certs/server8183.key
 cloud.risk-customer_portal_app/cloud-risk-portal/certs/openssl.cnf
 cloud.risk-customer_portal_app/cloud-risk-portal/certs/server8184.cert
 cloud.risk-customer_portal_app/cloud-risk-portal/certs/server8184.key
-
+cloud-services-risk-ratings-api/certbot-dns-godaddy/letsencrypt/godaddy_credentials.ini
+dns_zerossl/api-cloud-risk.insureyourtech.cloud/
+dns_zerossl/simulation-cloud-risk.insureyourtech.cloud/

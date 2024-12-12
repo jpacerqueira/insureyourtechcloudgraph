@@ -1,0 +1,33 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud Service**
+
+* **Service**: AutoML Translation
+* **Region**: europe-west4, us-central1
+* **Availability Zone**: Not specified
+* **Impact Date**: 2024-08-02 09:30 UTC
+* **Duration**: 8 hours and 6 minutes
+* **Root Cause**: High latency and resource exhausted failures
+* **Downtime Period**: 2024-08-02 09:30 - 2024-08-02 17:36 UTC
+* **Resolved Date**: 2024-08-02 17:36 UTC
+
+Here is the output table:
+
+```
+Cloud Provider, Service, Region, Availability Zone, Impact Date, Duration, Root Cause, Downtime Period, Resolved Date
+Google Cloud, AutoML Translation, europe-west4, Not specified, 2024-08-02 09:30:00 UTC, 8 hours and 6 minutes, High latency and resource exhausted failures, 2024-08-02 09:30:00 - 2024-08-02 17:36:00 UTC, 2024-08-02 17:36:00 UTC
+```
+
+**Summary**
+
+* Cloud Provider: Google Cloud
+* Services impacted: AutoML Translation
+* Regions impacted: europe-west4, us-central1
+* Availability Zones not specified
+* Impact Date: 2024-08-02 09:30 UTC
+* Duration: 8 hours and 6 minutes
+* Root Cause: High latency and resource exhausted failures
+* Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 UTC
+* Resolved Date: 2024-08-02 17:36 UTC
