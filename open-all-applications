@@ -4,7 +4,7 @@ echo "All open in FIREFOX - macos OS X "
 #
 echo "Open Local"
 echo "Cloud Risk - Simulation Website"
-/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox cloud.risk-customer_portal_app/CloudRisk.Simulation.html
+/usr/bin/open -a /Applications/Firefox.app/Contents/MacOS/firefox  cloud.risk-customer_portal_app/gdddy_page/CloudRisk.Simulation-Online.html
 #
 echo "Open Local"
 echo " --> Customer App"

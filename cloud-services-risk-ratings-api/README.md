@@ -28,13 +28,13 @@ The API has the following endpoints:
 To obtain a sample of all services and of all Outages from the Fremium API
 
 ```bash
-admin@Admins-MacBook-Pro insureyourtechcloudgraph %   curl -X GET  http://localhost:8000/cloud-services-risk-ratings/risk-ratings/list/all/services/ > sample_list_all_services_api.json  
+admin@Admins-MacBook-Pro insureyourtechcloudgraph %   curl -X GET https://api-cloud-risk.localhost/cloud-services-risk-ratings/risk-ratings-premium/premium/list/all/services > sample_list_all_services_api.json
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100  320k  100  320k    0     0  17.4M      0 --:--:-- --:--:-- --:--:-- 18.3M
 admin@Admins-MacBook-Pro insureyourtechcloudgraph % 
 
-admin@Admins-MacBook-Pro insureyourtechcloudgraph % curl -X GET http://localhost:8000/cloud-services-risk-ratings/risk-ratings/outages/list/all/ > sample_list_all_outages_api.json       
+admin@Admins-MacBook-Pro insureyourtechcloudgraph % curl -X GET https://api-cloud-risk.localhost/cloud-services-risk-ratings/risk-ratings-premium/premium/outages/list/all  > sample_list_all_outages_api.json       
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100  309k  100  309k    0     0  14.9M      0 --:--:-- --:--:-- --:--:-- 15.1M
