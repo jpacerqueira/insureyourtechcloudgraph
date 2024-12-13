@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CloudRisk.Simulation</title>
     <script>
-        // Initialize ENV with default values
         window.ENV = window.ENV || {
             isSSLBypassed: false
-            //isSSLBypassed: true // Add SSL bypass flag
         };
     </script>
     <style>
@@ -101,13 +99,13 @@
             color: #f1f2f6;
         }
         a {
-            color: #ffffff;  /* Changed from #74b9ff to white */
+            color: #ffffff; 
             text-decoration: none;
             transition: color 0.2s;
         }
         a:hover {
-            color: #e2e2e2;  /* Light grey on hover */
-            text-decoration: underline;  /* Added underline on hover */
+            color: #e2e2e2; 
+            text-decoration: underline; 
         }
         .metrics-grid {
             display: grid;
@@ -173,7 +171,6 @@
 
 <div class="container">
     <h1>Company Details</h1>
-    <!-- Input fields for Company Name and Project Name -->
     <div>
         <label for="companyName">Company Name (required):</label>
         <input type="text" id="companyName" required>
@@ -185,13 +182,11 @@
 
     <h2>Measure your Cloud.Risk via inserting Cloud Vendor, Service, and Region Selection</h2>
 
-    <!-- Buttons to add or remove pairs -->
     <div class="controls">
         <button onclick="addVariablePair()">+</button>
         <button onclick="removeVariablePair()">-</button>
     </div>
 
-    <!-- Container to hold dynamically generated variable pairs -->
     <div id="variableContainer"></div>
 
 </div>
@@ -199,11 +194,8 @@
 <div class="container">
      <h2>Cloud.Risk</h2>
 
-
-    <!-- Button to Submit Selected Values -->
     <button onclick="submitData()">Submit Data</button>
 
-    <!-- Div to Display Submission Result -->
     <div id="result"></div>
 
     
@@ -245,14 +237,11 @@
         "Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud","Salesforce Mulesoft Anypoint Platform"
     ];
 
-    // Add new options for regions
     const optionsForVariable3 = ["global", "us-east-1", "us-east-2", "us-west-1", "us-west-2", "eu-west-1", "eu-west-2", "eu-central-1", "ap-northeast-1", "ap-northeast-2", "ap-southeast-1", "ap-southeast-2", "sa-east-1", "ca-central-1", "ap-south-1", "eu-south-1", "eu-west-3", "eu-north-1", "me-south-1", "af-south-1", "ap-east-1", "ap-northeast-3", "ap-southeast-3", "ap-southeast-4", "ap-northeast-2", "ap-northeast-1", "ap-southeast-2", "ap-southeast-1", "ap-south-1", "ca-central-1", "eu-central-1", "eu-north-1", "eu-south-1", "eu-west-1", "eu-west-2", "eu-west-3", "me-south-1", "sa-east-1", "us-east-1", "us-east-2", "us-west-1", "us-west-2","eu-west-1", "eu-west-2", "eu-west-3", "me-south-1", "sa-east-1"];
 
-    // Update variable tracking
-    let trioCount = 4; // start with 4 trios
-    const maxTrios = 85;
+    let trioCount = 4; 
+    const maxTrios = 100;
 
-    // Function to create dropdown options for a given array of options
     function createDropdownOptions(options) {
         return options.map(option => `<option value="${option}">${option}</option>`).join("");
     }
@@ -533,14 +522,11 @@
             }
         }
 
-        // Update customer metrics display
         updateCustomerMetrics(customerMetrics);
-        
-        // Update vendor metrics display
+
         updateVendorMetrics(vendorMetrics);
     }
 
-    // Helper function to calculate median
     function calculateMedian(values) {
         if (!values.length) return 0;
         const sorted = [...values].sort((a, b) => a - b);
@@ -548,7 +534,6 @@
         return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
     }
 
-    // Helper functions for updating displays
     function updateCustomerMetrics(metrics) {
         document.getElementById("customer-sla-usage").textContent = `${calculateMedian(metrics.sla_usage).toFixed(2)}%`;
         document.getElementById("customer-sla-deviation").textContent = calculateMedian(metrics.sla_deviation).toFixed(2);
@@ -792,14 +777,17 @@
     }
 
     async function fetchOutageData(service) {
+        const API_BASE_URL = await fetchAPIBaseUrl();
         try {
             const fetchOptions = {
                 method: 'GET',
                 headers: {
-                    'Accept': 'application/json'
-                }
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                mode: 'cors'
             };
-
+            
             if (window.ENV.isSSLBypassed) {
                 fetchOptions.rejectUnauthorized = false;
             }
@@ -808,12 +796,43 @@
                  `https://api-cloud-risk.insureyourtech.cloud/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`,
                 fetchOptions
             );
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            if (response.status === 404) {
+                console.warn(`No outage data found for service: ${service}`);
+                const warningHTML = `
+                    <div>
+                        ⚠️ No outage information found for service: ${service}
+                    </div>`;
+                document.getElementById('outageChartContainer').innerHTML += warningHTML;
+                return; 
+            }
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
+            }
+
             const outageData = await response.json();
+            
+            if (!outageData || !Array.isArray(outageData) || outageData.length === 0) {
+                console.warn(`Empty or invalid outage data received for service: ${service}`);
+                const warningHTML = `
+                    <div>
+                        ⚠️ No outage records available for service: ${service}
+                    </div>`;
+                document.getElementById('outageChartContainer').innerHTML += warningHTML;
+                return;
+            }
+
             renderOutageChart(outageData, service);
-            compareMaxExpectedDowntime(service);         
+            const riskData = await fetchCloudRiskData(service, 'global');
+            compareMaxExpectedDowntime(riskData, service);     
+
         } catch (error) {
             console.error(`Error fetching outage data for ${service}:`, error);
+            const errorHTML = `
+                <div style="background-color: #f8d7da; color: #721c24; padding: 10px; margin: 10px 0; border-radius: 4px;">
+                    ❌ Error fetching outage data for ${service}: ${error.message}
+                </div>`;
+            document.getElementById('outageChartContainer').innerHTML += errorHTML;
         }
     }
 
@@ -824,9 +843,9 @@
         outageData.sort((a, b) => new Date(a.outage_timestamp) - new Date(b.outage_timestamp));
 
         const labels = outageData.map(outage => {
-            // Convert Python timestamp to JavaScript Date
+
             const date = new Date(outage.outage_timestamp * 1000);
-            // Format date and combine with source report
+
             return `${new Intl.DateTimeFormat('en-US', {
                 year: 'numeric',
                 month: 'short',
@@ -877,7 +896,6 @@
                             maxRotation: 45,
                             minRotation: 45,
                             callback: function(value, index) {
-                                // Split the label into multiple lines for better readability
                                 const label = this.getLabelForValue(value);
                                 const [date, source] = label.split('\n');
                                 return [date, source];
@@ -963,10 +981,8 @@
             console.error(`Error comparing downtime for ${service}:`, error);
         }
     }
-    // Initialize the variable pairs on page load
     window.onload = initializeVariablePairs;
 </script>
-<!-- Include Chart.js library -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 </body>
 </html>

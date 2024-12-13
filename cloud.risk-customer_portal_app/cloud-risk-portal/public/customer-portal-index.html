@@ -460,12 +460,50 @@
                 `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/outages/service/${encodeURIComponent(service)}`,
                 fetchOptions
             );
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+            // Handle different response status codes
+            if (response.status === 404) {
+                console.warn(`No outage data found for service: ${service}`);
+                // Display warning message in the UI
+                const warningHTML = `
+                    <div style="background-color: #fff3cd; color: #856404; padding: 10px; margin: 10px 0; border-radius: 4px;">
+                        ⚠️ No outage information found for service: ${service}
+                    </div>`;
+                document.getElementById('outageChartContainer').innerHTML += warningHTML;
+                return; // Skip to next record
+            }
+            
+            if (!response.ok) {
+                // Handle other error status codes
+                throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
+            }
+
             const outageData = await response.json();
+            
+            // Check if outageData is empty or invalid
+            if (!outageData || !Array.isArray(outageData) || outageData.length === 0) {
+                console.warn(`Empty or invalid outage data received for service: ${service}`);
+                const warningHTML = `
+                    <div style="background-color: #fff3cd; color: #856404; padding: 10px; margin: 10px 0; border-radius: 4px;">
+                        ⚠️ No outage records available for service: ${service}
+                    </div>`;
+                document.getElementById('outageChartContainer').innerHTML += warningHTML;
+                return;
+            }
+
             renderOutageChart(outageData, service);
-            compareMaxExpectedDowntime(service);         
+            const riskData = await fetchCloudRiskData(service, 'global');
+            compareMaxExpectedDowntime(riskData, service);
+            displayOutageData(service, outageData);         
+
         } catch (error) {
             console.error(`Error fetching outage data for ${service}:`, error);
+            // Display error message in the UI (for non-404 errors)
+            const errorHTML = `
+                <div style="background-color: #f8d7da; color: #721c24; padding: 10px; margin: 10px 0; border-radius: 4px;">
+                    ❌ Error fetching outage data for ${service}: ${error.message}
+                </div>`;
+            document.getElementById('outageChartContainer').innerHTML += errorHTML;
         }
     }
     
@@ -529,19 +567,19 @@
 
     // Add these global declarations
     const customerMetrics = {
-        sla_usage: [],
-        sla_deviation: [],
-        traffic_coef: [],
-        usage_risk: [],
-        service_sla_tier1: [],
-        service_sla_tier2: [],
-        service_sla_tier3: [],
-        service_sla_tier4: [],
-        service_credit_back_tier1: [],
-        service_credit_back_tier2: [],
-        service_credit_back_tier3: [],
-        service_credit_back_tier4: [],
-        annual_downtime: []
+        sla_usage: [0],
+        sla_deviation: [0],
+        traffic_coef: [0],
+        usage_risk: [0],
+        service_sla_tier1: [0],
+        service_sla_tier2: [0],
+        service_sla_tier3: [0],
+        service_sla_tier4: [0],
+        service_credit_back_tier1: [0],
+        service_credit_back_tier2: [0],
+        service_credit_back_tier3: [0],
+        service_credit_back_tier4: [0],
+        annual_downtime: [0]
     };
 
     const vendorMetrics = {};
@@ -773,19 +811,19 @@
 
                     if (!vendorMetrics[vendor]) {
                         vendorMetrics[vendor] = {
-                            sla_usage: [],
-                            sla_deviation: [],
-                            traffic_coef: [],
-                            usage_risk: [],
-                            service_sla_tier1: [],
-                            service_sla_tier2: [],
-                            service_sla_tier3: [],
-                            service_sla_tier4: [],
-                            service_credit_back_tier1: [],
-                            service_credit_back_tier2: [],
-                            service_credit_back_tier3: [],
-                            service_credit_back_tier4: [],
-                            annual_downtime: []
+                            sla_usage: [0],
+                            sla_deviation: [0],
+                            traffic_coef: [0],
+                            usage_risk: [0],
+                            service_sla_tier1: [0],
+                            service_sla_tier2: [0],
+                            service_sla_tier3: [0],
+                            service_sla_tier4: [0],
+                            service_credit_back_tier1: [0],
+                            service_credit_back_tier2: [0],
+                            service_credit_back_tier3: [0],
+                            service_credit_back_tier4: [0],
+                            annual_downtime: [0]
                         };
                     }
                     
@@ -1180,10 +1218,8 @@
     }
 
     // Function to compare max expected downtime with Tier 1 SLA
-    async function compareMaxExpectedDowntime(service) {
+    async function compareMaxExpectedDowntime(riskData,service) {
         try {
-            const riskData = await fetchCloudRiskData(service, 'global');
-
             const maxExpectedDowntimeTier1 = Number(riskData?.expected_annual_service_minutes_down_by_sla_tier1) || 0;
             const actualDowntime = Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0;
             const maxExpectedDowntimeTier2 = Number(riskData?.expected_annual_service_minutes_down_by_sla_tier2) || 0;
