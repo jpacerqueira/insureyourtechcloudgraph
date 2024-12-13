@@ -294,6 +294,7 @@
                     <th>Start Time</th>
                     <th>End Time</th>
                     <th>Duration (minutes)</th>
+                    <th>Downtime Period</th>
                     <th>Root Cause</th>
                     <th>Status</th>
                     <th>Source</th>
@@ -1387,6 +1388,7 @@
                     <td>${outage.start_time ? new Date(outage.start_time).toLocaleString() : 'N/A'}</td>
                     <td>${outage.end_time ? new Date(outage.end_time).toLocaleString() : 'N/A'}</td>
                     <td>${duration.toFixed(2) || '0.00'}</td>
+                    <td>${outage.downtime_period || 'Not specified'}</td>
                     <td>${outage.root_cause || 'Not specified'}</td>
                     <td>${outage.outage_status || 'Unknown'}</td>
                     <td>${outage.source_outage_report || 'Not specified'}</td>
