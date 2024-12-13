@@ -821,27 +821,69 @@
 
     // Function to fetch outage data and render the chart
     async function fetchOutageData(service) {
+        const API_BASE_URL = await fetchAPIBaseUrl();
         try {
             const fetchOptions = {
                 method: 'GET',
                 headers: {
-                    'Accept': 'application/json'
-                }
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                mode: 'cors'
             };
-
+            
+            // Add rejectUnauthorized: false for development environment
             if (window.ENV.isSSLBypassed) {
                 fetchOptions.rejectUnauthorized = false;
             }
 
-            const response = await fetch(`https://api-cloud-risk.localhost/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${service}`,
+            const response = await fetch(
+                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/outages/service/${encodeURIComponent(service)}`,
                 fetchOptions
             );
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+            // Handle different response status codes
+            if (response.status === 404) {
+                console.warn(`No outage data found for service: ${service}`);
+                // Display warning message in the UI
+                const warningHTML = `
+                    <div style="background-color: #fff3cd; color: #856404; padding: 10px; margin: 10px 0; border-radius: 4px;">
+                        ⚠️ No outage information found for service: ${service}
+                    </div>`;
+                document.getElementById('outageChartContainer').innerHTML += warningHTML;
+                return; // Skip to next record
+            }
+            
+            if (!response.ok) {
+                // Handle other error status codes
+                throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
+            }
+
             const outageData = await response.json();
+            
+            // Check if outageData is empty or invalid
+            if (!outageData || !Array.isArray(outageData) || outageData.length === 0) {
+                console.warn(`Empty or invalid outage data received for service: ${service}`);
+                const warningHTML = `
+                    <div style="background-color: #fff3cd; color: #856404; padding: 10px; margin: 10px 0; border-radius: 4px;">
+                        ⚠️ No outage records available for service: ${service}
+                    </div>`;
+                document.getElementById('outageChartContainer').innerHTML += warningHTML;
+                return;
+            }
+
             renderOutageChart(outageData, service);
-            compareMaxExpectedDowntime(service);         
+            const riskData = await fetchCloudRiskData(service, 'global');
+            compareMaxExpectedDowntime(riskData, service);     
+
         } catch (error) {
             console.error(`Error fetching outage data for ${service}:`, error);
+            // Display error message in the UI (for non-404 errors)
+            const errorHTML = `
+                <div style="background-color: #f8d7da; color: #721c24; padding: 10px; margin: 10px 0; border-radius: 4px;">
+                    ❌ Error fetching outage data for ${service}: ${error.message}
+                </div>`;
+            document.getElementById('outageChartContainer').innerHTML += errorHTML;
         }
     }
 
