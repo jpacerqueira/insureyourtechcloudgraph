@@ -15,6 +15,11 @@ RUN pip install --upgrade -r requirements.txt
 
 COPY CustomerPortal_app.py .
 
+# Copy certs
+# Copy certs and set permissions
+COPY certs ./certs
+RUN chmod 600 /app/certs/server8183.key /app/certs/server8183.cert
+
 EXPOSE 8185
 
 HEALTHCHECK CMD curl --fail http://localhost:8185/_stcore/health

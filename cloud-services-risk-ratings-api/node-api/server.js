@@ -39,7 +39,7 @@ app.use(cors({
 }));
 
 // API Routes
-app.use('/cloud-services-risk-ratings/risk-ratings', riskRatingsRouter);
+app.use('/cloud-services-risk-ratings/risk-ratings-premium', riskRatingsRouter);
 app.use('/cloud-services-risk-ratings/risk-ratings-freemium', freemiumRiskRatingsRouter);
 
 //app.listen(PORT, function () {

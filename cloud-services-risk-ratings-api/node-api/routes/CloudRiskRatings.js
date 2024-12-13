@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require('../config/db');
 
 // Get all risk ratings
-router.get('/list/all/services', async function (req, res) {
+router.get('/premium/list/all/services', async function (req, res) {
     let connection;
     try {
         connection = await db.connect();
@@ -30,7 +30,7 @@ router.get('/list/all/services', async function (req, res) {
 });
 
 // Get a specific risk rating by ID
-router.get('/fetch/service/id/:id', async function (req, res, next) {
+router.get('/premium/fetch/service/id/:id', async function (req, res, next) {
     let connection;
     try {
         connection = await db.connect();
@@ -58,7 +58,7 @@ router.get('/fetch/service/id/:id', async function (req, res, next) {
 });
 
 // Get a specific risk rating by service_provider
-router.get('/fetch/service/service_provider/:service_provider', async function (req, res, next) {
+router.get('/premium/fetch/service/service_provider/:service_provider', async function (req, res, next) {
     let connection;
     try {
         connection = await db.connect();
@@ -86,7 +86,7 @@ router.get('/fetch/service/service_provider/:service_provider', async function (
 });
 
 // Get a specific risk rating by service_name
-router.get('/fetch/service/service_name/:service_name', async function (req, res, next) {
+router.get('/premium/fetch/service/service_name/:service_name', async function (req, res, next) {
     let connection;
     try {
         connection = await db.connect();
@@ -114,7 +114,7 @@ router.get('/fetch/service/service_name/:service_name', async function (req, res
 });
 
 // Get a specific risk rating by service_name and global_or_by_regions
-router.get('/fetch/service/service_name/:service_name/global_or_by_regions/:global_or_by_regions', async function (req, res, next) {
+router.get('/premium/fetch/service/service_name/:service_name/global_or_by_regions/:global_or_by_regions', async function (req, res, next) {
     let connection;
     try {
         connection = await db.connect();
@@ -147,7 +147,7 @@ router.get('/fetch/service/service_name/:service_name/global_or_by_regions/:glob
 });
 
 // Get all outage reports
-router.get('/outages/list/all', async function (req, res) {
+router.get('/premium/outages/list/all', async function (req, res) {
     let connection;
     try {
         connection = await db.connect();
@@ -173,7 +173,7 @@ router.get('/outages/list/all', async function (req, res) {
 });
 
 // Get outage reports by cloud provider
-router.get('/outages/provider/:provider', async function (req, res) {
+router.get('/premium/outages/provider/:provider', async function (req, res) {
     let connection;
     try {
         connection = await db.connect();
@@ -202,7 +202,7 @@ router.get('/outages/provider/:provider', async function (req, res) {
 });
 
 // Get outage reports by service
-router.get('/outages/service/:service', async function (req, res) {
+router.get('/premium/outages/service/:service', async function (req, res) {
     let connection;
     try {
         connection = await db.connect();
@@ -231,7 +231,7 @@ router.get('/outages/service/:service', async function (req, res) {
 });
 
 // Get outage reports by region
-router.get('/outages/region/:region', async function (req, res) {
+router.get('/premium/outages/region/:region', async function (req, res) {
     let connection;
     try {
         connection = await db.connect();

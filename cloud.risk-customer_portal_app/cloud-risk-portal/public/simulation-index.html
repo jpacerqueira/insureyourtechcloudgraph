@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud.Risk.Graph - Customer Portal</title>
+    <title>Cloud.Risk - Simulation</title>
+    <link rel="icon" type="image/x-icon" href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://insureyourtech.cloud&size=18">
     <script>
         // Initialize ENV with default values
         window.ENV = window.ENV || {
-            //apiBaseUrl: 'https://api-cloud-risk.localhost', // #DEV fallback # nginx.conf     
-            apiBaseUrl: 'https://api-cloud-risk.insureyourtech.cloud', // #PROD fallback # nginx.conf
-            //isDevelopment: true, // Add development flag # DEV
-            isDevelopment: false, // Add development flag # PROD 
+            apiBaseUrl: 'https://api-cloud-risk.localhost', // #DEV fallback # nginx.conf     
+            //apiBaseUrl: 'https://api-cloud-risk.insureyourtech.cloud', // #PROD fallback # nginx.conf
+            appBaseUrl: 'https://customer-cloud-risk.localhost', // #DEV fallback # nginx.conf
+            //appBaseUrl: 'https://customer-cloud-risk.insureyourtech.cloud', // #PROD fallback # nginx.conf
+            isDevelopment: true, // Add development flag # DEV
+            //isDevelopment: false, // Add development flag # PROD 
             //isSSLBypassed: true // Add SSL bypass flag
             isSSLBypassed: false // Add SSL bypass flag
         };
@@ -261,8 +264,8 @@
     const optionsForVariable3 = ["global", "us-east-1", "us-east-2", "us-west-1", "us-west-2", "eu-west-1", "eu-west-2", "eu-central-1", "ap-northeast-1", "ap-northeast-2", "ap-southeast-1", "ap-southeast-2", "sa-east-1", "ca-central-1", "ap-south-1", "eu-south-1", "eu-west-3", "eu-north-1", "me-south-1", "af-south-1", "ap-east-1", "ap-northeast-3", "ap-southeast-3", "ap-southeast-4", "ap-northeast-2", "ap-northeast-1", "ap-southeast-2", "ap-southeast-1", "ap-south-1", "ca-central-1", "eu-central-1", "eu-north-1", "eu-south-1", "eu-west-1", "eu-west-2", "eu-west-3", "me-south-1", "sa-east-1", "us-east-1", "us-east-2", "us-west-1", "us-west-2","eu-west-1", "eu-west-2", "eu-west-3", "me-south-1", "sa-east-1"];
 
     // Update variable tracking
-    let trioCount = 4; // start with 4 trios
-    const maxTrios = 85;
+    let trioCount = 2; // start with 2 trios
+    const maxTrios = 100;
 
     // Function to create dropdown options for a given array of options
     function createDropdownOptions(options) {
@@ -293,12 +296,28 @@
         }
     }
 
+    // Access the environment variables from the global ENV object
+    async function fetchAPPBaseUrl() {
+        try {
+            if (!window.ENV || !window.ENV.appBaseUrl) {
+                const response = await fetch('/customer-portal/api/options');
+                const data = await response.json();
+                return data.appBaseUrl;
+            }
+            return window.ENV.appBaseUrl;
+        } catch (error) {
+            console.error('Error accessing API base URL:', error);
+            return window.ENV.isDevelopment ? 
+                'https://customer-cloud-risk.localhost' : // DEV fallback
+                'https://customer-cloud-risk.insureyourtech.cloud'; // PROD fallback
+        }
+    }
 
     // Access the environment variables from the global ENV object
     async function fetchAPIBaseUrl() {
         try {
             if (!window.ENV || !window.ENV.apiBaseUrl) {
-                const response = await fetch('/simulation/customer-portal/api/get/env');
+                const response = await fetch('/customer-portal/api/get/env');
                 const data = await response.json();
                 return data.apiBaseUrl;
             }
@@ -306,7 +325,7 @@
         } catch (error) {
             console.error('Error accessing API base URL:', error);
             return window.ENV.isDevelopment ? 
-                'https://api.localhost' : // DEV fallback
+                'https://api-cloud-risk.localhost' : // DEV fallback
                 'https://api-cloud-risk.insureyourtech.cloud'; // PROD fallback
         }
     }
@@ -737,7 +756,7 @@
 
         // Calculate estimated credit money back
         let estimatedCreditBack = 0.0;
-        const slaUsage = parseFloat(riskData.service_sla_usage_percentage);
+        const slaUsage = parseFloat(riskData.service_sla_usage_percentage || 0);
         const creditBackPercentage_tier1 = parseFloat(riskData.percentage_service_credit_back_tier1 || 0);
         const creditBackPercentage_tier2 = parseFloat(riskData.percentage_service_credit_back_tier2 || 0);
         const creditBackPercentage_tier3 = parseFloat(riskData.percentage_service_credit_back_tier3 || 0);
