@@ -1,0 +1,57 @@
+After analyzing the text, I found that only Microsoft Azure was mentioned as a Cloud Provider experiencing an outage.
+
+Here is the breakdown of the outage per service impacted:
+
+**Microsoft Azure**
+
+* Service: Azur e Front Door
+* Region: East US
+* Availability Zone: Not specified
+* Impact Date: 2021-07-12 14:55 UTC
+* Duration: 5 hours and 55 minutes
+* Root Cause: Periodic background task executed on site led to the disruption of services.
+* Downtime Period: 21:20 UTC - 21:28 UTC (8 minutes)
+* Resolved Date: 2021-07-12 21:28 UTC
+
+**Microsoft Azure**
+
+* Service: Azur e CDN Standard
+* Region: East US
+* Availability Zone: Not specified
+* Impact Date: 2021-07-12 14:55 UTC
+* Duration: 5 hours and 55 minutes
+* Root Cause: Periodic background task executed on site led to the disruption of services.
+* Downtime Period: 21:20 UTC - 21:28 UTC (8 minutes)
+* Resolved Date: 2021-07-12 21:28 UTC
+
+**Microsoft Azure**
+
+* Service: Windows Virtual Desktop
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2021-07-12 14:55 UTC
+* Duration: Not specified
+* Root Cause: Connection failures when attempting to access remote applications and resources.
+* Downtime Period: Not specified
+* Resolved Date: Not specified
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | Azur e Front Door | eastus |  | 2021-07-12 14:55 UTC | 5 hours and 55 minutes | Periodic background task executed on site led to the disruption of services. | 21:20 UTC - 21:28 UTC | 2021-07-12 21:28 UTC |
+| Microsoft Azure | Azur e CDN Standard | eastus |  | 2021-07-12 14:55 UTC | 5 hours and 55 minutes | Periodic background task executed on site led to the disruption of services. | 21:20 UTC - 21:28 UTC | 2021-07-12 21:28 UTC |
+| Microsoft Azure | Windows Virtual Desktop |  |  | 2021-07-12 14:55 UTC | Not specified | Connection failures when attempting to access remote applications and resources. | Not specified | Not specified |
+
+Here is the overall summary:
+
+* Cloud Provider: Microsoft Azure
+* Services impacted: Azur e Front Door, Azur e CDN Standard, Windows Virtual Desktop
+* Regions impacted: eastus
+* Availability zones impacted: Not specified
+* Impact dates: 2021-07-12 14:55 UTC
+* Duration of outage: 5 hours and 55 minutes
+* Root cause: Periodic background task executed on site led to the disruption of services.
+* Downtime period: 8 minutes
+
+Note that the duration of the Windows Virtual Desktop outage is not specified in the original text.
