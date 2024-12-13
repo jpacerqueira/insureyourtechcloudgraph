@@ -2,10 +2,10 @@ services:
 
   customer_portal_app:
     build:
-      context: .
+      context: ./customer-portal-app
       dockerfile: CustomerPortal_app.Dockerfile
     env_file:
-      - .env
+      - ./customer-portal-app/.env
     environment:
       - NEO4J_CLIENT_URI=${NEO4J_CLIENT_URI-bolt://host.docker.internal:17687}
       - NEO4J_PASSWORD=${NEO4J_PASSWORD-password}
@@ -24,8 +24,10 @@ services:
       - "host.docker.internal:host-gateway" #"host.docker.internal:172.17.0.1"
     ports:
       - 8185:8185
+    working_dir: /app
     volumes:
-      - ./neo4j_customer_submission:/app/neo4j_customer_submission
+      - ./customer-portal-app/neo4j_customer_submission:/app/neo4j_customer_submission
+      - ./customer-portal-app/certs:/app/certs
 
   customer_graph:
     image: neo4j:5.25.1-community
@@ -56,9 +58,9 @@ services:
       - 8184:8184 
     depends_on:
       - customer_graph
-    volumes:
-      - ./cloud-risk-portal:/cloud-risk-portal
     working_dir: /app
+    volumes:
+      - ./cloud-risk-portal/neo4j_customer_submission:/app/neo4j_customer_submission
     networks:
       - cloud-services-risk-ratings-api_backend # backend
     command: "npm start" # You can modify this if you're using a custom start script

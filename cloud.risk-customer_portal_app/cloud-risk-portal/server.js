@@ -21,6 +21,132 @@ var options = {
 
 const isProd = process.env.IS_PROD === "true";
 
+// Cloud Providers List (optionsForVariable1)
+const cloudProviders = [
+    "Amazon AWS", 
+    "Google Cloud GCP", 
+    "Microsoft Azure", 
+    "IBM Cloud", 
+    "Oracle Cloud OCI", 
+    "Snowflake", 
+    "Databricks", 
+    "Salesforce", 
+    "MongoDB", 
+    "Cloudflare", 
+    "Akamai"
+]
+
+ // Cloud Services List
+ const cloudServices = {
+    "Amazon AWS": ["Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon Route 53","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon Kinesis","Amazon DataZone",
+        "Amazon DocumentDB","Amazon DynamoDB","Amazon AWS RDS","Amazon AWS Aurora Serverles","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
+        "Amazon Elastic File System","Amazon Elastic Block Store","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
+        "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
+        "Amazon AWS Step Functions","Amazon Redshift","Amazon AWS Glue","Amazon Simple Queue Service SQS","Amazon s3","Amazon Elastic Kubernetes Service"],
+    "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Machine Learning","Google Cloud Apigee API","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL","Google Cloud SQL",
+        "Google Cloud Bigtable","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud DataStudio","Google Cloud Datalab","Google Cloud Composer","Google Cloud Looker Studio Pro","Google Cloud reCAPTCHA Enterprise",
+        "Google Cloud Load Balancing","Google Cloud And Media CDN","Google Cloud DNS","Google Kubernetes Engine (GKE)"],
+    "Microsoft Azure": ["Azure Active Directory AAD","Microsoft Entra ID","Azure Active Directory B2C",
+                        "Azure Machine Learning","Azure AI","Azure AI Search","Azure OpenAI Service","Azure API Management","Azure Databricks",
+                        "Azure SQL Managed Instance","Azure SQL Database","Azure Cosmos DB","Azure Database for PostgreSQL","Azure Database for MySQL",
+                        "Azure Batch","Azure App Service","Azure Functions","Azure PowerBI","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)"],
+    "IBM Cloud": ["IBM Watson Platform","IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
+        "IBM Databases","IBM Databases for DataStax","IBM Databases for EDB",
+        "IBM Databases for Elasticsearch","IBM Databases for etcd","IBM Databases for MongoDB",
+        "IBM Databases for MySQL","IBM Databases for PostgreSQL","IBM Databases for Redis",
+        "IBM DataStage","IBM Db2","IBM Db2 Warehouse","IBM watsonx BI Assistant",
+        "IBM Managed Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Kubernetes",
+        "Red Hat OpenShift on IBM Cloud"],
+    "Oracle Cloud OCI": ["Oracle Cloud Infrastructure Virtual Cloud Network (VCN)","Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)"],
+    "Snowflake": ["Snowflake on AWS","Snowflake on Azure","Snowflake on GCP"],
+    "Databricks": ["Databricks SaaS","Databricks Workspace", "Databricks Mlflow", "Databricks Notebooks"],
+    "Salesforce": ["Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud","Salesforce Mulesoft Anypoint Platform"],
+    "MongoDB": [ "MongoDB Atlas","MongoDB Atlas AWS","MongoDB Atlas Azure","MongoDB Atlas GCP","MongoDB Atlas Search","MongoDB Atlas Vector Search","MongoDB Atlas Stream Processing","MongoDB Atlas BI Connector","MongoDB Atlas SQL"],
+    "Cloudflare": ["AnyCast CloudFlare","CDN CloudFlare", "Cloudflare DNS", "Cloudflare DDoS Protection"],
+    "Akamai": ["CDN Akamai", "Edge Computing Akamai", "Security Akamai"],
+    "Macrometa": ["CDN Macrometa", "Edge Computing Macrometa"]
+}
+
+// Cloud Regions List by Provider
+const cloudRegions = {
+    "global": ["global"],
+    "Amazon AWS": [
+        "us-east-1", "us-east-2", "us-west-1", "us-west-2",
+        "eu-west-1", "eu-west-2", "eu-west-3", "eu-central-1", "eu-south-1", "eu-north-1",
+        "ap-northeast-1", "ap-northeast-2", "ap-northeast-3", "ap-southeast-1", "ap-southeast-2", "ap-southeast-3", "ap-southeast-4",
+        "ap-south-1", "ap-east-1",
+        "sa-east-1",
+        "ca-central-1",
+        "me-south-1",
+        "af-south-1"
+    ],
+    "Google Cloud GCP": [
+        "us-central1", "us-east1", "us-east4", "us-west1", "us-west2", "us-west3", "us-west4",
+        "europe-west1", "europe-west2", "europe-west3", "europe-west4", "europe-west6", "europe-north1",
+        "asia-east1", "asia-east2", "asia-northeast1", "asia-northeast2", "asia-northeast3",
+        "asia-southeast1", "asia-southeast2", "asia-south1", "asia-south2",
+        "australia-southeast1", "australia-southeast2",
+        "southamerica-east1", "southamerica-west1",
+        "northamerica-northeast1", "northamerica-northeast2"
+    ],
+    "Microsoft Azure": [
+        "eastus", "eastus2", "centralus", "northcentralus", "southcentralus", "westus", "westus2", "westus3",
+        "westeurope", "northeurope", "uksouth", "ukwest", "francecentral", "francesouth",
+        "germanynorth", "germanywestcentral", "switzerlandnorth", "switzerlandwest", "norwayeast", "norwaywest",
+        "eastasia", "southeastasia", "japaneast", "japanwest", "australiaeast", "australiasoutheast",
+        "centralindia", "southindia", "westindia",
+        "brazilsouth", "brazilsoutheast",
+        "canadacentral", "canadaeast",
+        "southafricanorth", "southafricawest",
+        "uaenorth", "uaecentral"
+    ],
+    "IBM Cloud": [
+        "us-south", "us-east", "us-north", "us-west",
+        "eu-gb", "eu-de", "eu-fr2",
+        "au-syd",
+        "jp-tok", "jp-osa",
+        "ca-tor",
+        "br-sao"
+    ],
+    "Oracle Cloud OCI": [
+        "us-ashburn-1", "us-phoenix-1", "us-sanjose-1",
+        "eu-frankfurt-1", "eu-zurich-1", "eu-amsterdam-1", "uk-london-1",
+        "ap-tokyo-1", "ap-seoul-1", "ap-chuncheon-1", "ap-singapore-1", "ap-mumbai-1", "ap-hyderabad-1",
+        "me-jeddah-1", "me-dubai-1",
+        "sa-saopaulo-1", "sa-vinhedo-1",
+        "ca-montreal-1", "ca-toronto-1",
+        "af-johannesburg-1"
+    ],
+    "Other": ["global-network"] // For Akamai, Cloudflare, etc.
+};
+
+// Flatten regions for backward compatibility if needed
+const allCloudRegions = ["global", ...new Set(Object.values(cloudRegions).flat())];
+
+// Create optionsForVariable2 dynamically from cloudServices
+const optionsForVariable2 = [];
+cloudProviders.forEach(provider => {
+    if (cloudServices[provider]) {
+        cloudServices[provider].forEach(service => {
+            if (!optionsForVariable2.includes(service)) {
+                optionsForVariable2.push(service);
+            }
+        });
+    }
+});
+
+// Create optionsForVariable3 dynamically from cloudRegions
+const optionsForVariable3 = [];
+cloudProviders.forEach(provider => {
+    if (cloudRegions[provider]) {
+        cloudRegions[provider].forEach(region => {
+            if (!optionsForVariable3.includes(region)) {
+                optionsForVariable3.push(region);
+            }
+        });
+    }
+});
+
 // Middleware
 app.use(express.json());
 app.use(express.static('public'));
@@ -58,13 +184,15 @@ const initNeo4jConnection = async () => {
 function generateCypherQuery(data) {
     const { companyName, projectName, services, metrics } = data;
     let cypher = '';
+    const processedVendors = new Set();
+    const processedServices = new Set();
 
     // Sanitize company name for Cypher
     const companyId = companyName.replace(/[^a-zA-Z0-9]/g, '_');
 
     // Create customer node with all metrics
     cypher += `
-CREATE (cust_${companyId}:CUSTOMER_NAME {
+CREATE (cust_sessionid__name_${companyId}:CUSTOMER_NAME {
     name: '${companyName}',
     project_name: '${projectName}',
     median_sla_usage_percentage: '${metrics.customerMedian.slaUsage}%',
@@ -74,15 +202,44 @@ CREATE (cust_${companyId}:CUSTOMER_NAME {
     median_service_sla: '${metrics.customerMedian.serviceSla}%',
     median_annual_downtime: '${metrics.customerMedian.annualDowntime}',
     submission_date: '${new Date().toISOString()}'
-})
-`;
+})`;
 
     // Add vendor and service nodes with complete metrics
     services.forEach(service => {
+        // Validate that the vendor exists in cloudProviders
+        if (!cloudProviders.includes(service.vendor)) {
+            console.warn(`Invalid vendor: ${service.vendor}`);
+            return;
+        }
+
+        // Validate that the service exists in cloudServices for this vendor
+        if (!cloudServices[service.vendor]?.includes(service.name)) {
+            console.warn(`Invalid service ${service.name} for vendor ${service.vendor}`);
+            return;
+        }
+
         const serviceId = service.name.replace(/[^a-zA-Z0-9]/g, '_');
         const vendorId = service.vendor.replace(/[^a-zA-Z0-9]/g, '_');
 
-        cypher += `
+        // Only create vendor node if not already processed
+        if (!processedVendors.has(vendorId)) {
+            processedVendors.add(vendorId);
+            cypher += `
+CREATE (${vendorId}:TECHNOLOGY_PROVIDER {
+    name: '${service.vendor}',
+    vendor_median_sla_usage_percentage: '${metrics.vendorMedians[service.vendor].slaUsage}%',
+    vendor_median_sla_deviation_risk: '${metrics.vendorMedians[service.vendor].slaDeviation}',
+    vendor_median_traffic_coefficient: '${metrics.vendorMedians[service.vendor].trafficCoef}%',
+    vendor_median_usage_risk: '${metrics.vendorMedians[service.vendor].usageRisk}',
+    vendor_median_service_sla: '${metrics.vendorMedians[service.vendor].serviceSla}%',
+    vendor_median_annual_downtime: '${metrics.vendorMedians[service.vendor].annualDowntime}'
+})`;
+        }
+
+        // Only create service node if not already processed
+        if (!processedServices.has(serviceId)) {
+            processedServices.add(serviceId);
+            cypher += `
 CREATE (${serviceId}:TECHNOLOGY_SERVICE {
     name: '${service.name}',
     region: '${service.region}',
@@ -94,19 +251,12 @@ CREATE (${serviceId}:TECHNOLOGY_SERVICE {
     annual_downtime_minutes: '${service.metrics.annualDowntime}',
     service_sla_tier1: '${service.metrics.serviceSla}%',
     service_credit_back_tier1: '${service.metrics.creditBack}%'
-})
+})`;
+        }
 
-CREATE (${vendorId}:TECHNOLOGY_PROVIDER {
-    name: '${service.vendor}',
-    vendor_median_sla_usage_percentage: '${metrics.vendorMedians[service.vendor].slaUsage}%',
-    vendor_median_sla_deviation_risk: '${metrics.vendorMedians[service.vendor].slaDeviation}',
-    vendor_median_traffic_coefficient: '${metrics.vendorMedians[service.vendor].trafficCoef}%',
-    vendor_median_usage_risk: '${metrics.vendorMedians[service.vendor].usageRisk}',
-    vendor_median_service_sla: '${metrics.vendorMedians[service.vendor].serviceSla}%',
-    vendor_median_annual_downtime: '${metrics.vendorMedians[service.vendor].annualDowntime}'
-})
-
-CREATE (cust_${companyId})-[:CUSTOMER_USES_SERVICE {
+        // Create relationships
+        cypher += `
+CREATE (cust_sessionid__name_${companyId})-[:CUSTOMER_USES_SERVICE {
     monthly_cost: ${service.monthlyCost},
     region: '${service.region}'
 }]->(${serviceId})
@@ -116,8 +266,7 @@ CREATE (${vendorId})-[:CONNECTED_RISK {
     sla_deviation_risk: '${service.metrics.slaDeviation}',
     traffic_coefficient: '${service.metrics.trafficCoef}%',
     usage_risk: '${service.metrics.usageRisk}'
-}]->(${serviceId})
-`;
+}]->(${serviceId})`;
     });
 
     return cypher;
@@ -129,7 +278,7 @@ app.use(session({
     secret: 'your-secret-key',
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: isProd }
+    cookie: { secure: isProd , sameSite: 'Strict'}
 }));
 
 // Function to delete previous Neo4j data
@@ -138,8 +287,9 @@ async function deletePreviousNeo4jData(sessionId) {
     if (driver) {
         const session = driver.session();
         try {
+            const sanitizedSessionId = sessionId.replace(/[^a-zA-Z0-9]/g, '_');
             const deleteQuery = `
-                MATCH (c:CUSTOMER_NAME {session_id: '${sessionId}'})-[r:CUSTOMER_USES_SERVICE]->(s:TECHNOLOGY_SERVICE)
+                MATCH (c:CUSTOMER_NAME {session_id: '${sanitizedSessionId}'})-[r:CUSTOMER_USES_SERVICE]->(s:TECHNOLOGY_SERVICE)
                 DETACH DELETE c, r, s
             `;
             await session.run(deleteQuery);
@@ -159,6 +309,9 @@ function saveNeo4jQuery(data, sessionId) {
     const filename = `Cloud.Risk.graph_${data.companyName.replace(/[^a-zA-Z0-9]/g, '_')}_${timestamp}.cypher`;
     const fullPath = path.join(outputDir, filename);
 
+    // Sanitize sessionId for Neo4j
+    const sanitizedSessionId = sessionId.replace(/[^a-zA-Z0-9]/g, '_');
+
     // Create directory if it doesn't exist
     if (!fs.existsSync(outputDir)) {
         fs.mkdirSync(outputDir, { recursive: true });
@@ -167,9 +320,8 @@ function saveNeo4jQuery(data, sessionId) {
     // Generate Cypher query
     let cypher = generateCypherQuery(data);
 
-    // Add session ID to customer node
-    cypher = cypher.replace('CREATE (cust_', `CREATE (cust_${sessionId}_`);
-    cypher = cypher.replace('CREATE (cust_', `CREATE (cust_${sessionId}_`);
+    // Add sanitized session ID to customer node
+    cypher = cypher.replace(/CREATE \(cust_sessionid__/g, `CREATE (cust_sessionid_${sanitizedSessionId}_`);
 
     // Write to file
     fs.writeFileSync(fullPath, cypher);
@@ -222,6 +374,7 @@ const apiRouter = express.Router();
 app.get('/simulation/', (req, res) => {
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
+        appBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL,
         isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
         isDevelopment: process.env.IS_PROD !== "true" ? true : false
     };
@@ -244,6 +397,7 @@ app.get('/simulation/', (req, res) => {
 app.get('/customer-portal/', (req, res) => {
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
+        appBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL,
         isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
         isDevelopment: process.env.IS_PROD !== "true" ? true : false
     };
@@ -262,8 +416,8 @@ app.get('/customer-portal/', (req, res) => {
     res.send(html);
 });
 
-
-apiRouter.get('/simulation/customer-portal/api/get/env', async (req, res) => {
+// Cloud Risk Data API
+apiRouter.get('/customer-portal/api/get/env', async (req, res) => {
     try {
         const apiBaseUrl = process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL;
         res.status(200).json({ apiBaseUrl: apiBaseUrl });
@@ -271,7 +425,19 @@ apiRouter.get('/simulation/customer-portal/api/get/env', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-// Cloud Risk Data API
+
+// Add new endpoint to serve options
+app.get('/customer-portal/api/options', (req, res) => {
+    res.json({
+        cloudProviders,
+        cloudServices,
+        cloudRegions,
+        optionsForVariable1: cloudProviders,
+        optionsForVariable2: cloudServices,
+        optionsForVariable3: cloudRegions
+    });
+});
+
 
 // Start server
 if (isProd) {
@@ -280,4 +446,37 @@ if (isProd) {
     https.createServer(options, app).listen(port);
 } else {
     http.createServer(app).listen(port);
+}
+
+function updateOptionsForProvider(vendorSelect, serviceSelect, regionSelect) {
+    const selectedVendor = vendorSelect.value;
+    
+    // Update services
+    serviceSelect.innerHTML = '<option value="">Select a Service</option>';
+    if (selectedVendor && cloudServices[selectedVendor]) {
+        cloudServices[selectedVendor].forEach(service => {
+            const option = document.createElement('option');
+            option.value = service;
+            option.textContent = service;
+            serviceSelect.appendChild(option);
+        });
+    }
+    
+    // Update regions
+    regionSelect.innerHTML = '<option value="">Select a Region</option>';
+    if (selectedVendor && cloudRegions[selectedVendor]) {
+        // Always add global option first
+        const globalOption = document.createElement('option');
+        globalOption.value = 'global';
+        globalOption.textContent = 'global';
+        regionSelect.appendChild(globalOption);
+        
+        // Add provider-specific regions
+        cloudRegions[selectedVendor].forEach(region => {
+            const option = document.createElement('option');
+            option.value = region;
+            option.textContent = region;
+            regionSelect.appendChild(option);
+        });
+    }
 }

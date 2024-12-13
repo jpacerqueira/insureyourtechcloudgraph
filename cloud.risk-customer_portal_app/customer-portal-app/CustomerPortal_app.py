@@ -6,6 +6,10 @@ import re
 import time
 import pandas as pd
 import plotly.graph_objects as go
+import ssl
+import certifi
+from urllib3 import poolmanager
+import requests.adapters
 
 import streamlit as st
 from neo4j import GraphDatabase
@@ -53,22 +57,70 @@ def fetch_nodes_by_label(driver, label):
         result = session.run(query)
         return [record["n"] for record in result]
 
-# Add new API endpoint function
+# Add this class for SSL adapter
+class SSLAdapter(requests.adapters.HTTPAdapter):
+    def __init__(self, ssl_cert_file=None, ssl_key_file=None):
+        self.ssl_cert_file = ssl_cert_file
+        self.ssl_key_file = ssl_key_file
+        super().__init__()
+
+    def init_poolmanager(self, connections, maxsize, block=False):
+        context = ssl.create_default_context()
+        context.check_hostname = False
+        context.verify_mode = ssl.CERT_NONE  # Disable certificate verification
+        
+        if self.ssl_cert_file and self.ssl_key_file:
+            try:
+                context.load_cert_chain(certfile=self.ssl_cert_file, keyfile=self.ssl_key_file)
+            except Exception as e:
+                st.warning(f"Failed to load SSL certificates: {str(e)}")
+        
+        self.poolmanager = poolmanager.PoolManager(
+            num_pools=connections,
+            maxsize=maxsize,
+            block=block,
+            ssl_context=context
+        )
+
+# Add this function to create an SSL-enabled session
+def create_ssl_session():
+    session = requests.Session()
+    try:
+        adapter = SSLAdapter(
+            ssl_cert_file='./certs/server8183.cert',
+            ssl_key_file='./certs/server8183.key'
+        )
+    except Exception as e:
+        st.warning(f"Using SSL adapter without certificates: {str(e)}")
+        adapter = SSLAdapter()  # Fallback without certificates
+    
+    session.mount('https://', adapter)
+    session.verify = False  # Disable SSL verification
+    
+    # Suppress SSL warnings
+    import urllib3
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    
+    return session
+
+# Modify the fetch_cloud_risk_data function
 def fetch_cloud_risk_data(service_name, region_type):
     try:
-        api_url = f"http://node-api:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/{service_name}/global_or_by_regions/{region_type}"
-        response = requests.get(api_url)
+        session = create_ssl_session()
+        api_url = f"https://node-api:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/{service_name}/global_or_by_regions/{region_type}"
+        response = session.get(api_url)
         response.raise_for_status()
         return response.json()
     except requests.RequestException as e:
         st.error(f"Error fetching cloud risk data: {str(e)}")
         return None
 
-# New function to fetch outage data for a specific service
+# Modify the fetch_outage_data function
 def fetch_outage_data(service):
     try:
-        api_url = f"http://node-api:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/{service}"
-        response = requests.get(api_url)
+        session = create_ssl_session()
+        api_url = f"https://node-api:8183/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/{service}"
+        response = session.get(api_url)
         if response.status_code == 404:
             st.info(f"Outage not found in database for {service}")
             return None
@@ -662,3 +714,19 @@ def after_request(response):
     response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
     response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
     return response
+
+def check_ssl_certificates():
+    cert_files = ['server8183.key', 'server8183.cert']
+    cert_path = './certs/'
+    
+    for cert_file in cert_files:
+        full_path = os.path.join(cert_path, cert_file)
+        if not os.path.exists(full_path):
+            st.error(f"SSL certificate file missing: {full_path}")
+            return False
+    return True
+
+# Add this check before making API calls
+if not check_ssl_certificates():
+    st.error("SSL certificates are missing. Please ensure all required certificates are present in ./app/certs/")
+    st.stop()

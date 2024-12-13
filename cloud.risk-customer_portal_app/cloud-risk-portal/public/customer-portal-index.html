@@ -10,6 +10,8 @@
         window.ENV = window.ENV || {
             apiBaseUrl: 'https://api-cloud-risk.localhost', // #DEV fallback # nginx.conf     
             //apiBaseUrl: 'https://api-cloud-risk.insureyourtech.cloud', // #PROD fallback # nginx.conf
+            appBaseUrl: 'https://customer-cloud-risk.localhost', // #DEV fallback # nginx.conf
+            //appBaseUrl: 'https://customer-cloud-risk.insureyourtech.cloud', // #PROD fallback # nginx.conf
             isDevelopment: true, // Add development flag # DEV
             //isDevelopment: false, // Add development flag # PROD 
             //isSSLBypassed: true // Add SSL bypass flag
@@ -370,12 +372,28 @@
         }
     }
 
+    // Access the environment variables from the global ENV object
+    async function fetchAPPBaseUrl() {
+        try {
+            if (!window.ENV || !window.ENV.appBaseUrl) {
+                const response = await fetch('/customer-portal/api/options');
+                const data = await response.json();
+                return data.appBaseUrl;
+            }
+            return window.ENV.appBaseUrl;
+        } catch (error) {
+            console.error('Error accessing API base URL:', error);
+            return window.ENV.isDevelopment ? 
+                'https://customer-cloud-risk.localhost' : // DEV fallback
+                'https://customer-cloud-risk.insureyourtech.cloud'; // PROD fallback
+        }
+    }
 
     // Access the environment variables from the global ENV object
     async function fetchAPIBaseUrl() {
         try {
             if (!window.ENV || !window.ENV.apiBaseUrl) {
-                const response = await fetch('/simulation/customer-portal/api/get/env');
+                const response = await fetch('/customer-portal/api/get/env');
                 const data = await response.json();
                 return data.apiBaseUrl;
             }
@@ -383,7 +401,7 @@
         } catch (error) {
             console.error('Error accessing API base URL:', error);
             return window.ENV.isDevelopment ? 
-                'https://api.localhost' : // DEV fallback
+                'https://api-cloud-risk.localhost' : // DEV fallback
                 'https://api-cloud-risk.insureyourtech.cloud'; // PROD fallback
         }
     }
