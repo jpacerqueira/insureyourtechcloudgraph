@@ -633,8 +633,8 @@
 
         // Save Neo4j query
         try {
-            const API_BASE_URL = await fetchAPIBaseUrl();
-            const response = await fetch(`/customer-portal/api/save-neo4j-query`, {
+            const APP_BASE_URL = await fetchAPPBaseUrl();
+            const response = await fetch(`${APP_BASE_URL}/customer-portal/api/save-neo4j-query`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
