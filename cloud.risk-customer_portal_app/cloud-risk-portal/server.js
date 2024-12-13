@@ -147,6 +147,40 @@ cloudProviders.forEach(provider => {
     }
 });
 
+// TODO add this to the customer-portal-index.html and simulation-index.html pages
+function updateOptionsForProvider(vendorSelect, serviceSelect, regionSelect) {
+    const selectedVendor = vendorSelect.value;
+    
+    // Update services
+    serviceSelect.innerHTML = '<option value="">Select a Service</option>';
+    if (selectedVendor && cloudServices[selectedVendor]) {
+        cloudServices[selectedVendor].forEach(service => {
+            const option = document.createElement('option');
+            option.value = service;
+            option.textContent = service;
+            serviceSelect.appendChild(option);
+        });
+    }
+    
+    // Update regions
+    regionSelect.innerHTML = '<option value="">Select a Region</option>';
+    if (selectedVendor && cloudRegions[selectedVendor]) {
+        // Always add global option first
+        const globalOption = document.createElement('option');
+        globalOption.value = 'global';
+        globalOption.textContent = 'global';
+        regionSelect.appendChild(globalOption);
+        
+        // Add provider-specific regions
+        cloudRegions[selectedVendor].forEach(region => {
+            const option = document.createElement('option');
+            option.value = region;
+            option.textContent = region;
+            regionSelect.appendChild(option);
+        });
+    }
+}
+
 // Middleware
 app.use(express.json());
 app.use(express.static('public'));
@@ -446,37 +480,4 @@ if (isProd) {
     https.createServer(options, app).listen(port);
 } else {
     http.createServer(app).listen(port);
-}
-
-function updateOptionsForProvider(vendorSelect, serviceSelect, regionSelect) {
-    const selectedVendor = vendorSelect.value;
-    
-    // Update services
-    serviceSelect.innerHTML = '<option value="">Select a Service</option>';
-    if (selectedVendor && cloudServices[selectedVendor]) {
-        cloudServices[selectedVendor].forEach(service => {
-            const option = document.createElement('option');
-            option.value = service;
-            option.textContent = service;
-            serviceSelect.appendChild(option);
-        });
-    }
-    
-    // Update regions
-    regionSelect.innerHTML = '<option value="">Select a Region</option>';
-    if (selectedVendor && cloudRegions[selectedVendor]) {
-        // Always add global option first
-        const globalOption = document.createElement('option');
-        globalOption.value = 'global';
-        globalOption.textContent = 'global';
-        regionSelect.appendChild(globalOption);
-        
-        // Add provider-specific regions
-        cloudRegions[selectedVendor].forEach(region => {
-            const option = document.createElement('option');
-            option.value = region;
-            option.textContent = region;
-            regionSelect.appendChild(option);
-        });
-    }
 }
