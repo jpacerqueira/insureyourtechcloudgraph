@@ -229,12 +229,12 @@ function generateCypherQuery(data) {
 CREATE (cust_sessionid__name_${companyId}:CUSTOMER_NAME {
     name: '${companyName}',
     project_name: '${projectName}',
-    median_sla_usage_percentage: '${metrics.customerMedian.slaUsage}%',
-    median_sla_deviation_risk: '${metrics.customerMedian.slaDeviation}',
-    median_traffic_coefficient: '${metrics.customerMedian.trafficCoef}%',
-    median_usage_risk: '${metrics.customerMedian.usageRisk}',
-    median_service_sla: '${metrics.customerMedian.serviceSla}%',
-    median_annual_downtime: '${metrics.customerMedian.annualDowntime}',
+    median_sla_usage_percentage: '${metrics.customerMedian.sla_usage}%',
+    median_sla_deviation_risk: '${metrics.customerMedian.sla_deviation}',
+    median_traffic_coefficient: '${metrics.customerMedian.traffic_coef}%',
+    median_usage_risk: '${metrics.customerMedian.usage_connected_risk}',
+    median_service_sla: '${metrics.customerMedian.service_sla_tier1}%',
+    median_annual_downtime_minutes: '${metrics.customerMedian.annual_downtime_minutes}',
     submission_date: '${new Date().toISOString()}'
 })`;
 
@@ -261,12 +261,12 @@ CREATE (cust_sessionid__name_${companyId}:CUSTOMER_NAME {
             cypher += `
 CREATE (${vendorId}:TECHNOLOGY_PROVIDER {
     name: '${service.vendor}',
-    vendor_median_sla_usage_percentage: '${metrics.vendorMedians[service.vendor].slaUsage}%',
-    vendor_median_sla_deviation_risk: '${metrics.vendorMedians[service.vendor].slaDeviation}',
-    vendor_median_traffic_coefficient: '${metrics.vendorMedians[service.vendor].trafficCoef}%',
-    vendor_median_usage_risk: '${metrics.vendorMedians[service.vendor].usageRisk}',
-    vendor_median_service_sla: '${metrics.vendorMedians[service.vendor].serviceSla}%',
-    vendor_median_annual_downtime: '${metrics.vendorMedians[service.vendor].annualDowntime}'
+    median_sla_usage_percentage: '${metrics.vendorMedians[service.vendor].sla_usage}%',
+    median_sla_deviation_risk: '${metrics.vendorMedians[service.vendor].sla_deviation}',
+    median_traffic_coefficient: '${metrics.vendorMedians[service.vendor].traffic_coef}%',
+    median_usage_risk: '${metrics.vendorMedians[service.vendor].usage_connected_risk}',
+    median_service_sla: '${metrics.vendorMedians[service.vendor].service_sla_tier1}%',
+    median_annual_downtime_minutes: '${metrics.vendorMedians[service.vendor].annual_downtime_minutes}'
 })`;
         }
 
@@ -278,13 +278,13 @@ CREATE (${serviceId}:TECHNOLOGY_SERVICE {
     name: '${service.name}',
     region: '${service.region}',
     monthly_cost: ${service.monthlyCost},
-    sla_usage: '${service.metrics.slaUsage}%',
-    sla_deviation_risk: '${service.metrics.slaDeviation}',
-    traffic_coefficient: '${service.metrics.trafficCoef}%',
-    usage_risk: '${service.metrics.usageRisk}',
-    annual_downtime_minutes: '${service.metrics.annualDowntime}',
-    service_sla_tier1: '${service.metrics.serviceSla}%',
-    service_credit_back_tier1: '${service.metrics.creditBack}%'
+    sla_usage: '${service.metrics.sla_usage}%',
+    sla_deviation_risk: '${service.metrics.sla_deviation}',
+    traffic_coefficient: '${service.metrics.traffic_coef}%',
+    usage_risk: '${service.metrics.usage_connected_risk}',
+    annual_downtime_minutes: '${service.metrics.annual_downtime_minutes}',
+    service_sla_tier1: '${service.metrics.service_sla_tier1}%',
+    service_credit_back_tier1: '${service.metrics.service_credit_back_tier1}%'
 })`;
         }
 
@@ -296,10 +296,10 @@ CREATE (cust_sessionid__name_${companyId})-[:CUSTOMER_USES_SERVICE {
 }]->(${serviceId})
 
 CREATE (${vendorId})-[:CONNECTED_RISK {
-    sla_usage: '${service.metrics.slaUsage}%',
-    sla_deviation_risk: '${service.metrics.slaDeviation}',
-    traffic_coefficient: '${service.metrics.trafficCoef}%',
-    usage_risk: '${service.metrics.usageRisk}'
+    sla_usage: '${service.metrics.sla_usage}%',
+    sla_deviation_risk: '${service.metrics.sla_deviation}',
+    traffic_coefficient: '${service.metrics.traffic_coef}%',
+    usage_risk: '${service.metrics.usage_connected_risk}'
 }]->(${serviceId})`;
     });
 

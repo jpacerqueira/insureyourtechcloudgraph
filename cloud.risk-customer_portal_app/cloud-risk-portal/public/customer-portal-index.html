@@ -196,6 +196,19 @@
             padding: 8px;
             text-align: left;
         }
+
+        .parallel-charts {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .service-charts {
+            background-color: #2c3039;
+            padding: 15px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -263,8 +276,11 @@
             <div id="total-services">0</div>
         </div>
         <div class="metric">
-            <h4>Services Exceeding SLA</h4>
-            <div id="services-exceeding-sla">0</div>
+            <h4>Services Exceeding SLA [Tier 1,2,3,4]</h4>
+            <div id="services-exceeding-sla_tier1">0</div>
+            <div id="services-exceeding-sla_tier2">0</div>
+            <div id="services-exceeding-sla_tier3">0</div>
+            <div id="services-exceeding-sla_tier4">0</div>
         </div>
     </div>
     
@@ -494,9 +510,8 @@
 
             renderOutageChart(outageData, service);
             const riskData = await fetchCloudRiskData(service, 'global');
-            compareMaxExpectedDowntime(riskData, service);
-            displayOutageData(service, outageData);         
-
+            await compareMaxExpectedDowntime(riskData, service);
+            await displayOutageData(service, outageData);
         } catch (error) {
             console.error(`Error fetching outage data for ${service}:`, error);
             // Display error message in the UI (for non-404 errors)
@@ -571,7 +586,7 @@
         sla_usage: [0],
         sla_deviation: [0],
         traffic_coef: [0],
-        usage_risk: [0],
+        usage_connected_risk: [0],
         service_sla_tier1: [0],
         service_sla_tier2: [0],
         service_sla_tier3: [0],
@@ -580,7 +595,7 @@
         service_credit_back_tier2: [0],
         service_credit_back_tier3: [0],
         service_credit_back_tier4: [0],
-        annual_downtime: [0]
+        annual_downtime_minutes: [0]
     };
 
     const vendorMetrics = {};
@@ -613,13 +628,13 @@
                         region: region,
                         monthlyCost: monthlyCost,
                         metrics: {
-                            slaUsage: riskData.service_sla_usage_percentage,
-                            slaDeviation: riskData.sla_deviation_connected_risk_0_999,
-                            trafficCoef: riskData.service_traffic_coef_by_percent_down,
-                            usageRisk: riskData.usage_connected_risk_0_999,
-                            annualDowntime: riskData.webscraper_annual_period_service_down_per_year_in_minutes,
-                            serviceSla: riskData.service_sla_0_99_9999_for_tier1,
-                            creditBack: riskData.percentage_service_credit_back_tier1
+                            sla_usage: riskData.service_sla_usage_percentage || 0,
+                            sla_deviation: riskData.sla_deviation_connected_risk_0_999 || 0,
+                            traffic_coef: riskData.service_traffic_coef_by_percent_down || 0,
+                            usage_connected_risk: riskData.usage_connected_risk_0_999 || 0,
+                            annual_downtime_minutes: riskData.webscraper_annual_period_service_down_per_year_in_minutes || 0,
+                            service_sla_tier1: riskData.service_sla_0_99_9999_for_tier1 || 0,
+                            service_credit_back_tier1: riskData.percentage_service_credit_back_tier1 || 0
                         }
                     });
                 } catch (error) {
@@ -641,29 +656,29 @@
                 ...service,
                 metrics: {
                     ...service.metrics,
-                    serviceSla: service.metrics.serviceSla || '99.9',
-                    creditBack: service.metrics.creditBack || '10'
+                    service_sla_tier1: service.metrics.service_sla_tier1 || 99.9,
+                    service_credit_back_tier1: service.metrics.service_credit_back_tier1 || 10
                 }
             })),
             metrics: {
                 customerMedian: {
-                    slaUsage: calculateMedian(customerMetrics.sla_usage) || 0,
-                    slaDeviation: calculateMedian(customerMetrics.sla_deviation) || 0,
-                    trafficCoef: calculateMedian(customerMetrics.traffic_coef) || 0,
-                    usageRisk: calculateMedian(customerMetrics.usage_risk) || 0,
-                    serviceSla: calculateMedian(customerMetrics.service_sla_tier1) || 0,
-                    annualDowntime: calculateMedian(customerMetrics.annual_downtime) || 0
+                    sla_usage: calculateMedian(customerMetrics.sla_usage) || 0,
+                    sla_deviation: calculateMedian(customerMetrics.sla_deviation) || 0,
+                    traffic_coef: calculateMedian(customerMetrics.traffic_coef) || 0,
+                    usage_connected_risk: calculateMedian(customerMetrics.usage_connected_risk) || 0,
+                    service_sla_tier1: calculateMedian(customerMetrics.service_sla_tier1) || 0,
+                    annual_downtime_minutes: calculateMedian(customerMetrics.annual_downtime_minutes) || 0
                 },
                 vendorMedians: Object.fromEntries(
                     Object.entries(vendorMetrics).map(([vendor, metrics]) => [
                         vendor,
                         {
-                            slaUsage: calculateMedian(metrics.sla_usage) || 0,
-                            slaDeviation: calculateMedian(metrics.sla_deviation) || 0,
-                            trafficCoef: calculateMedian(metrics.traffic_coef) || 0,
-                            usageRisk: calculateMedian(metrics.usage_risk) || 0,
-                            serviceSla: calculateMedian(metrics.service_sla_tier1) || 0,
-                            annualDowntime: calculateMedian(metrics.annual_downtime) || 0
+                            sla_usage: calculateMedian(metrics.sla_usage) || 0,
+                            sla_deviation: calculateMedian(metrics.sla_deviation) || 0,
+                            traffic_coef: calculateMedian(metrics.traffic_coef) || 0,
+                            usage_connected_risk: calculateMedian(metrics.usage_connected_risk) || 0,
+                            service_sla_tier1: calculateMedian(metrics.service_sla_tier1) || 0,
+                            annual_downtime_minutes: calculateMedian(metrics.annual_downtime_minutes) || 0
                         }
                     ])
                 )
@@ -690,7 +705,7 @@
         } catch (error) {
             console.error('Error saving Neo4j query:', error);
             // Optionally show error to user
-            alert('Error saving data to Neo4j: ' + error.message);
+            alert('Please try again! Error saving data to Cloud.Risk.Graph - Neo4j: ' + error.message);
         }
 
         // Create results container
@@ -799,7 +814,7 @@
                     customerMetrics.sla_usage.push(Number(riskData?.service_sla_usage_percentage) || 0);
                     customerMetrics.sla_deviation.push(Number(riskData?.sla_deviation_connected_risk_0_999) || 0);
                     customerMetrics.traffic_coef.push(Number(riskData?.service_traffic_coef_by_percent_down) || 0);
-                    customerMetrics.usage_risk.push(Number(riskData?.usage_connected_risk_0_999) || 0);
+                    customerMetrics.usage_connected_risk.push(Number(riskData?.usage_connected_risk_0_999) || 0);
                     customerMetrics.service_sla_tier1.push(Number(riskData?.service_sla_0_99_9999_for_tier1) || 0);
                     customerMetrics.service_sla_tier2.push(Number(riskData?.service_sla_0_99_9999_for_tier2) || 0);
                     customerMetrics.service_sla_tier3.push(Number(riskData?.service_sla_0_99_9999_for_tier3) || 0);
@@ -808,14 +823,14 @@
                     customerMetrics.service_credit_back_tier2.push(Number(riskData?.percentage_service_credit_back_tier2) || 0);
                     customerMetrics.service_credit_back_tier3.push(Number(riskData?.percentage_service_credit_back_tier3) || 0);
                     customerMetrics.service_credit_back_tier4.push(Number(riskData?.percentage_service_credit_back_tier4) || 0);
-                    customerMetrics.annual_downtime.push(Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0);
+                    customerMetrics.annual_downtime_minutes.push(Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0);
 
                     if (!vendorMetrics[vendor]) {
                         vendorMetrics[vendor] = {
                             sla_usage: [0],
                             sla_deviation: [0],
                             traffic_coef: [0],
-                            usage_risk: [0],
+                            usage_connected_risk: [0],
                             service_sla_tier1: [0],
                             service_sla_tier2: [0],
                             service_sla_tier3: [0],
@@ -824,14 +839,14 @@
                             service_credit_back_tier2: [0],
                             service_credit_back_tier3: [0],
                             service_credit_back_tier4: [0],
-                            annual_downtime: [0]
+                            annual_downtime_minutes: [0]
                         };
                     }
                     
                     vendorMetrics[vendor].sla_usage.push(Number(riskData?.service_sla_usage_percentage) || 0);
                     vendorMetrics[vendor].sla_deviation.push(Number(riskData?.sla_deviation_connected_risk_0_999) || 0);
                     vendorMetrics[vendor].traffic_coef.push(Number(riskData?.service_traffic_coef_by_percent_down) || 0);
-                    vendorMetrics[vendor].usage_risk.push(Number(riskData?.usage_connected_risk_0_999) || 0);
+                    vendorMetrics[vendor].usage_connected_risk.push(Number(riskData?.usage_connected_risk_0_999) || 0);
                     vendorMetrics[vendor].service_sla_tier1.push(Number(riskData?.service_sla_0_99_9999_for_tier1) || 0);
                     vendorMetrics[vendor].service_sla_tier2.push(Number(riskData?.service_sla_0_99_9999_for_tier2) || 0);
                     vendorMetrics[vendor].service_sla_tier3.push(Number(riskData?.service_sla_0_99_9999_for_tier3) || 0);
@@ -840,9 +855,9 @@
                     vendorMetrics[vendor].service_credit_back_tier2.push(Number(riskData?.percentage_service_credit_back_tier2) || 0);
                     vendorMetrics[vendor].service_credit_back_tier3.push(Number(riskData?.percentage_service_credit_back_tier3) || 0);
                     vendorMetrics[vendor].service_credit_back_tier4.push(Number(riskData?.percentage_service_credit_back_tier4) || 0);
-                    vendorMetrics[vendor].annual_downtime.push(Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0);
+                    vendorMetrics[vendor].annual_downtime_minutes.push(Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0);
 
-                    addServiceAnalysis(service, riskData, i);
+                    await addServiceAnalysis(service, riskData, i);
 
                     await fetchOutageData(service);
                 } catch (error) {
@@ -869,7 +884,7 @@
         document.getElementById("customer-sla-usage").textContent = `${calculateMedian(metrics.sla_usage).toFixed(2)}%`;
         document.getElementById("customer-sla-deviation").textContent = calculateMedian(metrics.sla_deviation).toFixed(2);
         document.getElementById("customer-traffic-coef").textContent = `${calculateMedian(metrics.traffic_coef).toFixed(2)}%`;
-        document.getElementById("customer-usage-risk").textContent = calculateMedian(metrics.usage_risk).toFixed(2);
+        document.getElementById("customer-usage-risk").textContent = calculateMedian(metrics.usage_connected_risk).toFixed(2);
         document.getElementById("customer-service-sla-tier1").textContent = `${calculateMedian(metrics.service_sla_tier1).toFixed(5)}%`;
         document.getElementById("customer-service-sla-tier2").textContent = `${calculateMedian(metrics.service_sla_tier2).toFixed(5)}%`;
         document.getElementById("customer-service-sla-tier3").textContent = `${calculateMedian(metrics.service_sla_tier3).toFixed(5)}%`;
@@ -878,7 +893,7 @@
         document.getElementById("customer-service-credit-back-tier2").textContent = `${calculateMedian(metrics.service_credit_back_tier2).toFixed(2)}%`;
         document.getElementById("customer-service-credit-back-tier3").textContent = `${calculateMedian(metrics.service_credit_back_tier3).toFixed(2)}%`;
         document.getElementById("customer-service-credit-back-tier4").textContent = `${calculateMedian(metrics.service_credit_back_tier4).toFixed(2)}%`;
-        document.getElementById("customer-annual-downtime").textContent = calculateMedian(metrics.annual_downtime).toFixed(2);
+        document.getElementById("customer-annual-downtime").textContent = calculateMedian(metrics.annual_downtime_minutes).toFixed(2);
     }
 
     function updateVendorMetrics(vendorMetrics) {
@@ -903,7 +918,7 @@
                         <div class="metric-column">
                             <div class="metric">
                                 <h4>Rating Median Cloud.Risk Usage</h4>
-                                <div class="value">${calculateMedian(metrics.usage_risk).toFixed(2)}</div>
+                                <div class="value">${calculateMedian(metrics.usage_connected_risk).toFixed(2)}</div>
                             </div>
                             <div class="metric">
                                 <h4>Median Traffic Downtime Coefficient %</h4>
@@ -945,7 +960,7 @@
                             </div>
                             <div class="metric">
                                 <h4>Median Annual Downtime (minutes)</h4>
-                                <div class="value">${calculateMedian(metrics.annual_downtime).toFixed(2)}</div>
+                                <div class="value">${calculateMedian(metrics.annual_downtime_minutes).toFixed(2)}</div>
                             </div>
                         </div>
                     </div>
@@ -954,7 +969,7 @@
         });
     }
 
-    function addServiceAnalysis(service, riskData, trioNumber) {
+    async function addServiceAnalysis(service, riskData, trioNumber) {
         const servicesContainer = document.getElementById("services-analysis");
         
         // Get the monthly cost from the input
@@ -964,7 +979,7 @@
 
         // Calculate estimated credit money back
         let estimatedCreditBack = 0.0;
-        const slaUsage = parseFloat(riskData.service_sla_usage_percentage || 0);
+        const sla_usage = parseFloat(riskData.service_sla_usage_percentage || 0);
         const creditBackPercentage_tier1 = parseFloat(riskData.percentage_service_credit_back_tier1 || 0);
         const creditBackPercentage_tier2 = parseFloat(riskData.percentage_service_credit_back_tier2 || 0);
         const creditBackPercentage_tier3 = parseFloat(riskData.percentage_service_credit_back_tier3 || 0);
@@ -975,20 +990,20 @@
         const expectedAnnualMinsDown_tier4 = parseFloat(riskData.expected_annual_service_minutes_down_by_sla_tier4 || 0);
         const annualActualDowntime = parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes || 0);
 
-        if (slaUsage > 100 & expectedAnnualMinsDown_tier1 >= annualActualDowntime & annualActualDowntime < expectedAnnualMinsDown_tier2 ) {
-            estimatedCreditBack = ((slaUsage - 100) / 100) * (creditBackPercentage_tier1 / 100) * monthy_customer_service_spent;
+        if (sla_usage > 100 & expectedAnnualMinsDown_tier1 >= annualActualDowntime & annualActualDowntime < expectedAnnualMinsDown_tier2 ) {
+            estimatedCreditBack = ((sla_usage - 100) / 100) * (creditBackPercentage_tier1 / 100) * monthy_customer_service_spent;
             estimatedCreditBack = Math.min(Math.round(creditBackPercentage_tier1 * 100) / 100, monthy_customer_service_spent);
         }
-        if (slaUsage > 100 & expectedAnnualMinsDown_tier2 >= annualActualDowntime & annualActualDowntime < expectedAnnualMinsDown_tier3 ) {
-            estimatedCreditBack = ((slaUsage - 100) / 100) * (creditBackPercentage_tier2 / 100) * monthy_customer_service_spent;
+        if (sla_usage > 100 & expectedAnnualMinsDown_tier2 >= annualActualDowntime & annualActualDowntime < expectedAnnualMinsDown_tier3 ) {
+            estimatedCreditBack = ((sla_usage - 100) / 100) * (creditBackPercentage_tier2 / 100) * monthy_customer_service_spent;
             estimatedCreditBack = Math.min(Math.round(creditBackPercentage_tier2 * 100) / 100, monthy_customer_service_spent);
         }
-        if (slaUsage > 100 & expectedAnnualMinsDown_tier3 >= annualActualDowntime & annualActualDowntime < expectedAnnualMinsDown_tier4 ) {
-            estimatedCreditBack = ((slaUsage - 100) / 100) * (creditBackPercentage_tier3 / 100) * monthy_customer_service_spent;
+        if (sla_usage > 100 & expectedAnnualMinsDown_tier3 >= annualActualDowntime & annualActualDowntime < expectedAnnualMinsDown_tier4 ) {
+            estimatedCreditBack = ((sla_usage - 100) / 100) * (creditBackPercentage_tier3 / 100) * monthy_customer_service_spent;
             estimatedCreditBack = Math.min(Math.round(creditBackPercentage_tier3 * 100) / 100, monthy_customer_service_spent);
         }
-        if (slaUsage > 100 & annualActualDowntime >= expectedAnnualMinsDown_tier4 ) {
-            estimatedCreditBack = ((slaUsage - 100) / 100) * (creditBackPercentage_tier4 / 100) * monthy_customer_service_spent;
+        if (sla_usage > 100 & annualActualDowntime >= expectedAnnualMinsDown_tier4 ) {
+            estimatedCreditBack = ((sla_usage - 100) / 100) * (creditBackPercentage_tier4 / 100) * monthy_customer_service_spent;
             estimatedCreditBack = Math.min(Math.round(creditBackPercentage_tier4 * 100) / 100, monthy_customer_service_spent);
         }
 
@@ -1011,21 +1026,21 @@
                 <div class="metric-column">
                     <div class="metric">
                         <h4>Rating Cloud.Risk SLA Deviation</h4>
-                        <div class="value">${riskData.sla_deviation_connected_risk_0_999}</div>
+                        <div class="value">${parseFloat(riskData.sla_deviation_connected_risk_0_999).toFixed(2)}</div>
                     </div>
                     <div class="metric">
                         <h4>SLA Usage %</h4>
-                        <div class="value">${riskData.service_sla_usage_percentage}</div>
+                        <div class="value">${parseFloat(riskData.service_sla_usage_percentage).toFixed(2)}%</div>
                     </div>
                 </div>
                 <div class="metric-column">
                     <div class="metric">
                         <h4>Rating Cloud.Risk Usage </h4>
-                        <div class="value">${riskData.usage_connected_risk_0_999}</div>
+                        <div class="value">${parseFloat(riskData.usage_connected_risk_0_999).toFixed(2)}</div>
                     </div>
                     <div class="metric">
                         <h4>Traffic Downtime Coefficient %</h4>
-                        <div class="value">${riskData.service_traffic_coef_by_percent_down}</div>
+                        <div class="value">${parseFloat(riskData.service_traffic_coef_by_percent_down).toFixed(2)}%</div>
                     </div>
                 </div>
                 <div class="metric-column">
@@ -1098,6 +1113,11 @@
         `;
 
         servicesContainer.appendChild(serviceSection);
+
+        // Update outage analysis
+        const outageData = await fetchOutageData(service);
+        const monthlyCost = parseFloat(estimatedCreditBack);
+        await updateOutageAnalysis( service, riskData, outageData, monthlyCost ); 
     }
 
     // Add this function to handle the expansion
@@ -1252,7 +1272,6 @@
     function displayOutageData(service, outageData) {
         // Create table rows
         const tbody = document.querySelector('#outageTable tbody');
-        const row = document.createElement('tr');
         
         outageData.forEach(outage => {
             const row = document.createElement('tr');
@@ -1261,6 +1280,7 @@
                 <td>${new Date(outage.start_time).toLocaleString()}</td>
                 <td>${new Date(outage.end_time).toLocaleString()}</td>
                 <td>${outage.duration_minutes}</td>
+                <td>${outage.downtime_period}</td>
                 <td>${outage.root_cause || 'Not specified'}</td>
                 <td>${outage.outage_status}</td>
                 <td>${outage.source_outage_report}</td>
@@ -1268,7 +1288,35 @@
             tbody.appendChild(row);
         });
 
-        // Create Plotly chart
+        // Create container for parallel charts if it doesn't exist
+        const chartContainer = document.getElementById('outageChartContainer');
+        if (!chartContainer.querySelector('.parallel-charts')) {
+            const parallelChartsDiv = document.createElement('div');
+            parallelChartsDiv.className = 'parallel-charts';
+            parallelChartsDiv.style.display = 'grid';
+            parallelChartsDiv.style.gridTemplateColumns = 'repeat(2, 1fr)';
+            parallelChartsDiv.style.gap = '20px';
+            chartContainer.appendChild(parallelChartsDiv);
+        }
+
+        // Create div for this service's charts
+        const serviceChartsDiv = document.createElement('div');
+        serviceChartsDiv.className = 'service-charts';
+        serviceChartsDiv.style.display = 'flex';
+        serviceChartsDiv.style.flexDirection = 'column';
+        serviceChartsDiv.style.gap = '20px';
+
+        // Create containers for each chart
+        const timelineChartDiv = document.createElement('div');
+        const durationChartDiv = document.createElement('div');
+        serviceChartsDiv.appendChild(timelineChartDiv);
+        serviceChartsDiv.appendChild(durationChartDiv);
+
+        // Add to parallel charts container
+        const parallelChartsDiv = chartContainer.querySelector('.parallel-charts');
+        parallelChartsDiv.appendChild(serviceChartsDiv);
+
+        // Prepare data for both charts
         const timestamps = outageData.map(d => new Date(d.outage_timestamp * 1000));
         const durations = outageData.map(d => d.duration_minutes);
         const hoverText = outageData.map(d => `
@@ -1279,42 +1327,72 @@
             Source: ${d.source_outage_report}
         `);
 
-        const trace = {
+        // Timeline Chart
+        const timelineTrace = {
             x: timestamps,
             y: durations,
             type: 'scatter',
             mode: 'lines+markers',
-            name: `Outages for ${service}`,
-            line: {
-                color: 'rgba(255, 99, 132, 1)'
-            },
+            name: `Timeline - ${service}`,
+            line: { color: 'rgba(255, 99, 132, 1)' },
             fill: 'tozeroy',
             text: hoverText,
             hoverinfo: 'text'
         };
 
-        const layout = {
-            title: `Outages for ${service}`,
+        const timelineLayout = {
+            title: `Outage Timeline - ${service}`,
             xaxis: {
                 title: 'Report Date',
                 tickangle: 45
             },
             yaxis: {
                 title: 'Downtime Duration (minutes)'
+            },
+            height: 400,
+            margin: { t: 50, b: 100 }
+        };
+
+        // Duration Distribution Chart
+        const durationTrace = {
+            x: durations,
+            type: 'histogram',
+            name: `Duration Distribution - ${service}`,
+            marker: {
+                color: 'rgba(255, 99, 132, 0.7)',
+                line: {
+                    color: 'rgba(255, 99, 132, 1)',
+                    width: 1
+                }
             }
         };
 
-        Plotly.newPlot('outageChartContainer', [trace], layout);
+        const durationLayout = {
+            title: `Outage Duration Distribution - ${service}`,
+            xaxis: {
+                title: 'Duration (minutes)',
+                tickangle: 45
+            },
+            yaxis: {
+                title: 'Frequency'
+            },
+            height: 400,
+            margin: { t: 50, b: 100 }
+        };
+
+        // Plot both charts
+        Plotly.newPlot(timelineChartDiv, [timelineTrace], timelineLayout);
+        Plotly.newPlot(durationChartDiv, [durationTrace], durationLayout);
     }
 
     // Helper function to calculate customer medians
     function calculateCustomerMedians() {
         return {
-            slaUsage: calculateMedian(customerMetrics.sla_usage),
-            slaDeviation: calculateMedian(customerMetrics.sla_deviation),
-            trafficCoef: calculateMedian(customerMetrics.traffic_coef),
-            usageRisk: calculateMedian(customerMetrics.usage_risk),
-            annualDowntime: calculateMedian(customerMetrics.annual_downtime)
+            sla_usage: calculateMedian(customerMetrics.sla_usage),
+            sla_deviation: calculateMedian(customerMetrics.sla_deviation),
+            traffic_coef: calculateMedian(customerMetrics.traffic_coef),
+            usage_connected_risk: calculateMedian(customerMetrics.usage_connected_risk),
+            annual_downtime_minutes: calculateMedian(customerMetrics.annual_downtime_minutes)
         };
     }
 
@@ -1323,18 +1401,18 @@
         const vendorMedians = {};
         for (const [vendor, metrics] of Object.entries(vendorMetrics)) {
             vendorMedians[vendor] = {
-                slaUsage: calculateMedian(metrics.sla_usage),
-                slaDeviation: calculateMedian(metrics.sla_deviation),
-                trafficCoef: calculateMedian(metrics.traffic_coef),
-                usageRisk: calculateMedian(metrics.usage_risk),
-                annualDowntime: calculateMedian(metrics.annual_downtime)
+                sla_usage: calculateMedian(metrics.sla_usage),
+                sla_deviation: calculateMedian(metrics.sla_deviation),
+                traffic_coef: calculateMedian(metrics.traffic_coef),
+                usage_connected_risk: calculateMedian(metrics.usage_connected_risk),
+                annual_downtime_minutes: calculateMedian(metrics.annual_downtime_minutes)
             };
         }
         return vendorMedians;
     }
 
     // Add this new function to your JavaScript section
-    function updateOutageAnalysis({ service, riskData, outageData, monthlyCost }) {
+    async function updateOutageAnalysis( service, riskData, outageData, monthlyCost ) {
         // Ensure riskData has default values if undefined
         riskData = riskData || {
             webscraper_annual_period_service_down_per_year_in_minutes: 0,
@@ -1347,8 +1425,19 @@
 
         // Calculate service health status
         const actualDowntime = parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes || 0);
-        const expectedDowntime = parseFloat(riskData.expected_annual_service_minutes_down_by_sla_tier1 || 0);
-        const healthStatus = actualDowntime <= expectedDowntime ? 'Healthy' : 'At Risk';
+        const expectedDowntime_tier1 = parseFloat(riskData.expected_annual_service_minutes_down_by_sla_tier1 || 0);
+        const expectedDowntime_tier2 = parseFloat(riskData.expected_annual_service_minutes_down_by_sla_tier2 || 0);
+        const expectedDowntime_tier3 = parseFloat(riskData.expected_annual_service_minutes_down_by_sla_tier3 || 0);
+        const expectedDowntime_tier4 = parseFloat(riskData.expected_annual_service_minutes_down_by_sla_tier4 || 0);        
+
+        const tierStatuses = [
+            actualDowntime <= expectedDowntime_tier4,
+            actualDowntime <= expectedDowntime_tier3,
+            actualDowntime <= expectedDowntime_tier2,
+            actualDowntime <= expectedDowntime_tier1
+        ];
+
+        const healthStatus = tierStatuses.every(status => status) ? 'Healthy' : 'At Risk';
 
         // Update overall health status
         const healthElement = document.getElementById('overall-health-status');
@@ -1359,8 +1448,26 @@
         `;
 
         // Count services exceeding SLA
-        if (actualDowntime > expectedDowntime) {
-            const exceedingElement = document.getElementById('services-exceeding-sla');
+        if (actualDowntime > expectedDowntime_tier1) {
+            const exceedingElement = document.getElementById('services-exceeding-sla_tier1');
+            const currentExceeding = parseInt(exceedingElement.textContent || '0');
+            exceedingElement.textContent = (currentExceeding + 1).toString();
+        }
+
+        if (actualDowntime > expectedDowntime_tier2) {
+            const exceedingElement = document.getElementById('services-exceeding-sla_tier2');
+            const currentExceeding = parseInt(exceedingElement.textContent || '0');
+            exceedingElement.textContent = (currentExceeding + 1).toString();
+        }
+
+        if (actualDowntime > expectedDowntime_tier3) {
+            const exceedingElement = document.getElementById('services-exceeding-sla_tier3');
+            const currentExceeding = parseInt(exceedingElement.textContent || '0');
+            exceedingElement.textContent = (currentExceeding + 1).toString();
+        }
+
+        if (actualDowntime > expectedDowntime_tier4) {
+            const exceedingElement = document.getElementById('services-exceeding-sla_tier4');
             const currentExceeding = parseInt(exceedingElement.textContent || '0');
             exceedingElement.textContent = (currentExceeding + 1).toString();
         }
@@ -1373,13 +1480,26 @@
 
             outageData.forEach(outage => {
                 const duration = parseFloat(outage.duration_minutes || 0);
-                if (duration >= 240) criticalCount++;
-                else if (duration >= 60) majorCount++;
+                const outage_downtime_period = (outage.downtime_period || 0);
+                let real_outage_duration = 0;
+                if (outage_downtime_period >= 0) {
+                    real_outage_duration = outage_downtime_period;
+                } else {
+                    real_outage_duration = duration;
+                }
+                if (real_outage_duration >= 240) criticalCount++;
+                else if (real_outage_duration >= 60) majorCount++;
                 else minorCount++;
 
                 // Add row to outage table with cost impact
-                const costImpact = (duration / 60) * (monthlyCost / (30 * 24));
-                const slaImpact = duration > expectedDowntime ? 'Exceeds SLA' : 'Within SLA';
+                const costImpact = (real_outage_duration / 60) * (monthlyCost / (30 * 24));
+                // Check tiers from highest (4) to lowest (1) and use the highest exceeded tier
+                const slaImpact = 
+                    real_outage_duration > expectedDowntime_tier4 ? 'Exceeds SLA Tier 4' :
+                    real_outage_duration > expectedDowntime_tier3 ? 'Exceeds SLA Tier 3' :
+                    real_outage_duration > expectedDowntime_tier2 ? 'Exceeds SLA Tier 2' :
+                    real_outage_duration > expectedDowntime_tier1 ? 'Exceeds SLA Tier 1' :
+                    'Within SLA';
 
                 const tbody = document.querySelector('#outageTable tbody');
                 const row = document.createElement('tr');
@@ -1387,7 +1507,7 @@
                     <td>${service || 'N/A'}</td>
                     <td>${outage.start_time ? new Date(outage.start_time).toLocaleString() : 'N/A'}</td>
                     <td>${outage.end_time ? new Date(outage.end_time).toLocaleString() : 'N/A'}</td>
-                    <td>${duration.toFixed(2) || '0.00'}</td>
+                    <td>${real_outage_duration.toFixed(2) || '0.00'}</td>
                     <td>${outage.downtime_period || 'Not specified'}</td>
                     <td>${outage.root_cause || 'Not specified'}</td>
                     <td>${outage.outage_status || 'Unknown'}</td>
