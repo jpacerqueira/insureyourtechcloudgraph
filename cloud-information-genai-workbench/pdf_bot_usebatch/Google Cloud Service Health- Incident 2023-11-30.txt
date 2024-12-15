@@ -1,0 +1,42 @@
+After analyzing the text, I found that only Google Cloud Service was impacted by an outage.
+
+Here is the breakdown of the outage per service:
+
+Google Cloud Interconnect in Santiago Chile was experiencing availability issues.
+Incident began at 2023-11-30 10:47 UTC and ended at 2023-11-30 12:22 UTC.
+Previously affected location(s)
+santiago (southamerica-west1)
+
+Description:
+Our engineering team has identified a mitigation and have commenced work on it.
+
+At this time, we do not have a specific ETA. Please rest assured that our engineering teams are working diligently to mitigate all known impacts.
+
+We will provide more information by Thursday, 2023-11-30 13:00 UTC.
+
+Diagnosis:
+Customers using Cloud interconnect in Santiago Chile may experience availability issues, being unable to access GCP services via scl-zone1-7594 and scl-zone2-7594.
+Other GCP services in southamerica-west1 are not affected. The region should be accessible from interconnects outside of Santiago Chile.
+
+Workaround:
+Customers who have availed a 99.9% uptime do not have a workaround.
+Customers who have opted for a 99.99% uptime could fail-over to other regions.
+
+Here is the output in text format:
+
+Google Cloud Interconnect
+Santiago (southamerica-west1)
+2023-11-30 10:47 UTC
+Duration: 0 days, 2 hours, 35 minutes
+Root Cause: Physical connections issue
+Downtime Period: 2023-11-30 12:22 UTC - 2023-11-30 13:00 UTC
+Resolved Date: 2023-11-30 12:20 UTC
+
+Here is the output in table format:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Interconnect | southamerica-west1 | scl-zone1-7594, scl-zone2-7594 | 2023-11-30 10:47 UTC | 0 days, 2 hours, 35 minutes | Physical connections issue | 2023-11-30 12:22 UTC - 2023-11-30 13:00 UTC | 2023-11-30 12:20 UTC |
+
+Overall Summary:
+One Google Cloud Service was impacted by an outage. The service was Interconnect in Santiago Chile, and it affected two availability zones (scl-zone1-7594 and scl-zone2-7594) in the southamerica-west1 region. The outage started on November 30, 2023, at 10:47 UTC and lasted for approximately 2 hours and 35 minutes. The root cause of the outage was a physical connections issue. The downtime period was from 12:22 UTC to 13:00 UTC, and it was resolved at 12:20 UTC.
