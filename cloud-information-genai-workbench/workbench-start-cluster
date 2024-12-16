@@ -25,7 +25,7 @@ fi
 
 if [[ "$DOCKER_FILE" == "1" ]]; then
    echo "Using smaller Docker Compose file"
-   DOCKER_FILE="smaller-docker-compose.yml"
+   DOCKER_FILE="batch-smaller-docker-compose.yml"
 else
    echo "Using Full Docker Compose file"
    DOCKER_FILE="docker-compose.yml"
