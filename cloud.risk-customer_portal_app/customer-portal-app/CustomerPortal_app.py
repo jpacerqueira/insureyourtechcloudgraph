@@ -263,7 +263,10 @@ if st.button("Analyze Cloud Risk"):
         customer_sla_deviation_values = []
         customer_traffic_coef_values = []
         customer_usage_risk_values = []
-        customer_service_sla_values = []
+        customer_service_sla_tier1_values = []
+        customer_service_sla_tier2_values = []
+        customer_service_sla_tier3_values = []
+        customer_service_sla_tier4_values = []
         customer_annual_downtime_values = []
         
         # Clean company name
@@ -295,10 +298,19 @@ if st.button("Analyze Cloud Risk"):
                 customer_usage_risk_values.append(usage_risk)
                 
                 # Update these lines to use new API fields
-                service_sla = float(risk_data.get('service_sla_0_99_9999_for_tier1', 0.0).rstrip('%').replace(',', '.'))
-                service_credit_back = float(risk_data.get('percentage_service_credit_back_tier1', 0.0).rstrip('%').replace(',', '.'))
+                service_sla_tier1 = float(risk_data.get('service_sla_0_99_9999_for_tier1', 0.0).rstrip('%').replace(',', '.'))
+                service_credit_back_tier1 = float(risk_data.get('percentage_service_credit_back_tier1', 0.0).rstrip('%').replace(',', '.'))
+                service_sla_tier2 = float(risk_data.get('service_sla_0_99_9999_for_tier2', 0.0).rstrip('%').replace(',', '.'))
+                service_credit_back_tier2 = float(risk_data.get('percentage_service_credit_back_tier2', 0.0).rstrip('%').replace(',', '.'))
+                service_sla_tier3 = float(risk_data.get('service_sla_0_99_9999_for_tier3', 0.0).rstrip('%').replace(',', '.'))
+                service_credit_back_tier3 = float(risk_data.get('percentage_service_credit_back_tier3', 0.0).rstrip('%').replace(',', '.'))
+                service_sla_tier4 = float(risk_data.get('service_sla_0_99_9999_for_tier4', 0.0).rstrip('%').replace(',', '.'))
+                service_credit_back_tier4 = float(risk_data.get('percentage_service_credit_back_tier4', 0.0).rstrip('%').replace(',', '.'))
                 annual_downtime = float(risk_data.get('webscraper_annual_period_service_down_per_year_in_minutes', 0.0))
-                customer_service_sla_values.append(service_sla)
+                customer_service_sla_tier1_values.append(service_sla_tier1)
+                customer_service_sla_tier2_values.append(service_sla_tier2)
+                customer_service_sla_tier3_values.append(service_sla_tier3)
+                customer_service_sla_tier4_values.append(service_sla_tier4)
                 customer_annual_downtime_values.append(annual_downtime)
                 
                 # Update service node creation
@@ -384,7 +396,10 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                 vendor_median_annual_downtime = sorted(metrics['annual_downtime'])[len(metrics['annual_downtime'])//2] if metrics['annual_downtime'] else 0.0
                 
                 # Calculate medians including service_sla
-                vendor_median_sla = sorted(metrics['service_sla'])[len(metrics['service_sla'])//2] if metrics['service_sla'] else 0.0
+                vendor_median_sla_tier1 = sorted(metrics['service_sla_tier1'])[len(metrics['service_sla_tier1'])//2] if metrics['service_sla_tier1'] else 0.0
+                vendor_median_sla_tier2 = sorted(metrics['service_sla_tier2'])[len(metrics['service_sla_tier2'])//2] if metrics['service_sla_tier2'] else 0.0
+                vendor_median_sla_tier3 = sorted(metrics['service_sla_tier3'])[len(metrics['service_sla_tier3'])//2] if metrics['service_sla_tier3'] else 0.0
+                vendor_median_sla_tier4 = sorted(metrics['service_sla_tier4'])[len(metrics['service_sla_tier4'])//2] if metrics['service_sla_tier4'] else 0.0
                 vendor_median_sla_usage = sorted(metrics['sla_usage'])[len(metrics['sla_usage'])//2] if metrics['sla_usage'] else 0.0
                 vendor_median_sla_deviation = sorted(metrics['sla_deviation'])[len(metrics['sla_deviation'])//2] if metrics['sla_deviation'] else 0.0
                 vendor_median_traffic_coef = sorted(metrics['traffic_coef'])[len(metrics['traffic_coef'])//2] if metrics['traffic_coef'] else 0.0
@@ -400,19 +415,22 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                     st.metric("Median Traffic Coefficient %", f"{vendor_median_traffic_coef:.2f}%")
                     st.metric("Rating Median Cloud.Risk Usage Risk", f"{vendor_median_usage_risk:.2f}")
                 with col3:
-                    st.metric("Median Service SLA %", f"{vendor_median_sla:.2f}%")
+                    st.metric("Median Service SLA Tier 1 %", f"{vendor_median_sla_tier1:.2f}%")
                     st.metric("Median Annual Downtime (minutes)", f"{vendor_median_annual_downtime:.2f}")
                 st.divider()
 
                 # Update vendor node creation in Cypher query to include annual downtime
                 cypher_query = f"""CREATE ({vendor_id}:TECHNOLOGY_PROVIDER {{
                     name: '{vendor}',
-                    vendor_median_sla_usage_percentage: '{vendor_median_sla_usage:.2f}%',
-                    vendor_median_sla_deviation_risk: '{vendor_median_sla_deviation:.2f}',
-                    vendor_median_traffic_coefficient: '{vendor_median_traffic_coef:.2f}%',
-                    vendor_median_usage_risk: '{vendor_median_usage_risk:.2f}',
-                    vendor_median_service_sla: '{vendor_median_sla:.2f}%',
-                    vendor_median_annual_downtime: '{vendor_median_annual_downtime:.2f}'
+                    median_sla_usage_percentage: '{vendor_median_sla_usage:.2f}%',
+                    median_sla_deviation_risk: '{vendor_median_sla_deviation:.2f}',
+                    median_traffic_coefficient: '{vendor_median_traffic_coef:.2f}%',
+                    median_usage_risk: '{vendor_median_usage_risk:.2f}',
+                    median_service_sla_tier1: '{vendor_median_sla_tier1:.2f}%',
+                    median_service_sla_tier2: '{vendor_median_sla_tier2:.2f}%',
+                    median_service_sla_tier3: '{vendor_median_sla_tier3:.2f}%',
+                    median_service_sla_tier4: '{vendor_median_sla_tier4:.2f}%',
+                    median_annual_downtime: '{vendor_median_annual_downtime:.2f}'
                 }})\n""" + cypher_query
 
         if customer_sla_usage_values and customer_sla_deviation_values and customer_traffic_coef_values and customer_usage_risk_values:
@@ -421,7 +439,10 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
             customer_median_sla_deviation = sorted(customer_sla_deviation_values)[len(customer_sla_deviation_values)//2]
             customer_median_traffic_coef = sorted(customer_traffic_coef_values)[len(customer_traffic_coef_values)//2]
             customer_median_usage_risk = sorted(customer_usage_risk_values)[len(customer_usage_risk_values)//2]
-            customer_median_service_sla = sorted(customer_service_sla_values)[len(customer_service_sla_values)//2]
+            customer_median_service_sla_tier1 = sorted(customer_service_sla_tier1_values)[len(customer_service_sla_tier1_values)//2]
+            customer_median_service_sla_tier2 = sorted(customer_service_sla_tier2_values)[len(customer_service_sla_tier2_values)//2]
+            customer_median_service_sla_tier3 = sorted(customer_service_sla_tier3_values)[len(customer_service_sla_tier3_values)//2]
+            customer_median_service_sla_tier4 = sorted(customer_service_sla_tier4_values)[len(customer_service_sla_tier4_values)//2]
             customer_median_annual_downtime = sorted(customer_annual_downtime_values)[len(customer_annual_downtime_values)//2]
 
             st.header("Customer Summary")           
@@ -434,7 +455,7 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
                 st.metric("Median Traffic Coefficient %", f"{customer_median_traffic_coef:.2f}%")
                 st.metric("Rating Median Cloud.Risk Usage Risk", f"{customer_median_usage_risk:.2f}")
             with col3:
-                st.metric("Median Service SLA %", f"{customer_median_service_sla:.2f}%")
+                st.metric("Median Service SLA Tier 1 %", f"{customer_median_service_sla_tier1:.2f}%")
                 st.metric("Median Annual Downtime (minutes)", f"{customer_median_annual_downtime:.2f}")
 
             # Update customer node creation with new median values
@@ -446,7 +467,10 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
     median_sla_deviation_risk: '{customer_median_sla_deviation:.2f}',
     median_traffic_coefficient: '{customer_median_traffic_coef:.2f}%',
     median_usage_risk: '{customer_median_usage_risk:.2f}',
-    median_service_sla: '{customer_median_service_sla:.2f}%',
+    median_service_sla_tier1: '{customer_median_service_sla_tier1:.2f}%',
+    median_service_sla_tier2: '{customer_median_service_sla_tier2:.2f}%',
+    median_service_sla_tier3: '{customer_median_service_sla_tier3:.2f}%',
+    median_service_sla_tier4: '{customer_median_service_sla_tier4:.2f}%',
     median_annual_downtime: '{customer_median_annual_downtime:.2f}'
     }})
 """ + cypher_query
@@ -455,10 +479,10 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
             for vendor in selected_vendors:
                 vendor_id = sanitize_cypher_identifier(vendor)
                 cypher_query = f"""CREATE ({vendor_id}:TECHNOLOGY_PROVIDER {{name: '{vendor}',
-                  vendor_median_sla_usage_percentage: '0.0',
-                  vendor_median_sla_deviation_risk: '0.0',
-                  vendor_median_traffic_coefficient: '0.0',
-                  vendor_median_usage_risk: '0.0'
+                  median_sla_usage_percentage: '0.0',
+                  median_sla_deviation_risk: '0.0',
+                  median_traffic_coefficient: '0.0',
+                  median_usage_risk: '0.0'
                   }})
                   """ + cypher_query
             # 

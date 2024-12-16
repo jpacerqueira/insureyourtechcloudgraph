@@ -1,10 +1,10 @@
-# This code is compatible with Terraform 4.25.0 and versions that are backward compatible to 4.25.0.
+# This code is compatible with Terraform 4.25.0 and versions that are backwards compatible to 4.25.0.
 # For information about validating this Terraform code, see https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/google-cloud-platform-build#format-and-validate-the-configuration
 
-resource "google_compute_instance" "insureyourtech-cloud-20241211-141306" {
+resource "google_compute_instance" "insureyourtechcloudgraph-prod1" {
   boot_disk {
     auto_delete = true
-    device_name = "insureyourtech-cloud-20241211-141306"
+    device_name = "insureyourtechcloudgraph-prod1"
 
     initialize_params {
       image = "projects/debian-cloud/global/images/debian-12-bookworm-v20241210"
@@ -18,14 +18,14 @@ resource "google_compute_instance" "insureyourtech-cloud-20241211-141306" {
   can_ip_forward      = true
   deletion_protection = false
   enable_display      = false
-  hostname            = "insureyourtechcloud.fuelbigdata-test1.com"
+  hostname            = "insureyourtech.cloud.prod1"
 
   labels = {
     goog-ec-src = "vm_add-tf"
   }
 
-  machine_type = "e2-standard-2"
-  name         = "insureyourtech-cloud-20241211-141306"
+  machine_type = "e2-medium"
+  name         = "insureyourtechcloudgraph-prod1"
 
   network_interface {
     access_config {
@@ -34,7 +34,7 @@ resource "google_compute_instance" "insureyourtech-cloud-20241211-141306" {
 
     queue_count = 0
     stack_type  = "IPV4_ONLY"
-    subnetwork  = "projects/fuelbigdata-test1/regions/europe-west2/subnetworks/default"
+    subnetwork  = "projects/aerial-valor-444916-i0/regions/us-east1/subnetworks/default"
   }
 
   scheduling {
@@ -45,7 +45,7 @@ resource "google_compute_instance" "insureyourtech-cloud-20241211-141306" {
   }
 
   service_account {
-    email  = "1063610512413-compute@developer.gserviceaccount.com"
+    email  = "937054037884-compute@developer.gserviceaccount.com"
     scopes = ["https://www.googleapis.com/auth/devstorage.read_only", "https://www.googleapis.com/auth/logging.write", "https://www.googleapis.com/auth/monitoring.write", "https://www.googleapis.com/auth/service.management.readonly", "https://www.googleapis.com/auth/servicecontrol", "https://www.googleapis.com/auth/trace.append"]
   }
 
@@ -55,6 +55,6 @@ resource "google_compute_instance" "insureyourtech-cloud-20241211-141306" {
     enable_vtpm                 = true
   }
 
-  tags = ["http-server", "https-server", "lb-health-check"]
-  zone = "europe-west2-a"
+  tags = ["http-server", "https-server"]
+  zone = "us-east1-c"
 }
