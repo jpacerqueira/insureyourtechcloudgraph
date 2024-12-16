@@ -1,58 +1,140 @@
 
-CREATE (cust_Fuel_DataScience_BigData_Limited:CUSTOMER_NAME {
-    name: 'Fuel DataScience BigData Limited',
-    project_name: 'Project by Fuel DataScience BigData Limited',
-    median_sla_usage_percentage: '227.66%',
-    median_sla_deviation_risk: '996.45',
-    median_traffic_coefficient: '0.11%',
-    median_usage_risk: '996.95',
-    median_service_sla: '99.95%',
-    median_annual_downtime: '598.00'
+CREATE (cust_Test:CUSTOMER_NAME {
+    name: 'Test',
+    project_name: 'Project by Test',
+    median_sla_usage_percentage: '175.51%',
+    median_sla_deviation_risk: '995.87',
+    median_traffic_coefficient: '0.09%',
+    median_usage_risk: '996.37',
+    median_service_sla_tier1: '99.95%',
+    median_service_sla_tier2: '99.00%',
+    median_service_sla_tier3: '95.00%',
+    median_service_sla_tier4: '95.00%',
+    median_annual_downtime: '461.00'
     })
-CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
-                    name: 'Amazon AWS',
-                    vendor_median_sla_usage_percentage: '227.66%',
-                    vendor_median_sla_deviation_risk: '996.45',
-                    vendor_median_traffic_coefficient: '0.11%',
-                    vendor_median_usage_risk: '996.95',
-                    vendor_median_service_sla: '0.00%',
-                    vendor_median_annual_downtime: '598.00'
+CREATE (Google_Cloud_GCP:TECHNOLOGY_PROVIDER {
+                    name: 'Google Cloud GCP',
+                    median_sla_usage_percentage: '175.51%',
+                    median_sla_deviation_risk: '995.87',
+                    median_traffic_coefficient: '0.09%',
+                    median_usage_risk: '996.37',
+                    median_service_sla_tier1: '99.95%',
+                    median_service_sla_tier2: '99.00%',
+                    median_service_sla_tier3: '95.00%',
+                    median_service_sla_tier4: '95.00%',
+                    median_annual_downtime: '461.00'
                 })
 
-CREATE (Amazon_s3:TECHNOLOGY_SERVICE {
-    name: 'Amazon s3',
-    sla_usage: '137.05%',
-    sla_deviation_risk: '996.447',
-    traffic_coefficient: '0.06849%',
-    usage_risk: '996.947',
-    annual_downtime_minutes: '360.00',
+CREATE (Google_Cloud_VertexAI:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud VertexAI',
+    sla_usage: '152.2831431',
+    sla_deviation_risk: '996.219',
+    traffic_coefficient: '0.07610350076',
+    usage_risk: '996.719',
+    annual_downtime_minutes: '400',
     service_sla_tier1: '99.95000',
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited)-[:CUSTOMER_USES_SERVICE]->(Amazon_s3)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '137.05%',
-    sla_deviation_risk: '996.447',
-    traffic_coefficient: '0.06849%',
-    usage_risk: '996.947'
-}]->(Amazon_s3)
+CREATE (cust_Test)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_VertexAI)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '152.2831431',
+    sla_deviation_risk: '996.219',
+    traffic_coefficient: '0.07610350076',
+    usage_risk: '996.719'
+}]->(Google_Cloud_VertexAI)
 
-CREATE (Amazon_Elastic_Compute_Cloud:TECHNOLOGY_SERVICE {
-    name: 'Amazon Elastic Compute Cloud',
-    sla_usage: '227.66%',
-    sla_deviation_risk: '995.089',
-    traffic_coefficient: '0.11377%',
-    usage_risk: '995.590',
-    annual_downtime_minutes: '598.00',
+CREATE (Google_Cloud_Run:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud Run',
+    sla_usage: '175.5063224',
+    sla_deviation_risk: '995.871',
+    traffic_coefficient: '0.08770928463',
+    usage_risk: '996.371',
+    annual_downtime_minutes: '461.00',
     service_sla_tier1: '99.95000',
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Fuel_DataScience_BigData_Limited)-[:CUSTOMER_USES_SERVICE]->(Amazon_Elastic_Compute_Cloud)
-CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '227.66%',
-    sla_deviation_risk: '995.089',
-    traffic_coefficient: '0.11377%',
-    usage_risk: '995.590'
-}]->(Amazon_Elastic_Compute_Cloud)
+CREATE (cust_Test)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Run)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '175.5063224',
+    sla_deviation_risk: '995.871',
+    traffic_coefficient: '0.08770928463',
+    usage_risk: '996.371'
+}]->(Google_Cloud_Run)
+
+CREATE (Google_Cloud_BigQuery:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud BigQuery',
+    sla_usage: '175.5063224',
+    sla_deviation_risk: '995.871',
+    traffic_coefficient: '0.08770928463',
+    usage_risk: '996.371',
+    annual_downtime_minutes: '461.00',
+    service_sla_tier1: '99.95000',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Test)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_BigQuery)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '175.5063224',
+    sla_deviation_risk: '995.871',
+    traffic_coefficient: '0.08770928463',
+    usage_risk: '996.371'
+}]->(Google_Cloud_BigQuery)
+
+CREATE (Google_Cloud_SQL:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud SQL',
+    sla_usage: '175.5063224',
+    sla_deviation_risk: '995.871',
+    traffic_coefficient: '0.08770928463',
+    usage_risk: '996.371',
+    annual_downtime_minutes: '461.00',
+    service_sla_tier1: '99.95000',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Test)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_SQL)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '175.5063224',
+    sla_deviation_risk: '995.871',
+    traffic_coefficient: '0.08770928463',
+    usage_risk: '996.371'
+}]->(Google_Cloud_SQL)
+
+CREATE (AlloyDB_for_PostgreSQL:TECHNOLOGY_SERVICE {
+    name: 'AlloyDB for PostgreSQL',
+    sla_usage: '121.8265145',
+    sla_deviation_risk: '996.675',
+    traffic_coefficient: '0.06088280061',
+    usage_risk: '997.175',
+    annual_downtime_minutes: '320.00',
+    service_sla_tier1: '99.95000',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Test)-[:CUSTOMER_USES_SERVICE]->(AlloyDB_for_PostgreSQL)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '121.8265145',
+    sla_deviation_risk: '996.675',
+    traffic_coefficient: '0.06088280061',
+    usage_risk: '997.175'
+}]->(AlloyDB_for_PostgreSQL)
+
+CREATE (Google_Cloud_Compute_Engine:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud Compute Engine',
+    sla_usage: '175.5063224',
+    sla_deviation_risk: '995.871',
+    traffic_coefficient: '0.08770928463',
+    usage_risk: '996.371',
+    annual_downtime_minutes: '461.00',
+    service_sla_tier1: '99.95000',
+    service_credit_back_tier1: '10.000'
+})
+
+CREATE (cust_Test)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Compute_Engine)
+CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
+    sla_usage: '175.5063224',
+    sla_deviation_risk: '995.871',
+    traffic_coefficient: '0.08770928463',
+    usage_risk: '996.371'
+}]->(Google_Cloud_Compute_Engine)
