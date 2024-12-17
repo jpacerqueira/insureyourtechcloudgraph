@@ -19,6 +19,7 @@ COPY CustomerPortal_app.py .
 # Copy certs and set permissions
 COPY certs ./certs
 RUN chmod 600 /app/certs/server8183.key /app/certs/server8183.cert
+RUN chmod 600 /app/certs/server8185.key /app/certs/server8185.cert
 
 EXPOSE 8185
 

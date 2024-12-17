@@ -27,7 +27,7 @@ localityName              = London
 0.organizationName        = FUEL DATASCIENCE BIGDATA LIMITED
 organizationalUnitName    = InsureYourTech.Cloud
 commonName                = api-cloud-risk.insureyourtech.cloud
-emailAddress              = business@insureyourtech.com
+emailAddress              = business@insureyourtech.cloud
 
 [sans_list]
 DNS.1                     = api-cloud-risk.insureyourtech.cloud

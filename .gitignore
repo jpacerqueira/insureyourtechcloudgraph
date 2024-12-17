@@ -39,6 +39,8 @@ cloud-services-risk-ratings-api/certs/server8184.cert
 cloud-services-risk-ratings-api/certs/server8184.key
 cloud-services-risk-ratings-api/certs/cserver8184.cert
 cloud-services-risk-ratings-api/certs/cserver8184.key
+cloud-services-risk-ratings-api/certs/server8185.cert
+cloud-services-risk-ratings-api/certs/server8185.key
 cloud-services-risk-ratings-api/node-api/certs/openssl.cnf
 cloud-services-risk-ratings-api/node-api/certs/openssl.cnf
 cloud-services-risk-ratings-api/node-api/certs/server8183.cert
