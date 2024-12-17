@@ -16,6 +16,58 @@ from neo4j import GraphDatabase
 from flask import Flask
 from flask_cors import CORS
 
+# Streamlit app starts here
+# Add this at the very beginning of your app, before any other Streamlit commands
+st.set_page_config(
+    page_title="Cloud.Risk Graph - Customer Portal App",
+    page_icon="🌐",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://insureyourtech.cloud',
+        'Report a bug': "https://insureyourtech.cloud",
+        'About': "# Cloud.Risk Graph - Customer Portal App"
+    }
+)
+
+# Then update your title and subheader
+st.markdown("Cloud.Risk Graph - Customer Portal App", unsafe_allow_html=True)
+st.markdown("New Cloud.Risk.Graph - Analysis", unsafe_allow_html=True)
+st.header("Customer Portal App", anchor='top-customer-portal-app', divider='grey')
+# Add favicon using HTML
+st.markdown(
+    """
+    <link rel="icon" 
+          type="image/x-icon" 
+          href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://insureyourtech.cloud&size=18">
+    """,
+    unsafe_allow_html=True
+)
+
+
+# Add custom CSS to modify multiselect colors and page width
+st.markdown("""
+    <style>
+    /* Set page width */
+    .block-container {
+        max-width: 1400px;
+        padding-top: 2rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    /* Change the color of selected items in multiselect */
+    .stMultiSelect [data-baseweb="tag"] {
+        background-color: #808080 !important;
+    }
+    
+    /* Change the color of selected item in selectbox */
+    .stSelectbox [data-baseweb="tag"] {
+        background-color: #808080 !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 # Initialize the Neo4j connection
 def init_neo4j_connection(uri, user, password, max_retries=3):
@@ -59,9 +111,9 @@ def fetch_nodes_by_label(driver, label):
 
 # Add this class for SSL adapter
 class SSLAdapter(requests.adapters.HTTPAdapter):
-    def __init__(self, ssl_cert_file=None, ssl_key_file=None):
-        self.ssl_cert_file = ssl_cert_file
-        self.ssl_key_file = ssl_key_file
+    def __init__(self, ssl_cert_files=None, ssl_key_files=None):
+        self.ssl_cert_files = ssl_cert_files or []
+        self.ssl_key_files = ssl_key_files or []
         super().__init__()
 
     def init_poolmanager(self, connections, maxsize, block=False):
@@ -69,11 +121,12 @@ class SSLAdapter(requests.adapters.HTTPAdapter):
         context.check_hostname = False
         context.verify_mode = ssl.CERT_NONE  # Disable certificate verification
         
-        if self.ssl_cert_file and self.ssl_key_file:
+        # Load multiple certificates if provided
+        for cert_file, key_file in zip(self.ssl_cert_files, self.ssl_key_files):
             try:
-                context.load_cert_chain(certfile=self.ssl_cert_file, keyfile=self.ssl_key_file)
+                context.load_cert_chain(certfile=cert_file, keyfile=key_file)
             except Exception as e:
-                st.warning(f"Failed to load SSL certificates: {str(e)}")
+                st.warning(f"Failed to load SSL certificate pair ({cert_file}, {key_file}): {str(e)}")
         
         self.poolmanager = poolmanager.PoolManager(
             num_pools=connections,
@@ -87,8 +140,14 @@ def create_ssl_session():
     session = requests.Session()
     try:
         adapter = SSLAdapter(
-            ssl_cert_file='./certs/server8183.cert',
-            ssl_key_file='./certs/server8183.key'
+            ssl_cert_files=[
+                './certs/server8185.cert', # customer-portal-app
+                './certs/server8183.cert'  # API server econd certificate
+            ],
+            ssl_key_files=[
+                './certs/server8185.key',   # customer-portal-app
+                './certs/server8183.key'    # API server econd key
+            ]
         )
     except Exception as e:
         st.warning(f"Using SSL adapter without certificates: {str(e)}")
@@ -139,34 +198,6 @@ def sanitize_cypher_identifier(text):
         sanitized = 'n' + sanitized
     return sanitized
 
-# Streamlit app starts here
-st.title("Cloud.Risk Graph - Customer Portal")
-st.header("Customer Submission App")
-
-# Add custom CSS to modify multiselect colors and page width
-st.markdown("""
-    <style>
-    /* Set page width */
-    .block-container {
-        max-width: 1400px;
-        padding-top: 2rem;
-        padding-right: 2rem;
-        padding-left: 2rem;
-        padding-bottom: 2rem;
-    }
-    
-    /* Change the color of selected items in multiselect */
-    .stMultiSelect [data-baseweb="tag"] {
-        background-color: #808080 !important;
-    }
-    
-    /* Change the color of selected item in selectbox */
-    .stSelectbox [data-baseweb="tag"] {
-        background-color: #808080 !important;
-    }
-    </style>
-""", unsafe_allow_html=True)
-
 #Obtain Environment Variables
 load_dotenv(".env")
 
@@ -174,6 +205,7 @@ load_dotenv(".env")
 uri = os.getenv("NEO4J_CLIENT_URI", "bolt://host.docker.internal:17687") # TODO: changed from "bolt://customer.risk.graph.neo4j:17687"
 user = os.getenv("NEO4J_USERNAME", "neo4j")
 password = os.getenv("NEO4J_PASSWORD", "password")
+is_prod = os.getenv("IS_PROD", "False")
 
 # Initialize Neo4j connection using environment variables
 driver = init_neo4j_connection(uri, user, password)
@@ -182,9 +214,6 @@ driver = init_neo4j_connection(uri, user, password)
 #    st.stop()
 
 # Replace the existing form section with new cloud risk assessment form
-st.subheader("New Cloud Risk Assessment")
-st.subheader("Cloud.Risk.Graph - Analysis")
-
 # Define services dictionary before using it
 services = {
     "Amazon AWS": ["Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon Route 53","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon Kinesis","Amazon DataZone",
@@ -256,7 +285,7 @@ region_type = st.selectbox("Select Region Type", ["global", "regional"])
 # Analyze Cloud Risk - modified to handle multiple services
 if st.button("Analyze Cloud Risk"):
     if company_name and selected_services and region_type:
-        st.header("Risk Analysis Results")
+        st.header("Risk Analysis Results", anchor='risk-analysis-results', divider='grey')
         
         # Initialize lists to store values for median calculation
         customer_sla_usage_values = []
@@ -445,7 +474,7 @@ CREATE ({vendor_id})-[:CONNECTED_RISK {{
             customer_median_service_sla_tier4 = sorted(customer_service_sla_tier4_values)[len(customer_service_sla_tier4_values)//2]
             customer_median_annual_downtime = sorted(customer_annual_downtime_values)[len(customer_annual_downtime_values)//2]
 
-            st.header("Customer Summary")           
+            st.header("Customer Summary", anchor='customer-summary', divider='grey')           
             st.subheader("Overall Cloud Risk Analysis")
             col1, col2, col3 = st.columns(3)
             with col1:
@@ -507,7 +536,7 @@ CREATE (cust_{company_id}:CUSTOMER_NAME {{
         st.success(f"Generated Cypher query saved to {output_path}")
         st.divider()
 
-        st.header("Individual Cloud Services Risk Analysis")
+        st.header("Services Individual Cloud.Risk Analysis", anchor='services-individual-cloud-risk-analysis', divider='grey')
         st.subheader("by Cloud Services")
 
         # Store the toggle state in session state if it doesn't exist
@@ -667,7 +696,7 @@ Report Source: {row.get('source_outage_report', 'Unknown Source')}
    
 
 # VIEW Results -  from Application - Customer
-st.header("View your Cloud Risk Graphs")
+st.header("View your Cloud.Risk Graph", anchor='view-your-cloud-risk-graph', divider='grey')
 
 # Get list of files from neo4j_customer_submission folder
 submission_folder = "neo4j_customer_submission"
@@ -700,7 +729,7 @@ else:
                 
             st.link_button(
                 f"View Your Cloud Risk Graph - {selection}",
-                url=f"http://localhost:17474/", # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
+                url=f"http://localhost:17474/" if is_prod=="False" else f"http://34.23.41.252:17474/", # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
                 use_container_width=True
             )
         except Exception as e:
@@ -708,12 +737,15 @@ else:
 
 # Interactive Explore Graph Risk data
 st.subheader("Explore All Cloud Risk Graph - Records")
-st.caption("Go to http://localhost:17474/  - Explore your Cloud Services Cloud.Risk.Graph . with Neo4J Browser") # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
+if is_prod=="False":
+    st.caption("Go to http://localhost:17474/  - DEV - Explore your Cloud Services Cloud.Risk.Graph . with Neo4J Browser") # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
+else:
+    st.caption("Go to http://34.23.41.252:17474/  - PROD - Explore your Cloud Services Cloud.Risk.Graph . with Neo4J Browser") # TODO: change to cloudriskgraph.insureyourtech.cloud:17474
 
 # Flask API
 app = Flask(__name__)
 CORS(app, resources={
-    r"/*": {
+    r"/*/": {
         "origins": [
             "http://localhost:8504",
             "http://localhost:17474",
@@ -722,7 +754,8 @@ CORS(app, resources={
             "http://host.docker.internal:17474",
             "https://customerportal.cloudriskgraph.insureyourtech.cloud",
             "http://cloudriskgraph.insureyourtech.cloud:17474",
-            "https://cloudriskgraph.insureyourtech.cloud:17474"
+            "https://cloudriskgraph.insureyourtech.cloud:17474",
+            "https://app-cloud-risk.insureyourtech.cloud"
         ],
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization", "Access-Control-Allow-Origin"],
