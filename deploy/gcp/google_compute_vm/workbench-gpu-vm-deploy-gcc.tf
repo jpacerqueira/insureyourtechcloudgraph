@@ -21,14 +21,14 @@ resource "google_compute_instance" "insureyourtechcloudgraph-workbench" {
 
   guest_accelerator {
     count = 1
-    type  = "projects/aerial-valor-444916-i0/zones/europe-west1-b/acceleratorTypes/nvidia-tesla-t4"
+    type  = "projects/aerial-valor-444916-i0/zones/europe-west4-c/acceleratorTypes/nvidia-l4"
   }
 
   labels = {
     goog-ec-src = "vm_add-tf"
   }
 
-  machine_type = "n1-standard-4"
+  machine_type = "g2-standard-4"
   name         = "insureyourtechcloudgraph-workbench"
 
   network_interface {
@@ -38,7 +38,7 @@ resource "google_compute_instance" "insureyourtechcloudgraph-workbench" {
 
     queue_count = 0
     stack_type  = "IPV4_ONLY"
-    subnetwork  = "projects/aerial-valor-444916-i0/regions/europe-west1/subnetworks/default"
+    subnetwork  = "projects/aerial-valor-444916-i0/regions/europe-west4/subnetworks/default"
   }
 
   scheduling {
@@ -59,5 +59,5 @@ resource "google_compute_instance" "insureyourtechcloudgraph-workbench" {
     enable_vtpm                 = true
   }
 
-  zone = "europe-west1-b"
+  zone = "europe-west4-c"
 }
