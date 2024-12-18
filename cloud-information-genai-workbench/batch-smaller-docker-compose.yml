@@ -17,12 +17,12 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '16.0'  # Limit to 2 CPUs
-          memory: 24g   # Limit memory to 8GB to prevent over-usage
+          cpus: '32.0'  # Limit to 2 CPUs
+          memory: 64g   # Limit memory to 8GB to prevent over-usage
         reservations:
           cpus: '4.0'  # Reserve 1 CPU core
-          memory: 12g  # Reserve 4GB memory
-    mem_limit: 24g         # Limit Docker container to 8GB of RAM (adjust as necessary)
+          memory: 24g  # Reserve 4GB memory
+    mem_limit: 64g         # Limit Docker container to 8GB of RAM (adjust as necessary)
     logging:
       driver: "json-file"
       options:
