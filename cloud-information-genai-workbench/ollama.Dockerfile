@@ -1,11 +1,11 @@
+FROM ollama/ollama::0.5.3-rc0 AS ollama 
 #syntax = docker/dockerfile:1.4
 
 #FROM ollama/ollama:0.4.2 AS ollama
 #FROM ollama/ollama:0.4.3 AS ollama
 #FROM ollama/ollama:0.5.0 AS ollama #
 ### rocm is for AMD GPU support NO NVIDIA Drivers
-FROM ollama/ollama:0.5.0-rc1-rocm AS ollama 
- 
+
 COPY ./run-ollama_llm.sh /root/run-ollama_llm.sh
 
 WORKDIR /root
