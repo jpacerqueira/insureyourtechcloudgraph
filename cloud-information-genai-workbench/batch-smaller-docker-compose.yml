@@ -17,17 +17,17 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '4.0'  # Limit to 2 CPUs
-          memory: 12g   # Limit memory to 8GB to prevent over-usage
+          cpus: '8.0'  # Limit to 2 CPUs
+          memory: 24g   # Limit memory to 8GB to prevent over-usage
         reservations:
-          cpus: '1.0'  # Reserve 1 CPU core
-          memory: 2g   # Reserve 4GB memory
-    mem_limit: 12g         # Limit Docker container to 8GB of RAM (adjust as necessary)
+          cpus: '4.0'  # Reserve 1 CPU core
+          memory: 4g   # Reserve 4GB memory
+    mem_limit: 24g         # Limit Docker container to 8GB of RAM (adjust as necessary)
     logging:
       driver: "json-file"
       options:
-        max-size: "20m"
-        max-file: "3"
+        max-size: "100m"
+        max-file: "2"
     healthcheck:
       test: ["CMD", "ollama", "list"]  # Check if Ollama is responding
       interval: 70s                    # Run the health check every 20 seconds
