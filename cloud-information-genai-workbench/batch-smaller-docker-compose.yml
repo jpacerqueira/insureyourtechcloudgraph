@@ -11,6 +11,25 @@ services:
     environment:
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL_EXT-http://0.0.0.0:11434} # host.docker.internal:11434}
       - LLM=${LLM-llama3.2}
+      - OLLAMA_FLASH_ATTENTION=1
+      - OLLLAMA_KV_CACHE_TYPE=q4_0 # q8_0 , q16_0 # ollama serve - parameters
+      # - FORCE_CUDA=1  # For GPU support if using CUDA-enabled machine
+      # - PYTHONUNBUFFERED=1
+      # - NVIDIA_VISIBLE_DEVICES=all  # If you have a GPU, uncomment this line for GPU access
+    deploy:
+      resources:
+        limits:
+          cpus: '12.00'  # Limit to 2 CPUs
+          memory: 12g   # Limit memory to 8GB to prevent over-usage
+        reservations:
+          cpus: '4.0'  # Reserve 1 CPU core
+          memory: 8g  # Reserve 4GB memory
+    mem_limit: 12g         # Limit Docker container to 8GB of RAM (adjust as necessary)
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "2"
+        max-size: "100000m"
     healthcheck:
       test: ["CMD", "ollama", "list"]  # Check if Ollama is responding
       interval: 70s                    # Run the health check every 20 seconds
