@@ -14,20 +14,20 @@ services:
       # - FORCE_CUDA=1  # For GPU support if using CUDA-enabled machine
       # - PYTHONUNBUFFERED=1
       # - NVIDIA_VISIBLE_DEVICES=all  # If you have a GPU, uncomment this line for GPU access
-  #  deploy:
-  #    resources:
-  #      limits:
-  #        cpus: '16.00'  # Limit to 2 CPUs
-  #        memory: 16g   # Limit memory to 8GB to prevent over-usage
-  #      reservations:
-  #        cpus: '4.0'  # Reserve 1 CPU core
-  #        memory: 8g  # Reserve 4GB memory
-  #  mem_limit: 16g         # Limit Docker container to 8GB of RAM (adjust as necessary)
-  #  logging:
-  #    driver: "json-file"
-  #    options:
-  #      max-file: "2"
-  #      max-size: "100000m"
+    deploy:
+      resources:
+        limits:
+          cpus: '12.00'  # Limit to 2 CPUs
+          memory: 12g   # Limit memory to 8GB to prevent over-usage
+        reservations:
+          cpus: '4.0'  # Reserve 1 CPU core
+          memory: 8g  # Reserve 4GB memory
+    mem_limit: 12g         # Limit Docker container to 8GB of RAM (adjust as necessary)
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "2"
+        max-size: "100000m"
     healthcheck:
       test: ["CMD", "ollama", "list"]  # Check if Ollama is responding
       interval: 70s                    # Run the health check every 20 seconds
