@@ -1,0 +1,24 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+Google Cloud Interconnect experienced elevated packet loss from Hyderabad, India edge location to regions asia-south1, asia-south2, and asia-southeast1.
+
+Here is the information in a text format:
+
+Impact Date : 2024-09-11 08:00 UTC
+Duration : 3 hours, 20 minutes
+Root Cause : Not specified
+Downtime Period : 2024-09-11 08:00 - 2024-09-11 11:20 UTC
+Resolved Date : 2024-09-11 11:20 UTC
+
+Here is the information in a table format:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Interconnect | asia-south1 |  | 2024-09-11 08:00 UTC | 3 hours, 20 minutes | Not specified | 2024-09-11 08:00 - 2024-09-11 11:20 UTC | 2024-09-11 11:20 UTC |
+
+Overall Summary:
+Google Cloud Service was impacted by an outage on September 11, 2024. The outage started at 08:00 UTC and lasted for 3 hours and 20 minutes. The root cause of the outage is not specified. The downtime period was from 08:00 UTC to 11:20 UTC. The outage was resolved at 11:20 UTC.
+
+Note: I removed references to Cloud Providers not mentioned in the text, such as Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

@@ -1,0 +1,27 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Google Cloud**
+
+* Service: Cloud Pub/Sub
+* Region: europe-north1
+* Availability Zone:
+	+ europe-north1 ( zone 1 )
+	+ southamerica-west1 ( zone 2 )
+	+ us-west2 ( zone 3 )
+* Impact Date: 2024-04-15 13:00 UTC
+* Duration: 35 minutes
+* Root Cause: Bad configuration change
+* Downtime Period: 35 minutes
+* Resolved Date: 2024-04-15 13:35 UTC
+
+**Summary for Google Cloud**
+
+Google Cloud experienced a 35-minute outage on April 15, 2024, affecting Cloud Pub/Sub in europe-north1, southamerica-west1, and us-west2. The root cause was a bad configuration change.
+
+**Cloud Provider Summary**
+
+| Cloud Provider | Services Impacted | Regions/Availability Zones | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Cloud Pub/Sub | europe-north1, southamerica-west1, us-west2 | 2024-04-15 13:00 UTC | 35 minutes | Bad configuration change | 35 minutes | 2024-04-15 13:35 UTC |
+
+Note: I removed the following cloud providers from the analysis: Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

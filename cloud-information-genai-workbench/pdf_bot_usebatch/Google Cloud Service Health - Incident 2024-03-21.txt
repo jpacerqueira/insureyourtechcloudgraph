@@ -1,0 +1,31 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud Service**
+
+* **Service**: Google Distributed Cloud Edge
+* **Region**: Pacific
+* **Availability Zone**: Not specified
+* **Impact Date**: 2024-03-20 09:29 UTC
+* **Duration**: 5 days, 17 hours, and 3 minutes
+* **Root Cause**: Customers attempting to create a new Google Kubernetes Engine (GKE) cluster in a GDC Edge Zone may encounter timeout or internal errors, leading to cluster creation failures.
+* **Downtime Period**: Not specified
+* **Resolved Date**: 2024-03-25 08:32 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Google Distributed Cloud Edge | pacific |  | 2024-03-20 09:29 UTC | 5 days, 17 hours, and 3 minutes | Customers attempting to create a new Google Kubernetes Engine (GKE) cluster in a GDC Edge Zone may encounter timeout or internal errors, leading to cluster creation failures. | Not specified | 2024-03-25 08:32 UTC |
+
+Here is the overall summary:
+
+**Cloud Providers Impacted**: Google Cloud
+**Services Impacted**: Google Distributed Cloud Edge
+**Regions Impacted**: pacific
+**Availability Zones Impacted**: Not specified
+**Impact Dates**: 2024-03-20 UTC
+**Duration**: 5 days, 17 hours, and 3 minutes
+
+Note: The duration is calculated as follows: (5 days x 24 hours) + (17 hours) + (3 minutes) = 120 hours + 3 minutes ≈ 5 days, 17 hours, and 3 minutes.

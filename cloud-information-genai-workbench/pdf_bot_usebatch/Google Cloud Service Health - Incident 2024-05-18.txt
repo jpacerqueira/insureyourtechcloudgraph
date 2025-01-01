@@ -1,0 +1,32 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud Service**
+
+* **Service**: Google Cloud Tasks
+* **Region**: us-east1
+* **Availability Zone**: Not specified
+* **Impact Date**: 2024-05-18 07:44 UTC
+* **Duration**: 2 hours and 24 minutes
+* **Root Cause**: Increased latency for create task calls in us-east1 region
+* **Downtime Period**: 2024-05-18 09:52 - 2024-05-18 11:08 UTC
+* **Resolved Date**: 2024-05-18 10:36 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Google Cloud Tasks | us-east1 |  | 2024-05-18 07:44 UTC | 2 hours and 24 minutes | Increased latency for create task calls in us-east1 region | 2024-05-18 09:52 - 2024-05-18 11:08 UTC | 2024-05-18 10:36 UTC |
+
+**Summary**
+
+* Cloud Provider impacted: Google Cloud
+* Services impacted: Google Cloud Tasks
+* Regions impacted: us-east1
+* Availability Zones not specified
+* Impact dates: 2024-05-18 07:44 UTC
+* Duration of outage: 2 hours and 24 minutes
+* Root cause of outage: Increased latency for create task calls in us-east1 region
+* Downtime period: 2024-05-18 09:52 - 2024-05-18 11:08 UTC
+* Resolved date: 2024-05-18 10:36 UTC
