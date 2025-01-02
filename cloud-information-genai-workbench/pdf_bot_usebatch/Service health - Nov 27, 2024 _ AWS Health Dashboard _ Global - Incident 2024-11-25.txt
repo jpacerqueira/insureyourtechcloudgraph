@@ -1,0 +1,103 @@
+After analyzing the provided text, I have identified the following public cloud services that were impacted:
+
+**Amazon Web Services (AWS)**
+
+1. Amazon Elastic Compute Cloud
+	* Region: us-west-2
+	* Availability Zone: 
+	* Impact Date: November 10, 2024
+	* Duration: 3 hours and 18 minutes
+	* Root Cause: Increased API error rates for mutable VPC calls
+	* Downtime Period: 7:55 AM - 11:13 AM PST (UTC-08)
+	* Resolved Date: November 10, 2024
+2. AWS Billing Console
+	* Region: 
+	* Availability Zone: 
+	* Impact Date: November 6, 2024
+	* Duration: 1 hour and 32 minutes
+	* Root Cause: Increased Errors Performing Payments
+	* Downtime Period: 3:42 AM - 5:14 AM PST (UTC-08)
+	* Resolved Date: November 6, 2024
+3. AWS Partner Central
+	* Region: 
+	* Availability Zone: 
+	* Impact Date: October 29, 2024
+	* Duration: 2 hours and 44 minutes
+	* Root Cause: Increased Error Rates
+	* Downtime Period: 4:13 AM - 6:57 AM PDT (UTC-07)
+	* Resolved Date: October 29, 2024
+4. AWS QuickSight
+	* Region: us-east-1
+	* Availability Zone: 
+	* Impact Date: October 25, 2024
+	* Duration: 2 hours and 23 minutes
+	* Root Cause: Increased Login Errors
+	* Downtime Period: 12:19 PM - 2:42 PM EDT (UTC-04)
+	* Resolved Date: October 25, 2024
+5. Multiple services
+	* Region: us-west-2
+	* Availability Zone: 
+	* Impact Date: September 25, 2024
+	* Duration: 1 hour and 17 minutes
+	* Root Cause: Increased Latencies and Errors
+	* Downtime Period: 2:05 PM - 3:22 PM PDT (UTC-07)
+	* Resolved Date: September 25, 2024
+6. Multiple services
+	* Region: eu-south-1
+	* Availability Zone: 
+	* Impact Date: September 11, 2024
+	* Duration: 2 hours and 45 minutes
+	* Root Cause: Increased Error Rates
+	* Downtime Period: 1:34 PM - 4:19 PM GMT (UTC+0)
+	* Resolved Date: September 11, 2024
+7. AWS Identity and Access Management
+	* Region: 
+	* Availability Zone: 
+	* Impact Date: August 29, 2024
+	* Duration: 1 hour and 30 minutes
+	* Root Cause: Connectivity Issues
+	* Downtime Period: 2:31 AM - 4:01 AM PDT (UTC-07)
+	* Resolved Date: August 29, 2024
+8. Amazon Simple Queue Service
+	* Region: us-east-1
+	* Availability Zone: 
+	* Impact Date: August 15, 2024
+	* Duration: 0 hours and 32 minutes
+	* Root Cause: Increased API Error Rates
+	* Downtime Period: 12:50 PM - 12:50 PM EDT (UTC-04)
+	* Resolved Date: August 15, 2024
+9. AWS Service Catalog
+	* Region: us-west-1
+	* Availability Zone: 
+	* Impact Date: August 6, 2024
+	* Duration: 2 hours and 45 minutes
+	* Root Cause: Increased API Error rates
+	* Downtime Period: 8:11 PM - 10:56 PM PDT (UTC-07)
+	* Resolved Date: August 6, 2024
+10. Amazon Elastic MapReduce
+	* Region: us-east-1
+	* Availability Zone: 
+	* Impact Date: August 6, 2024
+	* Duration: 2 hours and 45 minutes
+	* Root Cause: EMR Cluster Launch Failures
+	* Downtime Period: 7:24 PM - 10:09 PM EDT (UTC-04)
+	* Resolved Date: August 6, 2024
+11. Multiple services
+	* Region: us-east-1
+	* Availability Zone: 
+	* Impact Date: July 30, 2024
+	* Duration: 5 hours and 15 minutes
+	* Root Cause: Increased API Error Rates
+	* Downtime Period: 3:40 PM - 9:55 PM EDT (UTC-04)
+	* Resolved Date: July 30, 2024
+
+**Summary**
+
+The following cloud providers were impacted:
+
+| Cloud Provider | Services Impacted | Regions | Availability Zones | Impact Dates | Duration |
+| --- | --- | --- | --- | --- | --- |
+| Amazon Web Services (AWS) | AWS Elastic Compute Cloud, AWS Billing Console, AWS Partner Central, AWS QuickSight, Multiple services, AWS Identity and Access Management, Amazon Simple Queue Service, AWS Service Catalog, Amazon Elastic MapReduce | us-west-2, eu-south-1, us-east-1, us-west-1 |  | November 10, 2024 - July 30, 2024 |  |
+| Multiple services | Multiple services | us-west-2, eu-south-1, us-east-1 |  | September 25, 2024 - July 30, 2024 |  |
+
+Note: The regions and availability zones listed are not exhaustive, as the text only provides specific information for certain services.

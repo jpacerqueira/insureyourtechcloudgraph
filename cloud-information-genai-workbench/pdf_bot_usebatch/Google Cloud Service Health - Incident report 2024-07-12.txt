@@ -1,0 +1,32 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud Service**
+
+* **Cloud Storage for Firebase**
+	+ Region: europe-west3
+	+ Availability Zone: Frankfurt
+	+ Impact Date: 2024-07-09 12:20 UTC
+	+ Duration: 2 days, 14 hours, 19 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-07-10 15:20 - 2024-07-12 07:39 UTC
+	+ Resolved Date: 2024-07-12 07:07 UTC
+
+Here is the output in a fixed format table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Cloud Storage for Firebase | europe-west3 | Frankfurt | 2024-07-09 12:20 UTC | 2 days, 14 hours, 19 minutes | Not specified | 2024-07-10 15:20 - 2024-07-12 07:39 UTC | 2024-07-12 07:07 UTC |
+
+**Summary**
+
+* Cloud Provider impacted: Google Cloud
+* Services impacted: Cloud Storage for Firebase
+* Regions impacted: europe-west3
+* Availability Zones impacted: Frankfurt
+* Impact Dates: 2024-07-09 12:20 UTC
+* Duration of outage: 2 days, 14 hours, 19 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-07-10 15:20 - 2024-07-12 07:39 UTC
+* Resolved Date: 2024-07-12 07:07 UTC

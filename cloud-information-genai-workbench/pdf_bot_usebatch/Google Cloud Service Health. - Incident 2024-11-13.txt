@@ -1,0 +1,37 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Google Cloud Service**
+
+* Service: Vertex Gemini API
+* Region: asia-northeast1 (Tokyo), asia-northeast3 (Seoul), asia-south1 (Mumbai), asia-southeast1 (Singapore), australiasoutheast1 (Sydney), us-central1 (Iowa), us-east1 (Northern Virginia)
+* Availability Zone:
+	+ asia-northeast1: Tokyo
+	+ asia-northeast3: Seoul
+	+ asia-south1: Mumbai
+	+ asia-southeast1: Singapore
+	+ australiasoutheast1: Sydney
+	+ us-central1: Iowa
+	+ us-east1: Northern Virginia
+* Impact Date: 2024-11-13 07:51 UTC
+* Duration: 5 days, 17 hours, 38 minutes
+* Root Cause: Intermitent issue with Vertex Gemini API
+* Downtime Period: 2024-11-13 03:21 UTC - 2024-11-18 02:29 UTC
+* Resolved Date: 2024-11-18 02:29 UTC
+
+**Summary**
+
+Google Cloud Service was impacted by an intermittent issue with Vertex Gemini API in multiple regions of Asia and America. The outage started on November 13, 2024, at 07:51 UTC and lasted for 5 days, 17 hours, and 38 minutes. The affected regions were Tokyo (asia-northeast1), Seoul (asia-northeast3), Mumbai (asia-south1), Singapore (asia-southeast1), Sydney (australia-southeast1), Iowa (us-central1), and Northern Virginia (us-east1).
+
+Here is the output in a table format:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Vertex Gemini API | asia-northeast1 | Tokyo | 2024-11-13 07:51 UTC | 5 days, 17 hours, 38 minutes | Intermitent issue with Vertex Gemini API | 2024-11-13 03:21 UTC - 2024-11-18 02:29 UTC | 2024-11-18 02:29 UTC |
+| Google Cloud | Vertex Gemini API | asia-northeast3 | Seoul | 2024-11-13 07:51 UTC | 5 days, 17 hours, 38 minutes | Intermitent issue with Vertex Gemini API | 2024-11-13 03:21 UTC - 2024-11-18 02:29 UTC | 2024-11-18 02:29 UTC |
+| Google Cloud | Vertex Gemini API | asia-south1 | Mumbai | 2024-11-13 07:51 UTC | 5 days, 17 hours, 38 minutes | Intermitent issue with Vertex Gemini API | 2024-11-13 03:21 UTC - 2024-11-18 02:29 UTC | 2024-11-18 02:29 UTC |
+| Google Cloud | Vertex Gemini API | asia-southeast1 | Singapore | 2024-11-13 07:51 UTC | 5 days, 17 hours, 38 minutes | Intermitent issue with Vertex Gemini API | 2024-11-13 03:21 UTC - 2024-11-18 02:29 UTC | 2024-11-18 02:29 UTC |
+| Google Cloud | Vertex Gemini API | australiasoutheast1 | Sydney | 2024-11-13 07:51 UTC | 5 days, 17 hours, 38 minutes | Intermitent issue with Vertex Gemini API | 2024-11-13 03:21 UTC - 2024-11-18 02:29 UTC | 2024-11-18 02:29 UTC |
+| Google Cloud | Vertex Gemini API | us-central1 | Iowa | 2024-11-13 07:51 UTC | 5 days, 17 hours, 38 minutes | Intermitent issue with Vertex Gemini API | 2024-11-13 03:21 UTC - 2024-11-18 02:29 UTC | 2024-11-18 02:29 UTC |
+| Google Cloud | Vertex Gemini API | us-east1 | Northern Virginia | 2024-11-13 07:51 UTC | 5 days, 17 hours, 38 minutes | Intermitent issue with Vertex Gemini API | 2024-11-13 03:21 UTC - 2024-11-18 02:29 UTC | 2024-11-18 02:29 UTC |
+
+Note that Amazon Web Services (AWS) and Microsoft Azure were not mentioned in the original text, so they are not included in this output.

@@ -1,0 +1,80 @@
+Based on the provided text, I will resume the one or more Public Cloud Service outages identified in the text.
+
+**Summary of Outages**
+
+The outage affected multiple cloud products globally, including Google Cloud Console, Google App Engine, Google Cloud Functions, and others. The root cause was a regressive change in rollout strategy that caused deployment failures due to inaccessibility of Cloud Deployment Manager (CDM) services.
+
+**Outage Details per Cloud Provider**
+
+### Google Cloud
+
+* Service: Cloud Run
+* Region: Global
+* Availability Zone: Global
+* Impact Date: 2024-09-04 10:54 UTC
+* Duration: 4 hours, 9 minutes
+* Root Cause: Regressive change in rollout strategy
+* Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+* Resolved Date: 2024-09-04 13:24 UTC
+
+* Service: Google App Engine
+* Region: Global
+* Availability Zone: Global
+* Impact Date: 2024-09-04 10:54 UTC
+* Duration: 4 hours, 9 minutes
+* Root Cause: Regressive change in rollout strategy
+* Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+* Resolved Date: 2024-09-04 13:24 UTC
+
+* Service: Google Cloud Functions
+* Region: Global
+* Availability Zone: Global
+* Impact Date: 2024-09-04 10:54 UTC
+* Duration: 4 hours, 9 minutes
+* Root Cause: Regressive change in rollout strategy
+* Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+* Resolved Date: 2024-09-04 13:24 UTC
+
+### Google Cloud (continued)
+
+* Service: Google Cloud Console
+* Region: Global
+* Availability Zone: Global
+* Impact Date: 2024-09-04 10:54 UTC
+* Duration: 4 hours, 9 minutes
+* Root Cause: Regressive change in rollout strategy
+* Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+* Resolved Date: 2024-09-04 13:24 UTC
+
+* Service: Google Cloud Marketplace
+* Region: Global
+* Availability Zone: Global
+* Impact Date: 2024-09-04 10:54 UTC
+* Duration: 4 hours, 9 minutes
+* Root Cause: Regressive change in rollout strategy
+* Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+* Resolved Date: 2024-09-04 13:24 UTC
+
+### Google Cloud (continued)
+
+* Service: Cloud Deployment Manager
+* Region: Global
+* Availability Zone: Global
+* Impact Date: 2024-09-04 10:54 UTC
+* Duration: 4 hours, 9 minutes
+* Root Cause: Regressive change in rollout strategy
+* Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+* Resolved Date: 2024-09-04 13:24 UTC
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Cloud Run | global | global | 2024-09-04 10:54 UTC | 4 hours, 9 minutes | Regressive change in rollout strategy | 2024-09-04 10:54 - 2024-09-04 13:24 UTC | 2024-09-04 13:24 UTC |
+| Google Cloud | Google App Engine | global | global | 2024-09-04 10:54 UTC | 4 hours, 9 minutes | Regressive change in rollout strategy | 2024-09-04 10:54 - 2024-09-04 13:24 UTC | 2024-09-04 13:24 UTC |
+| Google Cloud | Google Cloud Functions | global | global | 2024-09-04 10:54 UTC | 4 hours, 9 minutes | Regressive change in rollout strategy | 2024-09-04 10:54 - 2024-09-04 13:24 UTC | 2024-09-04 13:24 UTC |
+| Google Cloud | Google Cloud Console | global | global | 2024-09-04 10:54 UTC | 4 hours, 9 minutes | Regressive change in rollout strategy | 2024-09-04 10:54 - 2024-09-04 13:24 UTC | 2024-09-04 13:24 UTC |
+| Google Cloud | Google Cloud Marketplace | global | global | 2024-09-04 10:54 UTC | 4 hours, 9 minutes | Regressive change in rollout strategy | 2024-09-04 10:54 - 2024-09-04 13:24 UTC | 2024-09-04 13:24 UTC |
+| Google Cloud | Cloud Deployment Manager | global | global | 2024-09-04 10:54 UTC | 4 hours, 9 minutes | Regressive change in rollout strategy | 2024-09-04 10:54 - 2024-09-04 13:24 UTC | 2024-09-04 13:24 UTC |
+
+Note: I removed Cloud Vendors not identified in the text, and normalized variables like regions and availability zones to standard lowercase official names of cloud vendors.

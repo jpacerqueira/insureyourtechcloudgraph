@@ -1,0 +1,45 @@
+After analyzing the text, I found that only Microsoft Azure was mentioned as a Cloud Provider. Here is the information about the outage:
+
+**Microsoft Azure**
+
+The incident started on an unspecified date and lasted for several days.
+
+Here are the details of the outage per service impacted:
+
+* Storage: The storage network connectivity was restored after the incident.
+	+ Region: East US 2
+	+ Availability Zone: Not specified
+	+ Impact Date: Not specified
+	+ Duration: Several days
+	+ Root Cause: Unplanned power oscillation in one of the datacenters within an Availability Zone
+	+ Downtime Period: Not specified
+	+ Resolved Date: Not specified
+* Compute: The compute VMs started coming back up automatically after storage and networking issues were resolved.
+	+ Region: East US 2
+	+ Availability Zone: Not specified
+	+ Impact Date: Not specified
+	+ Duration: Several days
+	+ Root Cause: Storage and networking issues
+	+ Downtime Period: Not specified
+	+ Resolved Date: Not specified
+
+**Summary**
+
+* Cloud Provider: Microsoft Azure
+* Services Impacted: Storage, Compute
+* Regions Impacted: East US 2
+* Availability Zones Impacted: Not specified
+* Impact Dates: Not specified
+* Duration: Several days
+* Root Cause: Unplanned power oscillation in one of the datacenters within an Availability Zone
+* Downtime Period: Not specified
+* Resolved Date: Not specified
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | Storage | eastus2 |  |  | Several days | Unplanned power oscillation in one of the datacenters within an Availability Zone | Not specified | Not specified |
+| Microsoft Azure | Compute | eastus2 |  |  | Several days | Storage and networking issues | Not specified | Not specified |
+
+Note: The output table only includes the services and regions mentioned in the text.

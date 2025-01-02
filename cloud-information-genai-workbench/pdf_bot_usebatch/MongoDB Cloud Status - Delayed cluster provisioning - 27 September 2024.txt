@@ -1,0 +1,36 @@
+I don't know the specific details about the outages, including the root cause, duration, and downtime period for each service impacted by the incident.
+
+However, I can provide a summary of the Cloud Providers impacted, services, regions, availability zones, impacted dates, and overall summary based on the provided text:
+
+**Cloud Providers Impacted:**
+
+* Amazon AWS
+* Google GCP
+
+**Services Impacted:**
+
+* Cluster provisioning
+
+**Regions and Availability Zones:**
+
+* No specific regions or availability zones mentioned in the text.
+
+**Impacted Dates:**
+
+* The incident started on September 27, 2024, at UTC 21:39.
+* The outage was ongoing for approximately 2 months.
+
+**Summary of Outages:**
+
+The incident affected MongoDB Cloud and resulted in delayed cluster provisioning operations. The root cause of the outage is currently under investigation.
+
+I don't have information on the specific services impacted by the outage, their regions, availability zones, duration, or downtime period.
+
+Here is a table with the available information:
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Amazon AWS | Cluster Provisioning |  | 2024-09-27 21:39 UTC |  |  |  |  |
+| Google GCP | Cluster Provisioning |  | 2024-09-27 21:39 UTC |  |  |  |  |
+
+Note: The table only includes the available information from the provided text.

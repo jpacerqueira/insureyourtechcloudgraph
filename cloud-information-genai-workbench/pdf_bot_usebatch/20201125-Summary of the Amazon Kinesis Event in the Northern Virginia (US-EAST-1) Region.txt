@@ -1,0 +1,80 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Amazon AWS**
+
+* Service: Amazon Kinesis
+* Region: Northern Virginia (US-EAST-1)
+* Availability Zone: Not specified
+* Impact Date: November 25th, 2020, 2:44 AM PST
+* Duration: Approximately 5 hours and 47 minutes
+* Root Cause: A relatively small addition of capacity that began to be added to the service at 2:44 AM PST
+* Downtime Period: From 2:44 AM PST to 8:31 AM PST (approximately 5 hours and 47 minutes)
+* Resolved Date: November 25th, 2020, 5:47 PM PST
+
+**CloudWatch Events and EventBridge**
+
+* Service: CloudWatch Events and EventBridge
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: November 25th, 2020, 5:15 AM PST
+* Duration: Approximately 12 hours
+* Root Cause: Memory contention on the underlying service hosts used for Lambda function invocations
+* Downtime Period: From 5:15 AM PST to 10:36 AM PST (approximately 5 hours)
+* Resolved Date: November 25th, 2020, 10:36 AM PST
+
+**Lambda**
+
+* Service: Lambda
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: November 25th, 2020, 6:15 AM PST
+* Duration: Approximately 4 hours and 21 minutes
+* Root Cause: Memory contention on the underlying service hosts used for Lambda function invocations
+* Downtime Period: From 6:15 AM PST to 10:36 AM PST (approximately 4 hours)
+* Resolved Date: November 25th, 2020, 10:36 AM PST
+
+**CloudWatch Metrics**
+
+* Service: CloudWatch Metrics
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: November 25th, 2020, 5:47 PM PST
+* Duration: Approximately 2 hours and 12 minutes
+* Root Cause: Recovery of CloudWatch metrics
+* Downtime Period: From 5:47 PM PST to 8:00 PM PST (approximately 1 hour and 13 minutes)
+* Resolved Date: November 25th, 2020, 8:00 PM PST
+
+**Overall Summary**
+
+The following cloud providers were impacted:
+
+* Amazon AWS
+	+ Service: Amazon Kinesis
+	+ Region: Northern Virginia (us-east-1)
+	+ Availability Zone: Not specified
+	+ Impact Date: November 25th, 2020, 02:44 UTC
+	+ Duration: Approximately 5 hours and 47 minutes
+* CloudWatch Events and EventBridge
+	+ Service: CloudWatch Events and EventBridge
+	+ Region: Not specified
+	+ Availability Zone: Not specified
+	+ Impact Date: November 25th, 2020, 05:15 UTC
+	+ Duration: Approximately 12 hours
+* Lambda
+	+ Service: Lambda
+	+ Region: Not specified
+	+ Availability Zone: Not specified
+	+ Impact Date: November 25th, 2020, 06:15 UTC
+	+ Duration: Approximately 4 hours and 21 minutes
+
+The outage started at 02:44 UTC on November 25th, 2020, and lasted for approximately 12 hours. The root cause of the outage was memory contention on the underlying service hosts used for Lambda function invocations.
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Amazon AWS | Kinesis | us-east-1 |  | 2020-11-25T02:44:00Z | 5h47m | Capacity addition | 2020-11-25T08:31:00Z | 2020-11-25T17:47:00Z |
+| Amazon AWS | CloudWatch Events and EventBridge |  |  | 2020-11-25T05:15:00Z | 12h | Memory contention | 2020-11-25T10:36:00Z | 2020-11-25T10:36:00Z |
+| Amazon AWS | Lambda |  |  | 2020-11-25T06:15:00Z | 4h21m | Memory contention | 2020-11-25T10:36:00Z | 2020-11-25T10:36:00Z |
+
+Note: The dates and times are in UTC format.
