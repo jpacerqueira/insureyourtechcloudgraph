@@ -151,8 +151,10 @@ router.get('/premium/outages/list/all', async function (req, res) {
     let connection;
     try {
         connection = await db.connect();
+        // Avoid LLM alucination records =>  data patch with outage_timestamp <= 1735689600  = > 01.Jan.2025 0h00
         const result = await connection.query(
-            `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries`
+            `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries
+            WHERE outage_timestamp <= 1735689600`
         );
         
         const rows = Array.isArray(result) ? result[0] : result.rows;
@@ -178,9 +180,10 @@ router.get('/premium/outages/provider/:provider', async function (req, res) {
     try {
         connection = await db.connect();
         const provider = req.params.provider;
+        // Avoid LLM alucination records =>  data patch with outage_timestamp <= 1735689600  = > 01.Jan.2025 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
-             WHERE cloud_provider = $1`,
+             WHERE cloud_provider = $1 AND outage_timestamp <= 1735689600`,
             [provider]
         );
         
@@ -207,9 +210,10 @@ router.get('/premium/outages/service/:service', async function (req, res) {
     try {
         connection = await db.connect();
         const service = req.params.service;
+        // Avoid LLM alucination records =>  data patch with outage_timestamp <= 1735689600  = > 01.Jan.2025 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
-             WHERE cloud_service = $1`,
+             WHERE cloud_service = $1 AND outage_timestamp <= 1735689600`,
             [service]
         );
         
@@ -236,9 +240,10 @@ router.get('/premium/outages/region/:region', async function (req, res) {
     try {
         connection = await db.connect();
         const region = req.params.region;
+        // Avoid LLM alucination records =>  data patch with outage_timestamp <= 1735689600  = > 01.Jan.2025 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
-             WHERE regions LIKE $1`,
+             WHERE regions LIKE $1 AND outage_timestamp <= 1735689600`,
             [`%${region}%`]
         );
         
