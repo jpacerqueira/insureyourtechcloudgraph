@@ -1,0 +1,575 @@
+const express = require('express');
+const cors = require('cors');
+const neo4j = require('neo4j-driver');
+const dotenv = require('dotenv');
+const path = require('path');
+const bcrypt = require('bcrypt');
+const { Pool } = require('pg');
+
+// Load environment variables
+dotenv.config({ path: '.env' });
+
+var https = require('https');
+var http = require('http');
+var fs = require('fs');
+
+const app = express();
+const port = process.env.PORT || 8184;
+
+var options = {
+    key: fs.readFileSync('/app/certs/server8184.key'),
+    cert: fs.readFileSync('/app/certs/server8184.cert')
+  };
+
+const isProd = process.env.IS_PROD === "true";
+const isSSLDBypass = process.env.SSL_DB_BYPASS === "true" ? false : true;
+
+// Cloud Providers List (optionsForVariable1)
+const cloudProviders = [
+    "Amazon AWS", 
+    "Google Cloud GCP", 
+    "Microsoft Azure", 
+    "IBM Cloud", 
+    "Oracle Cloud OCI", 
+    "Snowflake", 
+    "Databricks", 
+    "Salesforce", 
+    "MongoDB", 
+    "Cloudflare", 
+    "Akamai"
+]
+
+ // Cloud Services List
+ const cloudServices = {
+    "Amazon AWS": ["Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon Route 53","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon Kinesis","Amazon DataZone",
+        "Amazon DocumentDB","Amazon DynamoDB","Amazon AWS RDS","Amazon AWS Aurora Serverles","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
+        "Amazon Elastic File System","Amazon Elastic Block Store","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
+        "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
+        "Amazon AWS Step Functions","Amazon Redshift","Amazon AWS Glue","Amazon Simple Queue Service SQS","Amazon s3","Amazon Elastic Kubernetes Service"],
+    "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Machine Learning","Google Cloud Apigee API","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL","Google Cloud SQL",
+        "Google Cloud Bigtable","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud DataStudio","Google Cloud Datalab","Google Cloud Composer","Google Cloud Looker Studio Pro","Google Cloud reCAPTCHA Enterprise",
+        "Google Cloud Load Balancing","Google Cloud And Media CDN","Google Cloud DNS","Google Kubernetes Engine (GKE)"],
+    "Microsoft Azure": ["Azure Active Directory AAD","Microsoft Entra ID","Azure Active Directory B2C",
+                        "Azure Machine Learning","Azure AI","Azure AI Search","Azure OpenAI Service","Azure API Management","Azure Databricks",
+                        "Azure SQL Managed Instance","Azure SQL Database","Azure Cosmos DB","Azure Database for PostgreSQL","Azure Database for MySQL",
+                        "Azure Batch","Azure App Service","Azure Functions","Azure PowerBI","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)"],
+    "IBM Cloud": ["IBM Watson Platform","IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
+        "IBM Databases","IBM Databases for DataStax","IBM Databases for EDB",
+        "IBM Databases for Elasticsearch","IBM Databases for etcd","IBM Databases for MongoDB",
+        "IBM Databases for MySQL","IBM Databases for PostgreSQL","IBM Databases for Redis",
+        "IBM DataStage","IBM Db2","IBM Db2 Warehouse","IBM watsonx BI Assistant",
+        "IBM Managed Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Kubernetes",
+        "Red Hat OpenShift on IBM Cloud"],
+    "Oracle Cloud OCI": ["Oracle Cloud Infrastructure Virtual Cloud Network (VCN)","Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)"],
+    "Snowflake": ["Snowflake on AWS","Snowflake on Azure","Snowflake on GCP"],
+    "Databricks": ["Databricks SaaS","Databricks Workspace", "Databricks Mlflow", "Databricks Notebooks"],
+    "Salesforce": ["Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud","Salesforce Mulesoft Anypoint Platform"],
+    "MongoDB": [ "MongoDB Atlas","MongoDB Atlas AWS","MongoDB Atlas Azure","MongoDB Atlas GCP","MongoDB Atlas Search","MongoDB Atlas Vector Search","MongoDB Atlas Stream Processing","MongoDB Atlas BI Connector","MongoDB Atlas SQL"],
+    "Cloudflare": ["AnyCast CloudFlare","CDN CloudFlare", "Cloudflare DNS", "Cloudflare DDoS Protection"],
+    "Akamai": ["CDN Akamai", "Edge Computing Akamai", "Security Akamai"],
+    "Macrometa": ["CDN Macrometa", "Edge Computing Macrometa"]
+}
+
+// Cloud Regions List by Provider
+const cloudRegions = {
+    "global": ["global"],
+    "Amazon AWS": [
+        "us-east-1", "us-east-2", "us-west-1", "us-west-2",
+        "eu-west-1", "eu-west-2", "eu-west-3", "eu-central-1", "eu-south-1", "eu-north-1",
+        "ap-northeast-1", "ap-northeast-2", "ap-northeast-3", "ap-southeast-1", "ap-southeast-2", "ap-southeast-3", "ap-southeast-4",
+        "ap-south-1", "ap-east-1",
+        "sa-east-1",
+        "ca-central-1",
+        "me-south-1",
+        "af-south-1"
+    ],
+    "Google Cloud GCP": [
+        "us-central1", "us-east1", "us-east4", "us-west1", "us-west2", "us-west3", "us-west4",
+        "europe-west1", "europe-west2", "europe-west3", "europe-west4", "europe-west6", "europe-north1",
+        "asia-east1", "asia-east2", "asia-northeast1", "asia-northeast2", "asia-northeast3",
+        "asia-southeast1", "asia-southeast2", "asia-south1", "asia-south2",
+        "australia-southeast1", "australia-southeast2",
+        "southamerica-east1", "southamerica-west1",
+        "northamerica-northeast1", "northamerica-northeast2"
+    ],
+    "Microsoft Azure": [
+        "eastus", "eastus2", "centralus", "northcentralus", "southcentralus", "westus", "westus2", "westus3",
+        "westeurope", "northeurope", "uksouth", "ukwest", "francecentral", "francesouth",
+        "germanynorth", "germanywestcentral", "switzerlandnorth", "switzerlandwest", "norwayeast", "norwaywest",
+        "eastasia", "southeastasia", "japaneast", "japanwest", "australiaeast", "australiasoutheast",
+        "centralindia", "southindia", "westindia",
+        "brazilsouth", "brazilsoutheast",
+        "canadacentral", "canadaeast",
+        "southafricanorth", "southafricawest",
+        "uaenorth", "uaecentral"
+    ],
+    "IBM Cloud": [
+        "us-south", "us-east", "us-north", "us-west",
+        "eu-gb", "eu-de", "eu-fr2",
+        "au-syd",
+        "jp-tok", "jp-osa",
+        "ca-tor",
+        "br-sao"
+    ],
+    "Oracle Cloud OCI": [
+        "us-ashburn-1", "us-phoenix-1", "us-sanjose-1",
+        "eu-frankfurt-1", "eu-zurich-1", "eu-amsterdam-1", "uk-london-1",
+        "ap-tokyo-1", "ap-seoul-1", "ap-chuncheon-1", "ap-singapore-1", "ap-mumbai-1", "ap-hyderabad-1",
+        "me-jeddah-1", "me-dubai-1",
+        "sa-saopaulo-1", "sa-vinhedo-1",
+        "ca-montreal-1", "ca-toronto-1",
+        "af-johannesburg-1"
+    ],
+    "Other": ["global-network"] // For Akamai, Cloudflare, etc.
+};
+
+// Flatten regions for backward compatibility if needed
+const allCloudRegions = ["global", ...new Set(Object.values(cloudRegions).flat())];
+
+// Create optionsForVariable2 dynamically from cloudServices
+const optionsForVariable2 = [];
+cloudProviders.forEach(provider => {
+    if (cloudServices[provider]) {
+        cloudServices[provider].forEach(service => {
+            if (!optionsForVariable2.includes(service)) {
+                optionsForVariable2.push(service);
+            }
+        });
+    }
+});
+
+// Create optionsForVariable3 dynamically from cloudRegions
+const optionsForVariable3 = [];
+cloudProviders.forEach(provider => {
+    if (cloudRegions[provider]) {
+        cloudRegions[provider].forEach(region => {
+            if (!optionsForVariable3.includes(region)) {
+                optionsForVariable3.push(region);
+            }
+        });
+    }
+});
+
+// TODO add this to the customer-portal-index.html and simulation-index.html pages
+function updateOptionsForProvider(vendorSelect, serviceSelect, regionSelect) {
+    const selectedVendor = vendorSelect.value;
+    
+    // Update services
+    serviceSelect.innerHTML = '<option value="">Select a Service</option>';
+    if (selectedVendor && cloudServices[selectedVendor]) {
+        cloudServices[selectedVendor].forEach(service => {
+            const option = document.createElement('option');
+            option.value = service;
+            option.textContent = service;
+            serviceSelect.appendChild(option);
+        });
+    }
+    
+    // Update regions
+    regionSelect.innerHTML = '<option value="">Select a Region</option>';
+    if (selectedVendor && cloudRegions[selectedVendor]) {
+        // Always add global option first
+        const globalOption = document.createElement('option');
+        globalOption.value = 'global';
+        globalOption.textContent = 'global';
+        regionSelect.appendChild(globalOption);
+        
+        // Add provider-specific regions
+        cloudRegions[selectedVendor].forEach(region => {
+            const option = document.createElement('option');
+            option.value = region;
+            option.textContent = region;
+            regionSelect.appendChild(option);
+        });
+    }
+}
+
+// Middleware
+app.use(express.json());
+app.use(express.static('public'));
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: false
+}));
+
+// Simplified headers middleware
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+});
+
+// Middleware to parse URL-encoded bodies (as sent by HTML forms)
+app.use(express.urlencoded({ extended: true }));
+
+// Neo4j connection
+const initNeo4jConnection = async () => {
+    const uri = process.env.NEO4J_CLIENT_URI || 'bolt://host.docker.internal:17687';
+    const user = process.env.NEO4J_USERNAME || 'neo4j';
+    const password = process.env.NEO4J_PASSWORD || 'password';
+    
+    try {
+        const driver = neo4j.driver(uri, neo4j.auth.basic(user, password));
+        await driver.verifyConnectivity();
+        return driver;
+    } catch (error) {
+        console.error('Failed to connect to Neo4j:', error);
+        return null;
+    }
+};
+
+function generateCypherQuery(data) {
+    const { companyName, projectName, services, metrics } = data;
+    let cypher = '';
+    const processedVendors = new Set();
+    const processedServices = new Set();
+
+    // Sanitize company name for Cypher
+    const companyId = companyName.replace(/[^a-zA-Z0-9]/g, '_');
+
+    // Create customer node with all metrics
+    cypher += `
+CREATE (cust_sessionid__name_${companyId}:CUSTOMER_NAME {
+    name: '${companyName}',
+    project_name: '${projectName}',
+    median_sla_usage_percentage: '${metrics.customerMedian.sla_usage}%',
+    median_sla_deviation_risk: '${metrics.customerMedian.sla_deviation}',
+    median_traffic_coefficient: '${metrics.customerMedian.traffic_coef}%',
+    median_usage_risk: '${metrics.customerMedian.usage_connected_risk}',
+    median_service_sla: '${metrics.customerMedian.service_sla_tier1}%',
+    median_annual_downtime_minutes: '${metrics.customerMedian.annual_downtime_minutes}',
+    submission_date: '${new Date().toISOString()}'
+})`;
+
+    // Add vendor and service nodes with complete metrics
+    services.forEach(service => {
+        // Validate that the vendor exists in cloudProviders
+        if (!cloudProviders.includes(service.vendor)) {
+            console.warn(`Invalid vendor: ${service.vendor}`);
+            return;
+        }
+
+        // Validate that the service exists in cloudServices for this vendor
+        if (!cloudServices[service.vendor]?.includes(service.name)) {
+            console.warn(`Invalid service ${service.name} for vendor ${service.vendor}`);
+            return;
+        }
+
+        const serviceId = service.name.replace(/[^a-zA-Z0-9]/g, '_');
+        const vendorId = service.vendor.replace(/[^a-zA-Z0-9]/g, '_');
+
+        // Only create vendor node if not already processed
+        if (!processedVendors.has(vendorId)) {
+            processedVendors.add(vendorId);
+            cypher += `
+CREATE (${vendorId}:TECHNOLOGY_PROVIDER {
+    name: '${service.vendor}',
+    median_sla_usage_percentage: '${metrics.vendorMedians[service.vendor].sla_usage}%',
+    median_sla_deviation_risk: '${metrics.vendorMedians[service.vendor].sla_deviation}',
+    median_traffic_coefficient: '${metrics.vendorMedians[service.vendor].traffic_coef}%',
+    median_usage_risk: '${metrics.vendorMedians[service.vendor].usage_connected_risk}',
+    median_service_sla: '${metrics.vendorMedians[service.vendor].service_sla_tier1}%',
+    median_annual_downtime_minutes: '${metrics.vendorMedians[service.vendor].annual_downtime_minutes}'
+})`;
+        }
+
+        // Only create service node if not already processed
+        if (!processedServices.has(serviceId)) {
+            processedServices.add(serviceId);
+            cypher += `
+CREATE (${serviceId}:TECHNOLOGY_SERVICE {
+    name: '${service.name}',
+    region: '${service.region}',
+    monthly_cost: ${service.monthlyCost},
+    sla_usage: '${service.metrics.sla_usage}%',
+    sla_deviation_risk: '${service.metrics.sla_deviation}',
+    traffic_coefficient: '${service.metrics.traffic_coef}%',
+    usage_risk: '${service.metrics.usage_connected_risk}',
+    annual_downtime_minutes: '${service.metrics.annual_downtime_minutes}',
+    service_sla_tier1: '${service.metrics.service_sla_tier1}%',
+    service_credit_back_tier1: '${service.metrics.service_credit_back_tier1}%'
+})`;
+        }
+
+        // Create relationships
+        cypher += `
+CREATE (cust_sessionid__name_${companyId})-[:CUSTOMER_USES_SERVICE {
+    monthly_cost: ${service.monthlyCost},
+    region: '${service.region}'
+}]->(${serviceId})
+
+CREATE (${vendorId})-[:CONNECTED_RISK {
+    sla_usage: '${service.metrics.sla_usage}%',
+    sla_deviation_risk: '${service.metrics.sla_deviation}',
+    traffic_coefficient: '${service.metrics.traffic_coef}%',
+    usage_risk: '${service.metrics.usage_connected_risk}'
+}]->(${serviceId})`;
+    });
+
+    return cypher;
+}
+
+// Middleware to handle sessions
+const session = require('express-session');
+app.use(session({
+    secret: 'your-secret-key',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: isProd , sameSite: 'Strict'}
+}));
+
+// Function to delete previous Neo4j data
+async function deletePreviousNeo4jData(sessionId) {
+    const driver = await initNeo4jConnection();
+    if (driver) {
+        const session = driver.session();
+        try {
+            const sanitizedSessionId = sessionId.replace(/[^a-zA-Z0-9]/g, '_');
+            const deleteQuery = `
+                MATCH (c:CUSTOMER_NAME {session_id: '${sanitizedSessionId}'})-[r:CUSTOMER_USES_SERVICE]->(s:TECHNOLOGY_SERVICE)
+                DETACH DELETE c, r, s
+            `;
+            await session.run(deleteQuery);
+            console.log('Previous Neo4j data deleted successfully');
+        } catch (error) {
+            console.error('Error deleting previous Neo4j data:', error);
+        } finally {
+            await session.close();
+        }
+    }
+}
+
+// Update saveNeo4jQuery function to include session ID
+function saveNeo4jQuery(data, sessionId) {
+    const outputDir = path.join(__dirname, 'neo4j_customer_submission');
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const filename = `Cloud.Risk.graph_${data.companyName.replace(/[^a-zA-Z0-9]/g, '_')}_${timestamp}.cypher`;
+    const fullPath = path.join(outputDir, filename);
+
+    // Sanitize sessionId for Neo4j
+    const sanitizedSessionId = sessionId.replace(/[^a-zA-Z0-9]/g, '_');
+
+    // Create directory if it doesn't exist
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    // Generate Cypher query
+    let cypher = generateCypherQuery(data);
+
+    // Add sanitized session ID to customer node
+    cypher = cypher.replace(/CREATE \(cust_sessionid__/g, `CREATE (cust_sessionid_${sanitizedSessionId}_`);
+
+    // Write to file
+    fs.writeFileSync(fullPath, cypher);
+    return fullPath;
+}
+
+// Update API endpoint to handle Neo4j file generation
+app.post('/customer-portal/api/save-neo4j-query', async (req, res) => {
+    const sessionId = req.sessionID;
+    try {
+        // Delete previous data
+        await deletePreviousNeo4jData(sessionId);
+
+        // Save new data
+        const filePath = saveNeo4jQuery(req.body, sessionId);
+
+        // Execute the new query
+        const driver = await initNeo4jConnection();
+        if (driver) {
+            const cypher = generateCypherQuery(req.body);
+            const session = driver.session();
+            try {
+                await session.run(cypher);
+                console.log('Neo4j query executed successfully');
+            } catch (error) {
+                console.error('Error executing Neo4j query:', error);
+            } finally {
+                await session.close();
+            }
+        }
+
+        res.json({ 
+            success: true, 
+            filePath,
+            message: 'Data saved successfully' 
+        });
+    } catch (error) {
+        console.error('Error saving Neo4j query:', error);
+        res.status(500).json({ 
+            error: error.message,
+            details: 'Error saving or executing Neo4j query'
+        });
+    }
+});
+
+// API Routes
+const apiRouter = express.Router();
+
+// Routes
+app.get('/simulation/', (req, res) => {
+    const envVars = {
+        apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
+        appBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL,
+        isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
+        isDevelopment: process.env.IS_PROD !== "true" ? true : false
+    };
+    // Serve the chart.js library
+    app.use(express.static(path.join(__dirname, 'node_modules', 'chart.js', 'dist')));
+    
+    // Read the HTML file
+    let html = fs.readFileSync(path.join(__dirname, 'public', 'simulation-index.html'), 'utf8');
+    
+    // Insert the environment variables as a global object
+    const envScript = `<script>window.ENV = ${JSON.stringify(envVars)};</script>`;
+    
+    // Insert the script just after the <head> tag
+    html = html.replace('<head>', '<head>' + envScript);
+    
+    res.send(html);
+});
+
+// Routes
+
+// Add new endpoint to serve options
+app.get('/customer-portal/api/options', (req, res) => {
+    res.json({
+        cloudProviders,
+        cloudServices,
+        cloudRegions,
+        optionsForVariable1: cloudProviders,
+        optionsForVariable2: cloudServices,
+        optionsForVariable3: cloudRegions
+    });
+});
+
+// PostgreSQL connection
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: isSSLDBypass ? { rejectUnauthorized: false } : false // Disable SSL in development
+});
+
+// Middleware to check authentication
+function isAuthenticated(req, res, next) {
+    if (req.session.userId) {
+        return next();
+    }
+    res.redirect('/customer-portal/login');
+}
+
+// Customer Portal as Login route
+app.get('/customer-portal', (req, res) => {
+    res.redirect('/customer-portal/login');
+});
+
+// Login route
+app.get('/customer-portal/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
+
+app.post('/customer-portal/login', async (req, res) => {
+    const { username, password } = req.body;
+    try {
+        const result = await pool.query('SELECT * FROM customers WHERE username = $1', [username]);
+        const user = result.rows[0];
+        console.log(user);
+        console.log(password);
+        console.log(user.password); 
+        const isPasswordMatch = await bcrypt.compare(String(password), String(user.password));
+        console.log(isPasswordMatch);
+        if (user && isPasswordMatch) {
+            req.session.userId = user.id;
+            res.redirect('/customer-portal/index');
+        } else {
+            res.redirect('/customer-portal/register');
+        }
+    } catch (error) {
+        console.error('Login error:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// Registration route
+app.get('/customer-portal/register', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'register.html'));
+});
+
+app.post('/customer-portal/register', async (req, res) => {
+    const { username, email, customername, company, country, password } = req.body;
+    const hashedPassword = await bcrypt.hash(password, 10);
+    try {
+        await pool.query(
+            'INSERT INTO customers (username, email, customername, company, country, password) VALUES ($1, $2, $3, $4, $5, $6)',
+            [username, email, customername, company, country, hashedPassword]
+        );
+        res.redirect('/customer-portal/login');
+    } catch (error) {
+        console.error('Registration error:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// Logout route
+app.get('/customer-portal/logout', (req, res) => {
+    req.session.destroy(err => {
+        if (err) {
+            return res.status(500).send('Could not log out.');
+        }
+        res.redirect('/customer-portal/login');
+    });
+});
+
+// Protect the customer-portal index route
+app.get('/customer-portal/index', isAuthenticated, (req, res) => {
+    // ... existing code to render customer-portal ...
+    const envVars = {
+        apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
+        appBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL,
+        isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
+        isDevelopment: process.env.IS_PROD !== "true" ? true : false
+    };
+    // Serve the chart.js library
+    app.use(express.static(path.join(__dirname, 'node_modules', 'chart.js', 'dist')));
+    
+    // Read the HTML file
+    let html = fs.readFileSync(path.join(__dirname, 'public', 'customer-portal-index.html'), 'utf8');
+    
+    // Insert the environment variables as a global object
+    const envScript = `<script>window.ENV = ${JSON.stringify(envVars)};</script>`;
+    
+    // Insert the script just after the <head> tag
+    html = html.replace('<head>', '<head>' + envScript);
+    
+    res.send(html);
+});
+
+// Cloud Risk Data API
+apiRouter.get('/customer-portal/api/get/env', async (req, res) => {
+    try {
+        const apiBaseUrl = process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL;
+        res.status(200).json({ apiBaseUrl: apiBaseUrl });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// Update session middleware
+app.use(session({
+    secret: 'your-secret-key',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: isProd, sameSite: 'Strict', maxAge: 2 * 60 * 1000 } // 2 minutes
+}));
+
+// Start server
+if (isProd) {
+    https.createServer(options, app).listen(port);
+} else if (process.env.SSL_ENABLED === "true") {
+    https.createServer(options, app).listen(port);
+} else {
+    http.createServer(app).listen(port);
+}

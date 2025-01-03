@@ -3,6 +3,8 @@ const cors = require('cors');
 const neo4j = require('neo4j-driver');
 const dotenv = require('dotenv');
 const path = require('path');
+const bcrypt = require('bcrypt');
+const { Pool } = require('pg');
 
 // Load environment variables
 dotenv.config({ path: '.env' });
@@ -20,6 +22,7 @@ var options = {
   };
 
 const isProd = process.env.IS_PROD === "true";
+const isSSLDBypass = process.env.SSL_DB_BYPASS === "true" ? false : true;
 
 // Cloud Providers List (optionsForVariable1)
 const cloudProviders = [
@@ -198,6 +201,9 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
 });
+
+// Middleware to parse URL-encoded bodies (as sent by HTML forms)
+app.use(express.urlencoded({ extended: true }));
 
 // Neo4j connection
 const initNeo4jConnection = async () => {
@@ -428,7 +434,98 @@ app.get('/simulation/', (req, res) => {
 });
 
 // Routes
-app.get('/customer-portal/', (req, res) => {
+
+// Add new endpoint to serve options
+app.get('/customer-portal/api/options', (req, res) => {
+    res.json({
+        cloudProviders,
+        cloudServices,
+        cloudRegions,
+        optionsForVariable1: cloudProviders,
+        optionsForVariable2: cloudServices,
+        optionsForVariable3: cloudRegions
+    });
+});
+
+// PostgreSQL connection
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: isSSLDBypass ? { rejectUnauthorized: false } : false // Disable SSL in development
+});
+
+// Middleware to check authentication
+function isAuthenticated(req, res, next) {
+    if (req.session.userId) {
+        return next();
+    }
+    res.redirect('/customer-portal/login');
+}
+
+// Customer Portal as Login route
+app.get('/customer-portal', (req, res) => {
+    res.redirect('/customer-portal/login');
+});
+
+// Login route
+app.get('/customer-portal/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
+
+app.post('/customer-portal/login', async (req, res) => {
+    const { username, password } = req.body;
+    try {
+        const result = await pool.query('SELECT * FROM customers WHERE username = $1', [username]);
+        const user = result.rows[0];
+        console.log(user);
+        console.log(password);
+        console.log(user.password); 
+        const isPasswordMatch = await bcrypt.compare(String(password), String(user.password));
+        console.log(isPasswordMatch);
+        if (user && isPasswordMatch) {
+            req.session.userId = user.id;
+            res.redirect('/customer-portal/index');
+        } else {
+            res.redirect('/customer-portal/register');
+        }
+    } catch (error) {
+        console.error('Login error:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// Registration route
+app.get('/customer-portal/register', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'register.html'));
+});
+
+app.post('/customer-portal/register', async (req, res) => {
+    const { username, email, customername, company, country, password } = req.body;
+    const hashedPassword = await bcrypt.hash(password, 10);
+    try {
+        await pool.query(
+            'INSERT INTO customers (username, email, customername, company, country, password) VALUES ($1, $2, $3, $4, $5, $6)',
+            [username, email, customername, company, country, hashedPassword]
+        );
+        res.redirect('/customer-portal/login');
+    } catch (error) {
+        console.error('Registration error:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// Logout route
+app.get('/customer-portal/logout', (req, res) => {
+    req.session.destroy(err => {
+        if (err) {
+            return res.status(500).send('Could not log out.');
+        }
+        res.redirect('/customer-portal/login');
+    });
+});
+
+// Protect the customer-portal index route
+app.get('/customer-portal/index', isAuthenticated, (req, res) => {
+    // ... existing code to render customer-portal ...
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
         appBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL,
@@ -460,18 +557,13 @@ apiRouter.get('/customer-portal/api/get/env', async (req, res) => {
     }
 });
 
-// Add new endpoint to serve options
-app.get('/customer-portal/api/options', (req, res) => {
-    res.json({
-        cloudProviders,
-        cloudServices,
-        cloudRegions,
-        optionsForVariable1: cloudProviders,
-        optionsForVariable2: cloudServices,
-        optionsForVariable3: cloudRegions
-    });
-});
-
+// Update session middleware
+app.use(session({
+    secret: 'your-secret-key',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: isProd, sameSite: 'Strict', maxAge: 2 * 60 * 1000 } // 2 minutes
+}));
 
 // Start server
 if (isProd) {
