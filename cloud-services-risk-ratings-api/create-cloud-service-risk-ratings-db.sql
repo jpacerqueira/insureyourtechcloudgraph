@@ -1,3 +1,26 @@
+--
+-- Create the cloud_risk_portal database
+--
+CREATE DATABASE cloud_risk_portal; -- from docker-compose.yml
+ \c cloud_risk_portal;
+
+CREATE TABLE customers (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    customername VARCHAR(255) NOT NULL,
+    company VARCHAR(255) NOT NULL,
+    country VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+INSERT INTO customers (username, email, customername, company, country, password) VALUES ('joao@fuelbigdata.com', 'joao@fuelbigdata.com', 'Joao P. A. Cerqueira', 'Fuel Data Science Big Data Limited', 'UK', '$2b$10$LvZ3aQVe3WSROOdJ3faG7ehi4lez9WwmLIwZnNgjqitiJqZGaRyuS');
+-- password: testpassword = $2b$10$LvZ3aQVe3WSROOdJ3faG7ehi4lez9WwmLIwZnNgjqitiJqZGaRyuS
+
+SELECT * FROM customers;
+
+-- 
+-- Create the cloud_service_risk_ratings database
+--
 CREATE DATABASE cloud_service_risk_ratings; -- from docker-compose.yml
  \c cloud_service_risk_ratings;
 CREATE SCHEMA cloud_service_risk_ratings;
