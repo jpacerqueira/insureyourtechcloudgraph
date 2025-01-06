@@ -474,7 +474,7 @@ app.get('/customer-portal/login', (req, res) => {
 app.post('/customer-portal/login', async (req, res) => {
     const { username, password } = req.body;
     try {
-        const result = await pool.query('SELECT * FROM customers WHERE username = $1', [username]);
+        const result = await pool.query('SELECT * FROM cloud_risk_portal.customers WHERE username = $1', [username]);
         const user = result.rows[0];
         console.log(user);
         console.log(password);
@@ -499,12 +499,12 @@ app.get('/customer-portal/register', (req, res) => {
 });
 
 app.post('/customer-portal/register', async (req, res) => {
-    const { username, email, customername, company, country, password } = req.body;
+    const { username, email, customername, company, country, password, customer_type } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
     try {
         await pool.query(
-            'INSERT INTO customers (username, email, customername, company, country, password) VALUES ($1, $2, $3, $4, $5, $6)',
-            [username, email, customername, company, country, hashedPassword]
+            'INSERT INTO cloud_risk_portal.customers (username, email, customername, company, country, password, customer_type) VALUES ($1, $2, $3, $4, $5, $6, $7)',
+            [username, email, customername, company, country, hashedPassword, customer_type]
         );
         res.redirect('/customer-portal/login');
     } catch (error) {

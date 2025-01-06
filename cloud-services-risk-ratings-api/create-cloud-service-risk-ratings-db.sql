@@ -3,20 +3,35 @@
 --
 CREATE DATABASE cloud_risk_portal; -- from docker-compose.yml
  \c cloud_risk_portal;
+CREATE SCHEMA cloud_risk_portal;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA cloud_risk_portal TO postgres;
+grant all on database cloud_risk_portal to postgres;
+grant all on schema "public" to postgres;
+grant all on all tables in schema "public" to postgres;
+grant all on all sequences in schema "public" to postgres;
+grant all on schema "cloud_risk_portal" to postgres;
+grant all on all tables in schema "cloud_risk_portal" to postgres;
+grant all on all sequences in schema "cloud_risk_portal" to postgres;
 
-CREATE TABLE customers (
+CREATE TABLE cloud_risk_portal.customers (
     id SERIAL PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     customername VARCHAR(255) NOT NULL,
     company VARCHAR(255) NOT NULL,
     country VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL
+    password VARCHAR(255) NOT NULL,
+    customer_type VARCHAR(255) NOT NULL,
+    is_active BOOLEAN DEFAULT TRUE,
+    is_deleted BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-INSERT INTO customers (username, email, customername, company, country, password) VALUES ('joao@fuelbigdata.com', 'joao@fuelbigdata.com', 'Joao P. A. Cerqueira', 'Fuel Data Science Big Data Limited', 'UK', '$2b$10$LvZ3aQVe3WSROOdJ3faG7ehi4lez9WwmLIwZnNgjqitiJqZGaRyuS');
+INSERT INTO cloud_risk_portal.customers (username, email, customername, company, country, password, customer_type)
+ VALUES ('joao@fuelbigdata.com', 'joao@fuelbigdata.com', 'Joao P. A. Cerqueira', 'Fuel Data Science Big Data Limited', 'UK', '$2b$10$LvZ3aQVe3WSROOdJ3faG7ehi4lez9WwmLIwZnNgjqitiJqZGaRyuS', 'premium');
 -- password: testpassword = $2b$10$LvZ3aQVe3WSROOdJ3faG7ehi4lez9WwmLIwZnNgjqitiJqZGaRyuS
 
-SELECT * FROM customers;
+SELECT * FROM cloud_risk_portal.customers;
 
 -- 
 -- Create the cloud_service_risk_ratings database
@@ -61,7 +76,7 @@ BEGIN
 END
 $func$;
 
-SELECT public.truncate_if_exists('service_risk_ratings', 'cloud_service_risk_ratings');
+SELECT public.truncate_if_exists('cloud_service_risk_ratings.service_risk_ratings', 'cloud_service_risk_ratings.cloud_service_risk_ratings');
 DROP TABLE IF EXISTS cloud_service_risk_ratings.service_risk_ratings;
 
 CREATE TABLE cloud_service_risk_ratings.service_risk_ratings (

@@ -548,6 +548,46 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
 
+  /cloud-services-risk-ratings/risk-ratings-freemium/freemium/customers/list/all:
+    get:
+      summary: Get all customers (Freemium)
+      description: Retrieves a list of all customers for the freemium service
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Customer'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /cloud-services-risk-ratings/risk-ratings-premium/premium/customers/list/all:
+    get:
+      summary: Get all customers (Premium)
+      description: Retrieves a list of all customers for the premium service
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Customer'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
 components:
   schemas:
     BasicRiskRating:
@@ -644,3 +684,30 @@ components:
           type: number
         outage_reason:
           type: string
+    Customer:
+      type: object
+      properties:
+        id:
+          type: string
+        username:
+          type: string
+        email:
+          type: string
+        customername:
+          type: string
+        company:
+          type: string
+        country:
+          type: string
+        customer_type:
+          type: string
+        is_active:
+          type: boolean
+        is_deleted:
+          type: boolean
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time

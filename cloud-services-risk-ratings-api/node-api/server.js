@@ -22,6 +22,7 @@ const DB_PORT = process.env.DB_PORT || 5432;
 const DB_USER = process.env.DB_USER || 'dbusername';
 const DB_PASSWORD = process.env.DB_PASSWORD || 'password';
 const DB_NAME = process.env.DB_NAME || 'cloud_service_risk_ratings';
+const DB_NAME_PORTAL = process.env.DB_NAME_PORTAL || 'cloud_risk_portal';
 const IS_PROD = process.env.IS_PROD === "true";
 
 const riskRatingsRouter = require('./routes/CloudRiskRatings');
