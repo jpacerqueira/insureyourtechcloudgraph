@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../config/db');
+const { poolServiceRiskRatings, poolCloudRiskPortal } = require('../config/db');
 
 // Get all risk ratings
 router.get('/freemium/list/all/services', async function (req, res) {
     let connection;
     try {
-        connection = await db.connect();
+        connection = await poolServiceRiskRatings.connect();
         const result = await connection.query(
             `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region
               FROM "${process.env.DB_NAME}".service_risk_ratings`
@@ -34,7 +34,7 @@ router.get('/freemium/list/all/services', async function (req, res) {
 router.get('/freemium/fetch/service/id/:id', async function (req, res, next) {
     let connection;
     try {
-        connection = await db.connect();
+        connection = await poolServiceRiskRatings.connect();
         var id = req.params.id;
         const result = await connection.query(
             `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region, 
@@ -70,7 +70,7 @@ router.get('/freemium/fetch/service/id/:id', async function (req, res, next) {
 router.get('/freemium/fetch/service/service_provider/:service_provider', async function (req, res, next) {
     let connection;
     try {
-        connection = await db.connect();
+        connection = await poolServiceRiskRatings.connect();
         var service_provider = req.params.service_provider;
         const result = await connection.query(
             `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region,
@@ -106,7 +106,7 @@ router.get('/freemium/fetch/service/service_provider/:service_provider', async f
 router.get('/freemium/fetch/service/service_name/:service_name', async function (req, res, next) {
     let connection;
     try {
-        connection = await db.connect();
+        connection = await poolServiceRiskRatings.connect();
         var service_name = req.params.service_name;
         const result = await connection.query(
             `SELECT database_key_id, service_name, service_provider, global_or_by_regions, region,
@@ -142,7 +142,7 @@ router.get('/freemium/fetch/service/service_name/:service_name', async function 
 router.get('/freemium/fetch/service/service_name/:service_name/global_or_by_regions/:global_or_by_regions', async function (req, res, next) {
     let connection;
     try {
-        connection = await db.connect();
+        connection = await poolServiceRiskRatings.connect();
         var service_name = req.params.service_name;
         var global_or_by_regions = req.params.global_or_by_regions;
         if (global_or_by_regions !== 'global' && global_or_by_regions !== 'regional') {
@@ -183,7 +183,7 @@ router.get('/freemium/fetch/service/service_name/:service_name/global_or_by_regi
 router.get('/freemium/outages/list/all', async function (req, res) {
     let connection;
     try {
-        connection = await db.connect();
+        connection = await poolServiceRiskRatings.connect();
         // outage_timestamp >= 1727740800 = > Date and time (your time zone): Tuesday, 1 October 2024 01:00:00 GMT+01:00
         // Avoid LLM alucination records =>  data patch with outage_timestamp <= 1735689600  = > 01.Jan.2025 0h00
         const result = await connection.query(
@@ -212,7 +212,7 @@ router.get('/freemium/outages/list/all', async function (req, res) {
 router.get('/freemium/outages/provider/:provider', async function (req, res) {
     let connection;
     try {
-        connection = await db.connect();
+        connection = await poolServiceRiskRatings.connect();
         const provider = req.params.provider;
         // outage_timestamp >= 1727740800 = > Date and time (your time zone): Tuesday, 1 October 2024 01:00:00 GMT+01:00
         // Avoid LLM alucination records =>  data patch with outage_timestamp <= 1735689600  = > 01.Jan.2025 0h00
@@ -243,7 +243,7 @@ router.get('/freemium/outages/provider/:provider', async function (req, res) {
 router.get('/freemium/outages/service/:service', async function (req, res) {
     let connection;
     try {
-        connection = await db.connect();
+        connection = await poolServiceRiskRatings.connect();
         const service = req.params.service;
         // outage_timestamp >= 1727740800 = > Date and time (your time zone): Tuesday, 1 October 2024 01:00:00 GMT+01:00
         // Avoid LLM alucination records =>  data patch with outage_timestamp <= 1735689600  = > 01.Jan.2025 0h00
@@ -274,7 +274,7 @@ router.get('/freemium/outages/service/:service', async function (req, res) {
 router.get('/freemium/outages/region/:region', async function (req, res) {
     let connection;
     try {
-        connection = await db.connect();
+        connection = await poolServiceRiskRatings.connect();
         const region = req.params.region;
         // outage_timestamp >= 1727740800 = > Date and time (your time zone): Tuesday, 1 October 2024 01:00:00 GMT+01:00
         // Avoid LLM alucination records =>  data patch with outage_timestamp <= 1735689600  =  01.Jan.2025 0h00
@@ -294,6 +294,34 @@ router.get('/freemium/outages/region/:region', async function (req, res) {
     } catch (err) {
         console.error('Database connection error:', err);
         res.status(500).json({ error: 'Failed to retrieve outage reports' });
+    } finally {
+        if (connection) {
+            connection.release();
+        }
+    }
+});
+
+// Get all customers
+router.get('/freemium/customers/list/all', async function (req, res) {
+    let connection;
+    try {
+        connection = await poolCloudRiskPortal.connect();
+        const result = await connection.query(
+            `SELECT id, username, email, customername, company, country, customer_type, is_active, is_deleted, created_at, updated_at
+             FROM "${process.env.DB_NAME_PORTAL}".customers WHERE customer_type = 'freemium'`
+        );
+        
+        // Handle result based on the database library's return format
+        const rows = Array.isArray(result) ? result[0] : result.rows;
+        
+        if (rows && rows.length > 0) {
+            res.status(200).json(rows);
+        } else {
+            res.status(200).json([]);
+        }
+    } catch (err) {
+        console.error('Database connection error:', err);
+        res.status(500).json({ error: 'Failed to retrieve customers' });
     } finally {
         if (connection) {
             connection.release();

@@ -1,7 +1,7 @@
 const { Pool } = require('pg');
 
-// Create a pool of connections
-const pool = new Pool({
+// Create a pool of connections for cloud_service_risk_ratings
+const poolServiceRiskRatings = new Pool({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
@@ -15,8 +15,30 @@ const pool = new Pool({
     ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: true } : false,
 });
 
+// Create a pool of connections for cloud_risk_portal
+const poolCloudRiskPortal = new Pool({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME_PORTAL,
+    schema: process.env.DB_NAME_PORTAL,
+    search_path: process.env.DB_NAME_PORTAL,
+    port: process.env.DB_PORT,
+    max: 100,
+    idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 2000,
+    ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: true } : false,
+});
+
 // Improve error handling with async/await
-pool.on('error', (err, client) => {
+poolServiceRiskRatings.on('error', (err, client) => {
+    console.error('Unexpected error on idle client', err);
+    if (process.env.NODE_ENV !== 'production') {
+        process.exit(-1);
+    }
+});
+
+poolCloudRiskPortal.on('error', (err, client) => {
     console.error('Unexpected error on idle client', err);
     if (process.env.NODE_ENV !== 'production') {
         process.exit(-1);
@@ -24,19 +46,19 @@ pool.on('error', (err, client) => {
 });
 
 // Use async/await for initial connection test
-const testConnection = async () => {
+const testConnection = async (pool, dbName) => {
     try {
         const connection = await pool.connect();
-        /*console.log(await pool.query('SELECT NOW()'));*/
         console.log(await pool.query('select current_schema;'));
-        console.log('Database connected successfully!');
+        console.log(`Database ${dbName} connected successfully!`);
         connection.release();
     } catch (err) {
-        console.error('Database connection error:', err.message);
+        console.error(`Database connection error for ${dbName}:`, err.message);
         throw err;
     }
 };
 
-testConnection();
+testConnection(poolServiceRiskRatings, process.env.DB_NAME);
+testConnection(poolCloudRiskPortal, process.env.DB_NAME_PORTAL);
 
-module.exports = pool;
+module.exports = { poolServiceRiskRatings, poolCloudRiskPortal };
