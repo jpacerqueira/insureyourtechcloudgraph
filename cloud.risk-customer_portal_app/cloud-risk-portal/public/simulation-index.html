@@ -307,6 +307,9 @@
             <thead>
                 <tr>
                     <th>Service</th>
+                    <th>Cloud Provider</th>
+                    <th>Regions</th>
+                    <th>Availability Zones</th>
                     <th>Start Time</th>
                     <th>End Time</th>
                     <th>Duration (minutes)</th>
@@ -1274,9 +1277,15 @@
         const tbody = document.querySelector('#outageTable tbody');
         
         outageData.forEach(outage => {
+            // TODO: Add SLA Impact and Cost Impact
+            const slaImpact = 'Not specified';
+            const costImpact = '0.00';
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td>${service}</td>
+                <td>${outage.cloud_provider || 'N/A'}</td>
+                <td>${outage.regions || 'N/A'}</td>
+                <td>${outage.availability_zone || 'N/A'}</td>
                 <td>${new Date(outage.start_time).toLocaleString()}</td>
                 <td>${new Date(outage.end_time).toLocaleString()}</td>
                 <td>${outage.duration_minutes}</td>
@@ -1284,6 +1293,8 @@
                 <td>${outage.root_cause || 'Not specified'}</td>
                 <td>${outage.outage_status}</td>
                 <td>${outage.source_outage_report}</td>
+                <td>${slaImpact || 'Not specified'}</td>
+                <td>$${costImpact || '0.00'}</td>
             `;
             tbody.appendChild(row);
         });
@@ -1505,6 +1516,9 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${service || 'N/A'}</td>
+                    <td>${outage.cloud_provider || 'N/A'}</td>
+                    <td>${outage.regions || 'N/A'}</td>
+                    <td>${outage.availability_zone || 'N/A'}</td>
                     <td>${outage.start_time ? new Date(outage.start_time).toLocaleString() : 'N/A'}</td>
                     <td>${outage.end_time ? new Date(outage.end_time).toLocaleString() : 'N/A'}</td>
                     <td>${real_outage_duration.toFixed(2) || '0.00'}</td>
