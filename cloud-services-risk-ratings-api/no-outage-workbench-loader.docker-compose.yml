@@ -3,6 +3,21 @@ services:
   postgres-db:
     image: postgres:16.4
     container_name: postgres-db
+    build:
+      context: .
+      dockerfile: postgres.Dockerfile
+    command:
+      [
+        "postgres",
+        "-c",
+        "log_statement=all",
+        "-c",
+        "log_destination=stderr",
+        "-c",
+        "shared_preload_libraries=pg_cron",
+        "-c",
+        "cron.database_name=${POSTGRES_DB-cloud_risk_portal}",
+      ]
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
