@@ -13,6 +13,22 @@ grant all on schema "cloud_risk_portal" to postgres;
 grant all on all tables in schema "cloud_risk_portal" to postgres;
 grant all on all sequences in schema "cloud_risk_portal" to postgres;
 
+CREATE TABLE cloud_risk_portal.password_tokens (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    token VARCHAR(64) NOT NULL,
+    expires_at TIMESTAMP NOT NULL,
+    used BOOLEAN DEFAULT FALSE
+);
+
+CREATE EXTENSION IF NOT EXISTS pg_cron;
+GRANT USAGE ON SCHEMA cron TO postgres;
+
+SELECT cron.schedule('delete_expired_tokens', '0 * * * *', $$
+     DELETE FROM cloud_risk_portal.password_tokens
+     WHERE expires_at < NOW() - interval '1 hours 10 minutes'
+   $$);
+
 CREATE TABLE cloud_risk_portal.customers (
     id SERIAL PRIMARY KEY,
     username VARCHAR(255) NOT NULL,

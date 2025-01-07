@@ -5,6 +5,9 @@ const dotenv = require('dotenv');
 const path = require('path');
 const bcrypt = require('bcrypt');
 const { Pool } = require('pg');
+const crypto = require('crypto');
+const nodemailer = require('nodemailer');
+const { google } = require('googleapis');
 
 // Load environment variables
 dotenv.config({ path: '.env' });
@@ -476,16 +479,20 @@ app.post('/customer-portal/login', async (req, res) => {
     try {
         const result = await pool.query('SELECT * FROM cloud_risk_portal.customers WHERE username = $1', [username]);
         const user = result.rows[0];
-        console.log(user);
-        console.log(password);
-        console.log(user.password); 
+
+        if (!user) {
+            // User does not exist, redirect to register
+            return res.redirect('/customer-portal/register');
+        }
+
         const isPasswordMatch = await bcrypt.compare(String(password), String(user.password));
-        console.log(isPasswordMatch);
-        if (user && isPasswordMatch) {
+        
+        if (isPasswordMatch) {
             req.session.userId = user.id;
             res.redirect('/customer-portal/index');
         } else {
-            res.redirect('/customer-portal/register');
+            // Password does not match, suggest password reset
+            res.status(401).send('Incorrect password. Please try again or <a href="/customer-portal/reset-password">reset your password</a>.');
         }
     } catch (error) {
         console.error('Login error:', error);
@@ -564,6 +571,176 @@ app.use(session({
     saveUninitialized: true,
     cookie: { secure: isProd, sameSite: 'Strict', maxAge: 2 * 60 * 1000 } // 2 minutes
 }));
+
+// Route to serve the reset password page
+app.get('/customer-portal/reset-password-form', async (req, res) => {
+    const { token } = req.query;
+    console.log(token);
+    try {
+        const result = await pool.query(
+            'SELECT * FROM cloud_risk_portal.password_tokens WHERE token = $1 AND expires_at > NOW() AND used = FALSE',
+            [token]
+        );
+        const tokenRecord = result.rows[0];
+        if (tokenRecord) {
+            // Token is valid, read the HTML file and replace the placeholder with the actual token
+            let html = fs.readFileSync(path.join(__dirname, 'public', 'reset-password-form.html'), 'utf8');
+            html = html.replace('{{token}}', token);
+            html = html.replace('{{email}}', tokenRecord.email);
+            res.send(html);
+        } else {
+            // Token is invalid or expired
+            res.status(400).send('Invalid or expired token.');
+        }
+    } catch (error) {
+        console.error('Error validating token:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// Route to handle password update
+app.post('/customer-portal/update-password', async (req, res) => {
+    const { token, 'new-password': newPassword } = req.body;
+    try {
+        const result = await pool.query(
+            'SELECT * FROM cloud_risk_portal.password_tokens WHERE token = $1 AND expires_at > NOW() AND used = FALSE',
+            [token]
+        );
+        const tokenRecord = result.rows[0];
+        if (tokenRecord) {
+            const hashedPassword = await bcrypt.hash(newPassword, 10);
+            await pool.query(
+                'UPDATE cloud_risk_portal.customers SET password = $1 WHERE username = $2 AND email = $2',
+                [hashedPassword, tokenRecord.email]
+            );
+            await markTokenAsUsed(token);
+
+            // Send the response with the correct login link
+            const appBaseUrl = process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL;
+            res.send(`<p>Password updated successfully.</p><p><a href="${appBaseUrl}/customer-portal/login">Customer Portal login</a></p>`);
+        } else {
+            res.status(400).send('Invalid or expired token.');
+        }
+    } catch (error) {
+        console.error('Error updating password:', error);
+        res.status(500).send('Internal Server Error');
+    }
+    // Update password_tokes table used column to TRUE
+    await pool.query('UPDATE cloud_risk_portal.password_tokens SET used = TRUE WHERE token = $1', [token]);
+});
+
+// Function mark toket as used
+async function markTokenAsUsed(token) {
+    await pool.query('UPDATE cloud_risk_portal.password_tokens SET used = TRUE WHERE token = $1', [token]);
+}
+
+// Route to handle password reset requests
+app.get('/customer-portal/reset-password', async (req, res) => {
+    // Collection email from the request body
+    res.sendFile(path.join(__dirname, 'public', 'reset-password.html'));
+});
+
+app.post('/customer-portal/reset-password', async (req, res) => {
+    const { email } = req.body;
+    try {
+        const result = await pool.query('SELECT * FROM cloud_risk_portal.customers WHERE username = $1 AND email = $1', [email]);
+        const user = result.rows[0];
+        if (user) {
+            // Generate a reset token and send an email (pseudo-code)
+            const resetToken = generateResetToken(); // Implement this function
+            await sendResetEmail(email, resetToken); // Implement this function
+            res.send('A password reset link has been sent to your email.');
+        } else {
+            res.status(404).send('Email not found.');
+        }
+    } catch (error) {
+        console.error('Error handling password reset:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// Function to generate a reset token
+function generateResetToken() {
+    // Generate a random string and hash it using SHA-256
+    const randomString = crypto.randomBytes(16).toString('hex');
+    const hash = crypto.createHash('sha256').update(randomString).digest('hex');
+    
+    // Truncate the hash to 32 characters to simulate a "SHA-128" size
+    return hash.substring(0, 32);
+}
+
+// Function to send a reset email
+async function sendResetEmail(email, token) {
+    console.log(`Sending reset email to ${email} with token ${token}`);
+
+    // Generate a password reset URL
+    const appBaseUrl = process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL;
+    const resetUrl = `${appBaseUrl}/customer-portal/reset-password-form?token=${token}`;
+
+    // Create a transporter object using SMTP transport
+    const OAuth2 = google.auth.OAuth2;
+
+    const oauth2Client = new OAuth2(
+        process.env.CLIENT_ID, // ClientID
+        process.env.CLIENT_SECRET, // Client Secret
+        "https://developers.google.com/oauthplayground" // Redirect URL
+    );
+
+    oauth2Client.setCredentials({
+        refresh_token: process.env.REFRESH_TOKEN
+    });
+
+    const accessToken = oauth2Client.getAccessToken();
+
+    let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            type: 'OAuth2',
+            user: process.env.SMTP_USER,
+            clientId: process.env.CLIENT_ID,
+            clientSecret: process.env.CLIENT_SECRET,
+            refreshToken: process.env.REFRESH_TOKEN,
+            accessToken: accessToken
+        }
+    });
+
+    // Email content
+    const mailOptions = {
+        from: '"Cloud Risk Portal" <no-reply@InsureYourTech.Cloud>', // sender address
+        to: email, // list of receivers
+        subject: `InsureYourTech.Cloud - Password Reset Request -  ${email}`, // Subject line
+        text: `You requested a password reset. Click the link, valid 1h, to reset your password: ${resetUrl}`, // plain text body
+        html: `<p>You requested a password reset. Click the link, valid 1h, to reset your password:</p><p><a href="${resetUrl}">Reset Password</a></p>` // html body
+    };
+
+    // Send mail with defined transport object
+    try {
+        let info = await transporter.sendMail(mailOptions);
+        console.log('Message sent: %s', info.messageId);
+    } catch (error) {
+        console.error('Error sending email:', error);
+    }
+    console.log('Email sent to:', email);
+    // Store the reset token in the database
+    console.log('Storing reset token in the database');
+    try {
+        await storeResetToken(email, token);
+    } catch (error) {
+        console.error('Error storing reset token:', error);
+    }
+}
+
+async function storeResetToken(email, token) {
+    const expiresAt = new Date(Date.now() + 3600000); // Token expires in 1 hour
+    try {
+        await pool.query(
+            'INSERT INTO cloud_risk_portal.password_tokens (email, token, expires_at) VALUES ($1, $2, $3)',
+            [email, token, expiresAt]
+        );
+    } catch (error) {
+        console.error('Error storing reset token:', error);
+    }
+}
 
 // Start server
 if (isProd) {
