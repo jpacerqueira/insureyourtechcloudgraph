@@ -26505,9 +26505,9 @@ Root Cause: Retail Search model training may be delayed or stopped
 Resolution: 
 Downtime Period: 14:06 - 15:19 UTC (5 hours and 13 minutes)
 Affected Components: Vertex AI Search, Vertex AI Search"
-1704672000.0,Google Cloud Service Health - Incident 2024-03-21,GCP,Google Kubernetes Engine,pacific,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,"5 days, 17 hours, and 3 minutes",8223,"Customers attempting to create a new Google Kubernetes Engine (GKE) cluster in a GDC Edge Zone may encounter timeout or internal errors, leading to cluster creation failures.",,Not specified,,"Google Cloud VertexAI, Google Distributed Cloud Edge",,"Source Outage Report: Google Cloud Service Health - Incident 2024-03-21
+1704672000.0,Google Cloud Service Health - Incident 2024-03-21,GCP,Google Kubernetes Engine (GKE),pacific,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,"5 days, 17 hours, and 3 minutes",8223,"Customers attempting to create a new Google Kubernetes Engine (GKE) cluster in a GDC Edge Zone may encounter timeout or internal errors, leading to cluster creation failures.",,Not specified,,"Google Cloud VertexAI, Google Distributed Cloud Edge",,"Source Outage Report: Google Cloud Service Health - Incident 2024-03-21
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Kubernetes Engine, Google Kubernetes Engine, Google Distributed Cloud Edge, GDC Edge
+Cloud Services: Google Cloud VertexAI, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Distributed Cloud Edge, GDC Edge
 Regions: pacific
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -26522,7 +26522,7 @@ Downtime Period: Not specified
 Affected Components: Google Cloud VertexAI, Google Distributed Cloud Edge"
 1704672000.0,Google Cloud Service Health - Incident 2024-03-21,GCP,GDC Edge,pacific,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,"5 days, 17 hours, and 3 minutes",8223,"Customers attempting to create a new Google Kubernetes Engine (GKE) cluster in a GDC Edge Zone may encounter timeout or internal errors, leading to cluster creation failures.",,Not specified,,"Google Cloud VertexAI, Google Distributed Cloud Edge",,"Source Outage Report: Google Cloud Service Health - Incident 2024-03-21
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Kubernetes Engine, Google Kubernetes Engine, Google Distributed Cloud Edge, GDC Edge
+Cloud Services: Google Cloud VertexAI, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Distributed Cloud Edge, GDC Edge
 Regions: pacific
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -26537,7 +26537,7 @@ Downtime Period: Not specified
 Affected Components: Google Cloud VertexAI, Google Distributed Cloud Edge"
 1704672000.0,Google Cloud Service Health - Incident 2024-03-21,GCP,Google Cloud VertexAI,pacific,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,"5 days, 17 hours, and 3 minutes",8223,"Customers attempting to create a new Google Kubernetes Engine (GKE) cluster in a GDC Edge Zone may encounter timeout or internal errors, leading to cluster creation failures.",,Not specified,,"Google Cloud VertexAI, Google Distributed Cloud Edge",,"Source Outage Report: Google Cloud Service Health - Incident 2024-03-21
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Kubernetes Engine, Google Kubernetes Engine, Google Distributed Cloud Edge, GDC Edge
+Cloud Services: Google Cloud VertexAI, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Distributed Cloud Edge, GDC Edge
 Regions: pacific
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -26552,7 +26552,7 @@ Downtime Period: Not specified
 Affected Components: Google Cloud VertexAI, Google Distributed Cloud Edge"
 1704672000.0,Google Cloud Service Health - Incident 2024-03-21,GCP,Google Distributed Cloud Edge,pacific,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,"5 days, 17 hours, and 3 minutes",8223,"Customers attempting to create a new Google Kubernetes Engine (GKE) cluster in a GDC Edge Zone may encounter timeout or internal errors, leading to cluster creation failures.",,Not specified,,"Google Cloud VertexAI, Google Distributed Cloud Edge",,"Source Outage Report: Google Cloud Service Health - Incident 2024-03-21
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Kubernetes Engine, Google Kubernetes Engine, Google Distributed Cloud Edge, GDC Edge
+Cloud Services: Google Cloud VertexAI, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Distributed Cloud Edge, GDC Edge
 Regions: pacific
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -28342,7 +28342,7 @@ Root Cause: Change rollout to an internal component
 Resolution: 
 Downtime Period: 2024-09-07 04:20 - 06:10 UTC
 Affected Components: Google Cloud VertexAI, Cloud Build, Cloud Deploy, Cloud SQL, Google Cloud Compute Engine, Google Kubernetes Engine"
-1704672000.0,Google Cloud Service Health - Incident 2024-09-07,GCP,Google Kubernetes Engine,affected,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"01 hours, 50 minutes",110,Change rollout to an internal component,,2024-09-07 04:20 - 06:10 UTC,,"Google Cloud VertexAI, Cloud Build, Cloud Deploy, Cloud SQL, Google Cloud Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident 2024-09-07
+1704672000.0,Google Cloud Service Health - Incident 2024-09-07,GCP,Google Kubernetes Engine (GKE),affected,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"01 hours, 50 minutes",110,Change rollout to an internal component,,2024-09-07 04:20 - 06:10 UTC,,"Google Cloud VertexAI, Cloud Build, Cloud Deploy, Cloud SQL, Google Cloud Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident 2024-09-07
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Cloud SQL, Google Cloud Compute Engine, Google Cloud Compute Engine, Google Kubernetes Engine
 Regions: affected, asia-northeast1
@@ -28357,7 +28357,7 @@ Root Cause: Change rollout to an internal component
 Resolution: 
 Downtime Period: 2024-09-07 04:20 - 06:10 UTC
 Affected Components: Google Cloud VertexAI, Cloud Build, Cloud Deploy, Cloud SQL, Google Cloud Compute Engine, Google Kubernetes Engine"
-1704672000.0,Google Cloud Service Health - Incident 2024-09-07,GCP,Google Kubernetes Engine,asia-northeast1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"01 hours, 50 minutes",110,Change rollout to an internal component,,2024-09-07 04:20 - 06:10 UTC,,"Google Cloud VertexAI, Cloud Build, Cloud Deploy, Cloud SQL, Google Cloud Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident 2024-09-07
+1704672000.0,Google Cloud Service Health - Incident 2024-09-07,GCP,Google Kubernetes Engine (GKE),asia-northeast1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"01 hours, 50 minutes",110,Change rollout to an internal component,,2024-09-07 04:20 - 06:10 UTC,,"Google Cloud VertexAI, Cloud Build, Cloud Deploy, Cloud SQL, Google Cloud Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident 2024-09-07
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Cloud SQL, Google Cloud Compute Engine, Google Cloud Compute Engine, Google Kubernetes Engine
 Regions: affected, asia-northeast1
@@ -29432,7 +29432,7 @@ Downtime Period: 2024-01-23 09:30 UTC - 2024-01-24 22:00 UTC
 Affected Components: Cloud Logging, Personalized Service Health (PSH), Log queries and log-based metrics, Cloud Logging, Personalized Service Health (PSH), Log queries and log-based metrics"
 1704672000.0,Google Cloud Service Health - Incident report 2024-02-14,GCP,Google Cloud Run,us-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"3 hours, 7 minutes",187,Elevated latencies and errors in control plane and data plane unavailability for some services.,,"From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)",,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-02-14
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine, Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Pub/Sub
 Regions: us-west1
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -29447,7 +29447,7 @@ Downtime Period: From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)
 Affected Components: Google Cloud VertexAI"
 1704672000.0,Google Cloud Service Health - Incident report 2024-02-14,GCP,Cloud SQL,us-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"3 hours, 7 minutes",187,Elevated latencies and errors in control plane and data plane unavailability for some services.,,"From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)",,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-02-14
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine, Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Pub/Sub
 Regions: us-west1
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -29462,7 +29462,7 @@ Downtime Period: From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)
 Affected Components: Google Cloud VertexAI"
 1704672000.0,Google Cloud Service Health - Incident report 2024-02-14,GCP,Google Cloud Compute Engine,us-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"3 hours, 7 minutes",187,Elevated latencies and errors in control plane and data plane unavailability for some services.,,"From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)",,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-02-14
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine, Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Pub/Sub
 Regions: us-west1
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -29477,7 +29477,7 @@ Downtime Period: From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)
 Affected Components: Google Cloud VertexAI"
 1704672000.0,Google Cloud Service Health - Incident report 2024-02-14,GCP,Google Cloud Dataproc,us-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"3 hours, 7 minutes",187,Elevated latencies and errors in control plane and data plane unavailability for some services.,,"From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)",,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-02-14
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine, Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Pub/Sub
 Regions: us-west1
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -29490,9 +29490,9 @@ Root Cause: Elevated latencies and errors in control plane and data plane unavai
 Resolution: 
 Downtime Period: From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)
 Affected Components: Google Cloud VertexAI"
-1704672000.0,Google Cloud Service Health - Incident report 2024-02-14,GCP,Google Kubernetes Engine,us-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"3 hours, 7 minutes",187,Elevated latencies and errors in control plane and data plane unavailability for some services.,,"From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)",,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-02-14
+1704672000.0,Google Cloud Service Health - Incident report 2024-02-14,GCP,Google Kubernetes Engine (GKE),us-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"3 hours, 7 minutes",187,Elevated latencies and errors in control plane and data plane unavailability for some services.,,"From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)",,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-02-14
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine, Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Pub/Sub
 Regions: us-west1
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -29507,7 +29507,7 @@ Downtime Period: From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)
 Affected Components: Google Cloud VertexAI"
 1704672000.0,Google Cloud Service Health - Incident report 2024-02-14,GCP,Google Cloud VertexAI,us-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"3 hours, 7 minutes",187,Elevated latencies and errors in control plane and data plane unavailability for some services.,,"From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)",,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-02-14
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine, Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Pub/Sub
 Regions: us-west1
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -29522,7 +29522,7 @@ Downtime Period: From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)
 Affected Components: Google Cloud VertexAI"
 1704672000.0,Google Cloud Service Health - Incident report 2024-02-14,GCP,Google Cloud Load Balancing,us-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"3 hours, 7 minutes",187,Elevated latencies and errors in control plane and data plane unavailability for some services.,,"From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)",,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-02-14
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine, Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Pub/Sub
 Regions: us-west1
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -29537,7 +29537,7 @@ Downtime Period: From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)
 Affected Components: Google Cloud VertexAI"
 1704672000.0,Google Cloud Service Health - Incident report 2024-02-14,GCP,Pub/Sub,us-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"3 hours, 7 minutes",187,Elevated latencies and errors in control plane and data plane unavailability for some services.,,"From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)",,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-02-14
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine, Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Pub/Sub
 Regions: us-west1
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -29552,7 +29552,7 @@ Downtime Period: From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)
 Affected Components: Google Cloud VertexAI"
 1704672000.0,Google Cloud Service Health - Incident report 2024-02-14,GCP,df,us-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,"3 hours, 7 minutes",187,Elevated latencies and errors in control plane and data plane unavailability for some services.,,"From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)",,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-02-14
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine, Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Pub/Sub
 Regions: us-west1
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -32578,7 +32578,7 @@ Root Cause: Not specified
 Resolution: 
 Downtime Period: 2024-07-10 15:20 - 2024-07-12 07:39 UTC
 Affected Components: Google Cloud VertexAI, Cloud Storage for Firebase"
-1704672000.0,Google Cloud Service Health - Incident report 2024-07-15,GCP,Google Kubernetes Engine,us-central1,,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,2 hours 21 minutes,141,Query processing service outage,,2024-07-15 11:50 UTC - 2024-07-15 10:52 UTC,,"Cloud Monitoring, Cloud Spanner, Google Cloud Bigtable, Cloud Kubernetes Engine, Operations, Cloud Monitoring, Cloud Spanner, Google Cloud Bigtable, Cloud Kubernetes Engine, Operations",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-07-15
+1704672000.0,Google Cloud Service Health - Incident report 2024-07-15,GCP,Google Kubernetes Engine (GKE),us-central1,,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,investigating,,2 hours 21 minutes,141,Query processing service outage,,2024-07-15 11:50 UTC - 2024-07-15 10:52 UTC,,"Cloud Monitoring, Cloud Spanner, Google Cloud Bigtable, Cloud Kubernetes Engine, Operations, Cloud Monitoring, Cloud Spanner, Google Cloud Bigtable, Cloud Kubernetes Engine, Operations",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-07-15
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud Bigtable, Google Kubernetes Engine
 Regions: us-central1
@@ -32683,9 +32683,9 @@ Root Cause: High latency and resource exhausted failures
 Resolution: 
 Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 UTC
 Affected Components: AutoML Translation, AutoML Translation"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud Run,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud Run,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: europe-west9
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -32697,10 +32697,10 @@ Duration (minutes): 177
 Root Cause: Not specified
 Resolution: 
 Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
-Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud Compute Engine,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
+Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud Compute Engine,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: europe-west9
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -32712,10 +32712,10 @@ Duration (minutes): 177
 Root Cause: Not specified
 Resolution: 
 Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
-Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud Dataproc,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
+Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud Dataproc,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: europe-west9
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -32727,10 +32727,10 @@ Duration (minutes): 177
 Root Cause: Not specified
 Resolution: 
 Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
-Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Kubernetes Engine,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
+Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Kubernetes Engine (GKE),europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: europe-west9
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -32742,10 +32742,10 @@ Duration (minutes): 177
 Root Cause: Not specified
 Resolution: 
 Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
-Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud VertexAI,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
+Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud VertexAI,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: europe-west9
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -32757,10 +32757,10 @@ Duration (minutes): 177
 Root Cause: Not specified
 Resolution: 
 Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
-Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud Dataflow,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
+Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud Dataflow,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: europe-west9
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -32772,10 +32772,10 @@ Duration (minutes): 177
 Root Cause: Not specified
 Resolution: 
 Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
-Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud Bigtable,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
+Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud Bigtable,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: europe-west9
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -32787,10 +32787,10 @@ Duration (minutes): 177
 Root Cause: Not specified
 Resolution: 
 Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
-Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud Pub/Sub,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
+Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-03,GCP,Google Cloud Pub/Sub,europe-west9,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,2 hours and 57 minutes,177,Not specified,,2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes),,"Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine",,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: europe-west9
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -32802,7 +32802,7 @@ Duration (minutes): 177
 Root Cause: Not specified
 Resolution: 
 Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
-Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
+Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine"
 1704672000.0,Google Cloud Service Health - Incident report 2024-08-07,GCP,Google Cloud VertexAI,asia-northeast1,asia-east1: us-pacific-west1-a us-pacific-west1-b,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,5 hours and 51 minutes,351,"Impacted customers would not be able to enable Cloud TPU APIs in their projects and would encounter an error message that states, e.g. .Failed to upload model. Contact Vertex AI..",,2024-08-07 14:53 UTC - 2024-08-07 20:44 UTC,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-07
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, df
@@ -33043,7 +33043,7 @@ Root Cause: Impacted customers would not be able to enable Cloud TPU APIs in the
 Resolution: 
 Downtime Period: 2024-08-07 14:53 UTC - 2024-08-07 20:44 UTC
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,asia-northeast3,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),asia-northeast3,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33058,7 +33058,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,europe-west2,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),europe-west2,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33073,7 +33073,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,us-west2,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),us-west2,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33088,7 +33088,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,europe-west4,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),europe-west4,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33103,7 +33103,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,north america-northeast2,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),north america-northeast2,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33118,7 +33118,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,north america-northeast1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),north america-northeast1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33133,7 +33133,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,us-central1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),us-central1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33148,7 +33148,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,us-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),us-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33163,7 +33163,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,australia-southeast1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),australia-southeast1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33178,7 +33178,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,us-east1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),us-east1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33193,7 +33193,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,us-east4,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),us-east4,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33208,7 +33208,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,europe-west6,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),europe-west6,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33223,7 +33223,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,europe-west3,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),europe-west3,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33238,7 +33238,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,asia-northeast1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),asia-northeast1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33253,7 +33253,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,asia-east1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),asia-east1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33268,7 +33268,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,asia-southeast1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),asia-southeast1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33283,7 +33283,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,asia-east2,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),asia-east2,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33298,7 +33298,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,europe-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),europe-west1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -33313,7 +33313,7 @@ Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2G
 Resolution: 
 Downtime Period: Not specified
 Affected Components: Google GCP"
-1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine,asia-south1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+1704672000.0,Google Cloud Service Health - Incident report 2024-08-16,GCP,Google Kubernetes Engine (GKE),asia-south1,not specified,2024-01-08T00:00:00+00:00,2024-01-08T00:00:00+00:00,resolved,,14 hours and 39 minutes,879,Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error .Pod ephemeral local storage usage exceeds the total limit of containers 2Gi..,,Not specified,,Google GCP,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
 Regions: asia-northeast3, europe-west2, us-west2, europe-west4, north america-northeast2, north america-northeast1, us-central1, us-west1, australia-southeast1, us-east1, us-east4, europe-west6, europe-west3, asia-northeast1, asia-east1, asia-southeast1, asia-east2, europe-west1, asia-south1
@@ -34887,7 +34887,7 @@ Downtime Period: 2024-10-23 18:25 - 18:41 UTC
 Affected Components: Google Cloud VertexAI"
 1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,Google Cloud Run,australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
@@ -34902,7 +34902,7 @@ Downtime Period:
 Affected Components: Google Cloud VertexAI"
 1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,Google Cloud Compute Engine,australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
@@ -34917,7 +34917,7 @@ Downtime Period:
 Affected Components: Google Cloud VertexAI"
 1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,Google Cloud Dataproc,australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
@@ -34930,9 +34930,9 @@ Root Cause:
 Resolution: 
 Downtime Period: 
 Affected Components: Google Cloud VertexAI"
-1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,Google Kubernetes Engine,australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
+1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,Google Kubernetes Engine (GKE),australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
@@ -34947,7 +34947,7 @@ Downtime Period:
 Affected Components: Google Cloud VertexAI"
 1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,Google Cloud SQL,australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
@@ -34962,7 +34962,7 @@ Downtime Period:
 Affected Components: Google Cloud VertexAI"
 1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,Google Cloud VertexAI,australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
@@ -34977,7 +34977,7 @@ Downtime Period:
 Affected Components: Google Cloud VertexAI"
 1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,rce,australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
@@ -34992,7 +34992,7 @@ Downtime Period:
 Affected Components: Google Cloud VertexAI"
 1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,Google Cloud Apigee API,australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
@@ -35007,7 +35007,7 @@ Downtime Period:
 Affected Components: Google Cloud VertexAI"
 1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,Google Cloud Dataflow,australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
@@ -35022,7 +35022,7 @@ Downtime Period:
 Affected Components: Google Cloud VertexAI"
 1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,Google Cloud Storage,australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
@@ -35037,7 +35037,7 @@ Downtime Period:
 Affected Components: Google Cloud VertexAI"
 1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,Google Cloud Pub/Sub,australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
@@ -35052,7 +35052,7 @@ Downtime Period:
 Affected Components: Google Cloud VertexAI"
 1730171580.0,Google Cloud Service Health - Incident report 2024-10-29,GCP,Google Cloud BigQuery,australia-southeast2,,2024-10-29T03:13:00+00:00,2024-10-29T06:26:00+00:00,resolved,,3 hours and 13 minutes.,193,,,,,Google Cloud VertexAI,,"Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
