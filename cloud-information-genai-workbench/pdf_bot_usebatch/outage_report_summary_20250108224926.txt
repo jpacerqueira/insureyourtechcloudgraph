@@ -776,7 +776,7 @@ Affected Components: Vertex AI Search, Vertex AI Search
 
 Source Outage Report: Google Cloud Service Health - Incident 2024-03-21
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Kubernetes Engine, Google Kubernetes Engine, Google Distributed Cloud Edge, GDC Edge
+Cloud Services: Google Cloud VertexAI, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Distributed Cloud Edge, GDC Edge
 Regions: pacific
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -1312,7 +1312,7 @@ Affected Components: Cloud Logging, Personalized Service Health (PSH), Log queri
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-02-14
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine, Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Pub/Sub
 Regions: us-west1
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -1491,7 +1491,7 @@ Affected Components: AutoML Translation, AutoML Translation
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine (GKE), Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: europe-west9
 Availability Zones: not specified
 Start Time: 2024-01-08 00:00:00+00:00
@@ -1503,7 +1503,7 @@ Duration (minutes): 177
 Root Cause: Not specified
 Resolution: 
 Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
-Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine
+Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine (GKE), Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine (GKE), Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine
 
 ---
 
@@ -1652,7 +1652,7 @@ Affected Components: Google Cloud VertexAI
 
 Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
 Cloud Provider: GCP
-Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine (GKE), Google Cloud Pub/Sub
 Regions: australia-southeast2
 Availability Zones: 
 Start Time: 2024-10-29 03:13:00+00:00
