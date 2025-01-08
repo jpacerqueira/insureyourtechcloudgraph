@@ -48,7 +48,7 @@ class StreamHandler(BaseCallbackHandler):
 #"temperature": 0.1 # for more accurate results
 #"temperature": 0.7 # for more creative results
 #"temperature": 1.0 # for more creative results
-llm = load_llm(llm_name, logger=logger, config={"ollama_base_url": ollama_base_url,"temperature": 0.1,})
+llm = load_llm(llm_name, logger=logger, config={"ollama_base_url": ollama_base_url,"temperature": 0.0,})
 
 
 def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, output_dir=None):
@@ -60,7 +60,7 @@ def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, outpu
         text += page.extract_text()
 
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000, chunk_overlap=200, length_function=len
+        chunk_size=100000, chunk_overlap=65200, length_function=len
     )
     chunks = text_splitter.split_text(text=text)
     

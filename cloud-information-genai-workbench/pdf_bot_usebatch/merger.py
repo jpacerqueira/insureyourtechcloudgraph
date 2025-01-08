@@ -429,7 +429,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Amazon FinSpace|FinSpace)",
             r"(?i)(Amazon QuickSight|QuickSight|QS)",
             # Serverless
-            r"(?i)(Amazon AWS Lambda|AWS Lambda|Lambda|λ)",
+            r"(?i)(Amazon AWS Lambda|AWS Lambda|Amazon Lambda|Lambda|lambda|λ)",
             r"(?i)(Amazon AWS Step Functions|AWS Step Functions|Step Functions|SF)",
             # Data Processing
             r"(?i)(Amazon Redshift|Redshift|RS)",
@@ -722,6 +722,46 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         r"(?i)Affected Regions and Availability Zones:\s*([^\n]+)",
         r"(?i)Affected Regions:\s*([^\n]+)",
     ]
+    
+    # Add new patterns for additional information extraction
+    new_affected_components_patterns = [
+        r"(?i)Affected Services:\s*([^\n]+)",
+        r"(?i)Services Impacted:\s*([^\n]+)"
+    ]
+    
+    new_mitigation_patterns = [
+        r"(?i)Mitigation Actions:\s*([^\n]+)",
+        r"(?i)Resolution Actions:\s*([^\n]+)"
+    ]
+    
+    new_time_patterns = {
+        "start": [
+            r"(?i)Outage Start Time:\s*([^\n]+)",
+            r"(?i)Incident Start:\s*([^\n]+)"
+        ],
+        "end": [
+            r"(?i)Outage End Time:\s*([^\n]+)",
+            r"(?i)Incident Resolved:\s*([^\n]+)"
+        ]
+    }
+    
+    new_duration_patterns = [
+        r"(?i)Total Outage Duration:\s*([^\n]+)",
+        r"(?i)Outage Lasted:\s*([^\n]+)"
+    ]
+    
+    new_region_patterns = [
+        r"(?i)Regions Affected:\s*([^\n]+)",
+        r"(?i)Impacted Regions:\s*([^\n]+)"
+    ]
+    
+    # Integrate new patterns into existing logic
+    affected_components_patterns.extend(new_affected_components_patterns)
+    mitigation_patterns.extend(new_mitigation_patterns)
+    for key in time_patterns:
+        time_patterns[key].extend(new_time_patterns[key])
+    duration_patterns.extend(new_duration_patterns)
+    region_patterns.extend(new_region_patterns)
     
     # Split text into sections by outage
     sections = re.split(r"--\nOutage Filename:", text)
