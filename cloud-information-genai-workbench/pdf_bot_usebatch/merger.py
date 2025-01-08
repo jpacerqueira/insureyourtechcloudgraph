@@ -473,6 +473,8 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Google Kubernetes Engine|GKE)",
             r"(?i)(Google Cloud Functions|Cloud Functions|GCF)",
             r"(?i)(Google Cloud Pub/Sub|Pub/Sub|GCP Pub/Sub)",
+            # Google Distributed Cloud Edge
+            r"(?i)(Google Distributed Cloud Edge|Distributed Cloud Edge|GDC Edge)",
         ],
         "Azure": [
             # Identity Services
@@ -507,6 +509,8 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Azure Kubernetes Service|AKS)",
             r"(?i)(Azure Blob Storage|Blob Storage|ABS|ADLS|ADLS2)",
             r"(?i)(Azure Logic Apps|Logic Apps|ALA)",
+            # Azure MongoDB
+            r"(?i)(Azure Cosmos DB for MongoDB|Cosmos DB for MongoDB|Cosmos DB for MongoDB|Cosmos DB|Cosmos|MongoDB|MongoDB Cloud|MongoDB|mongodb|MongoDB Atlas)",
         ],
         "IBM": [
             # AI/ML Services
@@ -537,6 +541,26 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             # Container Services
             r"(?i)(IBM Kubernetes|IKS)",
             r"(?i)(Red Hat OpenShift on IBM Cloud|OpenShift|RHOIC)",
+            # BareMetal servers
+            r"(?i)(BareMetal servers|BareMetal|BM)",
+            # Load Balancers
+            r"(?i)(Load Balancers|Load Balancer|LB)",
+            # VSI-San Storage
+            r"(?i)(VSI-San Storage|VSI-San|VSIs|VSI)",
+            # API Connect
+            r"(?i)(OCI API Connect|API Connect|API|APIC)",
+            # Compute
+            r"(?i)(OCI Compute|Compute|OCI Compute Cloud|Compute Cloud|Compute)",
+            # Network
+            r"(?i)(OCI Network|Network|OCI Network Cloud|Network Cloud|Network)",
+            # Storage
+            r"(?i)(OCI Storage|Storage|OCI Storage Cloud|Storage Cloud|Storage)",
+            # Database
+            r"(?i)(OCI Database|Database|OCI Database Cloud|Database Cloud|Database)",
+            # API Gateway
+            r"(?i)(OCI API Gateway|API Gateway|OCI API|API)",
+            #Cloudant NoSQL DB
+            r"(?i)(Cloudant NoSQL DB|Cloudant|NoSQL DB)",
         ],
         "Oracle": [
             # Database Services
@@ -545,8 +569,55 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Object Storage OCI|OCI Storage|OCIS)",
             # Data Services
             r"(?i)(Oracle Big Data Service|BDS|OBDS)",
-            # Container Services
-            r"(?i)(Oracle Kubernetes Service|OKE)",
+            # Oracle Cloud Infrastructure Container Engine for Kubernetes (OKE)
+            r"(?i)(Oracle Cloud Infrastructure Container Engine for Kubernetes (OKE)|Oracle Cloud Infrastructure Container Engine for Kubernetes|Oracle Kubernetes Service (OKE)|Oracle Kubernetes Service|OKE)",
+            # Oracle Identity Cloud
+            r"(?i)(Oracle Identity Cloud|OCI Identity|OCI Identity Cloud|Identity Cloud|Identity)",
+            # Oracle Cloud Infrastructure Compute
+            r"(?i)(Oracle Cloud Infrastructure Compute|OCI Compute|OCI Compute Cloud|Compute Cloud|Compute)",
+            # Oracle Cloud Infrastructure Object Storage
+            r"(?i)(Oracle Cloud Infrastructure Object Storage|OCI Object Storage|OCI Object|Object Storage)",
+            # Oracle Cloud Infrastructure Storage
+            r"(?i)(Oracle Cloud Infrastructure Storage|OCI Storage|OCI Storage Cloud|Storage Cloud|Storage)",
+            # Oracle Cloud Infrastructure Network or Network OCI
+            r"(?i)(Oracle Cloud Infrastructure Network|OCI Network|OCI Network Cloud|Network Cloud|Network|Network Oracle Cloud Infrastructure (OCI)|Network OCI|Networking OCI|OCI Networking|OCI Network|Network OCI|Networking|Network)",
+            # Oracle Cloud Infrastructure Database
+            r"(?i)(Oracle Cloud Infrastructure Database|OCI Database|OCI Database Cloud|Database Cloud|Database)",
+            # Oracle Cloud Infrastructure API Gateway
+            r"(?i)(Oracle Cloud Infrastructure API Gateway|OCI API Gateway|OCI API|API Gateway)",
+            # Oracle Cloud Infrastructure Data Flow
+            r"(?i)(Oracle Cloud Infrastructure Data Flow|OCI Data Flow|OCI Data|Data Flow)",
+            # Oracle Cloud Infrastructure Events
+            r"(?i)(Oracle Cloud Infrastructure Events|OCI Events|OCI Event|Events)",
+            # Oracle Cloud Infrastructure Monitoring
+            r"(?i)(Oracle Cloud Infrastructure Monitoring|OCI Monitoring|OCI Monitor|Monitoring)",
+            # Oracle Cloud Infrastructure Notifications
+            r"(?i)(Oracle Cloud Infrastructure Notifications|OCI Notifications|OCI Notification|Notifications)",
+            # Oracle Cloud Guard
+            r"(?i)(Oracle Cloud Guard|OCI Guard|OCI Guard Cloud|Guard Cloud|Guard)",
+            # Oracle Cloud Infrastructure Registry (OCIR)
+            r"(?i)(Oracle Cloud Infrastructure Registry (OCIR)|OCI Registry|OCI Registry Cloud|Registry Cloud|Registry)",
+            # Oracle Cloud Infrastructure Resource Manager
+            r"(?i)(Oracle Cloud Infrastructure Resource Manager|OCI Resource Manager|OCI Resource|Resource Manager)",
+            # Oracle Cloud Infrastructure Vulnerability Scanning Service
+            r"(?i)(Oracle Cloud Infrastructure Vulnerability Scanning Service|OCI Vulnerability Scanning Service|OCI Vulnerability|Vulnerability Scanning Service)",
+            # Oracle Digital Assistant
+            r"(?i)(Oracle Digital Assistant|OCI Digital Assistant|OCI Digital|Digital Assistant)",
+            # Oracle Functions
+            r"(?i)(Oracle Functions|OCI Functions|OCI Function|Functions)",
+            # Oracle Integration
+            r"(?i)(Oracle Integration|OCI Integration|OCI Integration Cloud|Integration Cloud|Integration)",
+            # Oracle Visual Builder
+            r"(?i)(Oracle Visual Builder|OCI Visual Builder|OCI Visual|Visual Builder)",
+            # Oracle Web Application Firewall (WAF)
+            r"(?i)(Oracle Web Application Firewall (WAF)|OCI Web Application Firewall (WAF)|OCI Web Application Firewall|Web Application Firewall (WAF)|Web Application Firewall)",
+            # Oracle Cloud Infrastructure API Gateway
+            r"(?i)(Oracle Cloud Infrastructure API Gateway|OCI API Gateway|OCI API|API Gateway)",
+            # Oracle Cloud VMware Solution
+            r"(?i)(Oracle Cloud VMware Solution|OCI VMware Solution|OCI VMware|VMware Solution)",
+            # Multiple services
+            r"(?i)(Multiple services|Multiple services in|Multiple services in Oracle Cloud Infrastructure (OCI)|Oracle Cloud Infrastructure (OCI))",
+
         ],
         "Snowflake": [
             r"(?i)(Snowflake on AWS|SFAWS)",
@@ -567,15 +638,17 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Salesforce Mulesoft Anypoint Platform|Mulesoft|MAP)",
         ],
         "MongoDB": [
-            r"(?i)(MongoDB Atlas|MongoDB|MongoDB Cloud Atlas|Atlas)",
-            r"(?i)(MongoDB Atlas AWS|MongoDB AWS|Atlas AWS)",
-            r"(?i)(MongoDB Atlas Azure|MongoDB Azure|Atlas Azure)",
-            r"(?i)(MongoDB Atlas GCP|MongoDB GCP|Atlas GCP)",
-            r"(?i)(MongoDB Atlas Search|MongoDB Search|Search|Atlas Search)",
+            r"(?i)(MongoDB Atlas|MongoDB|MongoDB Cloud Atlas|Atlas|mongodb)",
+            r"(?i)(MongoDB Atlas AWS|MongoDB AWS|Atlas AWS|mongodb aws)",
+            r"(?i)(MongoDB Atlas Azure|MongoDB Azure|Atlas Azure|mongodb azure)",
+            r"(?i)(MongoDB Atlas GCP|MongoDB GCP|Atlas GCP|mongodb gcp)",
+            r"(?i)(MongoDB Atlas Search|MongoDB Search|Search|Atlas Search|mongodb search)",
             r"(?i)(MongoDB Atlas Vector Search|MongoDB Vector Search|Vector Search|Atlas Vector Search)",
             r"(?i)(MongoDB Atlas Stream Processing|MongoDB Stream Processing|Stream Processing|Atlas Stream Processing)",
             r"(?i)(MongoDB Atlas BI Connector|MongoDB BI Connector|BI Connector|Atlas BI Connector)",
             r"(?i)(MongoDB Atlas SQL|Atlas SQL)",
+            r"(?i)(MongoDB Atlas Data Federation|Data Federation)",
+            r"(?i)(MongoDB Atlas Online Archive|Online Archive)",
         ],
         "Cloudflare": [
             r"(?i)(AnyCast CloudFlare|AnyCast)",
