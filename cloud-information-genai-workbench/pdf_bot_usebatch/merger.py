@@ -470,7 +470,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Google Cloud And Media CDN|Media CDN|GCDN)",
             r"(?i)(Google Cloud DNS|Cloud DNS|GCDNS)",
             # Container Services
-            r"(?i)(Google Kubernetes Engine|GKE)",
+            r"(?i)(Google Kubernetes Engine (GKE)|Google Kubernetes Engine|GKE)",
             r"(?i)(Google Cloud Functions|Cloud Functions|GCF)",
             r"(?i)(Google Cloud Pub/Sub|Pub/Sub|GCP Pub/Sub)",
             # Google Distributed Cloud Edge
