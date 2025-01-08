@@ -5,7 +5,7 @@ The incident started on June 13, 2021, at 01:30 UTC and lasted for 3 days, 1 hou
 **Cloud Providers Impacted**
 
 * IBM Cloud
-* Private DNS Services (not a cloud provider but used by the impacted services)
+* Private DNS Services (not a cloud provider but impacted)
 
 **Services Impacted**
 

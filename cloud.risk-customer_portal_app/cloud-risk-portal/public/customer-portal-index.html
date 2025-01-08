@@ -1012,7 +1012,7 @@
 
         // Warning message for max credit back
         const warningMessage = estimatedCreditBack >= monthy_customer_service_spent ? 
-            `<div class='value' style='color: #ff6b6b; margin-top: 5px;'>Warning: Max. credit back was above the $${monthy_customer_service_spent.toFixed(2)} of service estimated cost per month</div>` : "";
+            `<div class='value' style='color: #ff0000; margin-top: 5px;'>Warning: Max. credit back was above the $${monthy_customer_service_spent.toFixed(2)} of service estimated cost per month</div>` : "";
 
         // Format AI Analysis text with line breaks
         const aiAnalysis = riskData.remarks_outage_genai
