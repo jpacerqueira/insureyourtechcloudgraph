@@ -1,0 +1,26 @@
+After analyzing the text, I found that only Amazon Web Services (AWS) was mentioned as a Cloud Provider.
+
+Here is the breakdown of the outage per service impacted:
+
+**Amazon Web Services (AWS)**
+
+* **EC2**: US East Region, Availability Zone: 
+	+ Impact Date: April 21st
+	+ Duration: 11 hours and 30 minutes
+	+ Root Cause: A subset of Amazon Elastic Block Store (EBS) volumes in a single Availability Zone became unable to service read and write operations.
+	+ Downtime Period: From April 21st, 11:00 AM PDT to April 22nd, 12:00 PM PDT
+	+ Resolved Date: April 22nd, 12:00 PM PDT
+
+**Summary of AWS Outage**
+
+* Cloud Provider: Amazon Web Services (AWS)
+* Service: EC2
+* Region: US East Region
+* Availability Zone: 
+* Impact Date: April 21st
+* Duration: 11 hours and 30 minutes
+* Root Cause: A subset of EBS volumes in a single Availability Zone became unable to service read and write operations.
+* Downtime Period: From April 21st, 11:00 AM PDT to April 22nd, 12:00 PM PDT
+* Resolved Date: April 22nd, 12:00 PM PDT
+
+Note that the text does not provide information on other Cloud Providers or services impacted.

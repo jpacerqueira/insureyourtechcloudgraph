@@ -1,0 +1,2850 @@
+Source Outage Report: Unknown
+Cloud Provider: 
+Cloud Services: 
+Regions: 
+Availability Zones: 
+Outage Status: 
+Impact Level: 
+Duration: 
+Duration (minutes): 0
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Source Outage Report: 20190823-Summary of the Amazon EC2 Issues in the Asia Pacific (Tokyo) Region (AP-NORTHEAST-1)
+Cloud Provider: AWS
+Cloud Services: Amazon Elastic Compute Cloud, Amazon Elastic Block Store, Amazon ElastiCache, Direct Connect, rs
+Regions: ap-northeast-1
+Availability Zones: 
+Outage Status: resolved
+Impact Level: 
+Duration: approximately 5 hours and 54 minutes.
+Duration (minutes): 354
+Root Cause: 
+Resolution: 
+Downtime Period: 
+Affected Components: Amazon AWS RDS
+
+---
+
+Source Outage Report: 20201125-Summary of the Amazon Kinesis Event in the Northern Virginia (US-EAST-1) Region
+Cloud Provider: AWS
+Cloud Services: Amazon Kinesis, Amazon Kinesis, Amazon CloudWatch, Direct Connect, AWS Lambda, rs
+Regions: eu-central-1, northern virginia (us-east-1), us-east-2, eu-west-2, il-central-1, us-west-1, ap-northeast-2, cn-north-1, ap-south-1, ap-northeast-3, eu-central-2, cn-northwest-1, ap-northeast-1, ca-central-1, ap-southeast-1, us-gov-east-1, ap-southeast-3, ap-south-2, us-east-1, ap-southeast-4, sa-east-1, eu-south-1, eu-north-1, global-default, af-south-1, eu-west-1, eu-south-2, ap-east-1, eu-west-3, ap-southeast-2, us-gov-west-1, us-west-2, me-south-1, me-central-1
+Availability Zones: not specified
+Start Time: 2020-11-25 10:37:00+00:00
+End Time: 2020-11-26 01:40:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: Approximately 5 hours and 47 minutes
+Duration (minutes): 347
+Root Cause: A relatively small addition of capacity that began to be added to the service at 2:44 AM PST
+Resolution: 
+Downtime Period: From 2:44 AM PST to 8:31 AM PST (approximately 5 hours and 47 minutes)
+Affected Components: Amazon AWS RDS
+
+---
+
+Source Outage Report: 20210913-Summary of AWS Direct Connect Event in the Tokyo (AP-NORTHEAST-1) Region
+Cloud Provider: AWS
+Cloud Services: Direct Connect, abr, Direct Connect, rs
+Regions: ap-northeast-1, tokyo (ap-northeast-1), service impacted: direct connect
+Availability Zones: not specified
+Start Time: 2021-01-08 00:00:00+00:00
+End Time: 2021-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: Start time: 2021-09-02 07:30:00 UTC
+Duration (minutes): 0
+Root Cause: Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
+Resolution: 
+Downtime Period: 2021-09-02 07:30:00 UTC - 2021-09-02 12:30:00 UTC (4 hours and 0 minutes)
+Affected Components: Direct Connect
+
+---
+
+Source Outage Report: 20211102-Summary of AWS Direct Connect Event in the Tokyo (AP-NORTHEAST-1) Region
+Cloud Provider: AWS
+Cloud Services: Direct Connect, Direct Connect, rs
+Regions: tokyo (ap-northeast-1), ap-northeast-1
+Availability Zones: not specified
+Start Time: 2021-01-08 00:00:00+00:00
+End Time: 2021-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: Start time: 2021-09-02 12:30 JST (UTC9) - 01:42 JST (UTC9)
+Duration (minutes): 0
+Root Cause: Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
+Resolution: 
+Downtime Period: Start time: 2021-09-02 07:30 JST (UTC9)
+
+---
+
+Source Outage Report: 20211207-Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region
+Cloud Provider: AWS
+Cloud Services: Direct Connect, rs
+Regions: us-east-1, northern virginia (us-east-1)
+Availability Zones: not specified
+Start Time: 2021-12-07 15:26:00+00:00
+End Time: 2021-12-08 16:15:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: Total duration: 6 hours and 52 minutes
+Duration (minutes): 412
+Root Cause: Impairment to monitoring systems and networking congestion
+Resolution: 
+Downtime Period: From December 7th, 2021, 07:33 AM PST to December 8th, 2021, 02:25 PM PST (6 hours and 52 minutes)
+Affected Components: Support Contact Center, Support Contact Center
+
+---
+
+Source Outage Report: 20211210-Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region
+Cloud Provider: AWS
+Cloud Services: Amazon API Gateway, Amazon CloudWatch, Amazon DynamoDB, Direct Connect, AWS Lambda, rs, Amazon s3
+Regions: us-east-1, northern virginia (us-east-1)
+Availability Zones: not specified
+Start Time: 2021-12-07 17:21:00+00:00
+End Time: 2021-12-12 22:15:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 5 days, 17 hours, and 43 minutes
+Duration (minutes): 8263
+Root Cause: Networking congestion and impaired monitoring systems
+Resolution: 
+Downtime Period: 4:41 PM PST (partial recovery) to 8:22 AM PST (full recovery)
+Affected Components: Amazon Connect, API Gateways used by Amazon Connect for Lambda functions, Amazon Secure Token Service (STS), CloudWatch monitoring, Amazon s3, DynamoDB via VPC Endpoints, and Console., Amazon Connect, API Gateways used by Amazon Connect for Lambda functions, Amazon Secure Token Service (STS), CloudWatch monitoring, Amazon s3, DynamoDB via VPC Endpoints, and Console.
+
+---
+
+Source Outage Report: 20230613-Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region
+Cloud Provider: AWS
+Cloud Services: Direct Connect, AWS Lambda, rs, Amazon Elastic Kubernetes Service
+Regions: us-east-1, northern virginia (us-east-1)
+Availability Zones: not specified
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 4 hours and 48 minutes
+Duration (minutes): 288
+Root Cause: Latent software defect in the provisioning of underlying compute capacity
+Resolution: 
+Downtime Period: 2 hours and 38 minutes
+Affected Components: Amazon AWS RDS
+
+---
+
+Source Outage Report: 20240730-Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region
+Cloud Provider: AWS
+Cloud Services: Amazon Kinesis, Amazon Kinesis, Amazon CloudWatch, Amazon Elastic Container Service, Amazon Elastic Container Service, Direct Connect, Amazon ElastiCache, AWS Lambda, Amazon Redshift, rs, Amazon AWS Glue, Amazon s3
+Regions: us-east-1
+Availability Zones: 
+Outage Status: investigating
+Impact Level: 
+Duration: 5 hour
+Duration (minutes): 300
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Source Outage Report: 20241110-Service health - Nov 25, 2024 _ AWS Health Dashboard _ Global
+Cloud Provider: AWS
+Cloud Services: abr, Amazon Elastic Container Service, Direct Connect, Amazon ElastiCache, rs, Amazon AWS Fargate, Amazon Elastic Kubernetes Service
+Regions: seoul (ap-northeast-2), ap-northeast-2
+Availability Zones: not specified
+Start Time: 2024-11-10 15:48:00+00:00
+End Time: 2024-11-10 18:06:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 3 hours and 18 minutes
+Duration (minutes): 198
+Root Cause: Database component causing the impairment
+Resolution: 
+Downtime Period: 3 hours and 18 minutes
+Affected Components: ALB, Amazon Elastic Container Service, Amazon Elastic Kubernetes Service, Amazon AWS Fargate, ALB, Amazon Elastic Container Service, Amazon Elastic Kubernetes Service, Amazon AWS Fargate
+
+---
+
+Source Outage Report: AWS PES - 21 April 2021 - Summary of the Amazon EC2 and Amazon RDS Service Disruption in the US East Region.22
+Cloud Provider: AWS
+Cloud Services: Amazon Elastic Compute Cloud, Amazon Elastic Block Store, Amazon ElastiCache, Direct Connect, rs
+Regions: us-east-1, us east region
+Availability Zones: single availability zone (not specified)
+Start Time: 2025-04-21 18:53:00+00:00
+End Time: 2025-04-21 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: Approximately 11 hours
+Duration (minutes): 660
+Root Cause: A subset of EBS volumes in the affected Availability Zone became unable to service read and write operations.
+Resolution: 
+Downtime Period: Customers experienced elevated error rates until Noon PDT on April 21st when attempting to launch new EBS-backed EC2 instances.
+Affected Components: Amazon AWS RDS, Amazon Elastic Compute Cloud
+
+---
+
+Source Outage Report: AWS PES - 21 April 2021 - Summary of the Amazon EC2 and Amazon RDS Service Disruption in the US East Region
+Cloud Provider: AWS
+Cloud Services: Amazon Elastic Compute Cloud, Amazon Elastic Block Store, Amazon Elastic Block Store, Amazon ElastiCache, Direct Connect, rs
+Regions: us east region
+Availability Zones: impact date: april 21st
+Start Time: 2025-04-21 00:00:00+00:00
+End Time: 2025-04-22 19:53:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 11 hours and 30 minutes
+Duration (minutes): 690
+Root Cause: A subset of Amazon Elastic Block Store (EBS) volumes in a single Availability Zone became unable to service read and write operations.
+Resolution: 
+Downtime Period: From April 21st, 11:00 AM PDT to April 22nd, 12:00 PM PDT
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Azure status history _ 13 November 2024 - Preliminary Incident Report  _ Microsoft Azure
+Cloud Provider: Azure
+Cloud Services: Azure Active Directory, Azure Databricks, Azure Databricks, Azure Functions, Azure Functions, Azure Storage Accounts
+Regions: and/or korea central, southeast asia, australiaeast, southeastasia, eastus, west europe, westeurope
+Availability Zones: west europe: not specified
+Start Time: 2024-11-13 12:30:00+00:00
+End Time: 2025-01-08 00:40:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 11 hours and 40 minutes
+Duration (minutes): 700
+Root Cause: Unintentional deletion of Azure Traffic Manager profiles for affected storage accounts
+Resolution: 
+Downtime Period: 11 hours and 40 minutes
+Affected Components: Microsoft Azure
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p10_2020
+Cloud Provider: Azure
+Cloud Services: Azure Active Directory, Azure Active Directory, Azure Databricks, Azure SQL Database, aps, Azure Functions, ala
+Regions: ukwest, northeurope, westus2, koreacentral, westeurope, northcentralus, southindia, chinanorth3, australiaeast, australiasoutheast, chinaeast2, chinacloudsites.cn, eastus3, southafricawest, centralindia, japanwest, westus, usgovvirginia, chinanorth, australiacentral2, brazilsoutheast, westindia, eastus2, canadaeast, southafricanorth, usgovtexas, uaecentral, francesouth, switzerlandwest, centraleurope, italynorth, japan west, koreasouth, usgovarizona, chinaeast, swedensouth, eastasia, germanynorth, canadacentral, centralus, southeastasia, eastus, qatarcentral, westus3, southcentralus, japaneast, global-default, francecentral, japan east, switzerlandnorth, chinanorth2, swedencentral, uksouth, germanywestcentral, australiacentral, norwayeast, chinacloudapp.cn, brazilsouth, uaenorth, norwaywest, chinaeast3
+Availability Zones: not specified
+Start Time: 2020-01-08 00:00:00+00:00
+End Time: 2020-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 6 hours and 36 minutes
+Duration (minutes): 396
+Root Cause: Connections to Azure SQL Database and related data services went through a load-balanced set of front-end nodes (Gateways) that provided directory lookup services and rerouted incoming connections to the intended backend nodes hosting the database. One of the SQL Gateway clusters became unhealthy, causing intermittent impact on login availability.
+Resolution: 
+Downtime Period: 2020-07-01 09:24 UTC - 2020-07-02 03:40 UTC
+Affected Components: 1. Microsoft Azure, Azure SQL Database, Synapse Analytics, Azure Database for MySQL, Azure Database for PostgreSQL, Azure Active Directory
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p10_2021
+Cloud Provider: Azure
+Cloud Services: Azure Active Directory, Azure Cosmos DB, Azure Functions, Azure Functions
+Regions: westus, west us cosmos db, west us
+Availability Zones: not specified
+Start Time: 2025-09-28 18:45:00+00:00
+End Time: 2025-01-08 18:45:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 30 minutes
+Duration (minutes): 150
+Root Cause: Code defect in the Safe Deployment Pr ocess (SDP) system
+Resolution: 
+Downtime Period: 2 hours and 30 minutes
+Affected Components: Microsoft Azure
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p11_2020
+Cloud Provider: Azure
+Cloud Services: Azure Active Directory, Azure Databricks, aps, Azure Functions
+Regions: east us, eastus, the
+Availability Zones: not specified
+Start Time: 2020-01-08 00:00:00+00:00
+End Time: 2025-01-08 00:50:00+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 3 hours and 23 minutes
+Duration (minutes): 203
+Root Cause: Planned power maintenance activity at the datacenter caused an impact to a storage resource.
+Resolution: 
+Downtime Period: 2020-06-11 12:00 - 2020-06-11 15:23 UTC
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p12_2020
+Cloud Provider: Azure
+Cloud Services: Ams, Azure Functions
+Regions: ukwest, northeurope, westus2, south central us, koreacentral, westeurope, amsterdam, northcentralus, southindia, chinanorth3, australiaeast, australiasoutheast, chinaeast2, chinacloudsites.cn, eastus3, southafricawest, centralindia, japanwest, westus, usgovvirginia, chinanorth, australiacentral2, brazilsoutheast, westindia, eastus2, canadaeast, southafricanorth, usgovtexas, uaecentral, francesouth, switzerlandwest, centraleurope, italynorth, japan west, koreasouth, usgovarizona, chinaeast, swedensouth, eastasia, germanynorth, canadacentral, centralus, southeastasia, eastus, qatarcentral, westus3, southcentralus, global-default, francecentral, japaneast, japan east, switzerlandnorth, chinanorth2, swedencentral, uksouth, germanywestcentral, australiacentral, norwayeast, chinacloudapp.cn, brazilsouth, uaenorth, norwaywest, chinaeast3
+Availability Zones: not specified
+Start Time: 2020-01-08 00:00:00+00:00
+End Time: 2020-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 6 hours and 22 minutes
+Duration (minutes): 382
+Root Cause: Incorrect configuration change
+Resolution: 
+Downtime Period: 19:10 - 22:28 UTC (3 hours and 18 minutes)
+Affected Components: Microsoft Azure
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p13_2019
+Cloud Provider: Azure
+Cloud Services: Azure Functions, Azure CDN
+Regions: global (except north america), north america
+Availability Zones: not specified
+Start Time: 2019-12-11 17:24:00+00:00
+End Time: 2019-12-11 21:48:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 4 hours and 24 minutes
+Duration (minutes): 264
+Root Cause: Staged deployment process
+Resolution: 
+Downtime Period: 17:24-21:48 UTC on December 11, 2019
+Affected Components: Azure CDN
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p1_2024
+Cloud Provider: Azure
+Cloud Services: Azure SQL Database, Azure Functions, Azure Functions, Azure Functions, Content Delivery Network
+Regions: ukwest, northeurope, westus2, koreacentral, westeurope, northcentralus, southindia, chinanorth3, australiaeast, australiasoutheast, chinaeast2, chinacloudsites.cn, eastus3, southafricawest, centralindia, japanwest, westus, usgovvirginia, chinanorth, australiacentral2, brazilsoutheast, westindia, eastus2, canadaeast, southafricanorth, usgovtexas, uaecentral, francesouth, switzerlandwest, centraleurope, italynorth, japan west, koreasouth, usgovarizona, chinaeast, swedensouth, eastasia, germanynorth, not specified, canadacentral, centralus, southeastasia, eastus, qatarcentral, westus3, southcentralus, global-default, francecentral, japaneast, japan east, switzerlandnorth, chinanorth2, swedencentral, uksouth, germanywestcentral, australiacentral, norwayeast, chinacloudapp.cn, brazilsouth, uaenorth, norwaywest, chinaeast3
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 1 hour
+Duration (minutes): 60
+Root Cause: Increased traffic between China Telecom network and Azure Commercial cloud
+Resolution: 
+Downtime Period: 2024-10-22 12:30 CST - 2024-10-22 13:30 CST
+Affected Components: Microsoft Azure
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p2_2024
+Cloud Provider: Azure
+Cloud Services: Azure AI, Azure Databricks, Azure Cosmos DB, Azure Functions, Logic Apps
+Regions: china
+Availability Zones: chinacloudapp.cn and chinacloudsites.cn domains
+Start Time: 2024-04-23 11:51:00+00:00
+End Time: 2024-04-23 11:04:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 2 hours 15 minutes
+Duration (minutes): 135
+Root Cause: Configuration change through a domain registrar resulted in a service disruption
+Resolution: 
+Downtime Period: 2 hours 15 minutes
+Affected Components: Microsoft Azure, Azure Cosmos DB, Azure Virtual Desk top, Azure Databricks, Backup, Sit e Recovery, Azure IoT Hub, Ser vice Bus, Logic Apps, Data F actory, Azure Kuber netes Ser vices, Azure Policy, Azure AI Speech
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p3_2023
+Cloud Provider: Azure
+Cloud Services: Azure Functions
+Regions: southeast asia experienced cooling failure, southeast asia and east asia, southeastasia, westeurope
+Availability Zones: one az in southeast asia experienced cooling failure
+Start Time: 2023-02-07 20:19:00+00:00
+End Time: 2023-02-07 20:19:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 4 days, 11 hours, 11 minutes
+Duration (minutes): 6431
+Root Cause: Planned power maintenance
+Resolution: 
+Downtime Period: 04:30 UTC on 9 February 2023 - 20:19 UTC on 7 February 2023 (4 days, 11 hours, 11 minutes)
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p4_2022
+Cloud Provider: Azure
+Cloud Services: Azure Functions, Azure Kubernetes Service
+Regions: westus2, west us 2
+Availability Zones: not specified
+Start Time: 2025-08-27 02:47:00+00:00
+End Time: 2025-08-28 02:47:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 1 day (24 hours)
+Duration (minutes): 1440
+Root Cause: Bug in Ubuntu 18.04 caused DNS resolution errors
+Resolution: 
+Downtime Period: 24 hours
+Affected Components: Microsoft Azure
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p5_2022
+Cloud Provider: Azure
+Cloud Services: Azure Functions, Azure Functions
+Regions: eastus2, east us 2
+Availability Zones: not specified
+Outage Status: investigating
+Impact Level: 
+Duration: Several days
+Duration (minutes): 0
+Root Cause: Unplanned power oscillation in one of the datacenters within an Availability Zone
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Azure Functions, Azure Storage Accounts, Compute
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p6_2021
+Cloud Provider: Azure
+Cloud Services: Azure App Service, Azure Functions, Azure Functions
+Regions: centralus, west central us
+Availability Zones: not specified
+Start Time: 2021-11-09 03:00:00+00:00
+End Time: 2025-01-08 14:03:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 21 days, 22 hours, and 59 minutes
+Duration (minutes): 31619
+Root Cause: Code change introduced an unrelated bug
+Resolution: 
+Downtime Period: 07:00 UTC - 14:03 UTC (7 hours)
+Affected Components: Access Panel, Azure App Service, Azure Functions, Web Deploy, WebJobs, Access Panel, Azure App Service, Azure Functions, Web Deploy, WebJobs
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p7_2021
+Cloud Provider: Azure
+Cloud Services: Azure Functions, Azure CDN
+Regions: ukwest, northeurope, westus2, koreacentral, westeurope, northcentralus, southindia, chinanorth3, australiaeast, australiasoutheast, east us, chinaeast2, chinacloudsites.cn, eastus3, southafricawest, centralindia, japanwest, westus, usgovvirginia, chinanorth, australiacentral2, brazilsoutheast, westindia, eastus2, canadaeast, southafricanorth, usgovtexas, uaecentral, francesouth, switzerlandwest, centraleurope, italynorth, japan west, koreasouth, usgovarizona, chinaeast, swedensouth, eastasia, germanynorth, canadacentral, centralus, southeastasia, eastus, qatarcentral, westus3, southcentralus, global-default, francecentral, japaneast, japan east, switzerlandnorth, chinanorth2, swedencentral, uksouth, germanywestcentral, australiacentral, norwayeast, chinacloudapp.cn, brazilsouth, uaenorth, norwaywest, chinaeast3
+Availability Zones: not specified
+Start Time: 2021-01-08 00:00:00+00:00
+End Time: 2021-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 5 hours and 55 minutes
+Duration (minutes): 355
+Root Cause: Periodic background task executed on site led to the disruption of services.
+Resolution: 
+Downtime Period: 21:20 UTC - 21:28 UTC (8 minutes)
+Affected Components: Microsoft Azure, Azure Front Door, Azure CDN Standard, Windows Virtual Desktop
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p8_2021
+Cloud Provider: Azure
+Cloud Services: Azure Functions, Azure Functions
+Regions: west europe and north europe, not specified (impacted downstream services), northeurope, west europe, westeurope
+Availability Zones: not specified
+Start Time: 2021-03-18 23:00:00+00:00
+End Time: 2021-03-19 01:50:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 days, 15 hours, 50 minutes
+Duration (minutes): 3830
+Root Cause: Network resource exhaustion due to a surge of requests to the Data Plane for a specific type of resource, caused by a code defect and under-provisioning in West Europe and North Europe regions.
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Microsoft Azure
+
+---
+
+Source Outage Report: Azure_status_history_Microsoft_Azure_p9_2020
+Cloud Provider: Azure
+Cloud Services: Azure Active Directory, Azure Cosmos DB, Azure Functions, Azure Functions
+Regions: ukwest, northeurope, westus2, koreacentral, westeurope, northcentralus, southindia, chinanorth3, australiaeast, australiasoutheast, chinaeast2, chinacloudsites.cn, eastus3, southafricawest, centralindia, japanwest, westus, usgovvirginia, chinanorth, australiacentral2, a version update of a component that controls network traffic routing between azure, brazilsoutheast, westindia, eastus2, canadaeast, southafricanorth, usgovtexas, uaecentral, francesouth, switzerlandwest, centraleurope, italynorth, japan west, koreasouth, usgovarizona, chinaeast, swedensouth, eastasia, germanynorth, canadacentral, centralus, southeastasia, eastus, qatarcentral, region, westus3, southcentralus, global-default, francecentral, japaneast, west us, switzerlandnorth, japan east, chinanorth2, swedencentral, uksouth, germanywestcentral, australiacentral, norwayeast, chinacloudapp.cn, brazilsouth, uaenorth, norwaywest, chinaeast3
+Availability Zones: not specified
+Start Time: 2025-01-08 18:45:00+00:00
+End Time: 2025-01-08 21:30:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 15 minutes
+Duration (minutes): 135
+Root Cause: Code defect in a version update of a component that controls network traffic routing between Azure regions
+Resolution: 
+Downtime Period: 02:00 - 20:00 UT C (UTC)
+Affected Components: Microsoft Azure
+
+---
+
+Source Outage Report: Google Cloud Service Health  - Incident 2023-11-08
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, df, Google Cloud Functions, Cloud Functions
+Regions: europe-west1, australia-southeast1
+Availability Zones: not specified
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 2 hours and 18 minutes
+Duration (minutes): 138
+Root Cause: Requests to Secret Manager might time out for App Engine customers.
+Resolution: 
+Downtime Period: 2023-11-08 15:11 - 17:29 UTC
+Affected Components: Google GCP, Google App Engine
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident 2024-09-09 -2
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, df, Google Cloud Looker Studio Pro
+Regions: global-default
+Availability Zones: 
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 10 hours 16 minutes
+Duration (minutes): 616
+Root Cause: Elevated query performance or errors after wait of around 5 minutes
+Resolution: 
+Downtime Period: 2024-09-09 09:44 UTC to 2024-09-09 19:00 UTC
+Affected Components: The following Cloud Providers were impacted:, The following services were impacted:
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident report 2023-08-07
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API
+Regions: asia-northeast1, asia-northeast3
+Availability Zones: 
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 25 minutes (15:00 - 14:56 UTC)
+Duration (minutes): 145
+Root Cause: Exceeded limit Errors due to API Deployment Failures
+Resolution: 
+Downtime Period: 2 hours and 25 minutes
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident report 2024-02-07
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, Google Cloud Bigtable, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataflow, Google Cloud DataStudio, Google Cloud Load Balancing, Google Cloud DNS
+Regions: the
+Availability Zones: 
+Start Time: 2024-01-07 22:52:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 1 hour and 8 minutes.
+Duration (minutes): 68
+Root Cause: The europe-west8 region recently received a networking upgrade to increase capacity and improve resilience. In order to minimize the risk, traffic was moved from europe-west8-b to other zones in the region.
+Resolution: 
+Downtime Period: Customers were unable to reach any of the impacted Google Cloud products in europe-west8-b.
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident report 2024-02-15
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: europe-west4, europe-west1, europe-west2, multiple, us-west2, us-central1, europe-west3
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 6 hours and 37 minutes
+Duration (minutes): 397
+Root Cause: Internal Error
+Resolution: 
+Downtime Period: 2024-02-15 11:00 UTC - 2024-02-15 13:04 UTC (3 hours)
+Affected Components: AutoML Tables, AutoML Tables
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident report 2024-03-12
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API
+Regions: asia-east1
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 3 hours and 40 minutes
+Duration (minutes): 220
+Root Cause: Impacted customers may experience delays in bot detection which may in turn affect blocking rules
+Resolution: 
+Downtime Period: 2024-03-12 13:33 - 17:13 UTC
+Affected Components: Apigee Sense, Apigee Sense
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident report 2024-03-20
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio
+Regions: europe-west4, northamerica-northeast1, australia-southeast1, europe-west1, us-east1, asia-southeast1, sydney, asia-northeast1, europe-west2, multiple, us-central1, europe-west3, following, asia-south1, us-west1
+Availability Zones: asia-northeast1: tokyo
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 36 minutes
+Duration (minutes): 36
+Root Cause: Unknown
+Resolution: 
+Downtime Period: 2024-03-20 11:27 UTC - 2024-03-20 11:47 UTC
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident report 2024-04-12
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API
+Regions: global
+Availability Zones: n/a
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 47 minutes
+Duration (minutes): 47
+Root Cause: Transient issue
+Resolution: 
+Downtime Period: 2024-04-12 07:41 UTC - 2024-04-12 08:27 UTC
+Affected Components: Google Cloud Platform, Apigee Portals
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident report 2024-04-22
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, df
+Regions: us-central1
+Availability Zones: 
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 13 hours, 18 minutes
+Duration (minutes): 798
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident report 2024-04-23
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API
+Regions: europe-southwest1, europe-north1, us-west4, us-east4, europe-west9, asia-northeast2, us-east5, us-central1, europe-west6, asia-east2, europe-west4, northamerica-northeast1, asia-east1, us-west2, asia-southeast2, asia-northeast3, us-west3, europe-west1, me-central1, asia-southeast1, northamerica-northeast2, europe-west8, asia-south1, us-west1, southamerica-west1, europe-central2, us-south1, us-east1, asia-south2, me-west1, asia-northeast1, southamerica-east1
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 10 hours and 18 minutes
+Duration (minutes): 618
+Root Cause: Impacted customers may receive HTML errors instead of correct data while trying to access Apigee portal.
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Google Cloud Service, Google Cloud Apigee API
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident report 2024-06-20
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio
+Regions: europe-southwest1, europe-north1, us, europe-west, us-west4, asia-west1, us-east4, europe-west9, asia-northeast2, us-east8, us-east5, us-central1, europe-west3, europe-west10, europe-west6, africa-south1, google, asia-west2, europe-west11, europe-west4, northamerica-northeast1, australia-southeast2, asia, me-central2, europe-west12, europe-west2, asia-east1, us-west2, europe-west5, europe-west13, us-central5, us-east9, us-central4, us-west7, us-west3, asia-southeast1, multi-regions (no specific zones mentioned), us-central3, us (multi-regions), europe-west8, us-east2, us-west5, us-west1, southamerica-west1, europe-west14, europe-central2, us-south1, us-east1, asia-south2, me-west1, eu, us-west6, us-west8, europe-west7, us-east7, southamerica-east1
+Availability Zones: multi-regions (no specific zones mentioned)
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 2 hours, 12 minutes
+Duration (minutes): 132
+Root Cause: connectivity issues to a dependent backend service
+Resolution: 
+Downtime Period: 2024-06-20 10:30 UTC - 2024-06-20 12:42 UTC
+Affected Components: Google Cloud VertexAI, Dataplex Catalog, Google Cloud Service Health, Google Data Catalog
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident report 2024-08-08
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: us-east5
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 17 hours and 43 minutes
+Duration (minutes): 1063
+Root Cause: Elevated 500 errors from calls to the model
+Resolution: 
+Downtime Period: 2024-08-08 00:35 - 2024-08-08 17:18 UTC
+Affected Components: Vertex AI Online Prediction, Vertex AI Online Prediction
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident report 2024-08-12
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Load Balancing
+Regions: europe-west2 (london), europe-west2
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours, 12 minutes
+Duration (minutes): 132
+Root Cause: Loss of power to networking equipment in the London data center
+Resolution: 
+Downtime Period: 40 minutes
+Affected Components: Google Cloud Provider
+
+---
+
+Source Outage Report: Google Cloud Service Health - - Incident report 2024-11-16
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, Cloud SQL, Google Cloud Load Balancing
+Regions: europe-southwest1, europe-north1, us-west4, us-east4, europe-west9, asia-northeast2, us-east5, us-central1, europe-west3, europe-west6, asia-east2, australia-southeast2, europe-west4, northamerica-northeast1, australia-southeast1, europe-west2, asia-east1, us-west2, asia-southeast2, asia-northeast3, us-west3, europe-west1, me-central1, asia-southeast1, northamerica-northeast2, europe-west8, global-default, asia-south1, us-west1, southamerica-west1, us-south1, europe-central2, us-east1, asia-south2, me-west1, asia-northeast1, southamerica-east1
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours, 44 minutes
+Duration (minutes): 164
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router
+Resolution: 
+Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+Affected Components: Google GCP
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2023-11-27
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud SQL, Google Cloud DataStudio
+Regions: europe-west6, europe-west4, us-east1, asia-southeast1, us-east4, southamerica-east1, europe-west9, asia-northeast1, europe-west12, europe-west2, europe-west8, asia-east1, us-central1, europe-west3, sydney, europe-west10
+Availability Zones: 
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 2 days 8 hours
+Duration (minutes): 3360
+Root Cause: intermittent issue with multiple-table DMLs on MySQL versions 8.0.30 with query insights enabled
+Resolution: 
+Downtime Period: 2023-11-29 13:56 UTC - 2023-11-29 13:55 UTC (1 minute)
+Affected Components: Google Cloud VertexAI, Google Cloud SQL
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2023-12-07
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: us-east4
+Availability Zones: ha0 (zone1)
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 49 minutes
+Duration (minutes): 169
+Root Cause: Customers may experience problems creating, updating or deleting Cloud Interconnect attachments in us-east4 HA0.
+Resolution: 
+Downtime Period: 2023-12-07 06:42 UTC - 2023-12-07 09:11 UTC (1 hour and 29 minutes)
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-01-11
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: global
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 5 hours and 53 minutes
+Duration (minutes): 353
+Root Cause: Retail Search model training may be delayed or stopped
+Resolution: 
+Downtime Period: 14:06 - 15:19 UTC (5 hours and 13 minutes)
+Affected Components: Vertex AI Search, Vertex AI Search
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-03-21
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Kubernetes Engine, Google Kubernetes Engine
+Regions: pacific
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 5 days, 17 hours, and 3 minutes
+Duration (minutes): 8223
+Root Cause: Customers attempting to create a new Google Kubernetes Engine (GKE) cluster in a GDC Edge Zone may encounter timeout or internal errors, leading to cluster creation failures.
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Google Cloud VertexAI, Google Distributed Cloud Edge
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-04-15
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, df, Pub/Sub
+Regions: europe-north1
+Availability Zones: europe-north1 ( zone 1 )
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 35 minutes
+Duration (minutes): 35
+Root Cause: Bad configuration change
+Resolution: 
+Downtime Period: 35 minutes
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-04-19
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: asia-east2 (hong kong), us-west2 (los angeles), asia-south1, southamerica-east1 (são paulo), asia-south1 (mumbai), us-west2, southamerica-east1, asia-east2
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 1 hour and 24 minutes
+Duration (minutes): 84
+Root Cause: Mitigation work was underway by the engineering team.
+Resolution: 
+Downtime Period: 14:54 - 15:03 UTC (Friday, April 19, 2019)
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-05-17
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: us-east1
+Availability Zones: impact date: 2024-05-16 23:38 utc
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 days, 22 hours, and 43 minutes
+Duration (minutes): 4243
+Root Cause: Increased latency for create task calls
+Resolution: 
+Downtime Period: 2024-05-17 01:45 UTC - 2024-05-17 02:23 UTC
+Affected Components: Google Cloud VertexAI, Google Cloud Tasks
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-05-18
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: us-east1
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 24 minutes
+Duration (minutes): 144
+Root Cause: Increased latency for create task calls in us-east1 region
+Resolution: 
+Downtime Period: 2024-05-18 09:52 - 2024-05-18 11:08 UTC
+Affected Components: Google Cloud VertexAI, Google Cloud Tasks
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-05-24
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: asia-northeast3, asia-south2, asia-southeast1, asia-northeast1, asia-east1, asia-pacific, all, asia-east2, asia-south1
+Availability Zones: asia-east1: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 5 hours, 36 minutes
+Duration (minutes): 336
+Root Cause: Inability to exercise cluster creation and cluster upgrade in all regions of GDC connected
+Resolution: 
+Downtime Period: 2024-05-24 09:30 UTC
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-05-29
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, df
+Regions: impacted, us-west4, northamerica-northeast1, northamerica-northeast1 and us-west4
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 3 hours and 14 minutes
+Duration (minutes): 194
+Root Cause: Renewing SSL certificates in impacted regions
+Resolution: 
+Downtime Period: 2024-05-29 13:52 - 15:04 UTC (2 hours and 12 minutes)
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-06-03
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: europe-north1
+Availability Zones: 
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 6 minutes
+Duration (minutes): 126
+Root Cause: Management traffic between GDC Connected Zones and Google
+Resolution: 
+Downtime Period: 2024-06-03 15:46 - 2024-06-03 16:52 UTC
+Affected Components: Distributed Cloud Edge, Distributed Cloud Edge
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-06-04
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: us-central1
+Availability Zones: (not specified)
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 4 hours, 44 minutes
+Duration (minutes): 284
+Root Cause: Increased error rate in the us-central1 region
+Resolution: 
+Downtime Period: 2024-06-04 01:27 UTC - 2024-06-04 00:15 UTC (2 hours)
+Affected Components: Google Cloud VertexAI, Google Cloud Task and Cloud Scheduler
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-07-01
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, df, Google Cloud Looker Studio Pro
+Regions: pacific
+Availability Zones: pacific
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 7 hours 30 minutes
+Duration (minutes): 450
+Root Cause: Not specified
+Resolution: 
+Downtime Period: Not specified
+Affected Components: 1. Looker Studio, 1. Looker Studio
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-07-08
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, df, Google Cloud reCAPTCHA Enterprise
+Regions: global
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 3 days, 7 hours, 11 minutes
+Duration (minutes): 4751
+Root Cause: A change in the client code of reCAPTCHA Enterprise caused requests being sent to customer servers instead of reCAPTCHA servers.
+Resolution: 
+Downtime Period: 10 hours
+Affected Components: Google Cloud reCAPTCHA Enterprise, Google Cloud reCAPTCHA Enterprise
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-07-25
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: us-east4, us-central1, europe-west6, europe-west3, europe-west4, northamerica-northeast1, australia-southeast1, europe-west12, europe-west2, us-west2, asia-southeast1, northamerica-northeast2, europe-west8, asia-south1, southamerica-west1, asia-south2, me-west1, asia-northeast1, southamerica-east1
+Availability Zones: 
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-11 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 15 hours and 23 minutes
+Duration (minutes): 923
+Root Cause: Mitigation work was underway by the engineering team.
+Resolution: 
+Downtime Period: Thursday, 2024-07-25 14:30 UTC
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-07-30
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: australia-southeast1, europe-west1, asia-south2, asia-southeast1, asia-northeast1, europe-west12, europe-west2, sydney, asia-south1
+Availability Zones: tokyo
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 8 minutes
+Duration (minutes): 128
+Root Cause: DigiCert found a problem with their Domain Control Validation (DCV)
+Resolution: 
+Downtime Period: 19:30 UTC - 12:44 UTC
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-08-15
+Cloud Provider: GCP
+Cloud Services: 
+Regions: europe-north1, us-west4, us-east4, europe-west9, us-east5, us-central1, europe-west6, europe-west3, asia-east2, australiasoutheast1, europe-west4, northamerica-northeast1, europe-west2, eunorth1, asia-east1, us-west2, asia-southeast2, asia-northeast3, us-west3, europe-west1, me-central1, asia-southeast1, northamerica-northeast2, europe-west8, asia-south1, us-west1, southamerica-west1, europe-central2, us-south1, us-east1, asia-south2, me-west1, asia-northeast1, southamerica-east1
+Availability Zones: 
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 6 hours and 6 minutes
+Duration (minutes): 366
+Root Cause: Unknown
+Resolution: 
+Downtime Period: 17:01 - 17:51 UTC (6 hours and 50 minutes)
+Affected Components: Google Cloud VertexAI, Cluster creation and update operations
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-09-04 - 2
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: us-central1
+Availability Zones: impact date: 2024-09-04 06:29 utc
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 6 hours and 10 minutes
+Duration (minutes): 370
+Root Cause: VPC network data for newly created VMs or networks might not be available when requests to Google APIs originate from these VMs/networks.
+Resolution: 
+Downtime Period: Resolved Date: 2024-09-04 11:06 UTC
+Affected Components: Cloud Provider: Google Cloud, Virtual Private Cloud (VPC)
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-09-04
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: us-central1 (iowa), us-central1
+Availability Zones: iowa
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-10 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 25 minutes
+Duration (minutes): 25
+Root Cause: Intermittent connectivity issue with VMWare Engine (GCVE)
+Resolution: 
+Downtime Period: Wednesday, 2024-09-04 12:20 UTC
+Affected Components: Google Cloud Service, GCVE
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-09-07
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Cloud SQL, Google Cloud Compute Engine, Google Cloud Compute Engine, Google Kubernetes Engine
+Regions: asia-northeast1, affected
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 01 hours, 50 minutes
+Duration (minutes): 110
+Root Cause: Change rollout to an internal component
+Resolution: 
+Downtime Period: 2024-09-07 04:20 - 06:10 UTC
+Affected Components: Google Cloud VertexAI, Cloud Build, Cloud Deploy, Cloud SQL, Google Cloud Compute Engine, Google Kubernetes Engine
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-09-11
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, df
+Regions: global-default
+Availability Zones: 
+Start Time: 2025-01-08 11:20:00+00:00
+End Time: 2025-01-08 14:40:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 3 hours and 20 minutes. The root cause of the outage is not specified. The downtime period was from 08:00 UTC to 11:20 UTC. The outage was resolved at 11:20 UTC.
+Duration (minutes): 200
+Root Cause: 
+Resolution: 
+Downtime Period: 
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-09-28
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: pacific
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 6 days, 10 hours, and 10 minutes
+Duration (minutes): 9250
+Root Cause: VMware Engine network creation is failing for new customer projects of VMware engine. Existing projects appear to be functioning ok.
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Google Cloud Service
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-09-99
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Looker Studio Pro
+Regions: pacific
+Availability Zones: 
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 5 hours and 20 minutes
+Duration (minutes): 320
+Root Cause: Mitigation work is currently underway by our engineering team. The root cause of the outage was not specified.
+Resolution: 
+Downtime Period: 2024-09-09 19:00 PDT to 2024-09-09 21:04 PDT (UTC-07)
+Affected Components: The incident affected Google Cloud Service., Google Cloud Looker Studio Pro
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-10-24
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Looker Studio Pro
+Regions: global
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 1 day, 2 hours, and 23 minutes
+Duration (minutes): 1583
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 2024-10-25 02:23 UTC - 2024-10-25 02:23 UTC (0 days, 2 hours, and 23 minutes)
+Affected Components: Google Cloud Looker Studio Pro, Google Cloud Looker Studio Pro
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-11-06
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Looker Studio Pro
+Regions: global
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 6 hours and 51 minutes
+Duration (minutes): 411
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 2024-11-06 05:30 - 2024-11-06 07:00 UTC
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident 2024-11-25
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Looker Studio Pro
+Regions: global
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 3 hours and 19 minutes
+Duration (minutes): 199
+Root Cause: Intermittent timeouts and high latency on operations involving Spanner read/write
+Resolution: 
+Downtime Period: 2024-01-25 16:30 UTC - 2024-01-25 20:09 UTC
+Affected Components: Google Cloud VertexAI, Google Cloud Looker Studio Pro
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident GCP - 16 May 2024 
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, AlloyDB for PostgreSQL, Google Cloud Compute Engine, rce, Google Cloud Load Balancing
+Regions: global-default
+Availability Zones: 
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 48 minutes
+Duration (minutes): 168
+Root Cause: Bug in automation caused component to be shut down in all zones where it was still in use.
+Resolution: 
+Downtime Period: 15:39 - 17:28 US/Pacific, 15:35 - 18:06 US/Pacific, 15:47 - 16:30 US/Pacific, and 16:30 - 19:00 US/Pacific
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident Report - 29 October 2024
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Cloud SQL, Google Cloud Dataproc, dataproc, Google Cloud Dataflow, Google Cloud Datalab, Google Cloud Pub/Sub, Pub/Sub
+Regions: the, australia-southeast2
+Availability Zones: impact date: 2024-10-29 16:21 utc
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: service-specific
+Duration: 3 hours, 13 minutes
+Duration (minutes): 193
+Root Cause: Increased runtime, latency and an increase in 5XX errors for runtime
+Resolution: 
+Downtime Period: 2024-10-29 16:21 - 19:34 UTC
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2023-09-11
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API
+Regions: singapore, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-northeast1, asia-northeast2, asia-east1, asia-east2
+Availability Zones: asia-east1: us-pacific-central
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 8 hours, 25 minutes
+Duration (minutes): 505
+Root Cause: Misconfiguration of internal Apigee load balancers
+Resolution: 
+Downtime Period: 2023-09-11 04:00 UTC - 2023-09-11 12:25 UTC
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2023-12-04
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Bigtable
+Regions: us-central1
+Availability Zones: not specified
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 1 day, 8 hours, 5 minutes
+Duration (minutes): 1925
+Root Cause: Network issue causing customers to experience elevated errors and increased latency across multiple services in us-central1
+Resolution: 
+Downtime Period: 15 hours (partial mitigation)
+Affected Components: Google Cloud Bigtable, Google Cloud Bigtable, Google Cloud Tasks
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2023-12-05
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Bigtable
+Regions: us-central1
+Availability Zones: not specified
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-12-05 07:26:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 9 minutes (from 20:00 to 22:09 UTC)
+Duration (minutes): 129
+Root Cause: Underlying networking issue
+Resolution: 
+Downtime Period: From 20:00 UTC on December 4, 2023, to 07:26 UTC on December 5, 2023
+Affected Components: Google Cloud Bigtable, Google Cloud Bigtable
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2023-12-06
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Dataproc
+Regions: global-default
+Availability Zones: 
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 1 hour and 21 minutes
+Duration (minutes): 81
+Root Cause: Not specified in the text
+Resolution: 
+Downtime Period: 2023-12-06 17:23 - 2023-12-06 18:08 UTC (45 minutes)
+Affected Components: Google GCP, Dataproc Metastore
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-01-24
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, Google Cloud Storage
+Regions: multiple regions (asia-east1), asia-east1
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 17 hours and 30 minutes
+Duration (minutes): 1050
+Root Cause: Delayed ingestion to Log Analytics, delayed exports of logs to BigQuery, GCS, and Cloud PubSub destinations
+Resolution: 
+Downtime Period: 2024-01-23 09:30 UTC - 2024-01-24 22:00 UTC
+Affected Components: Cloud Logging, Personalized Service Health (PSH), Log queries and log-based metrics, Cloud Logging, Personalized Service Health (PSH), Log queries and log-based metrics
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-02-14
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, df, Google Cloud Load Balancing, Google Kubernetes Engine, Google Kubernetes Engine, Pub/Sub
+Regions: us-west1
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 3 hours, 7 minutes
+Duration (minutes): 187
+Root Cause: Elevated latencies and errors in control plane and data plane unavailability for some services.
+Resolution: 
+Downtime Period: From 10:35 AM to 12:52 PM UTC (2 hours, 17 minutes)
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-04-16
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, df, Google Cloud DataStudio, Google Cloud Datalab, Google Cloud Composer, Google Cloud Composer
+Regions: global-default
+Availability Zones: asia-northeast3, asia-south1, asia-southeast1, asia-northeast1, asia-northeast2, asia-east1, asia-east2, jakarta
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 1 day, 1 hour, and 20 minutes
+Duration (minutes): 1520
+Root Cause: An issue introduced by a recent change to the latest stable Container Operating System (COS) image used by Cloud Composer in one of its workloads.
+Resolution: 
+Downtime Period: 2024-04-17 03:40 UTC
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-05-03
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: global
+Availability Zones: n/a (global)
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 12 minutes
+Duration (minutes): 132
+Root Cause: A few customers with sign-in redirect now may see sign-in errors in the browser.
+Resolution: 
+Downtime Period: 2024-05-03 15:37 UTC - 2024-05-03 15:27 UTC (10 minutes)
+Affected Components: Firebase Authentication, Firebase Authentication
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-05-08
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API
+Regions: asia-east1
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 days, 3 hours, and 44 minutes
+Duration (minutes): 3104
+Root Cause: Impacted customers may experience latency in the completion of their API calls.
+Resolution: 
+Downtime Period: 2024-05-09 03:40 UTC
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-05-16
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, AlloyDB for PostgreSQL, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, Google Cloud DataStudio, Google Cloud Composer, Google Cloud Load Balancing, Pub/Sub
+Regions: us-west3, us-south1, us-west4, us-east1, central us, us-east4, us-west2, us-east5, us-west1
+Availability Zones: not specified
+Start Time: 2024-05-16 15:22:00+00:00
+End Time: 2024-05-17 18:10:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 48 minutes
+Duration (minutes): 168
+Root Cause: Bug in automation
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-06-10
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery
+Regions: us multi-region
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 3 hours and 15 minutes
+Duration (minutes): 195
+Root Cause: Concurrent mitigation of simultaneous degradations, which impacted the BigQuery projects hosted in two degraded clusters.
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Google Cloud Platform, Google Cloud BigQuery, Cloud Logging
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-07-11
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, df
+Regions: europe-southwest1, europe-north1, europe-west9, asia-northeast2, europe-west3, europe-west10, asia-east2, africa-south1, europe-west6, europe-west4, northamerica-northeast1, me-central2, europe-west12, europe-west2, asia-east1, asia-southeast2, asia-northeast3, europe-west1, me-central1, asia-southeast1, northamerica-northeast2, europe-west8, asia-south1, southamerica-west1, europe-central2, asia-south2, me-west1, eu, asia-northeast1, southamerica-east1
+Availability Zones: 
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 6 days, 11 hours, and 5 minutes
+Duration (minutes): 9305
+Root Cause: Configuration changes temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system.
+Resolution: 
+Downtime Period: None at this time
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-07-12
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Storage
+Regions: europe-west3
+Availability Zones: frankfurt
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 days, 14 hours, 19 minutes
+Duration (minutes): 3739
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 2024-07-10 15:20 - 2024-07-12 07:39 UTC
+Affected Components: Google Cloud VertexAI, Cloud Storage for Firebase
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-07-15
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Bigtable, Google Kubernetes Engine
+Regions: us-central1
+Availability Zones: 
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 2 hours 21 minutes
+Duration (minutes): 141
+Root Cause: Query processing service outage
+Resolution: 
+Downtime Period: 2024-07-15 11:50 UTC - 2024-07-15 10:52 UTC
+Affected Components: Cloud Monitoring, Cloud Spanner, Google Cloud Bigtable, Cloud Kubernetes Engine, Operations, Cloud Monitoring, Cloud Spanner, Google Cloud Bigtable, Cloud Kubernetes Engine, Operations
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-08-02
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, rce
+Regions: europe-west4, us-central1
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 8 hours and 6 minutes
+Duration (minutes): 486
+Root Cause: High latency and resource exhausted failures
+Resolution: 
+Downtime Period: 2024-08-02 09:30 - 2024-08-02 17:36 UTC
+Affected Components: AutoML Translation, AutoML Translation
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-08-03
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Bigtable, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Kubernetes Engine, Google Kubernetes Engine, Google Cloud Pub/Sub
+Regions: europe-west9
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 57 minutes
+Duration (minutes): 177
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine, Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud Workstations, Google Kubernetes Engine, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-08-07
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, df
+Regions: asia-northeast3, asia-south1, asia-southeast1, asia-northeast1, asia-northeast2, asia-east1, asia-southeast2, asia-east2
+Availability Zones: asia-east1: us-pacific-west1-a, us-pacific-west1-b
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 5 hours and 51 minutes
+Duration (minutes): 351
+Root Cause: Impacted customers would not be able to enable Cloud TPU APIs in their projects and would encounter an error message that states, e.g. "Failed to upload model. Contact Vertex AI."
+Resolution: 
+Downtime Period: 2024-08-07 14:53 UTC - 2024-08-07 20:44 UTC
+Affected Components: Google GCP
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-08-16
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine
+Regions: us-east4, us-central1, europe-west6, europe-west3, asia-east2, europe-west4, australia-southeast1, europe-west2, asia-east1, north america-northeast1, us-west2, asia-northeast3, europe-west1, asia-southeast1, asia-south1, us-west1, north america-northeast2, us-east1, asia-northeast1
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 14 hours and 39 minutes
+Duration (minutes): 879
+Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi."
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Google GCP
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-09-04
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Functions
+Regions: global
+Availability Zones: global
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 4 hours, 9 minutes
+Duration (minutes): 249
+Root Cause: Regressive change in rollout strategy
+Resolution: 
+Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-09-18
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Functions
+Regions: asia-northeast3, asia-southeast1, us-east4, europe-west2, asia-east1, us-central1, europe-west3, sydney
+Availability Zones: taiwan (asia-east1)
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 02:56:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 56 minutes
+Duration (minutes): 176
+Root Cause: Not specified in the text
+Resolution: 
+Downtime Period: Not specified in the text
+Affected Components: Google GCP
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-10-01
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: global
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 35 minutes
+Duration (minutes): 35
+Root Cause: Issue introduced by a new version release of an internal service which the Search API relies on, causing failures on our Search API.
+Resolution: 
+Downtime Period: 2024-10-01 09:28 - 2024-10-01 10:03 UTC
+Affected Components: Vertex AI Search, Vertex AI Search
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-10-08
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, df
+Regions: us-central1
+Availability Zones: (not specified)
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 6 hours and 20 minutes
+Duration (minutes): 380
+Root Cause: Impacted customers for GAE may see an increase in requests returning a HTTP 429 response code.
+Resolution: 
+Downtime Period: 2024-10-08 12:15 UTC - 2024-10-08 18:35 UTC
+Affected Components: App Engine, App Engine
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-10-09
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: us-west4, asia-northeast2, us-central1, europe-west6, europe-west3, asia-east2, northamerica-northeast1, australia-southeast1, europe-west2, asia-east1, northamerica-east1, us-west2, asia-southeast2, asia-northeast3, us-west3, europe-west1, asia-southeast1, us-west5, asia-south1, us-west1, europe-central2, us-east1, asia-northeast1, southamerica-east1
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2 hours and 21 minutes
+Duration (minutes): 141
+Root Cause: None at this time
+Resolution: 
+Downtime Period: 17:18 UTC (resolved)
+Affected Components: Google Cloud Platform
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-10-23
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Pub/Sub
+Regions: europe-west3, europe-west3-c
+Availability Zones: impact date: 2024-10-23 18:25 utc
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2025-01-08 02:01:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 16 minutes
+Duration (minutes): 16
+Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
+Resolution: 
+Downtime Period: 2024-10-23 18:25 - 18:41 UTC
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-10-29
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Google Cloud Compute Engine, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, rce, Google Kubernetes Engine, Google Cloud Pub/Sub
+Regions: australia-southeast2
+Availability Zones: 
+Start Time: 2024-10-29 03:13:00+00:00
+End Time: 2024-10-29 06:26:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 3 hours and 13 minutes.
+Duration (minutes): 193
+Root Cause: 
+Resolution: 
+Downtime Period: 
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health - Incident report 2024-11-04
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: europe-west4, asia-northeast3, asia-south1, us-east1, us-east4, asia-northeast1, asia-northeast2, asia-east1, us-central1, asia-southeast2, asia-east2
+Availability Zones: impact date: 2024-10-22 14:08 utc
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-11-04 20:30:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 13 days, 6 hours, 22 minutes
+Duration (minutes): 19102
+Root Cause: Internal storage provisioning configuration error
+Resolution: 
+Downtime Period: From October 22, 2024, 14:08 to November 4, 2024, 20:30 UTC
+Affected Components: Google Cloud VertexAI
+
+---
+
+Source Outage Report: Google Cloud Service Health -- Incident report 2023-09-19
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API
+Regions: asia-northeast1, asia-northeast3, asia-southeast1, asia-east1
+Availability Zones: - taiwan
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 8 hours, 25 minutes
+Duration (minutes): 505
+Root Cause: Misconfiguration of internal Apigee load balancers
+Resolution: 
+Downtime Period: 2023-09-11 04:00 UTC - 2023-09-11 12:25 UTC
+Affected Components: Google Cloud VertexAI, Apigee Integrated Developer Portal
+
+---
+
+Source Outage Report: Google Cloud Service Health- Incident 2023-11-30
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: southamerica-west1
+Availability Zones: 
+Start Time: 2023-11-30 12:20:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 0 days, 2 hours, 35 minutes
+Duration (minutes): 155
+Root Cause: Physical connections issue
+Resolution: 
+Downtime Period: 2023-11-30 12:22 UTC - 2023-11-30 13:00 UTC
+
+---
+
+Source Outage Report: Google Cloud Service Health. - Incident 2024-11-13
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI
+Regions: asia-northeast3, asia-southeast1 (singapore), asia-southeast1, sydney, us-east1 (northern virginia), asia-northeast1, us-central1 (iowa), asia-south1 (mumbai), multiple, australiasoutheast1 (sydney), us-east4, asia-northeast1 (tokyo), asia-northeast3 (seoul)
+Availability Zones: asia-northeast1: tokyo
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 5 days, 17 hours, 38 minutes
+Duration (minutes): 8258
+Root Cause: Intermitent issue with Vertex Gemini API
+Resolution: 
+Downtime Period: 2024-11-13 03:21 UTC - 2024-11-18 02:29 UTC
+Affected Components: Google Cloud Service
+
+---
+
+Source Outage Report: Google_Cloud_Service_Health._-12.June.2024
+Cloud Provider: GCP
+Cloud Services: Google Cloud VertexAI, df
+Regions: europe-west4, us-east1, asia-southeast1, multiple, us-central1, europe-west3, us-west1
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 3 hours and 53 minutes
+Duration (minutes): 233
+Root Cause: Timeouts due to intermittent segmentation faults in the Vertex Serving Prediction API servers
+Resolution: 
+Downtime Period: 2024-06-12 12:06 - 15:59 UTC
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - CIR_PRB0050543 - ID_0002104_Final
+Cloud Provider: IBM
+Cloud Services: IBM Watson Platform, ide, IBM Kubernetes
+Regions: london (lon06), jp-tok, tokyo (tok02), eu-gb, dallas (dal12)
+Availability Zones: not specified
+Start Time: 2020-07-13 20:51:00+00:00
+End Time: 2020-07-13 22:34:00+00:00
+Outage Status: investigating
+Impact Level: service-specific
+Duration: 1 hour 43 minutes
+Duration (minutes): 103
+Root Cause: Automated procedure in network device configuration management triggered a software defect
+Resolution: 
+Downtime Period: 20:51 - 22:34 UTC (1 hour 43 minutes)
+Affected Components: IBM Cloud Object Storage
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - CIR_PRB0051260 - ID_0002601_Final
+Cloud Provider: IBM
+Cloud Services: ide
+Regions: sao05, dal13, osa21, tor01, us-east-govt, fra05, mad04, br-sao, dal12, eu-es, wdc07, osa22, jp-osa, wdc04, tor05, eu-de, lon05, mad02, jp-tok, eu-gb, dal10, ca-tor, syd04, tok02, not specified, kr-seo, lon04, us-south, mad05, au-syd, global-default, sao01, lon06, us-east, fra04, tok04, wdc06, us-south-govt, tok05, tor04, syd05, osa23, fra02, sao04
+Availability Zones: not specified
+Start Time: 2020-01-08 00:00:00+00:00
+End Time: 2020-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 5 hours and 31 minutes
+Duration (minutes): 331
+Root Cause: A software forced crash occurred resulting in a chassis reload on bcr03a.dal05 as the management module became active.
+Resolution: 
+Downtime Period: Not specified
+Affected Components: DAL05 POD03 Backend, DAL05 POD03 Backend
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - CIR_PRB0053061 - ID_0002223_Final
+Cloud Provider: IBM
+Cloud Services: ide
+Regions: jp-tok, tokyo 02 datacenter
+Availability Zones: not specified
+Start Time: 2020-09-15 00:40:00+00:00
+End Time: 2020-09-15 04:11:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 3 hours and 31 minutes
+Duration (minutes): 211
+Root Cause: Unintended procedural step for a future planned maintenance
+Resolution: 
+Downtime Period: 15 September 2020 01:11 - 04:11 UTC
+Affected Components: VSI Migrations, VSI Migrations
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - CIR_PRB0054540 - ID_0002665_FINAL
+Cloud Provider: IBM
+Cloud Services: IBM Db2
+Regions: wdc04
+Availability Zones: mbr01b.wdc04
+Start Time: 2020-01-08 00:00:00+00:00
+End Time: 2020-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 3 hours and 3 minutes
+Duration (minutes): 183
+Root Cause: Rare software defect triggered by physical link issue
+Resolution: 
+Downtime Period: 2020-10-29 02:08 UTC - 2020-10-29 02:11 UTC (1 minute)
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - CIR_PRB0055726 - ID_0002411_Final
+Cloud Provider: IBM
+Cloud Services: ide
+Regions: saopaulo01
+Availability Zones: not specified
+Start Time: 2020-01-08 00:00:00+00:00
+End Time: 2020-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 17 hours 36 minutes
+Duration (minutes): 1056
+Root Cause: Issue with the main water supply that feeds the building's cooling towers
+Resolution: 
+Downtime Period: 2020-12-08 00:15 - 01:00 UTC
+Affected Components: IBM Cloud Object Storage, Cooling Infrastructure
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - CIR_PRB0057986 - ID_0002549_Final
+Cloud Provider: IBM
+Cloud Services: ide, IBM Cloud Object Storage
+Regions: mexico (mex01)
+Availability Zones: impact dates: 2021-02-16 21:40 utc - 2021-02-17 03:59 utc
+Start Time: 2021-01-08 00:00:00+00:00
+End Time: 2021-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 6 hours 19 minutes
+Duration (minutes): 379
+Root Cause: Rare extreme weather conditions in Texas resulted in a failure of the commercial power infrastructure at facilities located mostly around Houston, San Antonio, and Dallas.
+Resolution: 
+Downtime Period: 2021-02-17 03:59 UTC - 2021-02-16 21:40 UTC
+Affected Components: IBM Cloud Object Storage
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - CIR_PRB0059772 - ID_0002712_FINAL
+Cloud Provider: IBM
+Cloud Services: 
+Regions: wdc01
+Availability Zones: pod05
+Start Time: 2021-01-08 00:00:00+00:00
+End Time: 2021-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 9 hours and 35 minutes
+Duration (minutes): 575
+Root Cause: Automated power switching logic failed (Programmable Logic Controller – PLC)
+Resolution: 
+Downtime Period: 2021-04-06 20:00 UTC - 2021-04-07 05:35 UTC
+Affected Components: IBM Cloud Object Storage
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - CIR_PRB0061258 - ID_0002830_FINAL
+Cloud Provider: IBM
+Cloud Services: ide, IKS
+Regions: us-east-1, eu-de, au-syd, eu-gb, following
+Availability Zones: frankfurt (eu-central1)
+Start Time: 2021-05-25 12:07:00+00:00
+End Time: 2021-05-26 00:14:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 12 hours and 7 minutes.
+Duration (minutes): 727
+Root Cause: 
+Resolution: 
+Downtime Period: 
+Affected Components: 1. IBM Cloud
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - CIR_PRB0061974 - ID_0002865_FINAL
+Cloud Provider: IBM
+Cloud Services: ide, IBM Databases, IKS
+Regions: sao05, dal13, osa21, tor01, us-east-govt, fra05, mad04, br-sao, dal12, eu-es, wdc07, sydney, osa22, jp-osa, wdc04, tor05, eu-de, lon05, mad02, jp-tok, eu-gb, dal10, ca-tor, syd04, tok02, kr-seo, lon04, us-south, mad05, au-syd, global-default, sao01, lon06, us-east, fra04, tok04, wdc06, us-south-govt, tok05, tor04, syd05, osa23, fra02, sao04
+Availability Zones: not specified
+Start Time: 2021-06-13 01:30:00+00:00
+End Time: 2021-06-16 03:02:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 3 days, 1 hour, and 32 minutes
+Duration (minutes): 4412
+Root Cause: Connections to Cloudant database from private DNS Services resolvers stuck in a 'CLOSE_WAIT' state on IBM Cloud load balancers.
+Resolution: 
+Downtime Period: June 13, 2021, at 01:30 UTC - June 16, 2021, at 03:02 UTC
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - CIR_PRB0073933 - ID_0003333_FINAL
+Cloud Provider: IBM
+Cloud Services: ide
+Regions: sao05, dal13, osa21, tor01, us-east-govt, fra05, mad04, br-sao, dal12, eu-es, wdc07, osa22, jp-osa, wdc04, tor05, eu-de, lon05, mad02, ap-northeast-1, jp-tok, eu-gb, dal10, ca-tor, syd04, ap-southeast-1, all regions, tok02, kr-seo, us-east-1, lon04, us-south, mad05, au-syd, global-default, sao01, lon06, us-east, fra04, tok04, wdc06, us-south-govt, tok05, tor04, syd05, osa23, us-west-2, fra02, sao04
+Availability Zones: not specified
+Start Time: 2022-01-08 00:00:00+00:00
+End Time: 2022-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 1 hour 32 minutes
+Duration (minutes): 92
+Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn.
+Resolution: 
+Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+Affected Components: IBM Cloud Object Storage
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - PRB0077344 - ID_0003442_FINAL
+Cloud Provider: IBM
+Cloud Services: ide
+Regions: seoul 01 data center, kr-seo
+Availability Zones: seoul 01
+Start Time: 2022-01-08 00:00:00+00:00
+End Time: 2022-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 1 day 12 hours 46 minutes
+Duration (minutes): 2206
+Root Cause: Fire in one UPS battery room, with indications of fire and water damage to UPS and generator equipment.
+Resolution: 
+Downtime Period: 2022-10-16 20:30 UTC - 2022-10-15 07:44 UTC (13 hours 46 minutes)
+Affected Components: IBM Cloud Object Storage, All product offerings in Seoul 01 Data Center
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - PRB0084420 - ID_0003669_FINAL
+Cloud Provider: IBM
+Cloud Services: IBM Watson Platform, ide, SQL Query
+Regions: frankfurt (fra05), eu-de, critical status
+Availability Zones: eu-de-3
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 18 hours 26 minutes
+Duration (minutes): 1106
+Root Cause: Failed relay on the generator control system resulting in a soft failure scenario that impeded handover between the UPS (battery) and generator systems.
+Resolution: 
+Downtime Period: 2023-06-20 04:12 - 2023-06-22 05:41 UTC
+
+---
+
+Source Outage Report: IBM Cloud Incident Report - PRB0088343 - ID_0003755_FINAL
+Cloud Provider: IBM
+Cloud Services: ide, IBM Cloud Console
+Regions: worldwide (no specific region mentioned)
+Availability Zones: no specific availability zone mentioned
+Start Time: 2023-10-24 06:42:00+00:00
+End Time: 2023-10-24 12:12:00+00:00
+Outage Status: resolved
+Impact Level: global
+Duration: 5 hours and 30 minutes
+Duration (minutes): 330
+Root Cause: Highly distributed denial-of-service (DDoS) attack that partially bypassed existing protections
+Resolution: 
+Downtime Period: The service was unavailable for 5 hours and 30 minutes
+Incident ID: The IBM Cloud Console was impacted by a DDoS attack on 24 October 2023. The outage started at 06:42 UTC and lasted for 5 hours and 30 minutes. The root cause of the outage was a highly distributed denial-of-service (DDoS) attack that partially bypassed existing protections.
+Affected Components: IBM Cloud Object Storage
+
+---
+
+Source Outage Report: IBM_Cloud_Incident_Report_20_June_2022 _PRB0084420 - ID_0003669_FINAL
+Cloud Provider: IBM
+Cloud Services: IBM Watson Platform, ide, SQL Query
+Regions: frankfurt (fra05), eu-de, critical status
+Availability Zones: eu-de-3
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: service-specific
+Duration: 18 hours 26 minutes
+Duration (minutes): 1106
+Root Cause: Failed relay on the generator control system resulting in a soft failure scenario that impeded handover between the UPS (battery) and generator systems.
+Resolution: 
+Downtime Period: 2023-06-20 04:12 - 2023-06-22 05:41 UTC
+
+---
+
+Source Outage Report: IBM_Cloud_Incident_Report_20_June_2023 _PRB0084420 - ID_0003669_FINAL
+Cloud Provider: IBM
+Cloud Services: ide, SQL Query
+Regions: frankfurt (fra05), eu-de
+Availability Zones: eu-de-3
+Start Time: 2023-06-20 03:49:00+00:00
+End Time: 2023-06-20 22:15:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 18 hours 26 minutes
+Duration (minutes): 1106
+Root Cause: Failed relay on the generator control system resulting in a soft (partial) failure scenario that impeded handover between the UPS (battery) and generator systems.
+Resolution: 
+Downtime Period: 20 June 2023 04:12 - 20 June 2023 22:15 UTC
+Affected Components: IBM Cloud Object Storage
+
+---
+
+Source Outage Report: IBM_Cloud_Incident_Report_24_Oct_2023_PRB0088343 - ID_0003755_FINAL
+Cloud Provider: IBM
+Cloud Services: ide, Ide, IBM Cloud Console
+Regions: worldwide (no specific region mentioned)
+Availability Zones: no specific availability zone mentioned
+Start Time: 2023-10-24 06:42:00+00:00
+End Time: 2023-10-24 12:12:00+00:00
+Outage Status: investigating
+Impact Level: global
+Duration: 5 hours and 30 minutes
+Duration (minutes): 330
+Root Cause: Highly distributed denial-of-service (DDoS) attack that partially bypassed existing protections
+Resolution: 
+Downtime Period: 24 October 2023 06:42 - 24 October 2023 12:12 UTC
+Affected Components: IBM Cloud Object Storage
+
+---
+
+Source Outage Report: IBM_Cloud_Indident_Report_21_June_2022_CIR_PRB0073933 - ID_0003333_FINAL
+Cloud Provider: IBM
+Cloud Services: ide
+Regions: ap-southeast, ap-northeast, us-east, us-west, eu-de, us-east-1, us-west-1, eu-fr, ap-southeast-1
+Availability Zones: us-west-1a, us-east-1b, us-east-1c, us-west-1b, ap-southeast-1b, us-east-1a, eu-de-1, eu-fr-1, ap-southeast-1a
+Start Time: 2022-01-08 00:00:00+00:00
+End Time: 2022-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 1 hour 32 minutes
+Duration (minutes): 92
+Root Cause: Third-party vendor's BGP configuration update caused a critical set of IP prefixes to be withdrawn.
+Resolution: 
+Downtime Period: 2022-06-21 07:42 UTC - 2022-06-21 08:06 UTC (0 hours 24 minutes)
+Incident ID: | Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+Affected Components: IBM Cloud Object Storage
+
+---
+
+Source Outage Report: Microsoft Azure - Power BI service outage on 09-16 - Microsoft Fabric Community
+Cloud Provider: Azure
+Cloud Services: Azure Cosmos DB, Azure Functions, Azure Functions
+Regions: europe region, south east asia, european region, uae, south africa
+Availability Zones: not specified
+Start Time: 2025-01-09 00:00:00+00:00
+End Time: 2025-01-09 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 2-3 hours
+Duration (minutes): 0
+Root Cause: Blamed on Cosmos
+Resolution: 
+Downtime Period: 09-15-2024 12 AM - 09-16-2024 03 AM UTC
+Affected Components: Europe region, Microsoft Azure, Power BI service
+
+---
+
+Source Outage Report: MongoDB Cloud Status  - 20 September 2024 - Legacy realm.mongodb.com API currently unavailable
+Cloud Provider: MongoDB
+Cloud Services: MongoDB Atlas, MongoDB Atlas
+Regions: the
+Availability Zones: asia-east
+Start Time: 2024-09-18 12:50:00+00:00
+End Time: 2024-09-20 13:20:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: The outage started on September 18, 2024, at 12:50 UTC. The duration of the outage was 2 days, 14 hours, and 30 minutes.
+Duration (minutes): 3750
+Root Cause: The root cause of the outage is currently being investigated.
+Resolution: 
+Downtime Period: The downtime period for MongoDB Cloud was from September 18, 2024, at 12:50 UTC to September 20, 2024, at 13:20 UTC.
+Affected Components: The incident affected MongoDB Atlas App Services and Device Sync., MongoDB Cloud
+
+---
+
+Source Outage Report: MongoDB Cloud Status - Atlas Cluster Operations Delayed - 29 August 2024
+Cloud Provider: MongoDB
+Cloud Services: MongoDB Atlas
+Regions: europe-north1, eu-west-2, ukwest, europe-west9, northeurope, us-east5, ap-northeast-3, eastus3, ap-northeast-1, us-west2, southafricanorth, us-gov-east-1, francesouth, usgovarizona, chinaeast, eastasia, ap-south-2, germanynorth, me-central1, qatarcentral, sa-east-1, westus3, japaneast, asia-south1, us-west1, japan east, europe-central2, me-west1, uaenorth, eu-central-1, us-west4, us-east-2, ap-south-1, europe-west6, westeurope, asia-east2, europe-west4, northamerica-northeast1, southindia, chinanorth3, australiaeast, australiasoutheast, chinaeast2, australia-southeast1, eu-central-2, cn-northwest-1, southafricawest, chinacloudsites.cn, usgovvirginia, europe-west2, brazilsoutheast, westindia, asia-east1, canadaeast, ca-central-1, uaecentral, switzerlandwest, centraleurope, asia-northeast3, swedensouth, europe-west1, centralus, eu-south-1, eu-north-1, af-south-1, eu-south-2, ap-east-1, asia-south2, asia-northeast1, chinacloudapp.cn, norwaywest, southamerica-east1, europe-southwest1, il-central-1, us-east4, westus2, us-west-1, koreacentral, ap-northeast-2, cn-north-1, northcentralus, chinanorth, eastus2, italynorth, japan west, koreasouth, canadacentral, southeastasia, southcentralus, francecentral, eu-west-1, switzerlandnorth, chinanorth2, swedencentral, us-south1, us-east1, us-west-2, norwayeast, me-south-1, me-central-1, asia-northeast2, us-central1, europe-west3, australia-southeast2, centralindia, japanwest, westus, australiacentral2, usgovtexas, ap-southeast-1, ap-southeast-3, asia-southeast2, us-west3, not specified, asia-southeast1, us-east-1, ap-southeast-4, eastus, northamerica-northeast2, europe-west8, global-default, southamerica-west1, ap-southeast-2, eu-west-3, us-gov-west-1, uksouth, germanywestcentral, australiacentral, brazilsouth, chinaeast3
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 8 hours and 28 minutes (from 10:21 to 18:49 UTC)
+Duration (minutes): 508
+Root Cause: AWS STS outage
+Resolution: 
+Downtime Period: 8 hours and 28 minutes
+Affected Components: Not specified, Amazon AWS, Atlas Cluster Operations
+
+---
+
+Source Outage Report: MongoDB Cloud Status - Atlas Data Federation and Online Archive users may see increased query timeouts in Azure_westeurope - 02 Septmber 2024
+Cloud Provider: Azure
+Cloud Services: 
+Regions: westeurope
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: Not specified
+Duration (minutes): 0
+Root Cause: Query timeouts when connecting to Azure West Europe Atlas Data Federation instances
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Azure Active Directory, Atlas Data Federation, Online Archive
+
+---
+
+Source Outage Report: MongoDB Cloud Status - Atlas Login functionality degraded - 24 October 2024
+Cloud Provider: MongoDB
+Cloud Services: MongoDB Atlas, MongoDB Atlas, mongodb
+Regions: functionality, account.mongodb.com (no region specified), us-east-1, following, no region specified, | cloud provider | service | region |
+Availability Zones: no availability zone specified
+Start Time: 2024-10-24 16:33:00+00:00
+End Time: 2024-10-24 00:00:00+00:00
+Outage Status: resolved
+Impact Level: service-specific
+Duration: 1 day, 20 hours, 53 minutes
+Duration (minutes): 2693
+Root Cause: Timeouts from an upstream service provider
+Resolution: 
+Downtime Period: October 24, 2024 - October 25, 2024
+
+---
+
+Source Outage Report: MongoDB Cloud Status - Cluster operations delayed  - 09 October 2024
+Cloud Provider: MongoDB
+Cloud Services: MongoDB Atlas
+Regions: global-default
+Availability Zones: not specified in the text.
+Start Time: 2024-10-09 17:15:00+00:00
+End Time: 2024-10-09 17:15:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: The outage started at 17:15 UTC on October 9, 2024. The duration of the outage is not explicitly stated in the text.
+Duration (minutes): 0
+Root Cause: Not specified in the text.
+Resolution: 
+Downtime Period: Not specified in the text.
+Affected Components: The incident affected MongoDB Cloud., Cluster operations, cluster provisioning
+
+---
+
+Source Outage Report: MongoDB Cloud Status - Datadog Integration Degraded Experience - 22 October 2024
+Cloud Provider: MongoDB
+Cloud Services: MongoDB Atlas
+Regions: global-default
+Availability Zones: not specified in the text provided.
+Start Time: 2024-10-22 20:41:00+00:00
+End Time: 2024-10-22 20:41:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: The outage started on October 22, 2024 at 20:41 UTC. The duration of the outage is not specified in the text provided.
+Duration (minutes): 0
+Root Cause: Not specified in the text provided.
+Resolution: 
+Downtime Period: Not specified in the text provided.
+Affected Components: The incident affected MongoDB Cloud., Datadog Integration
+
+---
+
+Source Outage Report: MongoDB Cloud Status - Delayed cluster provisioning - 27 September 2024
+Cloud Provider: MongoDB
+Cloud Services: MongoDB Atlas
+Regions: global-default
+Availability Zones: no specific regions or availability zones mentioned in the text.
+Outage Status: resolved
+Impact Level: service-specific
+Duration: 
+Duration (minutes): 0
+Root Cause: 
+Resolution: 
+Downtime Period: 
+Affected Components: Amazon AWS, Cluster provisioning
+
+---
+
+Source Outage Report: MongoDB Cloud Status - Microsoft Azure Incident_ Degraded Cluster Health - Several Regions Impacted (UAE North Most Impacted) - 31 July 2024
+Cloud Provider: Azure
+Cloud Services: 
+Regions: uae north, not specified (impacted regions include uae north), uae north (microsoft azure)
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 1 day, 6 hours, and 46 minutes
+Duration (minutes): 1846
+Root Cause: Microsoft Azure is experiencing an issue with networking globally--we're seeing issues in UAE North in particular.
+Resolution: 
+Downtime Period: The cluster may not be accessible.
+Affected Components: Microsoft Azure, MongoDB Cloud, Cluster Health (Microsoft Azure), MongoDB Cloud
+
+---
+
+Source Outage Report: MongoDB Cloud Status - MongoDB Atlas Triggers_ Delayed Processing of Events - 27 August 2024
+Cloud Provider: MongoDB
+Cloud Services: MongoDB Atlas
+Regions: us-east-1
+Availability Zones: us-east-1
+Start Time: 2024-08-23 21:54:00+00:00
+End Time: 2024-08-25 15:53:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: The outage started on August 23, 2024, at 21:54 UTC. The duration of the outage was 2 days, 14 hours, and 10 minutes.
+Duration (minutes): 3730
+Root Cause: A mitigation has been deployed to resolve the issue.
+Resolution: 
+Downtime Period: The downtime period was from August 23, 2024, at 21:54 UTC to August 25, 2024, at 15:53 UTC.
+Affected Components: The incident affected MongoDB Atlas App Services and Device Sync., MongoDB Atlas Triggers
+
+---
+
+Source Outage Report: MongoDB Cloud Status - MongoDB Atlas Triggers_ Increased failure rate - 21 August 2024
+Cloud Provider: MongoDB
+Cloud Services: MongoDB Atlas, MongoDB Atlas
+Regions: us-east-1
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 3 days, 23 hours, and 36 minutes
+Duration (minutes): 5736
+Root Cause: Identified issue in us-east-1 region
+Resolution: 
+Downtime Period: 2024-08-19 UTC 02:20 - 2024-08-22 UTC 02:20
+Affected Components: MongoDB Atlas Triggers
+
+---
+
+Source Outage Report: OCI Status - Outage Report -  Wed, 24 Apr 2024 15-03-00 UTC
+Cloud Provider: Oracle
+Cloud Services: OKE
+Regions: india west (mumbai)
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 3 hours and 3 minutes
+Duration (minutes): 183
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 2024-04-24 15:03:00 UTC - 2024-04-24 16:06:00 UTC
+Affected Components: Oracle Cloud Infrastructure (OCI)
+
+---
+
+Source Outage Report: OCI Status - Outage Report - Fri, 02 Feb 2024 18-53-37 UTC
+Cloud Provider: Oracle
+Cloud Services: 
+Regions: us east (ashburn), us-east-ashburn
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 6 days, 22 hours, and 38 minutes
+Duration (minutes): 9998
+Root Cause: Not specified
+Resolution: 
+Downtime Period: Customers may have encountered connectivity issues when attempting to access a small subset of OCI services that rely on external content delivery networks (CDNs).
+Affected Components: Oracle OCI, Networking
+
+---
+
+Source Outage Report: OCI Status - Outage Report - Sat, 06 Jan 2024 06-53-38 UTC
+Cloud Provider: Oracle
+Cloud Services: 
+Regions: netherlands northwest amsterdam, netherlands northwest (amsterdam)
+Availability Zones: not specified in the text
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 5 hours and 45 minutes
+Duration (minutes): 345
+Root Cause: Not specified in the text
+Resolution: 
+Downtime Period: 5 hours and 45 minutes
+Affected Components: Networking, Oracle Identity Cloud, Oracle Cloud Infrastructure Compute, Oracle Cloud Infrastructure Object Storage, Networking, Oracle Identity Cloud, Oracle Cloud Infrastructure Compute, Oracle Cloud Infrastructure Object Storage
+
+---
+
+Source Outage Report: OCI Status - Outage Report - Sat, 13 Jan 2024 06-23-58 UTC
+Cloud Provider: Oracle
+Cloud Services: OKE
+Regions: uk west (newport)
+Availability Zones: not specified
+Start Time: 2024-01-12 21:17:00+00:00
+End Time: 2024-01-13 06:23:58+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 324 days
+Duration (minutes): 466560
+Root Cause: Not specified
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Oracle Cloud Infrastructure (OCI)
+
+---
+
+Source Outage Report: OCI Status - Outage Report - Sat, 21 Oct 2023 20-03-08 UTC
+Cloud Provider: Oracle
+Cloud Services: Oracle Big Data Service
+Regions: sweden central (stockholm)
+Availability Zones: not specified
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 7 hours and 26 minutes
+Duration (minutes): 446
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 2023-10-21 18:58:03 UTC - 2023-10-22 02:24:30 UTC
+Affected Components: Oracle Cloud Infrastructure (OCI)
+
+---
+
+Source Outage Report: OCI Status - Outage Report - Thu, 16 Nov 2023 03-24-00 UTC
+Cloud Provider: Oracle
+Cloud Services: 
+Regions: japan central (osaka), saudi arabia west (jeddah), serbia central (jovanovac), south africa central (johannesburg), australia southeast (melbourne), uk-london-1, canada southeast (montreal), us east (ashburn), ap-tokyo-1, spain central (madrid), sydney, india west (mumbai), australia east (sydney), us west (san jose), australia east (sydney, brazil east (sao paulo), italy northwest (milan), mexico central (queretaro), india south (hyderabad), uk south (london), israel central (jerusalem), ap-seoul-1, brazil southeast (vinhedo), switzerland north (zurich), chile central (santiago), us west (phoenix), us midwest (chicago), japan east (tokyo), singapore (singapore), uk west (newport), eu-frankfurt-1, uae central (abu dhabi), eu-paris-1, germany central (frankfurt), france central (paris), canada southeast (toronto), south korea north (chuncheon), south korea central (seoul), france south (marseille), netherlands northwest (amsterdam), sweden central (stockholm), mexico northeast (monterrey), ap-singapore-1, uae east (dubai)
+Availability Zones: not specified
+Start Time: 2023-11-15 13:34:00+00:00
+End Time: 2023-11-16 03:24:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 382 days
+Duration (minutes): 550080
+Root Cause: Service event from VMware partner
+Resolution: 
+Downtime Period: Thu, 16 Nov 2023 03:24:00 UTC
+Affected Components: Oracle Cloud Infrastructure (OCI)
+
+---
+
+Source Outage Report: OCI Status - Outage Report - Thu, 21 Mar 2024 22-24-28 UTC
+Cloud Provider: Oracle
+Cloud Services: 
+Regions: south africa central (johannesburg), the
+Availability Zones: not specified
+Start Time: 2024-03-14 18:09:00+00:00
+End Time: 2024-03-19 15:34:00+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 5 days (until March 19, 2024, 15:34 UTC)
+Duration (minutes): 7200
+Root Cause: Series of power cuts affecting network capacity in the region
+Resolution: 
+Downtime Period: Transient network connectivity issues
+Affected Components: Oracle Cloud Infrastructure (OCI), Create, Read, Update, and Delete (CRUD) service management operations
+
+---
+
+Source Outage Report: OCI Status - Outage Report - Tue, 07 Nov 2023 22-57-40 UTC
+Cloud Provider: Oracle
+Cloud Services: 
+Regions: south africa central (johannesburg), mexico central (queretaro), spain central (madrid), uae central (abu dhabi)
+Availability Zones: not specified
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 391 days
+Duration (minutes): 563040
+Root Cause: Not specified
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Oracle Cloud Infrastructure (OCI)
+
+---
+
+Source Outage Report: OCI Status - Outage Report - Tue, 23 Jul 2024 16-23-25 UTC
+Cloud Provider: Oracle
+Cloud Services: 
+Regions: eu-west-1, europe-west1, us-ashburn-1, us-east-1, centralus, westus, us-central1
+Availability Zones: us-east-1a
+Start Time: 2022-01-08 00:00:00+00:00
+End Time: 2022-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 12 hours 30 minutes
+Duration (minutes): 750
+Root Cause: Configuration issue
+Resolution: 
+Downtime Period: 2022-01-01 10:00 UTC - 2022-01-02 06:30 UTC
+
+---
+
+Source Outage Report: OCI Status - Outage Report - Wed, 10 Apr 2024 00-36-11 UTC
+Cloud Provider: Oracle
+Cloud Services: OKE
+Regions: saudi arabia west (jeddah)
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 16 hours and 41 minutes
+Duration (minutes): 1001
+Root Cause: Not specified
+Resolution: 
+Downtime Period: 2024-04-09 17:52:00 UTC - 2024-04-10 02:33:00 UTC
+Affected Components: Oracle Cloud Infrastructure
+
+---
+
+Source Outage Report: OCI Status - Outage Report - Wed, 24 Apr 2024 18-15-00 UTC
+Cloud Provider: Oracle
+Cloud Services: 
+Regions: france south, france south (marseille)
+Availability Zones: 32996a31
+Start Time: 2024-04-24 18:15:00+00:00
+End Time: 2024-04-24 19:46:35+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 222 days
+Duration (minutes): 319680
+Root Cause: Identified and resolved an issue that affected multiple OCI services in the France South region.
+Resolution: 
+Downtime Period: Wed, 24 Apr 2024 19:00:00 UTC - Wed, 24 Apr 2024 18:15:00 UTC (45 minutes)
+Affected Components: Oracle Cloud Infrastructure (OCI), Multiple services in France South (marseille) region.
+
+---
+
+Source Outage Report: OCI Status - Outage Report -Thu, 21 Mar 2024 03-09-38 UTC
+Cloud Provider: Oracle
+Cloud Services: 
+Regions: us-west-1, us west (san jose)
+Availability Zones: not specified in the text
+Start Time: 2024-03-20 22:57:00+00:00
+End Time: 2024-03-21 03:09:38+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: Thu, 21 Mar 2024 02:57:00 UTC - Thu, 21 Mar 2024 03:09:38 UTC (1 hour 12 minutes)
+Duration (minutes): 12
+Root Cause: Power event in the US West (San Jose) region
+Resolution: 
+Downtime Period: Wed, 20 Mar 2024 22:57:00 UTC - Thu, 21 Mar 2024 02:57:00 UTC (8 hours 0 minutes)
+Affected Components: Oracle Cloud Infrastructure, Networking, Block Volumes, Compute, Exadata Cloud Service, Object Storage
+
+---
+
+Source Outage Report: Service health - April 19, 2024 _ AWS Health Dashboard _ Global
+Cloud Provider: AWS
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon ElastiCache, Amazon QuickSight, Quicksight, rs
+Regions: us-east-1, us-west-2, us-west-1, ap-northeast-2
+Availability Zones: not specified
+Start Time: 2024-08-15 12:50:00+00:00
+End Time: 2024-08-15 15:10:00+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 2 hours and 20 minutes
+Duration (minutes): 140
+Root Cause: Increased API error rates
+Resolution: 
+Downtime Period: August 15, 2024, 12:50:00 PM - August 15, 2024, 1:10:20 PM UTC
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Service health - December 9, 2023 _ AWS Health Dashboard _ Global
+Cloud Provider: AWS
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon DynamoDB, Amazon DynamoDB, Amazon QuickSight, rs
+Regions: impact date: 2024-11-06 03:42:30 utc, impact date: 2024-10-29 04:13:56 utc, us-east-2, impact date: 2024-10-22 12:48:52 utc, us-east-1, us-west-2, eu-south-1
+Availability Zones: impact date: 2023-12-09 19:17:00 utc
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 1 hour and 12 minutes
+Duration (minutes): 72
+Root Cause: Increased error rates and latencies for the DynamoDB APIs
+Resolution: 
+Downtime Period: 2023-12-09 20:45:00 - 2023-12-09 22:57:00 UTC
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - - Incident 2024-10-07
+Cloud Provider: AWS
+Cloud Services: abr, Amazon Elastic Compute Cloud, Direct Connect, Amazon QuickSight, rs
+Regions: us-east-1, availability zone:, us-west-2, us-east-2
+Availability Zones: 2024, 07:55:00 am pst, impact date: november 10
+Start Time: 2024-11-10 15:48:00+00:00
+End Time: 2024-11-10 18:06:00+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 3 hours and 18 minutes
+Duration (minutes): 198
+Root Cause: Increased API error rates for mutatable VPC calls
+Resolution: 
+Downtime Period: November 10, 2024, 07:55:00 AM - November 10, 2024, 10:13:00 AM PST
+Affected Components: Amazon AWS RDS, Amazon Elastic Compute Cloud (us-west-2)
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - - Incident 2024-10-25
+Cloud Provider: AWS
+Cloud Services: Amazon Bedrock, Amazon Kinesis, Amazon Route 53, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs
+Regions: 0 (all services were in the same region), ap-southeast-2, us-east-2, us-east-1, n/a, us-west-1, us-west-2, same
+Availability Zones: n/a
+Start Time: 2024-11-25 04:31:00+00:00
+End Time: 2024-11-25 04:35:06+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 13 minutes
+Duration (minutes): 13
+Root Cause: Increased API error rates
+Resolution: 
+Downtime Period: 13 minutes
+Affected Components: 0 (all services were in the same region), Amazon Web Services (AWS), 13
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2023-12-09
+Cloud Provider: AWS
+Cloud Services: Amazon API Gateway, Amazon CloudWatch, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon ElastiCache, rs
+Regions: us-east-1, oregon (us-west-2), us-west-2
+Availability Zones: not specified
+Start Time: 2023-12-09 07:17:00+00:00
+End Time: 2023-12-09 08:29:20+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 12 hours and 12 minutes
+Duration (minutes): 732
+Root Cause: Informational - stable at normal levels, continued monitoring for full recovery
+Resolution: 
+Downtime Period: December 9, 2023, 07:17:00 UTC to December 9, 2023, 08:29:20 UTC
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2023-12-17
+Cloud Provider: AWS
+Cloud Services: Amazon API Gateway, Amazon CloudFront, Amazon Route 53, Amazon CloudWatch, Amazon DocumentDB, Amazon DynamoDB, Amazon AWS RDS, Amazon AWS RDS, Amazon Aurora Serverless, Amazon Aurora Serverless, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Container Service, Amazon Elastic File System, Amazon Elastic File System, Amazon Elastic Block Store, Amazon Elastic Block Store, Amazon Elastic Load Balancing, Amazon Elastic Load Balancing, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon ElastiCache, Amazon ElastiCache, Amazon QuickSight, Amazon QuickSight, Amazon Lambda, rs, Amazon Redshift, Amazon Elastic Kubernetes Service, Amazon Elastic Kubernetes Service, Amazon s3
+Regions: us-east-1, global, us-west-1, us-west-2
+Availability Zones: not specified
+Start Time: 2023-12-17 18:57:08+00:00
+End Time: 2023-12-19 02:52:00+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 7 hours and 55 minutes
+Duration (minutes): 475
+Root Cause: IAM Propagation delays
+Resolution: 
+Downtime Period: December 17, 2023, 18:57:08 UTC - December 19, 2023, 02:52:00 UTC
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-01-30
+Cloud Provider: AWS
+Cloud Services: Amazon Bedrock, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon ElastiCache, Direct Connect, Amazon QuickSight, Amazon QuickSight, rs
+Regions: us-east-1, availability zone:, us-west-2, us-west-1, ap-northeast-2, eu-south-1
+Availability Zones: 2024, impact date: november 25
+Start Time: 2024-11-25 00:00:00+00:00
+End Time: 2025-01-02 00:00:00+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 14 minutes
+Duration (minutes): 14
+Root Cause: Increased API Error Rates
+Resolution: 
+Downtime Period: 2024-11-25 04:31:00 - 2024-11-25 04:35:06 UTC
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-02-07
+Cloud Provider: AWS
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs
+Regions: us-east-1, availability zone:, 2. availability zone:, us-west-2, eu-south-1
+Availability Zones: 2024, 07:55:00 am pst, impact date: november 10
+Start Time: 2024-11-10 15:48:00+00:00
+End Time: 2024-11-10 18:06:00+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 3 hours and 37 minutes
+Duration (minutes): 217
+Root Cause: Increased API error rates for mutable VPC calls
+Resolution: 
+Downtime Period: November 10, 2024, 07:55:00 AM - 11:32:37 AM PST (3 hours and 37 minutes)
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-02-21
+Cloud Provider: AWS
+Cloud Services: Amazon Bedrock, Amazon Route 53, Amazon Route 53, Amazon CloudWatch, Amazon DynamoDB, Amazon AWS RDS, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon ElastiCache, Amazon QuickSight, rs, Amazon s3
+Regions: eu-central-1, us-east-2, eu-west-2, il-central-1, us-west-1, ap-northeast-2, cn-north-1, ap-south-1, ap-northeast-3, eu-central-2, cn-northwest-1, ap-northeast-1, ca-central-1, ap-southeast-1, us-gov-east-1, ap-southeast-3, ap-south-2, us-east-1, ap-southeast-4, sa-east-1, eu-south-1, eu-north-1, global-default, af-south-1, eu-west-1, eu-south-2, ap-east-1, eu-west-3, ap-southeast-2, us-gov-west-1, us-west-2, me-south-1, me-central-1
+Availability Zones: not specified
+Start Time: 2024-11-25 12:24:00+00:00
+End Time: 2025-01-08 12:28:06+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 6 minutes
+Duration (minutes): 6
+Root Cause: Increased API Error Rates
+Resolution: 
+Downtime Period: November 25, 2024, 04:31:00 AM - 04:35:06 AM PST (0 hours 4 minutes)
+Affected Components: Amazon AWS RDS
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-03-26
+Cloud Provider: AWS
+Cloud Services: Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs, Amazon Elastic Kubernetes Service
+Regions: eu-central-1, us-east-2, eu-west-2, il-central-1, us-west-1, ap-northeast-2, cn-north-1, ap-south-1, ap-northeast-3, eu-central-2, cn-northwest-1, ap-northeast-1, ca-central-1, ap-southeast-1, us-gov-east-1, ap-southeast-3, ap-south-2, us-east-1, ap-southeast-4, sa-east-1, eu-south-1, eu-north-1, global-default, us-east-1 (n. virginia), af-south-1, eu-west-1, eu-south-2, ap-east-1, eu-west-3, ap-southeast-2, us-gov-west-1, us-west-2, me-south-1, me-central-1
+Availability Zones: not specified
+Start Time: 2024-11-26 00:24:00+00:00
+End Time: 2025-01-08 12:28:06+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 15 minutes
+Duration (minutes): 15
+Root Cause: Increased API Error Rates
+Resolution: 
+Downtime Period: November 25, 2024, 04:31:00 PM - 04:35:06 AM PST (15 minutes)
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-04-10
+Cloud Provider: AWS
+Cloud Services: Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon ElastiCache, Amazon QuickSight, rs
+Regions: us-east-2, ohio (us-east-2)
+Availability Zones: not specified
+Start Time: 2024-04-19 12:47:34+00:00
+End Time: 2024-04-19 14:28:51+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 1 hour and 41 minutes
+Duration (minutes): 101
+Root Cause: Informational
+Resolution: 
+Downtime Period: April 19, 2024, 12:47:34 PM - April 19, 2024, 2:28:51 PM UTC
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-06-25
+Cloud Provider: AWS
+Cloud Services: Amazon Kinesis, Amazon Kinesis, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, rs
+Regions: us-east-1, us-west-2, us-west-1, ap-northeast-2
+Availability Zones: not specified
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 3 hours and 40 minutes
+Duration (minutes): 220
+Root Cause: Increased error rates for Kinesis Data Streams APIs
+Resolution: 
+Downtime Period: 2024-06-25 05:30:00 - 08:46:00 UTC
+Affected Components: Amazon AWS RDS
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-08-15
+Cloud Provider: AWS
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Direct Connect, Amazon QuickSight, rs
+Regions: eu-central-1, us-east-2, eu-west-2, il-central-1, us-west-1, ap-northeast-2, cn-north-1, ap-south-1, ap-northeast-3, eu-central-2, cn-northwest-1, ap-northeast-1, ca-central-1, ap-southeast-1, us-gov-east-1, ap-southeast-3, ap-south-2, us-east-1, ap-southeast-4, sa-east-1, eu-south-1, eu-north-1, global-default, af-south-1, eu-west-1, eu-south-2, ap-east-1, eu-west-3, ap-southeast-2, us-gov-west-1, us-west-2, me-south-1, me-central-1
+Availability Zones: not specified
+Start Time: 2024-08-15 12:50:00+00:00
+End Time: 2024-08-15 12:50:00+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 0 days, 0 hours, 0 minutes (resolved immediately)
+Duration (minutes): 0
+Root Cause: Increased API Error Rates
+Resolution: 
+Downtime Period: Not specified
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-10-22
+Cloud Provider: AWS
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs
+Regions: us-east-2, us-east-1, availability zone:, 2. availability zone:, us-west-2, eu-south-1
+Availability Zones: 2024, impact date: november 10
+Start Time: 2024-11-10 00:00:00+00:00
+End Time: 2024-11-10 00:00:00+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 3 hours and 18 minutes
+Duration (minutes): 198
+Root Cause: Increased API error rates for mutatable VPC calls
+Resolution: 
+Downtime Period: 7:55 AM - 11:13 AM PST (UTC-08)
+Affected Components: Amazon Web Services (AWS), AWS Elastic Compute Cloud, AWS Billing Console, AWS Partner Central, AWS QuickSight, Amazon Elastic MapReduce, Amazon Simple Queue Service, Amazon Route 53, Multiple Services
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-10-24
+Cloud Provider: AWS
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Container Service, Amazon Elastic File System, Amazon Elastic File System, Direct Connect, Amazon ElastiCache, rs
+Regions: us-east-1, ap-northeast-2, global, us-west-2
+Availability Zones: 2024 12:01:00 pm pdt, impact date: october 24
+Start Time: 2024-10-24 19:54:00+00:00
+End Time: 2024-10-24 21:38:55+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 14 minutes and 55 seconds
+Duration (minutes): 14
+Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+Resolution: 
+Downtime Period: 14 minutes and 55 seconds
+Affected Components: Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic File System, Amazon Elastic Container Service, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic File System, Amazon Elastic Container Service
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-10-25
+Cloud Provider: AWS
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs
+Regions: us-east-1, 2. availability zone:, us-west-2, us-east-2
+Availability Zones: 2024, impact date: november 25, 04:31:00 utc
+Start Time: 2024-11-25 04:31:00+00:00
+End Time: 2024-11-25 04:35:06+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 10 minutes
+Duration (minutes): 10
+Root Cause: Increased API error rates
+Resolution: 
+Downtime Period: 10 minutes
+Affected Components: Amazon Web Services (AWS), Amazon Elastic Compute Cloud, Amazon Simple Queue Service, Amazon Elastic MapReduce, AWS QuickSight, Amazon Route 53, AWS Management Console
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-11-10
+Cloud Provider: AWS
+Cloud Services: aBr, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Load Balancing, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, rs, Amazon AWS Glue, Amazon Elastic Kubernetes Service
+Regions: eu-central-1, us-east-2, eu-west-2, il-central-1, us-west-1, ap-northeast-2, cn-north-1, ap-south-1, ap-northeast-3, eu-central-2, cn-northwest-1, ap-northeast-1, seoul (ap-northeast-2), ca-central-1, ap-southeast-1, us-gov-east-1, ap-southeast-3, ap-south-2, us-east-1, ap-southeast-4, sa-east-1, eu-south-1, eu-north-1, global-default, af-south-1, eu-west-1, eu-south-2, ap-east-1, eu-west-3, ap-southeast-2, us-gov-west-1, us-west-2, me-south-1, me-central-1
+Availability Zones: not specified
+Start Time: 2024-11-10 07:55:00+00:00
+End Time: 2024-11-10 14:13:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 6 hours and 18 minutes
+Duration (minutes): 378
+Root Cause: Increased API errors rates for mutatable VPC calls
+Resolution: 
+Downtime Period: November 10, 2024, 07:55:00 UTC - November 10, 2024, 14:13:00 UTC
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-11-25
+Cloud Provider: AWS
+Cloud Services: Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon QuickSight, rs
+Regions: us-east-1, availability zone:, us-west-1, us-west-2, eu-south-1
+Availability Zones: 2024, impact date: november 10
+Start Time: 2024-11-10 00:00:00+00:00
+End Time: 2024-11-10 00:00:00+00:00
+Outage Status: investigating
+Impact Level: moderate
+Duration: 3 hours and 18 minutes
+Duration (minutes): 198
+Root Cause: Increased API error rates for mutable VPC calls
+Resolution: 
+Downtime Period: 7:55 AM - 11:13 AM PST (UTC-08)
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global- Incident 2024-08-06
+Cloud Provider: AWS
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Direct Connect, Amazon ElastiCache, Amazon QuickSight, rs
+Regions: us-east-2, us-east-1, us-west-2, us-west-1, ap-northeast-2, errors
+Availability Zones: not specified
+Start Time: 2024-08-07 03:17:28+00:00
+End Time: 2024-08-07 05:03:29+00:00
+Outage Status: investigating
+Impact Level: 
+Duration: 3 hours and 46 minutes
+Duration (minutes): 226
+Root Cause: EMR Cluster Launch Failures
+Resolution: 
+Downtime Period: August 6, 2024, 07:24:28 PM - August 6, 2024, 09:10:29 PM PDT (1 hour and 46 minutes)
+Affected Components: Amazon Web Services (AWS)
+
+---
+
+Source Outage Report: Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region - Incident 2023-06-13
+Cloud Provider: AWS
+Cloud Services: Amazon Elastic Container Service, Direct Connect, AWS Lambda, rs, Amazon Elastic Kubernetes Service, Amazon Elastic Kubernetes Service
+Regions: us-east-1, northern virginia (us-east-1), the
+Availability Zones: not specified
+Start Time: 2023-01-08 00:00:00+00:00
+End Time: 2023-01-08 00:00:00+00:00
+Outage Status: resolved
+Impact Level: 
+Duration: 6 hours and 48 minutes
+Duration (minutes): 408
+Root Cause: Latent software defect in the Lambda cellular architecture
+Resolution: 
+Downtime Period: 2 hours and 10 minutes
+Affected Components: Amazon AWS RDS
+
+---
+
+Source Outage Report: Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region - Incident 2024-07-30
+Cloud Provider: AWS
+Cloud Services: Amazon Kinesis, Amazon Kinesis, Amazon CloudWatch, Amazon Elastic Container Service, Amazon Elastic Container Service, Direct Connect, Amazon ElastiCache, AWS Lambda, rs, Amazon Redshift, Amazon AWS Glue, Amazon AWS Fargate, Amazon s3
+Regions: us-east-1
+Availability Zones: 
+Start Time: 2024-01-08 00:00:00+00:00
+End Time: 2024-01-08 00:00:00+00:00
+Outage Status: investigating
+Impact Level: none
+Duration: 7 hours and 36 minutes
+Duration (minutes): 456
+Root Cause: Degradation of one of the internally-used cells of Amazon Kinesis Data Streams service
+Resolution: 
+Downtime Period: Until CloudWatch Logs recovery
+Affected Components: Amazon Web Services (AWS)
+
+---
+

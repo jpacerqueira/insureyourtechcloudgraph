@@ -1,0 +1,54 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Apigee Integrated Developer Portal**
+
+* Service: Apigee Integrated Developer Portal
+* Region: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, singapore
+* Availability Zone:
+	+ asia-east1: us-pacific-central
+	+ asia-east2: us-hong-kong
+	+ asia-northeast1: us-tokyo
+	+ asia-northeast2: us-osaka
+	+ asia-northeast3: us-seoul
+	+ asia-south1: us-mumbai
+	+ asia-south2: us-delhi
+	+ singapore: us-singapore
+* Impact Date: 2023-09-11 04:00 UTC
+* Duration: 8 hours, 25 minutes
+* Root Cause: Misconfiguration of internal Apigee load balancers
+* Downtime Period: 2023-09-11 04:00 UTC - 2023-09-11 12:25 UTC
+* Resolved Date: 2023-09-11 12:25 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Apigee Integrated Developer Portal | asia-east1 | us-pacific-central | 2023-09-11 04:00 UTC | 8 hours, 25 minutes | Misconfiguration of internal Apigee load balancers | 2023-09-11 04:00 UTC - 2023-09-11 12:25 UTC | 2023-09-11 12:25 UTC |
+
+Here is the overall summary:
+
+**Cloud Providers Impacted**
+
+* Google Cloud
+
+**Services, Regions, Availability Zones, Impact Dates and Duration**
+
+* Services: Apigee Integrated Developer Portal
+* Regions: asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, singapore
+* Availability Zones:
+	+ us-pacific-central
+	+ us-hong-kong
+	+ us-tokyo
+	+ us-osaka
+	+ us-seoul
+	+ us-mumbai
+	+ us-delhi
+	+ us-singapore
+
+**Summary of Outages and Root Cause**
+
+* The outage started on 2023-09-11 04:00 UTC and lasted for 8 hours, 25 minutes.
+* The root cause was misconfiguration of internal Apigee load balancers.
+* The downtime period was from 2023-09-11 04:00 UTC to 2023-09-11 12:25 UTC.

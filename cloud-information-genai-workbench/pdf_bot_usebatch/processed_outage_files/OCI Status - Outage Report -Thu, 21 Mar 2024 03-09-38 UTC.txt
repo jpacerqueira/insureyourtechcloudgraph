@@ -1,0 +1,85 @@
+After analyzing the text, I found that only Oracle OCI was impacted by a public cloud service outage.
+
+Here is the breakdown of the outage per service impacted:
+
+**Oracle Cloud Infrastructure**
+
+* Service: Networking
+* Region: US West (San Jose)
+* Availability Zone:
+	+ Not specified in the text
+* Impact Date: Wed, 20 Mar 2024 22:57:00 UTC
+* Duration: Thu, 21 Mar 2024 02:57:00 UTC - Thu, 21 Mar 2024 03:09:38 UTC (1 hour 12 minutes)
+* Root Cause: Power event in the US West (San Jose) region
+* Downtime Period: Wed, 20 Mar 2024 22:57:00 UTC - Thu, 21 Mar 2024 02:57:00 UTC (8 hours 0 minutes)
+* Resolved Date: Thu, 21 Mar 2024 03:09:38 UTC
+
+**Oracle Cloud Infrastructure**
+
+* Service: Block Volumes
+* Region: US West (San Jose)
+* Availability Zone:
+	+ Not specified in the text
+* Impact Date: Wed, 20 Mar 2024 22:57:00 UTC
+* Duration: Thu, 21 Mar 2024 02:57:00 UTC - Thu, 21 Mar 2024 03:09:38 UTC (1 hour 12 minutes)
+* Root Cause: Power event in the US West (San Jose) region
+* Downtime Period: Wed, 20 Mar 2024 22:57:00 UTC - Thu, 21 Mar 2024 02:57:00 UTC (8 hours 0 minutes)
+* Resolved Date: Thu, 21 Mar 2024 03:09:38 UTC
+
+**Oracle Cloud Infrastructure**
+
+* Service: Compute
+* Region: US West (San Jose)
+* Availability Zone:
+	+ Not specified in the text
+* Impact Date: Wed, 20 Mar 2024 22:57:00 UTC
+* Duration: Thu, 21 Mar 2024 02:57:00 UTC - Thu, 21 Mar 2024 03:09:38 UTC (1 hour 12 minutes)
+* Root Cause: Power event in the US West (San Jose) region
+* Downtime Period: Wed, 20 Mar 2024 22:57:00 UTC - Thu, 21 Mar 2024 02:57:00 UTC (8 hours 0 minutes)
+* Resolved Date: Thu, 21 Mar 2024 03:09:38 UTC
+
+**Oracle Cloud Infrastructure**
+
+* Service: Exadata Cloud Service
+* Region: US West (San Jose)
+* Availability Zone:
+	+ Not specified in the text
+* Impact Date: Wed, 20 Mar 2024 22:57:00 UTC
+* Duration: Thu, 21 Mar 2024 02:57:00 UTC - Thu, 21 Mar 2024 03:09:38 UTC (1 hour 12 minutes)
+* Root Cause: Power event in the US West (San Jose) region
+* Downtime Period: Wed, 20 Mar 2024 22:57:00 UTC - Thu, 21 Mar 2024 02:57:00 UTC (8 hours 0 minutes)
+* Resolved Date: Thu, 21 Mar 2024 03:09:38 UTC
+
+**Oracle Cloud Infrastructure**
+
+* Service: Object Storage
+* Region: US West (San Jose)
+* Availability Zone:
+	+ Not specified in the text
+* Impact Date: Wed, 20 Mar 2024 22:57:00 UTC
+* Duration: Thu, 21 Mar 2024 02:57:00 UTC - Thu, 21 Mar 2024 03:09:38 UTC (1 hour 12 minutes)
+* Root Cause: Power event in the US West (San Jose) region
+* Downtime Period: Wed, 20 Mar 2024 22:57:00 UTC - Thu, 21 Mar 2024 02:57:00 UTC (8 hours 0 minutes)
+* Resolved Date: Thu, 21 Mar 2024 03:09:38 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Oracle OCI | Networking | us-west-1 |  | Wed, 20 Mar 2024 22:57:00 UTC | Thu, 21 Mar 2024 02:57:00 UTC - Thu, 21 Mar 2024 03:09:38 UTC | Power event in the US West (San Jose) region | Wed, 20 Mar 2024 22:57:00 UTC - Thu, 21 Mar 2024 02:57:00 UTC | Thu, 21 Mar 2024 03:09:38 UTC |
+| Oracle OCI | Block Volumes | us-west-1 |  | Wed, 20 Mar 2024 22:57:00 UTC | Thu, 21 Mar 2024 02:57:00 UTC - Thu, 21 Mar 2024 03:09:38 UTC | Power event in the US West (San Jose) region | Wed, 20 Mar 2024 22:57:00 UTC - Thu, 21 Mar 2024 02:57:00 UTC | Thu, 21 Mar 2024 03:09:38 UTC |
+| Oracle OCI | Compute | us-west-1 |  | Wed, 20 Mar 2024 22:57:00 UTC | Thu, 21 Mar 2024 02:57:00 UTC - Thu, 21 Mar 2024 03:09:38 UTC | Power event in the US West (San Jose) region | Wed, 20 Mar 2024 22:57:00 UTC - Thu, 21 Mar 2024 02:57:00 UTC | Thu, 21 Mar 2024 03:09:38 UTC |
+| Oracle OCI | Exadata Cloud Service | us-west-1 |  | Wed, 20 Mar 2024 22:57:00 UTC | Thu, 21 Mar 2024 02:57:00 UTC - Thu, 21 Mar 2024 03:09:38 UTC | Power event in the US West (San Jose) region | Wed, 20 Mar 2024 22:57:00 UTC - Thu, 21 Mar 2024 02:57:00 UTC | Thu, 21 Mar 2024 03:09:38 UTC |
+| Oracle OCI | Object Storage | us-west-1 |  | Wed, 20 Mar 2024 22:57:00 UTC | Thu, 21 Mar 2024 02:57:00 UTC - Thu, 21 Mar 2024 03:09:38 UTC | Power event in the US West (San Jose) region | Wed, 20 Mar 2024 22:57:00 UTC - Thu, 21 Mar 2024 02:57:00 UTC | Thu, 21 Mar 2024 03:09:38 UTC |
+
+Overall summary:
+
+* Cloud Provider: Oracle OCI
+* Services impacted: Networking, Block Volumes, Compute, Exadata Cloud Service, Object Storage
+* Regions impacted: us-west-1
+* Availability Zones impacted: Not specified in the text
+* Impact Dates: Wed, 20 Mar 2024 22:57:00 UTC
+* Duration: Thu, 21 Mar 2024 02:57:00 UTC - Thu, 21 Mar 2024 03:09:38 UTC (1 hour 12 minutes)
+* Root Cause: Power event in the US West (San Jose) region
+* Downtime Period: Wed, 20 Mar 2024 22:57:00 UTC - Thu, 21 Mar 2024 02:57:00 UTC (8 hours 0 minutes)
+* Resolved Date: Thu, 21 Mar 2024 03:09:38 UTC

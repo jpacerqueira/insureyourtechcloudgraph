@@ -1,0 +1,45 @@
+I can provide you with the information you requested.
+
+**Cloud Provider:** Oracle Cloud Infrastructure (OCI)
+**Service:** Multiple services
+**Region:** France South (Marseille)
+**Availability Zone:** 32996a31
+**Impact Date:** Wed, 24 Apr 2024 18:15:00 UTC
+**Duration:** 222 days
+**Root Cause:** Identified and resolved an issue that affected multiple OCI services in the France South region.
+**Downtime Period:** Wed, 24 Apr 2024 19:00:00 UTC - Wed, 24 Apr 2024 18:15:00 UTC (45 minutes)
+**Resolved Date:** Wed, 24 Apr 2024 19:46:35 UTC
+
+Here is the breakdown of the outage per cloud provider:
+
+Oracle Cloud Infrastructure (OCI) | Multiple Services | France South (marseille) | Wed, 24 Apr 2024 18:15:00 UTC | 222 days | Identified and resolved an issue that affected multiple OCI services in the France South region. | Wed, 24 Apr 2024 19:00:00 UTC - Wed, 24 Apr 2024 18:15:00 UTC (45 minutes) | Wed, 24 Apr 2024 19:46:35 UTC
+
+**Summary of Cloud Providers impacted:**
+
+* Oracle Cloud Infrastructure (OCI)
+
+**Services impacted:**
+
+* Multiple services in France South (marseille) region.
+
+**Regions and Availability Zones impacted:**
+
+* Marseille region
+* 32996a31 availability zone
+
+**Impact Dates and Duration:**
+
+* Impact Date: Wed, 24 Apr 2024 18:15:00 UTC
+* Duration: 222 days
+
+**Root Cause:**
+
+* Identified and resolved an issue that affected multiple OCI services in the France South region.
+
+**Downtime Period:**
+
+* Downtime Period: Wed, 24 Apr 2024 19:00:00 UTC - Wed, 24 Apr 2024 18:15:00 UTC (45 minutes)
+
+**Resolved Date:**
+
+* Resolved Date: Wed, 24 Apr 2024 19:46:35 UTC

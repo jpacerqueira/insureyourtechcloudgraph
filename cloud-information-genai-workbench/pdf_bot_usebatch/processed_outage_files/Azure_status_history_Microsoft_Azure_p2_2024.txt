@@ -1,0 +1,159 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Microsoft Azure**
+
+* Service: Cosmos DB
+* Region: China
+* Availability Zone: chinacloudapp.cn and chinacloudsites.cn domains
+* Impact Date: 23 Apr 2024 03:45 CST to 06:00 CST
+* Duration: 2 hours 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: 2 hours 15 minutes
+* Resolved Date: 23 Apr 2024 05:13 CST
+
+**Microsoft Azure**
+
+* Service: Azur e Virtual Desk top
+* Region: China
+* Availability Zone: chinacloudapp.cn and chinacloudsites.cn domains
+* Impact Date: 23 Apr 2024 03:45 CST to 06:00 CST
+* Duration: 2 hours 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: 2 hours 15 minutes
+* Resolved Date: 23 Apr 2024 05:13 CST
+
+**Microsoft Azure**
+
+* Service: Azur e Databricks
+* Region: China
+* Availability Zone: chinacloudapp.cn and chinacloudsites.cn domains
+* Impact Date: 23 Apr 2024 03:45 CST to 06:00 CST
+* Duration: 2 hours 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: 2 hours 15 minutes
+* Resolved Date: 23 Apr 2024 05:13 CST
+
+**Microsoft Azure**
+
+* Service: Backup
+* Region: China
+* Availability Zone: chinacloudapp.cn and chinacloudsites.cn domains
+* Impact Date: 23 Apr 2024 03:45 CST to 06:00 CST
+* Duration: 2 hours 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: 2 hours 15 minutes
+* Resolved Date: 23 Apr 2024 05:13 CST
+
+**Microsoft Azure**
+
+* Service: Sit e Recovery
+* Region: China
+* Availability Zone: chinacloudapp.cn and chinacloudsites.cn domains
+* Impact Date: 23 Apr 2024 03:45 CST to 06:00 CST
+* Duration: 2 hours 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: 2 hours 15 minutes
+* Resolved Date: 23 Apr 2024 05:13 CST
+
+**Microsoft Azure**
+
+* Service: Azur e IoT Hub
+* Region: China
+* Availability Zone: chinacloudapp.cn and chinacloudsites.cn domains
+* Impact Date: 23 Apr 2024 03:45 CST to 06:00 CST
+* Duration: 2 hours 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: 2 hours 15 minutes
+* Resolved Date: 23 Apr 2024 05:13 CST
+
+**Microsoft Azure**
+
+* Service: Ser vice Bus
+* Region: China
+* Availability Zone: chinacloudapp.cn and chinacloudsites.cn domains
+* Impact Date: 23 Apr 2024 03:45 CST to 06:00 CST
+* Duration: 2 hours 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: 2 hours 15 minutes
+* Resolved Date: 23 Apr 2024 05:13 CST
+
+**Microsoft Azure**
+
+* Service: Logic Apps
+* Region: China
+* Availability Zone: chinacloudapp.cn and chinacloudsites.cn domains
+* Impact Date: 23 Apr 2024 03:45 CST to 06:00 CST
+* Duration: 2 hours 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: 2 hours 15 minutes
+* Resolved Date: 23 Apr 2024 05:13 CST
+
+**Microsoft Azure**
+
+* Service: Data F actory
+* Region: China
+* Availability Zone: chinacloudapp.cn and chinacloudsites.cn domains
+* Impact Date: 23 Apr 2024 03:45 CST to 06:00 CST
+* Duration: 2 hours 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: 2 hours 15 minutes
+* Resolved Date: 23 Apr 2024 05:13 CST
+
+**Microsoft Azure**
+
+* Service: Azur e Kuber netes Ser vices
+* Region: China
+* Availability Zone: chinacloudapp.cn and chinacloudsites.cn domains
+* Impact Date: 23 Apr 2024 03:45 CST to 06:00 CST
+* Duration: 2 hours 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: 2 hours 15 minutes
+* Resolved Date: 23 Apr 2024 05:13 CST
+
+**Microsoft Azure**
+
+* Service: Azur e Policy
+* Region: China
+* Availability Zone: chinacloudapp.cn and chinacloudsites.cn domains
+* Impact Date: 23 Apr 2024 03:45 CST to 06:00 CST
+* Duration: 2 hours 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: 2 hours 15 minutes
+* Resolved Date: 23 Apr 2024 05:13 CST
+
+**Microsoft Azure**
+
+* Service: Azur e AI Speech
+* Region: China
+* Availability Zone: chinacloudapp.cn and chinacloudsites.cn domains
+* Impact Date: 23 Apr 2024 03:45 CST to 06:00 CST
+* Duration: 2 hours 15 minutes
+* Root Cause: Configuration change through a domain registrar resulted in a service disruption
+* Downtime Period: 2 hours 15 minutes
+* Resolved Date: 23 Apr 2024 05:13 CST
+
+**Summary**
+
+Cloud Provider: Microsoft Azure
+Services Impacted: Cosmos DB, Azur e Virtual Desk top, Azur e Databricks, Backup, Sit e Recovery, Azur e IoT Hub, Ser vice Bus, Logic Apps, Data F actory, Azur e Kuber netes Ser vices, Azur e Policy, Azur e AI Speech
+Regions Impacted: China
+Availability Zones Impacted: chinacloudapp.cn and chinacloudsites.cn domains
+Impact Dates: 23 Apr 2024 03:45 CST to 06:00 CST
+Duration: 2 hours 15 minutes
+
+**Output Table**
+
+Cloud Provider | Service | Region | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+----------------|--------|---------|-------------|----------|-----------|---------------|-------------
+Microsoft Azure | Cosmos DB | chinacloudapp.cn | 2024-04-23 03:45:00 UTC | 2 hours 15 minutes | Configuration change through a domain registrar resulted in a service disruption | 2 hours 15 minutes | 2024-04-23 05:13:00 UTC
+Microsoft Azure | Azur e Virtual Desk top | chinacloudapp.cn | 2024-04-23 03:45:00 UTC | 2 hours 15 minutes | Configuration change through a domain registrar resulted in a service disruption | 2 hours 15 minutes | 2024-04-23 05:13:00 UTC
+Microsoft Azure | Azur e Databricks | chinacloudapp.cn | 2024-04-23 03:45:00 UTC | 2 hours 15 minutes | Configuration change through a domain registrar resulted in a service disruption | 2 hours 15 minutes | 2024-04-23 05:13:00 UTC
+Microsoft Azure | Backup | chinacloudapp.cn | 2024-04-23 03:45:00 UTC | 2 hours 15 minutes | Configuration change through a domain registrar resulted in a service disruption | 2 hours 15 minutes | 2024-04-23 05:13:00 UTC
+Microsoft Azure | Sit e Recovery | chinacloudapp.cn | 2024-04-23 03:45:00 UTC | 2 hours 15 minutes | Configuration change through a domain registrar resulted in a service disruption | 2 hours 15 minutes | 2024-04-23 05:13:00 UTC
+Microsoft Azure | Azur e IoT Hub | chinacloudapp.cn | 2024-04-23 03:45:00 UTC | 2 hours 15 minutes | Configuration change through a domain registrar resulted in a service disruption | 2 hours 15 minutes | 2024-04-23 05:13:00 UTC
+Microsoft Azure | Ser vice Bus | chinacloudapp.cn | 2024-04-23 03:45:00 UTC | 2 hours 15 minutes | Configuration change through a domain registrar resulted in a service disruption | 2 hours 15 minutes | 2024-04-23 05:13:00 UTC
+Microsoft Azure | Logic Apps | chinacloudapp.cn | 2024-04-23 03:45:00 UTC | 2 hours 15 minutes | Configuration change through a domain registrar resulted in a service disruption | 2 hours 15 minutes | 2024-04-23 05:13:00 UTC
+Microsoft Azure | Data F actory | chinacloudapp.cn | 2024-04-23 03:45:00 UTC | 2 hours 15 minutes | Configuration change through a domain registrar resulted in a service disruption | 2 hours 15 minutes | 2024-04-23 05:13:00 UTC
+Microsoft Azure | Azur e Kuber netes Ser vices | chinacloudapp.cn | 2024-04-23 03:45:00 UTC | 2 hours 15 minutes | Configuration change through a domain registrar resulted in a service disruption | 2 hours 15 minutes | 2024-04-23 05:13:00 UTC
+Microsoft Azure | Azur e Policy | chinacloudapp.cn | 2024-04-23 03:45:00 UTC | 2 hours 15 minutes | Configuration change through a domain registrar resulted in a service disruption | 2 hours 15 minutes | 2024-04-23 05:13:00 UTC
+Microsoft Azure | Azur e AI Speech | chinacloudapp.cn | 2024-04-23 03:45:00 UTC | 2 hours 15 minutes | Configuration change through a domain registrar resulted in a service disruption | 2 hours 15 minutes | 2024-04-23 05:13:00 UTC

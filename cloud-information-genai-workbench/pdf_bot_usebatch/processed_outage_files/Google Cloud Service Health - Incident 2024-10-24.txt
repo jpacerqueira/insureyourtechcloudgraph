@@ -1,0 +1,37 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud Service**
+
+* **Looker Studio**
+	+ Region: Global
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-10-24 19:30 UTC
+	+ Duration: 1 day, 2 hours, and 23 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-10-25 02:23 UTC - 2024-10-25 02:23 UTC (0 days, 2 hours, and 23 minutes)
+	+ Resolved Date: 2024-10-25 02:23 UTC
+
+Here is the output in a fixed table format:
+
+```
+Cloud Provider , Service , Region , Availability Zone , Impact Date , Duration , Root Cause , Downtime Period , Resolved Date 
+Google Cloud , Looker Studio , global , Not specified , 2024-10-24 19:30:00 UTC , 1 day, 2 hours, and 23 minutes , Not specified , 2024-10-25 02:23:00 UTC
+```
+
+**Summary**
+
+* Cloud Provider: Google Cloud
+* Services impacted: Looker Studio
+* Regions impacted: Global
+* Availability Zones impacted: Not specified
+* Impact Dates: 2024-10-24 19:30 UTC
+* Duration of outage: 1 day, 2 hours, and 23 minutes
+* Root Cause: Not specified
+* Downtime Period: 0 days, 2 hours, and 23 minutes
+* Resolved Date: 2024-10-25 02:23 UTC
+
+**Overall Summary**
+
+Google Cloud Service experienced an outage with Looker Studio on October 24, 2024, at 19:30 UTC. The outage lasted for 1 day, 2 hours, and 23 minutes, but was resolved just a few minutes later. The root cause of the outage was not specified.

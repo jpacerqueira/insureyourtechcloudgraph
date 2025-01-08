@@ -1,0 +1,67 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Google Cloud**
+
+* Service: Speech-to-Text
+* Region: asia-northeast1, asia-south1, asia-southeast1, australia-southeast1, europe-west1, europe-west2, europe-west3, europe-west4, northamerica-northeast1, us-central1, us-east1, us-west1
+* Availability Zone:
+	+ asia-northeast1: Tokyo
+	+ asia-south1: Mumbai
+	+ asia-southeast1: Singapore
+	+ australia-southeast1: Sydney
+	+ europe-west1: Belgium
+	+ europe-west2: London
+	+ europe-west3: Frankfurt
+	+ europe-west4: Netherlands
+	+ northamerica-northeast1: Montréal
+	+ us-central1: Iowa
+	+ us-east1: South Carolina
+	+ us-west1: Oregon
+* Impact Date: 2024-03-20 11:12 UTC
+* Duration: 36 minutes
+* Root Cause: Unknown
+* Downtime Period: 2024-03-20 11:27 UTC - 2024-03-20 11:47 UTC
+* Resolved Date: 2024-03-20 11:47 UTC
+
+**Summary of Google Cloud Outage**
+
+The Speech-to-Text service experienced an outage on March 20, 2024, at 11:12 UTC. The issue was resolved at 11:47 UTC, resulting in a downtime period of approximately 36 minutes.
+
+---
+
+**Output Table Format**
+```
+Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date
+-------------------------------------------------------------
+Google Cloud    | Speech-to-Text | asia-northeast1 | Tokyo          | 2024-03-20 11:12 UTC | 36 minutes | Unknown     | 2024-03-20 11:27 UTC - 2024-03-20 11:47 UTC | 2024-03-20 11:47 UTC
+```
+---
+
+**Summary of Impacted Cloud Providers and Services**
+
+The following cloud providers were impacted:
+
+* Google Cloud
+
+The Speech-to-Text service was impacted in the following regions and availability zones:
+
+* asia-northeast1 (Tokyo)
+* asia-south1 (Mumbai)
+* asia-southeast1 (Singapore)
+* australia-southeast1 (Sydney)
+* europe-west1 (Belgium)
+* europe-west2 (London)
+* europe-west3 (Frankfurt)
+* europe-west4 (Netherlands)
+* northamerica-northeast1 (Montréal)
+* us-central1 (Iowa)
+* us-east1 (South Carolina)
+* us-west1 (Oregon)
+
+The outage started at 11:12 UTC and lasted for approximately 36 minutes. The root cause of the outage was unknown.
+
+---
+
+**Overall Summary**
+
+A single outage occurred on Google Cloud, affecting the Speech-to-Text service in multiple regions and availability zones. The outage started at 11:12 UTC and lasted for approximately 36 minutes, resulting in a downtime period from 11:27 UTC to 11:47 UTC. The root cause of the outage was unknown.

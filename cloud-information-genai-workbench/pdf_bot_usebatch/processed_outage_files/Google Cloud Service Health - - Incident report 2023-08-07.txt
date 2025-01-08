@@ -1,0 +1,42 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud Service**
+
+* **Apigee**
+	+ Impact Date: 2023-08-07 12:35 UTC
+	+ Duration: 2 hours and 25 minutes (15:00 - 14:56 UTC)
+	+ Root Cause: Exceeded limit Errors due to API Deployment Failures
+	+ Downtime Period: 2 hours and 25 minutes
+	+ Resolved Date: 2023-08-07 14:56 UTC
+
+**Regions and Availability Zones Impacted**
+
+* asia-east1 (Taiwan)
+* asia-east2 (Hong Kong)
+* asia-northeast1 (Tokyo)
+* asia-northeast2 (Osaka)
+* asia-northeast3 (Seoul)
+* asia-south1 (Mumbai)
+* asia-south2 (Delhi)
+* us-west4 (Vegas)
+
+**Summary**
+
+Google Cloud Service was impacted by an outage on August 7, 2023. The outage started at 12:35 UTC and lasted for 2 hours and 25 minutes. The root cause of the outage was Exceeded limit Errors due to API Deployment Failures.
+
+Here is the output in table format:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Apigee | asia-east1 |  | 2023-08-07T12:35:00Z | 2h25m | Exceeded limit Errors due to API Deployment Failures | 2h25m | 2023-08-07T14:56:00Z |
+| Google Cloud | Apigee | asia-east2 |  | 2023-08-07T12:35:00Z | 2h25m | Exceeded limit Errors due to API Deployment Failures | 2h25m | 2023-08-07T14:56:00Z |
+| Google Cloud | Apigee | asia-northeast1 |  | 2023-08-07T12:35:00Z | 2h25m | Exceeded limit Errors due to API Deployment Failures | 2h25m | 2023-08-07T14:56:00Z |
+| Google Cloud | Apigee | asia-northeast2 |  | 2023-08-07T12:35:00Z | 2h25m | Exceeded limit Errors due to API Deployment Failures | 2h25m | 2023-08-07T14:56:00Z |
+| Google Cloud | Apigee | asia-northeast3 |  | 2023-08-07T12:35:00Z | 2h25m | Exceeded limit Errors due to API Deployment Failures | 2h25m | 2023-08-07T14:56:00Z |
+| Google Cloud | Apigee | asia-south1 |  | 2023-08-07T12:35:00Z | 2h25m | Exceeded limit Errors due to API Deployment Failures | 2h25m | 2023-08-07T14:56:00Z |
+| Google Cloud | Apigee | asia-south2 |  | 2023-08-07T12:35:00Z | 2h25m | Exceeded limit Errors due to API Deployment Failures | 2h25m | 2023-08-07T14:56:00Z |
+| Google Cloud | Apigee | us-west4 |  | 2023-08-07T12:35:00Z | 2h25m | Exceeded limit Errors due to API Deployment Failures | 2h25m | 2023-08-07T14:56:00Z |
+
+Note that I removed references to Cloud Providers not mentioned in the text provided, and normalized variables like regions and availability zones to standard lowercase official names of cloud vendors.

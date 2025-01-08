@@ -1,0 +1,32 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud Service**
+
+* **Service**: Hybrid Connectivity
+* **Region**: us-east4
+* **Availability Zone**: HA0 (zone1)
+* **Impact Date**: 2023-12-07 03:10 UTC
+* **Duration**: 2 hours and 49 minutes
+* **Root Cause**: Customers may experience problems creating, updating or deleting Cloud Interconnect attachments in us-east4 HA0.
+* **Downtime Period**: 2023-12-07 06:42 UTC - 2023-12-07 09:11 UTC (1 hour and 29 minutes)
+* **Resolved Date**: 2023-12-07 06:42 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Hybrid Connectivity | us-east4 | HA0 (zone1) | 2023-12-07 03:10 UTC | 2 hours and 49 minutes | Customers may experience problems creating, updating or deleting Cloud Interconnect attachments in us-east4 HA0. | 2023-12-07 06:42 UTC - 2023-12-07 09:11 UTC | 2023-12-07 06:42 UTC |
+
+**Summary**
+
+* **Cloud Providers**: Google Cloud
+* **Services**: Hybrid Connectivity
+* **Regions**: us-east4
+* **Availability Zones**: HA0 (zone1)
+* **Impact Dates**: 2023-12-07 03:10 UTC
+* **Duration**: 2 hours and 49 minutes
+* **Root Cause**: Customers may experience problems creating, updating or deleting Cloud Interconnect attachments in us-east4 HA0.
+* **Downtime Period**: 1 hour and 29 minutes
+* **Resolved Date**: 2023-12-07 06:42 UTC

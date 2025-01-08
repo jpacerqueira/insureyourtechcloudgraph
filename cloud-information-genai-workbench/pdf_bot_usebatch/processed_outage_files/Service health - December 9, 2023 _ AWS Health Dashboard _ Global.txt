@@ -1,0 +1,2442 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Amazon Web Services (AWS)**
+
+* Service: Amazon DynamoDB
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2023-12-09 19:17:00 UTC
+	+ Duration: 1 hour and 12 minutes
+	+ Root Cause: Increased error rates and latencies for the DynamoDB APIs
+	+ Downtime Period: 2023-12-09 20:45:00 - 2023-12-09 22:57:00 UTC
+	+ Resolved Date: 2023-12-09 23:51:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Amazon DynamoDB
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2023-12-09 19:17:00 UTC
+	+ Duration: 1 hour and 12 minutes
+	+ Root Cause: Increased error rates and latencies for the DynamoDB APIs
+	+ Downtime Period: 2023-12-09 20:45:00 - 2023-12-09 22:57:00 UTC
+	+ Resolved Date: 2023-12-09 23:51:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Amazon Billing Console
+* Region: 
+	+ Impact Date: 2024-11-06 03:42:30 UTC
+	+ Duration: 1 hour and 32 minutes
+	+ Root Cause: Increased Errors Performing Payments
+	+ Downtime Period: 2024-11-06 04:14:32 - 2024-11-06 05:46:32 UTC
+	+ Resolved Date: 2024-11-06 06:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: AWS Management Console
+* Region: 
+	+ Impact Date: 2024-10-22 12:48:52 UTC
+	+ Duration: 2 hours and 27 minutes
+	+ Root Cause: ManagementConsole Issues
+	+ Downtime Period: 2024-10-22 13:15:30 - 2024-10-22 15:42:30 UTC
+	+ Resolved Date: 2024-10-22 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: AWS QuickSight
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Amazon Route 53
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: AWS Partner Central
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: AWS Billing Console
+* Region: 
+	+ Impact Date: 2024-11-06 03:42:30 UTC
+	+ Duration: 1 hour and 32 minutes
+	+ Root Cause: Increased Errors Performing Payments
+	+ Downtime Period: 2024-11-06 04:14:32 - 2024-11-06 05:46:32 UTC
+	+ Resolved Date: 2024-11-06 06:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-25 02:05:30 UTC
+	+ Duration: 1 hour and 10 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-25 02:15:32 - 2024-09-25 03:25:32 UTC
+	+ Resolved Date: 2024-09-25 04:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: eu-south-1
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: 
+	+ Impact Date: 2024-10-29 04:13:56 UTC
+	+ Duration: 1 hour and 54 minutes
+	+ Root Cause: Increased Error Rates
+	+ Downtime Period: 2024-10-29 05:08:25 - 2024-10-29 07:02:25 UTC
+	+ Resolved Date: 2024-10-29 08:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-2
+* Availability Zone: 
+	+ Impact Date: 2024-09-11 13:34:44 UTC
+	+ Duration: 1 hour and 37 minutes
+	+ Root Cause: Increased Latencies and Errors
+	+ Downtime Period: 2024-09-11 14:12:00 - 2024-09-11 15:49:00 UTC
+	+ Resolved Date: 2024-09-11 16:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-07 12:46:59 UTC
+	+ Duration: 7 hours and 32 minutes
+	+ Root Cause: Increased API Error Rates
+	+ Downtime Period: 2024-10-07 13:38:00 - 2024-10-07 21:10:00 UTC
+	+ Resolved Date: 2024-10-07 22:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-east-1
+* Availability Zone: 
+	+ Impact Date: 2024-10-25 09:56:38 UTC
+	+ Duration: 1 hour and 49 minutes
+	+ Root Cause: Increased Login Errors
+	+ Downtime Period: 2024-10-25 11:45:08 - 2024-10-25 13:34:08 UTC
+	+ Resolved Date: 2024-10-25 14:00:00 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: Multiple services
+* Region: us-west-2
+* Availability Zone: 
+	+ Impact Date: 2024-10-24 12:01:00 UTC
+	+ Duration: 1 hour and 44 minutes
+	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
+	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
+	+ Resolved Date: 2024-10-24 16:00:0

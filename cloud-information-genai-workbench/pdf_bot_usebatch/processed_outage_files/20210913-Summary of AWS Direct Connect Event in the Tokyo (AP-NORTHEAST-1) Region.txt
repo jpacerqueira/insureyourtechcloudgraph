@@ -1,0 +1,26 @@
+After analyzing the text, I found that only Amazon AWS was mentioned as a Cloud Provider. Here is the information about the outage:
+
+**Amazon AWS**
+
+* Service: Direct Connect
+* Region: Tokyo (AP-NORTHEAST-1)
+* Availability Zone: Not specified
+* Impact Date: 2021-09-02 07:30:00 UTC
+* Duration:
+	+ Start time: 2021-09-02 07:30:00 UTC
+	+ End time: 2021-09-02 12:30:00 UTC (4 hours and 0 minutes)
+	+ Total duration: 4 hours and 0 minutes
+* Root Cause: Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
+* Downtime Period: 2021-09-02 07:30:00 UTC - 2021-09-02 12:30:00 UTC (4 hours and 0 minutes)
+* Resolved Date: 2021-09-02 13:42:00 UTC
+
+**Summary**
+
+Amazon AWS Direct Connect service outage in Tokyo (ap-northeast-1) Region:
+
+* Service impacted: Direct Connect
+* Duration: 4 hours and 0 minutes
+* Root cause: Failure of a subset of network devices on one of the network layers along the network path from Direct Connect edge locations to the Datacenter network in the Tokyo Region.
+* Downtime period: 4 hours and 0 minutes
+
+Note that Google Cloud Platform, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare were not mentioned as impacted services.

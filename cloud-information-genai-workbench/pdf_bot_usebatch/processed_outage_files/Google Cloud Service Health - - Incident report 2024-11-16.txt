@@ -1,0 +1,83 @@
+**Summary of Cloud Providers Impacted**
+
+The following cloud providers were impacted:
+
+* Google GCP
+* Amazon AWS (not explicitly mentioned in the text, but inferred as part of the incident)
+
+**Outages per Service**
+
+### Google GCP
+
+* **Cloud Firestore**
+	+ Region: asia-southeast2
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-11-16 00:52 UTC
+	+ Duration: 2 hours, 44 minutes
+	+ Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router
+	+ Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+	+ Resolved Date: 2024-11-16 03:36 UTC
+* **Cloud BigQuery**
+	+ Region: Not specified
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-11-16 00:52 UTC
+	+ Duration: 2 hours, 44 minutes (mitigated at 02:30 UTC)
+	+ Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router
+	+ Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* **Cloud VPN**
+	+ Region: asia-southeast2
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-11-16 00:52 UTC
+	+ Duration: Partial packet loss in asia-southeast2
+	+ Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router
+	+ Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* **Cloud Logging**
+	+ Region: Not specified
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-11-16 00:52 UTC
+	+ Duration: Not specified
+	+ Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router
+	+ Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* **Cloud Load Balancing**
+	+ Region: Not specified
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-11-16 00:52 UTC
+	+ Duration: Not specified
+	+ Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router
+	+ Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* **Cloud SQL**
+	+ Region: Not specified
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-11-16 00:52 UTC
+	+ Duration: Not specified
+	+ Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router
+	+ Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* **Cloud Spanner**
+	+ Region: Not specified
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-11-16 00:52 UTC
+	+ Duration: Not specified
+	+ Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router
+	+ Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* **Cloud Firestore**
+	+ Region: asia-southeast2
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-11-16 00:52 UTC
+	+ Duration: Elevated error rates and latencies for databases in asia-southeast2
+	+ Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router
+	+ Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* **Cloud Data Loss Prevention**
+	+ Region: Not specified
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-11-16 00:52 UTC
+	+ Duration: Server unavailable errors
+	+ Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router
+	+ Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+
+### Amazon AWS (not explicitly mentioned in the text)
+
+No information is available on Amazon AWS services impacted during this incident.
+
+**Summary of Outages**
+
+The outage started at 2024-11-16 00:52 UTC and lasted for 2 hours, 44 minutes. The root cause was a significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router.
