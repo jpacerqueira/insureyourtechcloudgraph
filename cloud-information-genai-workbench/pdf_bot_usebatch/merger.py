@@ -1538,6 +1538,8 @@ service_full_names = {
         "COS": "IBM Cloud Object Storage",
         "CC": "IBM Cloud Console",
         "K8S": "IBM Kubernetes",
+        "IDE": "IBM Cloud IDE",
+        "ide": "IBM Cloud IDE",
         "RHOIC": "Red Hat OpenShift on IBM Cloud"
     },
     "OCI": {
