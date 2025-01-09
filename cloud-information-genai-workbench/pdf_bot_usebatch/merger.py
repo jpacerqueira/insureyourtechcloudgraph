@@ -1511,7 +1511,7 @@ service_full_names = {
         "PBI": "Azure PowerBI",
         "ACDN": "Azure CDN",
         "ASA": "Azure Storage Accounts",
-        "AKS": "Azure Kubernetes Service",
+        "AKS": "Azure Kubernetes Service (AKS)",
         "ABS": "Azure Blob Storage",
         "ADLS": "Azure Blob Storage",
         "ADLS2": "Azure Blog Storage"
@@ -1538,6 +1538,8 @@ service_full_names = {
         "COS": "IBM Cloud Object Storage",
         "CC": "IBM Cloud Console",
         "K8S": "IBM Kubernetes",
+        "IDE": "IBM Cloud IDE",
+        "ide": "IBM Cloud IDE",
         "RHOIC": "Red Hat OpenShift on IBM Cloud"
     },
     "OCI": {
