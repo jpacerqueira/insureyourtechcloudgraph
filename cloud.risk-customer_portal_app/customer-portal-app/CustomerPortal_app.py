@@ -220,7 +220,7 @@ services = {
         "Amazon DocumentDB","Amazon DynamoDB","Amazon AWS RDS","Amazon AWS Aurora Serverles","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
         "Amazon Elastic File System","Amazon Elastic Block Store","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
         "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
-        "Amazon AWS Step Functions","Amazon Redshift","Amazon AWS Glue","Amazon Simple Queue Service SQS","Amazon s3","Amazon Elastic Kubernetes Service"],
+        "Amazon AWS Step Functions","Amazon Redshift","Amazon AWS Glue","Amazon Simple Queue Service SQS","Amazon s3","Amazon Elastic Kubernetes Service (EKS)"],
     "Google Cloud GCP": ["Google Cloud VertexAI","Google Cloud Machine Learning","Google Cloud Apigee API","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL","Google Cloud SQL",
         "Google Cloud Bigtable","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud Storage","Google Cloud DataStudio","Google Cloud Datalab","Google Cloud Composer","Google Cloud Looker Studio Pro","Google Cloud reCAPTCHA Enterprise",
         "Google Cloud Load Balancing","Google Cloud And Media CDN","Google Cloud DNS","Google Kubernetes Engine (GKE)"],
