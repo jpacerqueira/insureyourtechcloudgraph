@@ -139977,6 +139977,42 @@ Google Cloud | Cloud SQL | asia-northeast1 |  | 2024-09-07 04:20 UTC | 01 hours,
 Google Cloud | Compute Engine | asia-northeast1 |  | 2024-09-07 04:20 UTC | 01 hours, 50 minutes | Change rollout to an internal component | 2024-09-07 04:20 - 06:10 UTC | 2024-09-07 06:10 UTC
 Google Cloud | Kubernetes Engine | asia-northeast1 |  | 2024-09-07 04:20 UTC | 01 hours, 50 minutes | Change rollout to an internal component | 2024-09-07 04:20 - 06:10 UTC | 2024-09-07 06:10 UTC  
 --
+Outage Filename: ./Google Cloud Service Health - Incident 2024-09-09.txt
+--
+I can provide you with the information you requested.
+
+Cloud Providers Impacted:
+
+The incident affected Google Cloud Service.
+
+Services Impacted:
+
+Looker Studio
+
+Impact Date: 2024-09-09 21:04 PDT (UTC-07)
+
+Duration: 5 hours and 20 minutes
+
+Root Cause: Mitigation work is currently underway by our engineering team. The root cause of the outage was not specified.
+
+Downtime Period: 2024-09-09 19:00 PDT to 2024-09-09 21:04 PDT (UTC-07)
+
+Resolved Date: 2024-09-09 21:01 PDT (UTC-07)
+
+Here is the breakdown of the outage per cloud provider:
+
+Google Cloud Service
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Looker Studio | pacific |  | 2024-09-09 21:04 PDT | 5 hours and 20 minutes | Mitigation work is currently underway by our engineering team. | 2024-09-09 19:00 PDT to 2024-09-09 21:04 PDT | 2024-09-09 21:01 PDT |
+
+Summary of Outage:
+
+The outage affected Looker Studio users in the Pacific region, specifically in the pacific availability zone. The incident started on September 9, 2024, at 19:00 PDT and lasted for approximately 5 hours and 20 minutes. The root cause of the outage was not specified, but mitigation work is currently underway by Google Cloud's engineering team.
+
+Note: Since only one cloud provider was mentioned in the text, there is no summary of multiple cloud providers impacted.  
+--
 Outage Filename: ./Google Cloud Service Health - Incident 2024-09-11.txt
 --
 After analyzing the text, I found that only Google Cloud Service was impacted.
@@ -140158,42 +140194,6 @@ Google Cloud Service , VMware Engine , pacific , Not specified , 2024-09-27 05:1
 Google Cloud Service , VMware Engine , pacific , Not specified , 2024-09-27 04:24 UTC , 1 day, 15 hours, and 30 minutes , Same as above , Not specified , 2024-09-28 13:49 UTC 
 Google Cloud Service , VMware Engine , pacific , Not specified , 2024-09-27 03:39 UTC , 6 days, 10 hours, and 10 minutes , Same as above , Not specified , 2024-09-28 13:49 UTC 
 ```  
---
-Outage Filename: ./Google Cloud Service Health - Incident 2024-09-99.txt
---
-I can provide you with the information you requested.
-
-Cloud Providers Impacted:
-
-The incident affected Google Cloud Service.
-
-Services Impacted:
-
-Looker Studio
-
-Impact Date: 2024-09-09 21:04 PDT (UTC-07)
-
-Duration: 5 hours and 20 minutes
-
-Root Cause: Mitigation work is currently underway by our engineering team. The root cause of the outage was not specified.
-
-Downtime Period: 2024-09-09 19:00 PDT to 2024-09-09 21:04 PDT (UTC-07)
-
-Resolved Date: 2024-09-09 21:01 PDT (UTC-07)
-
-Here is the breakdown of the outage per cloud provider:
-
-Google Cloud Service
-
-| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Google Cloud | Looker Studio | pacific |  | 2024-09-09 21:04 PDT | 5 hours and 20 minutes | Mitigation work is currently underway by our engineering team. | 2024-09-09 19:00 PDT to 2024-09-09 21:04 PDT | 2024-09-09 21:01 PDT |
-
-Summary of Outage:
-
-The outage affected Looker Studio users in the Pacific region, specifically in the pacific availability zone. The incident started on September 9, 2024, at 19:00 PDT and lasted for approximately 5 hours and 20 minutes. The root cause of the outage was not specified, but mitigation work is currently underway by Google Cloud's engineering team.
-
-Note: Since only one cloud provider was mentioned in the text, there is no summary of multiple cloud providers impacted.  
 --
 Outage Filename: ./Google Cloud Service Health - Incident 2024-10-24.txt
 --
