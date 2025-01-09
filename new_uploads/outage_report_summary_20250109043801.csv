@@ -14877,9 +14877,9 @@ Duration (minutes): 6431
 Root Cause: Planned power maintenance
 Resolution: 
 Downtime Period: 04:30 UTC on 9 February 2023 - 20:19 UTC on 7 February 2023 (4 days, 11 hours, 11 minutes)"
-1756262820.0,Azure_status_history_Microsoft_Azure_p4_2022,Azure,Azure Kubernetes Service,west us 2,not specified,2025-08-27T02:47:00+00:00,2025-08-28T02:47:00+00:00,resolved,,1 day (24 hours),1440,Bug in Ubuntu 18.04 caused DNS resolution errors,,24 hours,,Microsoft Azure,,"Source Outage Report: Azure_status_history_Microsoft_Azure_p4_2022
+1756262820.0,Azure_status_history_Microsoft_Azure_p4_2022,Azure,Azure Kubernetes Service (AKS),west us 2,not specified,2025-08-27T02:47:00+00:00,2025-08-28T02:47:00+00:00,resolved,,1 day (24 hours),1440,Bug in Ubuntu 18.04 caused DNS resolution errors,,24 hours,,Microsoft Azure,,"Source Outage Report: Azure_status_history_Microsoft_Azure_p4_2022
 Cloud Provider: Azure
-Cloud Services: Azure Functions, Azure Kubernetes Service
+Cloud Services: Azure Functions, Azure Kubernetes Service (AKS)
 Regions: west us 2, westus2
 Availability Zones: not specified
 Start Time: 2025-08-27 02:47:00+00:00
@@ -14892,9 +14892,9 @@ Root Cause: Bug in Ubuntu 18.04 caused DNS resolution errors
 Resolution: 
 Downtime Period: 24 hours
 Affected Components: Microsoft Azure"
-1756262820.0,Azure_status_history_Microsoft_Azure_p4_2022,Azure,Azure Kubernetes Service,westus2,not specified,2025-08-27T02:47:00+00:00,2025-08-28T02:47:00+00:00,resolved,,1 day (24 hours),1440,Bug in Ubuntu 18.04 caused DNS resolution errors,,24 hours,,Microsoft Azure,,"Source Outage Report: Azure_status_history_Microsoft_Azure_p4_2022
+1756262820.0,Azure_status_history_Microsoft_Azure_p4_2022,Azure,Azure Kubernetes Service (AKS),westus2,not specified,2025-08-27T02:47:00+00:00,2025-08-28T02:47:00+00:00,resolved,,1 day (24 hours),1440,Bug in Ubuntu 18.04 caused DNS resolution errors,,24 hours,,Microsoft Azure,,"Source Outage Report: Azure_status_history_Microsoft_Azure_p4_2022
 Cloud Provider: Azure
-Cloud Services: Azure Functions, Azure Kubernetes Service
+Cloud Services: Azure Functions, Azure Kubernetes Service (AKS)
 Regions: west us 2, westus2
 Availability Zones: not specified
 Start Time: 2025-08-27 02:47:00+00:00
@@ -14909,7 +14909,7 @@ Downtime Period: 24 hours
 Affected Components: Microsoft Azure"
 1756262820.0,Azure_status_history_Microsoft_Azure_p4_2022,Azure,Azure Functions,west us 2,not specified,2025-08-27T02:47:00+00:00,2025-08-28T02:47:00+00:00,resolved,,1 day (24 hours),1440,Bug in Ubuntu 18.04 caused DNS resolution errors,,24 hours,,Microsoft Azure,,"Source Outage Report: Azure_status_history_Microsoft_Azure_p4_2022
 Cloud Provider: Azure
-Cloud Services: Azure Functions, Azure Kubernetes Service
+Cloud Services: Azure Functions, Azure Kubernetes Service (AKS)
 Regions: west us 2, westus2
 Availability Zones: not specified
 Start Time: 2025-08-27 02:47:00+00:00
@@ -14924,7 +14924,7 @@ Downtime Period: 24 hours
 Affected Components: Microsoft Azure"
 1756262820.0,Azure_status_history_Microsoft_Azure_p4_2022,Azure,Azure Functions,westus2,not specified,2025-08-27T02:47:00+00:00,2025-08-28T02:47:00+00:00,resolved,,1 day (24 hours),1440,Bug in Ubuntu 18.04 caused DNS resolution errors,,24 hours,,Microsoft Azure,,"Source Outage Report: Azure_status_history_Microsoft_Azure_p4_2022
 Cloud Provider: Azure
-Cloud Services: Azure Functions, Azure Kubernetes Service
+Cloud Services: Azure Functions, Azure Kubernetes Service (AKS)
 Regions: west us 2, westus2
 Availability Zones: not specified
 Start Time: 2025-08-27 02:47:00+00:00
