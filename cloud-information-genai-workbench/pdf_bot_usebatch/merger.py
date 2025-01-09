@@ -45,6 +45,7 @@ TIMEZONE_MAP = {
     'NZDT': 'Pacific/Auckland',
     'UT': 'UTC',
     'US': 'UTC',
+    'UTCC': 'UTC',
     # Add more mappings as needed
 }
 
@@ -545,7 +546,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(BareMetal servers|BareMetal|BM)",
             # Load Balancers
             r"(?i)(Load Balancers|Load Balancer|LB)",
-            # VSI-San Storage
+            # VSI-San Storage
             r"(?i)(VSI-San Storage|VSI-San|VSIs|VSI)",
             # API Connect
             r"(?i)(OCI API Connect|API Connect|API|APIC)",
@@ -599,7 +600,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Oracle Cloud Infrastructure Registry (OCIR)|OCI Registry|OCI Registry Cloud|Registry Cloud|Registry)",
             # Oracle Cloud Infrastructure Resource Manager
             r"(?i)(Oracle Cloud Infrastructure Resource Manager|OCI Resource Manager|OCI Resource|Resource Manager)",
-            # Oracle Cloud Infrastructure Vulnerability Scanning Service
+            # Oracle Cloud Infrastructure Vulnerability Scanning Service
             r"(?i)(Oracle Cloud Infrastructure Vulnerability Scanning Service|OCI Vulnerability Scanning Service|OCI Vulnerability|Vulnerability Scanning Service)",
             # Oracle Digital Assistant
             r"(?i)(Oracle Digital Assistant|OCI Digital Assistant|OCI Digital|Digital Assistant)",
@@ -836,6 +837,60 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
     duration_patterns.extend(new_duration_patterns)
     region_patterns.extend(new_region_patterns)
     
+    # New patterns for Google Cloud Service Health incident format
+    new_service_patterns = [
+        r"(?i)Service:\s*([^\n]+)"
+    ]
+    
+    new_region_patterns = [
+        r"(?i)Region:\s*([^\n]+)"
+    ]
+    
+    new_availability_zone_patterns = [
+        r"(?i)Availability Zone:\s*([^\n]+)"
+    ]
+    
+    new_impact_date_patterns = [
+        r"(?i)Impact Date:\s*([^\n]+)"
+    ]
+
+    new_impact_dates_patterns = [
+        r"(?i)Impact Dates:\s*([^\n]+)"
+    ]
+    
+    new_duration_patterns = [
+        r"(?i)Duration:\s*([^\n]+)"
+    ]
+    
+    new_root_cause_patterns = [
+        r"(?i)Root Cause:\s*([^\n]+)"
+    ]
+    
+    new_downtime_period_patterns = [
+        r"(?i)Downtime Period:\s*([^\n]+)"
+    ]
+    
+    new_resolved_date_patterns = [
+        r"(?i)Resolved Date:\s*([^\n]+)"
+    ]
+    
+    # Integrate new patterns into existing logic
+    service_patterns["GCP"].extend(new_service_patterns)
+    region_patterns.extend(new_region_patterns)
+    availability_zone_patterns = new_availability_zone_patterns  # Assuming this is a new addition
+    time_patterns["start"].extend(new_impact_date_patterns)
+    time_patterns["start"].extend(new_impact_dates_patterns)
+    duration_patterns.extend(new_duration_patterns)
+    root_cause_patterns.extend(new_root_cause_patterns)
+    downtime_period_patterns = new_downtime_period_patterns  # Assuming this is a new addition
+    resolved_date_patterns = new_resolved_date_patterns  # Assuming this is a new addition
+    
+    # Add new patterns for Impact Date and Impact Dates
+    impact_date_patterns = [
+        r"(?i)Impact Date:\s*([^\n]+)",
+        r"(?i)Impact Dates:\s*([^\n]+)"
+    ]
+    
     # Split text into sections by outage
     sections = re.split(r"--\nOutage Filename:", text)
     
@@ -1063,7 +1118,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             identified_providers = [provider for provider in identified_providers if provider not in excluded_providers]
 
         # Assign the first N identified provider if any
-        # TODO : Changed logic to capture multi-cloud incidents like JULY Azure impacting MongoDB, Databricks and others.
+        # TODO : Changed logic to capture multi-cloud incidents like JULY Azure impacting MongoDB, Databricks and others.
         # Extended provider patterns
         provider_patterns = {
             "AWS": r"(?i)(Amazon AWS|AWS|Amazon Web Services|Amazon|AWS Cloud)",
@@ -1084,7 +1139,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         provider_from_filename = None
         if current_filename:
             for provider, pattern in provider_patterns.items():
-                # Match to outage.source_outage_report
+                # Match to outage.source_outage_report
                 if re.search(pattern, outage.source_outage_report , re.IGNORECASE): 
                     provider_from_filename = provider
                     break
@@ -1167,7 +1222,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
                 match = re.search(pattern, section)
                 if match:
                     timestamp_str = match.group(1).strip()
-                    timestamp = parse_date(timestamp_str)
+                    timestamp = parse_timestamp(timestamp_str)  # Use parse_timestamp instead of parse_date
                     if timestamp:
                         if field == "start":
                             outage.start_time = timestamp
@@ -1175,17 +1230,40 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
                             outage.end_time = timestamp
                         break  # Exit the loop if a timestamp is found
                         
+        # New logic to use Impact Date as a fallback for start_time
+        if outage.start_time is None:
+            for pattern in impact_date_patterns:
+                match = re.search(pattern, section)
+                if match:
+                    timestamp_str = match.group(1).strip()
+                    timestamp = parse_timestamp(timestamp_str)  # Use parse_timestamp instead of parse_date
+                    if timestamp:
+                        outage.start_time = timestamp
+                        break  # Exit the loop if a timestamp is found
+        
+        # Try to extract start time from the source outage report name before using default time
+        if outage.start_time is None and current_filename:
+            filename_date_str = parse_filename_date(current_filename)
+            if filename_date_str:
+                timestamp = parse_timestamp(filename_date_str)  # Use parse_timestamp instead of parse_date
+                if timestamp:
+                    outage.start_time = timestamp
+        
+        # Existing logic to apply default time if no start_time is found
+        if outage.start_time is None:
+            outage.start_time = default_time
+        
         # Calculate missing start_time or end_time using duration or downtime_period
-        if outage.start_time is None and outage.end_time is not None and outage.duration:
-            outage.start_time = outage.end_time - timedelta(minutes=calculate_duration_in_minutes(outage.duration))
-        elif outage.end_time is None and outage.start_time is not None and outage.duration:
+        if outage.start_time is not None and outage.end_time is None and outage.duration:
             outage.end_time = outage.start_time + timedelta(minutes=calculate_duration_in_minutes(outage.duration))
+        elif outage.end_time is not None and outage.start_time is None and outage.duration:
+            outage.start_time = outage.end_time - timedelta(minutes=calculate_duration_in_minutes(outage.duration))
         
         # If duration is not available, try using downtime_period
-        if outage.start_time is None and outage.end_time is not None and outage.downtime_period:
-            outage.start_time = outage.end_time - timedelta(minutes=calculate_duration_in_minutes(outage.downtime_period))
-        elif outage.end_time is None and outage.start_time is not None and outage.downtime_period:
+        if outage.start_time is not None and outage.end_time is None and outage.downtime_period:
             outage.end_time = outage.start_time + timedelta(minutes=calculate_duration_in_minutes(outage.downtime_period))
+        elif outage.end_time is not None and outage.start_time is None and outage.downtime_period:
+            outage.start_time = outage.end_time - timedelta(minutes=calculate_duration_in_minutes(outage.downtime_period))
         
         # Extract incident ID
         for pattern in incident_patterns:
@@ -1242,9 +1320,9 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
                 detailed_outage.availability_zone = match.group(3).strip()
                 detailed_outage.root_cause = match.group(4).strip()
                 detailed_outage.duration = match.group(5).strip()
-                detailed_outage.start_time = parse_date(match.group(6).strip())  # Convert to datetime
+                detailed_outage.start_time = parse_timestamp(match.group(6).strip())  # Convert to datetime
                 detailed_outage.downtime_period = match.group(7).strip()
-                detailed_outage.resolution_time = parse_date(match.group(8).strip())  # Convert to datetime
+                detailed_outage.resolution_time = parse_timestamp(match.group(8).strip())  # Convert to datetime
                 outages.append(detailed_outage)
                 break  # Exit after the first match
         
@@ -1311,28 +1389,30 @@ def parse_timestamp(timestamp_str: str) -> Optional[datetime]:
         # Clean the timestamp string
         timestamp_str = timestamp_str.strip().rstrip('.')
 
-        # Handle common timezone abbreviations and replace them with UTC offsets
+        # Define timezone mappings
         timezone_mappings = {
-            'PDT': 'UTC-7',
-            'PST': 'UTC-8',
-            'US/Pacific': 'UTC-8',
-            'JST': 'UTC+9',
-            'CST': 'UTC-6',
-            'CDT': 'UTC-5',
-            'EDT': 'UTC-4',
-            'EST': 'UTC-5',
-            'UTC-7': 'UTC-7',
-            'UTC-8': 'UTC-8',
-            'UTC+9': 'UTC+9',
+            'PDT': -7 * 3600,
+            'PST': -8 * 3600,
+            'US/Pacific': -8 * 3600,
+            'JST': 9 * 3600,
+            'JST (UTC+9)': 9 * 3600,
+            'JST (UTC9)': 9 * 3600,
+            'CST': -6 * 3600,
+            'CDT': -5 * 3600,
+            'EDT': -4 * 3600,
+            'EST': -5 * 3600,
+            'UTC-7': -7 * 3600,
+            'UTC-8': -8 * 3600,
+            'UTC+9': 9 * 3600,
+            'UTC': 0,
+            'GMT': 0,
+            'UT': 0,
+            'US': -4 * 3600,
+            'UTCC': 0,
         }
 
-        for tz_abbr, tz_offset in timezone_mappings.items():
-            if tz_abbr in timestamp_str:
-                timestamp_str = timestamp_str.replace(tz_abbr, tz_offset)
-                break  # Replace only the first matching abbreviation
-
-        # Parse the timestamp
-        return parser.parse(timestamp_str, fuzzy=True)
+        # Parse the timestamp with timezone mappings
+        return parser.parse(timestamp_str, fuzzy=True, tzinfos=timezone_mappings)
     except Exception:
         return None
 
@@ -1402,7 +1482,7 @@ service_full_names = {
         "GCLB": "Google Cloud Load Balancing",
         "GCDN": "Google Cloud And Media CDN",
         "GCDNS": "Google Cloud DNS",
-        "GKE": "Google Kubernetes Engine"
+        "GKE": "Google Kubernetes Engine (GKE)"
     },
     "Azure": {
         "AAD": "Azure Active Directory",
@@ -1754,8 +1834,17 @@ def parse_downtime_period(downtime_str: str) -> Optional[Tuple[datetime, datetim
         if match:
             start_str = match.group(1).strip()
             end_str = match.group(2).strip()
+            
+            # Parse start time
             start_time = parse_timestamp(start_str)
+            
+            # Check if end_str is just a time and append date from start_str
+            if start_time and re.match(r"^\d{1,2}:\d{2}(?::\d{2})?$", end_str):
+                end_str = f"{start_time.strftime('%Y-%m-%d')} {end_str}"
+            
+            # Parse end time
             end_time = parse_timestamp(end_str)
+            
             if start_time and end_time:
                 # Ensure both times are timezone-aware and in UTC
                 if start_time.tzinfo is None:
@@ -1985,8 +2074,12 @@ def cleanup_merge_file():
             .replace("Databr icks", "Databricks")
             .replace("Googl e", "Google")
             .replace("AW S", "AWS")
-            .replace("*", "")
-            .replace("+", "")
+            .replace("+", "")  # Remove plus signs
+            .replace("*", "")  # Remove asterisks
+            .replace("**", "")  # Remove double asterisks
+            .replace("* **", "")  # Remove one plus double asterisks
+            .replace("** *", "")  # Remove double plus one asterisks
+            .replace("**:", ":")  # Remove double asterisks and colon
             for line in cleaned_lines
     ]
     
