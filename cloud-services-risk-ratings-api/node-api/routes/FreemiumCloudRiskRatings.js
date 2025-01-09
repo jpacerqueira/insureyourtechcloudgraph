@@ -184,11 +184,13 @@ router.get('/freemium/outages/list/all', async function (req, res) {
     let connection;
     try {
         connection = await poolServiceRiskRatings.connect();
+        // Avoid LLM alucination records =>  data patch with outage_timestamp <= NOW()  = > 01.Jan.2025 0h00
+        const now = Math.floor(new Date().getTime() / 1000).toString(); // Convert current time to Unix timestamp
         // outage_timestamp >= 1727740800 = > Date and time (your time zone): Tuesday, 1 October 2024 01:00:00 GMT+01:00
-        // Avoid LLM alucination records =>  data patch with outage_timestamp <= 1735689600  = > 01.Jan.2025 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries
-            WHERE outage_timestamp >= 1727740800 AND outage_timestamp <= 1735689600`
+            WHERE outage_timestamp >= 1727740800 AND outage_timestamp <= $1`,
+            [now]
         );
         
         const rows = Array.isArray(result) ? result[0] : result.rows;
@@ -214,12 +216,13 @@ router.get('/freemium/outages/provider/:provider', async function (req, res) {
     try {
         connection = await poolServiceRiskRatings.connect();
         const provider = req.params.provider;
+        // Avoid LLM alucination records =>  data patch with outage_timestamp <= NOW()  = > 01.Jan.2025 0h00
+        const now = Math.floor(new Date().getTime() / 1000).toString(); // Convert current time to Unix timestamp
         // outage_timestamp >= 1727740800 = > Date and time (your time zone): Tuesday, 1 October 2024 01:00:00 GMT+01:00
-        // Avoid LLM alucination records =>  data patch with outage_timestamp <= 1735689600  = > 01.Jan.2025 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
-             WHERE outage_timestamp >= 1727740800 AND outage_timestamp <= 1735689600 AND cloud_provider = $1`,
-            [provider]
+             WHERE outage_timestamp >= 1727740800 AND outage_timestamp <= $1 AND cloud_provider = $2`,
+            [now, provider]
         );
         
         const rows = Array.isArray(result) ? result[0] : result.rows;
@@ -245,12 +248,13 @@ router.get('/freemium/outages/service/:service', async function (req, res) {
     try {
         connection = await poolServiceRiskRatings.connect();
         const service = req.params.service;
+        // Avoid LLM alucination records =>  data patch with outage_timestamp <= NOW()  = > 01.Jan.2025 0h00
+        const now = Math.floor(new Date().getTime() / 1000).toString(); // Convert current time to Unix timestamp
         // outage_timestamp >= 1727740800 = > Date and time (your time zone): Tuesday, 1 October 2024 01:00:00 GMT+01:00
-        // Avoid LLM alucination records =>  data patch with outage_timestamp <= 1735689600  = > 01.Jan.2025 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
-             WHERE outage_timestamp >= 1727740800 AND outage_timestamp <= 1735689600 AND cloud_service = $1`,
-            [service]
+             WHERE outage_timestamp >= 1727740800 AND outage_timestamp <= $1 AND cloud_service = $2`,
+            [now, service]
         );
         
         const rows = Array.isArray(result) ? result[0] : result.rows;
@@ -276,12 +280,13 @@ router.get('/freemium/outages/region/:region', async function (req, res) {
     try {
         connection = await poolServiceRiskRatings.connect();
         const region = req.params.region;
+        // Avoid LLM alucination records =>  data patch with outage_timestamp <= NOW()  = > 01.Jan.2025 0h00
+        const now = Math.floor(new Date().getTime() / 1000).toString(); // Convert current time to Unix timestamp
         // outage_timestamp >= 1727740800 = > Date and time (your time zone): Tuesday, 1 October 2024 01:00:00 GMT+01:00
-        // Avoid LLM alucination records =>  data patch with outage_timestamp <= 1735689600  =  01.Jan.2025 0h00
         const result = await connection.query(
             `SELECT * FROM "${process.env.DB_NAME}".outage_report_summaries 
-             WHERE outage_timestamp >= 1727740800 AND outage_timestamp <= 1735689600 AND regions LIKE $1`,
-            [`%${region}%`]
+             WHERE outage_timestamp >= 1727740800 AND outage_timestamp <= $1 AND regions LIKE $2`,
+            [now, `%${region}%`]
         );
         
         const rows = Array.isArray(result) ? result[0] : result.rows;
