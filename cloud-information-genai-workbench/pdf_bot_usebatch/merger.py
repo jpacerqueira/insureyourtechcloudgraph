@@ -45,6 +45,7 @@ TIMEZONE_MAP = {
     'NZDT': 'Pacific/Auckland',
     'UT': 'UTC',
     'US': 'UTC',
+    'UTCC': 'UTC',
     # Add more mappings as needed
 }
 
@@ -1388,28 +1389,30 @@ def parse_timestamp(timestamp_str: str) -> Optional[datetime]:
         # Clean the timestamp string
         timestamp_str = timestamp_str.strip().rstrip('.')
 
-        # Handle common timezone abbreviations and replace them with UTC offsets
+        # Define timezone mappings
         timezone_mappings = {
-            'PDT': 'UTC-7',
-            'PST': 'UTC-8',
-            'US/Pacific': 'UTC-8',
-            'JST': 'UTC+9',
-            'CST': 'UTC-6',
-            'CDT': 'UTC-5',
-            'EDT': 'UTC-4',
-            'EST': 'UTC-5',
-            'UTC-7': 'UTC-7',
-            'UTC-8': 'UTC-8',
-            'UTC+9': 'UTC+9',
+            'PDT': -7 * 3600,
+            'PST': -8 * 3600,
+            'US/Pacific': -8 * 3600,
+            'JST': 9 * 3600,
+            'JST (UTC+9)': 9 * 3600,
+            'JST (UTC9)': 9 * 3600,
+            'CST': -6 * 3600,
+            'CDT': -5 * 3600,
+            'EDT': -4 * 3600,
+            'EST': -5 * 3600,
+            'UTC-7': -7 * 3600,
+            'UTC-8': -8 * 3600,
+            'UTC+9': 9 * 3600,
+            'UTC': 0,
+            'GMT': 0,
+            'UT': 0,
+            'US': -4 * 3600,
+            'UTCC': 0,
         }
 
-        for tz_abbr, tz_offset in timezone_mappings.items():
-            if tz_abbr in timestamp_str:
-                timestamp_str = timestamp_str.replace(tz_abbr, tz_offset)
-                break  # Replace only the first matching abbreviation
-
-        # Parse the timestamp
-        return parser.parse(timestamp_str, fuzzy=True)
+        # Parse the timestamp with timezone mappings
+        return parser.parse(timestamp_str, fuzzy=True, tzinfos=timezone_mappings)
     except Exception:
         return None
 
@@ -1831,8 +1834,17 @@ def parse_downtime_period(downtime_str: str) -> Optional[Tuple[datetime, datetim
         if match:
             start_str = match.group(1).strip()
             end_str = match.group(2).strip()
+            
+            # Parse start time
             start_time = parse_timestamp(start_str)
+            
+            # Check if end_str is just a time and append date from start_str
+            if start_time and re.match(r"^\d{1,2}:\d{2}(?::\d{2})?$", end_str):
+                end_str = f"{start_time.strftime('%Y-%m-%d')} {end_str}"
+            
+            # Parse end time
             end_time = parse_timestamp(end_str)
+            
             if start_time and end_time:
                 # Ensure both times are timezone-aware and in UTC
                 if start_time.tzinfo is None:
