@@ -372,7 +372,7 @@ Downtime Period: 04:30 UTC on 9 February 2023 - 20:19 UTC on 7 February 2023 (4 
 
 Source Outage Report: Azure_status_history_Microsoft_Azure_p4_2022
 Cloud Provider: Azure
-Cloud Services: Azure Functions, Azure Kubernetes Service
+Cloud Services: Azure Functions, Azure Kubernetes Service (AKS)
 Regions: west us 2, westus2
 Availability Zones: not specified
 Start Time: 2025-08-27 02:47:00+00:00

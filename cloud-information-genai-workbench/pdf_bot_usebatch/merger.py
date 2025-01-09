@@ -1511,7 +1511,7 @@ service_full_names = {
         "PBI": "Azure PowerBI",
         "ACDN": "Azure CDN",
         "ASA": "Azure Storage Accounts",
-        "AKS": "Azure Kubernetes Service",
+        "AKS": "Azure Kubernetes Service (AKS)",
         "ABS": "Azure Blob Storage",
         "ADLS": "Azure Blob Storage",
         "ADLS2": "Azure Blog Storage"
