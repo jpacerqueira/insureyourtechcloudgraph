@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <!-- Add these new font and icon libraries -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://insureyourtech.cloud&size=18">
     <script>
         // Initialize ENV with default values
@@ -19,9 +22,32 @@
         };
     </script>
     <style>
+        :root {
+            --primary-color: #74b9ff;
+            --primary-dark: #0984e3;
+            --bg-dark: #2f3542;
+            --bg-lighter: #353b48;
+            --bg-card: #2c3039;
+            --text-light: #f1f2f6;
+            --border-color: #57606f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         /* Copy all the CSS from CloudRisk.Simulation.html */
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-image: url('https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://insureyourtech.cloud&size=180');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: var(--text-light);
+            min-height: 100vh;
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -40,19 +66,22 @@
         .variable-pair {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-end; /* Changed from space-between to flex-end */
             margin: 15px 0;
             padding: 10px;
-            background-color: #2c3039;  /* Darker grey for pairs */
+            background-color: #2c3039; /* Darker grey for pairs */
             border-radius: 5px;
+            gap: 15px; /* Added gap between elements */
         }
         .variable-pair label {
-            flex: 1;
+            flex: 0.5; /* Changed from 1 to 0.5 to reduce label width */
             font-weight: 500;
-            color: #74b9ff;  /* Light blue for labels */
+            color: #74b9ff; /* Light blue for labels */
+            text-align: right; /* Align label text to the right */
         }
         select, input {
-            flex: 4; /* Changed from 2 to 4 for double length */
+            flex: 1; /* Keep input/select elements at original size */
+            max-width: 300px; /* Optional: limit maximum width */
             padding: 8px;
             font-size: 14px;
             border: 1px solid #57606f;

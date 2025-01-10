@@ -30,19 +30,22 @@
         .variable-pair {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-end; /* Changed from space-between to flex-end */
             margin: 15px 0;
             padding: 10px;
-            background-color: #2c3039;  
+            background-color: #2c3039; /* Darker grey for pairs */
             border-radius: 5px;
+            gap: 15px; /* Added gap between elements */
         }
         .variable-pair label {
-            flex: 1;
+            flex: 0.5; /* Changed from 1 to 0.5 to reduce label width */
             font-weight: 500;
-            color: #74b9ff;  /* Light blue for labels */
+            color: #74b9ff; /* Light blue for labels */
+            text-align: right; /* Align label text to the right */
         }
         select, input {
-            flex: 2;
+            flex: 1; /* Keep input/select elements at original size */
+            max-width: 300px; /* Optional: limit maximum width */
             padding: 8px;
             font-size: 14px;
             border: 1px solid #57606f;
@@ -172,15 +175,18 @@
 <div class="container">
     <h1>Company Details</h1>
     <div>
-        <label for="companyName">Company Name (required):</label>
+        <label for="companyName">Company Name (required)</label>
         <input type="text" id="companyName" required>
     </div>
     <div>
-        <label for="projectName">Submission Project Name (optional):</label>
+        <label for="projectName">Submission Project Name (optional)</label>
         <input type="text" id="projectName" placeholder="Defaults to Company Name if blank">
     </div>
 
-    <h2>Measure your Cloud.Risk via inserting Cloud Vendor, Service, and Region Selection</h2>
+    <h2>Measure your Cloud.Risk</h2>
+    <h4>Via inserting [Cloud Provider, Service, Region] trios</h4>
+    <h4>Cloud.Risk is a cloud risk comparison that measures the risk of your cloud services</h4>
+    <h4>You can also use it to compare your Cloud.Risk to other cloud vendors</h4>
 
     <div class="controls">
         <button onclick="addVariablePair()">+</button>
@@ -203,13 +209,16 @@
 
 <div class="container">
     <h2>Outage Information</h2>
+    <h4>Cloud.Risk uses webscrappers and GenAI to get outage information from the cloud vendors</h4>
+    <h4>The Freemium tier is limited to Information from October 2024 and November 2024</h4>
+    <h4>Consider Upgrading to Premium for more accurate information</h4>
     <div id="outageChartContainer"></div>
     <div id="outageComparison"></div>
 </div>
 
 <script>
 
-    const optionsForVariable1 = ["Amazon AWS", "Google Cloud GCP", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai", "Macrometa"];
+    const optionsForVariable1 = ["Google Cloud GCP", "Amazon AWS", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai", "Macrometa"];
     const optionsForVariable2 = ["AnyCast CloudFlare","CDN CloudFlare","CDN Akamai","Security Akamai","Edge Computing Akamai","CDN Macrometa","Edge Computing Macrometa",
         "Oracle Cloud Infrastructure Virtual Cloud Network (VCN)","Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)",
         "Azure Active Directory AAD","Microsoft Entra ID","Azure Active Directory B2C",
@@ -230,7 +239,7 @@
         "Amazon DocumentDB","Amazon DynamoDB","Amazon AWS RDS","Amazon AWS Aurora Serverles","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
         "Amazon Elastic File System","Amazon Elastic Block Store","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
         "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
-        "Amazon AWS Step Functions","Amazon Redshift","Amazon AWS Glue","Amazon Simple Queue Service SQS","Amazon s3","Amazon Elastic Kubernetes Service",
+        "Amazon AWS Step Functions","Amazon Redshift","Amazon AWS Glue","Amazon Simple Queue Service SQS","Amazon s3","Amazon Elastic Kubernetes Service (EKS)",
         "Snowflake on AWS","Snowflake on Azure","Snowflake on GCP",
         "MongoDB Atlas","MongoDB Atlas AWS","MongoDB Atlas Azure","MongoDB Atlas GCP","MongoDB Atlas Search","MongoDB Atlas Vector Search","MongoDB Atlas Stream Processing","MongoDB Atlas BI Connector","MongoDB Atlas SQL",
         "Databricks SaaS","Databricks Workspace", "Databricks Mlflow", "Databricks Notebooks",
@@ -276,24 +285,24 @@
         variableTrioDiv.id = `variableTrio_${trioNumber}`;
 
         variableTrioDiv.innerHTML = `
-            <label for="variable1_${trioNumber}">Set ${trioNumber} - Cloud Provider (cloud vendor):</label>
+            <label for="variable1_${trioNumber}">${trioNumber}.Cloud.Risk Cloud Provider</label>
             <select id="variable1_${trioNumber}">
                 <option value="">Select a vendor</option>
                 ${dropdownOptions1}
             </select>
 
-            <label for="variable2_${trioNumber}">Service:</label>
+            <label for="variable2_${trioNumber}">Service</label>
             <select id="variable2_${trioNumber}">
                 <option value="">Select a service</option>
                 ${dropdownOptions2}
             </select>
 
-            <label for="variable3_${trioNumber}">Region:</label>
+            <label for="variable3_${trioNumber}">Region</label>
             <select id="variable3_${trioNumber}">
                 ${createRegionOptions()}
             </select>
 
-            <label for="monthlyCost_${trioNumber}">Monthly Service estimate cost ($):</label>
+            <label for="monthlyCost_${trioNumber}">Service monthly cost estimate ($)</label>
             <input type="number" 
                    id="monthlyCost_${trioNumber}" 
                    min="1" 
