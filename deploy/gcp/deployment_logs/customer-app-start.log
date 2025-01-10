@@ -1,126 +1,21 @@
-Attaching to cloudrisk-customer_portal_app_customer_portal_app_1, cloud-risk-portal, cloudrisk-customer_portal_app_customer_graph_1
+Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_app_1, cloudrisk-customer_portal_app_customer_graph_1
+[33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
+[33mcustomer_graph_1       |[0m 2025-01-10 17:40:57.433+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
+[33mcustomer_graph_1       |[0m 2025-01-10 17:40:57.464+0000 INFO  Starting...
+[33mcustomer_graph_1       |[0m 2025-01-10 17:40:59.571+0000 INFO  This instance is ServerId{681dbf75} (681dbf75-5b97-4e8f-81f0-599158529959)
+[33mcustomer_graph_1       |[0m 2025-01-10 17:41:02.028+0000 INFO  ======== Neo4j 5.25.1 ========
+[33mcustomer_graph_1       |[0m 2025-01-10 17:41:05.606+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+[33mcustomer_graph_1       |[0m 2025-01-10 17:41:05.690+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+[33mcustomer_graph_1       |[0m 2025-01-10 17:41:07.507+0000 INFO  HTTP enabled on 0.0.0.0:7474.
+[33mcustomer_graph_1       |[0m 2025-01-10 17:41:07.511+0000 INFO  Remote interface available at http://localhost:7474/
+[33mcustomer_graph_1       |[0m 2025-01-10 17:41:07.526+0000 INFO  id: AA95D8C0CCAD8B72DB689FABCD9182E89D39FBCAD56AFE70817E3A2B184B59B9
+[33mcustomer_graph_1       |[0m 2025-01-10 17:41:07.532+0000 INFO  name: system
+[33mcustomer_graph_1       |[0m 2025-01-10 17:41:07.533+0000 INFO  creationDate: 2024-11-19T23:06:54.589Z
+[33mcustomer_graph_1       |[0m 2025-01-10 17:41:07.534+0000 INFO  Started.
 [36mcloud-risk-portal      |[0m 
 [36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
 [36mcloud-risk-portal      |[0m > node server.js
 [36mcloud-risk-portal      |[0m 
-[36mcloud-risk-portal      |[0m Sending reset email to jpacerqueira@gmail.com with token 95144d5e02bc1cbea9a57bcc77d3f87b
-[36mcloud-risk-portal      |[0m Message sent: <0603fb25-bb0f-cab8-9f29-2fff197a82f6@insureyourtech.cloud>
-[36mcloud-risk-portal      |[0m Email sent to: jpacerqueira@gmail.com
-[36mcloud-risk-portal      |[0m Storing reset token in the database
-[36mcloud-risk-portal      |[0m 95144d5e02bc1cbea9a57bcc77d3f87b
-[36mcloud-risk-portal      |[0m Failed to connect to Neo4j: Neo4jError: Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal
-[36mcloud-risk-portal      |[0m     at Neo4jError.GQLError [as constructor] (/app/node_modules/neo4j-driver-core/lib/error.js:117:24)
-[36mcloud-risk-portal      |[0m     at new Neo4jError (/app/node_modules/neo4j-driver-core/lib/error.js:204:28)
-[36mcloud-risk-portal      |[0m     at newError (/app/node_modules/neo4j-driver-core/lib/error.js:246:12)
-[36mcloud-risk-portal      |[0m     at NodeChannel._handleConnectionError (/app/node_modules/neo4j-driver-bolt-connection/lib/channel/node/node-channel.js:239:56)
-[36mcloud-risk-portal      |[0m     at Socket.emit (node:events:518:28)
-[36mcloud-risk-portal      |[0m     at emitErrorNT (node:internal/streams/destroy:169:8)
-[36mcloud-risk-portal      |[0m     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-[36mcloud-risk-portal      |[0m   constructor: [Function: Neo4jError] { isRetriable: [Function (anonymous)] },
-[36mcloud-risk-portal      |[0m   cause: undefined,
-[36mcloud-risk-portal      |[0m   gqlStatus: '50N42',
-[36mcloud-risk-portal      |[0m   gqlStatusDescription: 'error: general processing exception - unexpected error. Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal',
-[36mcloud-risk-portal      |[0m   diagnosticRecord: { OPERATION: '', OPERATION_CODE: '0', CURRENT_SCHEMA: '/' },
-[36mcloud-risk-portal      |[0m   classification: 'UNKNOWN',
-[36mcloud-risk-portal      |[0m   rawClassification: undefined,
-[36mcloud-risk-portal      |[0m   code: 'ServiceUnavailable',
-[36mcloud-risk-portal      |[0m   retriable: true
-[36mcloud-risk-portal      |[0m }
-[36mcloud-risk-portal      |[0m Error saving Neo4j query: TypeError: Cannot read properties of undefined (reading 'sla_usage')
-[36mcloud-risk-portal      |[0m     at /app/server.js:273:75
-[36mcloud-risk-portal      |[0m     at Array.forEach (<anonymous>)
-[36mcloud-risk-portal      |[0m     at generateCypherQuery (/app/server.js:251:14)
-[36mcloud-risk-portal      |[0m     at saveNeo4jQuery (/app/server.js:364:18)
-[36mcloud-risk-portal      |[0m     at /app/server.js:382:26
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-[36mcloud-risk-portal      |[0m Failed to connect to Neo4j: Neo4jError: Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal
-[36mcloud-risk-portal      |[0m     at Neo4jError.GQLError [as constructor] (/app/node_modules/neo4j-driver-core/lib/error.js:117:24)
-[36mcloud-risk-portal      |[0m     at new Neo4jError (/app/node_modules/neo4j-driver-core/lib/error.js:204:28)
-[36mcloud-risk-portal      |[0m     at newError (/app/node_modules/neo4j-driver-core/lib/error.js:246:12)
-[36mcloud-risk-portal      |[0m     at NodeChannel._handleConnectionError (/app/node_modules/neo4j-driver-bolt-connection/lib/channel/node/node-channel.js:239:56)
-[36mcloud-risk-portal      |[0m     at Socket.emit (node:events:518:28)
-[36mcloud-risk-portal      |[0m     at emitErrorNT (node:internal/streams/destroy:169:8)
-[36mcloud-risk-portal      |[0m     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-[36mcloud-risk-portal      |[0m   constructor: [Function: Neo4jError] { isRetriable: [Function (anonymous)] },
-[36mcloud-risk-portal      |[0m   cause: undefined,
-[36mcloud-risk-portal      |[0m   gqlStatus: '50N42',
-[36mcloud-risk-portal      |[0m   gqlStatusDescription: 'error: general processing exception - unexpected error. Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal',
-[36mcloud-risk-portal      |[0m   diagnosticRecord: { OPERATION: '', OPERATION_CODE: '0', CURRENT_SCHEMA: '/' },
-[36mcloud-risk-portal      |[0m   classification: 'UNKNOWN',
-[36mcloud-risk-portal      |[0m   rawClassification: undefined,
-[36mcloud-risk-portal      |[0m   code: 'ServiceUnavailable',
-[36mcloud-risk-portal      |[0m   retriable: true
-[36mcloud-risk-portal      |[0m }
-[36mcloud-risk-portal      |[0m Invalid service Amazon Elastic Kubernetes Service (EKS) for vendor Amazon AWS
-[36mcloud-risk-portal      |[0m Error saving Neo4j query: TypeError: Cannot read properties of undefined (reading 'sla_usage')
-[36mcloud-risk-portal      |[0m     at /app/server.js:273:75
-[36mcloud-risk-portal      |[0m     at Array.forEach (<anonymous>)
-[36mcloud-risk-portal      |[0m     at generateCypherQuery (/app/server.js:251:14)
-[36mcloud-risk-portal      |[0m     at saveNeo4jQuery (/app/server.js:364:18)
-[36mcloud-risk-portal      |[0m     at /app/server.js:382:26
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-[36mcloud-risk-portal      |[0m Failed to connect to Neo4j: Neo4jError: Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal
-[36mcloud-risk-portal      |[0m     at Neo4jError.GQLError [as constructor] (/app/node_modules/neo4j-driver-core/lib/error.js:117:24)
-[36mcloud-risk-portal      |[0m     at new Neo4jError (/app/node_modules/neo4j-driver-core/lib/error.js:204:28)
-[36mcloud-risk-portal      |[0m     at newError (/app/node_modules/neo4j-driver-core/lib/error.js:246:12)
-[36mcloud-risk-portal      |[0m     at NodeChannel._handleConnectionError (/app/node_modules/neo4j-driver-bolt-connection/lib/channel/node/node-channel.js:239:56)
-[36mcloud-risk-portal      |[0m     at Socket.emit (node:events:518:28)
-[36mcloud-risk-portal      |[0m     at emitErrorNT (node:internal/streams/destroy:169:8)
-[36mcloud-risk-portal      |[0m     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-[36mcloud-risk-portal      |[0m   constructor: [Function: Neo4jError] { isRetriable: [Function (anonymous)] },
-[36mcloud-risk-portal      |[0m   cause: undefined,
-[36mcloud-risk-portal      |[0m   gqlStatus: '50N42',
-[36mcloud-risk-portal      |[0m   gqlStatusDescription: 'error: general processing exception - unexpected error. Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal',
-[36mcloud-risk-portal      |[0m   diagnosticRecord: { OPERATION: '', OPERATION_CODE: '0', CURRENT_SCHEMA: '/' },
-[36mcloud-risk-portal      |[0m   classification: 'UNKNOWN',
-[36mcloud-risk-portal      |[0m   rawClassification: undefined,
-[36mcloud-risk-portal      |[0m   code: 'ServiceUnavailable',
-[36mcloud-risk-portal      |[0m   retriable: true
-[36mcloud-risk-portal      |[0m }
-[36mcloud-risk-portal      |[0m Invalid service Amazon Elastic Kubernetes Service (EKS) for vendor Amazon AWS
-[36mcloud-risk-portal      |[0m Failed to connect to Neo4j: Neo4jError: Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal
-[36mcloud-risk-portal      |[0m     at Neo4jError.GQLError [as constructor] (/app/node_modules/neo4j-driver-core/lib/error.js:117:24)
-[36mcloud-risk-portal      |[0m     at new Neo4jError (/app/node_modules/neo4j-driver-core/lib/error.js:204:28)
-[36mcloud-risk-portal      |[0m     at newError (/app/node_modules/neo4j-driver-core/lib/error.js:246:12)
-[36mcloud-risk-portal      |[0m     at NodeChannel._handleConnectionError (/app/node_modules/neo4j-driver-bolt-connection/lib/channel/node/node-channel.js:239:56)
-[36mcloud-risk-portal      |[0m     at Socket.emit (node:events:518:28)
-[36mcloud-risk-portal      |[0m     at emitErrorNT (node:internal/streams/destroy:169:8)
-[36mcloud-risk-portal      |[0m     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-[36mcloud-risk-portal      |[0m   constructor: [Function: Neo4jError] { isRetriable: [Function (anonymous)] },
-[36mcloud-risk-portal      |[0m   cause: undefined,
-[36mcloud-risk-portal      |[0m   gqlStatus: '50N42',
-[36mcloud-risk-portal      |[0m   gqlStatusDescription: 'error: general processing exception - unexpected error. Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal',
-[36mcloud-risk-portal      |[0m   diagnosticRecord: { OPERATION: '', OPERATION_CODE: '0', CURRENT_SCHEMA: '/' },
-[36mcloud-risk-portal      |[0m   classification: 'UNKNOWN',
-[36mcloud-risk-portal      |[0m   rawClassification: undefined,
-[36mcloud-risk-portal      |[0m   code: 'ServiceUnavailable',
-[36mcloud-risk-portal      |[0m   retriable: true
-[36mcloud-risk-portal      |[0m }
-[36mcloud-risk-portal      |[0m Failed to connect to Neo4j: Neo4jError: Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal
-[36mcloud-risk-portal      |[0m     at Neo4jError.GQLError [as constructor] (/app/node_modules/neo4j-driver-core/lib/error.js:117:24)
-[36mcloud-risk-portal      |[0m     at new Neo4jError (/app/node_modules/neo4j-driver-core/lib/error.js:204:28)
-[36mcloud-risk-portal      |[0m     at newError (/app/node_modules/neo4j-driver-core/lib/error.js:246:12)
-[36mcloud-risk-portal      |[0m     at NodeChannel._handleConnectionError (/app/node_modules/neo4j-driver-bolt-connection/lib/channel/node/node-channel.js:239:56)
-[36mcloud-risk-portal      |[0m     at Socket.emit (node:events:518:28)
-[36mcloud-risk-portal      |[0m     at emitErrorNT (node:internal/streams/destroy:169:8)
-[36mcloud-risk-portal      |[0m     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
-[33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
-[33mcustomer_graph_1       |[0m 2025-01-09 14:53:25.767+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
-[33mcustomer_graph_1       |[0m 2025-01-09 14:53:25.816+0000 INFO  Starting...
-[33mcustomer_graph_1       |[0m 2025-01-09 14:53:28.098+0000 INFO  This instance is ServerId{681dbf75} (681dbf75-5b97-4e8f-81f0-599158529959)
-[33mcustomer_graph_1       |[0m 2025-01-09 14:53:30.602+0000 INFO  ======== Neo4j 5.25.1 ========
-[33mcustomer_graph_1       |[0m 2025-01-09 14:53:34.186+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
-[33mcustomer_graph_1       |[0m 2025-01-09 14:53:34.307+0000 INFO  Bolt enabled on 0.0.0.0:7687.
-[33mcustomer_graph_1       |[0m 2025-01-09 14:53:35.730+0000 INFO  HTTP enabled on 0.0.0.0:7474.
-[33mcustomer_graph_1       |[0m 2025-01-09 14:53:35.732+0000 INFO  Remote interface available at http://localhost:7474/
-[33mcustomer_graph_1       |[0m 2025-01-09 14:53:35.746+0000 INFO  id: AA95D8C0CCAD8B72DB689FABCD9182E89D39FBCAD56AFE70817E3A2B184B59B9
-[33mcustomer_graph_1       |[0m 2025-01-09 14:53:35.755+0000 INFO  name: system
-[33mcustomer_graph_1       |[0m 2025-01-09 14:53:35.756+0000 INFO  creationDate: 2024-11-19T23:06:54.589Z
-[33mcustomer_graph_1       |[0m 2025-01-09 14:53:35.756+0000 INFO  Started.
 [32mcustomer_portal_app_1  |[0m 
 [32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
 [32mcustomer_portal_app_1  |[0m 
@@ -129,112 +24,3 @@ Attaching to cloudrisk-customer_portal_app_customer_portal_app_1, cloud-risk-por
 [32mcustomer_portal_app_1  |[0m 
 [32mcustomer_portal_app_1  |[0m   URL: http://0.0.0.0:8185
 [32mcustomer_portal_app_1  |[0m 
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-[36mcloud-risk-portal      |[0m   constructor: [Function: Neo4jError] { isRetriable: [Function (anonymous)] },
-[36mcloud-risk-portal      |[0m   cause: undefined,
-[36mcloud-risk-portal      |[0m   gqlStatus: '50N42',
-[36mcloud-risk-portal      |[0m   gqlStatusDescription: 'error: general processing exception - unexpected error. Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal',
-[36mcloud-risk-portal      |[0m   diagnosticRecord: { OPERATION: '', OPERATION_CODE: '0', CURRENT_SCHEMA: '/' },
-[36mcloud-risk-portal      |[0m   classification: 'UNKNOWN',
-[36mcloud-risk-portal      |[0m   rawClassification: undefined,
-[36mcloud-risk-portal      |[0m   code: 'ServiceUnavailable',
-[36mcloud-risk-portal      |[0m   retriable: true
-[36mcloud-risk-portal      |[0m }
-[36mcloud-risk-portal      |[0m Invalid service Amazon Elastic Kubernetes Service (EKS) for vendor Amazon AWS
-[36mcloud-risk-portal      |[0m Failed to connect to Neo4j: Neo4jError: Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal
-[36mcloud-risk-portal      |[0m     at Neo4jError.GQLError [as constructor] (/app/node_modules/neo4j-driver-core/lib/error.js:117:24)
-[36mcloud-risk-portal      |[0m     at new Neo4jError (/app/node_modules/neo4j-driver-core/lib/error.js:204:28)
-[36mcloud-risk-portal      |[0m     at newError (/app/node_modules/neo4j-driver-core/lib/error.js:246:12)
-[36mcloud-risk-portal      |[0m     at NodeChannel._handleConnectionError (/app/node_modules/neo4j-driver-bolt-connection/lib/channel/node/node-channel.js:239:56)
-[36mcloud-risk-portal      |[0m     at Socket.emit (node:events:518:28)
-[36mcloud-risk-portal      |[0m     at emitErrorNT (node:internal/streams/destroy:169:8)
-[36mcloud-risk-portal      |[0m     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-[36mcloud-risk-portal      |[0m   constructor: [Function: Neo4jError] { isRetriable: [Function (anonymous)] },
-[36mcloud-risk-portal      |[0m   cause: undefined,
-[36mcloud-risk-portal      |[0m   gqlStatus: '50N42',
-[36mcloud-risk-portal      |[0m   gqlStatusDescription: 'error: general processing exception - unexpected error. Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal',
-[36mcloud-risk-portal      |[0m   diagnosticRecord: { OPERATION: '', OPERATION_CODE: '0', CURRENT_SCHEMA: '/' },
-[36mcloud-risk-portal      |[0m   classification: 'UNKNOWN',
-[36mcloud-risk-portal      |[0m   rawClassification: undefined,
-[36mcloud-risk-portal      |[0m   code: 'ServiceUnavailable',
-[36mcloud-risk-portal      |[0m   retriable: true
-[36mcloud-risk-portal      |[0m }
-[36mcloud-risk-portal      |[0m Failed to connect to Neo4j: Neo4jError: Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal
-[36mcloud-risk-portal      |[0m     at Neo4jError.GQLError [as constructor] (/app/node_modules/neo4j-driver-core/lib/error.js:117:24)
-[36mcloud-risk-portal      |[0m     at new Neo4jError (/app/node_modules/neo4j-driver-core/lib/error.js:204:28)
-[36mcloud-risk-portal      |[0m     at newError (/app/node_modules/neo4j-driver-core/lib/error.js:246:12)
-[36mcloud-risk-portal      |[0m     at NodeChannel._handleConnectionError (/app/node_modules/neo4j-driver-bolt-connection/lib/channel/node/node-channel.js:239:56)
-[36mcloud-risk-portal      |[0m     at Socket.emit (node:events:518:28)
-[36mcloud-risk-portal      |[0m     at emitErrorNT (node:internal/streams/destroy:169:8)
-[36mcloud-risk-portal      |[0m     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-[36mcloud-risk-portal      |[0m   constructor: [Function: Neo4jError] { isRetriable: [Function (anonymous)] },
-[36mcloud-risk-portal      |[0m   cause: undefined,
-[36mcloud-risk-portal      |[0m   gqlStatus: '50N42',
-[36mcloud-risk-portal      |[0m   gqlStatusDescription: 'error: general processing exception - unexpected error. Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal',
-[36mcloud-risk-portal      |[0m   diagnosticRecord: { OPERATION: '', OPERATION_CODE: '0', CURRENT_SCHEMA: '/' },
-[36mcloud-risk-portal      |[0m   classification: 'UNKNOWN',
-[36mcloud-risk-portal      |[0m   rawClassification: undefined,
-[36mcloud-risk-portal      |[0m   code: 'ServiceUnavailable',
-[36mcloud-risk-portal      |[0m   retriable: true
-[36mcloud-risk-portal      |[0m }
-[36mcloud-risk-portal      |[0m Invalid service Amazon Elastic Kubernetes Service (EKS) for vendor Amazon AWS
-[36mcloud-risk-portal      |[0m Failed to connect to Neo4j: Neo4jError: Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal
-[36mcloud-risk-portal      |[0m     at Neo4jError.GQLError [as constructor] (/app/node_modules/neo4j-driver-core/lib/error.js:117:24)
-[36mcloud-risk-portal      |[0m     at new Neo4jError (/app/node_modules/neo4j-driver-core/lib/error.js:204:28)
-[36mcloud-risk-portal      |[0m     at newError (/app/node_modules/neo4j-driver-core/lib/error.js:246:12)
-[36mcloud-risk-portal      |[0m     at NodeChannel._handleConnectionError (/app/node_modules/neo4j-driver-bolt-connection/lib/channel/node/node-channel.js:239:56)
-[36mcloud-risk-portal      |[0m     at Socket.emit (node:events:518:28)
-[36mcloud-risk-portal      |[0m     at emitErrorNT (node:internal/streams/destroy:169:8)
-[36mcloud-risk-portal      |[0m     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-[36mcloud-risk-portal      |[0m   constructor: [Function: Neo4jError] { isRetriable: [Function (anonymous)] },
-[36mcloud-risk-portal      |[0m   cause: undefined,
-[36mcloud-risk-portal      |[0m   gqlStatus: '50N42',
-[36mcloud-risk-portal      |[0m   gqlStatusDescription: 'error: general processing exception - unexpected error. Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal',
-[36mcloud-risk-portal      |[0m   diagnosticRecord: { OPERATION: '', OPERATION_CODE: '0', CURRENT_SCHEMA: '/' },
-[36mcloud-risk-portal      |[0m   classification: 'UNKNOWN',
-[36mcloud-risk-portal      |[0m   rawClassification: undefined,
-[36mcloud-risk-portal      |[0m   code: 'ServiceUnavailable',
-[36mcloud-risk-portal      |[0m   retriable: true
-[36mcloud-risk-portal      |[0m }
-[36mcloud-risk-portal      |[0m Failed to connect to Neo4j: Neo4jError: Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal
-[36mcloud-risk-portal      |[0m     at Neo4jError.GQLError [as constructor] (/app/node_modules/neo4j-driver-core/lib/error.js:117:24)
-[36mcloud-risk-portal      |[0m     at new Neo4jError (/app/node_modules/neo4j-driver-core/lib/error.js:204:28)
-[36mcloud-risk-portal      |[0m     at newError (/app/node_modules/neo4j-driver-core/lib/error.js:246:12)
-[36mcloud-risk-portal      |[0m     at NodeChannel._handleConnectionError (/app/node_modules/neo4j-driver-bolt-connection/lib/channel/node/node-channel.js:239:56)
-[36mcloud-risk-portal      |[0m     at Socket.emit (node:events:518:28)
-[36mcloud-risk-portal      |[0m     at emitErrorNT (node:internal/streams/destroy:169:8)
-[36mcloud-risk-portal      |[0m     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-[36mcloud-risk-portal      |[0m   constructor: [Function: Neo4jError] { isRetriable: [Function (anonymous)] },
-[36mcloud-risk-portal      |[0m   cause: undefined,
-[36mcloud-risk-portal      |[0m   gqlStatus: '50N42',
-[36mcloud-risk-portal      |[0m   gqlStatusDescription: 'error: general processing exception - unexpected error. Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal',
-[36mcloud-risk-portal      |[0m   diagnosticRecord: { OPERATION: '', OPERATION_CODE: '0', CURRENT_SCHEMA: '/' },
-[36mcloud-risk-portal      |[0m   classification: 'UNKNOWN',
-[36mcloud-risk-portal      |[0m   rawClassification: undefined,
-[36mcloud-risk-portal      |[0m   code: 'ServiceUnavailable',
-[36mcloud-risk-portal      |[0m   retriable: true
-[36mcloud-risk-portal      |[0m }
-[36mcloud-risk-portal      |[0m Invalid service Amazon Elastic Kubernetes Service (EKS) for vendor Amazon AWS
-[36mcloud-risk-portal      |[0m Failed to connect to Neo4j: Neo4jError: Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal
-[36mcloud-risk-portal      |[0m     at Neo4jError.GQLError [as constructor] (/app/node_modules/neo4j-driver-core/lib/error.js:117:24)
-[36mcloud-risk-portal      |[0m     at new Neo4jError (/app/node_modules/neo4j-driver-core/lib/error.js:204:28)
-[36mcloud-risk-portal      |[0m     at newError (/app/node_modules/neo4j-driver-core/lib/error.js:246:12)
-[36mcloud-risk-portal      |[0m     at NodeChannel._handleConnectionError (/app/node_modules/neo4j-driver-bolt-connection/lib/channel/node/node-channel.js:239:56)
-[36mcloud-risk-portal      |[0m     at Socket.emit (node:events:518:28)
-[36mcloud-risk-portal      |[0m     at emitErrorNT (node:internal/streams/destroy:169:8)
-[36mcloud-risk-portal      |[0m     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
-[36mcloud-risk-portal      |[0m   constructor: [Function: Neo4jError] { isRetriable: [Function (anonymous)] },
-[36mcloud-risk-portal      |[0m   cause: undefined,
-[36mcloud-risk-portal      |[0m   gqlStatus: '50N42',
-[36mcloud-risk-portal      |[0m   gqlStatusDescription: 'error: general processing exception - unexpected error. Failed to connect to server. Please ensure that your database is listening on the correct host and port and that you have compatible encryption settings both on Neo4j server and driver. Note that the default encryption setting has changed in Neo4j 4.0. Caused by: getaddrinfo ENOTFOUND host.docker.internal',
-[36mcloud-risk-portal      |[0m   diagnosticRecord: { OPERATION: '', OPERATION_CODE: '0', CURRENT_SCHEMA: '/' },
-[36mcloud-risk-portal      |[0m   classification: 'UNKNOWN',
-[36mcloud-risk-portal      |[0m   rawClassification: undefined,
-[36mcloud-risk-portal      |[0m   code: 'ServiceUnavailable',
-[36mcloud-risk-portal      |[0m   retriable: true
-[36mcloud-risk-portal      |[0m }

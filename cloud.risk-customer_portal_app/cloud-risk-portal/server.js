@@ -225,7 +225,37 @@ const initNeo4jConnection = async () => {
 };
 
 function generateCypherQuery(data) {
-    const { companyName, projectName, services, metrics } = data;
+    // Default values for metrics if they're undefined
+    const defaultMetrics = {
+        sla_usage: '0',
+        sla_deviation: '0',
+        traffic_coef: '0',
+        usage_connected_risk: '0',
+        service_sla_tier1: '0',
+        annual_downtime_minutes: '0',
+        service_credit_back_tier1: '0'
+    };
+
+    const defaultCustomerMedian = {
+        sla_usage: '0',
+        sla_deviation: '0',
+        traffic_coef: '0',
+        usage_connected_risk: '0',
+        service_sla_tier1: '0',
+        annual_downtime_minutes: '0'
+    };
+
+    // Ensure data structure exists with defaults
+    const { 
+        companyName = 'Unknown Company', 
+        projectName = 'Unknown Project', 
+        services = [], 
+        metrics = {
+            customerMedian: defaultCustomerMedian,
+            vendorMedians: {}
+        } 
+    } = data;
+
     let cypher = '';
     const processedVendors = new Set();
     const processedServices = new Set();
@@ -233,49 +263,63 @@ function generateCypherQuery(data) {
     // Sanitize company name for Cypher
     const companyId = companyName.replace(/[^a-zA-Z0-9]/g, '_');
 
-    // Create customer node with all metrics
+    // Create customer node with all metrics, using defaults if undefined
     cypher += `
 CREATE (cust_sessionid__name_${companyId}:CUSTOMER_NAME {
     name: '${companyName}',
     project_name: '${projectName}',
-    median_sla_usage_percentage: '${metrics.customerMedian.sla_usage}%',
-    median_sla_deviation_risk: '${metrics.customerMedian.sla_deviation}',
-    median_traffic_coefficient: '${metrics.customerMedian.traffic_coef}%',
-    median_usage_risk: '${metrics.customerMedian.usage_connected_risk}',
-    median_service_sla: '${metrics.customerMedian.service_sla_tier1}%',
-    median_annual_downtime_minutes: '${metrics.customerMedian.annual_downtime_minutes}',
+    median_sla_usage_percentage: '${metrics.customerMedian?.sla_usage || defaultCustomerMedian.sla_usage}%',
+    median_sla_deviation_risk: '${metrics.customerMedian?.sla_deviation || defaultCustomerMedian.sla_deviation}',
+    median_traffic_coefficient: '${metrics.customerMedian?.traffic_coef || defaultCustomerMedian.traffic_coef}%',
+    median_usage_risk: '${metrics.customerMedian?.usage_connected_risk || defaultCustomerMedian.usage_connected_risk}',
+    median_service_sla: '${metrics.customerMedian?.service_sla_tier1 || defaultCustomerMedian.service_sla_tier1}%',
+    median_annual_downtime_minutes: '${metrics.customerMedian?.annual_downtime_minutes || defaultCustomerMedian.annual_downtime_minutes}',
     submission_date: '${new Date().toISOString()}'
 })`;
 
     // Add vendor and service nodes with complete metrics
     services.forEach(service => {
+        if (!service) return; // Skip if service is undefined
+
+        // Ensure service has all required properties with defaults
+        const safeService = {
+            vendor: service.vendor || 'Unknown Vendor',
+            name: service.name || 'Unknown Service',
+            region: service.region || 'global',
+            monthlyCost: service.monthlyCost || 0,
+            metrics: { ...defaultMetrics, ...(service.metrics || {}) }
+        };
+
         // Validate that the vendor exists in cloudProviders
-        if (!cloudProviders.includes(service.vendor)) {
-            console.warn(`Invalid vendor: ${service.vendor}`);
+        if (!cloudProviders.includes(safeService.vendor)) {
+            console.warn(`Invalid vendor: ${safeService.vendor}`);
             return;
         }
 
         // Validate that the service exists in cloudServices for this vendor
-        if (!cloudServices[service.vendor]?.includes(service.name)) {
-            console.warn(`Invalid service ${service.name} for vendor ${service.vendor}`);
+        if (!cloudServices[safeService.vendor]?.includes(safeService.name)) {
+            console.warn(`Invalid service ${safeService.name} for vendor ${safeService.vendor}`);
             return;
         }
 
-        const serviceId = service.name.replace(/[^a-zA-Z0-9]/g, '_');
-        const vendorId = service.vendor.replace(/[^a-zA-Z0-9]/g, '_');
+        const serviceId = safeService.name.replace(/[^a-zA-Z0-9]/g, '_');
+        const vendorId = safeService.vendor.replace(/[^a-zA-Z0-9]/g, '_');
+
+        // Ensure vendor medians exist with defaults
+        const vendorMedians = metrics.vendorMedians[safeService.vendor] || defaultCustomerMedian;
 
         // Only create vendor node if not already processed
         if (!processedVendors.has(vendorId)) {
             processedVendors.add(vendorId);
             cypher += `
 CREATE (${vendorId}:TECHNOLOGY_PROVIDER {
-    name: '${service.vendor}',
-    median_sla_usage_percentage: '${metrics.vendorMedians[service.vendor].sla_usage}%',
-    median_sla_deviation_risk: '${metrics.vendorMedians[service.vendor].sla_deviation}',
-    median_traffic_coefficient: '${metrics.vendorMedians[service.vendor].traffic_coef}%',
-    median_usage_risk: '${metrics.vendorMedians[service.vendor].usage_connected_risk}',
-    median_service_sla: '${metrics.vendorMedians[service.vendor].service_sla_tier1}%',
-    median_annual_downtime_minutes: '${metrics.vendorMedians[service.vendor].annual_downtime_minutes}'
+    name: '${safeService.vendor}',
+    median_sla_usage_percentage: '${vendorMedians.sla_usage || defaultCustomerMedian.sla_usage}%',
+    median_sla_deviation_risk: '${vendorMedians.sla_deviation || defaultCustomerMedian.sla_deviation}',
+    median_traffic_coefficient: '${vendorMedians.traffic_coef || defaultCustomerMedian.traffic_coef}%',
+    median_usage_risk: '${vendorMedians.usage_connected_risk || defaultCustomerMedian.usage_connected_risk}',
+    median_service_sla: '${vendorMedians.service_sla_tier1 || defaultCustomerMedian.service_sla_tier1}%',
+    median_annual_downtime_minutes: '${vendorMedians.annual_downtime_minutes || defaultCustomerMedian.annual_downtime_minutes}'
 })`;
         }
 
@@ -284,31 +328,31 @@ CREATE (${vendorId}:TECHNOLOGY_PROVIDER {
             processedServices.add(serviceId);
             cypher += `
 CREATE (${serviceId}:TECHNOLOGY_SERVICE {
-    name: '${service.name}',
-    region: '${service.region}',
-    monthly_cost: ${service.monthlyCost},
-    sla_usage: '${service.metrics.sla_usage}%',
-    sla_deviation_risk: '${service.metrics.sla_deviation}',
-    traffic_coefficient: '${service.metrics.traffic_coef}%',
-    usage_risk: '${service.metrics.usage_connected_risk}',
-    annual_downtime_minutes: '${service.metrics.annual_downtime_minutes}',
-    service_sla_tier1: '${service.metrics.service_sla_tier1}%',
-    service_credit_back_tier1: '${service.metrics.service_credit_back_tier1}%'
+    name: '${safeService.name}',
+    region: '${safeService.region}',
+    monthly_cost: ${safeService.monthlyCost},
+    sla_usage: '${safeService.metrics.sla_usage}%',
+    sla_deviation_risk: '${safeService.metrics.sla_deviation}',
+    traffic_coefficient: '${safeService.metrics.traffic_coef}%',
+    usage_risk: '${safeService.metrics.usage_connected_risk}',
+    annual_downtime_minutes: '${safeService.metrics.annual_downtime_minutes}',
+    service_sla_tier1: '${safeService.metrics.service_sla_tier1}%',
+    service_credit_back_tier1: '${safeService.metrics.service_credit_back_tier1}%'
 })`;
         }
 
         // Create relationships
         cypher += `
 CREATE (cust_sessionid__name_${companyId})-[:CUSTOMER_USES_SERVICE {
-    monthly_cost: ${service.monthlyCost},
-    region: '${service.region}'
+    monthly_cost: ${safeService.monthlyCost},
+    region: '${safeService.region}'
 }]->(${serviceId})
 
 CREATE (${vendorId})-[:CONNECTED_RISK {
-    sla_usage: '${service.metrics.sla_usage}%',
-    sla_deviation_risk: '${service.metrics.sla_deviation}',
-    traffic_coefficient: '${service.metrics.traffic_coef}%',
-    usage_risk: '${service.metrics.usage_connected_risk}'
+    sla_usage: '${safeService.metrics.sla_usage}%',
+    sla_deviation_risk: '${safeService.metrics.sla_deviation}',
+    traffic_coefficient: '${safeService.metrics.traffic_coef}%',
+    usage_risk: '${safeService.metrics.usage_connected_risk}'
 }]->(${serviceId})`;
     });
 
