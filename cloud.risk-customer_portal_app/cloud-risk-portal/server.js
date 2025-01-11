@@ -599,10 +599,11 @@ app.get('/customer-portal/index', isAuthenticated, (req, res) => {
 });
 
 // Cloud Risk Data API
-apiRouter.get('/customer-portal/api/get/env', async (req, res) => {
+apiRouter.get('/customer-portal/app/env', async (req, res) => {
     try {
         const apiBaseUrl = process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL;
-        res.status(200).json({ apiBaseUrl: apiBaseUrl });
+        const appBaseUrl = process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL;
+        res.status(200).json({ apiBaseUrl: apiBaseUrl, appBaseUrl: appBaseUrl });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

@@ -431,7 +431,7 @@
     async function fetchAPPBaseUrl() {
         try {
             if (!window.ENV || !window.ENV.appBaseUrl) {
-                const response = await fetch('/customer-portal/api/options');
+                const response = await fetch('/customer-portal/app/env');
                 const data = await response.json();
                 return data.appBaseUrl;
             }
@@ -448,7 +448,7 @@
     async function fetchAPIBaseUrl() {
         try {
             if (!window.ENV || !window.ENV.apiBaseUrl) {
-                const response = await fetch('/customer-portal/api/get/env');
+                const response = await fetch('/customer-portal/app/env');
                 const data = await response.json();
                 return data.apiBaseUrl;
             }
@@ -833,7 +833,7 @@
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Traffic Downtime Coef %:</strong> Measures the percentage of time the Service was down or degraded Year-to-Date. A value of 0% means the service was never down or degraded. A value of 100% means the service was always down or degraded.</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">SLA Deviation Risk Rating:</strong> A Rating that indicates Risk based on SLA discrepancies. Measures the likelihood of service level agreement deviations (0.0-999.0, where higher values indicate greater risk).</li>
                     <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Usage Risk Rating:</strong> A Rating that indicates the operational risk based on service usage patterns (0.0-999.0, where higher values indicate greater risk).</li>
-                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Outage Remarks:</strong>Webscrapped service information and resumed with support of Gen.Ai.</li>
+                    <li style="margin-bottom: 8px;"><strong style="color: #74b9ff;">Outage Remarks:</strong>Webscrapped service information resumed with support of Gen.Ai.</li>
                 </ul>
             </div>`;
 
@@ -1028,26 +1028,26 @@
         const expectedAnnualMinsDown_tier4 = parseFloat(riskData.expected_annual_service_minutes_down_by_sla_tier4 || 0);
         const annualActualDowntime = parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes || 0);
 
-        if (sla_usage > 100 & expectedAnnualMinsDown_tier1 >= annualActualDowntime & annualActualDowntime < expectedAnnualMinsDown_tier2 ) {
-            estimatedCreditBack = ((sla_usage - 100) / 100) * (creditBackPercentage_tier1 / 100) * monthy_customer_service_spent;
-            estimatedCreditBack = Math.min(Math.round(creditBackPercentage_tier1 * 100) / 100, monthy_customer_service_spent);
+        if (sla_usage > 100 & annualActualDowntime > expectedAnnualMinsDown_tier1 & annualActualDowntime < expectedAnnualMinsDown_tier2 ) {
+            estimatedCreditBack = (creditBackPercentage_tier1 / 100) * monthy_customer_service_spent;
+            estimatedCreditBack = Math.min(estimatedCreditBack, monthy_customer_service_spent);
         }
-        if (sla_usage > 100 & expectedAnnualMinsDown_tier2 >= annualActualDowntime & annualActualDowntime < expectedAnnualMinsDown_tier3 ) {
-            estimatedCreditBack = ((sla_usage - 100) / 100) * (creditBackPercentage_tier2 / 100) * monthy_customer_service_spent;
-            estimatedCreditBack = Math.min(Math.round(creditBackPercentage_tier2 * 100) / 100, monthy_customer_service_spent);
+        if (sla_usage > 100 & annualActualDowntime > expectedAnnualMinsDown_tier2 & annualActualDowntime < expectedAnnualMinsDown_tier3 ) {
+            estimatedCreditBack = (creditBackPercentage_tier2 / 100) * monthy_customer_service_spent;
+            estimatedCreditBack = Math.min(estimatedCreditBack, monthy_customer_service_spent);
         }
-        if (sla_usage > 100 & expectedAnnualMinsDown_tier3 >= annualActualDowntime & annualActualDowntime < expectedAnnualMinsDown_tier4 ) {
-            estimatedCreditBack = ((sla_usage - 100) / 100) * (creditBackPercentage_tier3 / 100) * monthy_customer_service_spent;
-            estimatedCreditBack = Math.min(Math.round(creditBackPercentage_tier3 * 100) / 100, monthy_customer_service_spent);
+        if (sla_usage > 100 & annualActualDowntime > expectedAnnualMinsDown_tier3 & annualActualDowntime < expectedAnnualMinsDown_tier4 ) {
+            estimatedCreditBack = (creditBackPercentage_tier3 / 100) * monthy_customer_service_spent;
+            estimatedCreditBack = Math.min(estimatedCreditBack, monthy_customer_service_spent);
         }
         if (sla_usage > 100 & annualActualDowntime >= expectedAnnualMinsDown_tier4 ) {
-            estimatedCreditBack = ((sla_usage - 100) / 100) * (creditBackPercentage_tier4 / 100) * monthy_customer_service_spent;
-            estimatedCreditBack = Math.min(Math.round(creditBackPercentage_tier4 * 100) / 100, monthy_customer_service_spent);
+            estimatedCreditBack = (creditBackPercentage_tier4 / 100) * monthy_customer_service_spent;
+            estimatedCreditBack = Math.min(estimatedCreditBack, monthy_customer_service_spent);
         }
 
         // Warning message for max credit back
-        const warningMessage = estimatedCreditBack >= monthy_customer_service_spent ? 
-            `<div class='value' style='color: #ff0000; margin-top: 5px;'>Warning: Max. credit back was above the $${monthy_customer_service_spent.toFixed(2)} of service estimated cost per month</div>` : "";
+        const warningMessage = estimatedCreditBack >= 0.0 ? 
+            `<div class='value' style='color: #ff6b6b; margin-top: 5px;'>Warning: You could be entitle to a credit back up to $${estimatedCreditBack.toFixed(2)} from your $${monthy_customer_service_spent.toFixed(2)} service cost per month.</div>` : "";
 
         // Format AI Analysis text with line breaks
         const aiAnalysis = riskData.remarks_outage_genai
@@ -1118,7 +1118,7 @@
                     </div>
                     <div class="metric">
                         <h4>Monthly Estimated Service Credit Back</h4>
-                        <div class="value">$${estimatedCreditBack}</div>
+                        <div class="value">$${estimatedCreditBack.toFixed(2)}</div>
                         ${warningMessage}
                     </div>
                 </div>
