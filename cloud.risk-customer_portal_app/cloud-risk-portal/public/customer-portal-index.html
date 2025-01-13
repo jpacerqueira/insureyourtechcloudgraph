@@ -17,8 +17,9 @@
             //appBaseUrl: 'https://customer-cloud-risk.insureyourtech.cloud', // #PROD fallback # nginx.conf
             isDevelopment: true, // Add development flag # DEV
             //isDevelopment: false, // Add development flag # PROD 
-            //isSSLBypassed: true // Add SSL bypass flag
-            isSSLBypassed: false // Add SSL bypass flag
+            //isSSLBypassed: true, // Add SSL bypass flag
+            isSSLBypassed: false, // Add SSL bypass flag
+            companyName: ''
         };
     </script>
     <style>
@@ -237,7 +238,7 @@
     <!-- Input fields for Company Name and Project Name -->
     <div>
         <label for="companyName">Company Name (required)</label>
-        <input type="text" id="companyName" required>
+        <input type="text" id="companyName" required value="{{companyName}}">
     </div>
     <div>
         <label for="projectName">Submission Project Name (optional)</label>

@@ -533,7 +533,7 @@ app.post('/customer-portal/login', async (req, res) => {
         
         if (isPasswordMatch) {
             req.session.userId = user.id;
-            res.redirect('/customer-portal/index');
+            res.redirect('/customer-portal/index?companyName=' + user.company);
         } else {
             // Password does not match, suggest password reset
             res.status(401).send('Incorrect password. Please try again or <a href="/customer-portal/reset-password">reset your password</a>.');
@@ -576,12 +576,14 @@ app.get('/customer-portal/logout', (req, res) => {
 
 // Protect the customer-portal index route
 app.get('/customer-portal/index', isAuthenticated, (req, res) => {
+    const companyName = req.query.companyName || '';
     // ... existing code to render customer-portal ...
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
         appBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL,
         isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
-        isDevelopment: process.env.IS_PROD !== "true" ? true : false
+        isDevelopment: process.env.IS_PROD !== "true" ? true : false,
+        companyName: companyName
     };
     // Serve the chart.js library
     app.use(express.static(path.join(__dirname, 'node_modules', 'chart.js', 'dist')));
@@ -594,6 +596,9 @@ app.get('/customer-portal/index', isAuthenticated, (req, res) => {
     
     // Insert the script just after the <head> tag
     html = html.replace('<head>', '<head>' + envScript);
+
+    // Replace the companyName placeholder with the actual company name
+    html = html.replace('{{companyName}}', companyName);
     
     res.send(html);
 });
@@ -609,9 +614,12 @@ apiRouter.get('/customer-portal/app/env', async (req, res) => {
     }
 });
 
+// Use environment variable for session secret or generate a new one
+const sessionSecret = process.env.SESSION_SECRET || crypto.randomBytes(32).toString('hex');
+
 // Update session middleware
 app.use(session({
-    secret: 'your-secret-key',
+    secret: sessionSecret,
     resave: false,
     saveUninitialized: true,
     cookie: { secure: isProd, sameSite: 'Strict', maxAge: 2 * 60 * 1000 } // 2 minutes
