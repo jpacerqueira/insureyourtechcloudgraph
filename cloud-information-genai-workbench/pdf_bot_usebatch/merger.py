@@ -424,7 +424,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             # Load Balancing
             r"(?i)(Amazon Elastic Load Balancing|Amazon ELB|ELB|Elastic Load Balancing)",
             # Analytics Services
-            r"(?i)(Amazon EMR|EMR|Elastic MapReduce)",
+            r"(?i)(Amazon EMR|Amazon Elastic MapReduce|Elastic MapReduce|Amazon Elastic Mapreduce|Elastic Mapreduce|EMR)",
             r"(?i)(Amazon EMR Serverless|EMR Serverless)",
             r"(?i)(Amazon ElastiCache|ElastiCache|EC)",
             r"(?i)(Amazon FinSpace|FinSpace)",
@@ -1452,7 +1452,8 @@ service_full_names = {
         "CWAI": "Amazon CloudWatch Application Insights",
         "DDB": "Amazon DynamoDB",
         "EMRS": "Amazon EMR Serverless",
-        "EMR": "Amazon Elastic Mapreduce",
+        "EMR": "Amazon Elastic MapReduce",
+        "Elastic MapReduce": "Amazon Elastic MapReduce",
         "FS": "Amazon FinSpace",
         "GL": "Amazon AWS Glue",
         "RDS": "Amazon AWS RDS",
