@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Service Risk Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .chart-container {
+            width: 45%;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Cloud Service Risk Dashboard</h1>
+    <div class="dashboard">
+        <div class="chart-container">
+            <canvas id="serviceProviderChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="outageTimeChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="slaTierChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="riskVsSlaChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Assume we have two API endpoints:
+        // 1. /api/service-data
+        // 2. /api/outage-data
+
+        async function fetchData() {
+            const serviceData = await fetch('https://api-cloud-risk.localhost/cloud-services-risk-ratings/risk-ratings-premium/premium/list/all/services').then(res => res.json());
+            const outageData = await fetch('https://api-cloud-risk.localhost/cloud-services-risk-ratings/risk-ratings-premium/premium/outages/list/all').then(res => res.json());
+
+            createServiceProviderChart(serviceData);
+            createOutageTimeChart(outageData);
+            createSlaTierChart(serviceData);
+            createRiskVsSlaChart(serviceData);
+        }
+
+        function createServiceProviderChart(data) {
+            const ctx = document.getElementById('serviceProviderChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.serviceProviders,
+                    datasets: [{
+                        label: 'Number of Services',
+                        data: data.serviceCounts,
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    title: {
+                        display: true,
+                        text: 'Distribution of Services by Provider'
+                    }
+                }
+            });
+        }
+
+        function createOutageTimeChart(data) {
+            const ctx = document.getElementById('outageTimeChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.serviceProviders,
+                    datasets: [{
+                        label: 'Average Outage Time (minutes)',
+                        data: data.averageOutageTimes,
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    title: {
+                        display: true,
+                        text: 'Average Annual Outage Time by Service Provider'
+                    }
+                }
+            });
+        }
+
+        function createSlaTierChart(data) {
+            const ctx = document.getElementById('slaTierChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Tier 1', 'Tier 2', 'Tier 3', 'Tier 4'],
+                    datasets: [{
+                        label: 'Average SLA (%)',
+                        data: data.averageSlaTiers,
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    title: {
+                        display: true,
+                        text: 'Average SLA by Tier'
+                    }
+                }
+            });
+        }
+
+        function createRiskVsSlaChart(data) {
+            const ctx = document.getElementById('riskVsSlaChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Risk vs SLA Usage',
+                        data: data.riskVsSla,
+                        backgroundColor: 'rgba(255, 206, 86, 0.6)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    title: {
+                        display: true,
+                        text: 'Risk Coefficient vs. SLA Usage Percentage'
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Risk Coefficient'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'SLA Usage Percentage'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        fetchData();
+    </script>
+</body>
+</html>
