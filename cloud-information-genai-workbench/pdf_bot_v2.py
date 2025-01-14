@@ -60,7 +60,7 @@ def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, outpu
         text += page.extract_text()
 
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=100000, chunk_overlap=65200, length_function=len
+        chunk_size=5000, chunk_overlap=500, length_function=len
     )
     chunks = text_splitter.split_text(text=text)
     
