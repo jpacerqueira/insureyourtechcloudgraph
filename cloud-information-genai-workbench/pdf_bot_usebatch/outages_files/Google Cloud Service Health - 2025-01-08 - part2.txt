@@ -1,0 +1,50 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Google Cloud**
+
+* Google Cloud Pub/Sub
+	+ Regions: asia-south1, europe-west1, us-central1, asia-southeast2, us-east1, us-east5, asia-south2, us-south1, me-central1
+	+ Availability Zones: Not specified
+	+ Impact Date: 2025-01-08 06:54 UTC
+	+ Duration: 1 hour, 13 minutes
+	+ Root Cause: Configuration change that was rolled back to restore the service
+	+ Downtime Period: 2025-01-08 07:30 - 2025-01-08 08:07 UTC
+	+ Resolved Date: 2025-01-08 08:07 UTC
+* Cloud Logging
+	+ Regions: Not specified
+	+ Availability Zones: Not specified
+	+ Impact Date: 2025-01-08 06:54 UTC
+	+ Duration: 26 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: Not specified
+	+ Resolved Date: 2025-01-08 07:20 UTC
+* BigQuery Data Transfer Service
+	+ Regions: Not specified
+	+ Availability Zones: Not specified
+	+ Impact Date: 2025-01-08 06:54 UTC
+	+ Duration: 20 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: Not specified
+	+ Resolved Date: 2025-01-08 07:14 UTC
+
+**Summary**
+
+* Cloud Providers: Google Cloud
+* Services: Google Cloud Pub/Sub, Cloud Logging, BigQuery Data Transfer Service
+* Regions: asia-south1, europe-west1, us-central1, asia-southeast2, us-east1, us-east5, asia-south2, us-south1, me-central1
+* Availability Zones: Not specified
+* Impact Dates: 2025-01-08 06:54 UTC
+* Durations: 1 hour, 13 minutes (Google Cloud Pub/Sub), 26 minutes (Cloud Logging), 20 minutes (BigQuery Data Transfer Service)
+* Root Causes: Configuration change that was rolled back to restore the service (Google Cloud Pub/Sub)
+* Downtime Periods: Not specified for Cloud Logging and BigQuery Data Transfer Service
+* Resolved Dates: 2025-01-08 08:07 UTC (all services)
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Pub/Sub | asia-south1 |  | 2025-01-08 06:54 UTC | 1 hour, 13 minutes | Configuration change | 2025-01-08 07:30 - 2025-01-08 08:07 UTC | 2025-01-08 08:07 UTC |
+| Google Cloud | Logging |  |  | 2025-01-08 06:54 UTC | 26 minutes |  | 2025-01-08 07:20 - 2025-01-08 07:50 UTC | 2025-01-08 07:20 UTC |
+| Google Cloud | BigQuery Data Transfer Service |  |  | 2025-01-08 06:54 UTC | 20 minutes |  | 2025-01-08 07:14 - 2025-01-08 07:34 UTC | 2025-01-08 07:14 UTC |
+
+Note that the output table only includes the services and regions mentioned in the original text.

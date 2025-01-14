@@ -1,0 +1,33 @@
+After analyzing the text, I found that only Google Cloud Service was impacted by an outage.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud Service**
+
+* Service: reCAPTCHA Enterprise
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: 2024-07-08 23:20 UTC
+* Duration: 3 days, 7 hours, 11 minutes
+* Root Cause: A change in the client code of reCAPTCHA Enterprise caused requests being sent to customer servers instead of reCAPTCHA servers.
+* Downtime Period: From 2024-07-08 23:20 UTC to 2024-07-12 06:31 UTC
+* Resolved Date: 2024-07-12 06:31 UTC
+
+Here is the output in a fixed format table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | reCAPTCHA Enterprise | global |  | 2024-07-08T23:20:00Z | P3D7H11M | Change in client code | 2024-07-08T23:20:00Z - 2024-07-12T06:31:00Z | 2024-07-12T06:31:00Z |
+
+**Summary**
+
+* Cloud Provider: Google Cloud
+* Services impacted: reCAPTCHA Enterprise
+* Regions impacted: global
+* Availability Zones not specified
+* Impact dates: 2024-07-08 UTC to 2024-07-12 UTC
+* Duration of outage: 3 days, 7 hours, 11 minutes
+
+**Root Cause**
+
+The outage was caused by a change in the client code of reCAPTCHA Enterprise that caused requests being sent to customer servers instead of reCAPTCHA servers.

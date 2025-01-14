@@ -8,7 +8,7 @@ rm -f merge.txt
 rm -f merge_*.txt
 rm -f outage_report_summary_*.txt
 #
-for file in  ./*.txt; do
+for file in  ./outages_files/*.txt; do
     echo "--" >> merge.txt.tmp
     echo "Outage Filename: $file" >> merge.txt.tmp
     echo "--" >> merge.txt.tmp

@@ -1,0 +1,76 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Google Cloud**
+
+* Service: Google SecOps (Chronicle Security)
+* Region/Availability Zone: europe, europe-west12, europe-west2, europe-west3, europe-west6, europe-west9, asia-northeast1, asia-south1, asia-southeast1, australia-southeast1, me-central1, me-central2, me-west1, northamerica-northeast2, southamerica-east1
+* Impact Date: 2025-01-08 12:14 UTC
+* Duration: 5 days, 10 hours, 55 minutes
+* Root Cause: Software defect introduced by a recent service update that had been rolled out to non-US regions.
+* Downtime Period: 2025-01-08 11:43 - 2025-01-08 11:06 UTC (37 minutes)
+* Resolved Date: 2025-01-08 11:06 UTC
+
+**Summary for Google Cloud**
+
+Cloud Provider: Google
+Service: Google SecOps (Chronicle Security)
+Region/Availability Zone: europe, europe-west12, europe-west2, europe-west3, europe-west6, europe-west9, asia-northeast1, asia-south1, asia-southeast1, australia-southeast1, me-central1, me-central2, me-west1, northamerica-northeast2, southamerica-east1
+Impact Date: 2025-01-08 12:14 UTC
+Duration: 5 days, 10 hours, 55 minutes
+Root Cause: Software defect introduced by a recent service update that had been rolled out to non-US regions.
+Downtime Period: 2025-01-08 11:43 - 2025-01-08 11:06 UTC (37 minutes)
+Resolved Date: 2025-01-08 11:06 UTC
+
+**Output Table**
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Google | Google SecOps (Chronicle Security) | europe, europe-west12, europe-west2, europe-west3, europe-west6, europe-west9, asia-northeast1, asia-south1, asia-southeast1, australia-southeast1, me-central1, me-central2, me-west1, northamerica-northeast2, southamerica-east1 | 2025-01-08T12:14:00Z | 5 days, 10 hours, 55 minutes | Software defect introduced by a recent service update that had been rolled out to non-US regions. | 2025-01-08T11:43:00Z - 2025-01-08T11:06:00Z (37 minutes) | 2025-01-08T11:06:00Z |
+
+**Summary**
+
+The following cloud providers were impacted:
+
+* Google Cloud
+
+The services impacted were:
+
+* Google SecOps (Chronicle Security)
+
+The regions and availability zones impacted were:
+
+* europe
+* europe-west12
+* europe-west2
+* europe-west3
+* europe-west6
+* europe-west9
+* asia-northeast1
+* asia-south1
+* asia-southeast1
+* australia-southeast1
+* me-central1
+* me-central2
+* me-west1
+* northamerica-northeast2
+* southamerica-east1
+
+The impact dates were:
+
+* 2025-01-08 12:14 UTC
+
+The duration of the outage was:
+
+* 5 days, 10 hours, 55 minutes
+
+The root cause of the outage was:
+
+* Software defect introduced by a recent service update that had been rolled out to non-US regions.
+
+The downtime period was:
+
+* 2025-01-08 11:43 - 2025-01-08 11:06 UTC (37 minutes)
+
+The outage was resolved on:
+
+* 2025-01-08 11:06 UTC

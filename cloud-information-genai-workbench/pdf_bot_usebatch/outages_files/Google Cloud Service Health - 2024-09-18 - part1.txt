@@ -1,0 +1,85 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Google Cloud**
+
+* Service: Google App Engine
+* Region: asia-east1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, europe-central2, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central2, us-east1, us-east4, us-west1, us-west3
+* Availability Zone: Not specified
+* Impact Date: 2024-09-18 12:34 UTC
+* Duration: 2 hours and 56 minutes
+* Root Cause: Newly implemented automation code created a bad traffic routing policy
+* Downtime Period: 5 minutes to 67 minutes
+* Resolved Date: 2024-09-18 15:30 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Functions Gen1
+* Region: asia-east1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, europe-central2, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central2, us-east1, us-east4, us-west1, us-west3
+* Availability Zone: Not specified
+* Impact Date: 2024-09-18 12:34 UTC
+* Duration: 2 hours and 56 minutes
+* Root Cause: Newly implemented automation code created a bad traffic routing policy
+* Downtime Period: 5 minutes to 67 minutes
+* Resolved Date: 2024-09-18 15:30 UTC
+
+**Google Cloud**
+
+* Service: Google Firestore
+* Region: asia-east1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, europe-central2, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central2, us-east1, us-east4, us-west1, us-west3
+* Availability Zone: Not specified
+* Impact Date: 2024-09-18 12:34 UTC
+* Duration: 2 hours and 56 minutes
+* Root Cause: Newly implemented automation code created a bad traffic routing policy
+* Downtime Period: 5 minutes to 67 minutes
+* Resolved Date: 2024-09-18 15:30 UTC
+
+**Summary**
+
+* Cloud Providers impacted: Google Cloud
+* Services impacted: Google App Engine, Google Cloud Functions Gen1, Google Firestore
+* Regions impacted: asia-east1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, europe-central2, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central2, us-east1, us-east4, us-west1, us-west3
+* Availability Zones impacted: Not specified
+* Impact Dates: 2024-09-18 12:34 UTC
+* Durations: 2 hours and 56 minutes
+* Root Causes: Newly implemented automation code created a bad traffic routing policy
+* Downtime Periods: 5 minutes to 67 minutes
+* Resolved Dates: 2024-09-18 15:30 UTC
+
+**Output Table**
+
+Cloud Provider, Service, Region, Availability Zone, Impact Date, Duration, Root Cause, Downtime Period, Resolved Date
+Google Cloud, Google App Engine, asia-east1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, asia-northeast2, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, asia-northeast3, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, asia-south1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, asia-southeast1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, asia-southeast2, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, australia-southeast1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, europe-central2, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, europe-west2, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, europe-west3, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, europe-west6, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, northamerica-northeast1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, southamerica-east1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, us-central2, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, us-east1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, us-east4, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, us-west1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google App Engine, us-west3, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, asia-east1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, asia-northeast2, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, asia-northeast3, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, asia-southeast1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, asia-southeast2, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, australia-southeast1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, europe-central2, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, europe-west2, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, europe-west3, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, europe-west6, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, northamerica-northeast1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, southamerica-east1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, us-central2, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, us-east1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, us-east4, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, us-west1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
+Google Cloud, Google Cloud Functions Gen1, us-west3, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
