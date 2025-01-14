@@ -1,0 +1,54 @@
+After analyzing the text, I found that the following Cloud Providers were impacted:
+
+1. IBM Cloud
+2. Private DNS (not a traditional cloud provider but a service offered by IBM Cloud)
+
+The services impacted were:
+
+* HyperProtect-VS
+* MqCloud
+* Mobile Foundation
+* Hyper Protect DBaaS
+* Private DNS
+
+Here is the breakdown of the outages per cloud provider with one by one service impacted, displayed as text and then as an output table:
+
+**Text Output:**
+
+IBM Cloud:
+HyperProtect-VS was impacted in Frankfurt, eu-central1. The outage started on 25 May 2021 13:33 UTC and lasted for 12 hours and 7 minutes.
+MqCloud was impacted in US-East, us-east-1. The outage started on 25 May 2021 13:33 UTC and lasted for 12 hours and 7 minutes.
+Mobile Foundation was impacted in London, eu-west2. The outage started on 25 May 2021 13:33 UTC and lasted for 12 hours and 7 minutes.
+Hyper Protect DBaaS was impacted in Sydney, au-syd. The outage started on 25 May 2021 13:33 UTC and lasted for 12 hours and 7 minutes.
+
+Private DNS:
+Private DNS resolution timeouts from IKS clusters in Frankfurt, eu-central1 were experienced by customers. The outage started on 25 May 2021 13:33 UTC and lasted for 12 hours and 7 minutes.
+Private hostname lookups for VSIs on VPC were not successful in London, eu-west2. The outage started on 25 May 2021 13:33 UTC and lasted for 12 hours and 7 minutes.
+Any service that uses a Virtual Private Endpoint in VPC was unavailable in US-East, us-east-1. The outage started on 25 May 2021 13:33 UTC and lasted for 12 hours and 7 minutes.
+
+**Output Table:**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| IBM Cloud | HyperProtect-VS | Frankfurt | eu-central1 | 2021-05-25T13:33:00Z | 12h7m | Resource constraints in HA Proxy Load Balancers | 2021-05-26T01:40:00Z | 2021-05-26T01:40:00Z |
+| IBM Cloud | MqCloud | US-East | us-east-1 | 2021-05-25T13:33:00Z | 12h7m | Resource constraints in HA Proxy Load Balancers | 2021-05-26T01:40:00Z | 2021-05-26T01:40:00Z |
+| IBM Cloud | Mobile Foundation | London | eu-west2 | 2021-05-25T13:33:00Z | 12h7m | Resource constraints in HA Proxy Load Balancers | 2021-05-26T01:40:00Z | 2021-05-26T01:40:00Z |
+| IBM Cloud | Hyper Protect DBaaS | Sydney | au-syd | 2021-05-25T13:33:00Z | 12h7m | Resource constraints in HA Proxy Load Balancers | 2021-05-26T01:40:00Z | 2021-05-26T01:40:00Z |
+| Private DNS | Private DNS Resolution Timeouts | Frankfurt | eu-central1 | 2021-05-25T13:33:00Z | 12h7m | Abnormally high burst of database queries from Private DNS | 2021-05-26T01:28:00Z | 2021-05-26T01:40:00Z |
+| Private DNS | Private Hostname Lookups | London | eu-west2 | 2021-05-25T13:33:00Z | 12h7m | Abnormally high burst of database queries from Private DNS | 2021-05-26T01:28:00Z | 2021-05-26T01:40:00Z |
+| Private DNS | Virtual Private Endpoint | US-East | us-east-1 | 2021-05-25T13:33:00Z | 12h7m | Abnormally high burst of database queries from Private DNS | 2021-05-26T01:28:00Z | 2021-05-26T01:40:00Z |
+
+**Summary:**
+
+The outages impacted services in the following regions and availability zones:
+
+* Frankfurt (eu-central1)
+* London (eu-west2)
+* US-East (us-east-1)
+* Sydney (au-syd)
+
+The outages started on 25 May 2021 13:33 UTC and lasted for 12 hours and 7 minutes.
+
+The root cause of the outage was resource constraints in HA Proxy Load Balancers caused by an abnormally high burst of database queries from Private DNS.
+
+The downtime period was marked as resolved on 26 May 2021 01:40 UTC.

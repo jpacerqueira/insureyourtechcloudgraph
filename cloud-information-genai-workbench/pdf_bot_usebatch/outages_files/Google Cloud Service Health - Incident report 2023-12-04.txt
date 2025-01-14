@@ -1,0 +1,44 @@
+After analyzing the text, I found that only Google Cloud Platform (GCP) was mentioned as a provider with an outage.
+
+Here is the breakdown of the outage per service impacted:
+
+**Google Cloud Bigtable**
+
+* Service: Google Cloud Bigtable
+* Region: us-central1
+* Availability Zone: Not specified
+* Impact Date: 2023-12-04 20:00 UTC
+* Duration: 1 day, 8 hours, 5 minutes
+* Root Cause: Network issue causing customers to experience elevated errors and increased latency across multiple services in us-central1
+* Downtime Period: 15 hours (partial mitigation)
+* Resolved Date: 2023-12-06 03:55 UTC
+
+**Google Cloud Tasks**
+
+* Service: Google Cloud Tasks
+* Region: us-central1
+* Availability Zone: Not specified
+* Impact Date: 2023-12-04 20:00 UTC
+* Duration: 1 day, 8 hours, 5 minutes
+* Root Cause: Network issue causing customers to experience elevated errors and increased latency across multiple services in us-central1
+* Downtime Period: 15 hours (partial mitigation)
+* Resolved Date: 2023-12-06 03:55 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud Platform | Google Cloud Bigtable | us-central1 |  | 2023-12-04 20:00 UTC | 1 day, 8 hours, 5 minutes | Network issue causing customers to experience elevated errors and increased latency across multiple services in us-central1 | 15 hours (partial mitigation) | 2023-12-06 03:55 UTC |
+| Google Cloud Platform | Google Cloud Tasks | us-central1 |  | 2023-12-04 20:00 UTC | 1 day, 8 hours, 5 minutes | Network issue causing customers to experience elevated errors and increased latency across multiple services in us-central1 | 15 hours (partial mitigation) | 2023-12-06 03:55 UTC |
+
+**Summary**
+
+* Cloud Provider: Google Cloud Platform
+* Services impacted: Google Cloud Bigtable, Google Cloud Tasks
+* Regions impacted: us-central1
+* Availability Zones not specified
+* Impact dates: 2023-12-04 20:00 UTC
+* Duration of outage: 1 day, 8 hours, 5 minutes
+* Root cause: Network issue causing customers to experience elevated errors and increased latency across multiple services in us-central1
+* Downtime period: 15 hours (partial mitigation)
+* Resolved date: 2023-12-06 03:55 UTC

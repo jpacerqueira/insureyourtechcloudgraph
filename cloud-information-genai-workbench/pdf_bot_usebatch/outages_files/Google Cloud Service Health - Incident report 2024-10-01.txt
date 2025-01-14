@@ -1,0 +1,33 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud Service**
+
+* **Vertex AI Search**
+	+ Region: Global
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-10-01 09:28 UTC
+	+ Duration: 35 minutes
+	+ Root Cause: Issue introduced by a new version release of an internal service which the Search API relies on, causing failures on our Search API.
+	+ Downtime Period: 2024-10-01 09:28 - 2024-10-01 10:03 UTC
+	+ Resolved Date: 2024-10-01 10:03 UTC
+
+**Summary**
+
+* Cloud Provider: Google Cloud Service
+* Services Impacted: Vertex AI Search
+* Regions and Availability Zones: Global (not specified)
+* Impact Dates: 2024-10-01 09:28 UTC
+* Duration: 35 minutes
+* Root Cause: Issue introduced by a new version release of an internal service which the Search API relies on, causing failures on our Search API.
+* Downtime Period: 2024-10-01 09:28 - 2024-10-01 10:03 UTC
+* Resolved Date: 2024-10-01 10:03 UTC
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Vertex AI Search | global |  | 2024-10-01 09:28 UTC | 35 minutes | Issue introduced by a new version release of an internal service which the Search API relies on, causing failures on our Search API. | 2024-10-01 09:28 - 2024-10-01 10:03 UTC | 2024-10-01 10:03 UTC |
+
+Note: I removed references to Cloud Providers not mentioned in the text provided, and normalized variables like regions and availability zones to standard lowercase official names of cloud vendors.

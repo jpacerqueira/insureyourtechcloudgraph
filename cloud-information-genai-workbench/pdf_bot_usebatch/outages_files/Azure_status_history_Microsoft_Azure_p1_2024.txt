@@ -1,0 +1,90 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Microsoft Azure**
+
+* Service: Azure SQL Database and Managed Instance
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2024-10-22 12:30 CST (China Standard Time)
+* Duration: 1 hour
+* Root Cause: Increased traffic between China Telecom network and Azure Commercial cloud
+* Downtime Period: 2024-10-22 12:30 CST - 2024-10-22 13:30 CST
+* Resolved Date: Not specified
+
+**AT&T**
+
+* Service: Microsoft services
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2024-09-12 11:46 UTC
+* Duration: Approximately 1 hour and 18 minutes
+* Root Cause: Automated systems in the Microsoft network mitigated the issue by shifting traffic away at 13:01 UTC, resulting in improvements for Microsoft customers. The issue was caused by A&T reverting a change at 13:14 UTC.
+* Downtime Period: 2024-09-12 11:46 UTC - 2024-09-12 13:04 UTC
+* Resolved Date: 2024-09-12 13:14 UTC
+
+**Azure Front Door (AFD) and Azure Content Delivery Network (CDN)**
+
+* Service: AFD and CDN
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2024-07-30 11:45 UTC
+* Duration: Approximately 2 hours and 58 minutes
+* Root Cause: Intermittent connection errors, timeouts, or latency spikes while connecting to Microsoft services that leverage AFD and CDN.
+* Downtime Period: 2024-07-30 11:45 UTC - 2024-07-30 14:43 UTC
+* Resolved Date: 2024-07-30 19:43 UTC
+
+**Azure Service Health Alerts**
+
+* Service: Azure Service Health Alerts
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: Various dates (not specified)
+* Duration: Varies by alert
+* Root Cause: Various causes (not specified)
+* Downtime Period: Varies by alert
+* Resolved Date: Varies by alert
+
+**Overall Summary**
+
+The following cloud providers were impacted:
+
+* Microsoft Azure
+* AT&T
+
+Services impacted include:
+
+* Azure SQL Database and Managed Instance
+* Microsoft services
+* AFD and CDN
+
+Regions and availability zones impacted are not specified.
+
+Dates impacted are:
+
+* 2024-10-22 (Microsoft Azure)
+* 2024-09-12 (AT&T)
+* 2024-07-30 (AFD and CDN)
+
+Duration of outages is:
+
+* Microsoft Azure: 1 hour
+* AT&T: Approximately 1 hour and 18 minutes
+* AFD and CDN: Approximately 2 hours and 58 minutes
+
+Root cause of outages are:
+
+* Microsoft Azure: Increased traffic between China Telecom network and Azure Commercial cloud
+* AT&T: Automated systems in the Microsoft network mitigated the issue by shifting traffic away, resulting in improvements for Microsoft customers. The issue was caused by A&T reverting a change.
+* AFD and CDN: Intermittent connection errors, timeouts, or latency spikes while connecting to Microsoft services that leverage AFD and CDN.
+
+Downtime periods are:
+
+* Microsoft Azure: 2024-10-22 12:30 CST - 2024-10-22 13:30 CST
+* AT&T: 2024-09-12 11:46 UTC - 2024-09-12 13:04 UTC
+* AFD and CDN: 2024-07-30 11:45 UTC - 2024-07-30 14:43 UTC
+
+Resolved dates are:
+
+* Microsoft Azure: Not specified
+* AT&T: 2024-09-12 13:14 UTC
+* AFD and CDN: 2024-07-30 19:43 UTC

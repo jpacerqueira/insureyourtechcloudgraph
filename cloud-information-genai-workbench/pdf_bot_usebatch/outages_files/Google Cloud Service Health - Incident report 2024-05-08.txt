@@ -1,0 +1,37 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud Service**
+
+* **Apigee API Platform**
+	+ Region: asia-east1
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-05-08 16:41 UTC
+	+ Duration: 2 days, 3 hours, and 44 minutes
+	+ Root Cause: Impacted customers may experience latency in the completion of their API calls.
+	+ Downtime Period: 2024-05-09 03:40 UTC
+	+ Resolved Date: 2024-05-09 03:40 UTC
+
+Here is the output table:
+
+```
+Cloud Provider, Service, Region, Availability Zone, Impact Date, Duration, Root Cause, Downtime Period, Resolved Date
+Google Cloud, Apigee API Platform, asia-east1, , 2024-05-08 16:41:00 +0000, 2 days, 3 hours, and 44 minutes, Impacted customers may experience latency in the completion of their API calls., 2024-05-09 03:40:00 +0000, 2024-05-09 03:40:00 +0000
+```
+
+**Summary**
+
+* Cloud Provider: Google Cloud
+* Services: Apigee API Platform
+* Regions: asia-east1
+* Availability Zones: Not specified
+* Impact Dates: 2024-05-08 16:41 UTC
+* Duration: 2 days, 3 hours, and 44 minutes
+* Root Cause: Impacted customers may experience latency in the completion of their API calls.
+* Downtime Period: 2024-05-09 03:40 UTC
+* Resolved Date: 2024-05-09 03:40 UTC
+
+**Overall Summary**
+
+Google Cloud Service experienced an outage on Apigee API Platform, affecting customers in asia-east1 region. The outage started on May 8, 2024, at 16:41 UTC and lasted for 2 days, 3 hours, and 44 minutes. The root cause was impacted customers experiencing latency in the completion of their API calls. The downtime period was from May 9, 2024, at 03:40 UTC to May 9, 2024, at 03:40 UTC.

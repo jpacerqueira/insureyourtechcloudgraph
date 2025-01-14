@@ -1,0 +1,98 @@
+After analyzing the text, I found that the following Cloud Providers were impacted:
+
+* Google GCP
+* Amazon AWS (not explicitly mentioned in the text, but inferred from the mention of "us-central1" which is an AWS region)
+
+The services impacted were:
+
+* Google App Engine
+* Cloud Firestore
+* Google Cloud Functions (1st gen)
+* Cloud Run functions (1st gen)
+
+Here are the details of each outage per cloud provider:
+
+**Google GCP**
+
+* Service: Google App Engine, Cloud Firestore, Google Cloud Functions (1st gen), Cloud Run functions (1st gen)
+* Regions:
+	+ asia-east1
+	+ asia-northeast2
+	+ asia-northeast3
+	+ asia-south1
+	+ asia-southeast1
+	+ asia-southeast2
+	+ europe-west2
+	+ europe-west3
+	+ europe-west6
+	+ northamerica-northeast1
+	+ southamerica-east1
+	+ us-central1
+	+ us-east1
+	+ us-east4
+	+ us-west3
+	+ us-west4
+* Availability Zones:
+	+ taiwan (asia-east1)
+	+ osaka (asia-northeast2)
+	+ seoul (asia-northeast3)
+	+ mumbai (asia-south1)
+	+ singapore (asia-southeast1)
+	+ jakarta (asia-southeast2)
+	+ sydney (australia-southeast1)
+	+ warsaw (europe-central2)
+	+ london (europe-west2)
+	+ frankfurt (europe-west3)
+	+ zurich (europe-west6)
+	+ sao paulo (southamerica-east1)
+	+ iowa (us-central1)
+	+ south carolina (us-east1)
+	+ northern virginia (us-east4)
+	+ salt lake city (us-west3)
+* Impact Date: 2024-09-18 12:34 UTC
+* Duration: 2 hours and 56 minutes
+* Root Cause: Not specified in the text
+* Downtime Period: Not specified in the text
+* Resolved Date: Not specified in the text
+
+**Amazon AWS**
+
+* Service: Cloud Firestore, Google App Engine (in region us-central1)
+* Regions:
+	+ us-central1
+* Availability Zones:
+	+ iowa (us-central1)
+* Impact Date: 2024-09-18 12:34 UTC
+* Duration: Not specified in the text
+* Root Cause: Not specified in the text
+* Downtime Period: Not specified in the text
+* Resolved Date: Not specified in the text
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google GCP | Google App Engine | asia-east1 | taiwan | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Cloud Firestore | asia-east1 | taiwan | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Google Cloud Functions (1st gen) | asia-northeast2 | osaka | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Cloud Run functions (1st gen) | asia-northeast3 | seoul | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Google App Engine | asia-south1 | mumbai | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Cloud Firestore | asia-south1 | mumbai | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Google Cloud Functions (1st gen) | asia-southeast1 | singapore | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Cloud Run functions (1st gen) | asia-southeast2 | jakarta | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Google App Engine | australia-southeast1 | sydney | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Cloud Firestore | australia-southeast1 | sydney | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Google Cloud Functions (1st gen) | europe-west2 | london | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Cloud Run functions (1st gen) | europe-west3 | frankfurt | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Google App Engine | europe-west6 | zurich | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Cloud Firestore | europe-west6 | zurich | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Google Cloud Functions (1st gen) | northamerica-northeast1 | northern virginia | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Cloud Run functions (1st gen) | southamerica-east1 | sao paulo | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Google App Engine | us-central1 | iowa | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Cloud Firestore | us-central1 | iowa | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Google Cloud Functions (1st gen) | us-east1 | south carolina | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Cloud Run functions (1st gen) | us-east4 | northern virginia | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Google App Engine | us-west3 | salt lake city | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+| Google GCP | Cloud Firestore | us-west3 | salt lake city | 2024-09-18 12:34 UTC | 2 hours and 56 minutes | Not specified | Not specified | Not specified |
+
+Note that the root cause, downtime period, and resolved date are not specified in the original text.

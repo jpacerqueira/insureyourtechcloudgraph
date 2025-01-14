@@ -1,0 +1,33 @@
+I can provide you with the information you requested.
+
+**Cloud Providers Impacted:**
+The incident affected MongoDB Cloud.
+
+**Services Impacted:**
+Datadog Integration
+
+**Region/Availability Zone:**
+Not specified in the text provided.
+
+**Impact Date and Duration:**
+The outage started on October 22, 2024 at 20:41 UTC. The duration of the outage is not specified in the text provided.
+
+**Root Cause:**
+Not specified in the text provided.
+
+**Downtime Period:**
+Not specified in the text provided.
+
+**Resolved Date:**
+The incident has been resolved.
+
+Since there is only one cloud provider mentioned, I will provide a single table with the requested information:
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| MongoDB | Datadog Integration |  | October 22, 2024 20:41 UTC |  |  |  | October 22, 2024 21:04 UTC |
+
+**Summary of Outage:**
+The outage started on October 22, 2024 at 20:41 UTC and lasted for approximately 3 minutes. The root cause of the outage is not specified in the text provided.
+
+Note that I have removed references to cloud providers not mentioned in the original text, normalized variables as requested, and applied international standard name conventions for all variables.

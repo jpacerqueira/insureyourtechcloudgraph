@@ -1,0 +1,33 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud Service**
+
+* **Vertex AI Online Prediction**
+	+ Region: us-east5
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-07 23:55 UTC
+	+ Duration: 17 hours and 43 minutes
+	+ Root Cause: Elevated 500 errors from calls to the model
+	+ Downtime Period: 2024-08-08 00:35 - 2024-08-08 17:18 UTC
+	+ Resolved Date: 2024-08-08 17:16 UTC
+
+Here is the output in a fixed table format:
+
+```
+Cloud Provider, Service, Region, Availability Zone, Impact Date, Duration, Root Cause, Downtime Period, Resolved Date
+Google Cloud, Vertex AI Online Prediction, us-east5, Not specified, 2024-08-07 23:55:00 UTC, 17 hours and 43 minutes, Elevated 500 errors from calls to the model, 2024-08-08 00:35:00 - 2024-08-08 17:18:00 UTC, 2024-08-08 17:16:00 UTC
+```
+
+**Summary**
+
+* Cloud Provider: Google Cloud
+* Services impacted: Vertex AI Online Prediction
+* Regions impacted: us-east5
+* Availability Zones impacted: Not specified
+* Impact dates: 2024-08-07 23:55 UTC
+* Duration of outage: 17 hours and 43 minutes
+* Root cause: Elevated 500 errors from calls to the model
+* Downtime period: 2024-08-08 00:35 - 2024-08-08 17:18 UTC
+* Resolved date: 2024-08-08 17:16 UTC

@@ -1,0 +1,58 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Google Cloud**
+
+* BigQuery
+	+ Impact Date: 2024-07-11 00:00
+	+ Duration: 6 days, 11 hours, and 5 minutes
+	+ Root Cause: Configuration changes temporarily interrupted the reporting flow of BigQuery storage usage to the GCP billing system.
+	+ Downtime Period: None at this time
+	+ Resolved Date: 2024-07-17 11:05
+
+**Regions impacted:** africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-southeast2, eu, europe-central2, europe-north1, europe-southwest1, europe-west1, europe-west10, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9, me-central1, me-central2, me-west1, northamerica-northeast1, northamerica-northeast2, southamerica-east1, southamerica-west1
+
+**Summary:** Google Cloud's BigQuery service experienced a 6-day outage due to configuration changes. The outage affected multiple regions and availability zones.
+
+**Output Table:**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | BigQuery | africa-south1 |  | 2024-07-11 00:00 | 6 days, 11 hours, and 5 minutes | Configuration changes | None at this time | 2024-07-17 11:05 |
+
+**Amazon Web Services (AWS)**
+
+* No services were impacted.
+
+**Microsoft Azure**
+
+* No services were impacted.
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* No services were impacted.
+
+**IBM Cloud**
+
+* No services were impacted.
+
+**Snowflake**
+
+* No services were impacted.
+
+**Databricks**
+
+* No services were impacted.
+
+**MongoDB**
+
+* No services were impacted.
+
+**Akamai**
+
+* No services were impacted.
+
+**Cloudflare**
+
+* No services were impacted.
+
+**Summary:** None of the other cloud providers experienced any outages.

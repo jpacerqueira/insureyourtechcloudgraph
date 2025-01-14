@@ -1,0 +1,32 @@
+After analyzing the text, I found that only Google Cloud Service was impacted by an outage.
+
+Here is the breakdown of the outage per service:
+
+Google Distributed Cloud Edge:
+Impact Date: 2024-06-03 14:40 UTC
+Duration: 2 hours and 6 minutes
+Root Cause: Management traffic between GDC Connected Zones and Google
+Downtime Period: 2024-06-03 15:46 - 2024-06-03 16:52 UTC
+Resolved Date: 2024-06-03 16:46 UTC
+
+Here is the output in text format:
+
+Google Distributed Cloud Edge was impacted on June 3, 2024, at 14:40 UTC. The outage lasted for 2 hours and 6 minutes. The root cause of the issue was a problem with management traffic between GDC Connected Zones and Google. The downtime period started at 15:46 UTC on June 3, 2024, and ended at 16:52 UTC on the same day.
+
+Here is the output in table format:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Distributed Cloud Edge | europe-north1 |  | 2024-06-03 14:40 UTC | 2 hours and 6 minutes | Management traffic between GDC Connected Zones and Google | 2024-06-03 15:46 - 2024-06-03 16:52 UTC | 2024-06-03 16:46 UTC |
+
+Overall summary:
+
+* Cloud Provider: Google Cloud
+* Services impacted: Distributed Cloud Edge
+* Regions impacted: europe-north1
+* Availability zones impacted: Not specified
+* Impact dates: June 3, 2024
+* Duration of outage: 2 hours and 6 minutes
+* Root cause: Management traffic between GDC Connected Zones and Google
+* Downtime period: June 3, 2024, from 15:46 to 16:52 UTC
+* Resolved date: June 3, 2024, at 16:46 UTC

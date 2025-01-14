@@ -1,0 +1,49 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Google Cloud**
+
+* Service: BigQuery
+* Region/Availability Zone: Global (multiple regions and zones)
+* Impact Date: 2024-12-04 14:30 UTC
+* Duration: 3 hours, 25 minutes
+* Root Cause: Misconfiguration in BigQuery's Google Drive integration
+* Downtime Period: 2024-12-04 14:30 - 18:04 UTC
+* Resolved Date: 2024-12-04 18:10 UTC
+
+**Google Cloud**
+
+* Service: Google Drive
+* Region/Availability Zone: Global (multiple regions and zones)
+* Impact Date: 2024-12-04 14:30 UTC
+* Duration: 3 hours, 25 minutes
+* Root Cause: Misconfiguration in BigQuery's Google Drive integration
+* Downtime Period: 2024-12-04 14:30 - 18:04 UTC
+* Resolved Date: 2024-12-04 18:10 UTC
+
+**Google Cloud**
+
+* Service: Automated tasks relying on BigQuery to Google Drive export functionality
+* Region/Availability Zone: Global (multiple regions and zones)
+* Impact Date: 2024-12-04 14:30 UTC
+* Duration: 3 hours, 25 minutes
+* Root Cause: Misconfiguration in BigQuery's Google Drive integration
+* Downtime Period: 2024-12-04 14:30 - 18:04 UTC
+* Resolved Date: 2024-12-04 18:10 UTC
+
+**Summary**
+
+Cloud Providers impacted: Google Cloud
+Services impacted: BigQuery, Google Drive, Automated tasks relying on BigQuery to Google Drive export functionality
+Regions/Availability Zones impacted: multiple regions and zones (e.g. us-central1, eu-west1, etc.)
+Impact Dates: 2024-12-04 UTC
+Duration: 3 hours, 25 minutes
+
+**Output Table**
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | BigQuery | multiple regions and zones | 2024-12-04 14:30 UTC | 3 hours, 25 minutes | Misconfiguration in BigQuery's Google Drive integration | 2024-12-04 14:30 - 18:04 UTC | 2024-12-04 18:10 UTC |
+| Google Cloud | Google Drive | multiple regions and zones | 2024-12-04 14:30 UTC | 3 hours, 25 minutes | Misconfiguration in BigQuery's Google Drive integration | 2024-12-04 14:30 - 18:04 UTC | 2024-12-04 18:10 UTC |
+| Google Cloud | Automated tasks relying on BigQuery to Google Drive export functionality | multiple regions and zones | 2024-12-04 14:30 UTC | 3 hours, 25 minutes | Misconfiguration in BigQuery's Google Drive integration | 2024-12-04 14:30 - 18:04 UTC | 2024-12-04 18:10 UTC |
+
+Note: I removed references to Cloud Providers not mentioned in the text provided (Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare).

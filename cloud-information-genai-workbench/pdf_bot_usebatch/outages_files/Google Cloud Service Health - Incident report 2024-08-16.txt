@@ -1,0 +1,41 @@
+After analyzing the text, I found that the following Cloud Providers were impacted:
+
+* Google GCP
+* Amazon AWS is not mentioned in the text, so it will be excluded from the output.
+* Microsoft Azure is not mentioned in the text, so it will be excluded from the output.
+
+Here are the details of the outage for each affected service:
+
+**Google GCP**
+
+* Service: Vertex AI custom training jobs
+* Region: asia-east1, asia-east2, asia-northeast1, asia-northeast3, asia-south1, asia-southeast1, australia-southeast1, europe-west1, europe-west2, europe-west3, europe-west4, europe-west6, north america-northeast1, north america-northeast2, us-central1, us-east1, us-east4, us-west1, us-west2
+* Availability Zone: Not specified
+* Impact Date: 2024-08-16 11:44 UTC
+* Duration: 14 hours and 39 minutes
+* Root Cause: Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi."
+* Downtime Period: Not specified
+* Resolved Date: 2024-08-16 16:07 UTC
+
+**Google GCP (continued)**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google GCP | Vertex AI custom training jobs | asia-east1 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | asia-east2 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | asia-northeast1 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | asia-northeast3 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | asia-south1 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | asia-southeast1 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | australia-southeast1 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | europe-west1 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | europe-west2 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | europe-west3 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | europe-west4 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | europe-west6 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | north america-northeast1 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | north america-northeast2 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | us-central1 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+| Google GCP | Vertex AI custom training jobs | us-east1 |  | 2024-08-16 11:44 UTC | 14 hours and 39 minutes | Custom Vertex AI training jobs running on GKE and using more than 2GB of ephemeral storage may fail with the error "Pod ephemeral local storage usage exceeds the total limit of containers 2Gi." | Not specified | 2024-08-16 16:07 UTC |
+
+Note that this is not an exhaustive list, as there are many other regions and services affected by this issue.

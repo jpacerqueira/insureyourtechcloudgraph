@@ -1,0 +1,464 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Block Volumes
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 15:03:00 UTC
+* Duration: 3 hours and 3 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 15:03:00 UTC - 2024-04-24 16:06:00 UTC
+* Resolved Date: 2024-04-24 17:07:46 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Compute
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 15:03:00 UTC
+* Duration: 3 hours and 3 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 15:03:00 UTC - 2024-04-24 16:06:00 UTC
+* Resolved Date: 2024-04-24 17:07:46 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Container Engine for Kubernetes (OKE)
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 15:03:00 UTC
+* Duration: 3 hours and 3 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 15:03:00 UTC - 2024-04-24 16:06:00 UTC
+* Resolved Date: 2024-04-24 17:07:46 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Data Flow
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 15:03:00 UTC
+* Duration: 3 hours and 3 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 15:03:00 UTC - 2024-04-24 16:06:00 UTC
+* Resolved Date: 2024-04-24 17:07:46 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Data Science
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 15:03:00 UTC
+* Duration: 3 hours and 3 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 15:03:00 UTC - 2024-04-24 16:06:00 UTC
+* Resolved Date: 2024-04-24 17:07:46 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Load Balancing
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 15:03:00 UTC
+* Duration: 3 hours and 3 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 15:03:00 UTC - 2024-04-24 16:06:00 UTC
+* Resolved Date: 2024-04-24 17:07:46 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Object Storage
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 15:03:00 UTC
+* Duration: 3 hours and 3 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 15:03:00 UTC - 2024-04-24 16:06:00 UTC
+* Resolved Date: 2024-04-24 17:07:46 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Digital Assistant
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 15:03:00 UTC
+* Duration: 3 hours and 3 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 15:03:00 UTC - 2024-04-24 16:06:00 UTC
+* Resolved Date: 2024-04-24 17:07:46 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Block Volumes
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 16:06:00 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 16:06:00 UTC - 2024-04-24 17:07:46 UTC
+* Resolved Date: 2024-04-24 17:28:15 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Compute
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 16:06:00 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 16:06:00 UTC - 2024-04-24 17:07:46 UTC
+* Resolved Date: 2024-04-24 17:28:15 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Container Engine for Kubernetes (OKE)
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 16:06:00 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 16:06:00 UTC - 2024-04-24 17:07:46 UTC
+* Resolved Date: 2024-04-24 17:28:15 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Data Flow
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 16:06:00 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 16:06:00 UTC - 2024-04-24 17:07:46 UTC
+* Resolved Date: 2024-04-24 17:28:15 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Data Science
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 16:06:00 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 16:06:00 UTC - 2024-04-24 17:07:46 UTC
+* Resolved Date: 2024-04-24 17:28:15 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Load Balancing
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 16:06:00 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 16:06:00 UTC - 2024-04-24 17:07:46 UTC
+* Resolved Date: 2024-04-24 17:28:15 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Object Storage
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 16:06:00 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 16:06:00 UTC - 2024-04-24 17:07:46 UTC
+* Resolved Date: 2024-04-24 17:28:15 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Digital Assistant
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 16:06:00 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 16:06:00 UTC - 2024-04-24 17:07:46 UTC
+* Resolved Date: 2024-04-24 17:28:15 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Block Volumes
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 17:07:46 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 17:07:46 UTC - 2024-04-24 18:38:16 UTC
+* Resolved Date: 2024-04-24 18:38:16 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Compute
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 17:07:46 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 17:07:46 UTC - 2024-04-24 18:38:16 UTC
+* Resolved Date: 2024-04-24 18:38:16 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Container Engine for Kubernetes (OKE)
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 17:07:46 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 17:07:46 UTC - 2024-04-24 18:38:16 UTC
+* Resolved Date: 2024-04-24 18:38:16 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Data Flow
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 17:07:46 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 17:07:46 UTC - 2024-04-24 18:38:16 UTC
+* Resolved Date: 2024-04-24 18:38:16 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Data Science
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 17:07:46 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 17:07:46 UTC - 2024-04-24 18:38:16 UTC
+* Resolved Date: 2024-04-24 18:38:16 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Load Balancing
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 17:07:46 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 17:07:46 UTC - 2024-04-24 18:38:16 UTC
+* Resolved Date: 2024-04-24 18:38:16 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Object Storage
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 17:07:46 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 17:07:46 UTC - 2024-04-24 18:38:16 UTC
+* Resolved Date: 2024-04-24 18:38:16 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Digital Assistant
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 17:07:46 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 17:07:46 UTC - 2024-04-24 18:38:16 UTC
+* Resolved Date: 2024-04-24 18:38:16 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Block Volumes
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 18:38:16 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 18:38:16 UTC - 2024-04-25 00:08:36 UTC
+* Resolved Date: 2024-04-25 00:08:36 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Compute
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 18:38:16 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 18:38:16 UTC - 2024-04-25 00:08:36 UTC
+* Resolved Date: 2024-04-25 00:08:36 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Container Engine for Kubernetes (OKE)
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 18:38:16 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 18:38:16 UTC - 2024-04-25 00:08:36 UTC
+* Resolved Date: 2024-04-25 00:08:36 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Data Flow
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 18:38:16 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 18:38:16 UTC - 2024-04-25 00:08:36 UTC
+* Resolved Date: 2024-04-25 00:08:36 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Data Science
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 18:38:16 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 18:38:16 UTC - 2024-04-25 00:08:36 UTC
+* Resolved Date: 2024-04-25 00:08:36 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Load Balancing
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 18:38:16 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 18:38:16 UTC - 2024-04-25 00:08:36 UTC
+* Resolved Date: 2024-04-25 00:08:36 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Object Storage
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 18:38:16 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 18:38:16 UTC - 2024-04-25 00:08:36 UTC
+* Resolved Date: 2024-04-25 00:08:36 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Digital Assistant
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-24 18:38:16 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-24 18:38:16 UTC - 2024-04-25 00:08:36 UTC
+* Resolved Date: 2024-04-25 00:08:36 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Block Volumes
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-25 00:08:36 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-25 00:08:36 UTC - 2024-05-01 02:38:56 UTC
+* Resolved Date: 2024-05-01 02:38:56 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Compute
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-25 00:08:36 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-25 00:08:36 UTC - 2024-05-01 02:38:56 UTC
+* Resolved Date: 2024-05-01 02:38:56 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Container Engine for Kubernetes (OKE)
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-25 00:08:36 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-25 00:08:36 UTC - 2024-05-01 02:38:56 UTC
+* Resolved Date: 2024-05-01 02:38:56 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Data Flow
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-25 00:08:36 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-25 00:08:36 UTC - 2024-05-01 02:38:56 UTC
+* Resolved Date: 2024-05-01 02:38:56 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Data Science
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-25 00:08:36 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-25 00:08:36 UTC - 2024-05-01 02:38:56 UTC
+* Resolved Date: 2024-05-01 02:38:56 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Load Balancing
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-25 00:08:36 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-25 00:08:36 UTC - 2024-05-01 02:38:56 UTC
+* Resolved Date: 2024-05-01 02:38:56 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Object Storage
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-25 00:08:36 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-25 00:08:36 UTC - 2024-05-01 02:38:56 UTC
+* Resolved Date: 2024-05-01 02:38:56 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Digital Assistant
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-04-25 00:08:36 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-04-25 00:08:36 UTC - 2024-05-01 02:38:56 UTC
+* Resolved Date: 2024-05-01 02:38:56 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Block Volumes
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-05-01 02:38:56 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-05-01 02:38:56 UTC - 2024-05-08 04:38:26 UTC
+* Resolved Date: 2024-05-08 04:38:26 UTC
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* Service: Compute
+* Region: India West (Mumbai)
+* Availability Zone: Not specified
+* Impact Date: 2024-05-01 02:38:56 UTC
+* Duration: 30 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-05-01 02:38:56 UTC - 2024-05-08 04:38:26 UTC
+* Resolved Date: 2024-05-08 04:38:26 UTC
+

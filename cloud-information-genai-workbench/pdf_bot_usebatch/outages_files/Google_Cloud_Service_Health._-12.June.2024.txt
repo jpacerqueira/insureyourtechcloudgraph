@@ -1,0 +1,52 @@
+Based on the provided text, I have extracted the information about the outage and will provide it in the requested format.
+
+**Summary of Outages**
+
+The outages affected Google Cloud Services, specifically:
+
+* Vertex AI Online Prediction
+* Dialogflow CX
+* Agent Assist
+
+These services experienced elevated error rates in multiple regions.
+
+**Outage Details per Service**
+
+Here is the breakdown of the outage for each service:
+
+1. **Vertex AI Online Prediction**
+	+ Region: us-central1, asia-southeast1, europe-west3, europe-west4, us-east1, us-west1
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-06-12 12:06 UTC
+	+ Duration: 3 hours and 53 minutes
+	+ Root Cause: Timeouts due to intermittent segmentation faults in the Vertex Serving Prediction API servers
+	+ Downtime Period: 2024-06-12 12:06 - 15:59 UTC
+	+ Resolved Date: 2024-06-12 15:59 UTC
+
+2. **Dialogflow CX**
+	+ Region: us-central1, asia-southeast1, europe-west3, europe-west4, us-east1, us-west1
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-06-12 12:06 UTC
+	+ Duration: 3 hours and 53 minutes
+	+ Root Cause: Timeouts due to intermittent segmentation faults in the Vertex Serving Prediction API servers
+	+ Downtime Period: 2024-06-12 12:06 - 15:59 UTC
+	+ Resolved Date: 2024-06-12 15:59 UTC
+
+3. **Agent Assist**
+	+ Region: us-central1, asia-southeast1, europe-west3, europe-west4, us-east1, us-west1
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-06-12 12:06 UTC
+	+ Duration: 3 hours and 53 minutes
+	+ Root Cause: Timeouts due to intermittent segmentation faults in the Vertex Serving Prediction API servers
+	+ Downtime Period: 2024-06-12 12:06 - 15:59 UTC
+	+ Resolved Date: 2024-06-12 15:59 UTC
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Vertex AI Online Prediction | us-central1, asia-southeast1, europe-west3, europe-west4, us-east1, us-west1 |  | 2024-06-12 12:06 UTC | 3 hours and 53 minutes | Timeouts due to intermittent segmentation faults in the Vertex Serving Prediction API servers | 2024-06-12 12:06 - 15:59 UTC | 2024-06-12 15:59 UTC |
+| Google Cloud | Dialogflow CX | us-central1, asia-southeast1, europe-west3, europe-west4, us-east1, us-west1 |  | 2024-06-12 12:06 UTC | 3 hours and 53 minutes | Timeouts due to intermittent segmentation faults in the Vertex Serving Prediction API servers | 2024-06-12 12:06 - 15:59 UTC | 2024-06-12 15:59 UTC |
+| Google Cloud | Agent Assist | us-central1, asia-southeast1, europe-west3, europe-west4, us-east1, us-west1 |  | 2024-06-12 12:06 UTC | 3 hours and 53 minutes | Timeouts due to intermittent segmentation faults in the Vertex Serving Prediction API servers | 2024-06-12 12:06 - 15:59 UTC | 2024-06-12 15:59 UTC |
+
+Note that I have removed Cloud Providers not mentioned in the text, such as Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare.

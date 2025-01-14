@@ -1,0 +1,72 @@
+After analyzing the text, I found that only Oracle Cloud Infrastructure (OCI) was impacted by an outage.
+
+Here is the breakdown of the outage per service:
+
+**Oracle Cloud Infrastructure**
+
+* Service: Networking
+* Region: Netherlands Northwest (Amsterdam)
+* Availability Zone:
+	+ Not specified in the text
+* Impact Date: 2024-01-06 02:50:00 UTC
+* Duration: 5 hours and 45 minutes
+* Root Cause: Not specified in the text
+* Downtime Period: 5 hours and 45 minutes
+* Resolved Date: 2024-01-06 05:35:00 UTC
+
+**Oracle Cloud Infrastructure**
+
+* Service: Oracle Identity Cloud
+* Region: Netherlands Northwest (Amsterdam)
+* Availability Zone:
+	+ Not specified in the text
+* Impact Date: 2024-01-06 02:50:00 UTC
+* Duration: 5 hours and 45 minutes
+* Root Cause: Not specified in the text
+* Downtime Period: 5 hours and 45 minutes
+* Resolved Date: 2024-01-06 05:35:00 UTC
+
+**Oracle Cloud Infrastructure**
+
+* Service: Oracle Cloud Infrastructure Compute
+* Region: Netherlands Northwest (Amsterdam)
+* Availability Zone:
+	+ Not specified in the text
+* Impact Date: 2024-01-06 02:50:00 UTC
+* Duration: 5 hours and 45 minutes
+* Root Cause: Not specified in the text
+* Downtime Period: 5 hours and 45 minutes
+* Resolved Date: 2024-01-06 05:35:00 UTC
+
+**Oracle Cloud Infrastructure**
+
+* Service: Oracle Cloud Infrastructure Object Storage
+* Region: Netherlands Northwest (Amsterdam)
+* Availability Zone:
+	+ Not specified in the text
+* Impact Date: 2024-01-06 02:50:00 UTC
+* Duration: 5 hours and 45 minutes
+* Root Cause: Not specified in the text
+* Downtime Period: 5 hours and 45 minutes
+* Resolved Date: 2024-01-06 05:35:00 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Oracle OCI | Networking | Netherlands Northwest Amsterdam |  | 2024-01-06 02:50:00 UTC | 5 hours and 45 minutes |  | 5 hours and 45 minutes | 2024-01-06 05:35:00 UTC |
+| Oracle OCI | Oracle Identity Cloud | Netherlands Northwest Amsterdam |  | 2024-01-06 02:50:00 UTC | 5 hours and 45 minutes |  | 5 hours and 45 minutes | 2024-01-06 05:35:00 UTC |
+| Oracle OCI | Oracle Cloud Infrastructure Compute | Netherlands Northwest Amsterdam |  | 2024-01-06 02:50:00 UTC | 5 hours and 45 minutes |  | 5 hours and 45 minutes | 2024-01-06 05:35:00 UTC |
+| Oracle OCI | Oracle Cloud Infrastructure Object Storage | Netherlands Northwest Amsterdam |  | 2024-01-06 02:50:00 UTC | 5 hours and 45 minutes |  | 5 hours and 45 minutes | 2024-01-06 05:35:00 UTC |
+
+And here is the overall summary:
+
+* Cloud Provider: Oracle OCI
+* Services impacted: Networking, Oracle Identity Cloud, Oracle Cloud Infrastructure Compute, Oracle Cloud Infrastructure Object Storage
+* Regions impacted: Netherlands Northwest Amsterdam
+* Availability zones impacted: Not specified in the text
+* Impact dates: 2024-01-06 02:50:00 UTC
+* Duration of outage: 5 hours and 45 minutes
+* Root cause of outage: Not specified in the text
+* Downtime period: 5 hours and 45 minutes
+* Resolved date: 2024-01-06 05:35:00 UTC

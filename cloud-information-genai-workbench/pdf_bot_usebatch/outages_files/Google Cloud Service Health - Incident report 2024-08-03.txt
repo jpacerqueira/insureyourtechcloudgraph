@@ -1,0 +1,114 @@
+After analyzing the text, I found that only Google Cloud Service was impacted.
+
+Here is the breakdown of the outage per service:
+
+**Google Cloud**
+
+* **Artifact Registry**
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 2 hours and 57 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+	+ Resolved Date: 2024-08-03 06:26 UTC
+* **Cloud Filestore**
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 2 hours and 57 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+	+ Resolved Date: 2024-08-03 06:26 UTC
+* **Cloud Run**
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 2 hours and 57 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+	+ Resolved Date: 2024-08-03 06:26 UTC
+* **Cloud Workstations**
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 2 hours and 57 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+	+ Resolved Date: 2024-08-03 06:26 UTC
+* **GKE Fleet Management**
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 2 hours and 57 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+	+ Resolved Date: 2024-08-03 06:26 UTC
+* **Google Cloud Bigtable**
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 2 hours and 57 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+	+ Resolved Date: 2024-08-03 06:26 UTC
+* **Google Cloud Dataflow**
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 2 hours and 57 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+	+ Resolved Date: 2024-08-03 06:26 UTC
+* **Google Cloud Dataproc**
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 2 hours and 57 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+	+ Resolved Date: 2024-08-03 06:26 UTC
+* **Google Cloud Networking**
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 2 hours and 57 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+	+ Resolved Date: 2024-08-03 06:26 UTC
+* **Google Cloud Pub/Sub**
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 2 hours and 57 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+	+ Resolved Date: 2024-08-03 06:26 UTC
+* **Google Compute Engine**
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 2 hours and 57 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+	+ Resolved Date: 2024-08-03 06:26 UTC
+* **Google Kubernetes Engine**
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 2 hours and 57 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+	+ Resolved Date: 2024-08-03 06:26 UTC
+
+**Summary**
+
+* Cloud Provider: Google Cloud
+* Services impacted: Artifact Registry, Cloud Filestore, Cloud Run, Cloud Workstations, GKE Fleet Management, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Networking, Google Cloud Pub/Sub, Google Compute Engine, Google Kubernetes Engine
+* Regions impacted: europe-west9
+* Availability Zones not specified
+* Impact Date: 2024-08-03 04:31 UTC
+* Duration: 2 hours and 57 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 07:23 UTC (1 hour and 57 minutes)
+* Resolved Date: 2024-08-03 06:26 UTC

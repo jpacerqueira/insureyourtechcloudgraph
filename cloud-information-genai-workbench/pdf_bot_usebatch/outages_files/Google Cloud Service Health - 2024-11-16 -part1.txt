@@ -1,0 +1,101 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**Google Cloud**
+
+* Service: Google Cloud Pub/Sub
+* Region: europe-west3-c
+* Availability Zone: 
+* Impact Date: 2024-11-16 18:25 UTC
+* Duration: 16 minutes
+* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
+* Downtime Period: 2024-11-16 18:25 - 18:41 UTC
+* Resolved Date: Not specified
+
+* Service: Google Cloud Dataflow
+* Region: europe-west3
+* Availability Zone: 
+* Impact Date: 2024-11-16 19:05 UTC
+* Duration: 2 hours and 50 minutes
+* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
+* Downtime Period: 2024-11-16 19:05 - 23:55 UTC
+* Resolved Date: Not specified
+
+* Service: Google Cloud Dataproc
+* Region: europe-west3
+* Availability Zone: 
+* Impact Date: 2024-11-16 19:12 UTC
+* Duration: 1 hour and 48 minutes
+* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
+* Downtime Period: 2024-11-16 19:12 - 22:00 UTC
+* Resolved Date: Not specified
+
+* Service: Google Cloud Kubernetes Engine
+* Region: europe-west3-c
+* Availability Zone: 
+* Impact Date: 2024-11-16 18:22 UTC
+* Duration: 7 hours and 39 minutes
+* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
+* Downtime Period: 2024-11-16 18:22 - 02:01 UTC
+* Resolved Date: Not specified
+
+**Google Cloud (continued)**
+
+* Service: Google Compute Engine
+* Region: europe-west3-c
+* Availability Zone: 
+* Impact Date: 2024-11-16 18:22 UTC
+* Duration: 7 hours and 39 minutes
+* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
+* Downtime Period: 2024-11-16 18:22 - 02:01 UTC
+* Resolved Date: Not specified
+
+* Service: Google Cloud Persistent Disk
+* Region: europe-west3-c
+* Availability Zone: 
+* Impact Date: 2024-11-16 18:24 UTC
+* Duration: 1 hour and 34 minutes
+* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
+* Downtime Period: 2024-11-16 18:24 - 00:58 UTC
+* Resolved Date: Not specified
+
+**Google Cloud (continued)**
+
+* Service: Vertex AI Batch Prediction
+* Region: europe-west3-c
+* Availability Zone: 
+* Impact Date: 2024-11-16 19:45 UTC
+* Duration: 1 hour and 15 minutes
+* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
+* Downtime Period: 2024-11-16 19:45 - 23:30 UTC
+* Resolved Date: Not specified
+
+**Google Cloud (continued)**
+
+* Service: Google Cloud SQL
+* Region: europe-west3
+* Availability Zone: 
+* Impact Date: 2024-11-16 18:35 UTC
+* Duration: 2 hours and 53 minutes
+* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
+* Downtime Period: 2024-11-16 18:35 - 24:28 UTC
+* Resolved Date: Not specified
+
+**Summary**
+
+The following cloud providers were impacted:
+
+* Google Cloud
+
+The services, regions, availability zones, impacted dates and duration are as follows:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Google Cloud Pub/Sub | europe-west3-c |  | 2024-11-16 18:25 UTC | 16 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 18:25 - 18:41 UTC | Not specified |
+| Google Cloud | Google Cloud Dataflow | europe-west3 |  | 2024-11-16 19:05 UTC | 2 hours and 50 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 19:05 - 23:55 UTC | Not specified |
+| Google Cloud | Google Cloud Dataproc | europe-west3 |  | 2024-11-16 19:12 UTC | 1 hour and 48 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 19:12 - 22:00 UTC | Not specified |
+| Google Cloud | Google Compute Engine | europe-west3-c |  | 2024-11-16 18:22 UTC | 7 hours and 39 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 18:22 - 02:01 UTC | Not specified |
+| Google Cloud | Google Cloud Persistent Disk | europe-west3-c |  | 2024-11-16 18:24 UTC | 1 hour and 34 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 18:24 - 00:58 UTC | Not specified |
+| Google Cloud | Vertex AI Batch Prediction | europe-west3-c |  | 2024-11-16 19:45 UTC | 1 hour and 15 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 19:45 - 23:30 UTC | Not specified |
+| Google Cloud | Google Cloud SQL | europe-west3 |  | 2024-11-16 18:35 UTC | 2 hours and 53 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 18:35 - 24:28 UTC | Not specified |
+
+Note: The availability zone is not explicitly mentioned in the text, so it was not included in the table.

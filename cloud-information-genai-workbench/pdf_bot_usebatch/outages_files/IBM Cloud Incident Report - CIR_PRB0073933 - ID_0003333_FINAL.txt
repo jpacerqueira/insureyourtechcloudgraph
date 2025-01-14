@@ -1,0 +1,166 @@
+After analyzing the text, I found that the following public cloud services were impacted:
+
+**IBM Cloud**
+
+* Service: Internet Services
+* Region: All regions
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: 1 hour 32 minutes
+* Root Cause: Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn.
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**AppID**
+
+* Service: AppID
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: Not specified
+* Root Cause: Same as Internet Services
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**Schematics**
+
+* Service: Schematics
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: Not specified
+* Root Cause: Same as Internet Services
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**Secrets Manager**
+
+* Service: Secrets Manager
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: Not specified
+* Root Cause: Same as Internet Services
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**UI**
+
+* Service: UI
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: Not specified
+* Root Cause: Same as Internet Services
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**Bluemix-developer-experience**
+
+* Service: Bluemix-developer-experience
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: Not specified
+* Root Cause: Same as Internet Services
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**Cloudcerts**
+
+* Service: Cloudcerts
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: Not specified
+* Root Cause: Same as Internet Services
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**Code Engine**
+
+* Service: Code Engine
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: Not specified
+* Root Cause: Same as Internet Services
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**Compliance**
+
+* Service: Compliance
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: Not specified
+* Root Cause: Same as Internet Services
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**Continuous-delivery-pipeline**
+
+* Service: Continuous-delivery-pipeline
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: Not specified
+* Root Cause: Same as Internet Services
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**Virtual Private Cloud**
+
+* Service: Virtual Private Cloud
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: Not specified
+* Root Cause: Same as Internet Services
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**Cloud App Dev Services**
+
+* Service: Cloud App Dev Services
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: Not specified
+* Root Cause: Same as Internet Services
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**Event-notifications**
+
+* Service: Event-notifications
+* Region: Not specified
+* Availability Zone: Not specified
+* Impact Date: 2022-06-21 06:34 UTC
+* Duration: Not specified
+* Root Cause: Same as Internet Services
+* Downtime Period: 2022-06-21 06:34 - 08:06 UTC
+* Resolved Date: 2022-06-21 08:06 UTC
+
+**Summary**
+
+The following cloud providers were impacted:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| IBM Cloud | Internet Services | us-east-1,us-west-2,eu-de,eu-fr,ap-southeast-1,ap-northeast-1 |  | 2022-06-21 06:34 UTC | 1 hour 32 minutes | Third-party vendor's BGP configuration change caused a critical set of IP prefixes to be withdrawn. | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+| IBM Cloud | AppID |  |  | 2022-06-21 06:34 UTC |  | Same as Internet Services | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+| IBM Cloud | Schematics |  |  | 2022-06-21 06:34 UTC |  | Same as Internet Services | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+| IBM Cloud | Secrets Manager |  |  | 2022-06-21 06:34 UTC |  | Same as Internet Services | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+| IBM Cloud | UI |  |  | 2022-06-21 06:34 UTC |  | Same as Internet Services | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+| IBM Cloud | Bluemix-developer-experience |  |  | 2022-06-21 06:34 UTC |  | Same as Internet Services | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+| IBM Cloud | Cloudcerts |  |  | 2022-06-21 06:34 UTC |  | Same as Internet Services | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+| IBM Cloud | Code Engine |  |  | 2022-06-21 06:34 UTC |  | Same as Internet Services | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+| IBM Cloud | Compliance |  |  | 2022-06-21 06:34 UTC |  | Same as Internet Services | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+| IBM Cloud | Continuous-delivery-pipeline |  |  | 2022-06-21 06:34 UTC |  | Same as Internet Services | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+| IBM Cloud | Virtual Private Cloud |  |  | 2022-06-21 06:34 UTC |  | Same as Internet Services | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+| IBM Cloud | Cloud App Dev Services |  |  | 2022-06-21 06:34 UTC |  | Same as Internet Services | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+| IBM Cloud | Event-notifications |  |  | 2022-06-21 06:34 UTC |  | Same as Internet Services | 2022-06-21 06:34 - 08:06 UTC | 2022-06-21 08:06 UTC |
+
+Note: The regions and availability zones listed are not exhaustive, as the services were impacted across multiple regions and availability zones.
