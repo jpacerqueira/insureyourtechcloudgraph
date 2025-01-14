@@ -35,7 +35,7 @@ Affected Components: Amazon AWS Direct Connect
 Source Outage Report: outages_files/20201125-Summary of the Amazon Kinesis Event in the Northern Virginia (US-EAST-1) Region
 Cloud Provider: AWS
 Cloud Services: Amazon Kinesis, Amazon Kinesis, Amazon CloudWatch, Amazon AWS Direct Connect, Amazon AWS Lambda, rs
-Regions: ca-central-1, me-central-1, il-central-1, ap-south-1, ap-northeast-3, ap-southeast-4, ap-southeast-3, us-gov-west-1, eu-west-1, eu-north-1, global-default, ap-southeast-1, us-west-1, us-gov-east-1, ap-south-2, eu-west-3, cn-north-1, us-east-1, sa-east-1, ap-northeast-2, ap-northeast-1, eu-south-2, af-south-1, us-east-2, ap-east-1, me-south-1, eu-south-1, eu-central-1, northern virginia (us-east-1), cn-northwest-1, eu-west-2, eu-central-2, us-west-2, ap-southeast-2
+Regions: eu-north-1, cn-north-1, us-east-2, ap-northeast-3, ap-south-1, ap-southeast-4, ap-northeast-2, eu-west-3, sa-east-1, ap-south-2, ap-southeast-3, ap-southeast-2, us-east-1, af-south-1, us-west-2, il-central-1, us-gov-west-1, eu-central-1, ap-southeast-1, eu-west-1, us-gov-east-1, eu-west-2, eu-central-2, northern virginia (us-east-1), me-south-1, cn-northwest-1, eu-south-1, me-central-1, ap-northeast-1, eu-south-2, global-default, us-west-1, ca-central-1, ap-east-1
 Availability Zones: not specified
 Start Time: 2020-11-25 10:44:00+00:00
 End Time: 2020-11-26 01:47:00+00:00
@@ -53,7 +53,7 @@ Affected Components: Amazon AWS Direct Connect
 Source Outage Report: outages_files/20210913-Summary of AWS Direct Connect Event in the Tokyo (AP-NORTHEAST-1) Region
 Cloud Provider: AWS
 Cloud Services: Amazon AWS Direct Connect, abr, Amazon AWS Direct Connect, rs
-Regions: tokyo (ap-northeast-1), ap-northeast-1, service impacted: direct connect
+Regions: ap-northeast-1, tokyo (ap-northeast-1), service impacted: direct connect
 Availability Zones: not specified
 Start Time: 2021-09-02 07:30:00+00:00
 End Time: 2021-09-02 04:00:00+00:00
@@ -177,7 +177,7 @@ Affected Components: ALB, Amazon Elastic Container Service, Amazon Elastic Kuber
 Source Outage Report: outages_files/AWS PES - 21 April 2021 - Summary of the Amazon EC2 and Amazon RDS Service Disruption in the US East Region.22
 Cloud Provider: AWS
 Cloud Services: Amazon Elastic Compute Cloud, Amazon Elastic Block Store, Amazon ElastiCache, Amazon AWS Direct Connect, rs
-Regions: us-east-1, us east region
+Regions: us east region, us-east-1
 Availability Zones: single availability zone (not specified)
 Start Time: 2025-04-21 18:00:00+00:00
 End Time: 2025-04-21 00:00:00
@@ -213,7 +213,7 @@ Affected Components: Amazon Web Services (AWS)
 Source Outage Report: outages_files/Azure status history _ 13 November 2024 - Preliminary Incident Report  _ Microsoft Azure
 Cloud Provider: Azure
 Cloud Services: Azure Active Directory, Azure Databricks, Azure Databricks, Azure Functions, Azure Functions, Azure Storage Accounts
-Regions: southeast asia, and/or korea central, westeurope, eastus, australiaeast, west europe, southeastasia
+Regions: west europe, southeast asia, southeastasia, eastus, westeurope, australiaeast, and/or korea central
 Availability Zones: west europe: not specified
 Start Time: 2024-11-13 12:30:00+00:00
 End Time: 2025-01-14 00:40:00
@@ -231,7 +231,7 @@ Affected Components: Microsoft Azure
 Source Outage Report: outages_files/Azure_status_history_Microsoft_Azure_p10_2020
 Cloud Provider: Azure
 Cloud Services: Azure Active Directory, Azure Active Directory, Azure Databricks, Azure SQL Database, aps, Azure Functions, ala
-Regions: brazilsouth, australiasoutheast, switzerlandwest, westindia, canadacentral, westeurope, chinaeast, eastus3, brazilsoutheast, swedensouth, eastus, chinaeast3, ukwest, southeastasia, westus, koreacentral, southcentralus, francecentral, uaecentral, koreasouth, chinacloudsites.cn, usgovtexas, global-default, northeurope, japan west, southindia, southafricanorth, westus2, centralindia, japan east, norwayeast, norwaywest, westus3, uksouth, italynorth, centraleurope, usgovvirginia, chinaeast2, australiacentral, canadaeast, uaenorth, chinanorth, qatarcentral, japaneast, chinanorth3, germanywestcentral, australiacentral2, germanynorth, eastasia, usgovarizona, swedencentral, chinanorth2, chinacloudapp.cn, eastus2, centralus, francesouth, australiaeast, southafricawest, japanwest, northcentralus, switzerlandnorth
+Regions: canadacentral, chinanorth2, usgovtexas, chinaeast2, japan east, brazilsouth, brazilsoutheast, italynorth, chinacloudapp.cn, westus2, japanwest, centralus, southafricawest, japaneast, westus3, ukwest, australiaeast, westindia, australiacentral2, uaenorth, chinacloudsites.cn, japan west, centralindia, southafricanorth, southindia, westus, francecentral, chinaeast, usgovarizona, norwayeast, chinanorth3, uksouth, eastasia, centraleurope, eastus3, germanywestcentral, chinanorth, swedensouth, northcentralus, chinaeast3, koreacentral, germanynorth, westeurope, australiacentral, uaecentral, eastus2, global-default, usgovvirginia, canadaeast, southcentralus, swedencentral, southeastasia, switzerlandwest, norwaywest, eastus, australiasoutheast, qatarcentral, northeurope, switzerlandnorth, koreasouth, francesouth
 Availability Zones: not specified
 Start Time: 2020-07-01 09:24:00+00:00
 End Time: 2020-07-02 03:40:00+00:00
@@ -249,7 +249,7 @@ Affected Components: 1. Microsoft Azure, Azure SQL Database, Synapse Analytics, 
 Source Outage Report: outages_files/Azure_status_history_Microsoft_Azure_p10_2021
 Cloud Provider: Azure
 Cloud Services: Azure Active Directory, Azure Cosmos DB, Azure Functions, Azure Functions, Azure Cosmos DB
-Regions: westus, west us cosmos db, west us
+Regions: west us, west us cosmos db, westus
 Availability Zones: not specified
 Start Time: 2025-09-28 18:45:00+00:00
 End Time: 2025-01-14 18:45:00+00:00
@@ -267,7 +267,7 @@ Affected Components: Microsoft Azure
 Source Outage Report: outages_files/Azure_status_history_Microsoft_Azure_p11_2020
 Cloud Provider: Azure
 Cloud Services: Azure Active Directory, Azure Databricks, aps, Azure Functions
-Regions: eastus, the, east us
+Regions: the, east us, eastus
 Availability Zones: not specified
 Start Time: 2020-06-11 11:57:00+00:00
 End Time: 2025-01-14 00:50:00
@@ -284,7 +284,7 @@ Downtime Period: 2020-06-11 12:00 - 2020-06-11 15:23 UTC
 Source Outage Report: outages_files/Azure_status_history_Microsoft_Azure_p12_2020
 Cloud Provider: Azure
 Cloud Services: Ams, Azure Functions
-Regions: brazilsouth, australiasoutheast, switzerlandwest, westindia, canadacentral, westeurope, chinaeast, eastus3, brazilsoutheast, swedensouth, eastus, chinaeast3, ukwest, southeastasia, westus, koreacentral, southcentralus, francecentral, uaecentral, koreasouth, chinacloudsites.cn, usgovtexas, global-default, northeurope, japan west, southindia, southafricanorth, westus2, centralindia, norwayeast, japan east, norwaywest, uksouth, westus3, italynorth, centraleurope, usgovvirginia, chinaeast2, australiacentral, canadaeast, south central us, uaenorth, chinanorth, qatarcentral, japaneast, chinanorth3, germanywestcentral, australiacentral2, germanynorth, eastasia, usgovarizona, swedencentral, chinanorth2, chinacloudapp.cn, eastus2, centralus, francesouth, australiaeast, southafricawest, japanwest, amsterdam, northcentralus, switzerlandnorth
+Regions: canadacentral, chinanorth2, usgovtexas, chinaeast2, brazilsouth, japan east, brazilsoutheast, italynorth, chinacloudapp.cn, westus2, japanwest, centralus, southafricawest, westus3, australiaeast, ukwest, japaneast, westindia, australiacentral2, uaenorth, chinacloudsites.cn, japan west, centralindia, southafricanorth, southindia, westus, francecentral, chinaeast, usgovarizona, norwayeast, chinanorth3, uksouth, eastasia, centraleurope, eastus3, south central us, germanywestcentral, chinanorth, swedensouth, northcentralus, chinaeast3, koreacentral, germanynorth, westeurope, australiacentral, uaecentral, eastus2, global-default, usgovvirginia, amsterdam, canadaeast, southcentralus, swedencentral, southeastasia, switzerlandwest, norwaywest, eastus, australiasoutheast, qatarcentral, northeurope, switzerlandnorth, koreasouth, francesouth
 Availability Zones: not specified
 Start Time: 2020-02-28 12:48:00+00:00
 End Time: 2020-02-28 22:28:00+00:00
@@ -302,7 +302,7 @@ Affected Components: Microsoft Azure
 Source Outage Report: outages_files/Azure_status_history_Microsoft_Azure_p13_2019
 Cloud Provider: Azure
 Cloud Services: Azure Functions, Azure CDN
-Regions: global (except north america), north america
+Regions: north america, global (except north america)
 Availability Zones: not specified
 Start Time: 2019-12-11 17:24:00+00:00
 End Time: 2019-12-11 21:48:00+00:00
@@ -320,7 +320,7 @@ Affected Components: Azure CDN
 Source Outage Report: outages_files/Azure_status_history_Microsoft_Azure_p1_2024
 Cloud Provider: Azure
 Cloud Services: Azure SQL Database, Azure Functions, Azure Functions, Azure Functions, Content Delivery Network
-Regions: brazilsouth, australiasoutheast, switzerlandwest, westindia, canadacentral, westeurope, chinaeast, eastus3, brazilsoutheast, swedensouth, eastus, chinaeast3, ukwest, southeastasia, westus, koreacentral, southcentralus, francecentral, uaecentral, koreasouth, chinacloudsites.cn, usgovtexas, global-default, northeurope, japan west, southindia, southafricanorth, westus2, centralindia, norwayeast, japan east, norwaywest, uksouth, westus3, italynorth, centraleurope, usgovvirginia, chinaeast2, australiacentral, canadaeast, uaenorth, chinanorth, qatarcentral, japaneast, chinanorth3, germanywestcentral, australiacentral2, germanynorth, eastasia, usgovarizona, swedencentral, chinanorth2, chinacloudapp.cn, not specified, eastus2, centralus, francesouth, australiaeast, southafricawest, japanwest, northcentralus, switzerlandnorth
+Regions: canadacentral, chinanorth2, usgovtexas, chinaeast2, brazilsouth, japan east, brazilsoutheast, italynorth, chinacloudapp.cn, westus2, japanwest, centralus, southafricawest, westus3, australiaeast, ukwest, japaneast, westindia, australiacentral2, uaenorth, chinacloudsites.cn, japan west, centralindia, southafricanorth, southindia, westus, francecentral, chinaeast, usgovarizona, norwayeast, chinanorth3, uksouth, eastasia, centraleurope, eastus3, germanywestcentral, chinanorth, swedensouth, northcentralus, chinaeast3, koreacentral, not specified, germanynorth, westeurope, australiacentral, uaecentral, eastus2, global-default, usgovvirginia, canadaeast, southcentralus, swedencentral, southeastasia, switzerlandwest, norwaywest, eastus, australiasoutheast, qatarcentral, northeurope, switzerlandnorth, koreasouth, francesouth
 Availability Zones: not specified
 Start Time: 2024-10-22 18:30:00+00:00
 End Time: 2024-10-22 19:30:00+00:00
@@ -356,7 +356,7 @@ Affected Components: Microsoft Azure, Azure Cosmos DB, Azure Virtual Desk top, A
 Source Outage Report: outages_files/Azure_status_history_Microsoft_Azure_p3_2023
 Cloud Provider: Azure
 Cloud Services: Azure Functions
-Regions: westeurope, southeast asia experienced cooling failure, southeastasia, southeast asia and east asia
+Regions: southeast asia experienced cooling failure, southeast asia and east asia, southeastasia, westeurope
 Availability Zones: one az in southeast asia experienced cooling failure
 Start Time: 2023-02-07 20:19:00+00:00
 End Time: 2023-02-07 20:19:00+00:00
@@ -427,7 +427,7 @@ Affected Components: Access Panel, Azure App Service, Azure Functions, Web Deplo
 Source Outage Report: outages_files/Azure_status_history_Microsoft_Azure_p7_2021
 Cloud Provider: Azure
 Cloud Services: Azure Functions, Azure CDN
-Regions: brazilsouth, australiasoutheast, switzerlandwest, westindia, canadacentral, westeurope, chinaeast, eastus3, brazilsoutheast, swedensouth, eastus, chinaeast3, ukwest, southeastasia, westus, koreacentral, southcentralus, francecentral, uaecentral, koreasouth, chinacloudsites.cn, usgovtexas, global-default, northeurope, japan west, southindia, southafricanorth, westus2, centralindia, norwayeast, japan east, norwaywest, uksouth, westus3, italynorth, centraleurope, usgovvirginia, chinaeast2, australiacentral, canadaeast, uaenorth, chinanorth, qatarcentral, japaneast, chinanorth3, germanywestcentral, australiacentral2, germanynorth, eastasia, usgovarizona, swedencentral, chinanorth2, chinacloudapp.cn, east us, eastus2, centralus, francesouth, australiaeast, southafricawest, japanwest, northcentralus, switzerlandnorth
+Regions: canadacentral, chinanorth2, usgovtexas, chinaeast2, brazilsouth, japan east, brazilsoutheast, italynorth, chinacloudapp.cn, westus2, japanwest, centralus, southafricawest, westus3, australiaeast, ukwest, japaneast, westindia, australiacentral2, uaenorth, chinacloudsites.cn, japan west, centralindia, southafricanorth, southindia, westus, francecentral, chinaeast, usgovarizona, norwayeast, chinanorth3, uksouth, eastasia, centraleurope, eastus3, germanywestcentral, chinanorth, swedensouth, northcentralus, chinaeast3, koreacentral, germanynorth, westeurope, australiacentral, uaecentral, eastus2, east us, global-default, usgovvirginia, canadaeast, southcentralus, swedencentral, southeastasia, switzerlandwest, norwaywest, eastus, australiasoutheast, qatarcentral, northeurope, switzerlandnorth, koreasouth, francesouth
 Availability Zones: not specified
 Start Time: 2021-07-12 14:55:00+00:00
 End Time: 2021-07-12 21:28:00+00:00
@@ -445,7 +445,7 @@ Affected Components: Microsoft Azure, Azure Front Door, Azure CDN Standard, Wind
 Source Outage Report: outages_files/Azure_status_history_Microsoft_Azure_p8_2021
 Cloud Provider: Azure
 Cloud Services: Azure Functions, Azure Functions
-Regions: northeurope, not specified (impacted downstream services), westeurope, west europe and north europe, west europe
+Regions: west europe, northeurope, westeurope, not specified (impacted downstream services), west europe and north europe
 Availability Zones: not specified
 Start Time: 2021-03-18 23:00:00+00:00
 End Time: 2021-03-19 01:50:00+00:00
@@ -463,7 +463,7 @@ Affected Components: Microsoft Azure
 Source Outage Report: outages_files/Azure_status_history_Microsoft_Azure_p9_2020
 Cloud Provider: Azure
 Cloud Services: Azure Active Directory, Azure Cosmos DB, Azure Functions, Azure Functions, Azure Cosmos DB
-Regions: brazilsouth, australiasoutheast, switzerlandwest, westindia, canadacentral, westeurope, chinaeast, eastus3, brazilsoutheast, swedensouth, eastus, chinaeast3, ukwest, southeastasia, westus, koreacentral, southcentralus, francecentral, uaecentral, koreasouth, chinacloudsites.cn, usgovtexas, global-default, northeurope, japan west, southindia, southafricanorth, westus2, centralindia, norwayeast, japan east, norwaywest, uksouth, westus3, italynorth, centraleurope, usgovvirginia, chinaeast2, australiacentral, canadaeast, uaenorth, chinanorth, qatarcentral, japaneast, chinanorth3, germanywestcentral, australiacentral2, a version update of a component that controls network traffic routing between azure, west us, germanynorth, eastasia, usgovarizona, swedencentral, chinanorth2, chinacloudapp.cn, eastus2, centralus, francesouth, australiaeast, southafricawest, japanwest, region, northcentralus, switzerlandnorth
+Regions: canadacentral, chinanorth2, usgovtexas, chinaeast2, brazilsouth, japan east, brazilsoutheast, italynorth, chinacloudapp.cn, westus2, japanwest, centralus, southafricawest, westus3, australiaeast, ukwest, japaneast, westindia, australiacentral2, uaenorth, chinacloudsites.cn, japan west, centralindia, southafricanorth, region, southindia, westus, francecentral, chinaeast, usgovarizona, norwayeast, chinanorth3, uksouth, eastasia, a version update of a component that controls network traffic routing between azure, west us, centraleurope, eastus3, germanywestcentral, chinanorth, swedensouth, northcentralus, chinaeast3, koreacentral, germanynorth, westeurope, australiacentral, uaecentral, eastus2, global-default, usgovvirginia, canadaeast, southcentralus, swedencentral, southeastasia, switzerlandwest, norwaywest, eastus, australiasoutheast, qatarcentral, northeurope, switzerlandnorth, koreasouth, francesouth
 Availability Zones: not specified
 Start Time: 2025-01-14 18:45:00+00:00
 End Time: 2025-01-14 21:30:00+00:00
@@ -517,7 +517,7 @@ Affected Components: The following Cloud Providers were impacted:, The following
 Source Outage Report: outages_files/Google Cloud Service Health - - Incident report 2023-08-07
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Service
-Regions: asia-northeast1, asia-northeast3
+Regions: asia-northeast3, asia-northeast1
 Availability Zones: 
 Start Time: 2023-08-07 12:35:00+00:00
 End Time: 2023-08-07 14:56:00+00:00
@@ -552,7 +552,7 @@ Affected Components: Google Cloud VertexAI
 Source Outage Report: outages_files/Google Cloud Service Health - - Incident report 2024-02-15
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud Service, AutoML Tables
-Regions: us-west2, europe-west1, europe-west4, europe-west2, europe-west3, multiple, us-central1
+Regions: europe-west3, europe-west4, us-west2, europe-west1, multiple, europe-west2, us-central1
 Availability Zones: not specified
 Start Time: 2024-02-15 06:27:00+00:00
 End Time: 2024-02-15 13:04:00+00:00
@@ -588,7 +588,7 @@ Affected Components: Apigee Sense, Apigee Sense
 Source Outage Report: outages_files/Google Cloud Service Health - - Incident report 2024-03-20
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Speech-to-Text
-Regions: following, asia-southeast1, us-west1, us-east1, europe-west1, europe-west4, europe-west2, asia-south1, europe-west3, sydney, asia-northeast1, multiple, australia-southeast1, us-central1, northamerica-northeast1
+Regions: europe-west3, asia-south1, europe-west4, us-east1, asia-southeast1, europe-west1, multiple, northamerica-northeast1, us-west1, asia-northeast1, europe-west2, following, sydney, australia-southeast1, us-central1
 Availability Zones: asia-northeast1: tokyo
 Start Time: 2024-03-20 11:12:00+00:00
 End Time: 2024-03-20 11:47:00+00:00
@@ -641,7 +641,7 @@ Downtime Period:
 Source Outage Report: outages_files/Google Cloud Service Health - - Incident report 2024-04-23
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API
-Regions: europe-west8, asia-south1, asia-east1, europe-central2, southamerica-west1, asia-northeast3, us-west2, europe-southwest1, europe-west9, asia-south2, us-east4, europe-west6, us-south1, us-west4, us-east5, us-central1, northamerica-northeast1, asia-southeast2, asia-northeast2, us-west1, europe-west1, asia-east2, me-west1, me-central1, asia-northeast1, us-east1, europe-north1, northamerica-northeast2, asia-southeast1, us-west3, europe-west4, southamerica-east1
+Regions: asia-south1, us-west1, europe-west8, asia-northeast1, us-west4, asia-east1, asia-east2, asia-southeast2, me-central1, asia-south2, us-east1, asia-southeast1, europe-west6, europe-north1, southamerica-east1, southamerica-west1, us-east5, europe-west4, us-east4, us-south1, us-west2, europe-west1, europe-central2, asia-northeast3, northamerica-northeast2, us-west3, europe-west9, europe-southwest1, northamerica-northeast1, asia-northeast2, me-west1, us-central1
 Availability Zones: not specified
 Start Time: 2024-04-23 12:25:00+00:00
 End Time: 2024-04-23 15:53:00+00:00
@@ -659,7 +659,7 @@ Affected Components: Google Cloud Service, Google Cloud Apigee API
 Source Outage Report: outages_files/Google Cloud Service Health - - Incident report 2024-06-20
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio
-Regions: europe-west5, europe-west8, us-east7, europe-west10, europe-west2, asia-east1, europe-west7, europe-central2, us-central4, us-west6, southamerica-west1, me-central2, us-central5, google, europe-west, us-west2, europe-southwest1, us-east2, europe-west12, europe-west11, europe-west9, europe-west14, us-west7, asia-south2, us (multi-regions), us-east4, us-south1, us-west4, europe-west6, us-east5, us-central1, northamerica-northeast1, asia-west2, asia-northeast2, us-west5, us-west1, us-central3, africa-south1, me-west1, australia-southeast2, asia-west1, us, us-west8, us-east1, europe-north1, us-east9, asia-southeast1, eu, us-west3, southamerica-east1, europe-west4, europe-west3, multi-regions (no specific zones mentioned), us-east8, europe-west13, asia
+Regions: europe-west5, asia, us-east9, us-west1, europe-west8, us, europe-west10, us-west4, asia-east1, europe-west11, us-west5, europe-west3, asia-west1, me-central2, asia-south2, us-east1, australia-southeast2, asia-southeast1, europe-west12, europe-west6, europe-north1, southamerica-east1, europe-west2, us-west8, southamerica-west1, us-east5, us-central4, europe-west14, europe-west7, us-west6, us-east4, us-south1, europe-west4, europe-west13, us-west2, multi-regions (no specific zones mentioned), us (multi-regions), europe-central2, us-west3, africa-south1, us-east8, europe-west9, us-west7, europe-west, us-east7, asia-west2, us-east2, europe-southwest1, northamerica-northeast1, asia-northeast2, eu, us-central3, us-central5, me-west1, google, us-central1
 Availability Zones: multi-regions (no specific zones mentioned)
 Start Time: 2024-06-20 10:30:00+00:00
 End Time: 2024-06-20 12:42:00+00:00
@@ -695,7 +695,7 @@ Affected Components: Vertex AI Online Prediction, Vertex AI Online Prediction
 Source Outage Report: outages_files/Google Cloud Service Health - - Incident report 2024-08-12
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud Load Balancing, Cloud CDN, Google Cloud Load Balancing, Hybrid Connectivity, Virtual Private Cloud (VPC), Gmail, Google Calendar, Google Chat, Google Docs, Google Drive, Google Meet, Google Tasks
-Regions: europe-west2, europe-west2 (london)
+Regions: europe-west2 (london), europe-west2
 Availability Zones: not specified
 Start Time: 2024-08-12 06:20:00+00:00
 End Time: 2024-08-12 08:19:00+00:00
@@ -713,7 +713,7 @@ Affected Components: Google Cloud Provider
 Source Outage Report: outages_files/Google Cloud Service Health - - Incident report 2024-11-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, Cloud SQL, Google Cloud Load Balancing
-Regions: europe-west8, europe-west2, asia-south1, asia-east1, europe-central2, southamerica-west1, asia-northeast3, australia-southeast1, us-west2, europe-southwest1, global-default, europe-west9, asia-south2, us-east4, us-south1, us-west4, europe-west6, us-east5, us-central1, northamerica-northeast1, asia-southeast2, asia-northeast2, us-west1, europe-west1, asia-east2, me-west1, australia-southeast2, me-central1, asia-northeast1, us-east1, europe-north1, northamerica-northeast2, asia-southeast1, us-west3, southamerica-east1, europe-west4, europe-west3
+Regions: asia-south1, us-west1, europe-west8, asia-northeast1, us-west4, asia-east1, asia-east2, asia-southeast2, europe-west3, me-central1, asia-south2, us-east1, australia-southeast2, asia-southeast1, europe-west6, europe-north1, southamerica-east1, europe-west2, southamerica-west1, us-east5, europe-west4, us-east4, us-south1, us-west2, europe-west1, europe-central2, asia-northeast3, northamerica-northeast2, us-west3, global-default, europe-west9, australia-southeast1, europe-southwest1, northamerica-northeast1, asia-northeast2, me-west1, us-central1
 Availability Zones: not specified
 Start Time: 2024-11-16 00:52:00+00:00
 End Time: 2024-11-16 03:36:00+00:00
@@ -749,7 +749,7 @@ Affected Components: Google Cloud reCAPTCHA Enterprise, Google Cloud reCAPTCHA E
 Source Outage Report: outages_files/Google Cloud Service Health - 2024-09-18 - part1
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Cloud Functions, Google App Engine, Google Cloud Functions Gen1, Google Firestore
-Regions: asia-southeast2, asia-northeast2, asia-southeast1, us-west1, us-east1, us-west3, southamerica-east1, europe-west2, asia-south1, asia-east1, europe-west3, europe-central2, us-central2, us-east4, europe-west6, asia-northeast3, australia-southeast1, northamerica-northeast1
+Regions: europe-west3, asia-south1, us-east4, us-east1, asia-southeast1, europe-central2, europe-west6, northamerica-northeast1, us-west1, asia-northeast2, asia-northeast3, europe-west2, southamerica-east1, us-central2, us-west3, asia-east1, asia-southeast2, australia-southeast1
 Availability Zones: not specified
 Start Time: 2024-09-18 12:34:00+00:00
 End Time: 2024-09-18 15:30:00+00:00
@@ -785,7 +785,7 @@ Affected Components: Google Cloud VertexAI
 Source Outage Report: outages_files/Google Cloud Service Health - 2024-10-29 - part1
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud Compute Engine, df, {service}\n"
-Regions: eu-central-1, us-east-1, ap-southeast-1, {region}\n", us-west-2, eu-west-3
+Regions: us-east-1, us-west-2, eu-central-1, ap-southeast-1, {region}\n", eu-west-3
 Availability Zones: {availability_zone}\n"
 Start Time: 2024-01-01 00:00:00+00:00
 End Time: 2024-01-01 00:00:00+00:00
@@ -857,7 +857,7 @@ Source Outage Report: outages_files/Google Cloud Service Health - 2025-01-08 - p
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google SecOps (Chronicle Security)
 Regions: global-default
-Availability Zones: asia-southeast1, europe, europe-west12, me-west1, southamerica-east1, europe-west2, europe-west9, asia-south1, europe-west3, me-central1, me-central2, asia-northeast1, europe-west6, australia-southeast1, northamerica-northeast2
+Availability Zones: europe-west3, asia-south1, me-central1, me-central2, asia-southeast1, europe-west12, europe-west6, southamerica-east1, europe-west2, asia-northeast1, northamerica-northeast2, europe, me-west1, europe-west9, australia-southeast1
 Start Time: 2025-01-08 12:14:00+00:00
 End Time: 2025-01-08 11:06:00+00:00
 Outage Status: resolved
@@ -874,7 +874,7 @@ Affected Components: Google Cloud VertexAI
 Source Outage Report: outages_files/Google Cloud Service Health - 2025-01-08 - part2
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, Google Cloud DataStudio, Google Cloud Pub/Sub, Pub/Sub
-Regions: europe-west8, europe-west2, asia-south1, asia-east1, europe-central2, southamerica-west1, asia-northeast3, australia-southeast1, us-west2, europe-southwest1, global-default, europe-west9, asia-south2, us-south1, us-east4, us-west4, europe-west6, us-east5, us-central1, northamerica-northeast1, asia-southeast2, asia-northeast2, us-west1, europe-west1, asia-east2, me-west1, australia-southeast2, me-central1, asia-northeast1, us-east1, europe-north1, northamerica-northeast2, asia-southeast1, us-west3, southamerica-east1, europe-west4, europe-west3
+Regions: asia-south1, us-west1, europe-west8, asia-northeast1, us-west4, asia-east1, asia-east2, asia-southeast2, me-central1, europe-west3, asia-south2, us-east1, australia-southeast2, asia-southeast1, europe-west6, europe-north1, southamerica-east1, europe-west2, southamerica-west1, us-east5, europe-west4, us-south1, us-east4, us-west2, europe-west1, europe-central2, asia-northeast3, northamerica-northeast2, us-west3, global-default, europe-west9, australia-southeast1, europe-southwest1, northamerica-northeast1, asia-northeast2, me-west1, us-central1
 Availability Zones: not specified
 Start Time: 2025-01-08 06:54:00+00:00
 End Time: 2025-01-08 08:07:00+00:00
@@ -892,7 +892,7 @@ Affected Components: Google Cloud VertexAI
 Source Outage Report: outages_files/Google Cloud Service Health - Incident 2023-11-27
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud SQL, Google Cloud DataStudio
-Regions: asia-southeast1, europe-west8, europe-west10, europe-west12, southamerica-east1, europe-west2, europe-west9, asia-east1, europe-west3, europe-west4, sydney, asia-northeast1, us-east4, europe-west6, us-east1, us-central1
+Regions: europe-west3, europe-west4, us-east4, us-east1, asia-southeast1, europe-west12, europe-west6, europe-west8, southamerica-east1, asia-northeast1, europe-west2, europe-west10, sydney, asia-east1, europe-west9, us-central1
 Availability Zones: 
 Start Time: 2023-11-27 05:01:00+00:00
 End Time: 2023-11-29 13:55:00+00:00
@@ -981,7 +981,7 @@ Affected Components: Google Cloud VertexAI
 Source Outage Report: outages_files/Google Cloud Service Health - Incident 2024-04-19
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Distributed Cloud Edge
-Regions: us-west2 (los angeles), us-west2, asia-east2 (hong kong), asia-east2, asia-south1 (mumbai), southamerica-east1, asia-south1, southamerica-east1 (são paulo)
+Regions: asia-south1, asia-east2 (hong kong), us-west2, southamerica-east1 (são paulo), southamerica-east1, asia-south1 (mumbai), us-west2 (los angeles), asia-east2
 Availability Zones: not specified
 Start Time: 2024-04-19 12:39:00+00:00
 End Time: 2024-04-19 14:58:00+00:00
@@ -1035,7 +1035,7 @@ Affected Components: Google Cloud VertexAI, Google Cloud Tasks
 Source Outage Report: outages_files/Google Cloud Service Health - Incident 2024-05-24
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, EdgeContainer API
-Regions: all, asia-southeast1, asia-pacific, asia-east2, asia-south1, asia-east1, asia-south2, asia-northeast1, asia-northeast3
+Regions: asia-south1, asia-south2, asia-southeast1, asia-pacific, asia-northeast3, asia-northeast1, asia-east1, asia-east2, all
 Availability Zones: asia-east1: not specified
 Start Time: 2024-05-24 03:38:00+00:00
 End Time: 2024-05-24 09:36:00+00:00
@@ -1053,7 +1053,7 @@ Affected Components: Google Cloud VertexAI
 Source Outage Report: outages_files/Google Cloud Service Health - Incident 2024-05-29
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, df, Google Cloud NetApp Volumes
-Regions: impacted, northamerica-northeast1 and us-west4, us-west4, northamerica-northeast1
+Regions: impacted, us-west4, northamerica-northeast1 and us-west4, northamerica-northeast1
 Availability Zones: not specified
 Start Time: 2024-05-29 11:06:00+00:00
 End Time: 2024-05-29 15:04:00+00:00
@@ -1142,7 +1142,7 @@ Affected Components: Google Cloud reCAPTCHA Enterprise, Google Cloud reCAPTCHA E
 Source Outage Report: outages_files/Google Cloud Service Health - Incident 2024-07-25
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud VMware Engine
-Regions: europe-west8, europe-west2, asia-south1, southamerica-west1, australia-southeast1, us-west2, europe-west12, asia-south2, us-east4, europe-west6, us-central1, northamerica-northeast1, me-west1, asia-northeast1, northamerica-northeast2, asia-southeast1, europe-west4, southamerica-east1, europe-west3
+Regions: asia-south1, europe-west8, asia-northeast1, europe-west3, asia-south2, asia-southeast1, europe-west12, europe-west6, southamerica-east1, europe-west2, southamerica-west1, europe-west4, us-east4, us-west2, northamerica-northeast2, australia-southeast1, northamerica-northeast1, me-west1, us-central1
 Availability Zones: 
 Start Time: 2024-07-25 09:15:00+00:00
 End Time: 2024-07-25 14:38:00+00:00
@@ -1160,7 +1160,7 @@ Affected Components: Google Cloud VertexAI
 Source Outage Report: outages_files/Google Cloud Service Health - Incident 2024-07-30
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Private Cloud Certiificate's renewal (DigiCert)
-Regions: asia-southeast1, europe-west1, europe-west12, europe-west2, asia-south1, sydney, asia-south2, asia-northeast1, australia-southeast1
+Regions: asia-south1, asia-south2, asia-southeast1, europe-west12, europe-west1, asia-northeast1, europe-west2, sydney, australia-southeast1
 Availability Zones: tokyo
 Start Time: 2024-07-30 02:36:00+00:00
 End Time: 2024-07-30 12:44:00+00:00
@@ -1178,7 +1178,7 @@ Affected Components: Google Cloud VertexAI
 Source Outage Report: outages_files/Google Cloud Service Health - Incident 2024-08-15
 Cloud Provider: GCP
 Cloud Services: Google Distributed Cloud Edge, Cluster creation and update operations
-Regions: europe-west8, europe-west2, asia-south1, asia-east1, europe-central2, southamerica-west1, asia-northeast3, us-west2, europe-west9, asia-south2, us-east4, europe-west6, us-south1, us-west4, us-east5, us-central1, northamerica-northeast1, asia-southeast2, us-west1, europe-west1, asia-east2, me-west1, me-central1, asia-northeast1, australiasoutheast1, us-east1, europe-north1, northamerica-northeast2, asia-southeast1, us-west3, europe-west4, southamerica-east1, eunorth1, europe-west3
+Regions: asia-south1, us-west1, europe-west8, asia-northeast1, us-west4, asia-east1, asia-east2, asia-southeast2, europe-west3, me-central1, asia-south2, us-east1, asia-southeast1, europe-west6, europe-north1, southamerica-east1, europe-west2, southamerica-west1, us-east5, europe-west4, us-east4, us-south1, us-west2, europe-west1, europe-central2, asia-northeast3, northamerica-northeast2, us-west3, australiasoutheast1, europe-west9, eunorth1, northamerica-northeast1, me-west1, us-central1
 Availability Zones: 
 Start Time: 2024-08-15 10:45:00+00:00
 End Time: 2024-08-15 17:46:00+00:00
@@ -1374,7 +1374,7 @@ Affected Components: Google Cloud VertexAI
 Source Outage Report: outages_files/Google Cloud Service Health - Incident Report - 29 October 2024
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, Google Cloud BigQuery, Google Cloud SQL, Cloud SQL, Google Cloud Dataproc, dataproc, Google Cloud Dataflow, Google Cloud Datalab, Google Cloud Pub/Sub, Pub/Sub
-Regions: australia-southeast2, the
+Regions: the, australia-southeast2
 Availability Zones: impact date: 2024-10-29 16:21 utc
 Start Time: 2024-10-29 16:21:00+00:00
 End Time: 2024-10-29 19:34:00+00:00
@@ -1392,7 +1392,7 @@ Affected Components: Google Cloud VertexAI
 Source Outage Report: outages_files/Google Cloud Service Health - Incident report 2023-09-11
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Apigee Integrated Developer Portal
-Regions: asia-northeast2, asia-southeast1, asia-east2, asia-south1, asia-east1, singapore, asia-south2, asia-northeast1, asia-northeast3
+Regions: asia-south1, asia-south2, asia-southeast1, asia-northeast2, asia-northeast3, asia-northeast1, singapore, asia-east1, asia-east2
 Availability Zones: asia-east1: us-pacific-central
 Start Time: 2023-09-11 04:00:00+00:00
 End Time: 2023-09-11 12:25:00+00:00
@@ -1463,7 +1463,7 @@ Affected Components: Google GCP, Dataproc Metastore
 Source Outage Report: outages_files/Google Cloud Service Health - Incident report 2024-01-24
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, Google Cloud Storage, Cloud Logging, Personalized Service Health (PSH), Log queries and log-based metrics
-Regions: multiple regions (asia-east1), asia-east1
+Regions: asia-east1, multiple regions (asia-east1)
 Availability Zones: not specified
 Start Time: 2024-01-23 09:30:00+00:00
 End Time: 2024-01-24 22:00:00+00:00
@@ -1500,7 +1500,7 @@ Source Outage Report: outages_files/Google Cloud Service Health - Incident repor
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, df, Google Cloud DataStudio, Google Cloud Datalab, Google Cloud Composer, Google Cloud Composer
 Regions: global-default
-Availability Zones: asia-northeast2, asia-southeast1, asia-east2, asia-south1, asia-east1, jakarta, asia-northeast1, asia-northeast3
+Availability Zones: asia-south1, jakarta, asia-southeast1, asia-northeast2, asia-northeast3, asia-northeast1, asia-east1, asia-east2
 Start Time: 2024-04-16 02:20:00+00:00
 End Time: 2024-04-17 03:40:00+00:00
 Outage Status: resolved
@@ -1552,7 +1552,7 @@ Downtime Period: 2024-05-09 03:40 UTC
 Source Outage Report: outages_files/Google Cloud Service Health - Incident report 2024-05-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Google Cloud Run, AlloyDB for PostgreSQL, Google Cloud Dataproc, Google Cloud Dataflow, Google Cloud Storage, Google Cloud DataStudio, Google Cloud Composer, Google Cloud Load Balancing, Pub/Sub
-Regions: us-west1, us-west2, us-west3, central us, us-south1, us-east4, us-east5, us-west4, us-east1
+Regions: us-south1, us-east4, us-east1, central us, us-west2, us-west1, us-west3, us-east5, us-west4
 Availability Zones: not specified
 Start Time: 2024-05-16 15:22:00+00:00
 End Time: 2024-05-17 18:10:00+00:00
@@ -1588,7 +1588,7 @@ Affected Components: Google Cloud Platform, Google Cloud BigQuery, Cloud Logging
 Source Outage Report: outages_files/Google Cloud Service Health - Incident report 2024-07-11
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud BigQuery, df
-Regions: europe-west8, europe-west10, europe-west2, asia-south1, asia-east1, me-central2, europe-central2, southamerica-west1, asia-northeast3, europe-southwest1, europe-west12, europe-west9, asia-south2, europe-west6, northamerica-northeast1, asia-southeast2, asia-northeast2, africa-south1, asia-east2, europe-west1, me-west1, me-central1, asia-northeast1, europe-north1, northamerica-northeast2, asia-southeast1, eu, europe-west4, southamerica-east1, europe-west3
+Regions: asia-south1, europe-west8, asia-northeast1, europe-west10, asia-east1, asia-east2, asia-southeast2, europe-west3, me-central1, me-central2, asia-south2, asia-southeast1, europe-west12, europe-west6, europe-north1, southamerica-east1, europe-west2, southamerica-west1, europe-west4, europe-west1, europe-central2, asia-northeast3, northamerica-northeast2, africa-south1, europe-west9, europe-southwest1, northamerica-northeast1, asia-northeast2, eu, me-west1
 Availability Zones: 
 Start Time: 2024-07-11 00:00:00
 End Time: 2024-07-17 11:05:00
@@ -1678,7 +1678,7 @@ Affected Components: Artifact Registry, Cloud Filestore, Google Cloud Run, Cloud
 Source Outage Report: outages_files/Google Cloud Service Health - Incident report 2024-08-07
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, df, Cloud TPU Service, Vertex AI Online Prediction, Vertex AI Training
-Regions: asia-southeast2, asia-northeast2, asia-southeast1, asia-east2, asia-south1, asia-east1, asia-northeast1, asia-northeast3
+Regions: asia-south1, asia-southeast1, asia-northeast2, asia-northeast3, asia-northeast1, asia-east1, asia-east2, asia-southeast2
 Availability Zones: us-pacific-west1-b, asia-east1: us-pacific-west1-a
 Start Time: 2024-08-07 14:53:00+00:00
 End Time: 2024-08-07 17:05:00+00:00
@@ -1696,7 +1696,7 @@ Affected Components: Google GCP
 Source Outage Report: outages_files/Google Cloud Service Health - Incident report 2024-08-16
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud DataStudio, Google Kubernetes Engine (GKE), Google GCP, Vertex AI custom training jobs
-Regions: europe-west2, asia-south1, asia-east1, north america-northeast2, north america-northeast1, asia-northeast3, australia-southeast1, us-west2, us-east4, europe-west6, us-central1, us-west1, europe-west1, asia-east2, asia-northeast1, us-east1, asia-southeast1, europe-west4, europe-west3
+Regions: asia-south1, north america-northeast1, us-west1, asia-northeast1, asia-east1, asia-east2, europe-west3, us-east1, asia-southeast1, europe-west6, europe-west2, europe-west4, us-east4, us-west2, europe-west1, asia-northeast3, australia-southeast1, north america-northeast2, us-central1
 Availability Zones: not specified
 Start Time: 2024-08-16 11:44:00+00:00
 End Time: 2024-08-16 16:07:00+00:00
@@ -1731,7 +1731,7 @@ Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
 Source Outage Report: outages_files/Google Cloud Service Health - Incident report 2024-09-18
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud Run, Google Cloud Functions, Google App Engine, Cloud Firestore, Google Cloud Functions (1st gen), Cloud Run functions (1st gen), Cloud Firestore, Google App Engine (in region us-central1)
-Regions: asia-southeast1, europe-west2, asia-east1, europe-west3, sydney, us-east4, asia-northeast3, us-central1
+Regions: europe-west3, us-east4, asia-southeast1, asia-northeast3, europe-west2, sydney, asia-east1, us-central1
 Availability Zones: taiwan (asia-east1)
 Start Time: 2024-09-18 12:34:00+00:00
 End Time: 2024-09-18 15:30:00+00:00
@@ -1785,7 +1785,7 @@ Affected Components: App Engine, App Engine
 Source Outage Report: outages_files/Google Cloud Service Health - Incident report 2024-10-09
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI
-Regions: northamerica-east1, europe-west2, asia-south1, asia-east1, europe-central2, asia-northeast3, australia-southeast1, us-west2, europe-west6, us-west4, us-central1, northamerica-northeast1, asia-southeast2, asia-northeast2, us-west5, us-west1, europe-west1, asia-east2, asia-northeast1, us-east1, asia-southeast1, us-west3, southamerica-east1, europe-west3
+Regions: asia-south1, us-west1, asia-northeast1, us-west4, asia-east1, asia-east2, asia-southeast2, us-west5, europe-west3, northamerica-east1, us-east1, asia-southeast1, europe-west6, southamerica-east1, europe-west2, us-west2, europe-west1, europe-central2, asia-northeast3, us-west3, australia-southeast1, northamerica-northeast1, asia-northeast2, us-central1
 Availability Zones: not specified
 Start Time: 2024-10-09 14:57:00+00:00
 End Time: 2024-10-09 17:18:00+00:00
@@ -1839,7 +1839,7 @@ Affected Components: Google Cloud VertexAI
 Source Outage Report: outages_files/Google Cloud Service Health - Incident report 2024-11-04
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Vertex AI Online Prediction (Vertex Model Garden Deployments)
-Regions: asia-southeast2, asia-northeast2, asia-east2, europe-west4, asia-south1, asia-east1, asia-northeast1, us-east4, asia-northeast3, us-east1, us-central1
+Regions: asia-south1, europe-west4, us-east4, us-east1, asia-northeast2, asia-northeast3, asia-northeast1, asia-east1, asia-east2, asia-southeast2, us-central1
 Availability Zones: impact date: 2024-10-22 14:08 utc
 Start Time: 2024-10-22 14:08:00+00:00
 End Time: 2024-11-04 20:30:00+00:00
@@ -1857,7 +1857,7 @@ Affected Components: Google Cloud VertexAI
 Source Outage Report: outages_files/Google Cloud Service Health -- Incident report 2023-09-19
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Google Cloud Apigee API, Apigee Integrated Developer Portal
-Regions: asia-southeast1, asia-northeast1, asia-east1, asia-northeast3
+Regions: asia-southeast1, asia-northeast3, asia-east1, asia-northeast1
 Availability Zones: - taiwan
 Start Time: 2023-09-11 04:00:00+00:00
 End Time: 2023-09-11 12:25:00+00:00
@@ -1892,7 +1892,7 @@ Downtime Period: 2023-11-30 12:22 UTC - 2023-11-30 13:00 UTC
 Source Outage Report: outages_files/Google Cloud Service Health. - Incident 2024-11-13
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, Vertex Gemini API
-Regions: asia-southeast1, asia-southeast1 (singapore), asia-south1 (mumbai), us-central1 (iowa), asia-northeast3 (seoul), sydney, asia-northeast1, us-east4, australiasoutheast1 (sydney), asia-northeast3, asia-northeast1 (tokyo), us-east1 (northern virginia), multiple
+Regions: us-central1 (iowa), sydney, australiasoutheast1 (sydney), us-east4, us-east1 (northern virginia), asia-southeast1, multiple, asia-northeast3, asia-southeast1 (singapore), asia-northeast1, asia-northeast3 (seoul), asia-south1 (mumbai), asia-northeast1 (tokyo)
 Availability Zones: asia-northeast1: tokyo
 Start Time: 2024-11-13 07:51:00+00:00
 End Time: 2024-11-18 02:29:00+00:00
@@ -1910,7 +1910,7 @@ Affected Components: Google Cloud Service
 Source Outage Report: outages_files/Google_Cloud_Service_Health._-12.June.2024
 Cloud Provider: GCP
 Cloud Services: Google Cloud VertexAI, df, 1. Vertex AI Online Prediction
-Regions: asia-southeast1, us-west1, europe-west4, europe-west3, multiple, us-east1, us-central1
+Regions: europe-west3, europe-west4, us-east1, asia-southeast1, multiple, us-west1, us-central1
 Availability Zones: not specified
 Start Time: 2024-06-12 12:06:00+00:00
 End Time: 2024-06-12 15:59:00+00:00
@@ -1927,7 +1927,7 @@ Downtime Period: 2024-06-12 12:06 - 15:59 UTC
 Source Outage Report: outages_files/IBM Cloud Incident Report - CIR_PRB0050543 - ID_0002104_Final
 Cloud Provider: IBM
 Cloud Services: IBM Watson Platform, IBM Cloud IDE, IBM Kubernetes, IBM Watson Platform, network, Network, IBM Databases
-Regions: eu-gb, jp-tok, london (lon06), dallas (dal12), tokyo (tok02)
+Regions: jp-tok, tokyo (tok02), london (lon06), dallas (dal12), eu-gb
 Availability Zones: not specified
 Start Time: 2020-07-13 20:51:00+00:00
 End Time: 2020-07-13 22:34:00+00:00
@@ -1945,7 +1945,7 @@ Affected Components: IBM Cloud Object Storage
 Source Outage Report: outages_files/IBM Cloud Incident Report - CIR_PRB0051260 - ID_0002601_Final
 Cloud Provider: IBM
 Cloud Services: IBM Cloud IDE, IBM Watson Platform
-Regions: tor04, eu-gb, fra02, lon05, lon06, kr-seo, mad04, fra04, br-sao, jp-osa, tor05, eu-de, ca-tor, syd04, wdc07, tok04, global-default, tok02, wdc04, wdc06, osa23, syd05, eu-es, sao05, tok05, us-south, osa22, us-south-govt, lon04, us-east-govt, dal10, au-syd, dal13, sao04, mad05, osa21, fra05, us-east, not specified, jp-tok, mad02, dal12, tor01, sao01
+Regions: jp-tok, syd04, tor05, sao01, br-sao, us-east-govt, ca-tor, tok02, dal10, eu-gb, lon04, tor01, fra05, sao04, osa21, tor04, fra04, syd05, mad04, au-syd, eu-de, lon06, mad02, dal13, wdc06, not specified, osa22, global-default, fra02, tok04, us-south-govt, eu-es, wdc07, lon05, us-south, us-east, tok05, mad05, jp-osa, kr-seo, dal12, osa23, sao05, wdc04
 Availability Zones: not specified
 Start Time: 2020-07-29 08:20:00+00:00
 End Time: 2020-07-29 13:51:00+00:00
@@ -2052,7 +2052,7 @@ Affected Components: IBM Cloud Object Storage
 Source Outage Report: outages_files/IBM Cloud Incident Report - CIR_PRB0061258 - ID_0002830_FINAL
 Cloud Provider: IBM
 Cloud Services: IBM Cloud IDE, IKS, IBM Watson Platform, Load Balancers, VSIs, database
-Regions: following, eu-gb, us-east-1, au-syd, eu-de
+Regions: us-east-1, eu-de, following, eu-gb, au-syd
 Availability Zones: frankfurt (eu-central1)
 Start Time: 2021-05-25 12:07:00+00:00
 End Time: 2021-05-26 00:14:00+00:00
@@ -2070,7 +2070,7 @@ Affected Components: 1. IBM Cloud
 Source Outage Report: outages_files/IBM Cloud Incident Report - CIR_PRB0061974 - ID_0002865_FINAL
 Cloud Provider: IBM
 Cloud Services: IBM Cloud IDE, IBM Databases, IKS, IBM Watson Platform, load balancers, database, Cloudant
-Regions: tor04, eu-gb, fra02, lon05, lon06, kr-seo, mad04, fra04, br-sao, jp-osa, tor05, eu-de, ca-tor, syd04, wdc07, tok04, global-default, tok02, wdc04, wdc06, osa23, syd05, eu-es, sao05, tok05, us-south, osa22, us-south-govt, lon04, us-east-govt, dal10, au-syd, dal13, sao04, mad05, osa21, fra05, us-east, jp-tok, mad02, dal12, sydney, tor01, sao01
+Regions: jp-tok, syd04, tor05, sao01, br-sao, us-east-govt, ca-tor, tok02, dal10, eu-gb, sydney, lon04, tor01, fra05, sao04, osa21, tor04, fra04, syd05, mad04, eu-de, au-syd, lon06, mad02, dal13, wdc06, osa22, global-default, fra02, tok04, us-south-govt, eu-es, wdc07, lon05, us-south, us-east, tok05, mad05, jp-osa, kr-seo, dal12, osa23, sao05, wdc04
 Availability Zones: not specified
 Start Time: 2021-06-13 01:30:00+00:00
 End Time: 2021-06-16 03:02:00+00:00
@@ -2087,7 +2087,7 @@ Downtime Period: June 13, 2021, at 01:30 UTC - June 16, 2021, at 03:02 UTC
 Source Outage Report: outages_files/IBM Cloud Incident Report - CIR_PRB0073933 - ID_0003333_FINAL
 Cloud Provider: IBM
 Cloud Services: IBM Cloud IDE, IBM Watson Platform
-Regions: tor04, eu-gb, fra02, lon05, lon06, kr-seo, mad04, fra04, br-sao, jp-osa, tor05, eu-de, ca-tor, syd04, wdc07, tok04, global-default, tok02, ap-southeast-1, wdc04, wdc06, osa23, syd05, eu-es, sao05, us-east-1, all regions, tok05, us-south, osa22, ap-northeast-1, us-south-govt, lon04, us-east-govt, dal10, au-syd, dal13, sao04, mad05, osa21, fra05, us-east, jp-tok, mad02, dal12, tor01, us-west-2, sao01
+Regions: jp-tok, syd04, tor05, sao01, br-sao, us-east-govt, ca-tor, tok02, dal10, eu-gb, all regions, lon04, tor01, fra05, sao04, us-east-1, osa21, us-west-2, tor04, ap-southeast-1, fra04, syd05, mad04, au-syd, eu-de, lon06, mad02, dal13, wdc06, osa22, ap-northeast-1, global-default, fra02, tok04, us-south-govt, eu-es, wdc07, lon05, us-south, us-east, tok05, mad05, jp-osa, kr-seo, dal12, osa23, sao05, wdc04
 Availability Zones: not specified
 Start Time: 2022-06-21 06:34:00+00:00
 End Time: 2022-06-21 08:06:00+00:00
@@ -2123,7 +2123,7 @@ Affected Components: IBM Cloud Object Storage, All product offerings in Seoul 01
 Source Outage Report: outages_files/IBM Cloud Incident Report - PRB0084420 - ID_0003669_FINAL
 Cloud Provider: IBM
 Cloud Services: IBM Watson Platform, IBM Cloud IDE, SQL Query, IBM Watson Platform, bm, Load Balancer, Load Balancers, VSI, Network, IBM Databases
-Regions: frankfurt (fra05), critical status, eu-de
+Regions: eu-de, critical status, frankfurt (fra05)
 Availability Zones: eu-de-3
 Start Time: 2023-06-20 03:49:00+00:00
 End Time: 2023-06-22 05:41:00+00:00
@@ -2159,7 +2159,7 @@ Affected Components: IBM Cloud Object Storage
 Source Outage Report: outages_files/IBM_Cloud_Incident_Report_20_June_2022 _PRB0084420 - ID_0003669_FINAL
 Cloud Provider: IBM
 Cloud Services: IBM Watson Platform, IBM Cloud IDE, SQL Query, IBM Watson Platform, bm, Load Balancer, Load Balancers, VSI, Network, IBM Databases
-Regions: frankfurt (fra05), critical status, eu-de
+Regions: eu-de, critical status, frankfurt (fra05)
 Availability Zones: eu-de-3
 Start Time: 2023-06-20 03:49:00+00:00
 End Time: 2023-06-22 05:41:00+00:00
@@ -2176,7 +2176,7 @@ Downtime Period: 2023-06-20 04:12 - 2023-06-22 05:41 UTC
 Source Outage Report: outages_files/IBM_Cloud_Incident_Report_20_June_2023 _PRB0084420 - ID_0003669_FINAL
 Cloud Provider: IBM
 Cloud Services: IBM Cloud IDE, SQL Query, IBM Watson Platform, Load Balancer, VSI, Network
-Regions: frankfurt (fra05), eu-de
+Regions: eu-de, frankfurt (fra05)
 Availability Zones: eu-de-3
 Start Time: 2023-06-20 03:49:00+00:00
 End Time: 2023-06-20 22:15:00+00:00
@@ -2212,8 +2212,8 @@ Affected Components: IBM Cloud Object Storage
 Source Outage Report: outages_files/IBM_Cloud_Indident_Report_21_June_2022_CIR_PRB0073933 - ID_0003333_FINAL
 Cloud Provider: IBM
 Cloud Services: IBM Cloud IDE, IBM Watson Platform
-Regions: us-east-1, us-east, ap-southeast, ap-northeast, us-west, ap-southeast-1, us-west-1, eu-fr, eu-de
-Availability Zones: eu-de-1, us-east-1a, us-east-1c, eu-fr-1, us-west-1a, ap-southeast-1b, us-west-1b, ap-southeast-1a, us-east-1b
+Regions: eu-fr, ap-northeast, us-east-1, us-east, us-west, ap-southeast-1, ap-southeast, eu-de, us-west-1
+Availability Zones: us-east-1a, eu-fr-1, us-east-1b, ap-southeast-1b, eu-de-1, us-west-1a, us-east-1c, us-west-1b, ap-southeast-1a
 Start Time: 2022-06-21 06:34:00+00:00
 End Time: 2022-06-21 08:06:00+00:00
 Outage Status: resolved
@@ -2231,7 +2231,7 @@ Affected Components: IBM Cloud Object Storage
 Source Outage Report: outages_files/Microsoft Azure - Power BI service outage on 09-16 - Microsoft Fabric Community
 Cloud Provider: Azure
 Cloud Services: Azure Cosmos DB, Azure Functions, Azure Functions
-Regions: south east asia, uae, europe region, south africa, european region
+Regions: european region, uae, europe region, south africa, south east asia
 Availability Zones: not specified
 Start Time: 2024-09-15 23:23:00+00:00
 End Time: 2024-09-16 18:51:00+00:00
@@ -2267,7 +2267,7 @@ Affected Components: The incident affected MongoDB Atlas App Services and Device
 Source Outage Report: outages_files/MongoDB Cloud Status - Atlas Cluster Operations Delayed - 29 August 2024
 Cloud Provider: MongoDB
 Cloud Services: MongoDB Atlas
-Regions: brazilsouth, me-central-1, australiasoutheast, ap-northeast-3, ap-southeast-4, eastus3, swedensouth, ukwest, southeastasia, koreasouth, usgovtexas, japan west, southafricanorth, westus2, us-east5, eu-south-2, me-central1, qatarcentral, chinanorth3, us-east1, germanynorth, southamerica-east1, centralus, northcentralus, switzerlandnorth, ap-southeast-2, switzerlandwest, ap-southeast-3, europe-west2, asia-east1, canadacentral, chinaeast, southamerica-west1, asia-northeast3, eastus, us-gov-west-1, westus, francecentral, eu-north-1, ap-southeast-1, us-west-1, europe-west6, japan east, uksouth, us-central1, northamerica-northeast1, chinaeast2, sa-east-1, ap-northeast-2, australiacentral, uaenorth, af-south-1, chinanorth, australiacentral2, me-south-1, eu-south-1, usgovarizona, eu-central-1, cn-northwest-1, not specified, europe-west3, chinacloudapp.cn, japanwest, ca-central-1, ap-south-1, europe-central2, westeurope, brazilsoutheast, australia-southeast1, chinaeast3, chinacloudsites.cn, koreacentral, southcentralus, us-west2, global-default, southindia, asia-south2, us-east4, us-gov-east-1, norwaywest, westus3, eu-west-3, centraleurope, asia-southeast2, cn-north-1, us-west1, canadaeast, europe-west1, ap-northeast-1, us-east-2, asia-northeast1, ap-east-1, japaneast, northamerica-northeast2, swedencentral, chinanorth2, asia-southeast1, us-west3, eastus2, europe-west4, eu-central-2, australiaeast, il-central-1, westindia, europe-west8, asia-south1, uaecentral, eu-west-1, europe-southwest1, northeurope, europe-west9, us-south1, centralindia, ap-south-2, norwayeast, us-west4, italynorth, usgovvirginia, asia-northeast2, us-east-1, asia-east2, me-west1, australia-southeast2, germanywestcentral, europe-north1, eastasia, eu-west-2, francesouth, southafricawest, us-west-2
+Regions: cn-north-1, usgovtexas, us-east-2, ap-northeast-3, japan east, brazilsoutheast, us-west1, ap-southeast-4, japanwest, westus3, asia-east1, ap-south-2, asia-southeast2, asia-south2, il-central-1, francecentral, us-gov-west-1, ap-southeast-1, eu-west-1, europe-west6, eastasia, southamerica-east1, eu-central-2, europe-west4, not specified, europe-central2, asia-northeast3, uaecentral, us-west3, eastus2, swedencentral, ca-central-1, ap-east-1, eastus, francesouth, asia-south1, eu-north-1, chinaeast2, ap-south-1, brazilsouth, europe-west8, australiacentral2, centralindia, me-central1, us-east-1, us-west-2, chinaeast, chinanorth3, eu-west-2, uksouth, southamerica-west1, us-east5, centraleurope, swedensouth, chinaeast3, koreacentral, westeurope, australiacentral, usgovvirginia, norwaywest, northamerica-northeast1, asia-northeast2, me-west1, australia-southeast2, canadacentral, italynorth, westindia, centralus, southafricawest, asia-northeast1, australiaeast, chinacloudsites.cn, ap-northeast-2, us-west4, japan west, southafricanorth, europe-west3, us-east1, af-south-1, westus, eu-central-1, norwayeast, europe-north1, us-south1, us-west2, eu-south-1, northamerica-northeast2, australia-southeast1, canadaeast, southeastasia, chinanorth2, chinacloudapp.cn, westus2, japaneast, ukwest, uaenorth, eu-west-3, sa-east-1, ap-southeast-3, asia-east2, ap-southeast-2, southindia, asia-southeast1, usgovarizona, us-gov-east-1, europe-west2, eastus3, germanywestcentral, chinanorth, us-east4, northcentralus, me-south-1, cn-northwest-1, europe-west1, germanynorth, me-central-1, ap-northeast-1, eu-south-2, global-default, europe-west9, us-west-1, southcentralus, switzerlandwest, europe-southwest1, australiasoutheast, qatarcentral, northeurope, switzerlandnorth, koreasouth, us-central1
 Availability Zones: not specified
 Start Time: 2024-08-29 10:21:00+00:00
 End Time: 2024-08-29 10:56:00+00:00
@@ -2303,7 +2303,7 @@ Affected Components: Azure Active Directory, Atlas Data Federation, Online Archi
 Source Outage Report: outages_files/MongoDB Cloud Status - Atlas Login functionality degraded - 24 October 2024
 Cloud Provider: MongoDB
 Cloud Services: MongoDB Atlas, MongoDB Atlas, mongodb
-Regions: following, us-east-1, | cloud provider | service | region |, functionality, account.mongodb.com (no region specified), no region specified
+Regions: us-east-1, no region specified, | cloud provider | service | region |, functionality, following, account.mongodb.com (no region specified)
 Availability Zones: no availability zone specified
 Start Time: 2024-10-24 16:33:00+00:00
 End Time: 2024-10-24 00:00:00
@@ -2373,7 +2373,7 @@ Affected Components: Amazon AWS, Cluster provisioning
 Source Outage Report: outages_files/MongoDB Cloud Status - Microsoft Azure Incident_ Degraded Cluster Health - Several Regions Impacted (UAE North Most Impacted) - 31 July 2024
 Cloud Provider: Azure
 Cloud Services: MongoDB
-Regions: uae north, not specified (impacted regions include uae north), uae north (microsoft azure)
+Regions: not specified (impacted regions include uae north), uae north, uae north (microsoft azure)
 Availability Zones: not specified
 Start Time: 2024-07-30 17:10:00+00:00
 End Time: 2024-07-31 00:06:00+00:00
@@ -2445,7 +2445,7 @@ Affected Components: Oracle Cloud Infrastructure (OCI)
 Source Outage Report: outages_files/OCI Status - Outage Report - Fri, 02 Feb 2024 18-53-37 UTC
 Cloud Provider: Oracle
 Cloud Services: Network, network
-Regions: us east (ashburn), us-east-ashburn
+Regions: us-east-ashburn, us east (ashburn)
 Availability Zones: not specified
 Start Time: 2024-02-02 13:12:00+00:00
 End Time: 2024-02-02 18:50:00+00:00
@@ -2517,7 +2517,7 @@ Affected Components: Oracle Cloud Infrastructure (OCI)
 Source Outage Report: outages_files/OCI Status - Outage Report - Thu, 16 Nov 2023 03-24-00 UTC
 Cloud Provider: Oracle
 Cloud Services: Oracle Cloud VMware Solution
-Regions: uk south (london), brazil southeast (vinhedo), india south (hyderabad), saudi arabia west (jeddah), chile central (santiago), israel central (jerusalem), netherlands northwest (amsterdam), singapore (singapore), south africa central (johannesburg), italy northwest (milan), south korea north (chuncheon), uae central (abu dhabi), mexico central (queretaro), switzerland north (zurich), us midwest (chicago), spain central (madrid), australia east (sydney, germany central (frankfurt), brazil east (sao paulo), mexico northeast (monterrey), eu-paris-1, serbia central (jovanovac), sweden central (stockholm), canada southeast (montreal), uk west (newport), canada southeast (toronto), eu-frankfurt-1, india west (mumbai), australia east (sydney), us west (phoenix), uk-london-1, south korea central (seoul), ap-tokyo-1, us west (san jose), australia southeast (melbourne), japan central (osaka), france central (paris), ap-seoul-1, sydney, japan east (tokyo), uae east (dubai), france south (marseille), us east (ashburn), ap-singapore-1
+Regions: germany central (frankfurt), japan central (osaka), india west (mumbai), us west (phoenix), italy northwest (milan), canada southeast (montreal), india south (hyderabad), france south (marseille), sydney, us east (ashburn), ap-singapore-1, australia east (sydney, switzerland north (zurich), australia east (sydney), brazil southeast (vinhedo), south africa central (johannesburg), uk-london-1, chile central (santiago), us midwest (chicago), south korea north (chuncheon), south korea central (seoul), japan east (tokyo), sweden central (stockholm), ap-tokyo-1, brazil east (sao paulo), australia southeast (melbourne), france central (paris), us west (san jose), mexico northeast (monterrey), serbia central (jovanovac), ap-seoul-1, mexico central (queretaro), singapore (singapore), eu-frankfurt-1, uk south (london), netherlands northwest (amsterdam), uae east (dubai), canada southeast (toronto), israel central (jerusalem), uae central (abu dhabi), saudi arabia west (jeddah), eu-paris-1, spain central (madrid), uk west (newport)
 Availability Zones: not specified
 Start Time: 2023-11-15 13:34:00+00:00
 End Time: 2023-11-16 03:24:00+00:00
@@ -2535,7 +2535,7 @@ Affected Components: Oracle Cloud Infrastructure (OCI)
 Source Outage Report: outages_files/OCI Status - Outage Report - Thu, 21 Mar 2024 22-24-28 UTC
 Cloud Provider: Oracle
 Cloud Services: network, monitoring
-Regions: south africa central (johannesburg), the
+Regions: the, south africa central (johannesburg)
 Availability Zones: not specified
 Start Time: 2024-03-14 18:09:00+00:00
 End Time: 2024-03-19 15:34:00+00:00
@@ -2553,7 +2553,7 @@ Affected Components: Oracle Cloud Infrastructure (OCI), Create, Read, Update, an
 Source Outage Report: outages_files/OCI Status - Outage Report - Tue, 07 Nov 2023 22-57-40 UTC
 Cloud Provider: Oracle
 Cloud Services: Network
-Regions: south africa central (johannesburg), spain central (madrid), mexico central (queretaro), uae central (abu dhabi)
+Regions: uae central (abu dhabi), spain central (madrid), south africa central (johannesburg), mexico central (queretaro)
 Availability Zones: not specified
 Start Time: 2023-11-07 22:10:04+00:00
 End Time: 2023-11-07 22:57:40+00:00
@@ -2571,7 +2571,7 @@ Affected Components: Oracle Cloud Infrastructure (OCI)
 Source Outage Report: outages_files/OCI Status - Outage Report - Tue, 23 Jul 2024 16-23-25 UTC
 Cloud Provider: Oracle
 Cloud Services: Compute, Object Storage, Storage, Network, Database
-Regions: westus, eu-west-1, us-east-1, europe-west1, us-ashburn-1, centralus, us-central1
+Regions: us-east-1, us-ashburn-1, westus, europe-west1, eu-west-1, centralus, us-central1
 Availability Zones: us-east-1a
 Start Time: 2022-01-01 00:00:00
 End Time: 2022-01-02 00:00:00
@@ -2624,7 +2624,7 @@ Affected Components: Oracle Cloud Infrastructure (OCI), Multiple services in Fra
 Source Outage Report: outages_files/OCI Status - Outage Report -Thu, 21 Mar 2024 03-09-38 UTC
 Cloud Provider: Oracle
 Cloud Services: Compute, Object Storage, Storage, Network
-Regions: us west (san jose), us-west-1
+Regions: us-west-1, us west (san jose)
 Availability Zones: not specified in the text
 Start Time: 2024-03-20 22:57:00+00:00
 End Time: 2024-03-21 03:09:38+00:00
@@ -2641,8 +2641,8 @@ Affected Components: Oracle Cloud Infrastructure, Networking, Block Volumes, Com
 
 Source Outage Report: outages_files/Service health - April 19, 2024 _ AWS Health Dashboard _ Global
 Cloud Provider: AWS
-Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, Amazon ElastiCache, Amazon QuickSight, Quicksight, rs
-Regions: us-west-2, us-east-1, ap-northeast-2, us-west-1
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, Amazon ElastiCache, Amazon QuickSight, Quicksight, rs
+Regions: us-west-2, ap-northeast-2, us-east-1, us-west-1
 Availability Zones: not specified
 Start Time: 2024-08-15 12:50:00+00:00
 End Time: 2024-08-15 15:10:00+00:00
@@ -2660,7 +2660,7 @@ Affected Components: Amazon Web Services (AWS)
 Source Outage Report: outages_files/Service health - December 9, 2023 _ AWS Health Dashboard _ Global
 Cloud Provider: AWS
 Cloud Services: Amazon Route 53, Amazon Route 53, Amazon DynamoDB, Amazon DynamoDB, Amazon QuickSight, rs
-Regions: impact date: 2024-11-06 03:42:30 utc, impact date: 2024-10-22 12:48:52 utc, us-east-1, impact date: 2024-10-29 04:13:56 utc, us-east-2, us-west-2, eu-south-1
+Regions: us-east-1, impact date: 2024-10-22 12:48:52 utc, us-west-2, us-east-2, eu-south-1, impact date: 2024-11-06 03:42:30 utc, impact date: 2024-10-29 04:13:56 utc
 Availability Zones: impact date: 2023-12-09 19:17:00 utc
 Start Time: 2023-12-09 19:17:00+00:00
 End Time: 2023-12-09 23:51:00+00:00
@@ -2678,7 +2678,7 @@ Affected Components: Amazon Web Services (AWS)
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - - Incident 2024-10-07
 Cloud Provider: AWS
 Cloud Services: abr, Amazon Elastic Compute Cloud, Amazon AWS Direct Connect, Amazon QuickSight, rs
-Regions: us-east-2, us-west-2, us-east-1, availability zone:
+Regions: us-east-2, availability zone:, us-east-1, us-west-2
 Availability Zones: 07:55:00 am pst, 2024, impact date: november 10
 Start Time: 2024-11-10 15:55:00+00:00
 End Time: 2024-11-10 18:13:00+00:00
@@ -2695,8 +2695,8 @@ Affected Components: Amazon AWS Direct Connect, Amazon Elastic Compute Cloud (us
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - - Incident 2024-10-25
 Cloud Provider: AWS
-Cloud Services: Amazon Bedrock, Amazon Kinesis, Amazon Route 53, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, Amazon QuickSight, rs
-Regions: us-east-1, 0 (all services were in the same region), same, us-west-1, us-east-2, n/a, us-west-2, ap-southeast-2
+Cloud Services: Amazon Bedrock, Amazon Kinesis, Amazon Route 53, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, Amazon QuickSight, rs
+Regions: ap-southeast-2, us-east-1, us-west-2, us-east-2, n/a, same, 0 (all services were in the same region), us-west-1
 Availability Zones: n/a
 Start Time: 2024-11-25 04:31:00+00:00
 End Time: 2024-11-25 04:35:06+00:00
@@ -2713,8 +2713,8 @@ Affected Components: 0 (all services were in the same region), Amazon Web Servic
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2023-12-09
 Cloud Provider: AWS
-Cloud Services: Amazon API Gateway, Amazon CloudWatch, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, Amazon ElastiCache, rs
-Regions: us-west-2, us-east-1, oregon (us-west-2)
+Cloud Services: Amazon API Gateway, Amazon CloudWatch, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, Amazon ElastiCache, rs
+Regions: us-east-1, oregon (us-west-2), us-west-2
 Availability Zones: not specified
 Start Time: 2023-12-09 07:17:00+00:00
 End Time: 2023-12-09 08:29:20+00:00
@@ -2731,8 +2731,8 @@ Affected Components: Amazon Web Services (AWS)
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2023-12-17
 Cloud Provider: AWS
-Cloud Services: Amazon API Gateway, Amazon CloudFront, Amazon Route 53, Amazon CloudWatch, Amazon DocumentDB, Amazon DynamoDB, Amazon AWS RDS, Amazon AWS RDS, Amazon Aurora Serverless, Amazon Aurora Serverless, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Container Service, Amazon Elastic File System, Amazon Elastic File System, Amazon Elastic Block Store, Amazon Elastic Block Store, Amazon Elastic Load Balancing, Amazon Elastic Load Balancing, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, Amazon ElastiCache, Amazon ElastiCache, Amazon QuickSight, Amazon QuickSight, Amazon AWS Lambda, rs, Amazon Redshift, Amazon Elastic Kubernetes Service (EKS), Amazon Elastic Kubernetes Service (EKS), Amazon s3
-Regions: us-west-2, us-east-1, global, us-west-1
+Cloud Services: Amazon API Gateway, Amazon CloudFront, Amazon Route 53, Amazon CloudWatch, Amazon DocumentDB, Amazon DynamoDB, Amazon AWS RDS, Amazon AWS RDS, Amazon Aurora Serverless, Amazon Aurora Serverless, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Container Service, Amazon Elastic File System, Amazon Elastic File System, Amazon Elastic Block Store, Amazon Elastic Block Store, Amazon Elastic Load Balancing, Amazon Elastic Load Balancing, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, Amazon ElastiCache, Amazon ElastiCache, Amazon QuickSight, Amazon QuickSight, Amazon AWS Lambda, rs, Amazon Redshift, Amazon Elastic Kubernetes Service (EKS), Amazon Elastic Kubernetes Service (EKS), Amazon s3
+Regions: us-west-1, global, us-east-1, us-west-2
 Availability Zones: not specified
 Start Time: 2023-12-17 18:57:08+00:00
 End Time: 2023-12-19 02:52:00+00:00
@@ -2749,9 +2749,9 @@ Affected Components: Amazon Web Services (AWS)
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-01-30
 Cloud Provider: AWS
-Cloud Services: Amazon Bedrock, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon ElastiCache, Amazon AWS Direct Connect, Amazon QuickSight, Amazon QuickSight, rs
-Regions: us-east-1, ap-northeast-2, us-west-1, availability zone:, us-west-2, eu-south-1
-Availability Zones: impact date: november 25, 2024
+Cloud Services: Amazon Bedrock, Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon ElastiCache, Amazon AWS Direct Connect, Amazon QuickSight, Amazon QuickSight, rs
+Regions: us-east-1, availability zone:, us-west-2, eu-south-1, ap-northeast-2, us-west-1
+Availability Zones: 2024, impact date: november 25
 Start Time: 2024-11-25 00:00:00
 End Time: 2025-01-02 00:00:00
 Outage Status: investigating
@@ -2767,8 +2767,8 @@ Affected Components: Amazon Web Services (AWS)
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-02-07
 Cloud Provider: AWS
-Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, Amazon QuickSight, rs
-Regions: us-east-1, 2. availability zone:, availability zone:, us-west-2, eu-south-1
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, Amazon QuickSight, rs
+Regions: 2. availability zone:, us-east-1, availability zone:, us-west-2, eu-south-1
 Availability Zones: 07:55:00 am pst, 2024, impact date: november 10
 Start Time: 2024-11-10 15:55:00+00:00
 End Time: 2024-11-10 18:13:00+00:00
@@ -2785,8 +2785,8 @@ Affected Components: Amazon Web Services (AWS)
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-02-21
 Cloud Provider: AWS
-Cloud Services: Amazon Bedrock, Amazon Route 53, Amazon Route 53, Amazon CloudWatch, Amazon DynamoDB, Amazon AWS RDS, Amazon Elastic Compute Cloud, Amazon EC2 Instance Connect, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, Amazon ElastiCache, Amazon QuickSight, rs, Amazon s3
-Regions: ca-central-1, me-central-1, il-central-1, ap-south-1, ap-northeast-3, ap-southeast-4, ap-southeast-3, us-gov-west-1, eu-west-1, eu-north-1, global-default, ap-southeast-1, us-west-1, us-gov-east-1, ap-south-2, eu-west-3, cn-north-1, ap-northeast-2, us-east-1, sa-east-1, ap-northeast-1, eu-south-2, af-south-1, us-east-2, ap-east-1, me-south-1, eu-south-1, eu-central-1, cn-northwest-1, eu-west-2, eu-central-2, us-west-2, ap-southeast-2
+Cloud Services: Amazon Bedrock, Amazon Route 53, Amazon Route 53, Amazon CloudWatch, Amazon DynamoDB, Amazon AWS RDS, Amazon Elastic Compute Cloud, Amazon EC2 Instance Connect, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, Amazon ElastiCache, Amazon QuickSight, rs, Amazon s3
+Regions: eu-north-1, cn-north-1, us-east-2, ap-northeast-3, ap-south-1, ap-southeast-4, ap-northeast-2, eu-west-3, sa-east-1, ap-south-2, ap-southeast-3, ap-southeast-2, us-east-1, af-south-1, us-west-2, il-central-1, us-gov-west-1, eu-central-1, ap-southeast-1, eu-west-1, us-gov-east-1, eu-west-2, eu-central-2, me-south-1, cn-northwest-1, eu-south-1, me-central-1, ap-northeast-1, eu-south-2, global-default, us-west-1, ca-central-1, ap-east-1
 Availability Zones: not specified
 Start Time: 2024-11-25 12:31:00+00:00
 End Time: 2025-01-14 12:35:06+00:00
@@ -2803,7 +2803,7 @@ Affected Components: Amazon AWS Direct Connect
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-03-26
 Cloud Provider: AWS
-Cloud Services: Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, Amazon QuickSight, rs, Amazon Elastic Kubernetes Service (EKS)
+Cloud Services: Amazon DynamoDB, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, Amazon QuickSight, rs, Amazon Elastic Kubernetes Service (EKS)
 Regions: us-east-1 (n. virginia), us-east-1, us-west-2
 Availability Zones: not specified
 Start Time: 2024-03-27 00:31:00+00:00
@@ -2821,7 +2821,7 @@ Affected Components: Amazon Web Services (AWS)
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-04-10
 Cloud Provider: AWS
-Cloud Services: Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, Amazon ElastiCache, Amazon QuickSight, rs
+Cloud Services: Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, Amazon ElastiCache, Amazon QuickSight, rs
 Regions: us-east-2, ohio (us-east-2)
 Availability Zones: not specified
 Start Time: 2024-04-19 12:47:34+00:00
@@ -2839,8 +2839,8 @@ Affected Components: Amazon Web Services (AWS)
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-06-25
 Cloud Provider: AWS
-Cloud Services: Amazon Kinesis, Amazon Kinesis, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, rs
-Regions: us-west-2, us-east-1, ap-northeast-2, us-west-1
+Cloud Services: Amazon Kinesis, Amazon Kinesis, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, rs
+Regions: us-west-2, ap-northeast-2, us-east-1, us-west-1
 Availability Zones: not specified
 Start Time: 2024-06-25 07:20:00+00:00
 End Time: 2024-06-25 07:40:00+00:00
@@ -2858,7 +2858,7 @@ Affected Components: Amazon AWS Direct Connect
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-08-15
 Cloud Provider: AWS
 Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon AWS Direct Connect, Amazon QuickSight, rs
-Regions: ca-central-1, me-central-1, il-central-1, ap-south-1, ap-northeast-3, ap-southeast-4, ap-southeast-3, us-gov-west-1, eu-west-1, eu-north-1, global-default, ap-southeast-1, us-west-1, us-gov-east-1, ap-south-2, eu-west-3, cn-north-1, us-east-1, sa-east-1, ap-northeast-2, ap-northeast-1, eu-south-2, af-south-1, us-east-2, ap-east-1, me-south-1, eu-south-1, eu-central-1, cn-northwest-1, eu-west-2, eu-central-2, us-west-2, ap-southeast-2
+Regions: eu-north-1, cn-north-1, us-east-2, ap-northeast-3, ap-south-1, ap-southeast-4, ap-northeast-2, eu-west-3, sa-east-1, ap-south-2, ap-southeast-3, ap-southeast-2, us-east-1, af-south-1, us-west-2, il-central-1, us-gov-west-1, eu-central-1, ap-southeast-1, eu-west-1, us-gov-east-1, eu-west-2, eu-central-2, me-south-1, cn-northwest-1, eu-south-1, me-central-1, ap-northeast-1, eu-south-2, global-default, us-west-1, ca-central-1, ap-east-1
 Availability Zones: not specified
 Start Time: 2024-08-15 12:50:00+00:00
 End Time: 2024-08-15 12:50:00+00:00
@@ -2875,8 +2875,8 @@ Affected Components: Amazon Web Services (AWS)
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-10-22
 Cloud Provider: AWS
-Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, Amazon QuickSight, rs
-Regions: us-east-1, 2. availability zone:, us-east-2, availability zone:, us-west-2, eu-south-1
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, Amazon QuickSight, rs
+Regions: 2. availability zone:, us-east-1, availability zone:, us-west-2, us-east-2, eu-south-1
 Availability Zones: 2024, impact date: november 10
 Start Time: 2024-11-10 00:00:00
 End Time: 2024-11-10 00:00:00
@@ -2894,8 +2894,8 @@ Affected Components: Amazon Web Services (AWS), AWS Elastic Compute Cloud, AWS B
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-10-24
 Cloud Provider: AWS
 Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Container Service, Amazon Elastic File System, Amazon Elastic File System, Amazon AWS Direct Connect, Amazon ElastiCache, rs
-Regions: us-west-2, ap-northeast-2, global, us-east-1
-Availability Zones: 2024 12:01:00 pm pdt, impact date: october 24
+Regions: ap-northeast-2, global, us-east-1, us-west-2
+Availability Zones: impact date: october 24, 2024 12:01:00 pm pdt
 Start Time: 2024-10-24 19:01:00+00:00
 End Time: 2024-10-24 20:45:55+00:00
 Outage Status: resolved
@@ -2911,9 +2911,9 @@ Affected Components: Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elast
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-10-25
 Cloud Provider: AWS
-Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, Amazon QuickSight, rs
-Regions: us-east-2, us-west-2, us-east-1, 2. availability zone:
-Availability Zones: 04:31:00 utc, impact date: november 25, 2024
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, Amazon QuickSight, rs
+Regions: us-east-2, 2. availability zone:, us-east-1, us-west-2
+Availability Zones: 2024, 04:31:00 utc, impact date: november 25
 Start Time: 2024-11-25 04:31:00+00:00
 End Time: 2024-11-25 04:35:06+00:00
 Outage Status: investigating
@@ -2929,8 +2929,8 @@ Affected Components: Amazon Web Services (AWS), Amazon Elastic Compute Cloud, Am
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-11-10
 Cloud Provider: AWS
-Cloud Services: aBr, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Load Balancing, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, rs, Amazon AWS Glue, Amazon Elastic Kubernetes Service (EKS)
-Regions: ca-central-1, me-central-1, il-central-1, ap-south-1, ap-northeast-3, ap-southeast-4, ap-southeast-3, us-gov-west-1, eu-west-1, eu-north-1, global-default, ap-southeast-1, us-west-1, us-gov-east-1, ap-south-2, eu-west-3, cn-north-1, us-east-1, sa-east-1, ap-northeast-2, ap-northeast-1, eu-south-2, af-south-1, us-east-2, ap-east-1, me-south-1, eu-south-1, eu-central-1, cn-northwest-1, seoul (ap-northeast-2), eu-west-2, eu-central-2, us-west-2, ap-southeast-2
+Cloud Services: aBr, Amazon Elastic Compute Cloud, Amazon Elastic Container Service, Amazon Elastic Load Balancing, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, rs, Amazon AWS Glue, Amazon Elastic Kubernetes Service (EKS)
+Regions: eu-north-1, cn-north-1, us-east-2, ap-northeast-3, ap-south-1, ap-southeast-4, ap-northeast-2, eu-west-3, sa-east-1, ap-south-2, ap-southeast-3, ap-southeast-2, us-east-1, af-south-1, us-west-2, il-central-1, us-gov-west-1, eu-central-1, ap-southeast-1, eu-west-1, us-gov-east-1, eu-west-2, eu-central-2, seoul (ap-northeast-2), me-south-1, cn-northwest-1, eu-south-1, me-central-1, ap-northeast-1, eu-south-2, global-default, us-west-1, ca-central-1, ap-east-1
 Availability Zones: not specified
 Start Time: 2024-11-10 07:55:00+00:00
 End Time: 2024-11-10 14:13:00+00:00
@@ -2947,8 +2947,8 @@ Affected Components: Amazon Web Services (AWS)
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - Incident 2024-11-25
 Cloud Provider: AWS
-Cloud Services: Amazon Elastic Compute Cloud, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, Amazon QuickSight, rs
-Regions: us-east-1, us-west-1, availability zone:, us-west-2, eu-south-1
+Cloud Services: Amazon Elastic Compute Cloud, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, Amazon QuickSight, rs
+Regions: us-east-1, availability zone:, us-west-2, eu-south-1, us-west-1
 Availability Zones: 2024, impact date: november 10
 Start Time: 2024-11-10 00:00:00
 End Time: 2024-11-10 00:00:00
@@ -2965,8 +2965,8 @@ Affected Components: Amazon Web Services (AWS)
 
 Source Outage Report: outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global- Incident 2024-08-06
 Cloud Provider: AWS
-Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon EC2 Instance Connect, Elastic MapReduce, Amazon Elastic Mapreduce, Amazon AWS Direct Connect, Amazon ElastiCache, Amazon QuickSight, rs
-Regions: us-east-1, ap-northeast-2, errors, us-west-1, us-east-2, us-west-2
+Cloud Services: Amazon Route 53, Amazon Route 53, Amazon Elastic Compute Cloud, Amazon Elastic Compute Cloud, Amazon EC2 Instance Connect, Amazon Elastic MapReduce, Amazon Elastic MapReduce, Amazon AWS Direct Connect, Amazon ElastiCache, Amazon QuickSight, rs
+Regions: us-east-1, us-west-2, us-east-2, errors, ap-northeast-2, us-west-1
 Availability Zones: not specified
 Start Time: 2024-08-07 02:24:28+00:00
 End Time: 2024-08-07 04:10:29+00:00
@@ -2984,7 +2984,7 @@ Affected Components: Amazon Web Services (AWS)
 Source Outage Report: outages_files/Summary of the AWS Service Event in the Northern Virginia (US-EAST-1) Region - Incident 2023-06-13
 Cloud Provider: AWS
 Cloud Services: Amazon Elastic Container Service, Amazon AWS Direct Connect, Amazon AWS Lambda, rs, Amazon Elastic Kubernetes Service (EKS), Amazon Elastic Kubernetes Service (EKS)
-Regions: northern virginia (us-east-1), us-east-1, the
+Regions: the, northern virginia (us-east-1), us-east-1
 Availability Zones: not specified
 Start Time: 2023-06-13 18:49:00+00:00
 End Time: 2023-06-13 20:45:00+00:00
