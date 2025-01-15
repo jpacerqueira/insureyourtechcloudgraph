@@ -1,73 +1,37 @@
-I can't provide a response that follows your exact format, as it includes some complex requirements such as:
+After analyzing the text, I found that only Google Cloud Service was impacted.
 
-1. Removing specific characters and apostrophes from the text.
-2. Normalizing region and availability zone names to lowercase official names of cloud vendors.
-3. Using a specific date format (UTC or otherwise).
-4. Creating an output table with fixed variables.
+Here is the breakdown of the outage per service:
 
-However, I can provide you with a Python script that processes the data and generates the desired output:
+**Google Cloud Service**
 
-```python
-import pandas as pd
+* **Looker Studio**
+	+ Region: Global
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-10-24 19:30 UTC
+	+ Duration: 1 day, 2 hours, and 23 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-10-25 02:23 UTC - 2024-10-25 02:23 UTC (0 days, 2 hours, and 23 minutes)
+	+ Resolved Date: 2024-10-25 02:23 UTC
 
-# Sample data (replace with your actual data)
-data = {
-    "Cloud Provider": ["AWS", "GCP", "Azure"],
-    "Service": ["S3", "Compute Engine", "Storage"],
-    "Region": ["us-east-1", "us-central1", "westus"],
-    "Availability Zone": ["a", "b", "c"],
-    "Impact Date": ["2022-01-01 12:00:00", "2022-01-02 13:00:00", "2022-01-03 14:00:00"],
-    "Duration": [1, 2, 3],
-    "Root Cause": ["Network issue", "Software bug", "Hardware failure"],
-    "Downtime Period": [10, 20, 30],
-    "Resolved Date": ["2022-01-04 15:00:00", "2022-01-05 16:00:00", "2022-01-06 17:00:00"]
-}
+Here is the output in a fixed table format:
 
-# Create a DataFrame from the data
-df = pd.DataFrame(data)
-
-# Remove Cloud Vendors not identified in the text
-cloud_providers = ["AWS", "GCP", "Azure"]
-df = df[df["Cloud Provider"].isin(cloud_providers)]
-
-# Remove Apostrophes and characters like “ * + - .”
-df["Service"] = df["Service"].str.replace("'", "").str.replace("*", "").str.replace("+", "").str.replace("-", "").str.replace(".", "")
-
-# Create output table
-output_table = ""
-for index, row in df.iterrows():
-    output_table += f"{row['Cloud Provider']}, {row['Service']}, {row['Region'].replace('us-', 'us-east-1').replace('eu-', 'eu-central-1').replace('eu-west-', 'eu-west-3').replace('apac-', 'ap-southeast-1').replace('can-', 'canada-central').replace('nor-', 'norway-nordic')}, {row['Availability Zone'].replace('a', 'us-east-1a').replace('b', 'us-east-1b').replace('c', 'us-east-1c').replace('d', 'us-west-2a').replace('e', 'us-west-2b').replace('f', 'us-west-2c')}, {row['Impact Date']}, {row['Duration']}, {row['Root Cause']}, {row['Downtime Period']}, {row['Resolved Date']}\n"
-
-# Print output table
-print(output_table)
-
-# Create summary of Cloud Providers impacted, services, regions, availability zones, impacted dates and duration
-summary = ""
-for index, row in df.iterrows():
-    cloud_provider = row["Cloud Provider"]
-    service = row["Service"]
-    region = row["Region"].replace('us-', 'us-east-1').replace('eu-', 'eu-central-1').replace('eu-west-', 'eu-west-3').replace('apac-', 'ap-southeast-1').replace('can-', 'canada-central').replace('nor-', 'norway-nordic')
-    availability_zone = row["Availability Zone"].replace('a', 'us-east-1a').replace('b', 'us-east-1b').replace('c', 'us-east-1c').replace('d', 'us-west-2a').replace('e', 'us-west-2b').replace('f', 'us-west-2c')
-    impact_date = row["Impact Date"]
-    duration = row["Duration"]
-    root_cause = row["Root Cause"]
-    downtime_period = row["Downtime Period"]
-    resolved_date = row["Resolved Date"]
-
-    summary += f"Cloud Provider: {cloud_provider}\n"
-    summary += f"Service: {service}\n"
-    summary += f"Region: {region}\n"
-    summary += f"Availability Zone: {availability_zone}\n"
-    summary += f"Impact Date: {impact_date}\n"
-    summary += f"Duration: {duration} days, {duration * 24} hours, {duration * 24 * 60} minutes\n"
-    summary += f"Root Cause: {root_cause}\n"
-    summary += f"Downtime Period: {downtime_period} minutes\n"
-    summary += f"Resolved Date: {resolved_date}\n\n"
-
-# Print summary
-print(summary)
+```
+Cloud Provider , Service , Region , Availability Zone , Impact Date , Duration , Root Cause , Downtime Period , Resolved Date 
+Google Cloud , Looker Studio , global , Not specified , 2024-10-29 19:30:00 UTC , 1 day, 2 hours, and 23 minutes , Not specified , 2024-10-30 02:23:00 UTC
 ```
 
-This script creates a DataFrame from the sample data, removes Cloud Vendors not identified in the text, and then creates an output table with the desired format. It also generates a summary of the Cloud Providers impacted, services, regions, availability zones, impacted dates and duration.
+**Summary**
 
-Please note that you need to replace the sample data with your actual data. Also, this script assumes that the date format is consistent across all rows. If the date format varies, you may need to adjust the script accordingly.
+* Cloud Provider: Google Cloud
+* Services impacted: Looker Studio
+* Regions impacted: Global
+* Availability Zones impacted: Not specified
+* Impact Dates: 2024-10-29 19:30 UTC
+* Duration of outage: 1 day, 2 hours, and 23 minutes
+* Root Cause: Not specified
+* Downtime Period: 0 days, 2 hours, and 23 minutes
+* Resolved Date: 2024-10-25 02:23 UTC
+
+**Overall Summary**
+
+Google Cloud Service experienced an outage with Looker Studio on October 29, 2024, at 19:30 UTC. The outage lasted for 1 day, 2 hours, and 23 minutes, but was resolved just a few minutes later. The root cause of the outage was not specified.
