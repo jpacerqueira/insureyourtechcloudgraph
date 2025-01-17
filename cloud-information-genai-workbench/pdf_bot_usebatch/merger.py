@@ -471,8 +471,8 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Google Cloud And Media CDN|Media CDN|GCDN)",
             r"(?i)(Google Cloud DNS|Cloud DNS|GCDNS)",
             # Container Services
-            r"(?i)(Google Kubernetes Engine (GKE)|Google Kubernetes Engine|GKE)",
-            r"(?i)(Google Cloud Functions|Cloud Functions|GCF)",
+            r"(?i)(Google Kubernetes Engine (GKE)|Google Cloud Kubernetes Engine|Google Cloud Kubernetes Engine (GKE)|Google Kubernetes Engine|GKE)",
+            r"(?i)(Google Cloud Functions|Cloud Functions|Google Functions|GCF)",
             r"(?i)(Google Cloud Pub/Sub|Pub/Sub|GCP Pub/Sub)",
             # Google Distributed Cloud Edge
             r"(?i)(Google Distributed Cloud Edge|Distributed Cloud Edge|GDC Edge)",
@@ -1485,6 +1485,7 @@ service_full_names = {
         "GCLB": "Google Cloud Load Balancing",
         "GCDN": "Google Cloud And Media CDN",
         "GCDNS": "Google Cloud DNS",
+        "Google Cloud Kubernetes Engine": "Google Kubernetes Engine (GKE)",
         "GKE": "Google Kubernetes Engine (GKE)"
     },
     "Azure": {
