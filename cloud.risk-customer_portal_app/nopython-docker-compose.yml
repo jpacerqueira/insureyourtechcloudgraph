@@ -34,6 +34,8 @@ services:
       - ./cloud-risk-portal/neo4j_customer_submission:/app/neo4j_customer_submission
     networks:
       - cloud-services-risk-ratings-api_backend # backend
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     command: "npm start" # You can modify this if you're using a custom start script
     restart: unless-stopped
 
