@@ -1,0 +1,60 @@
+Based on the provided text, I can identify that the following public cloud services were impacted:
+
+**Google Cloud**
+
+* Service: Vertex AI Search
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: 2024-12-06 05:00 UTC
+* Duration: 2 days, 14 hours, and 58 minutes
+* Root Cause: Data import delays detected
+* Downtime Period: Saturday, 2024-12-07 14:58 UTC
+* Resolved Date: Saturday, 2024-12-07 14:58 UTC
+
+**Google Cloud**
+
+* Service: Recommendation AI
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: 2024-12-06 05:00 UTC
+* Duration: 2 days, 14 hours, and 58 minutes
+* Root Cause: Data import delays detected
+* Downtime Period: Saturday, 2024-12-07 14:58 UTC
+* Resolved Date: Saturday, 2024-12-07 14:58 UTC
+
+**Google Cloud**
+
+* Service: Vertex AI Search (again)
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: 2024-12-06 05:00 UTC
+* Duration: 2 days, 14 hours, and 58 minutes
+* Root Cause: Data import delays detected
+* Downtime Period: Saturday, 2024-12-07 14:58 UTC
+* Resolved Date: Saturday, 2024-12-07 14:58 UTC
+
+**Summary**
+
+The following cloud providers were impacted:
+
+* Google Cloud
+
+Services impacted:
+* Vertex AI Search
+* Recommendation AI
+
+Regions and Availability Zones affected:
+* Global (no specific region or availability zone specified)
+
+Impact dates and duration:
+* Impact date: 2024-12-06 05:00 UTC
+* Duration: 2 days, 14 hours, and 58 minutes
+
+Root cause:
+Data import delays detected
+
+Downtime period:
+Saturday, 2024-12-07 14:58 UTC
+
+Resolved date:
+Saturday, 2024-12-07 14:58 UTC
