@@ -29,15 +29,6 @@ os.environ["NEO4J_URL"] = url
 
 logger = get_logger(__name__)
 
-# Initialize the Neo4jVector instance with auto_commit=True
-vector_store = Neo4jVector(
-    url=url,
-    auth=(username, password),
-    auto_commit=True
-)
-# Create a new index
-vector_store.create_index("pdf_bot")
-
 embeddings, dimension = load_embedding_model(
     embedding_model_name, config={"ollama_base_url": ollama_base_url}, logger=logger
 )
@@ -88,7 +79,7 @@ def main():
             index_name="pdf_bot",
             node_label="PdfBotChunk",
             pre_delete_collection=True, #False # Delete existing PDF data
-            #distance_strategy="COSINE",  # Add this for better similarity search - distance_strategy must be either 'EUCLIDEAN_DISTANCE' or 'COSINE'
+            distance_strategy="EUCLIDEAN_DISTANCE",  # Add this for better similarity search - distance_strategy must be either 'EUCLIDEAN_DISTANCE' or 'COSINE' is default.
         )
         print(vectorstore.as_retriever())
         qa = RetrievalQA.from_chain_type(
