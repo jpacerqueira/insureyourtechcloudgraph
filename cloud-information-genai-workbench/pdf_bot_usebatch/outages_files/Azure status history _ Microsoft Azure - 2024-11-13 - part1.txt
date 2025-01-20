@@ -1,0 +1,77 @@
+Here is the summary of the public cloud service outages:
+
+**Summary**
+
+The outage affected Microsoft Azure services in multiple regions and availability zones. The incident started on November 13, 2024, at 00:50 UTC and lasted for approximately 7 hours and 40 minutes.
+
+**Outage Details per Cloud Provider**
+
+**Microsoft Azure**
+- Service: Azure Storage
+- Region: Australia East, Australia Southeast, Brazil South, Brazil Southeast, Canada Central, Canada East, Central India, Central US, East Asia, East US, East US 2, East US 2 EU AP, France Central, Germany West Central, Japan East, Japan West, Korea Central, North Central US, North Europe, Norway East, South Africa North, South Central US, South India, Southeast Asia, Sweden Central, Switzerland North, UAE North, UK South, UK West
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 7 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 6 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
+
+**Azure Container Registry**
+- Service: Azure Container Registry
+- Region: East US
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 5 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 5 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
+
+**Azure Data Lakes**
+- Service: Azure Data Lakes
+- Region: Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, West US 2
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 7 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 6 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
+
+**Azure Service Health Alerts**
+- Service: Azure Service Health Alerts
+- Region: Not specified
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 7 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 6 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
+
+**Microsoft Azure**
+- Service: Azure Storage
+- Region: Not specified
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 7 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 6 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
+
+**Azure Data Lakes**
+- Service: Azure Data Lakes
+- Region: Not specified
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 7 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 6 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
+
+**Azure Service Health Alerts**
+- Service: Azure Service Health Alerts
+- Region: Not specified
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 7 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 6 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
