@@ -72,7 +72,7 @@ def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, outpu
         index_name="pdf_bot",
         node_label="PdfBotChunk",
         pre_delete_collection=True, #False # Delete existing PDF data
-        distance_strategy="EUCLIDEAN_DISTANCE",  # Add this for better similarity search - distance_strategy must be either 'EUCLIDEAN_DISTANCE' or 'COSINE' is default.
+        distance_strategy="COSINE",  # Add this for better similarity search - distance_strategy must be either 'EUCLIDEAN_DISTANCE' or 'COSINE' is default.
      )
     print(vectorstore.as_retriever())
     qa = RetrievalQA.from_chain_type(
