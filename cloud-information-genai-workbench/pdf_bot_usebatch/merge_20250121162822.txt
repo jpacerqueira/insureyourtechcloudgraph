@@ -129676,6 +129676,95 @@ Resolved Date:
 
 * 2022-03-31 15:13 UTC  
 --
+Outage Filename: ./outages_files/Google Cloud Service Health - 2022-05-09 - part2.txt
+--
+Here is the summary of the outage:
+
+**Cloud Providers Impacted:**
+
+* Google Cloud Platform (GCP)
+* Google App Engine
+* Google Cloud Composer
+* Google Cloud Networking
+* Google Compute Engine
+* Google Cloud DNS
+* Google Service Directory
+* Google Load Balancing
+* Google Cloud CDN
+* Google Traffic Director
+
+**Outage Details:**
+
+The outage occurred on May 8, 2022, at 23:24 UTC and lasted for 3 hours and 18 minutes. The root cause of the outage was a failure to push cloud configurations.
+
+Here is the breakdown of the outage per service impacted:
+
+**Google Cloud Platform (GCP)**
+
+* Google Compute Engine
+	+ Region: Global
+	+ Availability Zone: N/A
+	+ Impact Date: May 8, 2022, 23:24 UTC
+	+ Duration: 3 hours and 18 minutes
+	+ Root Cause: Failure to push cloud configurations
+	+ Downtime Period: May 9, 2022, 02:42 UTC
+* Google Cloud DNS
+	+ Region: Global
+	+ Availability Zone: N/A
+	+ Impact Date: May 8, 2022, 23:24 UTC
+	+ Duration: 3 hours and 18 minutes
+	+ Root Cause: Failure to push cloud configurations
+	+ Downtime Period: May 9, 2022, 02:42 UTC
+* Google Cloud Networking
+	+ Region: Global
+	+ Availability Zone: N/A
+	+ Impact Date: May 8, 2022, 23:24 UTC
+	+ Duration: 3 hours and 18 minutes
+	+ Root Cause: Failure to push cloud configurations
+	+ Downtime Period: May 9, 2022, 02:42 UTC
+* Google Cloud Composer
+	+ Region: Global
+	+ Availability Zone: N/A
+	+ Impact Date: May 8, 2022, 23:24 UTC
+	+ Duration: 3 hours and 18 minutes
+	+ Root Cause: Failure to push cloud configurations
+	+ Downtime Period: May 9, 2022, 02:42 UTC
+
+**Google App Engine**
+
+* Region: Global
+* Availability Zone: N/A
+* Impact Date: May 8, 2022, 23:24 UTC
+* Duration: 3 hours and 18 minutes
+* Root Cause: Failure to push cloud configurations
+* Downtime Period: May 9, 2022, 02:42 UTC
+
+**Google Cloud CDN**
+
+* Region: Global
+* Availability Zone: N/A
+* Impact Date: May 8, 2022, 23:24 UTC
+* Duration: 3 hours and 18 minutes
+* Root Cause: Failure to push cloud configurations
+* Downtime Period: May 9, 2022, 02:42 UTC
+
+**Google Traffic Director**
+
+* Region: Global
+* Availability Zone: N/A
+* Impact Date: May 8, 2022, 23:24 UTC
+* Duration: 3 hours and 18 minutes
+* Root Cause: Failure to push cloud configurations
+* Downtime Period: May 9, 2022, 02:42 UTC
+
+**Summary of Outage**
+
+The outage affected multiple services across Google Cloud Platform, including Compute Engine, DNS, Networking, Composer, App Engine, CDN, and Traffic Director. The root cause of the outage was a failure to push cloud configurations. The outage lasted for 3 hours and 18 minutes, with the downtime period starting at May 9, 2022, 02:42 UTC.
+
+**Overall Summary**
+
+The outage impacted services across Google Cloud Platform, including Compute Engine, DNS, Networking, Composer, App Engine, CDN, and Traffic Director. The root cause of the outage was a failure to push cloud configurations.  
+--
 Outage Filename: ./outages_files/Google Cloud Service Health - 2023-01-15 - part1.txt
 --
 Based on the provided text, I have identified the following public cloud services that were impacted:
@@ -130611,6 +130700,119 @@ Here is the output in a fixed format table:
 * Downtime Period: 2 hours and 22 minutes
 * Resolved Date: 2024-11-25 19:48 UTC  
 --
+Outage Filename: ./outages_files/Google Cloud Service Health - 2024-11-28 - part1.txt
+--
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+**Google Cloud Service**
+
+* Service: Vertex AI AutoML Image
+* Region: us-central1 and europe-west4
+* Availability Zone: Not specified
+* Impact Date: 2024-11-28 01:40 UTC
+* Duration: 3 hours and 12 minutes
+* Root Cause: Impacted users may receive "429" Quota Exhausted errors when using automl and image processing
+* Downtime Period: 2024-11-28 04:52 UTC - 2024-11-28 04:48 UTC (resolved)
+* Resolved Date: 2024-11-28 04:48 UTC
+
+**Summary for Google Cloud Service**
+
+Google Cloud Service was impacted by a Vertex AI AutoML Image outage that started on November 28, 2024, at 01:40 UTC and lasted for 3 hours and 12 minutes. The root cause of the outage was related to quota exhausted errors when using automl and image processing.
+
+**Cloud Provider Summary**
+
+Google Cloud Service was impacted by a single service outage in two regions (us-central1 and europe-west4) with no availability zones specified.
+
+---
+
+**Amazon Web Services (AWS)**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for AWS**
+
+No information is available on an AWS outage based on the provided text.
+
+---
+
+**Microsoft Azure**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for Microsoft Azure**
+
+No information is available on a Microsoft Azure outage based on the provided text.
+
+---
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for OCI**
+
+No information is available on an OCI outage based on the provided text.
+
+---
+
+**IBM Cloud**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for IBM Cloud**
+
+No information is available on an IBM Cloud outage based on the provided text.
+
+---
+
+**Snowflake**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for Snowflake**
+
+No information is available on a Snowflake outage based on the provided text.
+
+---
+
+**Databricks**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for Databricks**
+
+No information is available on a Databricks outage based on the provided text.
+
+---
+
+**MongoDB**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for MongoDB**
+
+No information is available on a MongoDB outage based on the provided text.
+
+---
+
+**Akamai**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for Akamai**
+
+No information is available on an Akamai outage based on the provided text.
+
+---
+
+**Cloudflare**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for Cloudflare**
+
+No information is available on a Cloudflare outage based on the provided text.  
+--
 Outage Filename: ./outages_files/Google Cloud Service Health - 2024-12-04 - part1.txt
 --
 Here is the summary of the outage:
@@ -130757,6 +130959,59 @@ Saturday, 2024-12-07 14:58 UTC
 
 Resolved date:
 Saturday, 2024-12-07 14:58 UTC  
+--
+Outage Filename: ./outages_files/Google Cloud Service Health - 2024-12-09 - part2.txt
+--
+Here is the summary of the outage:
+
+**Cloud Providers impacted:**
+
+* Google Cloud Platform (GCP)
+* Amazon Web Services (AWS) is not mentioned in the text, so it will be excluded
+* Microsoft Azure is not mentioned in the text, so it will be excluded
+* Oracle Cloud Infrastructure (OCI) is not mentioned in the text, so it will be excluded
+* IBM Cloud is not mentioned in the text, so it will be excluded
+* Snowflake is not a cloud provider, but rather a cloud-based database service, so it will be excluded
+* Databricks is not a cloud provider, but rather a cloud-based platform for data science, so it will be excluded
+* MongoDB is not a cloud provider, but rather a NoSQL document-oriented database, so it will be excluded
+* Akamai and Cloudflare are not cloud providers, but rather content delivery networks (CDNs), so they will be excluded
+
+**Services impacted:**
+
+* Google BigQuery
+* Google Cloud Dataflow
+
+**Outage details:**
+
+The outage occurred on December 9, 2024, at 09:24 UTC and lasted for 2 hours and 16 minutes. The root cause of the outage was a surge in concurrent connections that overloaded the backend service.
+
+Here is the breakdown of the outage per cloud provider:
+
+**Google Cloud Platform (GCP)**
+
+* Service: Google BigQuery
+* Region: us-central1, us-east1, us-east4, us-west1, us-west2
+* Availability Zone: Not specified
+* Impact Date: December 9, 2024, 09:24 UTC
+* Duration: 2 hours and 16 minutes
+* Root Cause: Surge in concurrent connections that overloaded the backend service
+* Downtime Period: December 9, 2024, 09:33 - 11:50 UTC
+* Resolved Date: December 9, 2024, 11:40 UTC
+
+**Google Cloud Platform (GCP)**
+
+* Service: Google Cloud Dataflow
+* Region: us-east1, us-east4, us-west1, us-west2, us-central1
+* Availability Zone: Not specified
+* Impact Date: December 9, 2024, 09:24 UTC
+* Duration: 2 hours and 16 minutes
+* Root Cause: Surge in concurrent connections that overloaded the backend service
+* Downtime Period: December 9, 2024, 09:33 - 11:50 UTC
+* Resolved Date: December 9, 2024, 11:40 UTC
+
+**Summary of outage:**
+
+The outage occurred on December 9, 2024, at 09:24 UTC and lasted for 2 hours and 16 minutes. The root cause was a surge in concurrent connections that overloaded the backend service. The services impacted were Google BigQuery and Google Cloud Dataflow, with regions and availability zones not specified. The outage started on December 9, 2024, at 09:24 UTC and ended on December 9, 2024, at 11:40 UTC.  
 --
 Outage Filename: ./outages_files/Google Cloud Service Health - 2025-01-07 - part1.txt
 --

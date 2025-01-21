@@ -1,0 +1,50 @@
+Here is the summary of the outage:
+
+**Cloud Providers impacted:**
+
+* Google Cloud Platform (GCP)
+* Amazon Web Services (AWS) is not mentioned in the text, so it will be excluded
+* Microsoft Azure is not mentioned in the text, so it will be excluded
+* Oracle Cloud Infrastructure (OCI) is not mentioned in the text, so it will be excluded
+* IBM Cloud is not mentioned in the text, so it will be excluded
+* Snowflake is not a cloud provider, but rather a cloud-based database service, so it will be excluded
+* Databricks is not a cloud provider, but rather a cloud-based platform for data science, so it will be excluded
+* MongoDB is not a cloud provider, but rather a NoSQL document-oriented database, so it will be excluded
+* Akamai and Cloudflare are not cloud providers, but rather content delivery networks (CDNs), so they will be excluded
+
+**Services impacted:**
+
+* Google BigQuery
+* Google Cloud Dataflow
+
+**Outage details:**
+
+The outage occurred on December 9, 2024, at 09:24 UTC and lasted for 2 hours and 16 minutes. The root cause of the outage was a surge in concurrent connections that overloaded the backend service.
+
+Here is the breakdown of the outage per cloud provider:
+
+**Google Cloud Platform (GCP)**
+
+* Service: Google BigQuery
+* Region: us-central1, us-east1, us-east4, us-west1, us-west2
+* Availability Zone: Not specified
+* Impact Date: December 9, 2024, 09:24 UTC
+* Duration: 2 hours and 16 minutes
+* Root Cause: Surge in concurrent connections that overloaded the backend service
+* Downtime Period: December 9, 2024, 09:33 - 11:50 UTC
+* Resolved Date: December 9, 2024, 11:40 UTC
+
+**Google Cloud Platform (GCP)**
+
+* Service: Google Cloud Dataflow
+* Region: us-east1, us-east4, us-west1, us-west2, us-central1
+* Availability Zone: Not specified
+* Impact Date: December 9, 2024, 09:24 UTC
+* Duration: 2 hours and 16 minutes
+* Root Cause: Surge in concurrent connections that overloaded the backend service
+* Downtime Period: December 9, 2024, 09:33 - 11:50 UTC
+* Resolved Date: December 9, 2024, 11:40 UTC
+
+**Summary of outage:**
+
+The outage occurred on December 9, 2024, at 09:24 UTC and lasted for 2 hours and 16 minutes. The root cause was a surge in concurrent connections that overloaded the backend service. The services impacted were Google BigQuery and Google Cloud Dataflow, with regions and availability zones not specified. The outage started on December 9, 2024, at 09:24 UTC and ended on December 9, 2024, at 11:40 UTC.

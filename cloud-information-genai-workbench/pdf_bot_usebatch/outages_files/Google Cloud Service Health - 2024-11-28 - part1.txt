@@ -1,0 +1,110 @@
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+**Google Cloud Service**
+
+* Service: Vertex AI AutoML Image
+* Region: us-central1 and europe-west4
+* Availability Zone: Not specified
+* Impact Date: 2024-11-28 01:40 UTC
+* Duration: 3 hours and 12 minutes
+* Root Cause: Impacted users may receive "429" Quota Exhausted errors when using automl and image processing
+* Downtime Period: 2024-11-28 04:52 UTC - 2024-11-28 04:48 UTC (resolved)
+* Resolved Date: 2024-11-28 04:48 UTC
+
+**Summary for Google Cloud Service**
+
+Google Cloud Service was impacted by a Vertex AI AutoML Image outage that started on November 28, 2024, at 01:40 UTC and lasted for 3 hours and 12 minutes. The root cause of the outage was related to quota exhausted errors when using automl and image processing.
+
+**Cloud Provider Summary**
+
+Google Cloud Service was impacted by a single service outage in two regions (us-central1 and europe-west4) with no availability zones specified.
+
+---
+
+**Amazon Web Services (AWS)**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for AWS**
+
+No information is available on an AWS outage based on the provided text.
+
+---
+
+**Microsoft Azure**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for Microsoft Azure**
+
+No information is available on a Microsoft Azure outage based on the provided text.
+
+---
+
+**Oracle Cloud Infrastructure (OCI)**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for OCI**
+
+No information is available on an OCI outage based on the provided text.
+
+---
+
+**IBM Cloud**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for IBM Cloud**
+
+No information is available on an IBM Cloud outage based on the provided text.
+
+---
+
+**Snowflake**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for Snowflake**
+
+No information is available on a Snowflake outage based on the provided text.
+
+---
+
+**Databricks**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for Databricks**
+
+No information is available on a Databricks outage based on the provided text.
+
+---
+
+**MongoDB**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for MongoDB**
+
+No information is available on a MongoDB outage based on the provided text.
+
+---
+
+**Akamai**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for Akamai**
+
+No information is available on an Akamai outage based on the provided text.
+
+---
+
+**Cloudflare**
+
+* No services were mentioned as being impacted in the provided text.
+
+**Summary for Cloudflare**
+
+No information is available on a Cloudflare outage based on the provided text.
