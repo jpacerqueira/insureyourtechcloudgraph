@@ -1,0 +1,84 @@
+Here is the summary of the outages per cloud provider:
+
+**Google Cloud**
+
+* Service: Artifact Registry
+* Region: us-west2
+* Availability Zone: us-west2-a
+* Impact Date: 2024-10-15 23:05 UTC
+* Duration: 3 hours, 44 minutes
+* Root Cause: Failure in an internal lookup and task addressing system
+* Downtime Period: 2024-10-16 02:49 UTC - 2024-10-16 06:33 UTC
+* Resolved Date: 2024-10-16 06:33 UTC
+
+**Google Cloud**
+
+* Service: Cloud Build
+* Region: us-west2
+* Availability Zone: us-west2-a
+* Impact Date: 2024-10-15 23:05 UTC
+* Duration: 3 hours, 44 minutes
+* Root Cause: Failure in an internal lookup and task addressing system
+* Downtime Period: 2024-10-16 02:49 UTC - 2024-10-16 06:33 UTC
+* Resolved Date: 2024-10-16 06:33 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Deploy
+* Region: us-west2
+* Availability Zone: us-west2-a
+* Impact Date: 2024-10-15 23:05 UTC
+* Duration: 3 hours, 44 minutes
+* Root Cause: Failure in an internal lookup and task addressing system
+* Downtime Period: 2024-10-16 02:49 UTC - 2024-10-16 06:33 UTC
+* Resolved Date: 2024-10-16 06:33 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Dataflow
+* Region: us-west2
+* Availability Zone: us-west2-a
+* Impact Date: 2024-10-15 23:05 UTC
+* Duration: 3 hours, 44 minutes
+* Root Cause: Failure in an internal lookup and task addressing system
+* Downtime Period: 2024-10-16 02:49 UTC - 2024-10-16 06:33 UTC
+* Resolved Date: 2024-10-16 06:33 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Bigtable
+* Region: us-west2-a
+* Availability Zone: us-west2-a
+* Impact Date: 2024-10-15 23:05 UTC
+* Duration: 3 hours, 44 minutes
+* Root Cause: Failure in an internal lookup and task addressing system
+* Downtime Period: 2024-10-16 02:49 UTC - 2024-10-16 06:33 UTC
+* Resolved Date: 2024-10-16 06:33 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud SQL
+* Region: us-west2-a
+* Availability Zone: us-west2-a
+* Impact Date: 2024-10-15 23:05 UTC
+* Duration: 3 hours, 44 minutes
+* Root Cause: Failure in an internal lookup and task addressing system
+* Downtime Period: 2024-10-16 02:49 UTC - 2024-10-16 06:33 UTC
+* Resolved Date: 2024-10-16 06:33 UTC
+
+**Summary**
+
+Cloud Providers impacted:
+Google Cloud
+
+Services impacted:
+Artifact Registry, Cloud Build, Google Cloud Deploy, Google Cloud Dataflow, Google Cloud Bigtable, Google Cloud SQL
+
+Regions and Availability Zones impacted:
+us-west2, us-west2-a
+
+Impact Dates:
+2024-10-15 23:05 UTC - 2024-10-16 02:49 UTC
+
+Duration of outages:
+3 hours, 44 minutes
