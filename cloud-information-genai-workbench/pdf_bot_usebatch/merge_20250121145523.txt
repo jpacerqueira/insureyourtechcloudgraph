@@ -13267,6 +13267,296 @@ A single outage occurred on November 13, 2024, between 00:50 UTC and 12:30 UTC. 
 
 Note: The output table is formatted with the specified variables.  
 --
+Outage Filename: ./outages_files/Azure status history _ Microsoft Azure -  08-01-2025 - part1.txt
+--
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+**Microsoft Azure**
+
+* Service: API Management
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure App Service**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Container Apps**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Container Instances**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Database for PostgreSQL flexible servers**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Databricks**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Function Apps**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Storage**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Virtual Machines**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Virtual Network**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Web Apps**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Microsoft Azure**
+
+Summary:
+
+* Cloud Provider: Microsoft Azure
+* Services impacted: API Management, Azure App Service, Azure Container Apps, Azure Container Instances, Azure Database for PostgreSQL flexible servers, Azure Databricks, Azure Function Apps, Azure Storage, Azure Virtual Machines, Azure Virtual Network, and Azure Web Apps.
+* Regions impacted: East US 2
+* Availability Zones impacted: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+
+Overall Summary:
+
+The outage affected multiple services across Microsoft Azure, including API Management, Azure App Service, Azure Container Apps, Azure Container Instances, Azure Database for PostgreSQL flexible servers, Azure Databricks, Azure Function Apps, Azure Storage, Azure Virtual Machines, Azure Virtual Network, and Azure Web Apps. The outage was caused by an incorrect networking configuration change in a single Availability Zone (Physical Zone Az01) in the East US 2 region.  
+--
+Outage Filename: ./outages_files/Azure status history _ Microsoft Azure - 2024-11-13 - part1.txt
+--
+Here is the summary of the public cloud service outages:
+
+**Summary**
+
+The outage affected Microsoft Azure services in multiple regions and availability zones. The incident started on November 13, 2024, at 00:50 UTC and lasted for approximately 7 hours and 40 minutes.
+
+**Outage Details per Cloud Provider**
+
+**Microsoft Azure**
+- Service: Azure Storage
+- Region: Australia East, Australia Southeast, Brazil South, Brazil Southeast, Canada Central, Canada East, Central India, Central US, East Asia, East US, East US 2, East US 2 EU AP, France Central, Germany West Central, Japan East, Japan West, Korea Central, North Central US, North Europe, Norway East, South Africa North, South Central US, South India, Southeast Asia, Sweden Central, Switzerland North, UAE North, UK South, UK West
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 7 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 6 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
+
+**Azure Container Registry**
+- Service: Azure Container Registry
+- Region: East US
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 5 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 5 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
+
+**Azure Data Lakes**
+- Service: Azure Data Lakes
+- Region: Australia East, Canada Central, Canada East, Central US, East US, East US 2, Japan East, South Central US, UAE North, West US, West US 2
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 7 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 6 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
+
+**Azure Service Health Alerts**
+- Service: Azure Service Health Alerts
+- Region: Not specified
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 7 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 6 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
+
+**Microsoft Azure**
+- Service: Azure Storage
+- Region: Not specified
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 7 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 6 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
+
+**Azure Data Lakes**
+- Service: Azure Data Lakes
+- Region: Not specified
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 7 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 6 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC
+
+**Azure Service Health Alerts**
+- Service: Azure Service Health Alerts
+- Region: Not specified
+- Availability Zone: Not specified
+- Impact Date: November 13, 2024, 00:50 UTC
+- Duration: 7 hours and 40 minutes
+- Root Cause: Unintentional deletion of Traffic Manager profiles for affected storage accounts
+- Downtime Period: 6 hours and 24 minutes
+- Resolved Date: November 13, 2024, 12:30 UTC  
+--
+Outage Filename: ./outages_files/Azure status history _ Microsoft Azure - 2024-12-16 - part1.txt
+--
+Here is the summary of the outages per cloud provider:
+
+**Microsoft Azure**
+
+* Service: App Service
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 18:40 UTC on December 26, 2024
+* Duration: 1 day, 20 hours, 35 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:13-20:56 UTC on December 26, 2024
+* Resolved Date: 20:56 UTC on December 26, 2024
+
+* Service: Application Gateway
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 18:40 UTC on December 26, 2024
+* Duration: 1 day, 20 hours, 35 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:13-20:56 UTC on December 26, 2024
+* Resolved Date: 20:56 UTC on December 26, 2024
+
+* Service: Azure Backup
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 20:40 UTC on December 26, 2024
+* Duration: 1 day, 21 hours, 21 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:40-02:21 UTC on December 27, 2024
+* Resolved Date: 02:21 UTC on December 27, 2024
+
+* Service: Azure Cache for Redis
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 18:45-21:35 UTC on December 26, 2024
+* Duration: 2 hours, 50 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:54-21:40 UTC on December 26, 2024
+* Resolved Date: Not specified
+
+* Service: Azure Cosmos DB
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 18:47 UTC on December 26, 2024
+* Duration: 1 day, 3 hours, 59 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:54-03:59 UTC on December 28, 2024
+* Resolved Date: Not specified
+
+* Service: Azure Database for PostgreSQL
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 18:48 UTC on December 26, 2024
+* Duration: 1 day, 13 hours, 12 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:54-13:00 UTC on December 27, 2024
+* Resolved Date: Not specified
+
+* Service: Azure Database Migration Service
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 19:01 UTC on December 26, 2024
+* Duration: 1 day, 12 hours, 17 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:54-08:30 UTC on December 27, 2024
+* Resolved Date: Not specified
+
+**Overall Summary**
+
+* Cloud Providers impacted: Microsoft Azure
+* Services impacted: App Service, Application Gateway, Azure Backup, Azure Cache for Redis, Azure Cosmos DB, Azure Database for PostgreSQL, and Azure Database Migration Service
+* Regions impacted: South Central US
+* Availability Zones impacted: Not specified (due to lack of information)
+* Impact dates: December 26-28, 2024
+* Duration: 1 day, 20 hours, 35 minutes (for App Service and Application Gateway) to 1 day, 3 hours, 59 minutes (for Azure Cosmos DB)
+
+Note that the root cause of the outages was UPS battery failure, which is not a cloud provider-specific issue. The downtime periods are also not specified for some services, as they were not provided in the original text.  
+--
 Outage Filename: ./outages_files/Azure_status_history_Microsoft_Azure_p10_2020.txt
 --
 After analyzing the text, I found that the following Cloud Providers were impacted:
@@ -129540,6 +129830,103 @@ Here is the output in a fixed format table:
 
 The outage was caused by a change in the client code of reCAPTCHA Enterprise that caused requests being sent to customer servers instead of reCAPTCHA servers.  
 --
+Outage Filename: ./outages_files/Google Cloud Service Health - 2024-08-03 - part1.txt
+--
+Based on the provided text, I have identified the following Cloud Providers: Google GCP.
+
+Here is the breakdown of the outage per service impacted:
+
+**Google GCP**
+
+* Artifact Registry
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Cloud Filestore
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Cloud Run
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Cloud Workstations
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* GKE Fleet Management
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Google Cloud Dataflow
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Google Cloud Dataproc
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Google Compute Engine
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Google Kubernetes Engine
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+
+**Summary**
+
+* Cloud Provider: Google GCP
+* Services impacted: Artifact Registry, Cloud Filestore, Cloud Run, Cloud Workstations, GKE Fleet Management, Google Cloud Dataflow, Google Cloud Dataproc, Google Compute Engine, Google Kubernetes Engine
+* Regions impacted: europe-west9
+* Availability Zones impacted: Not specified
+* Impact Date: 2024-08-03 04:31 UTC
+* Duration: 55 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+* Resolved Date: 2024-08-03 06:28 UTC
+
+**Overall Summary**
+
+The outage affected multiple services provided by Google GCP, including Artifact Registry, Cloud Filestore, Cloud Run, Cloud Workstations, GKE Fleet Management, Google Cloud Dataflow, Google Cloud Dataproc, Google Compute Engine, and Google Kubernetes Engine. The outage occurred on August 3, 2024, at 04:31 UTC and lasted for 55 minutes. The root cause of the outage was not specified.  
+--
 Outage Filename: ./outages_files/Google Cloud Service Health - 2024-09-18 - part1.txt
 --
 After analyzing the text, I found that the following public cloud services were impacted:
@@ -129627,6 +130014,93 @@ Google Cloud, Google Cloud Functions Gen1, us-east1, , 2024-09-18 12:34:00 UTC, 
 Google Cloud, Google Cloud Functions Gen1, us-east4, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
 Google Cloud, Google Cloud Functions Gen1, us-west1, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC
 Google Cloud, Google Cloud Functions Gen1, us-west3, , 2024-09-18 12:34:00 UTC, 2 hours and 56 minutes, Newly implemented automation code created a bad traffic routing policy, 5 minutes to 67 minutes, 2024-09-18 15:30:00 UTC  
+--
+Outage Filename: ./outages_files/Google Cloud Service Health - 2024-10-15 - part1.txt
+--
+Here is the summary of the outages per cloud provider:
+
+**Google Cloud**
+
+* Service: Artifact Registry
+* Region: us-west2
+* Availability Zone: us-west2-a
+* Impact Date: 2024-10-15 23:05 UTC
+* Duration: 3 hours, 44 minutes
+* Root Cause: Failure in an internal lookup and task addressing system
+* Downtime Period: 2024-10-16 02:49 UTC - 2024-10-16 06:33 UTC
+* Resolved Date: 2024-10-16 06:33 UTC
+
+**Google Cloud**
+
+* Service: Cloud Build
+* Region: us-west2
+* Availability Zone: us-west2-a
+* Impact Date: 2024-10-15 23:05 UTC
+* Duration: 3 hours, 44 minutes
+* Root Cause: Failure in an internal lookup and task addressing system
+* Downtime Period: 2024-10-16 02:49 UTC - 2024-10-16 06:33 UTC
+* Resolved Date: 2024-10-16 06:33 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Deploy
+* Region: us-west2
+* Availability Zone: us-west2-a
+* Impact Date: 2024-10-15 23:05 UTC
+* Duration: 3 hours, 44 minutes
+* Root Cause: Failure in an internal lookup and task addressing system
+* Downtime Period: 2024-10-16 02:49 UTC - 2024-10-16 06:33 UTC
+* Resolved Date: 2024-10-16 06:33 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Dataflow
+* Region: us-west2
+* Availability Zone: us-west2-a
+* Impact Date: 2024-10-15 23:05 UTC
+* Duration: 3 hours, 44 minutes
+* Root Cause: Failure in an internal lookup and task addressing system
+* Downtime Period: 2024-10-16 02:49 UTC - 2024-10-16 06:33 UTC
+* Resolved Date: 2024-10-16 06:33 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud Bigtable
+* Region: us-west2-a
+* Availability Zone: us-west2-a
+* Impact Date: 2024-10-15 23:05 UTC
+* Duration: 3 hours, 44 minutes
+* Root Cause: Failure in an internal lookup and task addressing system
+* Downtime Period: 2024-10-16 02:49 UTC - 2024-10-16 06:33 UTC
+* Resolved Date: 2024-10-16 06:33 UTC
+
+**Google Cloud**
+
+* Service: Google Cloud SQL
+* Region: us-west2-a
+* Availability Zone: us-west2-a
+* Impact Date: 2024-10-15 23:05 UTC
+* Duration: 3 hours, 44 minutes
+* Root Cause: Failure in an internal lookup and task addressing system
+* Downtime Period: 2024-10-16 02:49 UTC - 2024-10-16 06:33 UTC
+* Resolved Date: 2024-10-16 06:33 UTC
+
+**Summary**
+
+Cloud Providers impacted:
+Google Cloud
+
+Services impacted:
+Artifact Registry, Cloud Build, Google Cloud Deploy, Google Cloud Dataflow, Google Cloud Bigtable, Google Cloud SQL
+
+Regions and Availability Zones impacted:
+us-west2, us-west2-a
+
+Impact Dates:
+2024-10-15 23:05 UTC - 2024-10-16 02:49 UTC
+
+Duration of outages:
+3 hours, 44 minutes  
 --
 Outage Filename: ./outages_files/Google Cloud Service Health - 2024-10-23 - part1.txt
 --
@@ -129798,107 +130272,97 @@ The root cause of the outage was a power voltage swell event that impacted the N
 --
 Outage Filename: ./outages_files/Google Cloud Service Health - 2024-11-16 -part1.txt
 --
-After analyzing the text, I found that the following public cloud services were impacted:
+Here is the summary of the outages per cloud provider:
 
 **Google Cloud**
 
-* Service: Google Cloud Pub/Sub
-* Region: europe-west3-c
-* Availability Zone: 
-* Impact Date: 2024-11-16 18:25 UTC
-* Duration: 16 minutes
-* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
-* Downtime Period: 2024-11-16 18:25 - 18:41 UTC
-* Resolved Date: Not specified
+* Service: Google Cloud Networking
+* Region: asia-southeast2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 02:13 UTC
 
-* Service: Google Cloud Dataflow
-* Region: europe-west3
-* Availability Zone: 
-* Impact Date: 2024-11-16 19:05 UTC
-* Duration: 2 hours and 50 minutes
-* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
-* Downtime Period: 2024-11-16 19:05 - 23:55 UTC
-* Resolved Date: Not specified
+* Service: Virtual Private Cloud (VPC)
+* Region: asia-southeast2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 02:13 UTC
 
-* Service: Google Cloud Dataproc
-* Region: europe-west3
-* Availability Zone: 
-* Impact Date: 2024-11-16 19:12 UTC
-* Duration: 1 hour and 48 minutes
-* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
-* Downtime Period: 2024-11-16 19:12 - 22:00 UTC
-* Resolved Date: Not specified
+* Service: Cloud Load Balancing
+* Region: asia-southeast2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 02:13 UTC
 
-* Service: Google Cloud Kubernetes Engine
-* Region: europe-west3-c
-* Availability Zone: 
-* Impact Date: 2024-11-16 18:22 UTC
-* Duration: 7 hours and 39 minutes
-* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
-* Downtime Period: 2024-11-16 18:22 - 02:01 UTC
-* Resolved Date: Not specified
+* Service: Cloud SQL
+* Region: asia-southeast2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 02:13 UTC
 
-**Google Cloud (continued)**
+* Service: Cloud Spanner
+* Region: asia-southeast2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 02:13 UTC
 
-* Service: Google Compute Engine
-* Region: europe-west3-c
-* Availability Zone: 
-* Impact Date: 2024-11-16 18:22 UTC
-* Duration: 7 hours and 39 minutes
-* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
-* Downtime Period: 2024-11-16 18:22 - 02:01 UTC
-* Resolved Date: Not specified
+* Service: Cloud Logging
+* Region: asia-southeast2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 02:13 UTC
 
-* Service: Google Cloud Persistent Disk
-* Region: europe-west3-c
-* Availability Zone: 
-* Impact Date: 2024-11-16 18:24 UTC
-* Duration: 1 hour and 34 minutes
-* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
-* Downtime Period: 2024-11-16 18:24 - 00:58 UTC
-* Resolved Date: Not specified
+* Service: Cloud Firestore
+* Region: asia-southeast2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 02:13 UTC
 
-**Google Cloud (continued)**
+* Service: BigQuery
+* Region: asia-southeast2
+* Availability Zone: Not specified
+* Impact Date: 2024-11-16 00:52 UTC
+* Duration: 2 hours, 44 minutes
+* Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router
+* Downtime Period: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Date: 2024-11-16 02:13 UTC
 
-* Service: Vertex AI Batch Prediction
-* Region: europe-west3-c
-* Availability Zone: 
-* Impact Date: 2024-11-16 19:45 UTC
-* Duration: 1 hour and 15 minutes
-* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
-* Downtime Period: 2024-11-16 19:45 - 23:30 UTC
-* Resolved Date: Not specified
+**Overall Summary**
 
-**Google Cloud (continued)**
+* Cloud Provider: Google Cloud
+* Services Impacted: Google Cloud Networking, Virtual Private Cloud (VPC), Cloud Load Balancing, Cloud SQL, Cloud Spanner, Cloud Logging, Cloud Firestore, BigQuery
+* Regions Impacted: asia-southeast2
+* Availability Zones Not Specified
+* Impact Dates: 2024-11-16 00:52 UTC
+* Durations: 2 hours, 44 minutes
+* Root Causes: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router
+* Downtime Periods: 2024-11-16 00:52 - 03:36 UTC
+* Resolved Dates: 2024-11-16 02:13 UTC
 
-* Service: Google Cloud SQL
-* Region: europe-west3
-* Availability Zone: 
-* Impact Date: 2024-11-16 18:35 UTC
-* Duration: 2 hours and 53 minutes
-* Root Cause: Misconfiguration and triggered by the outage in europe-west3-c
-* Downtime Period: 2024-11-16 18:35 - 24:28 UTC
-* Resolved Date: Not specified
+**Summary of Outages**
 
-**Summary**
-
-The following cloud providers were impacted:
-
-* Google Cloud
-
-The services, regions, availability zones, impacted dates and duration are as follows:
-
-| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Google Cloud | Google Cloud Pub/Sub | europe-west3-c |  | 2024-11-16 18:25 UTC | 16 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 18:25 - 18:41 UTC | Not specified |
-| Google Cloud | Google Cloud Dataflow | europe-west3 |  | 2024-11-16 19:05 UTC | 2 hours and 50 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 19:05 - 23:55 UTC | Not specified |
-| Google Cloud | Google Cloud Dataproc | europe-west3 |  | 2024-11-16 19:12 UTC | 1 hour and 48 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 19:12 - 22:00 UTC | Not specified |
-| Google Cloud | Google Compute Engine | europe-west3-c |  | 2024-11-16 18:22 UTC | 7 hours and 39 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 18:22 - 02:01 UTC | Not specified |
-| Google Cloud | Google Cloud Persistent Disk | europe-west3-c |  | 2024-11-16 18:24 UTC | 1 hour and 34 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 18:24 - 00:58 UTC | Not specified |
-| Google Cloud | Vertex AI Batch Prediction | europe-west3-c |  | 2024-11-16 19:45 UTC | 1 hour and 15 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 19:45 - 23:30 UTC | Not specified |
-| Google Cloud | Google Cloud SQL | europe-west3 |  | 2024-11-16 18:35 UTC | 2 hours and 53 minutes | Misconfiguration and triggered by the outage in europe-west3-c | 2024-11-16 18:35 - 24:28 UTC | Not specified |
-
-Note: The availability zone is not explicitly mentioned in the text, so it was not included in the table.  
+The outage occurred on November 16, 2024, at 00:52 UTC and lasted for 2 hours and 44 minutes. The root cause was a significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router. The services impacted were Google Cloud Networking, Virtual Private Cloud (VPC), Cloud Load Balancing, Cloud SQL, Cloud Spanner, Cloud Logging, Cloud Firestore, and BigQuery. All services were resolved by 02:13 UTC on the same day.  
 --
 Outage Filename: ./outages_files/Google Cloud Service Health - 2024-11-25 - LookerStudio - part1.txt
 --
@@ -129934,6 +130398,38 @@ Here is the output in a fixed format table:
 * Root Cause: Not specified
 * Downtime Period: 2 hours and 22 minutes
 * Resolved Date: 2024-11-25 19:48 UTC  
+--
+Outage Filename: ./outages_files/Google Cloud Service Health - 2024-12-04 - part1.txt
+--
+Here is the summary of the outage:
+
+**Cloud Providers impacted:**
+
+* Google Cloud Platform (GCP)
+* Amazon Web Services (AWS) is not mentioned in the text, so it will be excluded
+* Microsoft Azure is not mentioned in the text, so it will be excluded
+* Oracle Cloud Infrastructure (OCI) is not mentioned in the text, so it will be excluded
+
+**Services impacted:**
+
+* Google BigQuery
+* Google Drive integration for BigQuery
+
+**Outage details:**
+
+The outage started on December 4, 2024, at 14:30 UTC and lasted for 3 hours and 25 minutes.
+
+**GCP outage details:**
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud Platform | BigQuery | africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-west3, asia-west4 | December 4, 2024, 14:30 UTC | 3 hours and 25 minutes | Elevated invalid value and internal system errors due to failures in BigQuery accessing Google Drive | All regions affected | December 4, 2024, 18:55 UTC |
+
+**Summary of GCP outage:**
+
+The outage started on December 4, 2024, at 14:30 UTC and lasted for 3 hours and 25 minutes. The root cause was elevated invalid value and internal system errors due to failures in BigQuery accessing Google Drive. All regions were affected during the downtime period, which ended on December 4, 2024, at 18:55 UTC.
+
+Note that Amazon Web Services (AWS) and Microsoft Azure are not mentioned in the text, so they will not be included in this summary.  
 --
 Outage Filename: ./outages_files/Google Cloud Service Health - 2024-12-04 -part1.txt
 --
@@ -129986,6 +130482,154 @@ Duration: 3 hours, 25 minutes
 | Google Cloud | Automated tasks relying on BigQuery to Google Drive export functionality | multiple regions and zones | 2024-12-04 14:30 UTC | 3 hours, 25 minutes | Misconfiguration in BigQuery's Google Drive integration | 2024-12-04 14:30 - 18:04 UTC | 2024-12-04 18:10 UTC |
 
 Note: I removed references to Cloud Providers not mentioned in the text provided (Amazon AWS, Microsoft Azure, Oracle OCI, IBM Cloud, Snowflake, Databricks, MongoDB, Akamai, and Cloudflare).  
+--
+Outage Filename: ./outages_files/Google Cloud Service Health - 2024-12-07 - part1.txt
+--
+Based on the provided text, I can identify that the following public cloud services were impacted:
+
+**Google Cloud**
+
+* Service: Vertex AI Search
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: 2024-12-06 05:00 UTC
+* Duration: 2 days, 14 hours, and 58 minutes
+* Root Cause: Data import delays detected
+* Downtime Period: Saturday, 2024-12-07 14:58 UTC
+* Resolved Date: Saturday, 2024-12-07 14:58 UTC
+
+**Google Cloud**
+
+* Service: Recommendation AI
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: 2024-12-06 05:00 UTC
+* Duration: 2 days, 14 hours, and 58 minutes
+* Root Cause: Data import delays detected
+* Downtime Period: Saturday, 2024-12-07 14:58 UTC
+* Resolved Date: Saturday, 2024-12-07 14:58 UTC
+
+**Google Cloud**
+
+* Service: Vertex AI Search (again)
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: 2024-12-06 05:00 UTC
+* Duration: 2 days, 14 hours, and 58 minutes
+* Root Cause: Data import delays detected
+* Downtime Period: Saturday, 2024-12-07 14:58 UTC
+* Resolved Date: Saturday, 2024-12-07 14:58 UTC
+
+**Summary**
+
+The following cloud providers were impacted:
+
+* Google Cloud
+
+Services impacted:
+* Vertex AI Search
+* Recommendation AI
+
+Regions and Availability Zones affected:
+* Global (no specific region or availability zone specified)
+
+Impact dates and duration:
+* Impact date: 2024-12-06 05:00 UTC
+* Duration: 2 days, 14 hours, and 58 minutes
+
+Root cause:
+Data import delays detected
+
+Downtime period:
+Saturday, 2024-12-07 14:58 UTC
+
+Resolved date:
+Saturday, 2024-12-07 14:58 UTC  
+--
+Outage Filename: ./outages_files/Google Cloud Service Health - 2025-01-07 - part1.txt
+--
+Here is the summary of the outage:
+
+**Cloud Providers impacted:**
+
+* Google Cloud Service
+* Apigee X customers experienced issues with logging into integrated developer portals using SAML.
+
+**Services impacted:**
+
+* Apigee X
+* Apigee Edge Public Cloud
+
+**Regions and Availability Zones impacted:**
+
+* asia-east1
+* asia-east2
+* asia-northeast1
+* asia-northeast2
+* asia-south1
+* asia-southeast1
+* asia-southeast2
+* australia-southeast1
+* australia-southeast2
+* europe-central2
+* europe-north1
+* europe-west1
+* europe-west12
+* europe-west3
+* europe-west4
+* europe-west6
+* europe-west8
+* europe-west9
+* me-central1
+* me-central2
+* me-west1
+* northamerica-northeast1
+* northamerica-northeast2
+* northamerica-south1
+* southamerica-east1
+* southamerica-west1
+* us-central1
+* us-east1
+* us-east4
+* us-east5
+* us-south1
+* us-west1
+* us-west2
+* us-west3
+
+**Outage details:**
+
+The outage started on January 7, 2025, at 12:51 UTC and lasted for approximately 3 hours and 39 minutes. The root cause of the outage was an intermittent issue with Apigee X.
+
+Here is the breakdown of the outage per cloud provider:
+
+**Google Cloud Service**
+------------------------
+
+* **Apigee X**
+	+ Region: asia-east1
+	+ Availability Zone:
+	+ Impact Date: January 7, 2025, 12:51 UTC
+	+ Duration: 3 hours and 39 minutes
+	+ Root Cause: Intermittent issue with Apigee X
+	+ Downtime Period: January 7, 2025, 13:30 - 15:30 UTC
+	+ Resolved Date: January 7, 2025, 15:30 UTC
+
+**Apigee Edge Public Cloud**
+-----------------------------
+
+* **Apigee**
+	+ Region: asia-east1
+	+ Availability Zone:
+	+ Impact Date: January 7, 2025, 12:51 UTC
+	+ Duration: 3 hours and 39 minutes
+	+ Root Cause: Intermittent issue with Apigee X
+	+ Downtime Period: January 7, 2025, 13:30 - 15:30 UTC
+	+ Resolved Date: January 7, 2025, 15:30 UTC
+
+**Summary of outage:**
+
+The outage started on January 7, 2025, at 12:51 UTC and lasted for approximately 3 hours and 39 minutes. The root cause of the outage was an intermittent issue with Apigee X. The services impacted were Apigee X and Apigee Edge Public Cloud, in multiple regions and availability zones.  
 --
 Outage Filename: ./outages_files/Google Cloud Service Health - 2025-01-08 - part1.txt
 --
