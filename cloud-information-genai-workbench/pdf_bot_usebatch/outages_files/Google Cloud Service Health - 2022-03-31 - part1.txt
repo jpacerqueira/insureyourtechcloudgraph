@@ -1,0 +1,97 @@
+Based on the provided text, here is the breakdown of the outages per cloud provider:
+
+**Google Cloud**
+
+* Service: Global External HTTP/S load balancing
+* Region: Global
+* Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, us-pacific
+* Impact Date: 2022-03-31 11:07 UTC
+* Duration: 4 hours, 6 minutes
+* Root Cause: Rollout on the configuration management system that manages and pushes configurations for multiple services.
+* Downtime Period: 2022-03-31 11:07 - 15:13 UTC
+* Resolved Date: 2022-03-31 15:13 UTC
+
+**Cloud Armor**
+
+* Service: Cloud Armor
+* Region: Global
+* Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, us-pacific
+* Impact Date: 2022-03-31 11:07 UTC
+* Duration: 4 hours, 6 minutes
+* Root Cause: Rollout on the configuration management system that manages and pushes configurations for multiple services.
+* Downtime Period: 2022-03-31 11:07 - 15:13 UTC
+* Resolved Date: 2022-03-31 15:13 UTC
+
+**Cloud CDN**
+
+* Service: Cloud CDN
+* Region: Global
+* Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, us-pacific
+* Impact Date: 2022-03-31 11:07 UTC
+* Duration: 4 hours, 6 minutes
+* Root Cause: Rollout on the configuration management system that manages and pushes configurations for multiple services.
+* Downtime Period: 2022-03-31 11:07 - 15:13 UTC
+* Resolved Date: 2022-03-31 15:13 UTC
+
+**App Engine**
+
+* Service: App Engine Flexible apps
+* Region: Global
+* Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, us-pacific
+* Impact Date: 2022-03-31 11:07 UTC
+* Duration: 4 hours, 6 minutes
+* Root Cause: Rollout on the configuration management system that manages and pushes configurations for multiple services.
+* Downtime Period: 2022-03-31 11:07 - 15:13 UTC
+* Resolved Date: 2022-03-31 15:13 UTC
+
+**Cloud Networking**
+
+* Service: Cloud Networking
+* Region: asia-east1, asia-east2, asia-northeast1, asia-northeast2, us-pacific
+* Impact Date: 2022-03-31 11:07 UTC
+* Duration: 4 hours, 6 minutes
+* Root Cause: Rollout on the configuration management system that manages and pushes configurations for multiple services.
+* Downtime Period: 2022-03-31 11:07 - 15:13 UTC
+* Resolved Date: 2022-03-31 15:13 UTC
+
+**Summary**
+
+Cloud Providers impacted:
+
+* Google Cloud
+* Cloud Armor
+* Cloud CDN
+* App Engine
+* Cloud Networking
+
+Services impacted:
+
+* Global External HTTP/S load balancing
+* Cloud Armor
+* Cloud CDN
+* App Engine Flexible apps
+* Regional external HTTP(S) load balancers
+
+Regions and Availability Zones impacted:
+
+* asia-east1, asia-east2, asia-northeast1, asia-northeast2, us-pacific
+
+Impact Dates:
+
+* 2022-03-31 11:07 UTC
+
+Duration of outages:
+
+* 4 hours, 6 minutes
+
+Root Cause:
+
+* Rollout on the configuration management system that manages and pushes configurations for multiple services.
+
+Downtime Period:
+
+* 2022-03-31 11:07 - 15:13 UTC
+
+Resolved Date:
+
+* 2022-03-31 15:13 UTC

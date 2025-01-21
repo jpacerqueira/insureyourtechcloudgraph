@@ -129576,6 +129576,141 @@ No information is available on Amazon AWS services impacted during this incident
 
 The outage started at 2024-11-16 00:52 UTC and lasted for 2 hours, 44 minutes. The root cause was a significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router.  
 --
+Outage Filename: ./outages_files/Google Cloud Service Health - 2022-03-31 - part1.txt
+--
+Based on the provided text, here is the breakdown of the outages per cloud provider:
+
+**Google Cloud**
+
+* Service: Global External HTTP/S load balancing
+* Region: Global
+* Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, us-pacific
+* Impact Date: 2022-03-31 11:07 UTC
+* Duration: 4 hours, 6 minutes
+* Root Cause: Rollout on the configuration management system that manages and pushes configurations for multiple services.
+* Downtime Period: 2022-03-31 11:07 - 15:13 UTC
+* Resolved Date: 2022-03-31 15:13 UTC
+
+**Cloud Armor**
+
+* Service: Cloud Armor
+* Region: Global
+* Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, us-pacific
+* Impact Date: 2022-03-31 11:07 UTC
+* Duration: 4 hours, 6 minutes
+* Root Cause: Rollout on the configuration management system that manages and pushes configurations for multiple services.
+* Downtime Period: 2022-03-31 11:07 - 15:13 UTC
+* Resolved Date: 2022-03-31 15:13 UTC
+
+**Cloud CDN**
+
+* Service: Cloud CDN
+* Region: Global
+* Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, us-pacific
+* Impact Date: 2022-03-31 11:07 UTC
+* Duration: 4 hours, 6 minutes
+* Root Cause: Rollout on the configuration management system that manages and pushes configurations for multiple services.
+* Downtime Period: 2022-03-31 11:07 - 15:13 UTC
+* Resolved Date: 2022-03-31 15:13 UTC
+
+**App Engine**
+
+* Service: App Engine Flexible apps
+* Region: Global
+* Availability Zone: asia-east1, asia-east2, asia-northeast1, asia-northeast2, us-pacific
+* Impact Date: 2022-03-31 11:07 UTC
+* Duration: 4 hours, 6 minutes
+* Root Cause: Rollout on the configuration management system that manages and pushes configurations for multiple services.
+* Downtime Period: 2022-03-31 11:07 - 15:13 UTC
+* Resolved Date: 2022-03-31 15:13 UTC
+
+**Cloud Networking**
+
+* Service: Cloud Networking
+* Region: asia-east1, asia-east2, asia-northeast1, asia-northeast2, us-pacific
+* Impact Date: 2022-03-31 11:07 UTC
+* Duration: 4 hours, 6 minutes
+* Root Cause: Rollout on the configuration management system that manages and pushes configurations for multiple services.
+* Downtime Period: 2022-03-31 11:07 - 15:13 UTC
+* Resolved Date: 2022-03-31 15:13 UTC
+
+**Summary**
+
+Cloud Providers impacted:
+
+* Google Cloud
+* Cloud Armor
+* Cloud CDN
+* App Engine
+* Cloud Networking
+
+Services impacted:
+
+* Global External HTTP/S load balancing
+* Cloud Armor
+* Cloud CDN
+* App Engine Flexible apps
+* Regional external HTTP(S) load balancers
+
+Regions and Availability Zones impacted:
+
+* asia-east1, asia-east2, asia-northeast1, asia-northeast2, us-pacific
+
+Impact Dates:
+
+* 2022-03-31 11:07 UTC
+
+Duration of outages:
+
+* 4 hours, 6 minutes
+
+Root Cause:
+
+* Rollout on the configuration management system that manages and pushes configurations for multiple services.
+
+Downtime Period:
+
+* 2022-03-31 11:07 - 15:13 UTC
+
+Resolved Date:
+
+* 2022-03-31 15:13 UTC  
+--
+Outage Filename: ./outages_files/Google Cloud Service Health - 2023-01-15 - part1.txt
+--
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+**Google Cloud**
+
+* BigQuery UI: 
+  + Impact Date: Sunday, 2023-01-15 00:00 UTC
+  + Duration: 1 hour and 51 minutes
+  + Root Cause: Slow response on the Big Query UI via Google Cloud Console
+  + Downtime Period: Sunday, 2023-01-15 05:13 - 06:04 UTC
+  + Resolved Date: Sunday, 2023-01-15 06:03 UTC
+
+**BigQuery Data Transfer Service**
+  + Impact Date: Sunday, 2023-01-15 00:00 UTC
+  + Duration: Not specified
+  + Root Cause: None at this time
+  + Downtime Period: Sunday, 2023-01-15 05:35 - 06:04 UTC
+  + Resolved Date: Sunday, 2023-01-15 06:03 UTC
+
+**Summary for Google Cloud**
+Google Cloud was impacted by two separate outages. The first outage affected BigQuery UI and lasted for approximately 1 hour and 51 minutes. The second outage affected the BigQuery Data Transfer Service but no root cause was specified.
+
+**Overall Summary**
+The following cloud providers were impacted: Google Cloud. No other cloud providers were mentioned in the provided text.
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | BigQuery UI | pacific standard time |  | Sunday, 2023-01-15 00:00 UTC | 1 hour and 51 minutes | Slow response on the Big Query UI via Google Cloud Console | Sunday, 2023-01-15 05:13 - 06:04 UTC | Sunday, 2023-01-15 06:03 UTC |
+| Google Cloud | BigQuery Data Transfer Service | pacific standard time |  | Sunday, 2023-01-15 00:00 UTC | Not specified | None at this time | Sunday, 2023-01-15 05:35 - 06:04 UTC | Sunday, 2023-01-15 06:03 UTC |
+
+Note that the duration for the BigQuery Data Transfer Service outage was not specified in the provided text.  
+--
 Outage Filename: ./outages_files/Google Cloud Service Health - 2024-01-14 - part1.txt
 --
 Here is the summary of the outages:
@@ -129926,6 +130061,83 @@ Here is the breakdown of the outage per service impacted:
 **Overall Summary**
 
 The outage affected multiple services provided by Google GCP, including Artifact Registry, Cloud Filestore, Cloud Run, Cloud Workstations, GKE Fleet Management, Google Cloud Dataflow, Google Cloud Dataproc, Google Compute Engine, and Google Kubernetes Engine. The outage occurred on August 3, 2024, at 04:31 UTC and lasted for 55 minutes. The root cause of the outage was not specified.  
+--
+Outage Filename: ./outages_files/Google Cloud Service Health - 2024-08-12 .txt
+--
+Here is the summary of the outages per cloud provider:
+
+**Google Cloud**
+
+* Service: Cloud CDN
+* Region: europe-west2
+* Availability Zone: lhr-zone1-2262, lhr-zone1-832, lhr-zone1-47, and lhr-zone2-47
+* Impact Date: 2024-08-12 06:20 UTC
+* Duration: 2 hours and 12 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes for Gmail users, 2 hours and 12 minutes for Cloud CDN customers
+* Resolved Date: 2024-08-12 08:32 UTC
+
+**Google Cloud**
+
+* Service: Cloud Load Balancing
+* Region: europe-west2
+* Availability Zone: lhr-zone1-2262, lhr-zone1-832, lhr-zone1-47, and lhr-zone2-47
+* Impact Date: 2024-08-12 06:20 UTC
+* Duration: 2 hours and 12 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes for Gmail users, 2 hours and 12 minutes for Cloud Load Balancing customers
+* Resolved Date: 2024-08-12 08:32 UTC
+
+**Google Cloud**
+
+* Service: Hybrid Connectivity
+* Region: europe-west2
+* Availability Zone: lhr-zone1-2262, lhr-zone1-832, lhr-zone1-47, and lhr-zone2-47
+* Impact Date: 2024-08-12 06:20 UTC
+* Duration: 2 hours and 12 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes for Gmail users, 2 hours and 12 minutes for Hybrid Connectivity customers
+* Resolved Date: 2024-08-12 08:32 UTC
+
+**Google Cloud**
+
+* Service: Virtual Private Cloud (VPC)
+* Region: europe-west2
+* Availability Zone: lhr-zone1-2262, lhr-zone1-832, lhr-zone1-47, and lhr-zone2-47
+* Impact Date: 2024-08-12 06:20 UTC
+* Duration: 2 hours and 12 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes for Gmail users, 2 hours and 12 minutes for VPC customers
+* Resolved Date: 2024-08-12 08:32 UTC
+
+**Google Cloud**
+
+* Service: Google Workspace (Gmail, Google Calendar, Google Chat, Google Docs, Google Drive, Google Meet, and Google Tasks)
+* Region: UK region
+* Availability Zone:
+* Impact Date: 2024-08-12 06:20 UTC
+* Duration: 40 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes for Gmail users, 2 hours and 12 minutes for Workspace customers
+* Resolved Date: 2024-08-12 08:32 UTC
+
+**Summary**
+
+Cloud providers impacted: Google Cloud
+Services impacted: Cloud CDN, Cloud Load Balancing, Hybrid Connectivity, Virtual Private Cloud (VPC), and Google Workspace
+Regions impacted: europe-west2
+Availability zones impacted: lhr-zone1-2262, lhr-zone1-832, lhr-zone1-47, and lhr-zone2-47
+Impact dates: 2024-08-12 UTC
+Duration of outages:
+* Cloud CDN: 2 hours and 12 minutes
+* Cloud Load Balancing: 2 hours and 12 minutes
+* Hybrid Connectivity: 2 hours and 12 minutes
+* Virtual Private Cloud (VPC): 2 hours and 12 minutes
+* Google Workspace: 40 minutes
+
+**Overall Summary**
+
+Google Cloud experienced a series of outages affecting various services, including Cloud CDN, Cloud Load Balancing, Hybrid Connectivity, Virtual Private Cloud (VPC), and Google Workspace. The outages were caused by a loss of power to networking equipment in the London data center. The duration of the outages varied, with Cloud CDN and Cloud Load Balancing experiencing 2 hours and 12 minutes of downtime, while Google Workspace experienced 40 minutes of downtime.  
 --
 Outage Filename: ./outages_files/Google Cloud Service Health - 2024-09-18 - part1.txt
 --
