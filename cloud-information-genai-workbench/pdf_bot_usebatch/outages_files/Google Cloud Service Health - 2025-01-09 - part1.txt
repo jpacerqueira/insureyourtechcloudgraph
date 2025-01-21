@@ -1,0 +1,47 @@
+Here is the summary of the outages per cloud provider:
+
+**Google Cloud**
+
+* Service: Data Ingestion feeds
+* Region: asia-northeast1, asia-south1, asia-southeast1, australiasoutheast1, multi-region
+* Availability Zone: Tokyo, Mumbai, Singapore, Sydney
+* Impact Date: 2025-01-09 16:20 UTC
+* Duration: 10 hours and 26 minutes
+* Root Cause: DNS errors and delay in ingestion of data
+* Downtime Period: 2025-01-09 22:20 - 2025-01-10 00:46 UTC
+* Resolved Date: 2025-01-10 00:30 UTC
+
+**Google Cloud (continued)**
+
+* Service: Data Ingestion feeds
+* Region: europe-west12, europe-west2, europe-west3, europe-west6, europe-west9, me-central1, me-central2, me-west1, northamerica-northeast2, southamerica-east1
+* Availability Zone: Turin, London, Frankfurt, Zurich, Paris, Doha, Dammam, Tel Aviv, Toronto, São Paulo
+* Impact Date: 2025-01-09 16:20 UTC
+* Duration: 10 hours and 26 minutes
+* Root Cause: DNS errors and delay in ingestion of data
+* Downtime Period: 2025-01-09 22:20 - 2025-01-10 00:46 UTC
+* Resolved Date: 2025-01-10 00:30 UTC
+
+**Google Cloud (continued)**
+
+* Service: Data Ingestion feeds
+* Region: multi-region
+* Availability Zone: us
+* Impact Date: 2025-01-09 16:20 UTC
+* Duration: 10 hours and 26 minutes
+* Root Cause: DNS errors and delay in ingestion of data
+* Downtime Period: 2025-01-09 22:20 - 2025-01-10 00:46 UTC
+* Resolved Date: 2025-01-10 00:30 UTC
+
+**Summary**
+
+* Cloud Providers impacted: Google Cloud
+* Services impacted: Data Ingestion feeds
+* Regions impacted: asia-northeast1, asia-south1, asia-southeast1, australiasoutheast1, europe-west12, europe-west2, europe-west3, europe-west6, europe-west9, me-central1, me-central2, me-west1, northamerica-northeast2, southamerica-east1, us
+* Availability Zones impacted: Tokyo, Mumbai, Singapore, Sydney, Turin, London, Frankfurt, Zurich, Paris, Doha, Dammam, Tel Aviv, Toronto, São Paulo
+* Impact Dates: 2025-01-09 16:20 UTC
+* Duration: 10 hours and 26 minutes
+
+**Overall Summary**
+
+Google Cloud experienced a outage with Data Ingestion feeds in multiple regions and availability zones. The outage started on January 9, 2025, at 16:20 UTC and lasted for 10 hours and 26 minutes. The root cause of the outage was DNS errors and delay in ingestion of data. The outage was resolved on January 10, 2025, at 00:30 UTC.
