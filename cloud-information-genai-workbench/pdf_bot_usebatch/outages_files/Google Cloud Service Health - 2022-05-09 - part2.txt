@@ -1,0 +1,86 @@
+Here is the summary of the outage:
+
+**Cloud Providers Impacted:**
+
+* Google Cloud Platform (GCP)
+* Google App Engine
+* Google Cloud Composer
+* Google Cloud Networking
+* Google Compute Engine
+* Google Cloud DNS
+* Google Service Directory
+* Google Load Balancing
+* Google Cloud CDN
+* Google Traffic Director
+
+**Outage Details:**
+
+The outage occurred on May 8, 2022, at 23:24 UTC and lasted for 3 hours and 18 minutes. The root cause of the outage was a failure to push cloud configurations.
+
+Here is the breakdown of the outage per service impacted:
+
+**Google Cloud Platform (GCP)**
+
+* Google Compute Engine
+	+ Region: Global
+	+ Availability Zone: N/A
+	+ Impact Date: May 8, 2022, 23:24 UTC
+	+ Duration: 3 hours and 18 minutes
+	+ Root Cause: Failure to push cloud configurations
+	+ Downtime Period: May 9, 2022, 02:42 UTC
+* Google Cloud DNS
+	+ Region: Global
+	+ Availability Zone: N/A
+	+ Impact Date: May 8, 2022, 23:24 UTC
+	+ Duration: 3 hours and 18 minutes
+	+ Root Cause: Failure to push cloud configurations
+	+ Downtime Period: May 9, 2022, 02:42 UTC
+* Google Cloud Networking
+	+ Region: Global
+	+ Availability Zone: N/A
+	+ Impact Date: May 8, 2022, 23:24 UTC
+	+ Duration: 3 hours and 18 minutes
+	+ Root Cause: Failure to push cloud configurations
+	+ Downtime Period: May 9, 2022, 02:42 UTC
+* Google Cloud Composer
+	+ Region: Global
+	+ Availability Zone: N/A
+	+ Impact Date: May 8, 2022, 23:24 UTC
+	+ Duration: 3 hours and 18 minutes
+	+ Root Cause: Failure to push cloud configurations
+	+ Downtime Period: May 9, 2022, 02:42 UTC
+
+**Google App Engine**
+
+* Region: Global
+* Availability Zone: N/A
+* Impact Date: May 8, 2022, 23:24 UTC
+* Duration: 3 hours and 18 minutes
+* Root Cause: Failure to push cloud configurations
+* Downtime Period: May 9, 2022, 02:42 UTC
+
+**Google Cloud CDN**
+
+* Region: Global
+* Availability Zone: N/A
+* Impact Date: May 8, 2022, 23:24 UTC
+* Duration: 3 hours and 18 minutes
+* Root Cause: Failure to push cloud configurations
+* Downtime Period: May 9, 2022, 02:42 UTC
+
+**Google Traffic Director**
+
+* Region: Global
+* Availability Zone: N/A
+* Impact Date: May 8, 2022, 23:24 UTC
+* Duration: 3 hours and 18 minutes
+* Root Cause: Failure to push cloud configurations
+* Downtime Period: May 9, 2022, 02:42 UTC
+
+**Summary of Outage**
+
+The outage affected multiple services across Google Cloud Platform, including Compute Engine, DNS, Networking, Composer, App Engine, CDN, and Traffic Director. The root cause of the outage was a failure to push cloud configurations. The outage lasted for 3 hours and 18 minutes, with the downtime period starting at May 9, 2022, 02:42 UTC.
+
+**Overall Summary**
+
+The outage impacted services across Google Cloud Platform, including Compute Engine, DNS, Networking, Composer, App Engine, CDN, and Traffic Director. The root cause of the outage was a failure to push cloud configurations.
