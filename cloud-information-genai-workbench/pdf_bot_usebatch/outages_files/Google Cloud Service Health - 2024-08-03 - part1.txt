@@ -1,0 +1,94 @@
+Based on the provided text, I have identified the following Cloud Providers: Google GCP.
+
+Here is the breakdown of the outage per service impacted:
+
+**Google GCP**
+
+* Artifact Registry
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Cloud Filestore
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Cloud Run
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Cloud Workstations
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* GKE Fleet Management
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Google Cloud Dataflow
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Google Cloud Dataproc
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Google Compute Engine
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+* Google Kubernetes Engine
+	+ Region: europe-west9
+	+ Availability Zone: Not specified
+	+ Impact Date: 2024-08-03 04:31 UTC
+	+ Duration: 55 minutes
+	+ Root Cause: Not specified
+	+ Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+	+ Resolved Date: 2024-08-03 06:28 UTC
+
+**Summary**
+
+* Cloud Provider: Google GCP
+* Services impacted: Artifact Registry, Cloud Filestore, Cloud Run, Cloud Workstations, GKE Fleet Management, Google Cloud Dataflow, Google Cloud Dataproc, Google Compute Engine, Google Kubernetes Engine
+* Regions impacted: europe-west9
+* Availability Zones impacted: Not specified
+* Impact Date: 2024-08-03 04:31 UTC
+* Duration: 55 minutes
+* Root Cause: Not specified
+* Downtime Period: 2024-08-03 06:26 UTC - 2024-08-03 06:28 UTC (2 minutes)
+* Resolved Date: 2024-08-03 06:28 UTC
+
+**Overall Summary**
+
+The outage affected multiple services provided by Google GCP, including Artifact Registry, Cloud Filestore, Cloud Run, Cloud Workstations, GKE Fleet Management, Google Cloud Dataflow, Google Cloud Dataproc, Google Compute Engine, and Google Kubernetes Engine. The outage occurred on August 3, 2024, at 04:31 UTC and lasted for 55 minutes. The root cause of the outage was not specified.

@@ -1,4 +1,32 @@
 Attaching to cloudrisk-customer_portal_app_customer_portal_app_1, cloud-risk-portal, cloudrisk-customer_portal_app_customer_graph_1
+[36mcloud-risk-portal      |[0m 
+[36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
+[36mcloud-risk-portal      |[0m > node server.js
+[36mcloud-risk-portal      |[0m 
+[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
+[36mcloud-risk-portal      |[0m Invalid service Google Kubernetes Engine (GKE) for vendor Amazon AWS
+[36mcloud-risk-portal      |[0m Invalid service Google Kubernetes Engine (GKE) for vendor Amazon AWS
+[36mcloud-risk-portal      |[0m Neo4j query executed successfully
+[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
+[36mcloud-risk-portal      |[0m Invalid service Google Kubernetes Engine (GKE) for vendor Amazon AWS
+[36mcloud-risk-portal      |[0m Invalid service Google Kubernetes Engine (GKE) for vendor Amazon AWS
+[36mcloud-risk-portal      |[0m Neo4j query executed successfully
+[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
+[36mcloud-risk-portal      |[0m Invalid service Google Kubernetes Engine (GKE) for vendor Amazon AWS
+[36mcloud-risk-portal      |[0m Invalid service Google Kubernetes Engine (GKE) for vendor Amazon AWS
+[36mcloud-risk-portal      |[0m Neo4j query executed successfully
+[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
+[36mcloud-risk-portal      |[0m Neo4j query executed successfully
+[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
+[36mcloud-risk-portal      |[0m Neo4j query executed successfully
+[32mcustomer_portal_app_1  |[0m 
+[32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+[32mcustomer_portal_app_1  |[0m 
+[32mcustomer_portal_app_1  |[0m 
+[32mcustomer_portal_app_1  |[0m   You can now view your Streamlit app in your browser.
+[32mcustomer_portal_app_1  |[0m 
+[32mcustomer_portal_app_1  |[0m   URL: http://0.0.0.0:8185
+[32mcustomer_portal_app_1  |[0m 
 [33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
 [33mcustomer_graph_1       |[0m 2025-01-18 11:41:22.326+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
 [33mcustomer_graph_1       |[0m 2025-01-18 11:41:22.386+0000 INFO  Starting...
@@ -12,19 +40,3 @@ Attaching to cloudrisk-customer_portal_app_customer_portal_app_1, cloud-risk-por
 [33mcustomer_graph_1       |[0m 2025-01-18 11:41:32.884+0000 INFO  name: system
 [33mcustomer_graph_1       |[0m 2025-01-18 11:41:32.887+0000 INFO  creationDate: 2024-11-19T23:06:54.589Z
 [33mcustomer_graph_1       |[0m 2025-01-18 11:41:32.888+0000 INFO  Started.
-[32mcustomer_portal_app_1  |[0m 
-[32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
-[32mcustomer_portal_app_1  |[0m 
-[32mcustomer_portal_app_1  |[0m 
-[32mcustomer_portal_app_1  |[0m   You can now view your Streamlit app in your browser.
-[32mcustomer_portal_app_1  |[0m 
-[32mcustomer_portal_app_1  |[0m   URL: http://0.0.0.0:8185
-[32mcustomer_portal_app_1  |[0m 
-[36mcloud-risk-portal      |[0m 
-[36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
-[36mcloud-risk-portal      |[0m > node server.js
-[36mcloud-risk-portal      |[0m 
-[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
-[36mcloud-risk-portal      |[0m Invalid service Google Kubernetes Engine (GKE) for vendor Amazon AWS
-[36mcloud-risk-portal      |[0m Invalid service Google Kubernetes Engine (GKE) for vendor Amazon AWS
-[36mcloud-risk-portal      |[0m Neo4j query executed successfully

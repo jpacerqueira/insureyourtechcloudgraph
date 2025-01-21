@@ -1,0 +1,32 @@
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+**Google Cloud**
+
+* BigQuery UI: 
+  + Impact Date: Sunday, 2023-01-15 00:00 UTC
+  + Duration: 1 hour and 51 minutes
+  + Root Cause: Slow response on the Big Query UI via Google Cloud Console
+  + Downtime Period: Sunday, 2023-01-15 05:13 - 06:04 UTC
+  + Resolved Date: Sunday, 2023-01-15 06:03 UTC
+
+**BigQuery Data Transfer Service**
+  + Impact Date: Sunday, 2023-01-15 00:00 UTC
+  + Duration: Not specified
+  + Root Cause: None at this time
+  + Downtime Period: Sunday, 2023-01-15 05:35 - 06:04 UTC
+  + Resolved Date: Sunday, 2023-01-15 06:03 UTC
+
+**Summary for Google Cloud**
+Google Cloud was impacted by two separate outages. The first outage affected BigQuery UI and lasted for approximately 1 hour and 51 minutes. The second outage affected the BigQuery Data Transfer Service but no root cause was specified.
+
+**Overall Summary**
+The following cloud providers were impacted: Google Cloud. No other cloud providers were mentioned in the provided text.
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | BigQuery UI | pacific standard time |  | Sunday, 2023-01-15 00:00 UTC | 1 hour and 51 minutes | Slow response on the Big Query UI via Google Cloud Console | Sunday, 2023-01-15 05:13 - 06:04 UTC | Sunday, 2023-01-15 06:03 UTC |
+| Google Cloud | BigQuery Data Transfer Service | pacific standard time |  | Sunday, 2023-01-15 00:00 UTC | Not specified | None at this time | Sunday, 2023-01-15 05:35 - 06:04 UTC | Sunday, 2023-01-15 06:03 UTC |
+
+Note that the duration for the BigQuery Data Transfer Service outage was not specified in the provided text.

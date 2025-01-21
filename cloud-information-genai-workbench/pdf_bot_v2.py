@@ -29,7 +29,6 @@ os.environ["NEO4J_URL"] = url
 
 logger = get_logger(__name__)
 
-
 embeddings, dimension = load_embedding_model(
     embedding_model_name, config={"ollama_base_url": ollama_base_url}, logger=logger
 )
@@ -60,7 +59,7 @@ def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, outpu
         text += page.extract_text()
 
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=2024, chunk_overlap=512, length_function=len
+        chunk_size=1024, chunk_overlap=200, length_function=len
     )
     chunks = text_splitter.split_text(text=text)
     
@@ -72,9 +71,10 @@ def process_pdf_query(pdf_path, query, cloud_vendor="", save_output=False, outpu
         embedding=embeddings,
         index_name="pdf_bot",
         node_label="PdfBotChunk",
-        pre_delete_collection=True,
-    )
-    
+        pre_delete_collection=True, #False # Delete existing PDF data
+        distance_strategy="COSINE",  # Add this for better similarity search - distance_strategy must be either 'EUCLIDEAN_DISTANCE' or 'COSINE' is default.
+     )
+    print(vectorstore.as_retriever())
     qa = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type="stuff",

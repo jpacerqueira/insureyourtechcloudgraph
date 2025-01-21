@@ -1,0 +1,29 @@
+Here is the summary of the outage:
+
+**Cloud Providers impacted:**
+
+* Google Cloud Platform (GCP)
+* Amazon Web Services (AWS) is not mentioned in the text, so it will be excluded
+* Microsoft Azure is not mentioned in the text, so it will be excluded
+* Oracle Cloud Infrastructure (OCI) is not mentioned in the text, so it will be excluded
+
+**Services impacted:**
+
+* Google BigQuery
+* Google Drive integration for BigQuery
+
+**Outage details:**
+
+The outage started on December 4, 2024, at 14:30 UTC and lasted for 3 hours and 25 minutes.
+
+**GCP outage details:**
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud Platform | BigQuery | africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-northeast3, asia-south1, asia-south2, asia-southeast1, asia-west3, asia-west4 | December 4, 2024, 14:30 UTC | 3 hours and 25 minutes | Elevated invalid value and internal system errors due to failures in BigQuery accessing Google Drive | All regions affected | December 4, 2024, 18:55 UTC |
+
+**Summary of GCP outage:**
+
+The outage started on December 4, 2024, at 14:30 UTC and lasted for 3 hours and 25 minutes. The root cause was elevated invalid value and internal system errors due to failures in BigQuery accessing Google Drive. All regions were affected during the downtime period, which ended on December 4, 2024, at 18:55 UTC.
+
+Note that Amazon Web Services (AWS) and Microsoft Azure are not mentioned in the text, so they will not be included in this summary.

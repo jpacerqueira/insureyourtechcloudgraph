@@ -1,0 +1,127 @@
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+**Microsoft Azure**
+
+* Service: API Management
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure App Service**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Container Apps**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Container Instances**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Database for PostgreSQL flexible servers**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Databricks**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Function Apps**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Storage**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Virtual Machines**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Virtual Network**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Azure Web Apps**
+
+* Region: East US 2
+* Availability Zone: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+* Root Cause: Incorrect networking configuration change in a single Availability Zone (Physical Zone Az01)
+* Downtime Period: From January 8, 2025, 22:31 UTC to January 11, 2025, 04:30 UTC
+* Resolved Date: January 11, 2025, 04:30 UTC
+
+**Microsoft Azure**
+
+Summary:
+
+* Cloud Provider: Microsoft Azure
+* Services impacted: API Management, Azure App Service, Azure Container Apps, Azure Container Instances, Azure Database for PostgreSQL flexible servers, Azure Databricks, Azure Function Apps, Azure Storage, Azure Virtual Machines, Azure Virtual Network, and Azure Web Apps.
+* Regions impacted: East US 2
+* Availability Zones impacted: Az01
+* Impact Date: January 8, 2025, 22:31 UTC
+* Duration: 3 days, 1 hour, and 59 minutes
+
+Overall Summary:
+
+The outage affected multiple services across Microsoft Azure, including API Management, Azure App Service, Azure Container Apps, Azure Container Instances, Azure Database for PostgreSQL flexible servers, Azure Databricks, Azure Function Apps, Azure Storage, Azure Virtual Machines, Azure Virtual Network, and Azure Web Apps. The outage was caused by an incorrect networking configuration change in a single Availability Zone (Physical Zone Az01) in the East US 2 region.

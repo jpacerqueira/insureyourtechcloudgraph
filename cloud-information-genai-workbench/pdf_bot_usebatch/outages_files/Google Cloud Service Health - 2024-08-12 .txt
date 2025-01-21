@@ -1,0 +1,74 @@
+Here is the summary of the outages per cloud provider:
+
+**Google Cloud**
+
+* Service: Cloud CDN
+* Region: europe-west2
+* Availability Zone: lhr-zone1-2262, lhr-zone1-832, lhr-zone1-47, and lhr-zone2-47
+* Impact Date: 2024-08-12 06:20 UTC
+* Duration: 2 hours and 12 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes for Gmail users, 2 hours and 12 minutes for Cloud CDN customers
+* Resolved Date: 2024-08-12 08:32 UTC
+
+**Google Cloud**
+
+* Service: Cloud Load Balancing
+* Region: europe-west2
+* Availability Zone: lhr-zone1-2262, lhr-zone1-832, lhr-zone1-47, and lhr-zone2-47
+* Impact Date: 2024-08-12 06:20 UTC
+* Duration: 2 hours and 12 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes for Gmail users, 2 hours and 12 minutes for Cloud Load Balancing customers
+* Resolved Date: 2024-08-12 08:32 UTC
+
+**Google Cloud**
+
+* Service: Hybrid Connectivity
+* Region: europe-west2
+* Availability Zone: lhr-zone1-2262, lhr-zone1-832, lhr-zone1-47, and lhr-zone2-47
+* Impact Date: 2024-08-12 06:20 UTC
+* Duration: 2 hours and 12 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes for Gmail users, 2 hours and 12 minutes for Hybrid Connectivity customers
+* Resolved Date: 2024-08-12 08:32 UTC
+
+**Google Cloud**
+
+* Service: Virtual Private Cloud (VPC)
+* Region: europe-west2
+* Availability Zone: lhr-zone1-2262, lhr-zone1-832, lhr-zone1-47, and lhr-zone2-47
+* Impact Date: 2024-08-12 06:20 UTC
+* Duration: 2 hours and 12 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes for Gmail users, 2 hours and 12 minutes for VPC customers
+* Resolved Date: 2024-08-12 08:32 UTC
+
+**Google Cloud**
+
+* Service: Google Workspace (Gmail, Google Calendar, Google Chat, Google Docs, Google Drive, Google Meet, and Google Tasks)
+* Region: UK region
+* Availability Zone:
+* Impact Date: 2024-08-12 06:20 UTC
+* Duration: 40 minutes
+* Root Cause: Loss of power to networking equipment in the London data center
+* Downtime Period: 40 minutes for Gmail users, 2 hours and 12 minutes for Workspace customers
+* Resolved Date: 2024-08-12 08:32 UTC
+
+**Summary**
+
+Cloud providers impacted: Google Cloud
+Services impacted: Cloud CDN, Cloud Load Balancing, Hybrid Connectivity, Virtual Private Cloud (VPC), and Google Workspace
+Regions impacted: europe-west2
+Availability zones impacted: lhr-zone1-2262, lhr-zone1-832, lhr-zone1-47, and lhr-zone2-47
+Impact dates: 2024-08-12 UTC
+Duration of outages:
+* Cloud CDN: 2 hours and 12 minutes
+* Cloud Load Balancing: 2 hours and 12 minutes
+* Hybrid Connectivity: 2 hours and 12 minutes
+* Virtual Private Cloud (VPC): 2 hours and 12 minutes
+* Google Workspace: 40 minutes
+
+**Overall Summary**
+
+Google Cloud experienced a series of outages affecting various services, including Cloud CDN, Cloud Load Balancing, Hybrid Connectivity, Virtual Private Cloud (VPC), and Google Workspace. The outages were caused by a loss of power to networking equipment in the London data center. The duration of the outages varied, with Cloud CDN and Cloud Load Balancing experiencing 2 hours and 12 minutes of downtime, while Google Workspace experienced 40 minutes of downtime.

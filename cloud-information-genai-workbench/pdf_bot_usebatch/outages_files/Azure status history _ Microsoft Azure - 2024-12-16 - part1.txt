@@ -1,0 +1,77 @@
+Here is the summary of the outages per cloud provider:
+
+**Microsoft Azure**
+
+* Service: App Service
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 18:40 UTC on December 26, 2024
+* Duration: 1 day, 20 hours, 35 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:13-20:56 UTC on December 26, 2024
+* Resolved Date: 20:56 UTC on December 26, 2024
+
+* Service: Application Gateway
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 18:40 UTC on December 26, 2024
+* Duration: 1 day, 20 hours, 35 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:13-20:56 UTC on December 26, 2024
+* Resolved Date: 20:56 UTC on December 26, 2024
+
+* Service: Azure Backup
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 20:40 UTC on December 26, 2024
+* Duration: 1 day, 21 hours, 21 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:40-02:21 UTC on December 27, 2024
+* Resolved Date: 02:21 UTC on December 27, 2024
+
+* Service: Azure Cache for Redis
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 18:45-21:35 UTC on December 26, 2024
+* Duration: 2 hours, 50 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:54-21:40 UTC on December 26, 2024
+* Resolved Date: Not specified
+
+* Service: Azure Cosmos DB
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 18:47 UTC on December 26, 2024
+* Duration: 1 day, 3 hours, 59 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:54-03:59 UTC on December 28, 2024
+* Resolved Date: Not specified
+
+* Service: Azure Database for PostgreSQL
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 18:48 UTC on December 26, 2024
+* Duration: 1 day, 13 hours, 12 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:54-13:00 UTC on December 27, 2024
+* Resolved Date: Not specified
+
+* Service: Azure Database Migration Service
+* Region: South Central US
+* Availability Zone: Not specified
+* Impact Date: 19:01 UTC on December 26, 2024
+* Duration: 1 day, 12 hours, 17 minutes
+* Root Cause: UPS battery failure
+* Downtime Period: 20:54-08:30 UTC on December 27, 2024
+* Resolved Date: Not specified
+
+**Overall Summary**
+
+* Cloud Providers impacted: Microsoft Azure
+* Services impacted: App Service, Application Gateway, Azure Backup, Azure Cache for Redis, Azure Cosmos DB, Azure Database for PostgreSQL, and Azure Database Migration Service
+* Regions impacted: South Central US
+* Availability Zones impacted: Not specified (due to lack of information)
+* Impact dates: December 26-28, 2024
+* Duration: 1 day, 20 hours, 35 minutes (for App Service and Application Gateway) to 1 day, 3 hours, 59 minutes (for Azure Cosmos DB)
+
+Note that the root cause of the outages was UPS battery failure, which is not a cloud provider-specific issue. The downtime periods are also not specified for some services, as they were not provided in the original text.

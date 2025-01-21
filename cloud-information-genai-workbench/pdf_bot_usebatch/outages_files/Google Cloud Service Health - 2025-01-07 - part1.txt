@@ -1,0 +1,82 @@
+Here is the summary of the outage:
+
+**Cloud Providers impacted:**
+
+* Google Cloud Service
+* Apigee X customers experienced issues with logging into integrated developer portals using SAML.
+
+**Services impacted:**
+
+* Apigee X
+* Apigee Edge Public Cloud
+
+**Regions and Availability Zones impacted:**
+
+* asia-east1
+* asia-east2
+* asia-northeast1
+* asia-northeast2
+* asia-south1
+* asia-southeast1
+* asia-southeast2
+* australia-southeast1
+* australia-southeast2
+* europe-central2
+* europe-north1
+* europe-west1
+* europe-west12
+* europe-west3
+* europe-west4
+* europe-west6
+* europe-west8
+* europe-west9
+* me-central1
+* me-central2
+* me-west1
+* northamerica-northeast1
+* northamerica-northeast2
+* northamerica-south1
+* southamerica-east1
+* southamerica-west1
+* us-central1
+* us-east1
+* us-east4
+* us-east5
+* us-south1
+* us-west1
+* us-west2
+* us-west3
+
+**Outage details:**
+
+The outage started on January 7, 2025, at 12:51 UTC and lasted for approximately 3 hours and 39 minutes. The root cause of the outage was an intermittent issue with Apigee X.
+
+Here is the breakdown of the outage per cloud provider:
+
+**Google Cloud Service**
+------------------------
+
+* **Apigee X**
+	+ Region: asia-east1
+	+ Availability Zone:
+	+ Impact Date: January 7, 2025, 12:51 UTC
+	+ Duration: 3 hours and 39 minutes
+	+ Root Cause: Intermittent issue with Apigee X
+	+ Downtime Period: January 7, 2025, 13:30 - 15:30 UTC
+	+ Resolved Date: January 7, 2025, 15:30 UTC
+
+**Apigee Edge Public Cloud**
+-----------------------------
+
+* **Apigee**
+	+ Region: asia-east1
+	+ Availability Zone:
+	+ Impact Date: January 7, 2025, 12:51 UTC
+	+ Duration: 3 hours and 39 minutes
+	+ Root Cause: Intermittent issue with Apigee X
+	+ Downtime Period: January 7, 2025, 13:30 - 15:30 UTC
+	+ Resolved Date: January 7, 2025, 15:30 UTC
+
+**Summary of outage:**
+
+The outage started on January 7, 2025, at 12:51 UTC and lasted for approximately 3 hours and 39 minutes. The root cause of the outage was an intermittent issue with Apigee X. The services impacted were Apigee X and Apigee Edge Public Cloud, in multiple regions and availability zones.
