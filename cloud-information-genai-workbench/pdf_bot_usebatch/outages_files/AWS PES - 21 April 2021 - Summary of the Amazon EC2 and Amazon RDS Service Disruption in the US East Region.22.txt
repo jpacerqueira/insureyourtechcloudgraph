@@ -7,7 +7,7 @@ Here is the breakdown of the outage per service impacted:
 * Service: EC2
 * Region: US East Region
 * Availability Zone: Single Availability Zone (not specified)
-* Impact Date: April 21st, 11:00 AM PDT
+* Impact Date: April 21st 2021, 11:00 AM PDT
 * Duration: Approximately 11 hours
 * Root Cause: A subset of EBS volumes in the affected Availability Zone became unable to service read and write operations.
 * Downtime Period: Customers experienced elevated error rates until Noon PDT on April 21st when attempting to launch new EBS-backed EC2 instances.
@@ -25,8 +25,8 @@ Here is an overall summary of the outage:
 * Services impacted: EC2
 * Regions impacted: us-east-1
 * Availability Zones impacted: Single Availability Zone (not specified)
-* Impact dates: April 21st, 11:00 AM PDT
+* Impact dates: April 21st 2021, 11:00 AM PDT 2021
 * Duration: Approximately 11 hours
 * Root cause: EBS volumes in the affected Availability Zone became unable to service read and write operations.
 * Downtime period: Customers experienced elevated error rates until Noon PDT on April 21st when attempting to launch new EBS-backed EC2 instances.
-* Resolved date: Noon PDT on April 21st
+* Resolved date: Noon PDT on April 21st 2021
