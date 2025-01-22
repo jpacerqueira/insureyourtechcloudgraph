@@ -3,9 +3,12 @@ After analyzing the text, I found that only Microsoft Azure was mentioned as a C
 **Summary**
 
 * Cloud Provider: Microsoft Azure
-* Services impacted: Access Panel, App Service, Azure Functions, Web Deploy, WebJobs
-* Regions impacted: West Central US, Central US
-* Availability Zones impacted: Not specified
+* Services : Access Panel, App Service, Azure Functions, Web Deploy, WebJobs
+* Impact Date: 09 Nov 2021 03:00 UTC
+* Duration: 21 days, 22 hours, and 59 minutes
+* Root Cause: Code change introduced an unrelated bug
+* Regions : West Central US, Central US
+* Availability Zones : Not specified
 * Impact Date: 09 Nov 2021 03:00 UTC - 10 Dec 2021 23:59 UTC
 * Duration: 21 days, 22 hours, and 59 minutes
 
