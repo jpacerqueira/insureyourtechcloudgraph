@@ -1241,6 +1241,36 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
                     if timestamp:
                         outage.start_time = timestamp
                         break  # Exit the loop if a timestamp is found
+        # TODO : Add logic to use Impact Date as a fallback for start_time
+        if outage.start_time is None:
+            for pattern in impact_date_patterns:
+                match = re.search(pattern, section)
+                if match:
+                    timestamp_str = match.group(1).strip()
+                    timestamp = parse_timestamp(timestamp_str)  # Use parse_timestamp instead of parse_date
+                    if timestamp:
+                        outage.start_time = timestamp
+                        break  # Exit the loop if a timestamp is found
+        # TODO : Add logic to use Downtime Period as a fallback for start_time
+        if outage.start_time is None:
+            for pattern in downtime_period_patterns:
+                match = re.search(pattern, section)
+                if match:
+                    timestamp_str = match.group(1).strip()
+                    timestamp = parse_timestamp(timestamp_str)  # Use parse_timestamp instead of parse_date
+                    if timestamp:
+                        outage.start_time = timestamp
+                        break  # Exit the loop if a timestamp is found
+        # TODO : Add logic to use Resolved Date as a fallback for end_time
+        if outage.end_time is None:
+            for pattern in resolved_date_patterns:
+                match = re.search(pattern, section)
+                if match:
+                    timestamp_str = match.group(1).strip()
+                    timestamp = parse_timestamp(timestamp_str)  # Use parse_timestamp instead of parse_date
+                    if timestamp:
+                        outage.end_time = timestamp
+                        break  # Exit the loop if a timestamp is found
         
         # Try to extract start time from the source outage report name before using default time
         if outage.start_time is None and current_filename:
