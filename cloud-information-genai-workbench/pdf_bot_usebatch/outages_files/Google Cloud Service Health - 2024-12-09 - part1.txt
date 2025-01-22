@@ -1,0 +1,68 @@
+Based on the provided text, here is the summary of the outage:
+
+**Summary**
+
+The outage affected Google Cloud services, specifically Recommendation AI and Vertex AI Search for Retail. The incident started on December 9, 2024, at 09:30 UTC and lasted until 21:48 UTC on the same day.
+
+**Cloud Provider Summary**
+
+Google Cloud was impacted by the outage.
+
+**Services Impacted**
+
+Recommendation AI and Vertex AI Search for Retail
+
+**Regions and Availability Zones Impacted**
+
+* eu
+* Global
+* us
+
+**Impact Date and Duration**
+
+The incident started on December 9, 2024, at 09:30 UTC. The duration of the outage was approximately 10 hours.
+
+**Root Cause**
+
+The root cause of the outage is not explicitly stated in the text.
+
+**Downtime Period**
+
+The downtime period for Recommendation AI and Vertex AI Search for Retail was during the entire incident duration.
+
+**Resolved Date**
+
+The issue with Vertex AI Search, Recommendation AI has been resolved as of December 9, 2024, at 21:48 UTC.
+
+Here is the detailed information about each service impacted:
+
+**Recommendation AI**
+
+* Cloud Provider: Google
+* Service: Recommendation AI
+* Region: eu, Global, us
+* Impact Date: December 9, 2024, at 09:30 UTC
+* Duration: Approximately 10 hours
+* Root Cause: Not explicitly stated
+* Downtime Period: Entire incident duration
+* Resolved Date: December 9, 2024, at 21:48 UTC
+
+**Vertex AI Search**
+
+* Cloud Provider: Google
+* Service: Vertex AI Search
+* Region: eu, Global, us
+* Impact Date: December 9, 2024, at 09:30 UTC
+* Duration: Approximately 10 hours
+* Root Cause: Not explicitly stated
+* Downtime Period: Entire incident duration
+* Resolved Date: December 9, 2024, at 21:48 UTC
+
+Here is the output in a table format:
+
+| Cloud Provider | Service | Region | Impact Date (UTC) | Duration | Root Cause | Downtime Period | Resolved Date (UTC) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Google | Recommendation AI | eu, Global, us | 2024-12-09 09:30 | 10 hours | Not explicitly stated | Entire incident duration | 2024-12-09 21:48 |
+| Google | Vertex AI Search | eu, Global, us | 2024-12-09 09:30 | 10 hours | Not explicitly stated | Entire incident duration | 2024-12-09 21:48 |
+
+Note: The dates and times are in UTC format.

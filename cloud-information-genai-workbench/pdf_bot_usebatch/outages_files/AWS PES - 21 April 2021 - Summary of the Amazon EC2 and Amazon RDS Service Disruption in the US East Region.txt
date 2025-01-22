@@ -5,7 +5,7 @@ Here is the breakdown of the outage per service impacted:
 **Amazon Web Services (AWS)**
 
 * **EC2**: US East Region, Availability Zone: 
-	+ Impact Date: April 21st
+	+ Impact Date: April 21st 2021
 	+ Duration: 11 hours and 30 minutes
 	+ Root Cause: A subset of Amazon Elastic Block Store (EBS) volumes in a single Availability Zone became unable to service read and write operations.
 	+ Downtime Period: From April 21st, 11:00 AM PDT to April 22nd, 12:00 PM PDT
@@ -17,10 +17,10 @@ Here is the breakdown of the outage per service impacted:
 * Service: EC2
 * Region: US East Region
 * Availability Zone: 
-* Impact Date: April 21st
+* Impact Date: April 21st 2021
 * Duration: 11 hours and 30 minutes
 * Root Cause: A subset of EBS volumes in a single Availability Zone became unable to service read and write operations.
 * Downtime Period: From April 21st, 11:00 AM PDT to April 22nd, 12:00 PM PDT
-* Resolved Date: April 22nd, 12:00 PM PDT
+* Resolved Date: April 22nd, 12:00 PM PDT 2021
 
 Note that the text does not provide information on other Cloud Providers or services impacted.

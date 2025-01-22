@@ -1,0 +1,82 @@
+Based on the provided text, I have extracted the relevant information about the outages in Google Cloud Platform (GCP). Here is the summary of the outage:
+
+**Summary of GCP Outage**
+
+* **Incident**: Google Infrastructure Configuration Server operation requests failing
+* **Duration**: 2 days, 3 hours, and 42 minutes
+* **Root Cause**: Unknown
+* **Impact Date**: Sunday, 2022-05-08 23:24 UTC (resolved on Monday, 2022-05-09 01:42 UTC)
+* **Affected Services**:
+	+ Google Cloud DNS
+	+ Service Directory
+	+ External HTTP/S Load Balancing
+	+ Cloud CDN
+	+ Cloud Armor
+	+ App Engine
+	+ Traffic Director
+	+ VM instance group healthchecks and autoscaling/autohealing
+* **Regions and Availability Zones Affected**:
+	+ us-west2 (Los Angeles)
+	+ us-west3 (Salt Lake City)
+	+ us-west4 (Las Vegas)
+
+Here is the detailed breakdown of the outage per service:
+
+**GCP Outage Breakdown**
+
+1. **Google Cloud DNS**
+	* Region: us-west2
+	* Availability Zone: Los Angeles
+	* Impact Date: Sunday, 2022-05-08 23:24 UTC
+	* Duration: 2 days, 3 hours, and 42 minutes
+	* Root Cause: Unknown
+	* Downtime Period: Monday, 2022-05-09 01:42 UTC
+2. **Service Directory**
+	* Region: us-west2
+	* Availability Zone: Los Angeles
+	* Impact Date: Sunday, 2022-05-08 23:24 UTC
+	* Duration: 2 days, 3 hours, and 42 minutes
+	* Root Cause: Unknown
+	* Downtime Period: Monday, 2022-05-09 01:42 UTC
+3. **External HTTP/S Load Balancing**
+	* Region: us-west2
+	* Availability Zone: Los Angeles
+	* Impact Date: Sunday, 2022-05-08 23:24 UTC
+	* Duration: 2 days, 3 hours, and 42 minutes
+	* Root Cause: Unknown
+	* Downtime Period: Monday, 2022-05-09 01:42 UTC
+4. **Cloud CDN**
+	* Region: us-west2
+	* Availability Zone: Los Angeles
+	* Impact Date: Sunday, 2022-05-08 23:24 UTC
+	* Duration: 2 days, 3 hours, and 42 minutes
+	* Root Cause: Unknown
+	* Downtime Period: Monday, 2022-05-09 01:42 UTC
+5. **Cloud Armor**
+	* Region: us-west2
+	* Availability Zone: Los Angeles
+	* Impact Date: Sunday, 2022-05-08 23:24 UTC
+	* Duration: 2 days, 3 hours, and 42 minutes
+	* Root Cause: Unknown
+	* Downtime Period: Monday, 2022-05-09 01:42 UTC
+6. **App Engine**
+	* Region: us-west2
+	* Availability Zone: Los Angeles
+	* Impact Date: Sunday, 2022-05-08 23:24 UTC
+	* Duration: 2 days, 3 hours, and 42 minutes
+	* Root Cause: Unknown
+	* Downtime Period: Monday, 2022-05-09 01:42 UTC
+7. **Traffic Director**
+	* Region: us-west2
+	* Availability Zone: Los Angeles
+	* Impact Date: Sunday, 2022-05-08 23:24 UTC
+	* Duration: 2 days, 3 hours, and 42 minutes
+	* Root Cause: Unknown
+	* Downtime Period: Monday, 2022-05-09 01:42 UTC
+8. **VM instance group healthchecks and autoscaling/autohealing**
+	* Region: us-west2
+	* Availability Zone: Los Angeles
+	* Impact Date: Sunday, 2022-05-08 23:24 UTC
+	* Duration: 2 days, 3 hours, and 42 minutes
+	* Root Cause: Unknown
+	* Downtime Period: Monday, 2022-05-09 01:42 UTC
