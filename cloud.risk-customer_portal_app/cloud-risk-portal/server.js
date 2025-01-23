@@ -459,11 +459,14 @@ const apiRouter = express.Router();
 
 // Routes
 app.get('/simulation/', (req, res) => {
+    const companyName = req.query.companyName || 'Simulation Company';
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
         appBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL,
         isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
-        isDevelopment: process.env.IS_PROD !== "true" ? true : false
+        isDevelopment: process.env.IS_PROD !== "true" ? true : false,
+        companyName: companyName
+
     };
     // Serve the chart.js library
     app.use(express.static(path.join(__dirname, 'node_modules', 'chart.js', 'dist')));
@@ -477,6 +480,9 @@ app.get('/simulation/', (req, res) => {
     // Insert the script just after the <head> tag
     html = html.replace('<head>', '<head>' + envScript);
     
+    // Replace the companyName placeholder with the actual company name
+    html = html.replace('{{companyName}}', companyName);
+        
     res.send(html);
 });
 
