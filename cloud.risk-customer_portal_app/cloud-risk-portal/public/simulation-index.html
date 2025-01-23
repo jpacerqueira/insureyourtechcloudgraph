@@ -356,13 +356,20 @@
 
 <script>
     // Add these declarations at the top of the script section, after the options arrays
-    const optionsForVariable1 = ["Google Cloud GCP", "Amazon AWS", "Microsoft Azure", "IBM Cloud", "Oracle Cloud OCI", "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai", "Macrometa"];
-    const optionsForVariable2 = ["AnyCast CloudFlare","CDN CloudFlare","CDN Akamai","Security Akamai","Edge Computing Akamai","CDN Macrometa","Edge Computing Macrometa",
-        "Oracle Cloud Infrastructure Virtual Cloud Network (VCN)","Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)",
+    const optionsForVariable1 = ["Amazon AWS", "Microsoft Azure", "Google Cloud GCP", "IBM Cloud", "Oracle Cloud OCI", "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai", "Macrometa"];
+    const optionsForVariable2 = [
+        "Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon Route 53","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon Kinesis","Amazon DataZone",
+        "Amazon DocumentDB","Amazon DynamoDB","Amazon AWS RDS","Amazon AWS Aurora Serverles","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
+        "Amazon Elastic File System","Amazon Elastic Block Store","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
+        "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
+        "Amazon AWS Step Functions","Amazon Redshift","Amazon AWS Glue","Amazon Simple Queue Service SQS","Amazon s3","Amazon Elastic Kubernetes Service (EKS)",
         "Azure Active Directory AAD","Microsoft Entra ID","Azure Active Directory B2C",
         "Azure Machine Learning","Azure AI","Azure AI Search","Azure OpenAI Service","Azure API Management","Azure Databricks",
         "Azure SQL Managed Instance","Azure SQL Database","Azure Cosmos DB","Azure Database for PostgreSQL","Azure Database for MySQL",
         "Azure Batch","Azure App Service","Azure Functions","Azure PowerBI","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)",
+        "Google Cloud VertexAI","Google Cloud Machine Learning","Google Cloud Apigee","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL","Google Cloud SQL",
+        "Google Cloud Bigtable","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud DataStudio","Google Cloud Datalab","Google Cloud Composer","Google Cloud Looker Studio Pro","Google Cloud reCAPTCHA Enterprise","Google Cloud Storage","Google Cloud Pub/Sub",
+        "Google Cloud Load Balancing","Google Cloud And Media CDN","Google Cloud DNS","Google Kubernetes Engine (GKE)", 
         "IBM Watson Platform","IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
         "IBM Databases","IBM Databases for DataStax","IBM Databases for EDB",
         "IBM Databases for Elasticsearch","IBM Databases for etcd","IBM Databases for MongoDB",
@@ -370,18 +377,12 @@
         "IBM DataStage","IBM Db2","IBM Db2 Warehouse","IBM watsonx BI Assistant",
         "IBM Managed Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Cloud IDE","IBM Kubernetes",
         "Red Hat OpenShift on IBM Cloud",
-        "Google Cloud VertexAI","Google Cloud Machine Learning","Google Cloud Apigee","Google Cloud Run","Google Cloud BigQuery","AlloyDB for PostgreSQL","Google Cloud SQL",
-        "Google Cloud Bigtable","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud DataStudio","Google Cloud Datalab","Google Cloud Composer","Google Cloud Looker Studio Pro","Google Cloud reCAPTCHA Enterprise","Google Cloud Storage","Google Cloud Pub/Sub",
-        "Google Cloud Load Balancing","Google Cloud And Media CDN","Google Cloud DNS","Google Kubernetes Engine (GKE)", 
-        "Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon Route 53","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon Kinesis","Amazon DataZone",
-        "Amazon DocumentDB","Amazon DynamoDB","Amazon AWS RDS","Amazon AWS Aurora Serverles","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
-        "Amazon Elastic File System","Amazon Elastic Block Store","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
-        "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
-        "Amazon AWS Step Functions","Amazon Redshift","Amazon AWS Glue","Amazon Simple Queue Service SQS","Amazon s3","Amazon Elastic Kubernetes Service (EKS)",
-        "Snowflake on AWS","Snowflake on Azure","Snowflake on GCP",
-        "MongoDB Atlas","MongoDB Atlas AWS","MongoDB Atlas Azure","MongoDB Atlas GCP","MongoDB Atlas Search","MongoDB Atlas Vector Search","MongoDB Atlas Stream Processing","MongoDB Atlas BI Connector","MongoDB Atlas SQL",
+        "Oracle Cloud Infrastructure Virtual Cloud Network (VCN)","Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)",
         "Databricks SaaS","Databricks Workspace", "Databricks Mlflow", "Databricks Notebooks",
-        "Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud","Salesforce Mulesoft Anypoint Platform"
+        "MongoDB Atlas","MongoDB Atlas AWS","MongoDB Atlas Azure","MongoDB Atlas GCP","MongoDB Atlas Search","MongoDB Atlas Vector Search","MongoDB Atlas Stream Processing","MongoDB Atlas BI Connector","MongoDB Atlas SQL",
+        "Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud","Salesforce Mulesoft Anypoint Platform",
+        "Snowflake on AWS","Snowflake on Azure","Snowflake on GCP",
+        "AnyCast CloudFlare","CDN CloudFlare","CDN Akamai","Security Akamai","Edge Computing Akamai","CDN Macrometa","Edge Computing Macrometa"
     ];
 
     // Add new options for regions
