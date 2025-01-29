@@ -680,66 +680,6 @@
             throw new Error('No valid services were processed. Please check your selections.');
         }
 
-        // Then prepare the neo4jData
-        const neo4jData = {
-            companyName,
-            projectName,
-            services: selectedServices.map(service => ({
-                ...service,
-                metrics: {
-                    ...service.metrics,
-                    service_sla_tier1: service.metrics.service_sla_tier1 || 99.9,
-                    service_credit_back_tier1: service.metrics.service_credit_back_tier1 || 10
-                }
-            })),
-            metrics: {
-                customerMedian: {
-                    sla_usage: calculateMedian(customerMetrics.sla_usage) || 0,
-                    sla_deviation: calculateMedian(customerMetrics.sla_deviation) || 0,
-                    traffic_coef: calculateMedian(customerMetrics.traffic_coef) || 0,
-                    usage_connected_risk: calculateMedian(customerMetrics.usage_connected_risk) || 0,
-                    service_sla_tier1: calculateMedian(customerMetrics.service_sla_tier1) || 0,
-                    annual_downtime_minutes: calculateMedian(customerMetrics.annual_downtime_minutes) || 0
-                },
-                vendorMedians: Object.fromEntries(
-                    Object.entries(vendorMetrics).map(([vendor, metrics]) => [
-                        vendor,
-                        {
-                            sla_usage: calculateMedian(metrics.sla_usage) || 0,
-                            sla_deviation: calculateMedian(metrics.sla_deviation) || 0,
-                            traffic_coef: calculateMedian(metrics.traffic_coef) || 0,
-                            usage_connected_risk: calculateMedian(metrics.usage_connected_risk) || 0,
-                            service_sla_tier1: calculateMedian(metrics.service_sla_tier1) || 0,
-                            annual_downtime_minutes: calculateMedian(metrics.annual_downtime_minutes) || 0
-                        }
-                    ])
-                )
-            }
-        };
-
-        // Save Neo4j query
-        try {
-            const APP_BASE_URL = await fetchAPPBaseUrl();
-            const response = await fetch(`${APP_BASE_URL}/customer-portal/api/save-neo4j-query`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(neo4jData)
-            });
-
-            const result = await response.json();
-            if (!result.success) {
-                throw new Error(result.error || 'Failed to save Neo4j query');
-            }
-
-            console.log('Neo4j data saved successfully:', result.message);
-        } catch (error) {
-            console.error('Error saving Neo4j query:', error);
-            // Optionally show error to user
-            alert('Please try again! Error saving data to Cloud.Risk.Graph - Neo4j: ' + error.message);
-        }
-
         // Create results container
         let resultsHTML = `
             <div class="results-container">
@@ -901,6 +841,66 @@
         updateCustomerMetrics(customerMetrics);
         
         updateVendorMetrics(vendorMetrics);
+        
+        // Then prepare the neo4jData
+        const neo4jData = {
+            companyName,
+            projectName,
+            services: selectedServices.map(service => ({
+                ...service,
+                metrics: {
+                    ...service.metrics,
+                    service_sla_tier1: service.metrics.service_sla_tier1 || 99.9,
+                    service_credit_back_tier1: service.metrics.service_credit_back_tier1 || 10
+                }
+            })),
+            metrics: {
+                customerMedian: {
+                    sla_usage: calculateMedian(customerMetrics.sla_usage) || 0,
+                    sla_deviation: calculateMedian(customerMetrics.sla_deviation) || 0,
+                    traffic_coef: calculateMedian(customerMetrics.traffic_coef) || 0,
+                    usage_connected_risk: calculateMedian(customerMetrics.usage_connected_risk) || 0,
+                    service_sla_tier1: calculateMedian(customerMetrics.service_sla_tier1) || 0,
+                    annual_downtime_minutes: calculateMedian(customerMetrics.annual_downtime_minutes) || 0
+                },
+                vendorMedians: Object.fromEntries(
+                    Object.entries(vendorMetrics).map(([vendor, metrics]) => [
+                        vendor,
+                        {
+                            sla_usage: calculateMedian(metrics.sla_usage) || 0,
+                            sla_deviation: calculateMedian(metrics.sla_deviation) || 0,
+                            traffic_coef: calculateMedian(metrics.traffic_coef) || 0,
+                            usage_connected_risk: calculateMedian(metrics.usage_connected_risk) || 0,
+                            service_sla_tier1: calculateMedian(metrics.service_sla_tier1) || 0,
+                            annual_downtime_minutes: calculateMedian(metrics.annual_downtime_minutes) || 0
+                        }
+                    ])
+                )
+            }
+        };
+
+        // Save Neo4j query
+        try {
+            const APP_BASE_URL = await fetchAPPBaseUrl();
+            const response = await fetch(`${APP_BASE_URL}/customer-portal/api/save-neo4j-query`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(neo4jData)
+            });
+
+            const result = await response.json();
+            if (!result.success) {
+                throw new Error(result.error || 'Failed to save Neo4j query');
+            }
+
+            console.log('Neo4j data saved successfully:', result.message);
+        } catch (error) {
+            console.error('Error saving Neo4j query:', error);
+            // Optionally show error to user
+            alert('Please try again! Error saving data to Cloud.Risk.Graph - Neo4j: ' + error.message);
+        }
     }
 
     // Helper function to calculate median
