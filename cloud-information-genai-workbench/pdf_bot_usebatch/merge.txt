@@ -115755,6 +115755,43 @@ Overall Summary
 
 Google Cloud experienced a outage with Data Ingestion feeds in multiple regions and availability zones. The outage started on January 9, 2025, at 16:20 UTC and lasted for 10 hours and 26 minutes. The root cause of the outage was DNS errors and delay in ingestion of data. The outage was resolved on January 10, 2025, at 00:30 UTC.  
 --
+Outage Filename: ./outages_files/Google Cloud Service Health - 2025-01-31 - part1.txt
+--
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+Google Cloud
+
+ Service: WORKSPACE_ACTIVITY data ingestion
+ Region: asia-southeast1 and asia-south1
+ Availability Zone: Mumbai (asia-south1) and Singapore (asia-southeast1)
+ Impact Date: 2025-01-30 16:53 UTC
+ Duration: 2 days, 17 hours, and 33 minutes
+ Root Cause: Unknown
+ Downtime Period: 2025-01-31 03:00 UTC to 2025-02-02 07:00 UTC (1 day, 4 hours)
+ Resolved Date: 2025-02-02 07:00 UTC
+
+Summary for Google Cloud
+
+Google Cloud was impacted by a WORKSPACE_ACTIVITY data ingestion outage in asia-southeast1 and asia-south1 regions. The outage started on January 30, 2025, at 16:53 UTC and lasted for 2 days, 17 hours, and 33 minutes. The root cause of the outage is unknown.
+
+Google Cloud Output Table
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | WORKSPACE_ACTIVITY data ingestion | asia-southeast1 | singapore | 2025-01-30 16:53 UTC | 2 days, 17 hours, and 33 minutes | Unknown | 2025-02-02 07:00 UTC |
+
+Summary for Google Cloud
+
+The outage affected customers in Mumbai (asia-south1) and Singapore (asia-southeast1). The services impacted were WORKSPACE_ACTIVITY data ingestion. The root cause of the outage is unknown.
+
+Google Cloud Output Table
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | WORKSPACE_ACTIVITY data ingestion | asia-south1 | mumbai | 2025-01-30 16:53 UTC | 2 days, 17 hours, and 33 minutes | Unknown | 2025-02-02 07:00 UTC |
+
+Note that the output table only includes information for Google Cloud, as it is the only cloud provider mentioned in the original text.  
+--
 Outage Filename: ./outages_files/Google Cloud Service Health - Incident 2023-11-27.txt
 --
 After analyzing the text, I found that the following cloud providers were impacted:
