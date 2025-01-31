@@ -1,34 +1,21 @@
-Attaching to cloudrisk-customer_portal_app_customer_portal_app_1, cloud-risk-portal, cloudrisk-customer_portal_app_customer_graph_1
+Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_app_1, cloudrisk-customer_portal_app_customer_graph_1
 [36mcloud-risk-portal      |[0m 
 [36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
 [36mcloud-risk-portal      |[0m > node server.js
 [36mcloud-risk-portal      |[0m 
-[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
-[36mcloud-risk-portal      |[0m Neo4j query executed successfully
-[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
-[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
-[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
-[36mcloud-risk-portal      |[0m Neo4j query executed successfully
-[36mcloud-risk-portal      |[0m Neo4j query executed successfully
-[36mcloud-risk-portal      |[0m Neo4j query executed successfully
-[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
-[36mcloud-risk-portal      |[0m Neo4j query executed successfully
-[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
-[36mcloud-risk-portal      |[0m Neo4j query executed successfully
 [33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
-[33mcustomer_graph_1       |[0m 2025-01-23 15:20:37.777+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
-[33mcustomer_graph_1       |[0m 2025-01-23 15:20:37.836+0000 INFO  Starting...
-[33mcustomer_graph_1       |[0m 2025-01-23 15:20:40.192+0000 INFO  This instance is ServerId{681dbf75} (681dbf75-5b97-4e8f-81f0-599158529959)
-[33mcustomer_graph_1       |[0m 2025-01-23 15:20:43.164+0000 INFO  ======== Neo4j 5.25.1 ========
-[33mcustomer_graph_1       |[0m 2025-01-23 15:20:47.472+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
-[33mcustomer_graph_1       |[0m 2025-01-23 15:20:47.608+0000 INFO  Bolt enabled on 0.0.0.0:7687.
-[33mcustomer_graph_1       |[0m 2025-01-23 15:20:49.293+0000 INFO  HTTP enabled on 0.0.0.0:7474.
-[33mcustomer_graph_1       |[0m 2025-01-23 15:20:49.311+0000 INFO  Remote interface available at http://localhost:7474/
-[33mcustomer_graph_1       |[0m 2025-01-23 15:20:49.317+0000 INFO  id: AA95D8C0CCAD8B72DB689FABCD9182E89D39FBCAD56AFE70817E3A2B184B59B9
-[33mcustomer_graph_1       |[0m 2025-01-23 15:20:49.320+0000 INFO  name: system
-[33mcustomer_graph_1       |[0m 2025-01-23 15:20:49.321+0000 INFO  creationDate: 2024-11-19T23:06:54.589Z
-[33mcustomer_graph_1       |[0m 2025-01-23 15:20:49.322+0000 INFO  Started.
-[33mcustomer_graph_1       |[0m 2025-01-24 02:47:55.239+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
+[33mcustomer_graph_1       |[0m 2025-01-31 17:35:53.379+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
+[33mcustomer_graph_1       |[0m 2025-01-31 17:35:53.426+0000 INFO  Starting...
+[33mcustomer_graph_1       |[0m 2025-01-31 17:35:55.626+0000 INFO  This instance is ServerId{681dbf75} (681dbf75-5b97-4e8f-81f0-599158529959)
+[33mcustomer_graph_1       |[0m 2025-01-31 17:35:58.198+0000 INFO  ======== Neo4j 5.25.1 ========
+[33mcustomer_graph_1       |[0m 2025-01-31 17:36:01.927+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+[33mcustomer_graph_1       |[0m 2025-01-31 17:36:02.062+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+[33mcustomer_graph_1       |[0m 2025-01-31 17:36:03.660+0000 INFO  HTTP enabled on 0.0.0.0:7474.
+[33mcustomer_graph_1       |[0m 2025-01-31 17:36:03.662+0000 INFO  Remote interface available at http://localhost:7474/
+[33mcustomer_graph_1       |[0m 2025-01-31 17:36:03.668+0000 INFO  id: AA95D8C0CCAD8B72DB689FABCD9182E89D39FBCAD56AFE70817E3A2B184B59B9
+[33mcustomer_graph_1       |[0m 2025-01-31 17:36:03.669+0000 INFO  name: system
+[33mcustomer_graph_1       |[0m 2025-01-31 17:36:03.669+0000 INFO  creationDate: 2024-11-19T23:06:54.589Z
+[33mcustomer_graph_1       |[0m 2025-01-31 17:36:03.670+0000 INFO  Started.
 [32mcustomer_portal_app_1  |[0m 
 [32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
 [32mcustomer_portal_app_1  |[0m 
