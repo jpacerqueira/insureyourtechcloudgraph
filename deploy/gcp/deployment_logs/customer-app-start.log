@@ -3,6 +3,10 @@ Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_ap
 [36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
 [36mcloud-risk-portal      |[0m > node server.js
 [36mcloud-risk-portal      |[0m 
+[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
+[36mcloud-risk-portal      |[0m Neo4j query executed successfully
+[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
+[36mcloud-risk-portal      |[0m Neo4j query executed successfully
 [33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
 [33mcustomer_graph_1       |[0m 2025-01-31 17:35:53.379+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
 [33mcustomer_graph_1       |[0m 2025-01-31 17:35:53.426+0000 INFO  Starting...
