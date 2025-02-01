@@ -208,6 +208,41 @@ app.use((req, res, next) => {
 // Middleware to parse URL-encoded bodies (as sent by HTML forms)
 app.use(express.urlencoded({ extended: true }));
 
+// Middleware to handle sessions
+const session = require('express-session');
+
+// Use environment variable for session secret or generate a new one
+const sessionSecret = crypto.randomBytes(32).toString('hex') || process.env.SESSION_SECRET || '9824923489default243341342234session5512po2p123p2secret';
+console.log("Server - new session - sessionSecret: " + sessionSecret);
+
+// Update session middleware
+const sessionOptions = {
+    secret: sessionSecret,
+    resave: false,  // Changed to false to prevent unnecessary session saves
+    saveUninitialized: true,  // Changed to true to ensure new sessions are saved
+    rolling: true,  // Add this to reset the cookie expiration on each request
+    cookie: { 
+        secure: true, 
+        sameSite: 'Strict',
+        maxAge: 2 * 60 * 1000, // 2 minutes
+        httpOnly: true  // Added for security
+    },
+    name: 'sessionID',  // Custom name instead of default 'connect.sid'
+    unset: 'destroy'  // Ensure session is destroyed on logout
+};
+
+// Add session middleware
+app.use(session(sessionOptions));
+
+// Add session refresh middleware
+app.use((req, res, next) => {
+    // Reset session timer on each request
+    if (req.session) {
+        req.session.touch();
+    }
+    next();
+});
+
 // Neo4j connection
 const initNeo4jConnection = async () => {
     const uri = process.env.NEO4J_CLIENT_URI || 'bolt://host.docker.internal:17687';
@@ -359,15 +394,6 @@ CREATE (${vendorId})-[:CONNECTED_RISK {
     return cypher;
 }
 
-// Middleware to handle sessions
-const session = require('express-session');
-app.use(session({
-    secret: 'your-secret-key',
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: isProd , sameSite: 'Strict'}
-}));
-
 // Function to delete previous Neo4j data
 async function deletePreviousNeo4jData(sessionId) {
     const driver = await initNeo4jConnection();
@@ -418,6 +444,7 @@ function saveNeo4jQuery(data, sessionId) {
 // Update API endpoint to handle Neo4j file generation
 app.post('/customer-portal/api/save-neo4j-query', async (req, res) => {
     const sessionId = req.sessionID;
+    console.log("neo4j save - sessionId: " + sessionId);
     try {
         // Delete previous data
         await deletePreviousNeo4jData(sessionId);
@@ -459,14 +486,16 @@ const apiRouter = express.Router();
 
 // Routes
 app.get('/simulation/', (req, res) => {
+    const sessionID = req.sessionID;
+    console.log("simulation - sessionID: " + sessionID);
     const companyName = req.query.companyName || 'Simulation Company';
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
         appBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL,
         isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
         isDevelopment: process.env.IS_PROD !== "true" ? true : false,
-        companyName: companyName
-
+        companyName: companyName,
+        sessionID: sessionID
     };
     // Serve the chart.js library
     app.use(express.static(path.join(__dirname, 'node_modules', 'chart.js', 'dist')));
@@ -582,6 +611,8 @@ app.get('/customer-portal/logout', (req, res) => {
 
 // Protect the customer-portal index route
 app.get('/customer-portal/index', isAuthenticated, (req, res) => {
+    const sessionID = req.sessionID;
+    console.log("customer-portal - sessionID: " + sessionID);
     const companyName = req.query.companyName || '';
     // ... existing code to render customer-portal ...
     const envVars = {
@@ -589,7 +620,8 @@ app.get('/customer-portal/index', isAuthenticated, (req, res) => {
         appBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL,
         isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
         isDevelopment: process.env.IS_PROD !== "true" ? true : false,
-        companyName: companyName
+        companyName: companyName,
+        sessionID: sessionID
     };
     // Serve the chart.js library
     app.use(express.static(path.join(__dirname, 'node_modules', 'chart.js', 'dist')));
@@ -619,17 +651,6 @@ apiRouter.get('/customer-portal/app/env', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-
-// Use environment variable for session secret or generate a new one
-const sessionSecret = process.env.SESSION_SECRET || crypto.randomBytes(32).toString('hex');
-
-// Update session middleware
-app.use(session({
-    secret: sessionSecret,
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: isProd, sameSite: 'Strict', maxAge: 2 * 60 * 1000 } // 2 minutes
-}));
 
 // Route to serve the reset password page
 app.get('/customer-portal/reset-password-form', async (req, res) => {
