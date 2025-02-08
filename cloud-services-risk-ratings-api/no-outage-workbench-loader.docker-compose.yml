@@ -87,6 +87,24 @@ services:
       /data/cloud_service_risk_ratings.csv service_risk_ratings
       /data/outage_report_summaries.csv outage_report_summaries"
 
+  services-app:
+    build:
+      context: ./services-app
+      dockerfile: services-app.Dockerfile
+    container_name: services-app
+    ports:
+      - "8186:8186"
+    environment:
+      - PORT=8186
+      - IS_PROD=false
+      - SSL_ENABLED=true
+    networks:
+      - backend
+    depends_on:
+      - node-api
+    command: "node server.js"
+    restart: unless-stopped
+
   nginx-proxy:
     build:
       context: .
@@ -101,6 +119,7 @@ services:
       - backend
     depends_on:
       - node-api
+      - services-app
     restart: unless-stopped
 
 volumes:
