@@ -688,26 +688,6 @@
                 <div class="metrics-grid">
                     <div class="metric-column">
                         <div class="metric">
-                            <h4>Rating Median Cloud.Risk SLA Deviation</h4>
-                            <div class="value" id="customer-sla-deviation"></div>
-                        </div>
-                        <div class="metric">
-                            <h4>Median SLA Usage %</h4>
-                            <div class="value" id="customer-sla-usage"></div>
-                        </div>
-                    </div>
-                    <div class="metric-column">
-                        <div class="metric">
-                            <h4>Rating Median Cloud.Risk Usage Risk</h4>
-                            <div class="value" id="customer-usage-risk"></div>
-                        </div>
-                        <div class="metric">
-                            <h4>Median Traffic Downtime Coefficient %</h4>
-                            <div class="value" id="customer-traffic-coef"></div>
-                        </div>
-                    </div>
-                    <div class="metric-column">
-                        <div class="metric">
                             <h4>Median Service SLA Tier 1 %</h4>
                             <div class="value" id="customer-service-sla-tier1"></div>
                         </div>
@@ -742,6 +722,26 @@
                         <div class="metric">
                             <h4>Median Annual Downtime (minutes)</h4>
                             <div class="value" id="customer-annual-downtime"></div>
+                        </div>
+                    </div>
+                    <div class="metric-column">
+                        <div class="metric">
+                            <h4>Rating Median Cloud.Risk SLA Deviation</h4>
+                            <div class="value" id="customer-sla-deviation"></div>
+                        </div>
+                        <div class="metric">
+                            <h4>Median SLA Usage %</h4>
+                            <div class="value" id="customer-sla-usage"></div>
+                        </div>
+                    </div>
+                    <div class="metric-column">
+                        <div class="metric">
+                            <h4>Rating Median Cloud.Risk Usage Risk</h4>
+                            <div class="value" id="customer-usage-risk"></div>
+                        </div>
+                        <div class="metric">
+                            <h4>Median Traffic Downtime Coefficient %</h4>
+                            <div class="value" id="customer-traffic-coef"></div>
                         </div>
                     </div>
                 </div>
@@ -926,6 +926,116 @@
         document.getElementById("customer-service-credit-back-tier3").textContent = `${calculateMedian(metrics.service_credit_back_tier3).toFixed(2)}%`;
         document.getElementById("customer-service-credit-back-tier4").textContent = `${calculateMedian(metrics.service_credit_back_tier4).toFixed(2)}%`;
         document.getElementById("customer-annual-downtime").textContent = calculateMedian(metrics.annual_downtime_minutes).toFixed(2);
+
+        // Create a more reliable insertion point
+        const resultsContainer = document.getElementById('result');
+        if (!resultsContainer) return;
+
+        // Add comparative charts
+        const customerChartsDiv = document.createElement('div');
+        customerChartsDiv.className = 'comparative-charts';
+        customerChartsDiv.style.marginTop = '30px';
+
+        // Create canvas elements for each chart
+        const metricsCanvas = document.createElement('canvas');
+        metricsCanvas.id = 'customerMetricsChart';
+        const downtimeCanvas = document.createElement('canvas');
+        downtimeCanvas.id = 'customerDowntimeChart';
+
+        customerChartsDiv.appendChild(metricsCanvas);
+        customerChartsDiv.appendChild(downtimeCanvas);
+
+        // Insert charts at the beginning of the results container
+        resultsContainer.insertBefore(customerChartsDiv, resultsContainer.firstChild);
+
+        // Prepare data for charts
+        const vendors = Object.keys(vendorMetrics);
+        const colors = [
+            'rgba(255, 159, 64, 0.7)',   // Orange for AWS
+            'rgba(54, 162, 235, 0.7)',   // Blue for Azure
+            'rgba(255, 99, 132, 0.7)',   // Red for GCP
+            'rgba(75, 192, 192, 0.7)',   // Teal for IBM
+            'rgba(153, 102, 255, 0.7)',  // Purple for Oracle
+            'rgba(255, 206, 86, 0.7)',   // Yellow for Others
+            'rgba(199, 199, 199, 0.7)',  // Gray
+            'rgba(83, 102, 255, 0.7)',   // Blue-violet
+            'rgba(255, 99, 132, 0.7)',   // Pink
+            'rgba(159, 159, 64, 0.7)',   // Olive
+        ];
+
+        // Create metrics comparison chart
+        new Chart(metricsCanvas, {
+            type: 'bar',
+            data: {
+                labels: ['SLA Usage %', 'SLA Tier 1 %', 'SLA Deviation Cloud.Risk', 'Usage Coef. Cloud.Risk'],
+                datasets: vendors.map((vendor, index) => ({
+                    label: vendor,
+                    data: [
+                        calculateMedian(vendorMetrics[vendor].sla_usage),
+                        calculateMedian(vendorMetrics[vendor].service_sla_tier1),
+                        calculateMedian(vendorMetrics[vendor].sla_deviation),
+                        calculateMedian(vendorMetrics[vendor].usage_connected_risk)
+                    ],
+                    backgroundColor: colors[index % colors.length],
+                    borderColor: colors[index % colors.length].replace('0.7', '1'),
+                    borderWidth: 1
+                }))
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: value => `${value}%`
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Cloud Provider Metrics Comparison',
+                        font: { size: 16 }
+                    }
+                }
+            }
+        });
+
+        // Create downtime comparison chart
+        new Chart(downtimeCanvas, {
+            type: 'bar',
+            data: {
+                labels: vendors,
+                datasets: [{
+                    label: 'Annual Downtime (minutes)',
+                    data: vendors.map(vendor => 
+                        calculateMedian(vendorMetrics[vendor].annual_downtime_minutes)
+                    ),
+                    backgroundColor: colors,
+                    borderColor: colors.map(color => color.replace('0.7', '1')),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Minutes'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Annual Downtime Comparison',
+                        font: { size: 16 }
+                    }
+                }
+            }
+        });
     }
 
     function updateVendorMetrics(vendorMetrics) {
@@ -933,30 +1043,11 @@
         vendorContainer.innerHTML = "";
 
         Object.entries(vendorMetrics).forEach(([vendor, metrics]) => {
-            const vendorHTML = `
+            // Create the vendor section HTML
+            let vendorHTML = `
                 <div class="vendor-section">
                     <h3>${vendor} Metrics</h3>
                     <div class="metrics-grid">
-                        <div class="metric-column">
-                            <div class="metric">
-                                <h4>Rating Median Cloud.Risk SLA Deviation</h4>
-                                <div class="value">${calculateMedian(metrics.sla_deviation).toFixed(2)}</div>
-                            </div>
-                            <div class="metric">
-                                <h4>Median SLA Usage %</h4>
-                                <div class="value">${calculateMedian(metrics.sla_usage).toFixed(2)}%</div>
-                            </div>
-                        </div>
-                        <div class="metric-column">
-                            <div class="metric">
-                                <h4>Rating Median Cloud.Risk Usage</h4>
-                                <div class="value">${calculateMedian(metrics.usage_connected_risk).toFixed(2)}</div>
-                            </div>
-                            <div class="metric">
-                                <h4>Median Traffic Downtime Coefficient %</h4>
-                                <div class="value">${calculateMedian(metrics.traffic_coef).toFixed(2)}%</div>
-                            </div>
-                        </div>
                         <div class="metric-column">
                             <div class="metric">
                                 <h4>Median Service SLA Tier 1 %</h4>
@@ -993,6 +1084,26 @@
                             <div class="metric">
                                 <h4>Median Annual Downtime (minutes)</h4>
                                 <div class="value">${calculateMedian(metrics.annual_downtime_minutes).toFixed(2)}</div>
+                            </div>
+                        </div>
+                        <div class="metric-column">
+                            <div class="metric">
+                                <h4>Rating Median Cloud.Risk SLA Deviation</h4>
+                                <div class="value">${calculateMedian(metrics.sla_deviation).toFixed(2)}</div>
+                            </div>
+                            <div class="metric">
+                                <h4>Median SLA Usage %</h4>
+                                <div class="value">${calculateMedian(metrics.sla_usage).toFixed(2)}%</div>
+                            </div>
+                        </div>
+                        <div class="metric-column">
+                            <div class="metric">
+                                <h4>Rating Median Cloud.Risk Usage</h4>
+                                <div class="value">${calculateMedian(metrics.usage_connected_risk).toFixed(2)}</div>
+                            </div>
+                            <div class="metric">
+                                <h4>Median Traffic Downtime Coefficient %</h4>
+                                <div class="value">${calculateMedian(metrics.traffic_coef).toFixed(2)}%</div>
                             </div>
                         </div>
                     </div>
@@ -1578,20 +1689,5 @@
 <!-- Include Plotly library -->
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-<h2>Sponsored Adds</h2>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9085363335965837"
-    crossorigin="anonymous">
-</script>
-<!-- InsureYourTech.Cloud-Horizontal-1 -->
-<ins class="adsbygoogle"
-    style="display:block"
-    data-ad-client="ca-pub-9085363335965837"
-    data-ad-slot="1072766913"
-    data-ad-format="auto"
-    data-full-width-responsive="true">
-</ins>
-<script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 </body>
 </html>

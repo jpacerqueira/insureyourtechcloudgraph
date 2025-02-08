@@ -9,7 +9,6 @@ var https = require('https');
 var http = require('http');
 var fs = require('fs');
 
-
 var options = {
   key: fs.readFileSync('/app/certs/server8183.key'),
   cert: fs.readFileSync('/app/certs/server8183.cert')
@@ -27,6 +26,7 @@ const IS_PROD = process.env.IS_PROD === "true";
 
 const riskRatingsRouter = require('./routes/CloudRiskRatings');
 const freemiumRiskRatingsRouter = require('./routes/FreemiumCloudRiskRatings');
+const servicesAppRouter = require('./routes/ServicesApp');
 
 const app = express();
 
@@ -42,6 +42,7 @@ app.use(cors({
 // API Routes
 app.use('/cloud-services-risk-ratings/risk-ratings-premium', riskRatingsRouter);
 app.use('/cloud-services-risk-ratings/risk-ratings-freemium', freemiumRiskRatingsRouter);
+app.use('/cloud-services-risk-ratings/services-app', servicesAppRouter);
 
 //app.listen(PORT, function () {
 //console.log(`Server is running on http://localhost:${PORT}`);

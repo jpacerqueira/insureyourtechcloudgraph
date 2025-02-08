@@ -61,7 +61,6 @@ services:
     command: "npm start" # You can modify this if you're using a custom start script
     restart: unless-stopped
 
-
   csv-loader:
     build:
       context: ./csv-loader
@@ -112,6 +111,24 @@ services:
     command: >
       sh -c "node /app/outage-data-loader.js"
 
+  services-app:
+    build:
+      context: ./services-app
+      dockerfile: services-app.Dockerfile
+    container_name: services-app
+    ports:
+      - "8186:8186"
+    environment:
+      - PORT=8186
+      - IS_PROD=false
+      - SSL_ENABLED=true
+    networks:
+      - backend
+    depends_on:
+      - node-api
+    command: "node server.js"
+    restart: unless-stopped
+
   nginx-proxy:
     build:
       context: .
@@ -126,6 +143,7 @@ services:
       - backend
     depends_on:
       - node-api
+      - services-app
     restart: unless-stopped
 
 volumes:

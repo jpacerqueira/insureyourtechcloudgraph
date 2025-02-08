@@ -1,0 +1,30 @@
+{
+  "name": "services-app",
+  "version": "1.0.0",
+  "description": "Cloud Insurance Risk Ratings - Modifications as Services App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "react-scripts build",
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.3",
+    "pg": "^8.11.3",
+    "cors": "^2.8.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "axios": "^1.5.0",
+    "react-scripts": "^5.0.1",
+    "helmet": "^8.0.0",
+    "http-proxy-middleware": "^2.0.6",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "author": "FuelBigData.com",
+  "license": "MIT"
+}
