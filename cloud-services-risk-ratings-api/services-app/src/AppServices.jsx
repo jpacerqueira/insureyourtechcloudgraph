@@ -229,588 +229,141 @@ function AppServices() {
     );
   };
 
+  const tableContainerStyle = {
+    maxHeight: '700px',
+    overflowY: 'auto',
+    marginBottom: '2rem',
+  };
+
+  const tableStyle = {
+    width: '100%',
+    borderCollapse: 'collapse',
+  };
+
+  const thStyle = {
+    position: 'sticky',
+    top: 0,
+    backgroundColor: '#f2f2f2',
+    zIndex: 1,
+    border: '1px solid #ddd',
+    padding: '8px',
+  };
+
+  const tdStyle = {
+    border: '1px solid #ddd',
+    padding: '8px',
+  };
+
   return (
     <div style={{ margin: '1rem' }}>
       <h1>Service Ratings</h1>
 
-      {/* List all existing records */}
-      <table border="1" cellPadding="6">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Service Name</th>
-            <th>Provider</th>
-            <th>Global/Regional</th>
-            <th>Region</th>
-            <th>AZ</th>
-            <th>Service Load</th>
-            <th>Customer Service Type</th>
-            <th>Service Up Hours</th>
-            <th>Annual Workdays</th>
-            <th>SLA Tier1</th>
-            <th>SLA Tier2</th>
-            <th>SLA Tier3</th>
-            <th>SLA Tier4</th>
-            <th>Credit Back Tier1</th>
-            <th>Credit Back Tier2</th>
-            <th>Credit Back Tier3</th>
-            <th>Credit Back Tier4</th>
-            <th>Webscraper Down Minutes</th>
-            <th>Annual Service Minutes Up</th>
-            <th>Expected SLA Up Tier1</th>
-            <th>Expected SLA Up Tier2</th>
-            <th>Expected SLA Up Tier3</th>
-            <th>Expected SLA Up Tier4</th>
-            <th>Expected SLA Down Tier1</th>
-            <th>Expected SLA Down Tier2</th>
-            <th>Expected SLA Down Tier3</th>
-            <th>Expected SLA Down Tier4</th>
-            <th>Debit Credit SLA Tier1</th>
-            <th>Expected % Mins Down SLA Tier1</th>
-            <th>Actual % Total Mins Down</th>
-            <th>Actual % Mins Down SLA</th>
-            <th>Gap Time % Between SLA</th>
-            <th>Risk Coef</th>
-            <th>SLA Usage %</th>
-            <th>Traffic Coef % Down</th>
-            <th>SLA Deviation Risk</th>
-            <th>Usage Connected Risk</th>
-            <th>Annual Outage Time</th>
-            <th>Remarks</th>
-            <th>Public Locations & Status</th>
-            <th>Other Impacted Services</th>
-            <th>Notes</th>
-            <th>Select</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ratings.map((r) => (
-            <tr key={r.database_key_id}>
-              <td>{r.database_key_id}</td>
-              <td>{r.service_name}</td>
-              <td>{r.service_provider}</td>
-              <td>{r.global_or_by_regions}</td>
-              <td>{r.region}</td>
-              <td>{r.availability_zone}</td>
-              <td>{r.service_load_at_customer_low_medium_high_very_high_1_2_3_4}</td>
-              <td>{r.customer_service_type_b2c_or_b2b_1_yes_0_no}</td>
-              <td>{r.customer_service_up_hours_8h_day_12h_day_24h_day}</td>
-              <td>{r.customer_service_annual_workdays}</td>
-              <td>{r.service_sla_0_99_9999_for_tier1}</td>
-              <td>{r.service_sla_0_99_9999_for_tier2}</td>
-              <td>{r.service_sla_0_99_9999_for_tier3}</td>
-              <td>{r.service_sla_0_99_9999_for_tier4}</td>
-              <td>{r.percentage_service_credit_back_tier1}</td>
-              <td>{r.percentage_service_credit_back_tier2}</td>
-              <td>{r.percentage_service_credit_back_tier3}</td>
-              <td>{r.percentage_service_credit_back_tier4}</td>
-              <td>{r.webscraper_annual_period_service_down_per_year_in_minutes}</td>
-              <td>{r.annual_service_minutes_up_365_24_60_equals_525600}</td>
-              <td>{r.expected_annual_service_minutes_up_by_sla_tier1}</td>
-              <td>{r.expected_annual_service_minutes_up_by_sla_tier2}</td>
-              <td>{r.expected_annual_service_minutes_up_by_sla_tier3}</td>
-              <td>{r.expected_annual_service_minutes_up_by_sla_tier4}</td>
-              <td>{r.expected_annual_service_minutes_down_by_sla_tier1}</td>
-              <td>{r.expected_annual_service_minutes_down_by_sla_tier2}</td>
-              <td>{r.expected_annual_service_minutes_down_by_sla_tier3}</td>
-              <td>{r.expected_annual_service_minutes_down_by_sla_tier4}</td>
-              <td>{r.service_debit_credit_more_than_annual_sla_tier1}</td>
-              <td>{r.expected_percentage_mins_down_inside_agreed_sla_tier1}</td>
-              <td>{r.actual_percentage_total_mins_down_from_webscraping}</td>
-              <td>{r.actual_percentage_mins_down_on_agreed_sla}</td>
-              <td>{r.gap_time_percent_between_SLA_down_actual_down}</td>
-              <td>{r.riskcoef_per_service_from_gap_expected_actual_time_down}</td>
-              <td>{r.service_sla_usage_percentage}</td>
-              <td>{r.service_traffic_coef_by_percent_down}</td>
-              <td>{r.sla_deviation_connected_risk_0_999}</td>
-              <td>{r.usage_connected_risk_0_999}</td>
-              <td>{r.annual_outage_time_days_hours_mins}</td>
-              <td>{r.remarks_outage_genai}</td>
-              <td>{r.public_locationa_and_status_genai}</td>
-              <td>{r.outages_other_impacted_services_genai}</td>
-              <td>{r.notes}</td>
-              <td>
-                <button onClick={() => handleSelectRecord(r)}>
-                  Edit
-                </button>
-              </td>
+      {/* Scrollable Table Container */}
+      <div style={tableContainerStyle}>
+        <table style={tableStyle}>
+          <thead>
+            <tr>
+              <th style={thStyle}>Select</th>
+              <th style={thStyle}>ID</th>
+              <th style={thStyle}>Service Name</th>
+              <th style={thStyle}>Provider</th>
+              <th style={thStyle}>Global/Regional</th>
+              <th style={thStyle}>Region</th>
+              <th style={thStyle}>Av.Zone</th>
+              <th style={thStyle}>Service Load</th>
+              <th style={thStyle}>Customer Service Type</th>
+              <th style={thStyle}>Service Up Hours</th>
+              <th style={thStyle}>Annual Workdays</th>
+              <th style={thStyle}>SLA Tier1</th>
+              <th style={thStyle}>SLA Tier2</th>
+              <th style={thStyle}>SLA Tier3</th>
+              <th style={thStyle}>SLA Tier4</th>
+              <th style={thStyle}>Credit Back Tier1</th>
+              <th style={thStyle}>Credit Back Tier2</th>
+              <th style={thStyle}>Credit Back Tier3</th>
+              <th style={thStyle}>Credit Back Tier4</th>
+              <th style={thStyle}>Webscraper Down Minutes</th>
+              <th style={thStyle}>Annual Service Minutes Up</th>
+              <th style={thStyle}>Expected SLA Up Tier1</th>
+              <th style={thStyle}>Expected SLA Up Tier2</th>
+              <th style={thStyle}>Expected SLA Up Tier3</th>
+              <th style={thStyle}>Expected SLA Up Tier4</th>
+              <th style={thStyle}>Expected SLA Down Tier1</th>
+              <th style={thStyle}>Expected SLA Down Tier2</th>
+              <th style={thStyle}>Expected SLA Down Tier3</th>
+              <th style={thStyle}>Expected SLA Down Tier4</th>
+              <th style={thStyle}>Debit Credit SLA Tier1</th>
+              <th style={thStyle}>Expected % Mins Down SLA Tier1</th>
+              <th style={thStyle}>Actual % Total Mins Down</th>
+              <th style={thStyle}>Actual % Mins Down SLA</th>
+              <th style={thStyle}>Gap Time % Between SLA</th>
+              <th style={thStyle}>Risk Coef</th>
+              <th style={thStyle}>SLA Usage %</th>
+              <th style={thStyle}>Traffic Coef % Down</th>
+              <th style={thStyle}>SLA Deviation Risk</th>
+              <th style={thStyle}>Usage Connected Risk</th>
+              <th style={thStyle}>Annual Outage Time</th>
+              <th style={thStyle}>Remarks</th>
+              <th style={thStyle}>Public Locations & Status</th>
+              <th style={thStyle}>Other Impacted Services</th>
+              <th style={thStyle}>Notes</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-
-      {/* Form to create a new record */}
-      <h2>Create New Record</h2>
-      <div style={{ border: '1px solid gray', padding: '1rem' }}>
-        {/* Database Key ID */}
-        <div>
-          <label>Database Key ID:</label>
-          <input
-            name="database_key_id"
-            value={newRecord.database_key_id}
-            onChange={handleNewFieldChange}
-            type="number"
-          />
-        </div>
-        {/* Service Name */}
-        <div>
-          <label>Service Name:</label>
-          <input
-            name="service_name"
-            value={newRecord.service_name}
-            onChange={handleNewFieldChange}
-          />
-        </div>
-        {/* Service Provider */}
-        <div>
-          <label>Provider:</label>
-          <select
-            name="service_provider"
-            value={newRecord.service_provider}
-            onChange={handleNewFieldChange}
-          >
-            <option value="">--Select--</option>
-            {PROVIDER_OPTIONS.map((opt) => (
-              <option key={opt} value={opt}>
-                {opt}
-              </option>
+          </thead>
+          <tbody>
+            {ratings.map((r) => (
+              <tr key={r.database_key_id}>
+                <td style={tdStyle}>
+                  <button onClick={() => handleSelectRecord(r)}>
+                    Edit
+                  </button>
+                </td>
+                <td style={tdStyle}>{r.database_key_id}</td>
+                <td style={tdStyle}>{r.service_name}</td>
+                <td style={tdStyle}>{r.service_provider}</td>
+                <td style={tdStyle}>{r.global_or_by_regions}</td>
+                <td style={tdStyle}>{r.region}</td>
+                <td style={tdStyle}>{r.availability_zone}</td>
+                <td style={tdStyle}>{r.service_load_at_customer_low_medium_high_very_high_1_2_3_4}</td>
+                <td style={tdStyle}>{r.customer_service_type_b2c_or_b2b_1_yes_0_no}</td>
+                <td style={tdStyle}>{r.customer_service_up_hours_8h_day_12h_day_24h_day}</td>
+                <td style={tdStyle}>{r.customer_service_annual_workdays}</td>
+                <td style={tdStyle}>{r.service_sla_0_99_9999_for_tier1}</td>
+                <td style={tdStyle}>{r.service_sla_0_99_9999_for_tier2}</td>
+                <td style={tdStyle}>{r.service_sla_0_99_9999_for_tier3}</td>
+                <td style={tdStyle}>{r.service_sla_0_99_9999_for_tier4}</td>
+                <td style={tdStyle}>{r.percentage_service_credit_back_tier1}</td>
+                <td style={tdStyle}>{r.percentage_service_credit_back_tier2}</td>
+                <td style={tdStyle}>{r.percentage_service_credit_back_tier3}</td>
+                <td style={tdStyle}>{r.percentage_service_credit_back_tier4}</td>
+                <td style={tdStyle}>{r.webscraper_annual_period_service_down_per_year_in_minutes}</td>
+                <td style={tdStyle}>{r.annual_service_minutes_up_365_24_60_equals_525600}</td>
+                <td style={tdStyle}>{r.expected_annual_service_minutes_up_by_sla_tier1}</td>
+                <td style={tdStyle}>{r.expected_annual_service_minutes_up_by_sla_tier2}</td>
+                <td style={tdStyle}>{r.expected_annual_service_minutes_up_by_sla_tier3}</td>
+                <td style={tdStyle}>{r.expected_annual_service_minutes_up_by_sla_tier4}</td>
+                <td style={tdStyle}>{r.expected_annual_service_minutes_down_by_sla_tier1}</td>
+                <td style={tdStyle}>{r.expected_annual_service_minutes_down_by_sla_tier2}</td>
+                <td style={tdStyle}>{r.expected_annual_service_minutes_down_by_sla_tier3}</td>
+                <td style={tdStyle}>{r.expected_annual_service_minutes_down_by_sla_tier4}</td>
+                <td style={tdStyle}>{r.service_debit_credit_more_than_annual_sla_tier1}</td>
+                <td style={tdStyle}>{r.expected_percentage_mins_down_inside_agreed_sla_tier1}</td>
+                <td style={tdStyle}>{r.actual_percentage_total_mins_down_from_webscraping}</td>
+                <td style={tdStyle}>{r.actual_percentage_mins_down_on_agreed_sla}</td>
+                <td style={tdStyle}>{r.gap_time_percent_between_SLA_down_actual_down}</td>
+                <td style={tdStyle}>{r.riskcoef_per_service_from_gap_expected_actual_time_down}</td>
+                <td style={tdStyle}>{r.service_sla_usage_percentage}</td>
+                <td style={tdStyle}>{r.service_traffic_coef_by_percent_down}</td>
+                <td style={tdStyle}>{r.sla_deviation_connected_risk_0_999}</td>
+                <td style={tdStyle}>{r.usage_connected_risk_0_999}</td>
+                <td style={tdStyle}>{r.annual_outage_time_days_hours_mins}</td>
+                <td style={tdStyle}>{r.remarks_outage_genai}</td>
+                <td style={tdStyle}>{r.public_locationa_and_status_genai}</td>
+                <td style={tdStyle}>{r.outages_other_impacted_services_genai}</td>
+                <td style={tdStyle}>{r.notes}</td>
+              </tr>
             ))}
-          </select>
-        </div>
-        {/* Global/Regional */}
-        <div>
-          <label>Global/Regional:</label>
-          <select
-            name="global_or_by_regions"
-            value={newRecord.global_or_by_regions}
-            onChange={handleNewFieldChange}
-          >
-            <option value="">--Select--</option>
-            {GLOBAL_OPTIONS.map((opt) => (
-              <option key={opt} value={opt}>
-                {opt}
-              </option>
-            ))}
-          </select>
-        </div>
-        {/* Region */}
-        <div>
-          <label>Region:</label>
-          <select
-            name="region"
-            value={newRecord.region}
-            onChange={handleNewFieldChange}
-          >
-            <option value="">--Select--</option>
-            {REGION_OPTIONS.map((opt) => (
-              <option key={opt} value={opt}>
-                {opt}
-              </option>
-            ))}
-          </select>
-        </div>
-        {/* Availability Zone */}
-        <div>
-          <label>Availability Zone:</label>
-          <select
-            name="availability_zone"
-            value={newRecord.availability_zone}
-            onChange={handleNewFieldChange}
-          >
-            <option value="">--Select--</option>
-            {AZ_OPTIONS.map((opt) => (
-              <option key={opt} value={opt}>
-                {opt}
-              </option>
-            ))}
-          </select>
-        </div>
-        {/* Service Load */}
-        <div>
-          <label>Service Load:</label>
-          <input
-            name="service_load_at_customer_low_medium_high_very_high_1_2_3_4"
-            value={newRecord.service_load_at_customer_low_medium_high_very_high_1_2_3_4}
-            onChange={handleNewFieldChange}
-            type="number"
-            min="1"
-            max="4"
-          />
-        </div>
-        {/* Customer Service Type */}
-        <div>
-          <label>Customer Service Type (B2C=1, B2B=0):</label>
-          <select
-            name="customer_service_type_b2c_or_b2b_1_yes_0_no"
-            value={newRecord.customer_service_type_b2c_or_b2b_1_yes_0_no}
-            onChange={handleNewFieldChange}
-          >
-            <option value="">--Select--</option>
-            <option value="1">B2C</option>
-            <option value="0">B2B</option>
-          </select>
-        </div>
-        {/* Service Up Hours */}
-        <div>
-          <label>Service Up Hours:</label>
-          <select
-            name="customer_service_up_hours_8h_day_12h_day_24h_day"
-            value={newRecord.customer_service_up_hours_8h_day_12h_day_24h_day}
-            onChange={handleNewFieldChange}
-          >
-            <option value="">--Select--</option>
-            <option value="8">8h day</option>
-            <option value="12">12h day</option>
-            <option value="24">24h day</option>
-          </select>
-        </div>
-        {/* Annual Workdays */}
-        <div>
-          <label>Annual Workdays:</label>
-          <input
-            name="customer_service_annual_workdays"
-            value={newRecord.customer_service_annual_workdays}
-            onChange={handleNewFieldChange}
-            type="number"
-            min="0"
-          />
-        </div>
-        {/* SLA Tier1 */}
-        <div>
-          <label>SLA Tier1:</label>
-          <input
-            name="service_sla_0_99_9999_for_tier1"
-            value={newRecord.service_sla_0_99_9999_for_tier1}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* SLA Tier2 */}
-        <div>
-          <label>SLA Tier2:</label>
-          <input
-            name="service_sla_0_99_9999_for_tier2"
-            value={newRecord.service_sla_0_99_9999_for_tier2}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* SLA Tier3 */}
-        <div>
-          <label>SLA Tier3:</label>
-          <input
-            name="service_sla_0_99_9999_for_tier3"
-            value={newRecord.service_sla_0_99_9999_for_tier3}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* SLA Tier4 */}
-        <div>
-          <label>SLA Tier4:</label>
-          <input
-            name="service_sla_0_99_9999_for_tier4"
-            value={newRecord.service_sla_0_99_9999_for_tier4}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Percentage Service Credit Back Tier1 */}
-        <div>
-          <label>Percentage Service Credit Back Tier1:</label>
-          <input
-            name="percentage_service_credit_back_tier1"
-            value={newRecord.percentage_service_credit_back_tier1}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Percentage Service Credit Back Tier2 */}
-        <div>
-          <label>Percentage Service Credit Back Tier2:</label>
-          <input
-            name="percentage_service_credit_back_tier2"
-            value={newRecord.percentage_service_credit_back_tier2}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Percentage Service Credit Back Tier3 */}
-        <div>
-          <label>Percentage Service Credit Back Tier3:</label>
-          <input
-            name="percentage_service_credit_back_tier3"
-            value={newRecord.percentage_service_credit_back_tier3}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Percentage Service Credit Back Tier4 */}
-        <div>
-          <label>Percentage Service Credit Back Tier4:</label>
-          <input
-            name="percentage_service_credit_back_tier4"
-            value={newRecord.percentage_service_credit_back_tier4}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Webscraper Annual Period Service Down Minutes */}
-        <div>
-          <label>Webscraper Down Minutes:</label>
-          <input
-            type="number"
-            name="webscraper_annual_period_service_down_per_year_in_minutes"
-            value={newRecord.webscraper_annual_period_service_down_per_year_in_minutes}
-            onChange={handleNewFieldChange}
-          />
-        </div>
-        {/* Annual Service Minutes Up */}
-        <div>
-          <label>Annual Service Minutes Up:</label>
-          <input
-            name="annual_service_minutes_up_365_24_60_equals_525600"
-            value={newRecord.annual_service_minutes_up_365_24_60_equals_525600}
-            onChange={handleNewFieldChange}
-            type="number"
-            min="0"
-          />
-        </div>
-        {/* Expected Annual Service Minutes Up by SLA Tier1 */}
-        <div>
-          <label>Expected SLA Up Tier1:</label>
-          <input
-            name="expected_annual_service_minutes_up_by_sla_tier1"
-            value={newRecord.expected_annual_service_minutes_up_by_sla_tier1}
-            onChange={handleNewFieldChange}
-            type="number"
-            min="0"
-          />
-        </div>
-        {/* Expected Annual Service Minutes Up by SLA Tier2 */}
-        <div>
-          <label>Expected SLA Up Tier2:</label>
-          <input
-            name="expected_annual_service_minutes_up_by_sla_tier2"
-            value={newRecord.expected_annual_service_minutes_up_by_sla_tier2}
-            onChange={handleNewFieldChange}
-            type="number"
-            min="0"
-          />
-        </div>
-        {/* Expected Annual Service Minutes Up by SLA Tier3 */}
-        <div>
-          <label>Expected SLA Up Tier3:</label>
-          <input
-            name="expected_annual_service_minutes_up_by_sla_tier3"
-            value={newRecord.expected_annual_service_minutes_up_by_sla_tier3}
-            onChange={handleNewFieldChange}
-            type="number"
-            min="0"
-          />
-        </div>
-        {/* Expected Annual Service Minutes Up by SLA Tier4 */}
-        <div>
-          <label>Expected SLA Up Tier4:</label>
-          <input
-            name="expected_annual_service_minutes_up_by_sla_tier4"
-            value={newRecord.expected_annual_service_minutes_up_by_sla_tier4}
-            onChange={handleNewFieldChange}
-            type="number"
-            min="0"
-          />
-        </div>
-        {/* Expected Annual Service Minutes Down by SLA Tier1 */}
-        <div>
-          <label>Expected SLA Down Tier1:</label>
-          <input
-            name="expected_annual_service_minutes_down_by_sla_tier1"
-            value={newRecord.expected_annual_service_minutes_down_by_sla_tier1}
-            onChange={handleNewFieldChange}
-            type="number"
-            min="0"
-          />
-        </div>
-        {/* Expected Annual Service Minutes Down by SLA Tier2 */}
-        <div>
-          <label>Expected SLA Down Tier2:</label>
-          <input
-            name="expected_annual_service_minutes_down_by_sla_tier2"
-            value={newRecord.expected_annual_service_minutes_down_by_sla_tier2}
-            onChange={handleNewFieldChange}
-            type="number"
-            min="0"
-          />
-        </div>
-        {/* Expected Annual Service Minutes Down by SLA Tier3 */}
-        <div>
-          <label>Expected SLA Down Tier3:</label>
-          <input
-            name="expected_annual_service_minutes_down_by_sla_tier3"
-            value={newRecord.expected_annual_service_minutes_down_by_sla_tier3}
-            onChange={handleNewFieldChange}
-            type="number"
-            min="0"
-          />
-        </div>
-        {/* Expected Annual Service Minutes Down by SLA Tier4 */}
-        <div>
-          <label>Expected SLA Down Tier4:</label>
-          <input
-            name="expected_annual_service_minutes_down_by_sla_tier4"
-            value={newRecord.expected_annual_service_minutes_down_by_sla_tier4}
-            onChange={handleNewFieldChange}
-            type="number"
-            min="0"
-          />
-        </div>
-        {/* Service Debit Credit More Than Annual SLA Tier1 */}
-        <div>
-          <label>Debit Credit SLA Tier1:</label>
-          <input
-            name="service_debit_credit_more_than_annual_sla_tier1"
-            value={newRecord.service_debit_credit_more_than_annual_sla_tier1}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Expected Percentage Mins Down Inside Agreed SLA Tier1 */}
-        <div>
-          <label>Expected % Mins Down SLA Tier1:</label>
-          <input
-            name="expected_percentage_mins_down_inside_agreed_sla_tier1"
-            value={newRecord.expected_percentage_mins_down_inside_agreed_sla_tier1}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Actual Percentage Total Mins Down from Webscraping */}
-        <div>
-          <label>Actual % Total Mins Down:</label>
-          <input
-            name="actual_percentage_total_mins_down_from_webscraping"
-            value={newRecord.actual_percentage_total_mins_down_from_webscraping}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Actual Percentage Mins Down on Agreed SLA */}
-        <div>
-          <label>Actual % Mins Down SLA:</label>
-          <input
-            name="actual_percentage_mins_down_on_agreed_sla"
-            value={newRecord.actual_percentage_mins_down_on_agreed_sla}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Gap Time Percent Between SLA Down Actual Down */}
-        <div>
-          <label>Gap Time % Between SLA:</label>
-          <input
-            name="gap_time_percent_between_SLA_down_actual_down"
-            value={newRecord.gap_time_percent_between_SLA_down_actual_down}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Risk Coef Per Service */}
-        <div>
-          <label>Risk Coef:</label>
-          <input
-            name="riskcoef_per_service_from_gap_expected_actual_time_down"
-            value={newRecord.riskcoef_per_service_from_gap_expected_actual_time_down}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* SLA Usage Percentage */}
-        <div>
-          <label>SLA Usage %:</label>
-          <input
-            name="service_sla_usage_percentage"
-            value={newRecord.service_sla_usage_percentage}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Traffic Coef by Percent Down */}
-        <div>
-          <label>Traffic Coef % Down:</label>
-          <input
-            name="service_traffic_coef_by_percent_down"
-            value={newRecord.service_traffic_coef_by_percent_down}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* SLA Deviation Connected Risk */}
-        <div>
-          <label>SLA Deviation Risk:</label>
-          <input
-            name="sla_deviation_connected_risk_0_999"
-            value={newRecord.sla_deviation_connected_risk_0_999}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Usage Connected Risk */}
-        <div>
-          <label>Usage Connected Risk:</label>
-          <input
-            name="usage_connected_risk_0_999"
-            value={newRecord.usage_connected_risk_0_999}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Annual Outage Time */}
-        <div>
-          <label>Annual Outage Time:</label>
-          <input
-            name="annual_outage_time_days_hours_mins"
-            value={newRecord.annual_outage_time_days_hours_mins}
-            onChange={handleNewFieldChange}
-            type="text"
-          />
-        </div>
-        {/* Remarks */}
-        <div>
-          <label>Remarks:</label>
-          <textarea
-            name="remarks_outage_genai"
-            value={newRecord.remarks_outage_genai}
-            onChange={handleNewFieldChange}
-          />
-        </div>
-        {/* Public Locations and Status */}
-        <div>
-          <label>Public Locations & Status:</label>
-          <textarea
-            name="public_locationa_and_status_genai"
-            value={newRecord.public_locationa_and_status_genai}
-            onChange={handleNewFieldChange}
-          />
-        </div>
-        {/* Other Impacted Services */}
-        <div>
-          <label>Other Impacted Services:</label>
-          <textarea
-            name="outages_other_impacted_services_genai"
-            value={newRecord.outages_other_impacted_services_genai}
-            onChange={handleNewFieldChange}
-          />
-        </div>
-        {/* Notes */}
-        <div>
-          <label>Notes:</label>
-          <textarea
-            name="notes"
-            value={newRecord.notes}
-            onChange={handleNewFieldChange}
-          />
-        </div>
-        <button onClick={handleCreate}>Insert New Record</button>
+          </tbody>
+        </table>
       </div>
 
       {/* If a record is selected, show an edit form */}
@@ -1290,6 +843,480 @@ function AppServices() {
           </div>
         </div>
       )}
+
+      {/* Form to create a new record */}
+      <h2>Create New Record</h2>
+      <div style={{ border: '1px solid gray', padding: '1rem' }}>
+        {/* Database Key ID */}
+        <div>
+          <label>Database Key ID:</label>
+          <input
+            name="database_key_id"
+            value={newRecord.database_key_id}
+            onChange={handleNewFieldChange}
+            type="number"
+          />
+        </div>
+        {/* Service Name */}
+        <div>
+          <label>Service Name:</label>
+          <input
+            name="service_name"
+            value={newRecord.service_name}
+            onChange={handleNewFieldChange}
+          />
+        </div>
+        {/* Service Provider */}
+        <div>
+          <label>Provider:</label>
+          <select
+            name="service_provider"
+            value={newRecord.service_provider}
+            onChange={handleNewFieldChange}
+          >
+            <option value="">--Select--</option>
+            {PROVIDER_OPTIONS.map((opt) => (
+              <option key={opt} value={opt}>
+                {opt}
+              </option>
+            ))}
+          </select>
+        </div>
+        {/* Global/Regional */}
+        <div>
+          <label>Global/Regional:</label>
+          <select
+            name="global_or_by_regions"
+            value={newRecord.global_or_by_regions}
+            onChange={handleNewFieldChange}
+          >
+            <option value="">--Select--</option>
+            {GLOBAL_OPTIONS.map((opt) => (
+              <option key={opt} value={opt}>
+                {opt}
+              </option>
+            ))}
+          </select>
+        </div>
+        {/* Region */}
+        <div>
+          <label>Region:</label>
+          <select
+            name="region"
+            value={newRecord.region}
+            onChange={handleNewFieldChange}
+          >
+            <option value="">--Select--</option>
+            {REGION_OPTIONS.map((opt) => (
+              <option key={opt} value={opt}>
+                {opt}
+              </option>
+            ))}
+          </select>
+        </div>
+        {/* Availability Zone */}
+        <div>
+          <label>Availability Zone:</label>
+          <select
+            name="availability_zone"
+            value={newRecord.availability_zone}
+            onChange={handleNewFieldChange}
+          >
+            <option value="">--Select--</option>
+            {AZ_OPTIONS.map((opt) => (
+              <option key={opt} value={opt}>
+                {opt}
+              </option>
+            ))}
+          </select>
+        </div>
+        {/* Service Load */}
+        <div>
+          <label>Service Load:</label>
+          <input
+            name="service_load_at_customer_low_medium_high_very_high_1_2_3_4"
+            value={newRecord.service_load_at_customer_low_medium_high_very_high_1_2_3_4}
+            onChange={handleNewFieldChange}
+            type="number"
+            min="1"
+            max="4"
+          />
+        </div>
+        {/* Customer Service Type */}
+        <div>
+          <label>Customer Service Type (B2C=1, B2B=0):</label>
+          <select
+            name="customer_service_type_b2c_or_b2b_1_yes_0_no"
+            value={newRecord.customer_service_type_b2c_or_b2b_1_yes_0_no}
+            onChange={handleNewFieldChange}
+          >
+            <option value="">--Select--</option>
+            <option value="1">B2C</option>
+            <option value="0">B2B</option>
+          </select>
+        </div>
+        {/* Service Up Hours */}
+        <div>
+          <label>Service Up Hours:</label>
+          <select
+            name="customer_service_up_hours_8h_day_12h_day_24h_day"
+            value={newRecord.customer_service_up_hours_8h_day_12h_day_24h_day}
+            onChange={handleNewFieldChange}
+          >
+            <option value="">--Select--</option>
+            <option value="8">8h day</option>
+            <option value="12">12h day</option>
+            <option value="24">24h day</option>
+          </select>
+        </div>
+        {/* Annual Workdays */}
+        <div>
+          <label>Annual Workdays:</label>
+          <input
+            name="customer_service_annual_workdays"
+            value={newRecord.customer_service_annual_workdays}
+            onChange={handleNewFieldChange}
+            type="number"
+            min="0"
+          />
+        </div>
+        {/* SLA Tier1 */}
+        <div>
+          <label>SLA Tier1:</label>
+          <input
+            name="service_sla_0_99_9999_for_tier1"
+            value={newRecord.service_sla_0_99_9999_for_tier1}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* SLA Tier2 */}
+        <div>
+          <label>SLA Tier2:</label>
+          <input
+            name="service_sla_0_99_9999_for_tier2"
+            value={newRecord.service_sla_0_99_9999_for_tier2}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* SLA Tier3 */}
+        <div>
+          <label>SLA Tier3:</label>
+          <input
+            name="service_sla_0_99_9999_for_tier3"
+            value={newRecord.service_sla_0_99_9999_for_tier3}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* SLA Tier4 */}
+        <div>
+          <label>SLA Tier4:</label>
+          <input
+            name="service_sla_0_99_9999_for_tier4"
+            value={newRecord.service_sla_0_99_9999_for_tier4}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Percentage Service Credit Back Tier1 */}
+        <div>
+          <label>Percentage Service Credit Back Tier1:</label>
+          <input
+            name="percentage_service_credit_back_tier1"
+            value={newRecord.percentage_service_credit_back_tier1}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Percentage Service Credit Back Tier2 */}
+        <div>
+          <label>Percentage Service Credit Back Tier2:</label>
+          <input
+            name="percentage_service_credit_back_tier2"
+            value={newRecord.percentage_service_credit_back_tier2}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Percentage Service Credit Back Tier3 */}
+        <div>
+          <label>Percentage Service Credit Back Tier3:</label>
+          <input
+            name="percentage_service_credit_back_tier3"
+            value={newRecord.percentage_service_credit_back_tier3}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Percentage Service Credit Back Tier4 */}
+        <div>
+          <label>Percentage Service Credit Back Tier4:</label>
+          <input
+            name="percentage_service_credit_back_tier4"
+            value={newRecord.percentage_service_credit_back_tier4}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Webscraper Annual Period Service Down Minutes */}
+        <div>
+          <label>Webscraper Down Minutes:</label>
+          <input
+            type="number"
+            name="webscraper_annual_period_service_down_per_year_in_minutes"
+            value={newRecord.webscraper_annual_period_service_down_per_year_in_minutes}
+            onChange={handleNewFieldChange}
+          />
+        </div>
+        {/* Annual Service Minutes Up */}
+        <div>
+          <label>Annual Service Minutes Up:</label>
+          <input
+            name="annual_service_minutes_up_365_24_60_equals_525600"
+            value={newRecord.annual_service_minutes_up_365_24_60_equals_525600}
+            onChange={handleNewFieldChange}
+            type="number"
+            min="0"
+          />
+        </div>
+        {/* Expected Annual Service Minutes Up by SLA Tier1 */}
+        <div>
+          <label>Expected SLA Up Tier1:</label>
+          <input
+            name="expected_annual_service_minutes_up_by_sla_tier1"
+            value={newRecord.expected_annual_service_minutes_up_by_sla_tier1}
+            onChange={handleNewFieldChange}
+            type="number"
+            min="0"
+          />
+        </div>
+        {/* Expected Annual Service Minutes Up by SLA Tier2 */}
+        <div>
+          <label>Expected SLA Up Tier2:</label>
+          <input
+            name="expected_annual_service_minutes_up_by_sla_tier2"
+            value={newRecord.expected_annual_service_minutes_up_by_sla_tier2}
+            onChange={handleNewFieldChange}
+            type="number"
+            min="0"
+          />
+        </div>
+        {/* Expected Annual Service Minutes Up by SLA Tier3 */}
+        <div>
+          <label>Expected SLA Up Tier3:</label>
+          <input
+            name="expected_annual_service_minutes_up_by_sla_tier3"
+            value={newRecord.expected_annual_service_minutes_up_by_sla_tier3}
+            onChange={handleNewFieldChange}
+            type="number"
+            min="0"
+          />
+        </div>
+        {/* Expected Annual Service Minutes Up by SLA Tier4 */}
+        <div>
+          <label>Expected SLA Up Tier4:</label>
+          <input
+            name="expected_annual_service_minutes_up_by_sla_tier4"
+            value={newRecord.expected_annual_service_minutes_up_by_sla_tier4}
+            onChange={handleNewFieldChange}
+            type="number"
+            min="0"
+          />
+        </div>
+        {/* Expected Annual Service Minutes Down by SLA Tier1 */}
+        <div>
+          <label>Expected SLA Down Tier1:</label>
+          <input
+            name="expected_annual_service_minutes_down_by_sla_tier1"
+            value={newRecord.expected_annual_service_minutes_down_by_sla_tier1}
+            onChange={handleNewFieldChange}
+            type="number"
+            min="0"
+          />
+        </div>
+        {/* Expected Annual Service Minutes Down by SLA Tier2 */}
+        <div>
+          <label>Expected SLA Down Tier2:</label>
+          <input
+            name="expected_annual_service_minutes_down_by_sla_tier2"
+            value={newRecord.expected_annual_service_minutes_down_by_sla_tier2}
+            onChange={handleNewFieldChange}
+            type="number"
+            min="0"
+          />
+        </div>
+        {/* Expected Annual Service Minutes Down by SLA Tier3 */}
+        <div>
+          <label>Expected SLA Down Tier3:</label>
+          <input
+            name="expected_annual_service_minutes_down_by_sla_tier3"
+            value={newRecord.expected_annual_service_minutes_down_by_sla_tier3}
+            onChange={handleNewFieldChange}
+            type="number"
+            min="0"
+          />
+        </div>
+        {/* Expected Annual Service Minutes Down by SLA Tier4 */}
+        <div>
+          <label>Expected SLA Down Tier4:</label>
+          <input
+            name="expected_annual_service_minutes_down_by_sla_tier4"
+            value={newRecord.expected_annual_service_minutes_down_by_sla_tier4}
+            onChange={handleNewFieldChange}
+            type="number"
+            min="0"
+          />
+        </div>
+        {/* Service Debit Credit More Than Annual SLA Tier1 */}
+        <div>
+          <label>Debit Credit SLA Tier1:</label>
+          <input
+            name="service_debit_credit_more_than_annual_sla_tier1"
+            value={newRecord.service_debit_credit_more_than_annual_sla_tier1}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Expected Percentage Mins Down Inside Agreed SLA Tier1 */}
+        <div>
+          <label>Expected % Mins Down SLA Tier1:</label>
+          <input
+            name="expected_percentage_mins_down_inside_agreed_sla_tier1"
+            value={newRecord.expected_percentage_mins_down_inside_agreed_sla_tier1}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Actual Percentage Total Mins Down from Webscraping */}
+        <div>
+          <label>Actual % Total Mins Down:</label>
+          <input
+            name="actual_percentage_total_mins_down_from_webscraping"
+            value={newRecord.actual_percentage_total_mins_down_from_webscraping}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Actual Percentage Mins Down on Agreed SLA */}
+        <div>
+          <label>Actual % Mins Down SLA:</label>
+          <input
+            name="actual_percentage_mins_down_on_agreed_sla"
+            value={newRecord.actual_percentage_mins_down_on_agreed_sla}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Gap Time Percent Between SLA Down Actual Down */}
+        <div>
+          <label>Gap Time % Between SLA:</label>
+          <input
+            name="gap_time_percent_between_SLA_down_actual_down"
+            value={newRecord.gap_time_percent_between_SLA_down_actual_down}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Risk Coef Per Service */}
+        <div>
+          <label>Risk Coef:</label>
+          <input
+            name="riskcoef_per_service_from_gap_expected_actual_time_down"
+            value={newRecord.riskcoef_per_service_from_gap_expected_actual_time_down}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* SLA Usage Percentage */}
+        <div>
+          <label>SLA Usage %:</label>
+          <input
+            name="service_sla_usage_percentage"
+            value={newRecord.service_sla_usage_percentage}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Traffic Coef by Percent Down */}
+        <div>
+          <label>Traffic Coef % Down:</label>
+          <input
+            name="service_traffic_coef_by_percent_down"
+            value={newRecord.service_traffic_coef_by_percent_down}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* SLA Deviation Connected Risk */}
+        <div>
+          <label>SLA Deviation Risk:</label>
+          <input
+            name="sla_deviation_connected_risk_0_999"
+            value={newRecord.sla_deviation_connected_risk_0_999}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Usage Connected Risk */}
+        <div>
+          <label>Usage Connected Risk:</label>
+          <input
+            name="usage_connected_risk_0_999"
+            value={newRecord.usage_connected_risk_0_999}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Annual Outage Time */}
+        <div>
+          <label>Annual Outage Time:</label>
+          <input
+            name="annual_outage_time_days_hours_mins"
+            value={newRecord.annual_outage_time_days_hours_mins}
+            onChange={handleNewFieldChange}
+            type="text"
+          />
+        </div>
+        {/* Remarks */}
+        <div>
+          <label>Remarks:</label>
+          <textarea
+            name="remarks_outage_genai"
+            value={newRecord.remarks_outage_genai}
+            onChange={handleNewFieldChange}
+          />
+        </div>
+        {/* Public Locations and Status */}
+        <div>
+          <label>Public Locations & Status:</label>
+          <textarea
+            name="public_locationa_and_status_genai"
+            value={newRecord.public_locationa_and_status_genai}
+            onChange={handleNewFieldChange}
+          />
+        </div>
+        {/* Other Impacted Services */}
+        <div>
+          <label>Other Impacted Services:</label>
+          <textarea
+            name="outages_other_impacted_services_genai"
+            value={newRecord.outages_other_impacted_services_genai}
+            onChange={handleNewFieldChange}
+          />
+        </div>
+        {/* Notes */}
+        <div>
+          <label>Notes:</label>
+          <textarea
+            name="notes"
+            value={newRecord.notes}
+            onChange={handleNewFieldChange}
+          />
+        </div>
+        <button onClick={handleCreate}>Insert New Record</button>
+      </div>
     </div>
   );
 }
