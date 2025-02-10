@@ -1642,22 +1642,29 @@
 
         // Process outages
         if (Array.isArray(outageData)) {
-            let criticalCount = 0;
-            let majorCount = 0;
-            let minorCount = 0;
+            // Get current counts from the display
+            let criticalCount = parseInt(document.getElementById('critical-outages').textContent || '0');
+            let majorCount = parseInt(document.getElementById('major-outages').textContent || '0');
+            let minorCount = parseInt(document.getElementById('minor-outages').textContent || '0');
 
             outageData.forEach(outage => {
                 const duration = parseFloat(outage.duration_minutes || 0);
-                const outage_downtime_period = (outage.downtime_period || 0);
+                const outage_downtime_period = parseFloat(outage.downtime_period || 0);
                 let real_outage_duration = 0;
-                if (outage_downtime_period >= 0) {
-                    real_outage_duration = outage_downtime_period;
-                } else {
+                if (duration >= 0) {
                     real_outage_duration = duration;
+                } else {
+                    real_outage_duration = outage_downtime_period;
                 }
-                if (real_outage_duration >= 240) criticalCount++;
-                else if (real_outage_duration >= 60) majorCount++;
-                else minorCount++;
+                
+                // Increment the appropriate counter
+                if (real_outage_duration >= 240) {
+                    criticalCount++;
+                } else if (real_outage_duration >= 60) {
+                    majorCount++;
+                } else if (real_outage_duration > 0) {
+                    minorCount++;
+                }
 
                 // Add row to outage table with cost impact
                 const costImpact = (real_outage_duration / 60) * (monthlyCost / (30 * 24));
@@ -1689,10 +1696,10 @@
                 tbody.appendChild(row);
             });
 
-            // Update outage severity counts
-            document.getElementById('critical-outages').textContent = criticalCount || '0';
-            document.getElementById('major-outages').textContent = majorCount || '0';
-            document.getElementById('minor-outages').textContent = minorCount || '0';
+            // Update outage severity counts with accumulated values
+            document.getElementById('critical-outages').textContent = criticalCount.toString();
+            document.getElementById('major-outages').textContent = majorCount.toString();
+            document.getElementById('minor-outages').textContent = minorCount.toString();
         }
     }
 
