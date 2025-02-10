@@ -231,6 +231,16 @@
             max-width: 100%;
             height: auto;
         }
+
+        /* Add the following CSS for the Outage Information section */
+        #outageInformation {
+            height: 900px;
+            overflow-y: auto;
+        }
+        #outageAnalysis {
+            height: 900px;
+            overflow-y: auto;
+        }
     </style>
 </head>
 <body>
@@ -281,7 +291,7 @@
     
 </div>
 
-<div class="container">
+<div class="container" id="outageInformation">
     <h2>Outage Information</h2>
     <h4>Cloud.Risk uses webscrappers and GenAI to get outage information from the cloud vendors</h4>
     <h4>The Freemium tier is limited to Information from October 2024 and November 2024</h4>
@@ -290,7 +300,7 @@
     <div id="outageComparison"></div>
 </div>
 
-<div class="container">
+<div class="container" id="outageAnalysis">
     <h2>Outage Analysis</h2>
     <div class="metrics-grid">
         <div class="metric">
@@ -331,6 +341,7 @@
     </div>
 
     <div id="outageTableContainer">
+        <h3>Outage Detailed Information</h3>
         <table id="outageTable" style="width:100%">
             <thead>
                 <tr>
@@ -675,6 +686,9 @@
             }
         }
 
+        // **Add this line to update the total-services div**
+        document.getElementById("total-services").textContent = selectedServices.length;
+
         // Add this check before preparing neo4jData
         if (selectedServices.length === 0) {
             throw new Error('No valid services were processed. Please check your selections.');
@@ -901,6 +915,9 @@
             // Optionally show error to user
             alert('Please try again! Error saving data to Cloud.Risk.Graph - Neo4j: ' + error.message);
         }
+
+        // Example: Display the total services analyzed
+        console.log(`Total Services Analyzed: ${selectedServices.length}`);
     }
 
     // Helper function to calculate median
@@ -1625,22 +1642,29 @@
 
         // Process outages
         if (Array.isArray(outageData)) {
-            let criticalCount = 0;
-            let majorCount = 0;
-            let minorCount = 0;
+            // Get current counts from the display
+            let criticalCount = parseInt(document.getElementById('critical-outages').textContent || '0');
+            let majorCount = parseInt(document.getElementById('major-outages').textContent || '0');
+            let minorCount = parseInt(document.getElementById('minor-outages').textContent || '0');
 
             outageData.forEach(outage => {
                 const duration = parseFloat(outage.duration_minutes || 0);
-                const outage_downtime_period = (outage.downtime_period || 0);
+                const outage_downtime_period = parseFloat(outage.downtime_period || 0);
                 let real_outage_duration = 0;
-                if (outage_downtime_period >= 0) {
-                    real_outage_duration = outage_downtime_period;
-                } else {
+                if (duration >= 0) {
                     real_outage_duration = duration;
+                } else {
+                    real_outage_duration = outage_downtime_period;
                 }
-                if (real_outage_duration >= 240) criticalCount++;
-                else if (real_outage_duration >= 60) majorCount++;
-                else minorCount++;
+                
+                // Increment the appropriate counter
+                if (real_outage_duration >= 240) {
+                    criticalCount++;
+                } else if (real_outage_duration >= 60) {
+                    majorCount++;
+                } else if (real_outage_duration > 0) {
+                    minorCount++;
+                }
 
                 // Add row to outage table with cost impact
                 const costImpact = (real_outage_duration / 60) * (monthlyCost / (30 * 24));
@@ -1672,10 +1696,10 @@
                 tbody.appendChild(row);
             });
 
-            // Update outage severity counts
-            document.getElementById('critical-outages').textContent = criticalCount || '0';
-            document.getElementById('major-outages').textContent = majorCount || '0';
-            document.getElementById('minor-outages').textContent = minorCount || '0';
+            // Update outage severity counts with accumulated values
+            document.getElementById('critical-outages').textContent = criticalCount.toString();
+            document.getElementById('major-outages').textContent = majorCount.toString();
+            document.getElementById('minor-outages').textContent = minorCount.toString();
         }
     }
 
