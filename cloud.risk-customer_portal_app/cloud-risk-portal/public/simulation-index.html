@@ -231,6 +231,16 @@
             max-width: 100%;
             height: auto;
         }
+
+        /* Add the following CSS for the Outage Information section */
+        #outageInformation {
+            height: 900px;
+            overflow-y: auto;
+        }
+        #outageAnalysis {
+            height: 900px;
+            overflow-y: auto;
+        }
     </style>
 </head>
 <body>
@@ -281,7 +291,7 @@
     
 </div>
 
-<div class="container">
+<div class="container" id="outageInformation">
     <h2>Outage Information</h2>
     <h4>Cloud.Risk uses webscrappers and GenAI to get outage information from the cloud vendors</h4>
     <h4>The Freemium tier is limited to Information from October 2024 and November 2024</h4>
@@ -290,7 +300,7 @@
     <div id="outageComparison"></div>
 </div>
 
-<div class="container">
+<div class="container" id="outageAnalysis">
     <h2>Outage Analysis</h2>
     <div class="metrics-grid">
         <div class="metric">
@@ -331,6 +341,7 @@
     </div>
 
     <div id="outageTableContainer">
+        <h3>Outage Detailed Information</h3>
         <table id="outageTable" style="width:100%">
             <thead>
                 <tr>
@@ -675,6 +686,9 @@
             }
         }
 
+        // Update the total-services div with the number of analyzed services
+        document.getElementById("total-services").textContent = selectedServices.length;
+
         // Add this check before preparing neo4jData
         if (selectedServices.length === 0) {
             throw new Error('No valid services were processed. Please check your selections.');
@@ -901,6 +915,9 @@
             // Optionally show error to user
             alert('Please try again! Error saving data to Cloud.Risk.Graph - Neo4j: ' + error.message);
         }
+
+        // Example: Display the total services analyzed
+        console.log(`Total Services Analyzed: ${selectedServices.length}`);
     }
 
     // Helper function to calculate median
