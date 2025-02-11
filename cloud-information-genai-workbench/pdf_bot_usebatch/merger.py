@@ -449,6 +449,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Google Cloud Apigee API|Apigee|GAPI)",
             # Compute Services
             r"(?i)(Google Cloud Run|Cloud Run|GCR)",
+            r"(?i)(Google Cloud Functions|Cloud Functions|GCF)",
             # Data Services
             r"(?i)(Google Cloud BigQuery|BigQuery|BQ)",
             r"(?i)(AlloyDB for PostgreSQL|AlloyDB|ADB)",
@@ -501,6 +502,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Azure Batch|Batch)",
             r"(?i)(Azure App Service|App Service|AAS)",
             r"(?i)(Azure Functions|Functions|AF)",
+            r"(?i)(Azure Virtual Machines|Virtual Machines|AVM)",
             # Analytics
             r"(?i)(Azure PowerBI App|PowerBI|PBI)",
             # Network Services
@@ -1514,6 +1516,7 @@ service_full_names = {
         "GCML": "Google Cloud Machine Learning",
         "GAPI": "Google Cloud Apigee API",
         "GCR": "Google Cloud Run",
+        "GCF": "Google Cloud Functions",
         "BQ": "Google Cloud BigQuery",
         "ADB": "AlloyDB for PostgreSQL",
         "GCS": "Google Cloud SQL",
@@ -1555,6 +1558,7 @@ service_full_names = {
         "APS": "Azure Database for PostgreSQL",
         "AMS": "Azure Database for MySQL",
         "AB": "Azure Batch",
+        "AVM": "Azure Virtual Machines",
         "AAS": "Azure App Service",
         "AF": "Azure Functions",
         "Af": "Azure Functions",
