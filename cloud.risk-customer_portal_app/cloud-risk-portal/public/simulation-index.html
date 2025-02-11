@@ -39,7 +39,7 @@
         }
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1800px;
             background-color: #353b48;  
             padding: 1rem;
             border-radius: 10px;
@@ -324,19 +324,9 @@
     
     <div class="vendor-section">
         <h3>Outage Severity Analysis</h3>
-        <div class="metrics-grid">
-            <div class="metric">
-                <h4>Critical Outages (>240 min)</h4>
-                <div id="critical-outages">0</div>
-            </div>
-            <div class="metric">
-                <h4>Major Outages (60-240 min)</h4>
-                <div id="major-outages">0</div>
-            </div>
-            <div class="metric">
-                <h4>Minor Outages (<60 min)</h4>
-                <div id="minor-outages">0</div>
-            </div>
+        <div>
+            <h4>Outage Severity Analysis</h4>
+            <div id="outageSeverityAnalysis"></div>
         </div>
     </div>
 
@@ -357,7 +347,7 @@
                     <th>Status</th>
                     <th>Source</th>
                     <th>SLA Impact</th>
-                    <th>Estimated Cost Impact</th>
+                    <th>Estimated Credit Back</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -550,11 +540,13 @@
                 document.getElementById('outageChartContainer').innerHTML += warningHTML;
                 return;
             }
-
-            renderOutageChart(outageData, service);
-            const riskData = await fetchCloudRiskData(service, 'global');
-            await compareMaxExpectedDowntime(riskData, service);
-            await displayOutageData(service, outageData);
+            if (!outageData || !Array.isArray(outageData) || outageData.length === 0) {
+                outageData = [];
+                return outageData;
+            }
+            else {
+                return outageData;
+            }
         } catch (error) {
             console.error(`Error fetching outage data for ${service}:`, error);
             // Display error message in the UI (for non-404 errors)
@@ -853,7 +845,13 @@
                     
                     await addServiceAnalysis(service, riskData, i);
 
-                    await fetchOutageData(service);
+                    const outageData = await fetchOutageData(service);
+                    if (outageData && Array.isArray(outageData) && outageData.length > 0) {
+                        renderOutageChart(outageData, service);
+                        const riskData = await fetchCloudRiskData(service, 'global');
+                        await compareMaxExpectedDowntime(riskData, service);
+                        await displayOutageData(service, outageData);
+                    }
                 } catch (error) {
                     console.error(`Error processing ${service}:`, error);
                 }
@@ -1299,8 +1297,9 @@
 
         // Update outage analysis
         const outageData = await fetchOutageData(service);
-        const monthlyCost = parseFloat(estimatedCreditBack);
-        await updateOutageAnalysis( service, riskData, outageData, monthlyCost ); 
+        if (riskData.webscraper_annual_period_service_down_per_year_in_minutes > 0) {
+            await updateOutageAnalysis(service, riskData, outageData,monthy_customer_service_spent); 
+        }
     }
 
     // Add this function to handle the expansion
@@ -1603,16 +1602,7 @@
     }
 
     // Add this new function to your JavaScript section
-    async function updateOutageAnalysis( service, riskData, outageData, monthlyCost ) {
-        // Ensure riskData has default values if undefined
-        riskData = riskData || {
-            webscraper_annual_period_service_down_per_year_in_minutes: 0,
-            expected_annual_service_minutes_down_by_sla_tier1: 0,
-            service_sla_usage_percentage: '0.00%',
-            sla_deviation_connected_risk_0_999: '0.000',
-            service_traffic_coef_by_percent_down: '0.00%',
-            usage_connected_risk_0_999: '0.000'
-        };
+    async function updateOutageAnalysis(service, riskData, outageData, monthlyCustomerServiceSpent) {
 
         // Calculate service health status
         const actualDowntime = parseFloat(riskData.webscraper_annual_period_service_down_per_year_in_minutes || 0);
@@ -1665,32 +1655,36 @@
 
         // Process outages
         if (Array.isArray(outageData)) {
-            // Get current counts from the display
-            let criticalCount = parseInt(document.getElementById('critical-outages').textContent || '0');
-            let majorCount = parseInt(document.getElementById('major-outages').textContent || '0');
-            let minorCount = parseInt(document.getElementById('minor-outages').textContent || '0');
 
             outageData.forEach(outage => {
-                const duration = parseFloat(outage.duration_minutes || 0);
-                const outage_downtime_period = parseFloat(outage.downtime_period || 0);
+                // Format duration_minutes to 2 decimal places
+                const formattedDuration = 
+                    typeof outage.duration_minutes === 'string' ? 
+                    parseFloat(outage.duration_minutes).toFixed(2) : 
+                    (outage.duration_minutes || 0).toFixed(2);
+                // Format downtime_period to 2 decimal places
+                const formattedDowntimePeriod = 
+                    typeof outage.downtime_period === 'string' ? 
+                    parseFloat(outage.downtime_period).toFixed(2) : 
+                    (outage.downtime_period || 0).toFixed(2);
                 let real_outage_duration = 0;
-                if (duration >= 0) {
-                    real_outage_duration = duration;
+                if (formattedDuration >= 0) {
+                    real_outage_duration = formattedDuration;
                 } else {
-                    real_outage_duration = outage_downtime_period;
+                    real_outage_duration = formattedDowntimePeriod;
                 }
+                console.log('real_outage_duration: '+real_outage_duration);
                 
-                // Increment the appropriate counter
-                if (real_outage_duration >= 240) {
-                    criticalCount++;
-                } else if (real_outage_duration >= 60) {
-                    majorCount++;
-                } else if (real_outage_duration > 0) {
-                    minorCount++;
-                }
+                // Add row to outage table with cost impact , per each regional 
+                const costImpact = 
+                    real_outage_duration > expectedDowntime_tier4 ? monthlyCustomerServiceSpent * parseFloat(riskData.percentage_service_credit_back_tier4 || 0) / 100 :
+                    real_outage_duration > expectedDowntime_tier3 ? monthlyCustomerServiceSpent * parseFloat(riskData.percentage_service_credit_back_tier3 || 0) / 100 :
+                    real_outage_duration > expectedDowntime_tier2 ? monthlyCustomerServiceSpent * parseFloat(riskData.percentage_service_credit_back_tier2 || 0) / 100 :
+                    real_outage_duration > expectedDowntime_tier1 ? monthlyCustomerServiceSpent * parseFloat(riskData.percentage_service_credit_back_tier1 || 0) / 100 :
+                    0;
+                console.log('monthlyCustomerServiceSpent: '+monthlyCustomerServiceSpent);
+                console.log('costImpact: '+costImpact);
 
-                // Add row to outage table with cost impact
-                const costImpact = (real_outage_duration / 60) * (monthlyCost / (30 * 24));
                 // Check tiers from highest (4) to lowest (1) and use the highest exceeded tier
                 const slaImpact = 
                     real_outage_duration > expectedDowntime_tier4 ? 'Exceeds SLA Tier 4' :
@@ -1708,7 +1702,7 @@
                     <td>${outage.availability_zone || 'N/A'}</td>
                     <td>${outage.start_time ? new Date(outage.start_time).toLocaleString() : 'N/A'}</td>
                     <td>${outage.end_time ? new Date(outage.end_time).toLocaleString() : 'N/A'}</td>
-                    <td>${real_outage_duration.toFixed(2) || '0.00'}</td>
+                    <td>${real_outage_duration || '0.00'}</td>
                     <td>${outage.downtime_period || 'Not specified'}</td>
                     <td>${outage.root_cause || 'Not specified'}</td>
                     <td>${outage.outage_status || 'Unknown'}</td>
@@ -1718,11 +1712,6 @@
                 `;
                 tbody.appendChild(row);
             });
-
-            // Update outage severity counts with accumulated values
-            document.getElementById('critical-outages').textContent = criticalCount.toString();
-            document.getElementById('major-outages').textContent = majorCount.toString();
-            document.getElementById('minor-outages').textContent = minorCount.toString();
         }
     }
 
