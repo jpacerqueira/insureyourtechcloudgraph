@@ -39,7 +39,7 @@
         }
         .container {
             width: 100%;
-            max-width: 1800px;
+            max-width: 2000px;
             background-color: #353b48;  
             padding: 1rem;
             border-radius: 10px;
@@ -241,6 +241,44 @@
             height: 900px;
             overflow-y: auto;
         }
+
+        /* Add these new styles */
+        #outageTableContainer {
+            position: relative;
+            overflow: auto;
+            max-height: 600px; /* Adjust height as needed */
+        }
+
+        #outageTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #outageTable thead {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background-color: #2c3039; /* Match your existing theme */
+        }
+
+        #outageTable th {
+            background-color: #2c3039; /* Match your existing theme */
+            color: #74b9ff;
+            padding: 12px;
+            font-weight: 600;
+            border-bottom: 2px solid #57606f; /* Add bottom border for visual separation */
+        }
+
+        #outageTable td {
+            padding: 10px;
+            border: 1px solid #57606f;
+            color: #f1f2f6;
+        }
+
+        /* Add hover effect for better readability */
+        #outageTable tbody tr:hover {
+            background-color: #353b48;
+        }
     </style>
 </head>
 <body>
@@ -332,22 +370,22 @@
 
     <div id="outageTableContainer">
         <h3>Outage Detailed Information</h3>
-        <table id="outageTable" style="width:100%">
+        <table id="outageTable">
             <thead>
                 <tr>
-                    <th>Service</th>
-                    <th>Cloud Provider</th>
-                    <th>Regions</th>
-                    <th>Availability Zones</th>
-                    <th>Start Time</th>
-                    <th>End Time</th>
-                    <th>Duration (minutes)</th>
-                    <th>Downtime Period</th>
-                    <th>Root Cause</th>
-                    <th>Status</th>
-                    <th>Source</th>
-                    <th>SLA Impact</th>
-                    <th>Estimated Credit Back</th>
+                    <th title="Cloud service name">Service</th>
+                    <th title="Cloud provider name">Cloud Provider</th>
+                    <th title="Affected regions">Regions</th>
+                    <th title="Affected availability zones">Availability Zones</th>
+                    <th title="Outage start time">Start Time</th>
+                    <th title="Outage end time">End Time</th>
+                    <th title="Duration in minutes">Duration (minutes)</th>
+                    <th title="Period of downtime">Downtime Period</th>
+                    <th title="Root cause of the outage">Root Cause</th>
+                    <th title="Current status">Status</th>
+                    <th title="Source of outage report">Source</th>
+                    <th title="Impact on Service Level Agreement">SLA Impact</th>
+                    <th title="Estimated credit back amount">Estimated Credit Back ($)</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -1452,29 +1490,27 @@
 
     // Add to existing JavaScript
     function displayOutageData(service, outageData) {
-        // Create table rows
         const tbody = document.querySelector('#outageTable tbody');
         
         outageData.forEach(outage => {
-            // TODO: Add SLA Impact and Cost Impact
-            const slaImpact = 'Not specified';
-            const costImpact = '0.00';
             const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${service}</td>
-                <td>${outage.cloud_provider || 'N/A'}</td>
-                <td>${outage.regions || 'N/A'}</td>
-                <td>${outage.availability_zone || 'N/A'}</td>
-                <td>${new Date(outage.start_time).toLocaleString()}</td>
-                <td>${new Date(outage.end_time).toLocaleString()}</td>
-                <td>${outage.duration_minutes}</td>
-                <td>${outage.downtime_period}</td>
-                <td>${outage.root_cause || 'Not specified'}</td>
-                <td>${outage.outage_status}</td>
-                <td>${outage.source_outage_report}</td>
-                <td>${slaImpact || 'Not specified'}</td>
-                <td>$${costImpact || '0.00'}</td>
-            `;
+            const cells = [
+                { value: service || 'N/A', title: 'Cloud service name' },
+                { value: outage.cloud_provider || 'N/A', title: 'Cloud provider name' },
+                { value: outage.regions || 'N/A', title: 'Affected regions' },
+                { value: outage.availability_zones || 'N/A', title: 'Affected availability zones' },
+                { value: outage.start_time ? new Date(outage.start_time).toLocaleString() : 'N/A', title: 'Start time of the outage' },
+                { value: outage.end_time ? new Date(outage.end_time).toLocaleString() : 'N/A', title: 'End time of the outage' },
+                { value: outage.duration_minutes || '0.00', title: 'Duration in minutes' },
+                { value: outage.downtime_period || 'Not specified', title: 'Period of downtime' },
+                { value: outage.root_cause || 'Not specified', title: 'Root cause of the outage' },
+                { value: outage.outage_status || 'Unknown', title: 'Current status of the outage' },
+                { value: outage.source_outage_report || 'Not specified', title: 'Source of the outage report' },
+                { value: outage.sla_impact || 'Not specified', title: 'Impact on Service Level Agreement' },
+                { value: `$${(outage.estimated_credit_back || 0).toFixed(2)}`, title: 'Estimated credit back amount' }
+            ];
+
+            row.innerHTML = cells.map(cell => `<td title="${cell.title}">${cell.value}</td>`).join('');
             tbody.appendChild(row);
         });
 
