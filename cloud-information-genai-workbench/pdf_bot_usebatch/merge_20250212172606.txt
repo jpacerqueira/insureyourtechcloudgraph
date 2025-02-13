@@ -113088,6 +113088,48 @@ After analyzing the text, I found that the following public cloud services were 
 * Root Cause: Unhandled failure condition due to unavailability of configuration calls
 * Downtime Period:   
 --
+Outage Filename: ./outages_files/Embedded Power BI Service Outage _ - Microsoft Fabric Community - 15-03-2023 - part1.txt
+--
+Based on the provided text, I was able to identify one public cloud service outage.
+
+**Summary of Outage**
+
+The outage affected Power BI Embedded services in the Americas region.
+
+**Outage Details**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | Power BI Embedded | us-east-1 | n/a | 2023-03-15 04:49 PM UTC | 2 days, 12 hours, 30 minutes | n/a | n/a | n/a |
+
+**Root Cause**
+
+The root cause of the outage was not explicitly mentioned in the provided text.
+
+Note that only Microsoft Azure is a cloud provider mentioned in the original text. The other services and cloud providers listed in your query were not present in the original text.  
+--
+Outage Filename: ./outages_files/Embedded Power BI Service Outage _ - Microsoft Fabric Community - 15-03-2023 - part2.txt
+--
+Based on the provided text, I was able to identify one public cloud service outage:
+
+**Power BI Embedded Service Outage**
+
+* **Cloud Provider:** Microsoft Azure
+* **Service:** Power BI Embedded
+* **Region:** Not specified in the text
+* **Availability Zone:** Not specified in the text
+* **Impact Date:** 03-15-2023 07:55 PM UTC (investigating)
+* **Duration:** Not specified in the text
+* **Root Cause:** Not specified in the text
+* **Downtime Period:** Not specified in the text
+* **Resolved Date:** Not specified in the text
+
+**Summary of Outage**
+
+The Power BI Embedded service experienced an outage on 03-15-2023. The incident was investigated, but no further information is available.
+
+**No other cloud providers were identified as being impacted by outages in the provided text.**  
+--
 Outage Filename: ./outages_files/Google Cloud Service Health  - Incident 2023-11-08.txt
 --
 Based on the provided text, I will resume the one or more Public Cloud Service outages identified in the text.

@@ -504,7 +504,8 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Azure Functions|Functions|AF)",
             r"(?i)(Azure Virtual Machines|Virtual Machines|AVM)",
             # Analytics
-            r"(?i)(Azure PowerBI App|PowerBI|PBI)",
+            r"(?i)(Azure PowerBI App|Azure Power BI App|PowerBI|Power BI App|PBI)",
+            r"(?i)(Azure Power BI Embedded|Power BI Embedded|PBI Embedded|Power BI Embedded Service|Azure Power BI Embedded Service|PBIE)",
             # Network Services
             r"(?i)(Azure CDN|Content Delivery Network)",
             # Storage
@@ -1564,6 +1565,7 @@ service_full_names = {
         "Af": "Azure Functions",
         "af": "Azure Functions",
         "PBI": "Azure PowerBI",
+        "PBIE": "Power BI Embedded",
         "ACDN": "Azure CDN",
         "ABS": "Azure Blob Storage",
         "ADLS": "Azure Blob Storage",

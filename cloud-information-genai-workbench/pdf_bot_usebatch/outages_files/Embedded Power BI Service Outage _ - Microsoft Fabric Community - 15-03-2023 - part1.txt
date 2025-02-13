@@ -1,0 +1,17 @@
+Based on the provided text, I was able to identify one public cloud service outage.
+
+**Summary of Outage**
+
+The outage affected Power BI Embedded services in the Americas region.
+
+**Outage Details**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | Power BI Embedded | us-east-1 | n/a | 2023-03-15 04:49 PM UTC | 2 days, 12 hours, 30 minutes | n/a | n/a | n/a |
+
+**Root Cause**
+
+The root cause of the outage was not explicitly mentioned in the provided text.
+
+Note that only Microsoft Azure is a cloud provider mentioned in the original text. The other services and cloud providers listed in your query were not present in the original text.

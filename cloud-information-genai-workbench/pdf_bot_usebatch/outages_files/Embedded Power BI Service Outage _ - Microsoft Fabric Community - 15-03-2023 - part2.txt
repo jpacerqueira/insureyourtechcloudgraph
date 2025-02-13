@@ -1,0 +1,19 @@
+Based on the provided text, I was able to identify one public cloud service outage:
+
+**Power BI Embedded Service Outage**
+
+* **Cloud Provider:** Microsoft Azure
+* **Service:** Power BI Embedded
+* **Region:** Not specified in the text
+* **Availability Zone:** Not specified in the text
+* **Impact Date:** 03-15-2023 07:55 PM UTC (investigating)
+* **Duration:** Not specified in the text
+* **Root Cause:** Not specified in the text
+* **Downtime Period:** Not specified in the text
+* **Resolved Date:** Not specified in the text
+
+**Summary of Outage**
+
+The Power BI Embedded service experienced an outage on 03-15-2023. The incident was investigated, but no further information is available.
+
+**No other cloud providers were identified as being impacted by outages in the provided text.**
