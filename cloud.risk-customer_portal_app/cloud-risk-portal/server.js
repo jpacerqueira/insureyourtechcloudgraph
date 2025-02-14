@@ -215,20 +215,38 @@ const session = require('express-session');
 const sessionSecret = crypto.randomBytes(32).toString('hex') || process.env.SESSION_SECRET || '9824923489default243341342234session5512po2p123p2secret';
 console.log("Server - new session - sessionSecret: " + sessionSecret);
 
-// Update session middleware
+// Function to generate a unique session ID
+function generateUniqueSessionId() {
+    // Combine timestamp, random bytes, and a counter for uniqueness
+    const timestamp = Date.now().toString(36);
+    const randomBytes = crypto.randomBytes(8).toString('hex');
+    const counter = process.hrtime.bigint().toString(36);
+    
+    // Combine and hash the components
+    const combinedString = `${timestamp}-${randomBytes}-${counter}`;
+    const hash = crypto.createHash('sha256')
+        .update(combinedString)
+        .digest('hex');
+    
+    // Return first 32 characters of the hash
+    return hash.substring(0, 32);
+}
+
+// Update session middleware to use custom session ID generator
 const sessionOptions = {
+    genid: (req) => generateUniqueSessionId(),
     secret: sessionSecret,
-    resave: false,  // Changed to false to prevent unnecessary session saves
-    saveUninitialized: true,  // Changed to true to ensure new sessions are saved
-    rolling: true,  // Add this to reset the cookie expiration on each request
+    resave: false,
+    saveUninitialized: true,
+    rolling: true,
     cookie: { 
         secure: true, 
         sameSite: 'Strict',
-        maxAge: 2 * 60 * 1000, // 2 minutes
-        httpOnly: true  // Added for security
+        maxAge: 2 * 60 * 1000,
+        httpOnly: true
     },
-    name: 'sessionID',  // Custom name instead of default 'connect.sid'
-    unset: 'destroy'  // Ensure session is destroyed on logout
+    name: 'sessionID',
+    unset: 'destroy'
 };
 
 // Add session middleware
@@ -486,15 +504,17 @@ const apiRouter = express.Router();
 
 // Routes
 app.get('/simulation/', (req, res) => {
-    const sessionID = req.sessionID;
+    const sessionID = req.session.sessionID || generateUniqueSessionId();
     console.log("simulation - sessionID: " + sessionID);
-    const companyName = req.query.companyName || 'Simulation Company';
+    const companyName = req.query.companyName || 'InsureYourTech.Cloud - Simulation Company';
+    const userId = req.query.userId || '1'; // Simulation userID =1
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
         appBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_APP_BASE_URL : process.env.DEV_APP_BASE_URL,
         isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
         isDevelopment: process.env.IS_PROD !== "true" ? true : false,
         companyName: companyName,
+        userId: userId,
         sessionID: sessionID
     };
     // Serve the chart.js library
@@ -511,6 +531,12 @@ app.get('/simulation/', (req, res) => {
     
     // Replace the companyName placeholder with the actual company name
     html = html.replace('{{companyName}}', companyName);
+
+    // Replace the userId placeholder with the actual user ID
+    html = html.replace('{{userId}}', userId);
+
+    // Replace the sessionID placeholder with the actual session ID
+    html = html.replace('{{sessionID}}', sessionID);
         
     res.send(html);
 });
@@ -568,7 +594,8 @@ app.post('/customer-portal/login', async (req, res) => {
         
         if (isPasswordMatch) {
             req.session.userId = user.id;
-            res.redirect('/customer-portal/index?companyName=' + user.company);
+            req.session.sessionID = generateUniqueSessionId();
+            res.redirect('/customer-portal/index?companyName=' + user.company + '&userId=' + user.id + '&sessionID=' + req.session.sessionID);
         } else {
             // Password does not match, suggest password reset
             res.status(401).send('Incorrect password. Please try again or <a href="/customer-portal/reset-password">reset your password</a>.');
@@ -611,9 +638,11 @@ app.get('/customer-portal/logout', (req, res) => {
 
 // Protect the customer-portal index route
 app.get('/customer-portal/index', isAuthenticated, (req, res) => {
-    const sessionID = req.sessionID;
+    const sessionID = req.query.sessionID || generateUniqueSessionId();
+    req.session.sessionID = sessionID; // Update the sessionID in the session - if not declared req payload will be empty
     console.log("customer-portal - sessionID: " + sessionID);
     const companyName = req.query.companyName || '';
+    const userId = req.query.userId || '1'; 
     // ... existing code to render customer-portal ...
     const envVars = {
         apiBaseUrl: process.env.IS_PROD === "true" ? process.env.PROD_API_BASE_URL : process.env.DEV_API_BASE_URL,
@@ -621,6 +650,7 @@ app.get('/customer-portal/index', isAuthenticated, (req, res) => {
         isSSLBypassed: process.env.SSL_BYPASS === "true" ? false : true,
         isDevelopment: process.env.IS_PROD !== "true" ? true : false,
         companyName: companyName,
+        userId: userId,
         sessionID: sessionID
     };
     // Serve the chart.js library
@@ -637,6 +667,12 @@ app.get('/customer-portal/index', isAuthenticated, (req, res) => {
 
     // Replace the companyName placeholder with the actual company name
     html = html.replace('{{companyName}}', companyName);
+
+    // Replace the userId placeholder with the actual user ID
+    html = html.replace('{{userId}}', userId);
+
+    // Replace the sessionID placeholder with the actual session ID
+    html = html.replace('{{sessionID}}', sessionID);
     
     res.send(html);
 });
@@ -821,6 +857,66 @@ async function storeResetToken(email, token) {
         console.error('Error storing reset token:', error);
     }
 }
+
+// Add new endpoint to save customer submissions
+app.post('/customer-portal/save-customer-submission', async (req, res) => {
+    const customerId = req.query.userId;
+    const sessionId = req.query.sessionID || generateUniqueSessionId();
+    console.log("save submission - sessionId: " + sessionId);
+    
+    try {
+        // First verify the customer exists and get their info
+        const customerQuery = await pool.query(
+            'SELECT id FROM cloud_risk_portal.customers WHERE id = $1',
+            [customerId]
+        );
+
+        if (!customerQuery.rows.length) {
+            throw new Error('Customer not found');
+        }
+
+        const userId = customerQuery.rows[0].id;
+        const { companyName, projectName, services } = req.body;
+        
+        // Check for existing submission
+        const submissionQuery = await pool.query(
+            'SELECT session_id FROM cloud_risk_portal.customer_submissions WHERE user_id = $1 AND session_id = $2',
+            [userId, sessionId]
+        );
+        
+        if (!submissionQuery.rows.length) {
+            console.log('Session_id not found in the database - creating new submission');
+            // Save submission to database
+            await pool.query(
+                `INSERT INTO cloud_risk_portal.customer_submissions 
+                (session_id, user_id, company_name, project_name, submission_data, created_at) 
+                VALUES ($1, $2, $3, $4, $5, NOW())`,
+                [sessionId, userId, companyName, projectName, JSON.stringify(services)]
+            );
+        } else {
+            console.log('Session_id found in the database - updating existing submission');
+            // Update submission to database
+            await pool.query(
+                `UPDATE cloud_risk_portal.customer_submissions 
+                SET submission_data = $1, updated_at = NOW() 
+                WHERE session_id = $2 AND user_id = $3`,
+                [JSON.stringify(services), sessionId, userId]
+            );
+        }
+        
+        res.json({ 
+            success: true, 
+            message: 'Submission saved successfully' 
+        });
+    } catch (error) {
+        console.error('Error saving submission:', error);
+        res.status(500).json({ 
+            success: false,
+            error: error.message,
+            details: 'Error saving submission'
+        });
+    }
+});
 
 // Start server
 if (isProd) {

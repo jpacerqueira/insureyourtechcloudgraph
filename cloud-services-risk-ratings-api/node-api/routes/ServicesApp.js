@@ -19,7 +19,7 @@ const VALID_AVAILABILITY_ZONES = [
 ];
 
 // Example set of "public cloud providers" for a dropdown
-const VALID_PROVIDERS = ['AWS', 'Azure', 'Google Cloud GCP', 'IBM Cloud', 'Oracle Cloud OCI', 'Cloudflare', 'Akamai'];
+const VALID_PROVIDERS = ['Amazon AWS', 'Microsoft Azure', 'Google Cloud GCP', 'IBM Cloud', 'Oracle Cloud OCI', 'Cloudflare', 'Akamai', 'Macrometa', 'Salesforce', 'MongoDB', 'Databricks', 'Snowflake'];
 
 // Example formula or derived value option
 // Suppose we have a function to do derived calculations for certain columns.
