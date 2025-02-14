@@ -22,7 +22,8 @@
             //isDevelopment: false, // Add development flag # PROD 
             //isSSLBypassed: true, // Add SSL bypass flag
             isSSLBypassed: false, // Add SSL bypass flag
-            companyName: 'Simulation Company'
+            companyName: 'InsureYourTech.Cloud - Simulation Company',
+            sessionID: ''
         };
     </script>
     <style>
@@ -39,7 +40,7 @@
         }
         .container {
             width: 100%;
-            max-width: 2000px;
+            max-width: 1900px;
             background-color: #353b48;  
             padding: 1rem;
             border-radius: 10px;
@@ -288,6 +289,14 @@
     <h1>Company Details</h1>
     <!-- Input fields for Company Name and Project Name -->
     <div>
+        <label for="sessionID">sessionID</label>
+        <input type="text" id="sessionID" value="{{sessionID}}" readonly>
+    </div>
+    <div>
+        <label for="userId">userId</label>
+        <input type="text" id="userId" value="{{userId}}" readonly>
+    </div>
+    <div>
         <label for="companyName">Company Name (required)</label>
         <input type="text" id="companyName" required value="{{companyName}}">
     </div>
@@ -305,6 +314,8 @@
     <div class="controls">
         <button onclick="addVariablePair()">+</button>
         <button onclick="removeVariablePair()">-</button>
+        <button onclick="submitData()">Submit Data</button>
+        <button onclick="clearSubmission()" style="background-color: #ff7675;">Clear Submission</button>
     </div>
 
     <!-- Container to hold dynamically generated variable pairs -->
@@ -313,17 +324,17 @@
 </div>
 
 <div class="container">
-     <h2>Cloud.Risk</h2>
+    <h2>Cloud.Risk</h2>
 
 
-    <!-- Button to Submit Selected Values -->
-    <button onclick="submitData()">Submit Data</button>
+   <!-- Button to Submit Selected Values -->
+   <!-- <button onclick="submitData()">Submit Data</button> -->
 
-    <!-- Div to Display Submission Result -->
-    <div id="result"></div>
+   <!-- Div to Display Submission Result -->
+   <div id="result"></div>
 
     <!-- Link to Authorized users to see detailed results of your submission - Cloud.Risk.Graph your Measured Cloud.Risk RATIO -->
-    <a href="https://workspace-preview.neo4j.io/workspace/query?ntid=google-oauth2%7C100793316574048247943">'Cloud.Risk.Graph - Measure your Ratings using our prorietary Cloud.Risk Graph for Cloud and Service pairs (with Neo4j) '</a>
+    <a href="https://workspace-preview.neo4j.io/workspace/query?ntid=google-oauth2%7C100793316574048247943">'Cloud.Risk.Graph - GCP.Neo4J - Measure your Ratings using our prorietary Cloud.Risk Graph for Cloud and Service pairs (with Neo4j) '</a>
 
 
     
@@ -403,7 +414,7 @@
         "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
         "Amazon AWS Step Functions","Amazon Redshift","Amazon AWS Glue","Amazon Simple Queue Service SQS","Amazon s3","Amazon Elastic Kubernetes Service (EKS)",
         "Azure Active Directory AAD","Microsoft Entra ID","Azure Active Directory B2C",
-        "Azure Machine Learning","Azure AI","Azure AI Search","Azure OpenAI Service","Azure API Management","Azure Databricks",
+        "Azure Machine Learning","Azure AI","Azure AI Search","Azure OpenAI Service","Azure API Management","Azure Databricks","Azure HDInsight",
         "Azure SQL Managed Instance","Azure SQL Database","Azure Cosmos DB","Azure Database for PostgreSQL","Azure Database for MySQL",
         "Azure Virtual Machines","Azure Batch","Azure App Service","Azure Functions","Azure PowerBI","Power BI Embedded","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)",
         "Google Cloud VertexAI","Google Cloud Machine Learning","Google Cloud Apigee","Google Cloud Run","Google Cloud Functions","Google Cloud BigQuery","AlloyDB for PostgreSQL","Google Cloud SQL",
@@ -1753,6 +1764,121 @@
 
     // Initialize the variable pairs on page load
     window.onload = initializeVariablePairs;
+
+    // Add new function to clear submission
+    function clearSubmission() {
+        // Clear all variable trios
+        const container = document.getElementById("variableContainer");
+        container.innerHTML = "";
+        
+        // Reset to initial state with 2 trios
+        trioCount = 2;
+        initializeVariablePairs();
+        
+        // Clear main results displays
+        document.getElementById("result").innerHTML = "";
+        document.getElementById("outageChartContainer").innerHTML = "";
+        document.getElementById("outageComparison").innerHTML = "";
+        document.getElementById("total-services").textContent = "0";
+        
+        // Clear services exceeding SLA counters
+        document.getElementById("services-exceeding-sla_tier1").textContent = "0";
+        document.getElementById("services-exceeding-sla_tier2").textContent = "0";
+        document.getElementById("services-exceeding-sla_tier3").textContent = "0";
+        document.getElementById("services-exceeding-sla_tier4").textContent = "0";
+        
+        // Reset health status
+        document.getElementById("overall-health-status").innerHTML = '<div class="status-indicator healthy">No Data</div>';
+        
+        // Clear vendor metrics
+        const vendorMetricsContainer = document.getElementById("vendor-metrics");
+        if (vendorMetricsContainer) {
+            vendorMetricsContainer.innerHTML = "";
+        }
+        
+        // Clear services analysis
+        const servicesAnalysis = document.getElementById("services-analysis");
+        if (servicesAnalysis) {
+            servicesAnalysis.innerHTML = "";
+        }
+        
+        // Clear outage table
+        const outageTableBody = document.querySelector('#outageTable tbody');
+        if (outageTableBody) {
+            outageTableBody.innerHTML = "";
+        }
+        
+        // Clear customer metrics
+        const customerMetricIds = [
+            "customer-sla-usage",
+            "customer-sla-deviation",
+            "customer-traffic-coef",
+            "customer-usage-risk",
+            "customer-service-sla-tier1",
+            "customer-service-sla-tier2",
+            "customer-service-sla-tier3",
+            "customer-service-sla-tier4",
+            "customer-service-credit-back-tier1",
+            "customer-service-credit-back-tier2",
+            "customer-service-credit-back-tier3",
+            "customer-service-credit-back-tier4",
+            "customer-annual-downtime",
+            "customer-expected-annual-service-minutes-down-by-sla-tier1"
+        ];
+        
+        customerMetricIds.forEach(id => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.textContent = "0";
+            }
+        });
+        
+        // Clear any charts
+        const chartElements = document.querySelectorAll('canvas');
+        chartElements.forEach(canvas => {
+            if (canvas.chart) {
+                canvas.chart.destroy();
+            }
+            canvas.remove();
+        });
+        
+        // Clear any Plotly charts
+        const plotlyDivs = document.querySelectorAll('.js-plotly-plot');
+        plotlyDivs.forEach(div => {
+            Plotly.purge(div);
+            div.remove();
+        });
+        
+        // Reset global metrics objects
+        Object.keys(customerMetrics).forEach(key => {
+            customerMetrics[key] = [];
+        });
+        
+        Object.keys(vendorMetrics).forEach(key => {
+            delete vendorMetrics[key];
+        });
+        
+        // Clear any AI analysis content
+        const aiAnalysisElements = document.querySelectorAll('.ai-analysis-content');
+        aiAnalysisElements.forEach(element => {
+            element.innerHTML = "";
+        });
+        
+        // Clear any comparative charts container
+        const comparativeCharts = document.querySelector('.comparative-charts');
+        if (comparativeCharts) {
+            comparativeCharts.remove();
+        }
+        
+        // Clear parallel charts container
+        const parallelCharts = document.querySelector('.parallel-charts');
+        if (parallelCharts) {
+            parallelCharts.remove();
+        }
+    }
+
+    // Add new function to save submission
+    // Simulation - doesn't need to save submission
 </script>
 
 <!-- Include Chart.js library -->

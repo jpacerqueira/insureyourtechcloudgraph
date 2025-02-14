@@ -43,11 +43,35 @@ CREATE TABLE cloud_risk_portal.customers (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Create a new table for the customer_submissions
+INSERT INTO cloud_risk_portal.customers (username, email, customername, company, country, password, customer_type)
+ VALUES ('business@insureyourtech.cloud', 'business@insureyourtech.cloud', 'InsureYourTech.Cloud - Simulation Company', 'InsureYourTech.Cloud - Simulation Company', 'UK', '$2b$10$LvZ3aQVe3WSROOdJ3faG7ehi4lez9WwmLIwZnNgjqitiJqZGaRyuS', 'freemium');
+-- password: testpassword = $2b$10$LvZ3aQVe3WSROOdJ3faG7ehi4lez9WwmLIwZnNgjqitiJqZGaRyuS
 INSERT INTO cloud_risk_portal.customers (username, email, customername, company, country, password, customer_type)
  VALUES ('joao@fuelbigdata.com', 'joao@fuelbigdata.com', 'Joao P. A. Cerqueira', 'Fuel Data Science Big Data Limited', 'UK', '$2b$10$LvZ3aQVe3WSROOdJ3faG7ehi4lez9WwmLIwZnNgjqitiJqZGaRyuS', 'premium');
 -- password: testpassword = $2b$10$LvZ3aQVe3WSROOdJ3faG7ehi4lez9WwmLIwZnNgjqitiJqZGaRyuS
 
 SELECT * FROM cloud_risk_portal.customers;
+
+---  create a new database table to store the customer_submissions
+CREATE TABLE IF NOT EXISTS cloud_risk_portal.customer_submissions (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES cloud_risk_portal.customers(id),
+    session_id VARCHAR(255) NOT NULL,
+    company_name VARCHAR(255) NOT NULL,
+    project_name VARCHAR(255),
+    submission_data JSONB NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+INSERT INTO cloud_risk_portal.customer_submissions (user_id, session_id, company_name, project_name, submission_data)
+VALUES (1, '1663363006787704fd145138523d4is1', 'InsureYourTech.Cloud - Simulation Company', 'InsureYourTech.Cloud - Simulation Company Project', '{"services": [{"vendor": "AWS", "service": "Amazon Elastic Compute Cloud", "region": "global", "monthly_cost": 100}]}'
+);
+INSERT INTO cloud_risk_portal.customer_submissions (user_id, session_id, company_name, project_name, submission_data)
+VALUES (2, '1663363006787704fd145138523d4bd2', 'Fuel Data Science Big Data Limited', 'Fuel Data Science Big Data Limited - Project One', '{"services": [{"vendor": "AWS", "service": "Amazon Elastic Compute Cloud", "region": "global", "monthly_cost": 100}]}'
+);
+
+SELECT * FROM cloud_risk_portal.customer_submissions;
 
 -- 
 -- Create the cloud_service_risk_ratings database
