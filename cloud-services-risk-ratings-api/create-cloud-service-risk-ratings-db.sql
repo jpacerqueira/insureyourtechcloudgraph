@@ -65,10 +65,10 @@ CREATE TABLE IF NOT EXISTS cloud_risk_portal.customer_submissions (
     created_at TIMESTAMP NOT NULL DEFAULT NOW()
 );
 INSERT INTO cloud_risk_portal.customer_submissions (user_id, session_id, company_name, project_name, submission_data)
-VALUES (1, '1663363006787704fd145138523d4is1', 'InsureYourTech.Cloud - Simulation Company', 'InsureYourTech.Cloud - Simulation Company Project', '{"services": [{"vendor": "AWS", "service": "Amazon Elastic Compute Cloud", "region": "global", "monthly_cost": 100}]}'
+VALUES (1, '1663363006787704fd145138523d4is1', 'InsureYourTech.Cloud - Simulation Company', 'InsureYourTech.Cloud - Simulation Company Project', '{"services": [{"vendor": "Amazon AWS", "service": "Amazon AWS Lambda", "region": "global", "monthly_cost": 1000},{"vendor": "Microsoft Azure", "service": "Azure Functions", "region": "global", "monthly_cost": 1000}]}'
 );
 INSERT INTO cloud_risk_portal.customer_submissions (user_id, session_id, company_name, project_name, submission_data)
-VALUES (2, '1663363006787704fd145138523d4bd2', 'Fuel Data Science Big Data Limited', 'Fuel Data Science Big Data Limited - Project One', '{"services": [{"vendor": "AWS", "service": "Amazon Elastic Compute Cloud", "region": "global", "monthly_cost": 100}]}'
+VALUES (2, '1663363006787704fd145138523d4bd2', 'Fuel Data Science Big Data Limited', 'Fuel Data Science Big Data Limited - Project One', '{"services": [{"vendor": "Amazon AWS", "service": "Amazon AWS Lambda", "region": "global", "monthly_cost": 1000},{"vendor": "Microsoft Azure", "service": "Azure Functions", "region": "global", "monthly_cost": 1000}]}'
 );
 
 SELECT * FROM cloud_risk_portal.customer_submissions;
