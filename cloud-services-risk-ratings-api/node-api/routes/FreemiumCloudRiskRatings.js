@@ -349,4 +349,45 @@ router.get('/freemium/customers/list/all', async function (req, res) {
     }
 });
 
+// Get a specific customer by customer_id
+router.get('/freemium/customers/fetch/customer/:customer_id', async function (req, res) {
+    let connection;
+    try {
+        connection = await poolCloudRiskPortal.connect();
+        var customer_id = req.params.customer_id;
+        const result = await connection.query(
+            `SELECT c.id, c.username, c.email, c.customername, c.company, c.country, 
+                    c.customer_type, c.is_active, c.is_deleted, c.created_at, c.updated_at,
+                    json_agg(cs.*) as submissions
+             FROM "${process.env.DB_NAME_PORTAL}".customers c
+             LEFT JOIN "${process.env.DB_NAME_PORTAL}".customer_submissions cs ON c.id = cs.user_id
+             WHERE c.id = $1 AND c.customer_type = 'freemium'
+             GROUP BY c.id`,
+            [customer_id]
+        );
+        
+        // Handle result based on the database library's return format
+        const rows = Array.isArray(result) ? result[0] : result.rows;
+        
+        // Clean up null submissions
+        const cleanedRows = rows.map(row => ({
+            ...row,
+            submissions: row.submissions[0] === null ? [] : row.submissions
+        }));
+        
+        if (cleanedRows && cleanedRows.length > 0) {
+            res.status(200).json(cleanedRows);
+        } else {
+            res.status(200).json([]);
+        }
+    } catch (err) {
+        console.error('Database connection error:', err);
+        res.status(500).json({ error: 'Failed to retrieve customers' });
+    } finally {
+        if (connection) {
+            connection.release();
+        }
+    }
+});
+
 module.exports = router;
