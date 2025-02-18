@@ -11,10 +11,9 @@ cd insureyourtechcloudgraph/cloud.risk-customer_portal_app
 bash -x customer-app-start 4 1 0
 cd ~
 cd insureyourtechcloudgraph/cloud-services-risk-ratings-api/
-docker-compose down ;  docker system prune -f ; docker volume prune -f 
+##not needed in internal script#docker-compose down ;  docker system prune -f ; docker volume prune -f 
 bash -x build-api-cluster 4 1 1
 cd ~
 #
 echo "Done! Deployment of Customer Portal Apps, Data Outage and Services SLA Data - from home directory "
-ls -listarh *.csv
 #

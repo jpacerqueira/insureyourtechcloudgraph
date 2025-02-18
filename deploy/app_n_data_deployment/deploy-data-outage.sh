@@ -7,10 +7,9 @@ ls -listarh *.csv
 mv -f cloud-risk-datamodel-services-above-sla-outage.csv  insureyourtechcloudgraph/information/datamodel/
 mv -f outage_report_summary_2025*.csv  outage_report_summary_2025*.txt insureyourtechcloudgraph/cloud-information-genai-workbench/pdf_bot_usebatch/
 cd insureyourtechcloudgraph/cloud-services-risk-ratings-api/
-docker-compose down ;  docker system prune -f ; docker volume prune -f 
+##not needed in internal script##docker-compose down ;  docker system prune -f ; docker volume prune -f 
 bash -x build-api-cluster 4 1 1
 cd ~
 #
 echo "Done! Deploy Data Outage and Services SLA Data - from home directory "
-ls -listarh *.csv
 #

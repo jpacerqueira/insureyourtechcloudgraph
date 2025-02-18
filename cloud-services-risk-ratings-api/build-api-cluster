@@ -37,6 +37,9 @@ elif [[ "$BUILD_METHOD" == "2" ]]; then
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE rm -sfv # just remove containers and volumes of the compose project
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE up --build
 elif [[ "$BUILD_METHOD" == "3" ]]; then
+   echo "Backup customers"
+   ./backup_customers/backup_db.sh
+   echo "Backup customers done"
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE down
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE rm -sfv # just remove containers and volumes of the compose project
    #$DOCKER_CMD system prune -f
@@ -48,7 +51,14 @@ elif [[ "$BUILD_METHOD" == "3" ]]; then
    LATEST_REPORT=$(ls -1 ../cloud-information-genai-workbench/pdf_bot_usebatch/outage_report_summary_*.csv | sort -r | head -n1)
    head -n 2000000 "$LATEST_REPORT" > data/outage_report_summaries.csv
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE up --build --force-recreate --remove-orphans
+   echo "Restore customers - wait 5 seconds"
+   sleep 5
+   ./backup_customers/update_db.sh
+   echo "Restore customers done"
 elif [[ "$BUILD_METHOD" == "4" ]]; then
+   echo "Backup customers"
+   cd backup_customers; ./backup_db.sh ; cd ..
+   echo "Backup customers done"
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE down
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE rm -sfv # just remove containers and volumes of the compose project
    #$DOCKER_CMD system prune -f
@@ -61,6 +71,10 @@ elif [[ "$BUILD_METHOD" == "4" ]]; then
    head -n 2000000 "$LATEST_REPORT" > data/outage_report_summaries.csv
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE up -d --build --force-recreate --remove-orphans > /dev/null 2>&1
    echo "Customer Backend API , built! Now, wait 10 seconds for the database to be ready."
+   echo "Restore customers - wait 5 seconds"
+   sleep 5
+   cd backup_customers; ./update_db.sh ; cd ..
+   echo "Restore customers done"
 else
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE ps
 fi
