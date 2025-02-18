@@ -822,9 +822,9 @@ async function sendResetEmail(email, token) {
 
     // Email content
     const mailOptions = {
-        from: '"Cloud Risk Portal" <no-reply@InsureYourTech.Cloud>', // sender address
+        from: '"CloudRiskGraph.com" <no-reply@CloudRiskGraph.com>', // sender address
         to: email, // list of receivers
-        subject: `InsureYourTech.Cloud - Password Reset Request -  ${email}`, // Subject line
+        subject: `CloudRiskGraph.com - Password Reset Request - InsureYourTech.Cloud -  ${email}`, // Subject line
         text: `You requested a password reset. Click the link, valid 1h, to reset your password: ${resetUrl}`, // plain text body
         html: `<p>You requested a password reset. Click the link, valid 1h, to reset your password:</p><p><a href="${resetUrl}">Reset Password</a></p>` // html body
     };
