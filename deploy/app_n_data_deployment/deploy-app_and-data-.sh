@@ -16,5 +16,4 @@ bash -x build-api-cluster 4 1 1
 cd ~
 #
 echo "Done! Deployment of Customer Portal Apps, Data Outage and Services SLA Data - from home directory "
-ls -listarh *.csv
 #
