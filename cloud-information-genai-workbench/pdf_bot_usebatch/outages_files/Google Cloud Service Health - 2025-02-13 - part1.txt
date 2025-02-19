@@ -1,0 +1,31 @@
+Based on the provided text, I can identify that the following Cloud Providers were impacted:
+
+* Google GCP
+* europe-west2 (which is a region of Google GCP)
+
+The incident affected Chronicle Security, which is a service offered by Google GCP.
+
+Here is the breakdown of the outage per cloud provider and service impacted, displayed as text by line:
+
+Google GCP:
+Chronicle Security experienced issues related to feed based ingestion in europe-west2
+Description: We are experiencing an issue with Chronicle Security beginning on Thursday, 2025-02-13 12:13 UTC
+Our engineering team continues to investigate the issue.
+We will provide an update by Thursday, 2025-02-13 23:30 UTC with current details.
+
+Impact Date: 2025-02-13 12:13 UTC
+Duration: 9 hours and 26 minutes
+Root Cause: Not specified
+Downtime Period: None
+Resolved Date: 2025-02-13 21:39 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google GCP | Chronicle Security | europe-west2 | Not specified | 2025-02-13 12:13 UTC | 9 hours and 26 minutes | Not specified | None | 2025-02-13 21:39 UTC |
+
+Overall Summary:
+The incident affected a single service, Chronicle Security, in the europe-west2 region of Google GCP. The outage started on Thursday, February 13, 2025, at 12:13 UTC and lasted for approximately 9 hours and 26 minutes. The root cause of the outage was not specified.
+
+Note that there is no information available on other Cloud Providers or services impacted in this text.

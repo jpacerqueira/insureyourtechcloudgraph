@@ -4,6 +4,7 @@ from datetime import datetime
 
 # IBM Cloud Status Feed
 # https://cloud.ibm.com/status/api/notifications/feed.rss
+# https://cloud.ibm.com/notifications -- requires account login to IBM Cloud !
 # Required libraries
 # pip install feedparser pandas
 
