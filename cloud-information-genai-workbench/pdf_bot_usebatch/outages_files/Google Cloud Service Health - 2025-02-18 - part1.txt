@@ -1,0 +1,67 @@
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+**Google Cloud**
+
+* Service: SIEM Dashboards and SOAR Advanced Dashboards for Google Security Operations (SecOps)
+* Region: Global
+* Availability Zone: asia-northeast1, asia-south1, asia-seaest1, australia-southeast1, europe-west1, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west9, me-central1, me-central2, northamerica-northeast2, southamerica-east1, us-central1, us-east1
+* Impact Date: 2025-02-18 14:42 UTC
+* Duration: 3 hours 58 minutes
+* Root Cause: Revocation of associated internal Looker licenses
+* Downtime Period: 2025-02-18 14:42 - 2025-02-18 18:41 UTC
+* Resolved Date: 2025-02-18 18:35 UTC
+
+**Google Cloud (continued)**
+
+* Service: Chronicle Security and Chronicle SOAR
+* Region: Global
+* Availability Zone: asia-northeast1, asia-south1, asia-seaest1, australia-southeast1, europe-west1, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west9, me-central1, me-central2, northamerica-northeast2, southamerica-east1, us-central1, us-east1
+* Impact Date: 2025-02-18 14:42 UTC
+* Duration: 3 hours 58 minutes
+* Root Cause: Revocation of associated internal Looker licenses
+* Downtime Period: 2025-02-18 14:42 - 2025-02-18 18:41 UTC
+* Resolved Date: 2025-02-18 18:35 UTC
+
+**Google Cloud (continued)**
+
+* Service: Chronicle Security and Chronicle SOAR
+* Region: Global
+* Availability Zone: asia-northeast1, asia-south1, asia-seaest1, australia-southeast1, europe-west1, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west9, me-central1, me-central2, northamerica-northeast2, southamerica-east1, us-central1, us-east1
+* Impact Date: 2025-02-18 14:42 UTC
+* Duration: 3 hours 58 minutes
+* Root Cause: Revocation of associated internal Looker licenses
+* Downtime Period: 2025-02-18 14:42 - 2025-02-18 18:41 UTC
+* Resolved Date: 2025-02-18 18:35 UTC
+
+**Summary**
+
+The following cloud providers were impacted:
+
+* Google Cloud
+
+The services impacted were:
+
+* SIEM Dashboards and SOAR Advanced Dashboards for Google Security Operations (SecOps)
+* Chronicle Security
+* Chronicle SOAR
+
+The regions and availability zones affected were:
+
+* asia-northeast1, asia-south1, asia-seaest1, australia-southeast1, europe-west1, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west9, me-central1, me-central2, northamerica-northeast2, southamerica-east1, us-central1, us-east1
+
+The impact dates and durations were:
+
+* Impact Date: 2025-02-18 14:42 UTC
+* Duration: 3 hours 58 minutes
+
+The root cause of the outage was:
+
+* Revocation of associated internal Looker licenses
+
+The downtime period was:
+
+* 2025-02-18 14:42 - 2025-02-18 18:41 UTC
+
+The resolved date was:
+
+* 2025-02-18 18:35 UTC

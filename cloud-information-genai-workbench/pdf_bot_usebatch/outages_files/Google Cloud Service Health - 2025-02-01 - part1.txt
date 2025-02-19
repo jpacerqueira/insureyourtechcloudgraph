@@ -1,0 +1,52 @@
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+**Google Cloud**
+
+* Service: Chronicle Security
+* Region: us-multiregions
+* Availability Zone: Not specified
+* Impact Date: 2025-02-02 18:00 UTC
+* Duration: 2 days, 15 hours, and 54 minutes
+* Root Cause: Impacted customers will observe the Risk Analytics Dashboard details are not up-to-date while using Chronicle security in us-multiregions.
+* Downtime Period: Not specified
+* Resolved Date: 2025-02-03 01:49 UTC
+
+**Google Cloud**
+
+* Service: Chronicle Security
+* Region: us-multiregions
+* Availability Zone: Not specified
+* Impact Date: 2025-02-03 01:15 UTC
+* Duration: 34 minutes
+* Root Cause: Impacted customers will observe the Risk Analytics Dashboard details are not up-to-date while using Chronicle security in us-multiregions.
+* Downtime Period: Not specified
+* Resolved Date: 2025-02-03 01:49 UTC
+
+**Google Cloud**
+
+* Service: Chronicle Security
+* Region: us-multiregions
+* Availability Zone: Not specified
+* Impact Date: 2025-02-03 18:00 UTC
+* Duration: 0 minutes (resolved immediately)
+* Root Cause: Impacted customers will observe the Risk Analytics Dashboard details are not up-to-date while using Chronicle security in us-multiregions.
+* Downtime Period: Not specified
+* Resolved Date: 2025-02-03 01:49 UTC
+
+**Summary**
+
+The impacted cloud provider is Google Cloud. The services affected were Chronicle Security, with multiple incidents occurring across different dates and times.
+
+**Overall Summary**
+
+Google Cloud experienced a series of outages affecting its Chronicle Security service in the us-multiregions region. The first incident began on February 2nd at 18:00 UTC and lasted for approximately 34 minutes. A second incident occurred on February 3rd at 01:15 UTC, lasting for an additional 34 minutes. The third incident started on February 3rd at 18:00 UTC but was resolved immediately.
+
+**Table Format**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Chronicle Security | us-multiregions |  | 2025-02-02 18:00 UTC | 2 days, 15 hours, and 54 minutes | Impacted customers will observe the Risk Analytics Dashboard details are not up-to-date while using Chronicle security in us-multiregions. | Not specified | 2025-02-03 01:49 UTC |
+| Google Cloud | Chronicle Security | us-multiregions |  | 2025-02-03 01:15 UTC | 34 minutes | Impacted customers will observe the Risk Analytics Dashboard details are not up-to-date while using Chronicle security in us-multiregions. | Not specified | 2025-02-03 01:49 UTC |
+| Google Cloud | Chronicle Security | us-multiregions |  | 2025-02-03 18:00 UTC | 0 minutes | Impacted customers will observe the Risk Analytics Dashboard details are not up-to-date while using Chronicle security in us-multiregions. | Not specified | 2025-02-03 01:49 UTC |
+
+Note that since there were no outages from other cloud providers mentioned in the text, the table only includes information for Google Cloud.

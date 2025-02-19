@@ -115834,6 +115834,165 @@ Google Cloud Output Table
 
 Note that the output table only includes information for Google Cloud, as it is the only cloud provider mentioned in the original text.  
 --
+Outage Filename: ./outages_files/Google Cloud Service Health - 2025-02-01 - part1.txt
+--
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+Google Cloud
+
+ Service: Chronicle Security
+ Region: us-multiregions
+ Availability Zone: Not specified
+ Impact Date: 2025-02-02 18:00 UTC
+ Duration: 2 days, 15 hours, and 54 minutes
+ Root Cause: Impacted customers will observe the Risk Analytics Dashboard details are not up-to-date while using Chronicle security in us-multiregions.
+ Downtime Period: Not specified
+ Resolved Date: 2025-02-03 01:49 UTC
+
+Google Cloud
+
+ Service: Chronicle Security
+ Region: us-multiregions
+ Availability Zone: Not specified
+ Impact Date: 2025-02-03 01:15 UTC
+ Duration: 34 minutes
+ Root Cause: Impacted customers will observe the Risk Analytics Dashboard details are not up-to-date while using Chronicle security in us-multiregions.
+ Downtime Period: Not specified
+ Resolved Date: 2025-02-03 01:49 UTC
+
+Google Cloud
+
+ Service: Chronicle Security
+ Region: us-multiregions
+ Availability Zone: Not specified
+ Impact Date: 2025-02-03 18:00 UTC
+ Duration: 0 minutes (resolved immediately)
+ Root Cause: Impacted customers will observe the Risk Analytics Dashboard details are not up-to-date while using Chronicle security in us-multiregions.
+ Downtime Period: Not specified
+ Resolved Date: 2025-02-03 01:49 UTC
+
+Summary
+
+The impacted cloud provider is Google Cloud. The services affected were Chronicle Security, with multiple incidents occurring across different dates and times.
+
+Overall Summary
+
+Google Cloud experienced a series of outages affecting its Chronicle Security service in the us-multiregions region. The first incident began on February 2nd at 18:00 UTC and lasted for approximately 34 minutes. A second incident occurred on February 3rd at 01:15 UTC, lasting for an additional 34 minutes. The third incident started on February 3rd at 18:00 UTC but was resolved immediately.
+
+Table Format
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Chronicle Security | us-multiregions |  | 2025-02-02 18:00 UTC | 2 days, 15 hours, and 54 minutes | Impacted customers will observe the Risk Analytics Dashboard details are not up-to-date while using Chronicle security in us-multiregions. | Not specified | 2025-02-03 01:49 UTC |
+| Google Cloud | Chronicle Security | us-multiregions |  | 2025-02-03 01:15 UTC | 34 minutes | Impacted customers will observe the Risk Analytics Dashboard details are not up-to-date while using Chronicle security in us-multiregions. | Not specified | 2025-02-03 01:49 UTC |
+| Google Cloud | Chronicle Security | us-multiregions |  | 2025-02-03 18:00 UTC | 0 minutes | Impacted customers will observe the Risk Analytics Dashboard details are not up-to-date while using Chronicle security in us-multiregions. | Not specified | 2025-02-03 01:49 UTC |
+
+Note that since there were no outages from other cloud providers mentioned in the text, the table only includes information for Google Cloud.  
+--
+Outage Filename: ./outages_files/Google Cloud Service Health - 2025-02-13 - part1.txt
+--
+Based on the provided text, I can identify that the following Cloud Providers were impacted:
+
+ Google GCP
+ europe-west2 (which is a region of Google GCP)
+
+The incident affected Chronicle Security, which is a service offered by Google GCP.
+
+Here is the breakdown of the outage per cloud provider and service impacted, displayed as text by line:
+
+Google GCP:
+Chronicle Security experienced issues related to feed based ingestion in europe-west2
+Description: We are experiencing an issue with Chronicle Security beginning on Thursday, 2025-02-13 12:13 UTC
+Our engineering team continues to investigate the issue.
+We will provide an update by Thursday, 2025-02-13 23:30 UTC with current details.
+
+Impact Date: 2025-02-13 12:13 UTC
+Duration: 9 hours and 26 minutes
+Root Cause: Not specified
+Downtime Period: None
+Resolved Date: 2025-02-13 21:39 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google GCP | Chronicle Security | europe-west2 | Not specified | 2025-02-13 12:13 UTC | 9 hours and 26 minutes | Not specified | None | 2025-02-13 21:39 UTC |
+
+Overall Summary:
+The incident affected a single service, Chronicle Security, in the europe-west2 region of Google GCP. The outage started on Thursday, February 13, 2025, at 12:13 UTC and lasted for approximately 9 hours and 26 minutes. The root cause of the outage was not specified.
+
+Note that there is no information available on other Cloud Providers or services impacted in this text.  
+--
+Outage Filename: ./outages_files/Google Cloud Service Health - 2025-02-18 - part1.txt
+--
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+Google Cloud
+
+ Service: SIEM Dashboards and SOAR Advanced Dashboards for Google Security Operations (SecOps)
+ Region: Global
+ Availability Zone: asia-northeast1, asia-south1, asia-seaest1, australia-southeast1, europe-west1, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west9, me-central1, me-central2, northamerica-northeast2, southamerica-east1, us-central1, us-east1
+ Impact Date: 2025-02-18 14:42 UTC
+ Duration: 3 hours 58 minutes
+ Root Cause: Revocation of associated internal Looker licenses
+ Downtime Period: 2025-02-18 14:42 - 2025-02-18 18:41 UTC
+ Resolved Date: 2025-02-18 18:35 UTC
+
+Google Cloud (continued)
+
+ Service: Chronicle Security and Chronicle SOAR
+ Region: Global
+ Availability Zone: asia-northeast1, asia-south1, asia-seaest1, australia-southeast1, europe-west1, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west9, me-central1, me-central2, northamerica-northeast2, southamerica-east1, us-central1, us-east1
+ Impact Date: 2025-02-18 14:42 UTC
+ Duration: 3 hours 58 minutes
+ Root Cause: Revocation of associated internal Looker licenses
+ Downtime Period: 2025-02-18 14:42 - 2025-02-18 18:41 UTC
+ Resolved Date: 2025-02-18 18:35 UTC
+
+Google Cloud (continued)
+
+ Service: Chronicle Security and Chronicle SOAR
+ Region: Global
+ Availability Zone: asia-northeast1, asia-south1, asia-seaest1, australia-southeast1, europe-west1, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west9, me-central1, me-central2, northamerica-northeast2, southamerica-east1, us-central1, us-east1
+ Impact Date: 2025-02-18 14:42 UTC
+ Duration: 3 hours 58 minutes
+ Root Cause: Revocation of associated internal Looker licenses
+ Downtime Period: 2025-02-18 14:42 - 2025-02-18 18:41 UTC
+ Resolved Date: 2025-02-18 18:35 UTC
+
+Summary
+
+The following cloud providers were impacted:
+
+ Google Cloud
+
+The services impacted were:
+
+ SIEM Dashboards and SOAR Advanced Dashboards for Google Security Operations (SecOps)
+ Chronicle Security
+ Chronicle SOAR
+
+The regions and availability zones affected were:
+
+ asia-northeast1, asia-south1, asia-seaest1, australia-southeast1, europe-west1, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west9, me-central1, me-central2, northamerica-northeast2, southamerica-east1, us-central1, us-east1
+
+The impact dates and durations were:
+
+ Impact Date: 2025-02-18 14:42 UTC
+ Duration: 3 hours 58 minutes
+
+The root cause of the outage was:
+
+ Revocation of associated internal Looker licenses
+
+The downtime period was:
+
+ 2025-02-18 14:42 - 2025-02-18 18:41 UTC
+
+The resolved date was:
+
+ 2025-02-18 18:35 UTC  
+--
 Outage Filename: ./outages_files/Google Cloud Service Health - Incident 2023-11-27.txt
 --
 After analyzing the text, I found that the following cloud providers were impacted:
