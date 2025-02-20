@@ -2,6 +2,7 @@
  - Consumer of Google GCP Cloud API - Cloud Risk Graph Feeds
  - Consumer of the following feeds:
     - https://status.cloud.google.com/en/feed.atom
+    - https://status.cloud.google.com/incidents.json
     - https://status.cloud.google.com/products.json
 
 
