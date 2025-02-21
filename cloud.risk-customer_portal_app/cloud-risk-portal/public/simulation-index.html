@@ -277,6 +277,30 @@
         #outageTable tbody tr:hover {
             background-color: #353b48;
         }
+
+        /* Add tooltip styles */
+        .metric h4 {
+            position: relative;
+            cursor: help;
+        }
+
+        .metric h4[data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background: #2c3039;
+            color: #f1f2f6;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: normal;
+            width: max-content;
+            max-width: 300px;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            border: 1px solid #57606f;
+        }
     </style>
 </head>
 <body>
@@ -743,19 +767,19 @@
                 <div class="metrics-grid">
                     <div class="metric-column">
                         <div class="metric">
-                            <h4>Median Annual Downtime (minutes)</h4>
+                            <h4 data-tooltip="Total minutes of service downtime recorded over the past year">Median Annual Downtime (minutes)</h4>
                             <div class="value" id="customer-annual-downtime"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median Expected Annual Service max. downtime (minutes) by SLA Tier 1</h4>
+                            <h4 data-tooltip="Maximum allowed downtime in minutes according to the SLA Tier 1 agreement">Median Expected Annual Service max. downtime (minutes) by SLA Tier 1</h4>
                             <div class="value" id="customer-expected-annual-service-minutes-down-by-sla-tier1"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median Service SLA Tier 1 %</h4>
+                            <h4 data-tooltip="Percentage of uptime guaranteed by the service provider for Tier 1 level">Median Service SLA Tier 1 %</h4>
                             <div class="value" id="customer-service-sla-tier1"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median Service Credit Back Tier 1 %</h4>
+                            <h4 data-tooltip="Percentage of service cost that will be credited back if Tier 1 SLA is not met">Median Service Credit Back Tier 1 %</h4>
                             <div class="value" id="customer-service-credit-back-tier1"></div>
                         </div>
                         <div class="metric">
@@ -785,21 +809,21 @@
                     </div>
                     <div class="metric-column">
                         <div class="metric">
-                            <h4>Rating Median Cloud.Risk SLA Deviation</h4>
+                            <h4 data-tooltip="Risk rating (0-999) indicating likelihood of SLA violations based on historical performance">Rating Median Cloud.Risk SLA Deviation</h4>
                             <div class="value" id="customer-sla-deviation"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median SLA Usage %</h4>
+                            <h4 data-tooltip="Percentage of allowed downtime that has been consumed">Median SLA Usage %</h4>
                             <div class="value" id="customer-sla-usage"></div>
                         </div>
                     </div>
                     <div class="metric-column">
                         <div class="metric">
-                            <h4>Rating Median Cloud.Risk Usage Risk</h4>
+                            <h4 data-tooltip="Risk rating (0-999) based on service usage patterns and operational metrics">Rating Median Cloud.Risk Usage Risk</h4>
                             <div class="value" id="customer-usage-risk"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median Traffic Downtime Coefficient %</h4>
+                            <h4 data-tooltip="Percentage of time service experienced degraded performance or downtime during high traffic periods, on a monthly basis">Median Traffic Downtime Coefficient %</h4>
                             <div class="value" id="customer-traffic-coef"></div>
                         </div>
                     </div>
@@ -1256,21 +1280,21 @@
             <div class="metrics-grid">
                 <div class="metric-column">
                     <div class="metric">
-                        <h4>Rating Cloud.Risk SLA Deviation</h4>
+                        <h4 data-tooltip="Risk score (0-999) indicating the likelihood of SLA violations">Rating Cloud.Risk SLA Deviation</h4>
                         <div class="value">${parseFloat(riskData.sla_deviation_connected_risk_0_999).toFixed(2)}</div>
                     </div>
                     <div class="metric">
-                        <h4>SLA Usage %</h4>
+                        <h4 data-tooltip="Percentage of allowed downtime that has been used">SLA Usage %</h4>
                         <div class="value">${parseFloat(riskData.service_sla_usage_percentage).toFixed(2)}%</div>
                     </div>
                 </div>
                 <div class="metric-column">
                     <div class="metric">
-                        <h4>Rating Cloud.Risk Usage </h4>
+                        <h4 data-tooltip="Risk score (0-999) based on service usage patterns">Rating Cloud.Risk Usage</h4>
                         <div class="value">${parseFloat(riskData.usage_connected_risk_0_999).toFixed(2)}</div>
                     </div>
                     <div class="metric">
-                        <h4>Traffic Downtime Coefficient %</h4>
+                        <h4 data-tooltip="Percentage of time service experienced degraded performance or downtime during high traffic periods, on a monthly basis">Traffic Downtime Coefficient %</h4>
                         <div class="value">${parseFloat(riskData.service_traffic_coef_by_percent_down).toFixed(2)}%</div>
                     </div>
                 </div>
