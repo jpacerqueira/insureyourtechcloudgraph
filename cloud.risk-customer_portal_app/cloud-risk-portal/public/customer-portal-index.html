@@ -767,7 +767,7 @@
                 <div class="metrics-grid">
                     <div class="metric-column">
                         <div class="metric">
-                            <h4 data-tooltip="Total minutes of service downtime recorded over the past year">Median Annual Downtime (minutes)</h4>
+                            <h4 data-tooltip="By service, the total minutes of downtime recorded over the past year on a monthly basis">Median Annual Downtime (minutes)</h4>
                             <div class="value" id="customer-annual-downtime"></div>
                         </div>
                         <div class="metric">
@@ -783,27 +783,27 @@
                             <div class="value" id="customer-service-credit-back-tier1"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median Service SLA Tier 2 %</h4>
+                            <h4 data-tooltip="Percentage of uptime guaranteed by the service provider for Tier 2 level">Median Service SLA Tier 2 %</h4>
                             <div class="value" id="customer-service-sla-tier2"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median Service Credit Back Tier 2 %</h4>
+                            <h4 data-tooltip="Percentage of service cost that will be credited back if Tier 2 SLA is not met">Median Service Credit Back Tier 2 %</h4>
                             <div class="value" id="customer-service-credit-back-tier2"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median Service SLA Tier 3 %</h4>
+                            <h4 data-tooltip="Percentage of uptime guaranteed by the service provider for Tier 3 level">Median Service SLA Tier 3 %</h4>
                             <div class="value" id="customer-service-sla-tier3"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median Service Credit Back Tier 3 %</h4>
+                            <h4 data-tooltip="Percentage of service cost that will be credited back if Tier 3 SLA is not met">Median Service Credit Back Tier 3 %</h4>
                             <div class="value" id="customer-service-credit-back-tier3"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median Service SLA Tier 4 %</h4>
+                            <h4 data-tooltip="Percentage of uptime guaranteed by the service provider for Tier 4 level">Median Service SLA Tier 4 %</h4>
                             <div class="value" id="customer-service-sla-tier4"></div>
                         </div>
                         <div class="metric">
-                            <h4>Median Service Credit Back Tier 4 %</h4>
+                            <h4 data-tooltip="Percentage of service cost that will be credited back if Tier 4 SLA is not met">Median Service Credit Back Tier 4 %</h4>
                             <div class="value" id="customer-service-credit-back-tier4"></div>
                         </div>
                     </div>
@@ -823,7 +823,7 @@
                             <div class="value" id="customer-usage-risk"></div>
                         </div>
                         <div class="metric">
-                            <h4 data-tooltip="Percentage of time service experienced degraded performance or downtime during high traffic periods, on a monthly basis">Median Traffic Downtime Coefficient %</h4>
+                            <h4 data-tooltip="Percentage of time service experienced degraded performance or downtime periods">Median Traffic Downtime Coefficient %</h4>
                             <div class="value" id="customer-traffic-coef"></div>
                         </div>
                     </div>
@@ -1158,63 +1158,63 @@
                     <div class="metrics-grid">
                         <div class="metric-column">
                             <div class="metric">
-                                <h4>Median Annual Downtime (minutes)</h4>
+                                <h4 data-tooltip="By service, the total minutes of downtime recorded over the past year on a monthly basis">Median Annual Downtime (minutes)</h4>
                                 <div class="value">${calculateMedian(metrics.annual_downtime_minutes).toFixed(2)}</div>
                             </div>
                             <div class="metric">
-                                <h4>Median Expected Annual Service max. downtime (minutes) by SLA Tier 1</h4>
+                                <h4 data-tooltip="Maximum allowed downtime in minutes according to the SLA Tier 1 agreement">Median Expected Annual Service max. downtime (minutes) by SLA Tier 1</h4>
                                 <div class="value">${calculateMedian(metrics.expected_annual_service_minutes_down_by_sla_tier1).toFixed(2)}</div>
                             </div>
                             <div class="metric">
-                                <h4>Median Service SLA Tier 1 %</h4>
+                                <h4 data-tooltip="Percentage of uptime guaranteed by the service provider for Tier 1 level">Median Service SLA Tier 1 %</h4>
                                 <div class="value">${calculateMedian(metrics.service_sla_tier1).toFixed(5)}%</div>
                             </div>
                             <div class="metric">
-                                <h4>Median Service Credit Back Tier 1 %</h4>
+                                <h4 data-tooltip="Percentage of service cost that will be credited back if Tier 1 SLA is not met">Median Service Credit Back Tier 1 %</h4>
                                 <div class="value">${calculateMedian(metrics.service_credit_back_tier1).toFixed(2)}%</div>
                             </div>
                             <div class="metric">
-                                <h4>Median Service SLA Tier 2 %</h4>
+                                <h4 data-tooltip="Percentage of uptime guaranteed by the service provider for Tier 2 level">Median Service SLA Tier 2 %</h4>
                                 <div class="value">${calculateMedian(metrics.service_sla_tier2).toFixed(5)}%</div>
                             </div>
                             <div class="metric">
-                                <h4>Median Service Credit Back Tier 2 %</h4>
+                                <h4 data-tooltip="Percentage of service cost that will be credited back if Tier 2 SLA is not met">Median Service Credit Back Tier 2 %</h4>
                                 <div class="value">${calculateMedian(metrics.service_credit_back_tier2).toFixed(2)}%</div>
                             </div>
                             <div class="metric">
-                                <h4>Median Service SLA Tier 3 %</h4>
+                                <h4 data-tooltip="Percentage of uptime guaranteed by the service provider for Tier 3 level">Median Service SLA Tier 3 %</h4>
                                 <div class="value">${calculateMedian(metrics.service_sla_tier3).toFixed(5)}%</div>
                             </div>
                             <div class="metric">
-                                <h4>Median Service Credit Back Tier 3 %</h4>
+                                <h4 data-tooltip="Percentage of service cost that will be credited back if Tier 3 SLA is not met">Median Service Credit Back Tier 3 %</h4>
                                 <div class="value">${calculateMedian(metrics.service_credit_back_tier3).toFixed(2)}%</div>
                             </div>
                             <div class="metric">
-                                <h4>Median Service SLA Tier 4 %</h4>
+                                <h4 data-tooltip="Percentage of uptime guaranteed by the service provider for Tier 4 level">Median Service SLA Tier 4 %</h4>
                                 <div class="value">${calculateMedian(metrics.service_sla_tier4).toFixed(5)}%</div>
                             </div>
                             <div class="metric">
-                                <h4>Median Service Credit Back Tier 4 %</h4>
+                                <h4 data-tooltip="Percentage of service cost that will be credited back if Tier 4 SLA is not met">Median Service Credit Back Tier 4 %</h4>
                                 <div class="value">${calculateMedian(metrics.service_credit_back_tier4).toFixed(2)}%</div>
                             </div>
                         </div>
                         <div class="metric-column">
                             <div class="metric">
-                                <h4>Rating Median Cloud.Risk SLA Deviation</h4>
+                                <h4 data-tooltip="Risk rating (0-999) indicating likelihood of SLA violations based on historical performance">Rating Median Cloud.Risk SLA Deviation</h4>
                                 <div class="value">${calculateMedian(metrics.sla_deviation).toFixed(2)}</div>
                             </div>
                             <div class="metric">
-                                <h4>Median SLA Usage %</h4>
+                                <h4 data-tooltip="Percentage of allowed downtime that has been consumed">Median SLA Usage %</h4>
                                 <div class="value">${calculateMedian(metrics.sla_usage).toFixed(2)}%</div>
                             </div>
                         </div>
                         <div class="metric-column">
                             <div class="metric">
-                                <h4>Rating Median Cloud.Risk Usage</h4>
+                                <h4 data-tooltip="Risk rating (0-999) based on service usage patterns and operational metrics">Rating Median Cloud.Risk Usage Risk</h4>
                                 <div class="value">${calculateMedian(metrics.usage_connected_risk).toFixed(2)}</div>
                             </div>
                             <div class="metric">
-                                <h4>Median Traffic Downtime Coefficient %</h4>
+                                <h4 data-tooltip="Percentage of time service experienced degraded performance or downtime periods">Median Traffic Downtime Coefficient %</h4>
                                 <div class="value">${calculateMedian(metrics.traffic_coef).toFixed(2)}%</div>
                             </div>
                         </div>
@@ -1294,72 +1294,72 @@
                         <div class="value">${parseFloat(riskData.usage_connected_risk_0_999).toFixed(2)}</div>
                     </div>
                     <div class="metric">
-                        <h4 data-tooltip="Percentage of time service experienced degraded performance or downtime during high traffic periods, on a monthly basis">Traffic Downtime Coefficient %</h4>
+                        <h4 data-tooltip="Percentage of time service experienced degraded performance or downtime periods">Traffic Downtime Coefficient %</h4>
                         <div class="value">${parseFloat(riskData.service_traffic_coef_by_percent_down).toFixed(2)}%</div>
                     </div>
                 </div>
                 <div class="metric-column">
                     <div class="metric">
-                        <h4>Annual Downtime (minutes)</h4>
+                        <h4 data-tooltip="Service total minutes of downtime recorded over the past year on a monthly basis">Annual Downtime (minutes)</h4>
                         <div class="value">${riskData.webscraper_annual_period_service_down_per_year_in_minutes}</div>
                     </div>
                     <div class="metric">
-                        <h4>Expected Annual Downtime (minutes) Tier 1</h4>
+                        <h4 data-tooltip="Maximum allowed downtime in minutes according to the SLA Tier 1 agreement">Expected Annual Downtime (minutes) Tier 1</h4>
                         <div class="value">${riskData.expected_annual_service_minutes_down_by_sla_tier1}</div>
                     </div>
                     <div class="metric">
-                        <h4>Expected Annual Downtime (minutes) Tier 2</h4>
+                        <h4 data-tooltip="Maximum allowed downtime in minutes according to the SLA Tier 2 agreement">Expected Annual Downtime (minutes) Tier 2</h4>
                         <div class="value">${riskData.expected_annual_service_minutes_down_by_sla_tier2}</div>
                     </div>
                     <div class="metric">
-                        <h4>Expected Annual Downtime (minutes) Tier 3</h4>
+                        <h4 data-tooltip="Maximum allowed downtime in minutes according to the SLA Tier 3 agreement">Expected Annual Downtime (minutes) Tier 3</h4>
                         <div class="value">${riskData.expected_annual_service_minutes_down_by_sla_tier3}</div>
                     </div>
                     <div class="metric">
-                        <h4>Expected Annual Downtime (minutes) Tier 4</h4>
+                        <h4 data-tooltip="Maximum allowed downtime in minutes according to the SLA Tier 4 agreement">Expected Annual Downtime (minutes) Tier 4</h4>
                         <div class="value">${riskData.expected_annual_service_minutes_down_by_sla_tier4}</div>
                     </div>
                 </div>
                 <div class="metric-column">
                     <div class="metric">
-                        <h4>Service SLA Tier 1</h4>
+                        <h4 data-tooltip="Percentage of uptime guaranteed by the service provider for Tier 1 level">Service SLA Tier 1</h4>
                         <div class="value">${riskData.service_sla_0_99_9999_for_tier1}%</div>
                     </div>
                     <div class="metric">
-                        <h4>Service Credit Back Tier 1</h4>
+                        <h4 data-tooltip="Percentage of service cost that will be credited back if Tier 1 SLA is not met">Service Credit Back Tier 1</h4>
                         <div class="value">${riskData.percentage_service_credit_back_tier1}%</div>
                     </div>
                     <div class="metric">
-                        <h4>Monthly Service Cost</h4>
+                        <h4 data-tooltip="Monthly service cost">Monthly Service Cost</h4>
                         <div class="value">$${monthy_service_cost}</div>
                     </div>
                     <div class="metric">
-                        <h4>Monthly Estimated Service Credit Back</h4>
+                        <h4 data-tooltip="Monthly estimated service credit back">Monthly Estimated Service Credit Back</h4>
                         <div class="value">$${estimatedCreditBack.toFixed(2)}</div>
                         ${warningMessage}
                     </div>
                 </div>
                 <div class="metric-column">
                     <div class="metric">
-                        <h4>Service SLA Tier 2</h4>
+                        <h4 data-tooltip="Percentage of uptime guaranteed by the service provider for Tier 2 level">Service SLA Tier 2</h4>
                         <div class="value">${riskData.service_sla_0_99_9999_for_tier2}%</div>
                     </div>
                     <div class="metric">
-                        <h4>Service Credit Back Tier 2</h4>
+                        <h4 data-tooltip="Percentage of service cost that will be credited back if Tier 2 SLA is not met">Service Credit Back Tier 2</h4>
                         <div class="value">${riskData.percentage_service_credit_back_tier2}%</div>
                     </div>
                     <div class="metric">
-                        <h4>Service SLA Tier 3</h4>
+                        <h4 data-tooltip="Percentage of uptime guaranteed by the service provider for Tier 3 level">Service SLA Tier 3</h4>
                         <div class="value">${riskData.service_sla_0_99_9999_for_tier3}%</div>
                     </div>
                     <div class="metric">
-                        <h4>Service Credit Back Tier 3</h4>
+                        <h4 data-tooltip="Percentage of service cost that will be credited back if Tier 3 SLA is not met">Service Credit Back Tier 3</h4>
                         <div class="value">${riskData.percentage_service_credit_back_tier3}%</div>
                     </div>
                 </div>
             </div>
             <div class="metric" style="margin-top: 30px;">
-                <h4>AI Analysis</h4>
+                <h4 data-tooltip="AI Analysis">AI Analysis</h4>
                 <div class="ai-analysis-content" id="analysis-${service.replace(/\s+/g, '-')}">
                     <div class="value" style="white-space: pre-line;">${aiAnalysis}</div>
                 </div>
