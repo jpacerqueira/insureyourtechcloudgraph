@@ -31,13 +31,13 @@
             align-items: center;
             margin: 20px auto;
             padding: 0 15px;
-            background-color: #2f3542;  
+            background-color: #e1e5ee;
             color: #f1f2f6;
             min-height: 100vh;
         }
         .container {
-            width: 100%;
-            max-width: 1900px;
+            width: 95%;
+            max-width: 1940px;
             background-color: #353b48;  
             padding: 1rem;
             border-radius: 10px;
@@ -244,7 +244,7 @@
         #outageTableContainer {
             position: relative;
             overflow: auto;
-            max-height: 600px; /* Adjust height as needed */
+            max-height: 800px; /* Adjust height as needed */
         }
 
         #outageTable {
@@ -333,12 +333,12 @@
 
     <!-- Buttons to add or remove pairs -->
     <div class="controls">
-        <button onclick="addVariablePair()">+</button>
-        <button onclick="removeVariablePair()">-</button>
-        <button onclick="submitData(true)">Submit Data</button>
         <button onclick="clearSubmission()" style="background-color: #ff7675;">Clear Submission</button>
         <button onclick="saveSubmission()" style="background-color: #00b894;">Save Submission</button>
         <button onclick="loadLastSubmission()" style="background-color: #00b894;">Load Last Submission</button>
+        <button onclick="addVariablePair()">+</button>
+        <button onclick="removeVariablePair()">-</button>
+        <button onclick="submitData(true)">Submit Data</button>
     </div>
 
     <!-- Container to hold dynamically generated variable pairs -->
@@ -357,7 +357,7 @@
    <div id="result"></div>
 
     <!-- Link to Authorized users to see detailed results of your submission - Cloud.Risk.Graph your Measured Cloud.Risk RATIO -->
-    <a href="https://workspace-preview.neo4j.io/workspace/query?ntid=google-oauth2%7C100793316574048247943">'Cloud.Risk.Graph - GCP.Neo4J - Measure your Ratings using our prorietary Cloud.Risk Graph for Cloud and Service pairs (with Neo4j) '</a>
+    <a href="https://workspace-preview.neo4j.io/workspace/query?ntid=google-oauth2%7C100793316574048247943">Cloud.Risk.Graph - Your Cloud.Risk Graph measurements for Cloud and Service pairs (with Neo4j)</a>
 
 
     
@@ -395,15 +395,16 @@
     </div>
     
     <div class="vendor-section">
-        <h3>Outage Severity Analysis</h3>
+        <h2>Outage Severity Analysis</h2>
         <div>
-            <h4>Outage Severity Analysis</h4>
+            <h3>Outage Severity Analysis</h3>
             <div id="outageSeverityAnalysis"></div>
         </div>
     </div>
 
     <div id="outageTableContainer">
-        <h3>Outage Detailed Information</h3>
+        <h2>Outage Detailed Information</h2>
+        <h3>Webscrapper and GenAI Outage Information</h3>
         <table id="outageTable">
             <thead>
                 <tr>
