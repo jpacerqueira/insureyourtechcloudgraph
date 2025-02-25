@@ -418,9 +418,11 @@
                     <th title="Period of downtime">Downtime Period</th>
                     <th title="Root cause of the outage">Root Cause</th>
                     <th title="Current status">Status</th>
-                    <th title="Source of outage report">Source</th>
                     <th title="Impact on Service Level Agreement">SLA Impact</th>
                     <th title="Estimated credit back amount">Estimated Credit Back ($)</th>
+                    <th title="Estimated credit back percentage">Estimated Credit Back (%)</th>
+                    <th title="Source of outage report">Source Report</th>
+                    <th title="Route cause Gen.AI Analysis to Cloud.Risk">Route cause Gen.AI Analysis to Cloud.Risk</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -432,7 +434,7 @@
     // Add these declarations at the top of the script section, after the options arrays
     const optionsForVariable1 = ["Amazon AWS", "Microsoft Azure", "Google Cloud GCP", "IBM Cloud", "Oracle Cloud OCI", "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai", "Macrometa"];
     const optionsForVariable2 = [
-        "Amazon API Gateway","Amazon Bedrock","Amazon CloudFront","Amazon Route 53","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon Kinesis","Amazon DataZone",
+        "Amazon API Gateway","Amazon SageMaker","Amazon Bedrock","Amazon CloudFront","Amazon Route 53","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon Kinesis","Amazon DataZone",
         "Amazon DocumentDB","Amazon DynamoDB","Amazon AWS RDS","Amazon AWS Aurora Serverles","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
         "Amazon Elastic File System","Amazon Elastic Block Store","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
         "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
@@ -921,7 +923,7 @@
                     const outageData = await fetchOutageData(service);
                     if (outageData && Array.isArray(outageData) && outageData.length > 0) {
                         renderOutageChart(outageData, service);
-                        const riskData = await fetchCloudRiskData(service, 'global');
+                        const riskData = await fetchCloudRiskData(service, region);
                         await compareMaxExpectedDowntime(riskData, service);
                         await displayOutageData(service, outageData);
                     }
@@ -1542,9 +1544,11 @@
                 { value: outage.downtime_period || 'Not specified', title: 'Period of downtime' },
                 { value: outage.root_cause || 'Not specified', title: 'Root cause of the outage' },
                 { value: outage.outage_status || 'Unknown', title: 'Current status of the outage' },
-                { value: outage.source_outage_report || 'Not specified', title: 'Source of the outage report' },
                 { value: outage.sla_impact || 'Not specified', title: 'Impact on Service Level Agreement' },
-                { value: `$${(outage.estimated_credit_back || 0).toFixed(2)}`, title: 'Estimated credit back amount' }
+                { value: `$${(outage.estimated_credit_back || 0).toFixed(2)}`, title: 'Estimated credit back amount' },
+                { value: `${(outage.percentage_service_credit_back|| 0).toFixed(2)}%`, title: 'Estimated credit back percentage' },
+                { value: outage.source_outage_report || 'Not specified', title: 'Source of the outage report' },
+                { value: outage.cloudrisk_genai_output || 'Not specified', title: 'Route cause Gen.AI Analysis to Cloud.Risk' }
             ];
 
             row.innerHTML = cells.map(cell => `<td title="${cell.title}">${cell.value}</td>`).join('');
@@ -1758,6 +1762,15 @@
                 console.log('monthlyCustomerServiceSpent: '+monthlyCustomerServiceSpent);
                 console.log('costImpact: '+costImpact);
 
+                // add percentage credit back
+                const percentageCreditBack = 
+                    real_outage_duration > expectedDowntime_tier4 ? parseFloat(riskData.percentage_service_credit_back_tier4 || 0) :
+                    real_outage_duration > expectedDowntime_tier3 ? parseFloat(riskData.percentage_service_credit_back_tier3 || 0) :
+                    real_outage_duration > expectedDowntime_tier2 ? parseFloat(riskData.percentage_service_credit_back_tier2 || 0) :
+                    real_outage_duration > expectedDowntime_tier1 ? parseFloat(riskData.percentage_service_credit_back_tier1 || 0) :
+                    0;
+                console.log('percentageCreditBack: '+percentageCreditBack);
+
                 // Check tiers from highest (4) to lowest (1) and use the highest exceeded tier
                 const slaImpact = 
                     real_outage_duration > expectedDowntime_tier4 ? 'Exceeds SLA Tier 4' :
@@ -1779,9 +1792,11 @@
                     <td>${outage.downtime_period || 'Not specified'}</td>
                     <td>${outage.root_cause || 'Not specified'}</td>
                     <td>${outage.outage_status || 'Unknown'}</td>
-                    <td>${outage.source_outage_report || 'Not specified'}</td>
                     <td>${slaImpact || 'Not specified'}</td>
                     <td>$${costImpact.toFixed(2) || '0.00'}</td>
+                    <td>${percentageCreditBack.toFixed(2) || '0.00'}%</td>
+                    <td>${outage.source_outage_report || 'Not specified'}</td>
+                    <td>${outage.cloudrisk_genai_output || 'Not specified'}</td>
                 `;
                 tbody.appendChild(row);
             });

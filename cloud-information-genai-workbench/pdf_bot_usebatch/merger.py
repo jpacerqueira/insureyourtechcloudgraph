@@ -400,6 +400,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Amazon API Gateway|API Gateway|AGW)",
             r"(?i)(Amazon Direct Connect|Direct Connect|Direct Connect trac|DC)",
             # AI/ML Services
+            r"(?i)(Amazon SageMaker|SageMaker|SageMaker Studio|SageMaker Studio Studio|ASM)",
             r"(?i)(Amazon Bedrock|Bedrock|ABR)",
             # Serverless Messaging
             r"(?i)(Amazon Kinesis|Kinesis|AKN)",
@@ -1470,6 +1471,8 @@ def parse_timestamp(timestamp_str: str) -> Optional[datetime]:
 service_full_names = {
     "AWS": {
         "AGW": "Amazon API Gateway",
+        "rs": "Amazon SageMaker",
+        "ASM": "Amazon SageMaker",
         "ABR": "Amazon Bedrock",
         "AKN": "Amazon Kinesis",
         "DC": "Amazon AWS Direct Connect",
