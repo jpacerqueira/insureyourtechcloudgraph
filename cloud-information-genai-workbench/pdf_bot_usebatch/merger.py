@@ -1471,6 +1471,7 @@ def parse_timestamp(timestamp_str: str) -> Optional[datetime]:
 service_full_names = {
     "AWS": {
         "AGW": "Amazon API Gateway",
+        "rs": "Amazon SageMaker",
         "ASM": "Amazon SageMaker",
         "ABR": "Amazon Bedrock",
         "AKN": "Amazon Kinesis",
