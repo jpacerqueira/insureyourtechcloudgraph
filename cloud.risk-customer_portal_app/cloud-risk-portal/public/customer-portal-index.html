@@ -422,7 +422,6 @@ x<!DOCTYPE html>
                     <th title="Estimated credit back amount">Estimated Credit Back ($)</th>
                     <th title="Estimated credit back percentage">Estimated Credit Back (%)</th>
                     <th title="Source of outage report">Source Report</th>
-                    <th title="Route cause Gen.AI Analysis to Cloud.Risk">Route cause Gen.AI Analysis to Cloud.Risk</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -1547,8 +1546,7 @@ x<!DOCTYPE html>
                 { value: outage.sla_impact || 'Not specified', title: 'Impact on Service Level Agreement' },
                 { value: `$${(outage.estimated_credit_back || 0).toFixed(2)}`, title: 'Estimated credit back amount' },
                 { value: `${(outage.percentage_service_credit_back|| 0).toFixed(2)}%`, title: 'Estimated credit back percentage' },
-                { value: outage.source_outage_report || 'Not specified', title: 'Source of the outage report' },
-                { value: outage.cloudrisk_genai_output || 'Not specified', title: 'Route cause Gen.AI Analysis to Cloud.Risk' }
+                { value: outage.source_outage_report || 'Not specified', title: 'Source of the outage report' }
             ];
 
             row.innerHTML = cells.map(cell => `<td title="${cell.title}">${cell.value}</td>`).join('');
@@ -1796,7 +1794,6 @@ x<!DOCTYPE html>
                     <td>$${costImpact.toFixed(2) || '0.00'}</td>
                     <td>${percentageCreditBack.toFixed(2) || '0.00'}%</td>
                     <td>${outage.source_outage_report || 'Not specified'}</td>
-                    <td>${outage.cloudrisk_genai_output || 'Not specified'}</td>
                 `;
                 tbody.appendChild(row);
             });
