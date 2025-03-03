@@ -360,7 +360,7 @@
 
 <div class="container">
     <div class="collapsible-section" onclick="toggleSection(this)">
-        <h2>Company Details</h2>
+        <h2>Customer Company Details</h2>
         <span class="collapse-icon"></span>
     </div>
     <div class="company-details-content">
@@ -406,6 +406,14 @@
             <button onclick="submitData(true)" style="background-color: #0984e3;">Submit Data</button>
         </div>
     </div>
+</div>
+
+<div class="container" id="cloudRisk">
+    <h2>Cloud.Risk</h2>
+    <!-- Div to Display Submission Result -->
+    <div id="result"></div>
+    <!-- Link to Authorized users to see detailed results of your submission - Cloud.Risk.Graph your Measured Cloud.Risk RATIO -->
+    <a href="https://workspace-preview.neo4j.io/workspace/query?ntid=google-oauth2%7C100793316574048247943">Cloud.Risk.Graph - Your Cloud.Risk Graph measurements for Cloud and Service pairs (with Neo4j)</a>
 </div>
 
 <div class="container" id="outageInformation">
@@ -472,14 +480,6 @@
             <tbody></tbody>
         </table>
     </div>
-</div>
-
-<div class="container" id="cloudRisk">
-    <h2>Cloud.Risk</h2>
-    <!-- Div to Display Submission Result -->
-    <div id="result"></div>
-    <!-- Link to Authorized users to see detailed results of your submission - Cloud.Risk.Graph your Measured Cloud.Risk RATIO -->
-    <a href="https://workspace-preview.neo4j.io/workspace/query?ntid=google-oauth2%7C100793316574048247943">Cloud.Risk.Graph - Your Cloud.Risk Graph measurements for Cloud and Service pairs (with Neo4j)</a>
 </div>
 
 <script>
