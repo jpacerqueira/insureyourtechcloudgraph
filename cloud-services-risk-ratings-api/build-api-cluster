@@ -38,7 +38,7 @@ elif [[ "$BUILD_METHOD" == "2" ]]; then
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE up --build
 elif [[ "$BUILD_METHOD" == "3" ]]; then
    echo "Backup customers"
-   ./backup_customers/backup_db.sh
+   cd backup_customers; ./backup_db.sh ; cd ..
    echo "Backup customers done"
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE down
    $DOCKER_COMPOSE_CMD -f $DOCKER_FILE rm -sfv # just remove containers and volumes of the compose project
