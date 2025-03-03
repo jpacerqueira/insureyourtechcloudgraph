@@ -1,28 +1,28 @@
 
-CREATE (cust_Project_Test_Local_at_4h_am:CUSTOMER_NAME {
-    name: 'Project Test Local at 4h am',
-    project_name: 'Project by Project Test Local at 4h am',
-    median_sla_usage_percentage: '218.91%',
-    median_sla_deviation_risk: '995.22',
-    median_traffic_coefficient: '0.11%',
-    median_usage_risk: '995.72',
+CREATE (cust_Insure_Your_Tech_dot_Cloud:CUSTOMER_NAME {
+    name: 'Insure Your Tech dot Cloud',
+    project_name: 'Project by Insure Your Tech dot Cloud',
+    median_sla_usage_percentage: '354.44%',
+    median_sla_deviation_risk: '993.19',
+    median_traffic_coefficient: '0.18%',
+    median_usage_risk: '993.69',
     median_service_sla_tier1: '99.95%',
     median_service_sla_tier2: '99.00%',
     median_service_sla_tier3: '95.00%',
     median_service_sla_tier4: '95.00%',
-    median_annual_downtime: '575.00'
+    median_annual_downtime: '931.00'
     })
 CREATE (Microsoft_Azure:TECHNOLOGY_PROVIDER {
                     name: 'Microsoft Azure',
-                    median_sla_usage_percentage: '2740.00%',
-                    median_sla_deviation_risk: '968.79',
-                    median_traffic_coefficient: '0.27%',
-                    median_usage_risk: '990.79',
+                    median_sla_usage_percentage: '6203.06%',
+                    median_sla_deviation_risk: '930.74',
+                    median_traffic_coefficient: '0.62%',
+                    median_usage_risk: '980.41',
                     median_service_sla_tier1: '99.99%',
                     median_service_sla_tier2: '99.00%',
                     median_service_sla_tier3: '95.00%',
                     median_service_sla_tier4: '95.00%',
-                    median_annual_downtime: '1440.00'
+                    median_annual_downtime: '3260.00'
                 })
 CREATE (Google_Cloud_GCP:TECHNOLOGY_PROVIDER {
                     name: 'Google Cloud GCP',
@@ -38,38 +38,38 @@ CREATE (Google_Cloud_GCP:TECHNOLOGY_PROVIDER {
                 })
 CREATE (Amazon_AWS:TECHNOLOGY_PROVIDER {
                     name: 'Amazon AWS',
-                    median_sla_usage_percentage: '218.91%',
-                    median_sla_deviation_risk: '995.22',
-                    median_traffic_coefficient: '0.11%',
-                    median_usage_risk: '995.72',
+                    median_sla_usage_percentage: '354.44%',
+                    median_sla_deviation_risk: '993.19',
+                    median_traffic_coefficient: '0.18%',
+                    median_usage_risk: '993.69',
                     median_service_sla_tier1: '99.95%',
                     median_service_sla_tier2: '99.00%',
                     median_service_sla_tier3: '95.00%',
                     median_service_sla_tier4: '95.00%',
-                    median_annual_downtime: '575.00'
+                    median_annual_downtime: '931.00'
                 })
 
-CREATE (Amazon_AWS_RDS:TECHNOLOGY_SERVICE {
-    name: 'Amazon AWS RDS',
-    sla_usage: '218.9070182',
-    sla_deviation_risk: '995.220',
-    traffic_coefficient: '0.1093987823',
-    usage_risk: '995.721',
-    annual_downtime_minutes: '575.00',
+CREATE (Amazon_AWS_Lambda:TECHNOLOGY_SERVICE {
+    name: 'Amazon AWS Lambda',
+    sla_usage: '354.4390156',
+    sla_deviation_risk: '993.189',
+    traffic_coefficient: '0.177130898',
+    usage_risk: '993.691',
+    annual_downtime_minutes: '931.00',
     service_sla_tier1: '99.95000',
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Project_Test_Local_at_4h_am)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_RDS)
+CREATE (cust_Insure_Your_Tech_dot_Cloud)-[:CUSTOMER_USES_SERVICE]->(Amazon_AWS_Lambda)
 CREATE (Amazon_AWS)-[:CONNECTED_RISK {
-    sla_usage: '218.9070182',
-    sla_deviation_risk: '995.220',
-    traffic_coefficient: '0.1093987823',
-    usage_risk: '995.721'
-}]->(Amazon_AWS_RDS)
+    sla_usage: '354.4390156',
+    sla_deviation_risk: '993.189',
+    traffic_coefficient: '0.177130898',
+    usage_risk: '993.691'
+}]->(Amazon_AWS_Lambda)
 
-CREATE (Google_Cloud_Apigee_API:TECHNOLOGY_SERVICE {
-    name: 'Google Cloud Apigee API',
+CREATE (Google_Cloud_Functions:TECHNOLOGY_SERVICE {
+    name: 'Google Cloud Functions',
     sla_usage: '175.5063224',
     sla_deviation_risk: '995.871',
     traffic_coefficient: '0.08770928463',
@@ -79,29 +79,29 @@ CREATE (Google_Cloud_Apigee_API:TECHNOLOGY_SERVICE {
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Project_Test_Local_at_4h_am)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Apigee_API)
+CREATE (cust_Insure_Your_Tech_dot_Cloud)-[:CUSTOMER_USES_SERVICE]->(Google_Cloud_Functions)
 CREATE (Google_Cloud_GCP)-[:CONNECTED_RISK {
     sla_usage: '175.5063224',
     sla_deviation_risk: '995.871',
     traffic_coefficient: '0.08770928463',
     usage_risk: '996.371'
-}]->(Google_Cloud_Apigee_API)
+}]->(Google_Cloud_Functions)
 
-CREATE (Azure_Virtual_Machines:TECHNOLOGY_SERVICE {
-    name: 'Azure Virtual Machines',
-    sla_usage: '2740.000027',
-    sla_deviation_risk: '968.790',
-    traffic_coefficient: '0.2739726027',
-    usage_risk: '990.789',
-    annual_downtime_minutes: '1440.00',
+CREATE (Azure_Functions:TECHNOLOGY_SERVICE {
+    name: 'Azure Functions',
+    sla_usage: '6203.055618',
+    sla_deviation_risk: '930.735',
+    traffic_coefficient: '0.6202435312',
+    usage_risk: '980.411',
+    annual_downtime_minutes: '3260.00',
     service_sla_tier1: '99.99000',
     service_credit_back_tier1: '10.000'
 })
 
-CREATE (cust_Project_Test_Local_at_4h_am)-[:CUSTOMER_USES_SERVICE]->(Azure_Virtual_Machines)
+CREATE (cust_Insure_Your_Tech_dot_Cloud)-[:CUSTOMER_USES_SERVICE]->(Azure_Functions)
 CREATE (Microsoft_Azure)-[:CONNECTED_RISK {
-    sla_usage: '2740.000027',
-    sla_deviation_risk: '968.790',
-    traffic_coefficient: '0.2739726027',
-    usage_risk: '990.789'
-}]->(Azure_Virtual_Machines)
+    sla_usage: '6203.055618',
+    sla_deviation_risk: '930.735',
+    traffic_coefficient: '0.6202435312',
+    usage_risk: '980.411'
+}]->(Azure_Functions)
