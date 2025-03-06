@@ -13557,6 +13557,47 @@ Here is the summary of the outages per cloud provider:
 
 Note that the root cause of the outages was UPS battery failure, which is not a cloud provider-specific issue. The downtime periods are also not specified for some services, as they were not provided in the original text.  
 --
+Outage Filename: ./outages_files/Azure status history _ Microsoft Azure - 26-02-2025 - part 1.txt
+--
+Here is the summary of the outage:
+
+**Cloud Providers Impacted:**
+Microsoft Azure
+
+**Services Impacted:**
+1. Azure Container Apps
+2. Azure SQL
+3. Azure SQL Managed Instance
+4. Azure Front Door
+5. Azure Resource Manager
+6. Azure Synapse Analytics
+7. Azure Databricks
+8. Azure Chaos Studio
+9. Azure App Services
+10. Azure Logic Apps
+11. Azure Media Services
+12. Microsoft Power BI
+
+**Outage Details:**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | Azure Container Apps | West US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure SQL | East US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure SQL Managed Instance | East US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Front Door | West US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Resource Manager | West US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Synapse Analytics | East US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Databricks | West US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Chaos Studio | East US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure App Services | West US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Logic Apps | East US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Media Services | West US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Microsoft Power BI | East US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+
+**Summary of Outage:**
+The outage occurred on February 26, 2025, starting at 18:39 UTC and lasted for 17 hours and 16 minutes. The root cause was a key rotation issue in the Managed Identity infrastructure. The services impacted were Azure Container Apps, Azure SQL, Azure SQL Managed Instance, Azure Front Door, Azure Resource Manager, Azure Synapse Analytics, Azure Databricks, Azure Chaos Studio, Azure App Services, Azure Logic Apps, Azure Media Services, and Microsoft Power BI. The outage was resolved on March 1, 2025, at 12:55 UTC.  
+--
 Outage Filename: ./outages_files/Azure_status_history_Microsoft_Azure_p10_2020.txt
 --
 After analyzing the text, I found that the following Cloud Providers were impacted:
@@ -113948,6 +113989,106 @@ No information is available on Amazon AWS services impacted during this incident
 
 The outage started at 2024-11-16 00:52 UTC and lasted for 2 hours, 44 minutes. The root cause was a significant loss of inter-region capacity due to simultaneous fiber cuts and malfunctioning backbone networking router.  
 --
+Outage Filename: ./outages_files/Google Cloud Service Health - 08-10-2024 - part 1.txt
+--
+Based on the provided text, I have extracted the relevant information for the impacted services.
+
+**Google Cloud Service Outage**
+
+* Service: App Engine
+* Region: us-central1
+* Availability Zone: Iowa
+* Impact Date: 2024-10-08 12:15 UTC
+* Duration: 6 hours and 20 minutes
+* Root Cause: Impacted customers may see an increase in requests returning a HTTP 429 response code.
+* Downtime Period: 2024-10-08 12:15 - 18:35 UTC (6 hours and 20 minutes)
+* Resolved Date: 2024-10-08 18:35 UTC
+
+**Google Cloud Service Outage**
+
+* Service: App Engine
+* Region: us-central1
+* Availability Zone: Iowa
+* Impact Date: 2024-10-08 15:15 UTC
+* Duration: 2 hours and 20 minutes
+* Root Cause: Impacted customers may see an increase in requests returning a HTTP 429 response code.
+* Downtime Period: 2024-10-08 15:15 - 17:35 UTC (2 hours and 20 minutes)
+* Resolved Date: 2024-10-08 18:35 UTC
+
+**Google Cloud Service Outage**
+
+* Service: App Engine
+* Region: us-central1
+* Availability Zone: Iowa
+* Impact Date: 2024-10-08 16:59 UTC
+* Duration: 1 hour and 36 minutes
+* Root Cause: Impacted customers may see an increase in requests returning a HTTP 429 response code.
+* Downtime Period: 2024-10-08 16:59 - 18:35 UTC (1 hour and 36 minutes)
+* Resolved Date: 2024-10-08 18:35 UTC
+
+**Google Cloud Service Outage**
+
+* Service: App Engine
+* Region: us-central1
+* Availability Zone: Iowa
+* Impact Date: 2024-10-08 14:15 UTC
+* Duration: 1 hour and 20 minutes
+* Root Cause: Impacted customers may see an increase in requests returning a HTTP 429 response code.
+* Downtime Period: 2024-10-08 14:15 - 18:35 UTC (4 hours and 20 minutes)
+* Resolved Date: 2024-10-08 18:35 UTC
+
+**Summary**
+
+The Google Cloud Service outage impacted App Engine customers in the us-central1 region. The outage started on October 8, 2024, at 12:15 UTC and lasted for a total of 6 hours and 20 minutes.
+
+**Cloud Provider Summary**
+
+| Cloud Provider | Services Impacted | Regions | Availability Zones | Impact Date | Duration | Root Cause |
+| --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | App Engine | us-central1 | Iowa | 2024-10-08 12:15 UTC | 6 hours and 20 minutes | Impacted customers may see an increase in requests returning a HTTP 429 response code. |
+
+Note that only Google Cloud is mentioned as the impacted cloud provider in the provided text.  
+--
+Outage Filename: ./outages_files/Google Cloud Service Health - 09-12-2024 - part 1.txt
+--
+Based on the provided text, I have identified the following Cloud Providers: Google GCP.
+
+Here is the breakdown of the outages per service impacted:
+
+**Google GCP**
+
+* **BigQuery**
+	+ Impact Date: 2024-12-09 09:33 UTC
+	+ Duration: 2 hours, 24 minutes
+	+ Root Cause: Sudden burst of traffic overloaded and slowed the backend in the availability zone.
+	+ Downtime Period: 99.99% from <3 seconds to ~30 seconds during this time.
+	+ Resolved Date: 2024-12-09 11:50 UTC
+* **Cloud Dataflow**
+	+ Impact Date: 2024-12-09 09:24 UTC
+	+ Duration: 2 hours, 24 minutes
+	+ Root Cause: Sudden burst of traffic overloaded and slowed the backend in the availability zone.
+	+ Downtime Period: 5-15% of Dataflow streaming jobs experienced increased latency in us-east1, us-east4, us-west1, us-west2, and us-central1 regions.
+	+ Resolved Date: 2024-12-09 11:40 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google GCP | BigQuery | us-multi-region |  | 2024-12-09 09:33 UTC | 2 hours, 24 minutes | Sudden burst of traffic overloaded and slowed the backend in the availability zone. | 99.99% from <3 seconds to ~30 seconds during this time. | 2024-12-09 11:50 UTC |
+| Google GCP | Cloud Dataflow | us-west1 |  | 2024-12-09 09:24 UTC | 2 hours, 24 minutes | Sudden burst of traffic overloaded and slowed the backend in the availability zone. | 5-15% of Dataflow streaming jobs experienced increased latency in us-east1, us-east4, us-west1, us-west2, and us-central1 regions. | 2024-12-09 11:40 UTC |
+
+Overall Summary:
+
+* Cloud Provider: Google GCP
+* Services Impacted: BigQuery, Cloud Dataflow
+* Regions Impacted: us-multi-region, us-west1, us-east1, us-east4, us-west2, us-central1
+* Availability Zones Impacted: Not specified
+* Impact Dates: 2024-12-09 UTC
+* Duration: 2 hours, 24 minutes
+* Root Cause: Sudden burst of traffic overloaded and slowed the backend in the availability zone.
+* Downtime Period: 99.99% from <3 seconds to ~30 seconds during this time.
+* Resolved Date: 2024-12-09 UTC  
+--
 Outage Filename: ./outages_files/Google Cloud Service Health - 2022-03-31 - part1.txt
 --
 Based on the provided text, here is the breakdown of the outages per cloud provider:
@@ -116003,6 +116144,38 @@ The downtime period was:
 The resolved date was:
 
 * 2025-02-18 18:35 UTC  
+--
+Outage Filename: ./outages_files/Google Cloud Service Health - 28-11-2024 - part 1.txt
+--
+Based on the provided text, I can identify that the following Cloud Providers were impacted:
+
+* Google GCP
+* Amazon AWS is not mentioned in the text, so it will be excluded.
+
+Here are the details of the outage for each affected service:
+
+**Google GCP**
+
+* Service: Vertex AI AutoML Image
+* Region: us-central1 and europe-west4
+* Availability Zone: Not specified
+* Impact Date: 2024-11-28 01:40 UTC
+* Duration: 3 hours and 12 minutes
+* Root Cause: Impacted users may receive "429" Quota Exhausted errors when using automl and image processing
+* Downtime Period: 2024-11-28 04:20 - 2024-11-28 04:52 UTC
+* Resolved Date: 2024-11-28 04:48 UTC
+
+**Summary of Google GCP Outage**
+
+The outage affected Vertex AI AutoML Image in us-central1 and europe-west4 regions. The incident began on November 28, 2024, at 01:40 UTC and lasted for approximately 3 hours and 12 minutes. The root cause was related to quota exhaustion errors when using automl and image processing.
+
+Here is the information displayed as a table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google GCP | Vertex AI AutoML Image | us-central1 |  | 2024-11-28 01:40 UTC | 3 hours and 12 minutes | Impacted users may receive "429" Quota Exhausted errors when using automl and image processing | 2024-11-28 04:20 - 2024-11-28 04:52 UTC | 2024-11-28 04:48 UTC |
+
+Note that the availability zone is not specified in the original text, so it was not included in the table.  
 --
 Outage Filename: ./outages_files/Google Cloud Service Health - Incident 2023-11-27.txt
 --
@@ -141203,6 +141376,150 @@ Here is the overall summary:
 **Downtime Period:** 2023-09-11 04:00 UTC - 2023-09-11 12:25 UTC
 
 **Resolved Date:** 2023-09-11 12:25 UTC  
+--
+Outage Filename: ./outages_files/Google Cloud Service Health 16-11-2024 - part 1.txt
+--
+Here is the summary of the outage:
+
+**Cloud Providers impacted:**
+
+* Google Cloud Platform (GCP)
+* Amazon Web Services (AWS) - not explicitly mentioned in the text but inferred as part of the incident due to the mention of "inter-region capacity"
+* Microsoft Azure - not explicitly mentioned in the text but inferred as part of the incident due to the mention of "inter-region capacity"
+
+**Services impacted:**
+
+* Cloud Load Balancing
+* Cloud SQL
+* Cloud Spanner
+* Cloud Logging
+* Cloud Firestore
+* BigQuery
+* Cloud VPN
+* Memory Store for Redis
+* Artifact Registry
+* Cloud Dataflow
+* Cloud Data Loss Prevention
+
+**Outage details:**
+
+Here is the outage information broken down by cloud provider and service impacted:
+
+GCP:
+Cloud Load Balancing - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud SQL - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud Spanner - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud Logging - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud Firestore - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+BigQuery - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud VPN - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Memory Store for Redis - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Artifact Registry - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud Dataflow - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud Data Loss Prevention - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+GCP:
+Cloud Deploy - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+GCP:
+Cloud Healthcare - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+GCP:
+Dataplex - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+GCP:
+GKE fleet management (GKE Connect) - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+GCP:
+Google Kubernetes Engine (GKE) - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+GCP:
+Identity and Access Management (IAM) - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+**Summary:**
+
+* GCP services impacted in asia-southeast2 and us-west1 regions.
+* Services impacted included Cloud Load Balancing, Cloud SQL, Cloud Spanner, Cloud Logging, Cloud Firestore, BigQuery, Cloud VPN, Memory Store for Redis, Artifact Registry, Cloud Dataflow, Cloud Data Loss Prevention, Cloud Deploy, Cloud Healthcare, Dataplex, GKE fleet management (GKE Connect), Google Kubernetes Engine (GKE), and Identity and Access Management (IAM).
+* Root cause was significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+* Downtime period was 2 hours and 44 minutes.  
 --
 Outage Filename: ./outages_files/Google Cloud Service Health- Incident 2023-11-30.txt
 --
@@ -230311,6 +230628,85 @@ After analyzing the text, I found that the following public cloud services were 
 	+ Root Cause: Increased Delays Associating Route 53 Private Hosted Zones to VPC
 	+ Downtime Period: 2024-10-24 13:45:55 - 2024-10-24 15:29:55 UTC
 	+ Resolved Date: 2024-10-24 16:00:0  
+--
+Outage Filename: ./outages_files/Service health - Mar 06, 2025 _ AWS Health Dashboard _ Global - 25-02-2025 - part1.txt
+--
+The outage affected Amazon AWS and AWS Identity and Access Management.
+
+Here is the breakdown of the outage per service impacted:
+
+AWS Identity and Access Management
+Region: Global
+Availability Zone:
+Impact Date: 2025-02-25 04:48:00 UTC
+Duration: 1 hour 17 minutes
+Root Cause: Increased API Error Rates
+Downtime Period: 4:13 AM - 4:55 AM PST ( intermittent error rates affecting IAM Control Plane write API requests)
+Resolved Date: 2025-02-25 05:13:00 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Amazon AWS | AWS Identity and Access Management | global |  | 2025-02-25 04:48:00 UTC | 1 hour 17 minutes | Increased API Error Rates | 4:13 AM - 4:55 AM PST | 2025-02-25 05:13:00 UTC |
+
+There is no information available on other cloud providers, services, regions, or availability zones impacted by the outage.  
+--
+Outage Filename: ./outages_files/Service health - Mar 06, 2025 _ AWS Health Dashboard _ Global - 29.01.2025 - part1.txt
+--
+Based on the provided text, here is the breakdown of the outage per cloud provider:
+
+**Amazon CloudFront**
+
+* Service impacted: S3 static website origins
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: January 28, 10:56 PM PST (UTC-8)
+* Duration: 1 hour and 50 minutes
+* Root Cause: Recent change that impacted traffic from certain CloudFront locations to S3 static website origins
+* Downtime Period: Between January 28, 10:56 PM and January 29, 3:06 AM PST
+* Resolved Date: January 29, 3:06 AM PST
+
+**Amazon CloudFront**
+
+* Service impacted: Cloudfront distributions with Amazon S3 as an origin
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: January 28, 10:56 PM PST (UTC-8)
+* Duration: 1 hour and 50 minutes
+* Root Cause: Same recent change that impacted traffic from certain CloudFront locations to S3 static website origins
+* Downtime Period: Between January 28, 10:56 PM and January 29, 3:06 AM PST
+* Resolved Date: January 29, 3:06 AM PST
+
+**Amazon CloudFront**
+
+* Service impacted: Cloudfront distributions with Amazon S3 as an origin
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: January 28, 10:56 PM PST (UTC-8)
+* Duration: 1 hour and 50 minutes
+* Root Cause: Same recent change that impacted traffic from certain CloudFront locations to S3 static website origins
+* Downtime Period: Between January 28, 10:56 PM and January 29, 3:06 AM PST
+* Resolved Date: January 29, 3:06 AM PST
+
+**Summary**
+
+Cloud providers impacted: Amazon CloudFront
+Services impacted: S3 static website origins, Cloudfront distributions with Amazon S3 as an origin
+Regions impacted: Global
+Availability zones impacted: Not specified
+Impact dates: January 28, 10:56 PM PST (UTC-8)
+Duration: 1 hour and 50 minutes
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Amazon CloudFront | S3 static website origins | global |  | January 28, 10:56 PM PST (UTC-8) | 1 hour and 50 minutes | Recent change that impacted traffic from certain CloudFront locations to S3 static website origins | Between January 28, 10:56 PM and January 29, 3:06 AM PST | January 29, 3:06 AM PST |
+| Amazon CloudFront | Cloudfront distributions with Amazon S3 as an origin | global |  | January 28, 10:56 PM PST (UTC-8) | 1 hour and 50 minutes | Same recent change that impacted traffic from certain CloudFront locations to S3 static website origins | Between January 28, 10:56 PM and January 29, 3:06 AM PST | January 29, 3:06 AM PST |
+| Amazon CloudFront | Cloudfront distributions with Amazon S3 as an origin | global |  | January 28, 10:56 PM PST (UTC-8) | 1 hour and 50 minutes | Same recent change that impacted traffic from certain CloudFront locations to S3 static website origins | Between January 28, 10:56 PM and January 29, 3:06 AM PST | January 29, 3:06 AM PST |
+
+Note: The output table has been formatted with the specified variables, one per line.  
 --
 Outage Filename: ./outages_files/Service health - Nov 27, 2024 _ AWS Health Dashboard _ Global - - Incident 2024-10-07.txt
 --

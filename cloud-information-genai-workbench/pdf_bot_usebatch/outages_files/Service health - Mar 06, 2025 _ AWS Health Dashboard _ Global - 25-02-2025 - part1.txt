@@ -1,0 +1,20 @@
+The outage affected Amazon AWS and AWS Identity and Access Management.
+
+Here is the breakdown of the outage per service impacted:
+
+AWS Identity and Access Management
+Region: Global
+Availability Zone:
+Impact Date: 2025-02-25 04:48:00 UTC
+Duration: 1 hour 17 minutes
+Root Cause: Increased API Error Rates
+Downtime Period: 4:13 AM - 4:55 AM PST ( intermittent error rates affecting IAM Control Plane write API requests)
+Resolved Date: 2025-02-25 05:13:00 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Amazon AWS | AWS Identity and Access Management | global |  | 2025-02-25 04:48:00 UTC | 1 hour 17 minutes | Increased API Error Rates | 4:13 AM - 4:55 AM PST | 2025-02-25 05:13:00 UTC |
+
+There is no information available on other cloud providers, services, regions, or availability zones impacted by the outage.

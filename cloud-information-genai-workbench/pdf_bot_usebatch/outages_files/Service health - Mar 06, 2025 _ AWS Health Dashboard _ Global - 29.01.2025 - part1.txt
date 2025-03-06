@@ -1,0 +1,53 @@
+Based on the provided text, here is the breakdown of the outage per cloud provider:
+
+**Amazon CloudFront**
+
+* Service impacted: S3 static website origins
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: January 28, 10:56 PM PST (UTC-8)
+* Duration: 1 hour and 50 minutes
+* Root Cause: Recent change that impacted traffic from certain CloudFront locations to S3 static website origins
+* Downtime Period: Between January 28, 10:56 PM and January 29, 3:06 AM PST
+* Resolved Date: January 29, 3:06 AM PST
+
+**Amazon CloudFront**
+
+* Service impacted: Cloudfront distributions with Amazon S3 as an origin
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: January 28, 10:56 PM PST (UTC-8)
+* Duration: 1 hour and 50 minutes
+* Root Cause: Same recent change that impacted traffic from certain CloudFront locations to S3 static website origins
+* Downtime Period: Between January 28, 10:56 PM and January 29, 3:06 AM PST
+* Resolved Date: January 29, 3:06 AM PST
+
+**Amazon CloudFront**
+
+* Service impacted: Cloudfront distributions with Amazon S3 as an origin
+* Region: Global
+* Availability Zone: Not specified
+* Impact Date: January 28, 10:56 PM PST (UTC-8)
+* Duration: 1 hour and 50 minutes
+* Root Cause: Same recent change that impacted traffic from certain CloudFront locations to S3 static website origins
+* Downtime Period: Between January 28, 10:56 PM and January 29, 3:06 AM PST
+* Resolved Date: January 29, 3:06 AM PST
+
+**Summary**
+
+Cloud providers impacted: Amazon CloudFront
+Services impacted: S3 static website origins, Cloudfront distributions with Amazon S3 as an origin
+Regions impacted: Global
+Availability zones impacted: Not specified
+Impact dates: January 28, 10:56 PM PST (UTC-8)
+Duration: 1 hour and 50 minutes
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Amazon CloudFront | S3 static website origins | global |  | January 28, 10:56 PM PST (UTC-8) | 1 hour and 50 minutes | Recent change that impacted traffic from certain CloudFront locations to S3 static website origins | Between January 28, 10:56 PM and January 29, 3:06 AM PST | January 29, 3:06 AM PST |
+| Amazon CloudFront | Cloudfront distributions with Amazon S3 as an origin | global |  | January 28, 10:56 PM PST (UTC-8) | 1 hour and 50 minutes | Same recent change that impacted traffic from certain CloudFront locations to S3 static website origins | Between January 28, 10:56 PM and January 29, 3:06 AM PST | January 29, 3:06 AM PST |
+| Amazon CloudFront | Cloudfront distributions with Amazon S3 as an origin | global |  | January 28, 10:56 PM PST (UTC-8) | 1 hour and 50 minutes | Same recent change that impacted traffic from certain CloudFront locations to S3 static website origins | Between January 28, 10:56 PM and January 29, 3:06 AM PST | January 29, 3:06 AM PST |
+
+Note: The output table has been formatted with the specified variables, one per line.

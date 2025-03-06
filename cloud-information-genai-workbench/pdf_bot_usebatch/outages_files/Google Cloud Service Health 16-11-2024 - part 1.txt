@@ -1,0 +1,141 @@
+Here is the summary of the outage:
+
+**Cloud Providers impacted:**
+
+* Google Cloud Platform (GCP)
+* Amazon Web Services (AWS) - not explicitly mentioned in the text but inferred as part of the incident due to the mention of "inter-region capacity"
+* Microsoft Azure - not explicitly mentioned in the text but inferred as part of the incident due to the mention of "inter-region capacity"
+
+**Services impacted:**
+
+* Cloud Load Balancing
+* Cloud SQL
+* Cloud Spanner
+* Cloud Logging
+* Cloud Firestore
+* BigQuery
+* Cloud VPN
+* Memory Store for Redis
+* Artifact Registry
+* Cloud Dataflow
+* Cloud Data Loss Prevention
+
+**Outage details:**
+
+Here is the outage information broken down by cloud provider and service impacted:
+
+GCP:
+Cloud Load Balancing - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud SQL - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud Spanner - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud Logging - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud Firestore - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+BigQuery - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud VPN - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Memory Store for Redis - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Artifact Registry - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud Dataflow - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+Cloud Data Loss Prevention - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+GCP:
+Cloud Deploy - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+GCP:
+Cloud Healthcare - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+GCP:
+Dataplex - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+GCP:
+GKE fleet management (GKE Connect) - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+GCP:
+Google Kubernetes Engine (GKE) - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+GCP:
+Identity and Access Management (IAM) - asia-southeast-2, us-west1 
+Duration: 2 hours, 44 minutes
+Root Cause: Significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+Impact Date: 2024-11-16 00:52 UTC
+Downtime Period: 2024-11-16 00:52 - 2024-11-16 03:36 UTC
+
+**Summary:**
+
+* GCP services impacted in asia-southeast2 and us-west1 regions.
+* Services impacted included Cloud Load Balancing, Cloud SQL, Cloud Spanner, Cloud Logging, Cloud Firestore, BigQuery, Cloud VPN, Memory Store for Redis, Artifact Registry, Cloud Dataflow, Cloud Data Loss Prevention, Cloud Deploy, Cloud Healthcare, Dataplex, GKE fleet management (GKE Connect), Google Kubernetes Engine (GKE), and Identity and Access Management (IAM).
+* Root cause was significant loss of inter-region capacity due to simultaneous fiber cuts and malfunction of a backbone networking router.
+* Downtime period was 2 hours and 44 minutes.

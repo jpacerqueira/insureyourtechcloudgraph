@@ -1,0 +1,37 @@
+Based on the provided text, I have identified the following Cloud Providers: Google GCP.
+
+Here is the breakdown of the outages per service impacted:
+
+**Google GCP**
+
+* **BigQuery**
+	+ Impact Date: 2024-12-09 09:33 UTC
+	+ Duration: 2 hours, 24 minutes
+	+ Root Cause: Sudden burst of traffic overloaded and slowed the backend in the availability zone.
+	+ Downtime Period: 99.99% from <3 seconds to ~30 seconds during this time.
+	+ Resolved Date: 2024-12-09 11:50 UTC
+* **Cloud Dataflow**
+	+ Impact Date: 2024-12-09 09:24 UTC
+	+ Duration: 2 hours, 24 minutes
+	+ Root Cause: Sudden burst of traffic overloaded and slowed the backend in the availability zone.
+	+ Downtime Period: 5-15% of Dataflow streaming jobs experienced increased latency in us-east1, us-east4, us-west1, us-west2, and us-central1 regions.
+	+ Resolved Date: 2024-12-09 11:40 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google GCP | BigQuery | us-multi-region |  | 2024-12-09 09:33 UTC | 2 hours, 24 minutes | Sudden burst of traffic overloaded and slowed the backend in the availability zone. | 99.99% from <3 seconds to ~30 seconds during this time. | 2024-12-09 11:50 UTC |
+| Google GCP | Cloud Dataflow | us-west1 |  | 2024-12-09 09:24 UTC | 2 hours, 24 minutes | Sudden burst of traffic overloaded and slowed the backend in the availability zone. | 5-15% of Dataflow streaming jobs experienced increased latency in us-east1, us-east4, us-west1, us-west2, and us-central1 regions. | 2024-12-09 11:40 UTC |
+
+Overall Summary:
+
+* Cloud Provider: Google GCP
+* Services Impacted: BigQuery, Cloud Dataflow
+* Regions Impacted: us-multi-region, us-west1, us-east1, us-east4, us-west2, us-central1
+* Availability Zones Impacted: Not specified
+* Impact Dates: 2024-12-09 UTC
+* Duration: 2 hours, 24 minutes
+* Root Cause: Sudden burst of traffic overloaded and slowed the backend in the availability zone.
+* Downtime Period: 99.99% from <3 seconds to ~30 seconds during this time.
+* Resolved Date: 2024-12-09 UTC

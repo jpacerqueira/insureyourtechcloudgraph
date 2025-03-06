@@ -1,0 +1,57 @@
+Based on the provided text, I have extracted the relevant information for the impacted services.
+
+**Google Cloud Service Outage**
+
+* Service: App Engine
+* Region: us-central1
+* Availability Zone: Iowa
+* Impact Date: 2024-10-08 12:15 UTC
+* Duration: 6 hours and 20 minutes
+* Root Cause: Impacted customers may see an increase in requests returning a HTTP 429 response code.
+* Downtime Period: 2024-10-08 12:15 - 18:35 UTC (6 hours and 20 minutes)
+* Resolved Date: 2024-10-08 18:35 UTC
+
+**Google Cloud Service Outage**
+
+* Service: App Engine
+* Region: us-central1
+* Availability Zone: Iowa
+* Impact Date: 2024-10-08 15:15 UTC
+* Duration: 2 hours and 20 minutes
+* Root Cause: Impacted customers may see an increase in requests returning a HTTP 429 response code.
+* Downtime Period: 2024-10-08 15:15 - 17:35 UTC (2 hours and 20 minutes)
+* Resolved Date: 2024-10-08 18:35 UTC
+
+**Google Cloud Service Outage**
+
+* Service: App Engine
+* Region: us-central1
+* Availability Zone: Iowa
+* Impact Date: 2024-10-08 16:59 UTC
+* Duration: 1 hour and 36 minutes
+* Root Cause: Impacted customers may see an increase in requests returning a HTTP 429 response code.
+* Downtime Period: 2024-10-08 16:59 - 18:35 UTC (1 hour and 36 minutes)
+* Resolved Date: 2024-10-08 18:35 UTC
+
+**Google Cloud Service Outage**
+
+* Service: App Engine
+* Region: us-central1
+* Availability Zone: Iowa
+* Impact Date: 2024-10-08 14:15 UTC
+* Duration: 1 hour and 20 minutes
+* Root Cause: Impacted customers may see an increase in requests returning a HTTP 429 response code.
+* Downtime Period: 2024-10-08 14:15 - 18:35 UTC (4 hours and 20 minutes)
+* Resolved Date: 2024-10-08 18:35 UTC
+
+**Summary**
+
+The Google Cloud Service outage impacted App Engine customers in the us-central1 region. The outage started on October 8, 2024, at 12:15 UTC and lasted for a total of 6 hours and 20 minutes.
+
+**Cloud Provider Summary**
+
+| Cloud Provider | Services Impacted | Regions | Availability Zones | Impact Date | Duration | Root Cause |
+| --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | App Engine | us-central1 | Iowa | 2024-10-08 12:15 UTC | 6 hours and 20 minutes | Impacted customers may see an increase in requests returning a HTTP 429 response code. |
+
+Note that only Google Cloud is mentioned as the impacted cloud provider in the provided text.
