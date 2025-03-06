@@ -1,0 +1,29 @@
+Based on the provided text, I can identify that the following Cloud Providers were impacted:
+
+* Google GCP
+* Amazon AWS is not mentioned in the text, so it will be excluded.
+
+Here are the details of the outage for each affected service:
+
+**Google GCP**
+
+* Service: Vertex AI AutoML Image
+* Region: us-central1 and europe-west4
+* Availability Zone: Not specified
+* Impact Date: 2024-11-28 01:40 UTC
+* Duration: 3 hours and 12 minutes
+* Root Cause: Impacted users may receive "429" Quota Exhausted errors when using automl and image processing
+* Downtime Period: 2024-11-28 04:20 - 2024-11-28 04:52 UTC
+* Resolved Date: 2024-11-28 04:48 UTC
+
+**Summary of Google GCP Outage**
+
+The outage affected Vertex AI AutoML Image in us-central1 and europe-west4 regions. The incident began on November 28, 2024, at 01:40 UTC and lasted for approximately 3 hours and 12 minutes. The root cause was related to quota exhaustion errors when using automl and image processing.
+
+Here is the information displayed as a table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google GCP | Vertex AI AutoML Image | us-central1 |  | 2024-11-28 01:40 UTC | 3 hours and 12 minutes | Impacted users may receive "429" Quota Exhausted errors when using automl and image processing | 2024-11-28 04:20 - 2024-11-28 04:52 UTC | 2024-11-28 04:48 UTC |
+
+Note that the availability zone is not specified in the original text, so it was not included in the table.

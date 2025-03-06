@@ -1,14 +1,17 @@
 Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_app_1, cloudrisk-customer_portal_app_customer_graph_1
 [33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
-[33mcustomer_graph_1       |[0m 2025-02-11 14:21:13.196+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
-[33mcustomer_graph_1       |[0m 2025-02-11 14:21:13.253+0000 INFO  Starting...
-[33mcustomer_graph_1       |[0m 2025-02-11 14:21:15.606+0000 INFO  This instance is ServerId{681dbf75} (681dbf75-5b97-4e8f-81f0-599158529959)
-[33mcustomer_graph_1       |[0m 2025-02-11 14:21:22.510+0000 INFO  ======== Neo4j 5.25.1 ========
-[36mcloud-risk-portal      |[0m 
-[36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
-[36mcloud-risk-portal      |[0m > node server.js
-[36mcloud-risk-portal      |[0m 
-[36mcloud-risk-portal      |[0m Server - new session - sessionSecret: 4885c3619bc767487b5c0074491db425d6b8c429ea442c41ffdc6719f0f51f91
+[33mcustomer_graph_1       |[0m 2025-03-04 13:54:31.753+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
+[33mcustomer_graph_1       |[0m 2025-03-04 13:54:31.800+0000 INFO  Starting...
+[33mcustomer_graph_1       |[0m 2025-03-04 13:54:34.187+0000 INFO  This instance is ServerId{681dbf75} (681dbf75-5b97-4e8f-81f0-599158529959)
+[33mcustomer_graph_1       |[0m 2025-03-04 13:54:36.561+0000 INFO  ======== Neo4j 5.25.1 ========
+[33mcustomer_graph_1       |[0m 2025-03-04 13:54:40.440+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+[33mcustomer_graph_1       |[0m 2025-03-04 13:54:40.594+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+[33mcustomer_graph_1       |[0m 2025-03-04 13:54:42.205+0000 INFO  HTTP enabled on 0.0.0.0:7474.
+[33mcustomer_graph_1       |[0m 2025-03-04 13:54:42.208+0000 INFO  Remote interface available at http://localhost:7474/
+[33mcustomer_graph_1       |[0m 2025-03-04 13:54:42.217+0000 INFO  id: AA95D8C0CCAD8B72DB689FABCD9182E89D39FBCAD56AFE70817E3A2B184B59B9
+[33mcustomer_graph_1       |[0m 2025-03-04 13:54:42.219+0000 INFO  name: system
+[33mcustomer_graph_1       |[0m 2025-03-04 13:54:42.220+0000 INFO  creationDate: 2024-11-19T23:06:54.589Z
+[33mcustomer_graph_1       |[0m 2025-03-04 13:54:42.221+0000 INFO  Started.
 [32mcustomer_portal_app_1  |[0m 
 [32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
 [32mcustomer_portal_app_1  |[0m 
@@ -17,3 +20,11 @@ Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_ap
 [32mcustomer_portal_app_1  |[0m 
 [32mcustomer_portal_app_1  |[0m   URL: http://0.0.0.0:8185
 [32mcustomer_portal_app_1  |[0m 
+[36mcloud-risk-portal      |[0m 
+[36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
+[36mcloud-risk-portal      |[0m > node server.js
+[36mcloud-risk-portal      |[0m 
+[36mcloud-risk-portal      |[0m Server - new session - sessionSecret: 4203cf32a0ac58f88006dd6c59d22505f15c2a6e1611b8c3d5074dded7469f5a
+[36mcloud-risk-portal      |[0m customer-portal - sessionID: dbbf75f684ccb4ab4fc6ec5d6579de13
+[36mcloud-risk-portal      |[0m simulation - sessionID: e34f718356efb45f32494476aea019ca
+[36mcloud-risk-portal      |[0m simulation - sessionID: 028eead05b9cef9efd0a03904c5f3495

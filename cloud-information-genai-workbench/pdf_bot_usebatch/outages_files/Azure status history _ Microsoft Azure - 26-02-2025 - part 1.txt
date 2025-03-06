@@ -1,0 +1,38 @@
+Here is the summary of the outage:
+
+**Cloud Providers Impacted:**
+Microsoft Azure
+
+**Services Impacted:**
+1. Azure Container Apps
+2. Azure SQL
+3. Azure SQL Managed Instance
+4. Azure Front Door
+5. Azure Resource Manager
+6. Azure Synapse Analytics
+7. Azure Databricks
+8. Azure Chaos Studio
+9. Azure App Services
+10. Azure Logic Apps
+11. Azure Media Services
+12. Microsoft Power BI
+
+**Outage Details:**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | Azure Container Apps | West US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure SQL | East US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure SQL Managed Instance | East US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Front Door | West US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Resource Manager | West US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Synapse Analytics | East US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Databricks | West US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Chaos Studio | East US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure App Services | West US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Logic Apps | East US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Azure Media Services | West US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+| Microsoft Azure | Microsoft Power BI | East US 2 | n/a | 2025-02-26 18:39:00 UTC | 17 hours 16 minutes | Key rotation issue in Managed Identity infrastructure | 2025-02-26 20:55:00 UTC | 2025-03-01 12:55:00 UTC |
+
+**Summary of Outage:**
+The outage occurred on February 26, 2025, starting at 18:39 UTC and lasted for 17 hours and 16 minutes. The root cause was a key rotation issue in the Managed Identity infrastructure. The services impacted were Azure Container Apps, Azure SQL, Azure SQL Managed Instance, Azure Front Door, Azure Resource Manager, Azure Synapse Analytics, Azure Databricks, Azure Chaos Studio, Azure App Services, Azure Logic Apps, Azure Media Services, and Microsoft Power BI. The outage was resolved on March 1, 2025, at 12:55 UTC.
