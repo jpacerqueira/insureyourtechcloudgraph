@@ -1,0 +1,50 @@
+Here is the summary of the outages per cloud provider:
+
+**Google Cloud**
+
+* Service: Agent Assist
+* Region: asia-southeast1, europe-west3, europe-west4, us-central1, us-east1, us-west1
+* Availability Zone: Not specified
+* Impact Date: 2024-06-12 12:06 UTC
+* Duration: 3 hours and 53 minutes
+* Root Cause: Elevated "INTERNAL" and "DEADLINE_EXCEEDED" errors and in some cases timeouts.
+* Downtime Period: 2024-06-12 12:06 - 15:59 UTC
+* Resolved Date: 2024-06-12 15:59 UTC
+
+**Google Cloud**
+
+* Service: Dialogflow CX
+* Region: asia-southeast1, europe-west3, europe-west4, us-central1, us-east1, us-west1
+* Availability Zone: Not specified
+* Impact Date: 2024-06-12 12:06 UTC
+* Duration: 3 hours and 53 minutes
+* Root Cause: Elevated "INTERNAL" and "DEADLINE_EXCEEDED" errors and in some cases timeouts.
+* Downtime Period: 2024-06-12 12:06 - 15:59 UTC
+* Resolved Date: 2024-06-12 15:59 UTC
+
+**Google Cloud**
+
+* Service: Vertex AI Online Prediction
+* Region: asia-southeast1, europe-west3, europe-west4, us-central1, us-east1, us-west1
+* Availability Zone: Not specified
+* Impact Date: 2024-06-12 12:06 UTC
+* Duration: 3 hours and 53 minutes
+* Root Cause: Elevated "INTERNAL" and "DEADLINE_EXCEEDED" errors and in some cases timeouts.
+* Downtime Period: 2024-06-12 12:06 - 15:59 UTC
+* Resolved Date: 2024-06-12 15:59 UTC
+
+**Overall Summary**
+
+* Cloud Providers impacted: Google Cloud
+* Services impacted: Agent Assist, Dialogflow CX, Vertex AI Online Prediction
+* Regions impacted: asia-southeast1, europe-west3, europe-west4, us-central1, us-east1, us-west1
+* Availability Zones not specified
+* Impact Dates: 2024-06-12 UTC
+* Duration: 3 hours and 53 minutes
+
+**Outage Case with Dates**
+
+* Incident began at 2024-06-12 12:06 UTC and ended at 2024-06-12 15:59 UTC
+* Previously affected location(s): asia-southeast1, europe-west3, europe-west4, us-central1, us-east1, us-west1
+* Root Cause: Elevated "INTERNAL" and "DEADLINE_EXCEEDED" errors and in some cases timeouts.
+* Remediation and Prevention: Google engineers were alerted to the issue via internal production monitoring on 10 June 2024 at 07:35 UTC.

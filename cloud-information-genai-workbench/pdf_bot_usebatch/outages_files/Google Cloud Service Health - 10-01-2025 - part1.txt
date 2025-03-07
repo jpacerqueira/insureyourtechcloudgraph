@@ -1,0 +1,64 @@
+Here is the summary of the outage:
+
+**Cloud Providers impacted:**
+
+* Google Cloud Platform (GCP)
+* Amazon Web Services (AWS) is not mentioned in the text, so it will be excluded.
+
+**Services impacted:**
+
+* Data Ingestion feeds
+* SecOps
+
+**Regions and Availability Zones affected:**
+
+* asia-northeast1 (Tokyo)
+* asia-south1 (Mumbai)
+* asia-southeast1 (Singapore)
+* australiasoutheast1 (Sydney)
+* europe-west12 (Turin)
+* europe-west2 (London)
+* europe-west3 (Frankfurt)
+* europe-west6 (Zurich)
+* europe-west9 (Paris)
+* me-central1 (Doha)
+* me-central2 (Dammam)
+* me-west1 (Tel Aviv)
+* northamerica-northeast2 (Toronto)
+* southamerica-east1 (São Paulo)
+
+**Outage details:**
+
+The outage started on January 9, 2025, at 16:20 US/Pacific and lasted for approximately 26 hours.
+
+**Root cause:**
+Customers may observe DNS errors and delay in ingestion of their data.
+
+**Downtime period:**
+No workaround was available during the outage.
+
+**Resolved date:**
+The issue was resolved on January 10, 2025, at 00:30 US/Pacific.
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud Platform | Data Ingestion feeds | asia-northeast1 | Tokyo | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | SecOps | asia-south1 | Mumbai | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | Data Ingestion feeds | asia-southeast1 | Singapore | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | SecOps | australiasoutheast1 | Sydney | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | Data Ingestion feeds | europe-west12 | Turin | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | SecOps | europe-west2 | London | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | Data Ingestion feeds | europe-west3 | Frankfurt | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | SecOps | europe-west6 | Zurich | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | Data Ingestion feeds | europe-west9 | Paris | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | SecOps | me-central1 | Doha | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | Data Ingestion feeds | me-central2 | Dammam | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | SecOps | me-west1 | Tel Aviv | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | Data Ingestion feeds | northamerica-northeast2 | Toronto | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+| Google Cloud Platform | SecOps | southamerica-east1 | São Paulo | 2025-01-09 16:20 UTC | 26 hours | DNS errors and delay in ingestion of data | No workaround available | 2025-01-10 00:30 UTC |
+
+**Summary:**
+
+The outage affected Google Cloud Platform services, including Data Ingestion feeds and SecOps, across multiple regions and availability zones. The root cause was DNS errors and delays in data ingestion. The outage lasted for approximately 26 hours, starting on January 9, 2025, at 16:20 US/Pacific, and was resolved on January 10, 2025, at 00:30 US/Pacific.

@@ -1,0 +1,65 @@
+Here is the summary of the Cloud Providers impacted, services, regions, availability zones, impacted dates and duration:
+
+The outage affected Google Cloud Platform (GCP) and Amazon Web Services (AWS).
+
+**Google Cloud Platform (GCP)**
+
+* Service: Cloud Firestore
+* Region: asia-east1, asia-northeast2, asia-northeast3, asia-south1, asia-southeast1, asia-southeast2, europe-west2, europe-west3, europe-west6, northamerica-northeast1, southamerica-east1, us-central2, us-west1
+* Availability Zone: 
+  - asia-east1: Taiwan
+  - asia-northeast2: Osaka
+  - asia-northeast3: Seoul
+  - asia-south1: Mumbai
+  - asia-southeast1: Singapore
+  - asia-southeast2: Jakarta
+  - europe-west2: London
+  - europe-west3: Frankfurt
+  - europe-west6: Zurich
+  - northamerica-northeast1: São Paulo
+  - southamerica-east1: Iowa
+  - us-central2: Northern Virginia
+  - us-west1: Salt Lake City
+* Impact Date: 2024-09-18 12:34 UTC
+* Duration: 2 hours, 29 minutes
+* Root Cause: Increased latency and error rates observed on Google App Engine, Cloud Firestore, and Google Cloud Functions gen 1.
+* Downtime Period: 5 minutes to 67 minutes
+* Resolved Date: 2024-09-18 15:30 UTC
+
+**Amazon Web Services (AWS)**
+
+* Service: 
+  - Cloud Run functions (1st gen): Sydney, australia-southeast1
+  - Google App Engine: 
+    - asia-east2: 
+      - asia-northeast2: Osaka
+      - asia-northeast3: Seoul
+      - asia-south1: Mumbai
+      - asia-southeast1: Singapore
+      - asia-southeast2: Jakarta
+    - europe-west2: London
+    - europe-west3: Frankfurt
+    - europe-west6: Zurich
+    - northamerica-northeast1: São Paulo
+    - southamerica-east1: Iowa
+    - us-central2: Northern Virginia
+    - us-west1: Salt Lake City
+  - Google Cloud Functions gen 1: 
+    - asia-east2: 
+      - asia-northeast2: Osaka
+      - asia-northeast3: Seoul
+      - asia-south1: Mumbai
+      - asia-southeast1: Singapore
+      - asia-southeast2: Jakarta
+    - europe-west2: London
+    - europe-west3: Frankfurt
+    - europe-west6: Zurich
+    - northamerica-northeast1: São Paulo
+    - southamerica-east1: Iowa
+    - us-central2: Northern Virginia
+    - us-west1: Salt Lake City
+* Impact Date: 2024-09-18 12:34 UTC
+* Duration: 2 hours, 29 minutes
+* Root Cause: Increased latency and error rates observed on Google App Engine, Cloud Firestore, and Google Cloud Functions gen 1.
+* Downtime Period: 5 minutes to 67 minutes
+* Resolved Date: 2024-09-18 15:30 UTC

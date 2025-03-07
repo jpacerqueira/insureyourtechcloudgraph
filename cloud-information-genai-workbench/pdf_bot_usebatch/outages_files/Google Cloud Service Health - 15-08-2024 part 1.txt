@@ -1,0 +1,49 @@
+Based on the provided text, here is the summary of the Cloud Providers impacted:
+
+* Google Cloud Platform (GCP)
+	+ Services impacted: Cloud CDN, Cloud Load Balancing, Hybrid Connectivity
+	+ Regions/Availability Zones impacted: europe-west2
+	+ Impact Date: 2024-08-12 06:20 UTC
+	+ Duration: 2 hours and 12 minutes
+	+ Root Cause: Subsequent first-layer GFE overload due to automation improvements in tasks that required manual intervention
+	+ Downtime Period: 40 minutes
+	+ Resolved Date: 2024-08-12 08:32 UTC
+
+Here is the breakdown of the outage per service impacted:
+
+Cloud CDN, europe-west2:
+Impact Date: 2024-08-12 06:20 UTC
+Duration: 2 hours and 12 minutes
+Root Cause: Subsequent first-layer GFE overload due to automation improvements in tasks that required manual intervention
+Downtime Period: 40 minutes
+Resolved Date: 2024-08-12 08:32 UTC
+
+Cloud Load Balancing, europe-west2:
+Impact Date: 2024-08-12 06:20 UTC
+Duration: 2 hours and 12 minutes
+Root Cause: Subsequent first-layer GFE overload due to automation improvements in tasks that required manual intervention
+Downtime Period: 40 minutes
+Resolved Date: 2024-08-12 08:32 UTC
+
+Hybrid Connectivity, europe-west2:
+Impact Date: 2024-08-12 06:20 UTC
+Duration: 2 hours and 12 minutes
+Root Cause: Subsequent first-layer GFE overload due to automation improvements in tasks that required manual intervention
+Downtime Period: 40 minutes
+Resolved Date: 2024-08-12 08:32 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud Platform | Cloud CDN | europe-west2 |  | 2024-08-12 06:20 UTC | 2 hours and 12 minutes | Subsequent first-layer GFE overload due to automation improvements in tasks that required manual intervention | 40 minutes | 2024-08-12 08:32 UTC |
+| Google Cloud Platform | Cloud Load Balancing | europe-west2 |  | 2024-08-12 06:20 UTC | 2 hours and 12 minutes | Subsequent first-layer GFE overload due to automation improvements in tasks that required manual intervention | 40 minutes | 2024-08-12 08:32 UTC |
+| Google Cloud Platform | Hybrid Connectivity | europe-west2 |  | 2024-08-12 06:20 UTC | 2 hours and 12 minutes | Subsequent first-layer GFE overload due to automation improvements in tasks that required manual intervention | 40 minutes | 2024-08-12 08:32 UTC |
+
+Overall summary:
+
+* Google Cloud Platform experienced a service outage affecting Cloud CDN, Cloud Load Balancing, and Hybrid Connectivity.
+* The outage occurred on August 12, 2024, at 06:20 UTC and lasted for 2 hours and 12 minutes.
+* The root cause of the outage was subsequent first-layer GFE overload due to automation improvements in tasks that required manual intervention.
+* The downtime period was 40 minutes.
+* The outage was resolved on August 12, 2024, at 08:32 UTC.

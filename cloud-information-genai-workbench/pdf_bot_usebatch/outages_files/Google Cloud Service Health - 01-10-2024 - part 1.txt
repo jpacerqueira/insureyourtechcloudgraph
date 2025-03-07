@@ -1,0 +1,51 @@
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+**Google Cloud**
+
+* Service: Vertex AI Search
+* Region/Availability Zone: Global
+* Impact Date: 2024-10-01 09:28 UTC
+* Duration: 35 minutes
+* Root Cause: Issue introduced by a new version release of an internal service which the Search API relies on, causing failures on our Search API.
+* Downtime Period: 2024-10-01 09:28 - 2024-10-01 10:03 UTC
+* Resolved Date: 2024-10-01 10:03 UTC
+
+**Google Cloud**
+
+* Service: Recommendation AI
+* Region/Availability Zone: Global
+* Impact Date: 2024-10-01 09:29 UTC
+* Duration: Not specified
+* Root Cause: Issue with Vertex AI Search, Recommendation AI beginning on Tuesday, 2024-10-01 09:29 US/Pacific.
+* Downtime Period: 2024-10-01 09:29 - 2024-10-01 10:05 UTC
+* Resolved Date: 2024-10-01 10:05 UTC
+
+**Google Cloud**
+
+* Service: Vertex AI Search for Retail
+* Region/Availability Zone: Global
+* Impact Date: 2024-10-01 14:40 PDT ( converted to UTC: 2024-10-01 20:40)
+* Duration: Not specified
+* Root Cause: Preliminary analysis indicates the root cause is an issue introduced by a new version release of an internal service which the Search API relies on, causing failures on our Search API.
+* Downtime Period: 2024-10-01 14:40 - 2024-10-01 15:14 UTC
+* Resolved Date: 2024-10-01 15:14 UTC
+
+**Summary**
+
+The impacted cloud providers are Google Cloud.
+
+The services impacted were Vertex AI Search, Recommendation AI, and Vertex AI Search for Retail. The regions/availability zones affected were Global.
+
+The impact dates were 2024-10-01 09:28 UTC (Vertex AI Search), 2024-10-01 09:29 UTC (Recommendation AI), and 2024-10-01 14:40 PDT (converted to UTC: 2024-10-01 20:40) (Vertex AI Search for Retail).
+
+The durations were 35 minutes (Vertex AI Search), not specified (Recommendation AI), and not specified (Vertex AI Search for Retail).
+
+**Output Table**
+
+| Cloud Provider | Service | Region/Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | Vertex AI Search | global | 2024-10-01 09:28 UTC | 35 minutes | Issue introduced by a new version release of an internal service which the Search API relies on, causing failures on our Search API. | 2024-10-01 09:28 - 2024-10-01 10:03 UTC | 2024-10-01 10:03 UTC |
+| Google Cloud | Recommendation AI | global | 2024-10-01 09:29 UTC | Not specified | Issue with Vertex AI Search, Recommendation AI beginning on Tuesday, 2024-10-01 09:29 US/Pacific. | 2024-10-01 09:29 - 2024-10-01 10:05 UTC | 2024-10-01 10:05 UTC |
+| Google Cloud | Vertex AI Search for Retail | global | 2024-10-01 20:40 UTC (converted from PDT) | Not specified | Preliminary analysis indicates the root cause is an issue introduced by a new version release of an internal service which the Search API relies on, causing failures on our Search API. | 2024-10-01 14:40 - 2024-10-01 15:14 UTC | 2024-10-01 15:14 UTC |
+
+Note: The impact dates and durations are based on the provided text and may not be comprehensive or up-to-date.

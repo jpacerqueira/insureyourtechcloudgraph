@@ -1,0 +1,44 @@
+Here is the summary of the Cloud Providers impacted:
+
+* Google Cloud Platform (GCP)
+	+ Services impacted: Google Cloud Pub/Sub, Google BigQuery Data Transfer Service, Cloud Logging
+	+ Regions impacted: me-central1, us-central1, us-east1, us-east5, us-south1
+	+ Availability zones impacted: Not specified
+	+ Impact dates: 2025-01-08 06:54 UTC to 2025-01-09 23:09 UTC (1 hour and 13 minutes)
+	+ Root cause: Configuration change rolled back to restore service
+	+ Downtime period: 1 hour and 13 minutes
+
+Here is the breakdown of the outages per cloud provider:
+
+**Google Cloud Platform**
+
+* Google Cloud Pub/Sub:
+	+ Region impacted: me-central1, us-central1, us-east1, us-east5, us-south1
+	+ Availability zones impacted: Not specified
+	+ Impact dates: 2025-01-08 06:54 UTC to 2025-01-09 23:09 UTC (1 hour and 13 minutes)
+	+ Duration: 1 day, 13 hours, 15 minutes
+	+ Root cause: Configuration change rolled back to restore service
+	+ Downtime period: 1 hour and 13 minutes
+* Google BigQuery Data Transfer Service:
+	+ Region impacted: Not specified
+	+ Availability zones impacted: Not specified
+	+ Impact dates: 2025-01-08 06:54 UTC to 2025-01-09 23:09 UTC (1 hour and 13 minutes)
+	+ Duration: 1 day, 13 hours, 15 minutes
+	+ Root cause: Configuration change rolled back to restore service
+	+ Downtime period: 1 hour and 13 minutes
+* Cloud Logging:
+	+ Region impacted: Not specified
+	+ Availability zones impacted: Not specified
+	+ Impact dates: 2025-01-08 06:54 UTC to 2025-01-09 23:09 UTC (1 hour and 13 minutes)
+	+ Duration: 1 day, 13 hours, 15 minutes
+	+ Root cause: Configuration change rolled back to restore service
+	+ Downtime period: 26 minutes
+
+**Summary**
+
+* Google Cloud Platform experienced a service outage that impacted multiple regions and services.
+* The outage started on January 8, 2025, at 06:54 UTC and lasted for 1 hour and 13 minutes.
+* The root cause of the outage was a configuration change rolled back to restore the service.
+* The downtime period varied across services, with Cloud Logging experiencing a delay of 26 minutes.
+
+Note: I removed references to cloud providers not mentioned in the original text, and normalized variables like regions and availability zones to standard lowercase official names. I also used UTC dates throughout the response.

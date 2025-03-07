@@ -1,0 +1,42 @@
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+**Google Cloud Service**
+
+* Service: Vertex AI Online Prediction
+* Region: us-east5
+* Availability Zone: Not specified
+* Impact Date: 2024-08-07 23:55 UTC
+* Duration: 11 hours and 43 minutes
+* Root Cause: Elevated 500 errors from calls to the model
+* Downtime Period: From 2024-08-07 23:55 UTC to 2024-08-08 17:18 UTC
+* Resolved Date: 2024-08-08 17:16 UTC
+
+**Google Cloud Service**
+
+* Service: Tensor Processing Unit (TPU) v5e workloads
+* Region: us-east5
+* Availability Zone: Not specified
+* Impact Date: 2024-08-07 23:55 UTC
+* Duration: 11 hours and 43 minutes
+* Root Cause: Elevated 500 errors from calls to the model
+* Downtime Period: From 2024-08-07 23:55 UTC to 2024-08-08 17:18 UTC
+* Resolved Date: 2024-08-08 17:16 UTC
+
+**Google Cloud Service**
+
+* Service: Claude Sonnet 3.5 and Opus models
+* Region: us-east5
+* Availability Zone: Not specified
+* Impact Date: 2024-08-07 23:55 UTC
+* Duration: 11 hours and 43 minutes
+* Root Cause: Elevated 500 errors from calls to the model
+* Downtime Period: From 2024-08-07 23:55 UTC to 2024-08-08 17:18 UTC
+* Resolved Date: 2024-08-08 17:16 UTC
+
+**Summary**
+
+The Google Cloud Service was impacted by an outage that started on August 7, 2024, at 23:55 UTC and lasted for 11 hours and 43 minutes. The outage affected the Vertex AI Online Prediction service in the us-east5 region.
+
+**Overall Summary**
+
+Google Cloud Service was impacted by an outage that started on August 7, 2024, at 23:55 UTC and lasted for 11 hours and 43 minutes. The outage affected the Vertex AI Online Prediction service in the us-east5 region.
