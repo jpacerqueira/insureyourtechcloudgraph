@@ -1,0 +1,224 @@
+Based on the provided text, I have extracted the following information:
+
+**Summary of Cloud Providers Impacted**
+
+* Amazon AWS
+* AWS AppSync
+* AWS Application Migration Service
+* AWS CodeCommit
+* AWS CodePipeline
+* AWS Conﬁg
+* AWS DataSync
+* AWS Elastic Beanstalk
+* AWS Elastic Disaster Recovery
+* AWS Elemental
+* AWS Firewall Manager
+* AWS Global Accelerator
+* AWS Glue
+* AWS IoT Device Management
+* AWS Lake Formation
+* AWS NAT Gateway
+* AWS Resource Explorer
+* AWS Security Hub
+* AWS Security Incident Response
+* AWS Security Token Service
+* AWS Site-to-Site VPN
+* AWS Step Functions
+* AWS Storage Gateway
+* AWS Transfer Family
+* AWS Transit Gateway
+* AWS WAF
+
+**Outages per Cloud Provider**
+
+**Amazon AWS**
+Service: AWS AppConﬁg
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS AppSync
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Application Migration Service
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS CodeCommit
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 16:00:00 UTC
+Duration: 1 hour and 0 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 16:50 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS CodePipeline
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 16:00:00 UTC
+Duration: 1 hour and 0 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 16:50 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Conﬁg
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS DataSync
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 16:00:00 UTC
+Duration: 1 hour and 0 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 16:50 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Elastic Beanstalk
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Elastic Disaster Recovery
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Elemental
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Firewall Manager
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Global Accelerator
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Glue
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS IoT Device Management
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Lake Formation
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 16:00:00 UTC
+Duration: 1 hour and 0 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 16:50 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS NAT Gateway
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Step Functions
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Storage Gateway
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Transfer Family
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 16:00:00 UTC
+Duration: 1 hour and 0 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 16:50 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS Transit Gateway
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+Service: AWS WAF
+Region: eu-north-1
+Availability Zone: eun1-az3
+Impact Date: 2025-02-13 15:35:11 UTC
+Duration: 2 hours and 35 minutes
+Root Cause: Networking issue
+Downtime Period: 2025-02-13 15:10 - 17:45 UTC
+Resolved Date: 2025-02-13 17:45 UTC
+
+**Note:** The above information is based on the provided data and may not be comprehensive or up-to-date.

@@ -1,0 +1,72 @@
+Based on the provided text, I have identified the following public cloud service outages:
+
+**Microsoft Azure**
+
+* Service: Microsoft 365 and/or Azure services (including Virtual Machines, Storage, App Service, SQL Database, Azure Kubernetes Services, and Azure Portal access)
+* Region: Toronto edge locations
+* Availability Zone: Paired network devices for redundancy
+* Impact Date: 16:22 UTC on March 3, 2025
+* Duration:
+	+ Outage started: 16:22 UTC on March 3, 2025
+	+ Downtime Period: 15 hours and 55 minutes
+	+ Resolved Date: 18:37 UTC on March 3, 2025
+* Root Cause: Memory increase on the line cards of the device due to an increase in connections
+* Impact on Services:
+	+ Microsoft 365
+	+ Azure services (including Virtual Machines, Storage, App Service, SQL Database, and Azure Kubernetes Services)
+	+ Azure Portal access
+
+**Microsoft Azure**
+
+* Service: Microsoft 365 and/or Azure services (including Virtual Machines, Storage, App Service, SQL Database, Azure Kubernetes Services, and Azure Portal access)
+* Region: Toronto edge locations
+* Availability Zone: Paired network devices for redundancy
+* Impact Date: 16:22 UTC on March 3, 2025
+* Duration:
+	+ Outage started: 16:22 UTC on March 3, 2025
+	+ Downtime Period: 15 hours and 55 minutes
+	+ Resolved Date: 18:37 UTC on March 3, 2025
+* Root Cause: Memory increase on the line cards of the device due to an increase in connections
+* Impact on Services:
+	+ Microsoft 365
+	+ Azure services (including Virtual Machines, Storage, App Service, SQL Database, and Azure Kubernetes Services)
+	+ Azure Portal access
+
+**Microsoft Azure**
+
+* Service: Microsoft 365 and/or Azure services (including Virtual Machines, Storage, App Service, SQL Database, Azure Kubernetes Services, and Azure Portal access)
+* Region: Toronto edge locations
+* Availability Zone: Paired network devices for redundancy
+* Impact Date: 16:22 UTC on March 3, 2025
+* Duration:
+	+ Outage started: 16:22 UTC on March 3, 2025
+	+ Downtime Period: 15 hours and 55 minutes
+	+ Resolved Date: 18:37 UTC on March 3, 2025
+* Root Cause: Memory increase on the line cards of the device due to an increase in connections
+* Impact on Services:
+	+ Microsoft 365
+	+ Azure services (including Virtual Machines, Storage, App Service, SQL Database, and Azure Kubernetes Services)
+	+ Azure Portal access
+
+**Summary**
+
+Cloud Providers impacted: Microsoft Azure
+Services impacted: Microsoft 365 and/or Azure services (including Virtual Machines, Storage, App Service, SQL Database, Azure Kubernetes Services, and Azure Portal access)
+Regions impacted: Toronto edge locations
+Availability Zones impacted: Paired network devices for redundancy
+Impact Dates: March 3, 2025
+Duration: 15 hours and 55 minutes
+
+**Outage Summary**
+
+The outage started at 16:22 UTC on March 3, 2025, and lasted for 15 hours and 55 minutes. The root cause of the outage was a memory increase on the line cards of the device due to an increase in connections. The services impacted were Microsoft 365 and/or Azure services (including Virtual Machines, Storage, App Service, SQL Database, Azure Kubernetes Services, and Azure Portal access). The outage was resolved at 18:37 UTC on March 3, 2025.
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | Microsoft 365 and/or Azure services (including Virtual Machines, Storage, App Service, SQL Database, Azure Kubernetes Services, and Azure Portal access) | Toronto edge locations | Paired network devices for redundancy | 2025-03-03T16:22:00Z | 15 hours 55 minutes | Memory increase on the line cards of the device due to an increase in connections | 2025-03-03T18:37:00Z |
+| Microsoft Azure | Microsoft 365 and/or Azure services (including Virtual Machines, Storage, App Service, SQL Database, Azure Kubernetes Services, and Azure Portal access) | Toronto edge locations | Paired network devices for redundancy | 2025-03-03T16:22:00Z | 15 hours 55 minutes | Memory increase on the line cards of the device due to an increase in connections | 2025-03-03T18:37:00Z |
+| Microsoft Azure | Microsoft 365 and/or Azure services (including Virtual Machines, Storage, App Service, SQL Database, Azure Kubernetes Services, and Azure Portal access) | Toronto edge locations | Paired network devices for redundancy | 2025-03-03T16:22:00Z | 15 hours 55 minutes | Memory increase on the line cards of the device due to an increase in connections | 2025-03-03T18:37:00Z |
+
+Note: The output table has been formatted with a fixed format, using variables for each column.

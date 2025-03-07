@@ -1,0 +1,134 @@
+The outage affected Google Cloud Platform (GCP) services.
+
+Here is the breakdown of the outage per service impacted:
+
+**Cloud Run**
+- Region: Global
+- Availability Zone: Multiple zones
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Google App Engine**
+- Region: Global
+- Availability Zone: Multiple zones
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Google Cloud Composer**
+- Region: Global
+- Availability Zone: Multiple zones
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Google Cloud Console**
+- Region: Global
+- Availability Zone: Multiple zones
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Google Cloud Functions**
+- Region: Global
+- Availability Zone: Multiple zones
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Google Cloud Marketplace**
+- Region: Global
+- Availability Zone: Multiple zones
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Cloud Deployment Manager**
+- Region: Global
+- Availability Zone: Multiple zones
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Cloud Run**
+- Region: africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-southwest1, europe-west1, europe-west10, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Google App Engine**
+- Region: africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-southwest1, europe-west1, europe-west10, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Google Cloud Composer**
+- Region: africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-southwest1, europe-west1, europe-west10, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Google Cloud Console**
+- Region: africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-southwest1, europe-west1, europe-west10, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Google Cloud Functions**
+- Region: africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-southwest1, europe-west1, europe-west10, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Google Cloud Marketplace**
+- Region: africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-southwest1, europe-west1, europe-west10, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+**Cloud Deployment Manager**
+- Region: africa-south1, asia-east1, asia-east2, asia-northeast1, asia-northeast2, asia-south1, asia-southeast1, asia-southeast2, australia-southeast1, australia-southeast2, europe-central2, europe-north1, europe-southwest1, europe-west1, europe-west10, europe-west12, europe-west2, europe-west3, europe-west4, europe-west6, europe-west8, europe-west9
+- Impact Date: 2024-09-04 10:54 UTC
+- Duration: 4 hours, 9 minutes
+- Root Cause: Regressive change in rollout strategy
+- Downtime Period: 2024-09-04 10:54 - 2024-09-04 13:24 UTC
+- Resolved Date: 2024-09-04 13:24 UTC
+
+Here is the summary of the incident:
+
+* Incident Type: Service disruption
+* Affected Services: Cloud Run, Google App Engine, Google Cloud Composer, Google Cloud Console, Google Cloud Functions, Google Cloud Marketplace, and Cloud Deployment Manager
+* Region: Global
+* Impact Date: 2024-09-04 10:54 UTC
+* Duration: 4 hours, 9 minutes
+* Root Cause: Regressive change in rollout strategy
+* Resolved Date: 2024-09-04 13:24 UTC
+
+Note that the regions and availability zones listed above are not exhaustive, as the services were impacted globally.

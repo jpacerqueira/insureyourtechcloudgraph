@@ -1,0 +1,55 @@
+Based on the provided text, I have extracted the relevant information about the outages in Google Cloud Service.
+
+**Summary of Outage**
+
+The outage affected Apigee customers who experienced unable to login to Admin UI portal. The incident began at 2025-03-04 01:25 US/Pacific and was resolved on 2025-03-04 13:40 US/Pacific.
+
+**Outage Details per Cloud Provider**
+
+### Google Cloud Service
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud Service | Apigee | asia-east1 | taipei | 2025-03-04 01:25 | 12 hours 15 minutes | Certificate expiration | 2025-03-04 13:40 | 2025-03-04 13:30 |
+
+### Regions and Availability Zones Affected
+
+The outage affected the following regions and availability zones:
+
+* asia-east1 (Taipei)
+* asia-east2 (Hong Kong)
+* asia-northeast1 (Tokyo)
+* asia-northeast2 (Osaka)
+* asia-south1 (Mumbai)
+* asia-south2 (Delhi)
+* asia-southeast1 (Singapore)
+* asia-southeast2 (Jakarta)
+* australia-southeast1 (Sydney)
+* australia-southeast2 (Melbourne)
+* europe-central2 (Warsaw)
+* europe-north1 (Finland)
+* europe-southwest1 (Madrid)
+* europe-west1 (Belgium)
+* europe-west12 (Turin)
+* europe-west2 (London)
+* europe-west3 (Frankfurt)
+* europe-west4 (Netherlands)
+* europe-west6 (Zurich)
+* europe-west8 (Milan)
+* europe-west9 (Paris)
+* me-central1 (Doha)
+* me-central2 (Dammam)
+* me-west1 (Tel Aviv)
+* northamerica-northeast1 (Montréal)
+* northamerica-northeast2 (Toronto)
+* northamerica-south1 (Mexico)
+* southamerica-east1 (São Paulo)
+* southamerica-west1 (Santiago)
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+Note: The regions and availability zones are normalized to their official names.
+
+**Overall Summary**
+
+The outage affected Apigee customers in multiple regions across Asia, Europe, and North America. The root cause was certificate expiration, which led to a 12-hour downtime period. The outage started on March 4, 2025, at 01:25 US/Pacific and was resolved on the same day at 13:40 US/Pacific.
