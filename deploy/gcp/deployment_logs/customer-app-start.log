@@ -1,38 +1,25 @@
-Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_app_1, cloudrisk-customer_portal_app_customer_graph_1
+Attaching to cloudrisk-customer_portal_app_customer_portal_app_1, cloud-risk-portal, cloudrisk-customer_portal_app_customer_graph_1
 [36mcloud-risk-portal      |[0m 
 [36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
 [36mcloud-risk-portal      |[0m > node server.js
 [36mcloud-risk-portal      |[0m 
-[36mcloud-risk-portal      |[0m Server - new session - sessionSecret: 51664dc7de99a0c880bc57e438f944db5e5ab628123c4ad6882560f0e3e0f360
-[36mcloud-risk-portal      |[0m simulation - sessionID: 52e0bf6706a7d0aa91c6a8538b0f45a6
-[36mcloud-risk-portal      |[0m simulation - sessionID: 9a6011f1e174a6ce2c70e158a2891d98
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: ce46894f3099c18a1d674b915053eac4
-[36mcloud-risk-portal      |[0m neo4j save - sessionId: bc5973b7b163486e39cd91ce88208694
-[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
-[36mcloud-risk-portal      |[0m Invalid service Power BI Embedded for vendor Microsoft Azure
-[36mcloud-risk-portal      |[0m Invalid service Power BI Embedded for vendor Microsoft Azure
-[36mcloud-risk-portal      |[0m Neo4j query executed successfully
-[36mcloud-risk-portal      |[0m save submission - sessionId: ce46894f3099c18a1d674b915053eac4
+[36mcloud-risk-portal      |[0m Server - new session - sessionSecret: b09ce76c9d787060592f35431c168e43ee74d169ac761e528371d5b12e7fdab3
+[36mcloud-risk-portal      |[0m simulation - sessionID: cdd22c3f1e3a1db3e464762c6edcc7cc
+[36mcloud-risk-portal      |[0m save submission - sessionId: 3b57e92294ab604dfcce2cec27b514fc
 [36mcloud-risk-portal      |[0m Session_id not found in the database - creating new submission
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: fb003a625d60cd9889f9febd38dcb693
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: dae02a9792a4409b76aa6f4be3aad322
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: 8e238f3a9ab7bafe209f57a82569b31e
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: b44c299af899d3c831a157755080ac24
-[36mcloud-risk-portal      |[0m simulation - sessionID: 0fe2782bec190cf87c5a4b4b66b2ffa5
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: 3b57e92294ab604dfcce2cec27b514fc
 [33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
-[33mcustomer_graph_1       |[0m 2025-03-14 19:17:47.528+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
-[33mcustomer_graph_1       |[0m 2025-03-14 19:17:47.594+0000 INFO  Starting...
-[33mcustomer_graph_1       |[0m 2025-03-14 19:17:51.019+0000 INFO  This instance is ServerId{681dbf75} (681dbf75-5b97-4e8f-81f0-599158529959)
-[33mcustomer_graph_1       |[0m 2025-03-14 19:17:53.782+0000 INFO  ======== Neo4j 5.25.1 ========
-[33mcustomer_graph_1       |[0m 2025-03-14 19:17:57.785+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
-[33mcustomer_graph_1       |[0m 2025-03-14 19:17:57.908+0000 INFO  Bolt enabled on 0.0.0.0:7687.
-[33mcustomer_graph_1       |[0m 2025-03-14 19:17:59.568+0000 INFO  HTTP enabled on 0.0.0.0:7474.
-[33mcustomer_graph_1       |[0m 2025-03-14 19:17:59.570+0000 INFO  Remote interface available at http://localhost:7474/
-[33mcustomer_graph_1       |[0m 2025-03-14 19:17:59.577+0000 INFO  id: AA95D8C0CCAD8B72DB689FABCD9182E89D39FBCAD56AFE70817E3A2B184B59B9
-[33mcustomer_graph_1       |[0m 2025-03-14 19:17:59.578+0000 INFO  name: system
-[33mcustomer_graph_1       |[0m 2025-03-14 19:17:59.578+0000 INFO  creationDate: 2024-11-19T23:06:54.589Z
-[33mcustomer_graph_1       |[0m 2025-03-14 19:17:59.579+0000 INFO  Started.
+[33mcustomer_graph_1       |[0m 2025-03-14 21:55:38.890+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
+[33mcustomer_graph_1       |[0m 2025-03-14 21:55:39.012+0000 INFO  Starting...
+[33mcustomer_graph_1       |[0m 2025-03-14 21:55:46.675+0000 INFO  This instance is ServerId{681dbf75} (681dbf75-5b97-4e8f-81f0-599158529959)
+[33mcustomer_graph_1       |[0m 2025-03-14 21:55:51.313+0000 INFO  ======== Neo4j 5.25.1 ========
+[33mcustomer_graph_1       |[0m 2025-03-14 21:55:54.833+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+[33mcustomer_graph_1       |[0m 2025-03-14 21:55:54.950+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+[33mcustomer_graph_1       |[0m 2025-03-14 21:55:56.246+0000 INFO  HTTP enabled on 0.0.0.0:7474.
+[33mcustomer_graph_1       |[0m 2025-03-14 21:55:56.248+0000 INFO  Remote interface available at http://localhost:7474/
+[33mcustomer_graph_1       |[0m 2025-03-14 21:55:56.253+0000 INFO  id: AA95D8C0CCAD8B72DB689FABCD9182E89D39FBCAD56AFE70817E3A2B184B59B9
+[33mcustomer_graph_1       |[0m 2025-03-14 21:55:56.254+0000 INFO  name: system
+[33mcustomer_graph_1       |[0m 2025-03-14 21:55:56.255+0000 INFO  creationDate: 2024-11-19T23:06:54.589Z
+[33mcustomer_graph_1       |[0m 2025-03-14 21:55:56.255+0000 INFO  Started.
 [32mcustomer_portal_app_1  |[0m 
 [32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
 [32mcustomer_portal_app_1  |[0m 
