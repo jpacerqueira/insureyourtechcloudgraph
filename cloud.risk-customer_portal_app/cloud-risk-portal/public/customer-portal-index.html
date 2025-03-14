@@ -227,7 +227,7 @@
 
         canvas {
             max-width: 95%;
-            max-height: 750px;
+            max-height: 650px;
             position: center;
             height: auto;
         }
@@ -518,7 +518,7 @@
 
     // Update variable tracking
     let trioCount = 2 ; // start with 2 trios // DOMContentLoaded loads 2 trios of here
-    const maxTrios = 50; // maximum number of Technology evaluation trios
+    const maxTrios = 20; // maximum number of Technology evaluation trios
 
     // Function to create dropdown options for a given array of options
     function createDropdownOptions(options) {
@@ -745,6 +745,10 @@
 
     // Add these global declarations
     const customerMetrics = {
+        vendor: [],
+        service: [],
+        region: [],
+        monthly_cost: [],
         sla_usage: [],
         sla_deviation: [],
         traffic_coef: [],
@@ -916,11 +920,15 @@
             const vendor = document.getElementById(`variable1_${i}`).value;
             const service = document.getElementById(`variable2_${i}`).value;
             const region = document.getElementById(`variable3_${i}`).value;
+            const monthlyCost = parseFloat(document.getElementById(`monthlyCost_${i}`).value || 1000);
 
             if (vendor && service && region) {
                 try {
                     const riskData = await fetchCloudRiskData(service, region);
-
+                    customerMetrics.vendor.push(vendor);
+                    customerMetrics.service.push(service);
+                    customerMetrics.region.push(region);
+                    customerMetrics.monthly_cost.push(monthlyCost);
                     customerMetrics.sla_usage.push(Number(riskData?.service_sla_usage_percentage) || 0);
                     customerMetrics.sla_deviation.push(Number(riskData?.sla_deviation_connected_risk_0_999) || 0);
                     customerMetrics.traffic_coef.push(Number(riskData?.service_traffic_coef_by_percent_down) || 0);
@@ -1067,6 +1075,7 @@
 
     // Helper functions for updating displays
     function updateCustomerMetrics(metrics) {
+        console.log('Customer Metrics - ', metrics);
         document.getElementById("customer-sla-usage").textContent = `${calculateMedian(metrics.sla_usage).toFixed(2)}%`;
         document.getElementById("customer-sla-deviation").textContent = calculateMedian(metrics.sla_deviation).toFixed(2);
         document.getElementById("customer-traffic-coef").textContent = `${calculateMedian(metrics.traffic_coef).toFixed(2)}%`;
@@ -1123,6 +1132,16 @@
             'rgba(83, 102, 255, 0.7)',   // Blue-violet
             'rgba(255, 99, 132, 0.7)',   // Pink
             'rgba(159, 159, 64, 0.7)',   // Olive
+            'rgba(116, 185, 255, 0.7)',   // Light Blue
+            'rgba(255, 158, 64, 0.7)',   // Orange
+            'rgba(255, 98, 132, 0.7)',   // Red
+            'rgba(75, 191, 192, 0.7)',   // Teal
+            'rgba(153, 101, 255, 0.7)',  // Purple
+            'rgba(255, 204, 86, 0.7)',   // Yellow
+            'rgba(199, 198, 199, 0.7)',  // Gray
+            'rgba(83, 101, 255, 0.7)',   // Blue-violet
+            'rgba(255, 98, 132, 0.7)',   // Pink
+            'rgba(159, 158, 64, 0.7)',   // Olive
         ];
 
         // Create downtime comparison chart
@@ -1203,6 +1222,116 @@
             }
         });
 
+        // After the existing cloud providers comparison charts
+
+        // Add comparative charts for services
+        const servicesChartsDiv = document.createElement('div');
+        servicesChartsDiv.className = 'comparative-charts';
+        servicesChartsDiv.style.marginTop = '30px';
+
+        // Create canvas elements for services charts
+        const servicesMetricsCanvas = document.createElement('canvas');
+        servicesMetricsCanvas.id = 'servicesMetricsChart';
+        const servicesDowntimeCanvas = document.createElement('canvas');
+        servicesDowntimeCanvas.id = 'servicesDowntimeChart';
+
+        servicesChartsDiv.appendChild(servicesMetricsCanvas);
+        servicesChartsDiv.appendChild(servicesDowntimeCanvas);
+        
+        // Insert charts before the first child of results container
+        resultsContainer.insertBefore(servicesChartsDiv, resultsContainer.firstChild);
+
+        // Create and add heading for services comparison
+        const servicesComparisonHeading = document.createElement('h2');
+        servicesComparisonHeading.textContent = 'Individual Services Comparison';
+        servicesComparisonHeading.style.color = '#74b9ff';
+        servicesComparisonHeading.style.marginBottom = '20px';
+        resultsContainer.insertBefore(servicesComparisonHeading, resultsContainer.firstChild);
+
+        // Get unique services from customerMetrics
+        const services = customerMetrics.service;
+
+        // Create downtime comparison chart for services
+        new Chart(servicesDowntimeCanvas, {
+            type: 'bar',
+            data: {
+                labels: ['Usage Coeficient Cloud.Risk (0-999)', 'Expected Annual Service max. downtime (minutes) by SLA Tier 1', 'Monthly avg. of Annual Downtime (minutes)', 'Daily Traffic 24h Uptime %'],
+                datasets: services.map((service, index) => ({
+                    label: service,
+                    data: [
+                        customerMetrics.usage_connected_risk[index],
+                        customerMetrics.expected_annual_service_minutes_down_by_sla_tier1[index],
+                        customerMetrics.annual_downtime_minutes[index] / 12,
+                        100 - customerMetrics.traffic_coef[index]
+                    ],
+                    backgroundColor: colors[index % colors.length],
+                    borderColor: colors[index % colors.length].replace('0.7', '1'),
+                    borderWidth: 1
+                }))
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                height: 400,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Usage Coeficient Cloud.Risk Rating 0-999'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Services Annual Downtime Comparison',
+                        font: { size: 16 }
+                    }
+                }
+            }
+        });
+
+        // Create metrics comparison chart for services
+        new Chart(servicesMetricsCanvas, {
+            type: 'bar',
+            data: {
+                labels: ['SLA Deviation Cloud.Risk (0-999)', 'SLA Tier 1 %', 'Monthly avg. of SLA Usage %', 'Daily Traffic 24h Uptime %'],
+                datasets: services.map((service, index) => ({
+                    label: service,
+                    data: [
+                        customerMetrics.sla_deviation[index],
+                        customerMetrics.service_sla_tier1[index],
+                        customerMetrics.sla_usage[index] / 12,
+                        100 - customerMetrics.traffic_coef[index]
+                    ],
+                    backgroundColor: colors[index % colors.length],
+                    borderColor: colors[index % colors.length].replace('0.7', '1'),
+                    borderWidth: 1
+                }))
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                height: 400,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'SLA Deviation Cloud.Risk Rating 0-999'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Services Metrics Comparison',
+                        font: { size: 16 }
+                    }
+                }
+            }
+        });
     }
 
     function updateVendorMetrics(vendorMetrics) {

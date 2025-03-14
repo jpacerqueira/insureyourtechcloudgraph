@@ -114118,6 +114118,44 @@ The durations were 35 minutes (Vertex AI Search), not specified (Recommendation 
 
 Note: The impact dates and durations are based on the provided text and may not be comprehensive or up-to-date.  
 --
+Outage Filename: ./outages_files/Google Cloud Service Health - 02-08-2024 - part1.txt
+--
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+**Google Cloud Service**
+
+* Service: AutoML Translation
+* Region: europe-west4, us-central1
+* Availability Zone:
+	+ europe-west4: Not specified
+	+ us-central1: Not specified
+* Impact Date: 2024-08-02 09:30 UTC
+* Duration: 8 hours and 6 minutes
+* Root Cause: AutoML translations may experience high latency and resource exhausted failures.
+* Downtime Period: 2024-08-02 09:30 UTC to 2024-08-02 17:36 UTC
+* Resolved Date: 2024-08-02 17:36 UTC
+
+**Summary for Google Cloud Service**
+
+Google Cloud Service experienced an outage with AutoML Translation, affecting regions europe-west4 and us-central1. The incident started on August 2, 2024, at 09:30 UTC and lasted for approximately 8 hours and 6 minutes.
+
+**Cloud Provider Summary**
+
+Only one cloud provider was impacted:
+
+* Google Cloud
+
+No other public cloud services were mentioned in the text.
+
+Here is the output table with the required information:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud | AutoML Translation | europe-west4 |  | 2024-08-02 09:30 UTC | 8 hours and 6 minutes | AutoML translations may experience high latency and resource exhausted failures. | 2024-08-02 09:30 UTC to 2024-08-02 17:36 UTC | 2024-08-02 17:36 UTC |
+| Google Cloud | AutoML Translation | us-central1 |  | 2024-08-02 09:30 UTC | 8 hours and 6 minutes | AutoML translations may experience high latency and resource exhausted failures. | 2024-08-02 09:30 UTC to 2024-08-02 17:36 UTC | 2024-08-02 17:36 UTC |
+
+Note that the availability zone information is not available for both regions, so it is left blank in the table.  
+--
 Outage Filename: ./outages_files/Google Cloud Service Health - 04-03-2025 - part1.txt
 --
 Based on the provided text, I have extracted the relevant information about the outages in Google Cloud Service.
