@@ -445,7 +445,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         "GCP": [
             # AI/ML Services
             r"(?i)(Google Cloud VertexAI|VertexAI|VAI)",
-            r"(?i)(Google Cloud Machine Learning|Cloud Machine Learning|AutoML|ML Engine|GCML)",
+            r"(?i)(Google Cloud Machine Learning|Cloud Machine Learning|AutoML|AutoML Translation|ML Engine|GCML)",
             # API Services
             r"(?i)(Google Cloud Apigee API|Apigee|GAPI)",
             # Compute Services
