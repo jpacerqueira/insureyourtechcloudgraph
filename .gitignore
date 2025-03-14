@@ -56,5 +56,6 @@ cloud.risk-customer_portal_app/cloud-risk-portal/neo4j_customer_submission/Cloud
 dns_zerossl/api-cloud-risk.insureyourtech.cloud/*
 dns_zerossl/simulation-cloud-risk.insureyourtech.cloud/*
 dns_zerossl/customer-cloud-risk.insureyourtech.cloud/*
+dns_zerossl/services-app-cloud-risk.insureyourtech.cloud/*
 cloud.risk-customer_portal_app/customer-portal-app/certs/*
 mail.google.com/client_secret_937054037884-4hm56knpa6c1691fdn0n4pcndvpkki38.apps.googleusercontent.com.json
