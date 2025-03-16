@@ -221208,7 +221208,7 @@ Here is the output in table format:
 
 ```
 Cloud Provider, Service, Region, Availability Zone, Impact Date, Duration, Root Cause, Downtime Period, Resolved Date
-Oracle OCI, Networking, us-east-ashburn, , 2024-02-02 13:12:00 UTC, 6 days, 22 hours, and 38 minutes, Not specified, 2024-02-02 18:50:00 UTC
+Oracle OCI Networking, us-east-ashburn, , 2024-02-02 13:12:00 UTC, 6 days, 22 hours, and 38 minutes, Not specified, 2024-02-02 18:50:00 UTC
 ```
 
 Summary
