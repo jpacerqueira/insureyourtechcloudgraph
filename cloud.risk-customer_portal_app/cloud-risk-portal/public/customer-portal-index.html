@@ -228,7 +228,7 @@
         canvas {
             max-width: 95%;
             max-height: 650px;
-            position: center;
+            position: relative;
             height: auto;
         }
 
@@ -358,7 +358,7 @@
 <body>
     <!-- Copy the HTML structure from CloudRisk.Simulation.html -->
 
-<div class="container">
+<div class="container collapsed">
     <div class="collapsible-section" onclick="toggleSection(this)">
         <h2>Customer Company Details</h2>
         <span class="collapse-icon"></span>
@@ -478,6 +478,92 @@
     <h2>Cloud.Risk</h2>
     <!-- Div to Display Submission Result -->
     <div id="result"></div>
+    <!-- Loading banner -->
+    <div id="loading-banner" style="display: flex; align-items: center; justify-content: center; margin: 20px 0; padding: 15px; background-color:  #2c3039;; border-radius: 8px; box-shadow: 0 2px 4px  #2c3039;;">
+        <span id="banner-text" style="font-size: 18px; font-weight: bold; margin-right: 10px; color: #0984e3;">Cloud.Risk calculus</span>
+        <span id="fixed-dots" style="font-size: 18px; font-weight: bold;">.</span>
+        <span id="growing-dots" style="font-size: 18px; font-weight: bold;"></span>
+        <img id="spinning-logo" src="/app/public/images/Logo-png-v5.png" alt="Cloud.Risk" style="width: 40px; height: 40px; margin-left: 15px; color: #0984e3;">
+    </div>
+    <script>
+        // Add this script to handle the loading animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingBanner = document.getElementById('loading-banner');
+            const bannerText = document.getElementById('banner-text');
+            const growingDots = document.getElementById('growing-dots');
+            const fixedDots = document.getElementById('fixed-dots');
+            const spinningLogo = document.getElementById('spinning-logo');
+            const resultDiv = document.getElementById('result');
+            
+            // Initialize variables
+            let dotCount = 0;
+            const maxDots = 120;
+            let resultLoaded = false;
+            let spinStartTime = Date.now();
+            let canStopSpinning = false;
+            
+            // Add rotation animation to the logo
+            spinningLogo.style.animation = 'spin 0.8s linear infinite'; // < 1 fps = 0.8s per frame
+            
+            // Add keyframes for spinning animation
+            const styleSheet = document.createElement('style');
+            styleSheet.type = 'text/css';
+            styleSheet.innerText = `
+                @keyframes spin {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+            `;
+            document.head.appendChild(styleSheet);
+            
+            // Set timer to allow spinning to stop after 11 seconds
+            setTimeout(() => {
+                canStopSpinning = true;
+                // If results are already loaded, stop spinning now
+                if (resultLoaded) {
+                    bannerText.textContent = "Cloud.Risk calculus";
+                    fixedDots.textContent = "";
+                    growingDots.textContent = "";
+                    spinningLogo.style.animation = "none";
+                }
+            }, 11000); // 11 seconds timer
+            
+            // Growing dots animation - continue until max dots or results are loaded
+            const dotInterval = setInterval(() => {
+                if (dotCount < maxDots) {
+                    growingDots.textContent += '.';
+                    dotCount++;
+                } else {
+                    // Stop at max dots
+                    clearInterval(dotInterval);
+                }
+            }, 1000); // Add a dot exactly every second
+            
+            // Set up observer to watch for content in the results div
+            const observer = new MutationObserver(function(mutations) {
+                if (resultDiv.children.length > 0 && !resultLoaded) {
+                    resultLoaded = true;
+                    
+                    // Only change banner text when results appear AND minimum spin time has passed
+                    if (canStopSpinning) {
+                        bannerText.textContent = "Cloud.Risk calculus";
+                        fixedDots.textContent = "";
+                        growingDots.textContent = "";
+                        spinningLogo.style.animation = "none"; // Stop spinning
+                        
+                        // Clear the interval
+                        clearInterval(dotInterval);
+                    }
+                    
+                    // Stop observing once we've detected content
+                    observer.disconnect();
+                }
+            });
+            
+            // Start observing the results div for content changes
+            observer.observe(resultDiv, { childList: true, subtree: true });
+        });
+    </script>
     <!-- Link to Authorized users to see detailed results of your submission - Cloud.Risk.Graph your Measured Cloud.Risk RATIO -->
     <a href="https://workspace-preview.neo4j.io/workspace/query?ntid=google-oauth2%7C100793316574048247943">Cloud.Risk.Graph - Your Cloud.Risk Graph measurements for Cloud and Service pairs (with Neo4j)</a>
 </div>
@@ -486,26 +572,26 @@
     // Add these declarations at the top of the script section, after the options arrays
     const optionsForVariable1 = ["Amazon AWS", "Microsoft Azure", "Google Cloud GCP", "IBM Cloud", "Oracle Cloud OCI", "Snowflake", "Databricks", "Salesforce", "MongoDB", "Cloudflare", "Akamai", "Macrometa"];
     const optionsForVariable2 = [
-        "Amazon API Gateway","Amazon SageMaker","Amazon Bedrock","Amazon CloudFront","Amazon Route 53","Amazon CloudWatch Application Insights","Amazon CodeGuru Profiler","Amazon Kinesis","Amazon DataZone",
+        "Amazon API Gateway","Amazon AWS Direct Connect","Amazon SageMaker","Amazon Bedrock","Amazon CloudFront","Amazon Route 53","Amazon CloudWatch","Amazon CodeGuru Profiler","Amazon Kinesis","Amazon DataZone",
         "Amazon DocumentDB","Amazon DynamoDB","Amazon AWS RDS","Amazon AWS Aurora Serverles","Amazon EC2 Instance Connect","Amazon Elastic Compute Cloud","Amazon Elastic Container Service",
-        "Amazon Elastic File System","Amazon Elastic Block Store","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
+        "Amazon Elastic File System","Amazon ElastiCache","Amazon Elastic Block Store","Amazon Elastic Load Balancing","Amazon Elastic MapReduce","Amazon ElastiCache",
         "Amazon EMR Serverless","Amazon FinSpace","Amazon QuickSight","Amazon AWS Lambda","Amazon AWS CloudFront",
         "Amazon AWS Step Functions","Amazon Redshift","Amazon AWS Glue","Amazon Simple Queue Service SQS","Amazon s3","Amazon Elastic Kubernetes Service (EKS)",
-        "Azure Active Directory AAD","Microsoft Entra ID","Azure Active Directory B2C",
+        "Azure Active Directory","Microsoft Entra ID","Azure Active Directory B2C",
         "Azure Machine Learning","Azure AI","Azure AI Search","Azure OpenAI Service","Azure API Management","Azure Databricks","Azure HDInsight",
         "Azure SQL Managed Instance","Azure SQL Database","Azure Cosmos DB","Azure Database for PostgreSQL","Azure Database for MySQL",
-        "Azure Virtual Machines","Azure Batch","Azure App Service","Azure Functions","Azure PowerBI","Power BI Embedded","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)",
+        "Azure Virtual Machines","Azure Batch","Azure App Service","Azure Logic Apps","Azure Functions","Azure PowerBI","Power BI Embedded","Azure CDN","Azure Storage Accounts","Azure Kubernetes Service (AKS)",
         "Google Cloud VertexAI","Google Cloud Machine Learning","Google Cloud Apigee","Google Cloud Run","Google Cloud Functions","Google Cloud BigQuery","AlloyDB for PostgreSQL","Google Cloud SQL",
-        "Google Cloud Bigtable","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud DataStudio","Google Cloud Datalab","Google Cloud Composer","Google Cloud Looker Studio Pro","Google Cloud reCAPTCHA Enterprise","Google Cloud Storage","Google Cloud Pub/Sub",
-        "Google Cloud Load Balancing","Google Cloud And Media CDN","Google Cloud DNS","Google Kubernetes Engine (GKE)", 
+        "Google Cloud Bigtable","Google Cloud Compute Engine","Google Cloud Dataproc","Google Cloud Dataflow","Google Cloud DataStudio","Google Cloud Datalab","Google Cloud Composer","Google Cloud Looker Studio Pro","Google Cloud reCAPTCHA Enterprise","Google Cloud Storage","Google Drive","Google Cloud Pub/Sub","Google SecOps (Chronicle Security)","Recommendation AI",
+        "Google Cloud Marketplace","Google Cloud Load Balancing","Google Cloud And Media CDN","Google Cloud DNS","Google Kubernetes Engine (GKE)", 
         "IBM Watson Platform","IBM Dedicated Storage Instance","IBM Data Engine (previously SQL Query)","IBM Data Product Hub",
         "IBM Databases","IBM Databases for DataStax","IBM Databases for EDB",
         "IBM Databases for Elasticsearch","IBM Databases for etcd","IBM Databases for MongoDB",
         "IBM Databases for MySQL","IBM Databases for PostgreSQL","IBM Databases for Redis",
         "IBM DataStage","IBM Db2","IBM Db2 Warehouse","IBM watsonx BI Assistant",
-        "IBM Managed Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Cloud IDE","IBM Kubernetes",
+        "IBM Managed Dedicated Storage Instance","IBM Functions","IBM Cloud Object Storage","IBM Cloud Console","IBM Load Balancers","IBM Cloud IDE","IBM Kubernetes",
         "Red Hat OpenShift on IBM Cloud",
-        "Oracle Cloud Infrastructure Virtual Cloud Network (VCN)","Oracle AutonomousDB 21c","Object Storage OCI","Oracle_Big_Data_Service","Oracle Kubernetes Service (OKE)",
+        "Oracle Cloud Infrastructure Virtual Cloud Network (VCN)","Oracle Cloud Infrastructure API Gateway","Oracle Cloud Infrastructure Compute","Oracle AutonomousDB 21c","Oracle Database","Object Storage OCI","Oracle Visual Builder","Oracle Identity Cloud","Oracle Integration","Oracle OCI Monitoring","Oracle OCI Networking","Oracle Big Data Service","Oracle Kubernetes Service (OKE)",
         "Databricks SaaS","Databricks Workspace", "Databricks Mlflow", "Databricks Notebooks",
         "MongoDB Atlas","MongoDB Atlas AWS","MongoDB Atlas Azure","MongoDB Atlas GCP","MongoDB Atlas Search","MongoDB Atlas Vector Search","MongoDB Atlas Stream Processing","MongoDB Atlas BI Connector","MongoDB Atlas SQL",
         "Salesforce SaaS","Salesforce Sales Cloud", "Salesforce Service Cloud", "Salesforce Marketing Cloud","Salesforce Mulesoft Anypoint Platform",
@@ -518,7 +604,7 @@
 
     // Update variable tracking
     let trioCount = 2 ; // start with 2 trios // DOMContentLoaded loads 2 trios of here
-    const maxTrios = 20; // maximum number of Technology evaluation trios
+    const maxTrios = 40; // maximum number of Technology evaluation trios
 
     // Function to create dropdown options for a given array of options
     function createDropdownOptions(options) {

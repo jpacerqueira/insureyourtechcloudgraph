@@ -405,7 +405,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             # Serverless Messaging
             r"(?i)(Amazon Kinesis|Kinesis|AKN)",
             # CDN & DNS Services
-            r"(?i)(Amazon CloudFront|CloudFront|CF)",
+            r"(?i)(Amazon CloudFront|CloudFront|Cloudfront|CF)",
             r"(?i)(Amazon Route 53|Route 53|R53|DNS)",
             # Monitoring & Insights
             r"(?i)(Amazon CloudWatch|CloudWatch|CW|CloudWatch Application Insights|CloudWatch Events and EventBridge)",
@@ -471,7 +471,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Google Cloud reCAPTCHA Enterprise|reCAPTCHA|RCE)",
             # Network Services
             r"(?i)(Google Cloud Load Balancing|Load Balancing|GCLB)",
-            r"(?i)(Google Cloud And Media CDN|Media CDN|GCDN)",
+            r"(?i)(Google Cloud And Media CDN|Cloud CDN|Media CDN|GCDN)",
             r"(?i)(Google Cloud DNS|Cloud DNS|GCDNS)",
             # Container Services
             r"(?i)(Google Kubernetes Engine (GKE)|Google Cloud Kubernetes Engine|Google Cloud Kubernetes Engine (GKE)|Google Kubernetes Engine|GKE)",
@@ -508,7 +508,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             r"(?i)(Azure PowerBI App|Azure Power BI App|PowerBI|Power BI App|PBI)",
             r"(?i)(Azure Power BI Embedded|Power BI Embedded|PBI Embedded|Power BI Embedded Service|Azure Power BI Embedded Service|PBIE)",
             # Network Services
-            r"(?i)(Azure CDN|Content Delivery Network)",
+            r"(?i)(Azure CDN|Content Delivery Network|ACDN)",
             # Storage
             r"(?i)(Azure Storage Accounts|Azure Storage|ASA)",
             # Container Services
@@ -550,7 +550,7 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             # BareMetal servers
             r"(?i)(BareMetal servers|BareMetal|BM)",
             # Load Balancers
-            r"(?i)(Load Balancers|Load Balancer|LB)",
+            r"(?i)(IBM Load Balancers|Load Balancers|Load Balancer|load balancers|load balancer|ILB)",
             # VSI-San Storage
             r"(?i)(VSI-San Storage|VSI-San|VSIs|VSI)",
             # API Connect
@@ -571,14 +571,15 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
         "Oracle": [
             # Database Services
             r"(?i)(Oracle AutonomousDB 21c|AutonomousDB|ADB)",
+            r"(?i)(Oracle Database|Database|Oracle Database Cloud|Database Cloud|database|oDB|ODB)",
             # Storage Services
-            r"(?i)(Object Storage OCI|OCI Storage|OCIS)",
+            r"(?i)(Object Storage OCI|OCI Storage|Oracle Cloud Infrastructure Object Storage|Object Storage|Storage|OOS)",
             # Data Services
-            r"(?i)(Oracle Big Data Service|BDS|OBDS)",
+            r"(?i)(Oracle Big Data Service|Big Data Service|Big Data Appliance|BDS|OBDS)",
             # Oracle Cloud Infrastructure Container Engine for Kubernetes (OKE)
             r"(?i)(Oracle Cloud Infrastructure Container Engine for Kubernetes (OKE)|Oracle Cloud Infrastructure Container Engine for Kubernetes|Oracle Kubernetes Service (OKE)|Oracle Kubernetes Service|OKE)",
             # Oracle Identity Cloud
-            r"(?i)(Oracle Identity Cloud|OCI Identity|OCI Identity Cloud|Identity Cloud|Identity)",
+            r"(?i)(Oracle Identity Cloud|OCI Identity|OCI Identity Cloud|Identity Cloud|Identity|OIC)",
             # Oracle Cloud Infrastructure Compute
             r"(?i)(Oracle Cloud Infrastructure Compute|OCI Compute|OCI Compute Cloud|Compute Cloud|Compute)",
             # Oracle Cloud Infrastructure Object Storage
@@ -590,13 +591,15 @@ def extract_outage_info(text: str) -> List[OutageInfo]:
             # Oracle Cloud Infrastructure Database
             r"(?i)(Oracle Cloud Infrastructure Database|OCI Database|OCI Database Cloud|Database Cloud|Database)",
             # Oracle Cloud Infrastructure API Gateway
-            r"(?i)(Oracle Cloud Infrastructure API Gateway|OCI API Gateway|OCI API|API Gateway)",
+            r"(?i)(Oracle Cloud Infrastructure API Gateway|OCI API Gateway|OCI API|API Gateway|OCIAPG)",
             # Oracle Cloud Infrastructure Data Flow
             r"(?i)(Oracle Cloud Infrastructure Data Flow|OCI Data Flow|OCI Data|Data Flow)",
             # Oracle Cloud Infrastructure Events
             r"(?i)(Oracle Cloud Infrastructure Events|OCI Events|OCI Event|Events)",
             # Oracle Cloud Infrastructure Monitoring
-            r"(?i)(Oracle Cloud Infrastructure Monitoring|OCI Monitoring|OCI Monitor|Monitoring)",
+            r"(?i)(Oracle OCI Monitoring|Oracle Cloud Infrastructure Monitoring|OCI Monitoring|OCI Monitor|monitoring|Monitoring|OOM)",
+            # Oracle Cloud Infrastructure Networking
+            r"(?i)(Oracle OCI Networking|Oracle Cloud Infrastructure Networking|Oracle OCI, Networking|OCI Networking|OCI Network|networking|network|Network|Networking|OON)",
             # Oracle Cloud Infrastructure Notifications
             r"(?i)(Oracle Cloud Infrastructure Notifications|OCI Notifications|OCI Notification|Notifications)",
             # Oracle Cloud Guard
@@ -1601,12 +1604,19 @@ service_full_names = {
         "K8S": "IBM Kubernetes",
         "IDE": "IBM Cloud IDE",
         "ide": "IBM Cloud IDE",
+        "ILB": "IBM Load Balancers",
         "RHOIC": "Red Hat OpenShift on IBM Cloud"
     },
     "OCI": {
         "ADB": "Oracle AutonomousDB 21c",
-        "OS": "Object Storage OCI",
+        "ODB": "Oracle Database",
+        "OOS": "Object Storage OCI",
+        "OIC": "Oracle Identity Cloud",
         "BDS": "Oracle Big Data Service",
+        "OBDS": "Oracle Big Data Service",
+        "OOM": "Oracle OCI Monitoring",
+        "OON": "Oracle OCI Networking",
+        "OCIAPG": "Oracle Cloud Infrastructure API Gateway",
         "OKE": "Oracle Kubernetes Service"
     },
     "Snowflake": {
