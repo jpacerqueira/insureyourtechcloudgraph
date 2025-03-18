@@ -242,8 +242,19 @@
             overflow-y: auto;
         }
         #outageAnalysis {
-            height: 1200px;
+            min-height: 200px;
+            max-height: 1000px; /* Flexible maximum height */
+            height: auto;
             overflow-y: auto;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        /* Add collapsed state */
+        #outageAnalysis.collapsed {
+            min-height: 0;
+            max-height: 0;
+            height: 0;
+            overflow: hidden;
         }
 
         /* Add these new styles while keeping existing ones */
@@ -334,6 +345,54 @@
             max-height: 0;
         }
 
+        .outage-table-container {
+            transition: all 0.3s ease-out;
+            max-height: 600px;
+            cursor: pointer;
+            overflow: auto; /* Enable both vertical and horizontal scrolling */
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: #0984e3 #f0f0f0; /* For Firefox */
+        }
+        
+        /* Collapsed state */
+        .collapsed .outage-table-container {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0;
+            border: none;
+        }
+        
+        /* Webkit scrollbar styling (Chrome, Safari, Edge) */
+        .outage-table-container::-webkit-scrollbar {
+            width: 8px;  /* Vertical scrollbar width */
+            height: 8px; /* Horizontal scrollbar height */
+        }
+        
+        .outage-table-container::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+        
+        .outage-table-container::-webkit-scrollbar-thumb {
+            background: #0984e3;
+            border-radius: 4px;
+        }
+        
+        .outage-table-container::-webkit-scrollbar-thumb:hover {
+            background: #0773c5;
+        }
+        
+        /* Style the corner where scrollbars meet */
+        .outage-table-container::-webkit-scrollbar-corner {
+            background: #f0f0f0;
+        }
+        
+        /* Ensure content is visible when expanded */
+        .outage-table-container.expanded {
+            max-height: 600px;
+            overflow: auto;
+        }
+
         .measure-your-cloud-risk-details-content {
             transition: max-height 0.3s ease-out;
             overflow: hidden;
@@ -419,6 +478,7 @@
 
 <div class="container" id="outageAnalysis">
     <h2>Outage Analysis</h2>
+    <h3>Outage Severity Analysis</h3>
     <div class="metrics-grid">
         <div class="metric">
             <h4>Overall Service Health</h4>
@@ -438,20 +498,16 @@
             <div id="services-exceeding-sla_tier4">0</div>
         </div>
     </div>
-    
-    <div class="vendor-section">
-        <h2>Outage Severity Analysis</h2>
-        <div>
-            <h3>Outage Severity Analysis</h3>
-            <div id="outageSeverityAnalysis"></div>
-        </div>
-    </div>
 
-    <div id="outageTableContainer">
-        <h2>Outage Detailed Information</h2>
-        <h3>Webscrapper and GenAI Outage Information</h3>
-        <table id="outageTable">
-            <thead>
+    <div id="outageTableContainer collapsed">
+        <div class="collapsible-section" onclick="toggleSection(this)">
+            <h2>Outage Detailed Information</h2>
+            <span class="collapse-icon"></span>
+        </div>
+        <div class="outage-table-container">
+            <h3>Webscrapper and GenAI Outage Information</h3>
+            <table id="outageTable">
+                <thead>
                 <tr>
                     <th title="Cloud service name">Service</th>
                     <th title="Cloud provider name">Cloud Provider</th>
@@ -468,9 +524,10 @@
                     <th title="Estimated credit back percentage">Estimated Credit Back (%)</th>
                     <th title="Source of outage report">Source Report</th>
                 </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
     </div>
 </div>
 
@@ -497,7 +554,7 @@
             
             // Initialize variables
             let dotCount = 0;
-            const maxDots = 60;
+            const maxDots = 30;
             let resultLoaded = false;
             let spinStartTime = Date.now();
             let canStopSpinning = false;
@@ -2315,8 +2372,8 @@
 <!-- Include Chart.js library -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 
-<!-- Include Plotly library -->
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!-- Replace the old Plotly script tag with new version -->
+<script src="https://cdn.plot.ly/plotly-2.29.1.min.js"></script>
 
 <script>
     function toggleSection(element) {
