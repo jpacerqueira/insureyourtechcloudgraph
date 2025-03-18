@@ -1,136 +1,14 @@
-Attaching to cloudrisk-customer_portal_app_customer_portal_app_1, cloud-risk-portal, cloudrisk-customer_portal_app_customer_graph_1
+Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_app_1, cloudrisk-customer_portal_app_customer_graph_1
 [36mcloud-risk-portal      |[0m 
 [36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
 [36mcloud-risk-portal      |[0m > node server.js
 [36mcloud-risk-portal      |[0m 
-[36mcloud-risk-portal      |[0m Server - new session - sessionSecret: d6c3e0d54fc999380364ab0fbad1e2410ccf437e17ce8b0248e12d5b73501b16
-[36mcloud-risk-portal      |[0m simulation - sessionID: 5a3c3911e61a8a79c7b24b19ee43ca1b
-[36mcloud-risk-portal      |[0m simulation - sessionID: 8fd022ff23215c860b01484212d5252a
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: 93a2b612d783696ac25b2d7d0f85c365
-[36mcloud-risk-portal      |[0m neo4j save - sessionId: b29c05eb939e692097a48fbf31ea1cb2
-[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
-[36mcloud-risk-portal      |[0m Neo4j query executed successfully
-[36mcloud-risk-portal      |[0m save submission - sessionId: 93a2b612d783696ac25b2d7d0f85c365
-[36mcloud-risk-portal      |[0m Session_id not found in the database - creating new submission
-[36mcloud-risk-portal      |[0m neo4j save - sessionId: b29c05eb939e692097a48fbf31ea1cb2
-[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
-[36mcloud-risk-portal      |[0m Neo4j query executed successfully
-[36mcloud-risk-portal      |[0m save submission - sessionId: 93a2b612d783696ac25b2d7d0f85c365
-[36mcloud-risk-portal      |[0m Session_id found in the database - updating existing submission
-[36mcloud-risk-portal      |[0m Error saving submission: error: column "updated_at" of relation "customer_submissions" does not exist
-[36mcloud-risk-portal      |[0m     at /app/node_modules/pg-pool/index.js:45:11
-[36mcloud-risk-portal      |[0m     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-[36mcloud-risk-portal      |[0m     at async /app/server.js:899:13 {
-[36mcloud-risk-portal      |[0m   length: 145,
-[36mcloud-risk-portal      |[0m   severity: 'ERROR',
-[36mcloud-risk-portal      |[0m   code: '42703',
-[36mcloud-risk-portal      |[0m   detail: undefined,
-[36mcloud-risk-portal      |[0m   hint: undefined,
-[36mcloud-risk-portal      |[0m   position: '90',
-[36mcloud-risk-portal      |[0m   internalPosition: undefined,
-[36mcloud-risk-portal      |[0m   internalQuery: undefined,
-[36mcloud-risk-portal      |[0m   where: undefined,
-[36mcloud-risk-portal      |[0m   schema: undefined,
-[36mcloud-risk-portal      |[0m   table: undefined,
-[36mcloud-risk-portal      |[0m   column: undefined,
-[36mcloud-risk-portal      |[0m   dataType: undefined,
-[36mcloud-risk-portal      |[0m   constraint: undefined,
-[36mcloud-risk-portal      |[0m   file: 'analyze.c',
-[36mcloud-risk-portal      |[0m   line: '2527',
-[36mcloud-risk-portal      |[0m   routine: 'transformUpdateTargetList'
-[36mcloud-risk-portal      |[0m }
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: d911b73330ec4c03a689a18804d4605e
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: d911b73330ec4c03a689a18804d4605e
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: c24edfb24d425b8b5c87e39fcf56522a
-[36mcloud-risk-portal      |[0m neo4j save - sessionId: b29c05eb939e692097a48fbf31ea1cb2
-[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
-[36mcloud-risk-portal      |[0m Neo4j query executed successfully
-[36mcloud-risk-portal      |[0m neo4j save - sessionId: b29c05eb939e692097a48fbf31ea1cb2
-[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
-[36mcloud-risk-portal      |[0m Neo4j query executed successfully
-[36mcloud-risk-portal      |[0m save submission - sessionId: c24edfb24d425b8b5c87e39fcf56522a
-[36mcloud-risk-portal      |[0m Session_id not found in the database - creating new submission
-[36mcloud-risk-portal      |[0m simulation - sessionID: ead8b74e8b46f3bb2e087c2530c1dd66
-[36mcloud-risk-portal      |[0m simulation - sessionID: c8079c7c6d89ec338e8363248cb0e12e
-[36mcloud-risk-portal      |[0m simulation - sessionID: fd4b85c948f5436bbbfce3e209c146f5
-[36mcloud-risk-portal      |[0m simulation - sessionID: 140be3488d0b1031d278a2dc39cf0824
-[36mcloud-risk-portal      |[0m simulation - sessionID: 6829127610e5123403cf763969598c0b
-[36mcloud-risk-portal      |[0m simulation - sessionID: 28221b658ccb3566fae8e06085c25e4d
-[36mcloud-risk-portal      |[0m simulation - sessionID: 9f57e08dd640aa2828214fa3b54902bc
-[36mcloud-risk-portal      |[0m simulation - sessionID: 4775c5b5ef1ac68b5da74d2b7066558c
-[36mcloud-risk-portal      |[0m simulation - sessionID: df52c00b942af60ce800829c4afc8e27
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: 0b785fd09b4d661b7761f480da4dec9e
-[36mcloud-risk-portal      |[0m simulation - sessionID: 187b5ed8840265c1da29af38b746cd08
-[36mcloud-risk-portal      |[0m simulation - sessionID: 38d74100c730a73d6d56d58649d0da6d
-[36mcloud-risk-portal      |[0m simulation - sessionID: 0b1c32d5565a86637c9d7ca0652b30c3
-[36mcloud-risk-portal      |[0m simulation - sessionID: 97929cd3af1764f15aac85e85caf6b54
-[36mcloud-risk-portal      |[0m simulation - sessionID: 14df2f7203bcbc200eca1534a8c61879
-[36mcloud-risk-portal      |[0m simulation - sessionID: 28228b0e79efe808e8dda445e57688f6
-[36mcloud-risk-portal      |[0m simulation - sessionID: d75a31dc533ecca8eff198b477a64d1f
-[36mcloud-risk-portal      |[0m simulation - sessionID: f0465e2f89b4e9a453b4f43dafb17c64
-[36mcloud-risk-portal      |[0m simulation - sessionID: 4067970afdbc23f52f1c8bcf6a2e057f
-[36mcloud-risk-portal      |[0m simulation - sessionID: 3e7c2eba5453d05c9498a785b289981d
-[36mcloud-risk-portal      |[0m simulation - sessionID: 7a8a86be08ac489a84fe6a01be2188a5
-[36mcloud-risk-portal      |[0m simulation - sessionID: 69bbf6470d817419d3c4daae3604967b
-[36mcloud-risk-portal      |[0m simulation - sessionID: 1ea43ca67aceea48758d16c301a6faf4
-[36mcloud-risk-portal      |[0m simulation - sessionID: e2a9808c89d86fdf0a0eb07fa8eab8eb
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: c866889d629b4eea978c71b3eef662da
-[36mcloud-risk-portal      |[0m simulation - sessionID: 81026768031b4c9648b07fcfd0a1efc5
-[36mcloud-risk-portal      |[0m simulation - sessionID: 10f50269f855786aa0d436d0eaa404d8
-[36mcloud-risk-portal      |[0m simulation - sessionID: e6f6ea988620c415dec59b0d0b76a71d
-[36mcloud-risk-portal      |[0m simulation - sessionID: 886bcb6a4a90ddfc2c708a1e155cfffc
-[36mcloud-risk-portal      |[0m simulation - sessionID: ef526269d3a3629a77ab62feb1a5a055
-[36mcloud-risk-portal      |[0m simulation - sessionID: 43c5a3decfd4e0b6f4bd166db0180a8e
-[36mcloud-risk-portal      |[0m simulation - sessionID: a847976cca187940f932cdacd48b028b
-[36mcloud-risk-portal      |[0m simulation - sessionID: 9052b84af5a1cdfc2f72e42c13063dc8
-[36mcloud-risk-portal      |[0m simulation - sessionID: e2bf372d8aa1d40c47e0e116ff4fb36b
-[36mcloud-risk-portal      |[0m simulation - sessionID: 25c07bebe9ed4d48ef6380ad9bf00727
-[36mcloud-risk-portal      |[0m simulation - sessionID: 29e39e16839e3090e65b7064dec9d9a8
-[36mcloud-risk-portal      |[0m simulation - sessionID: 47262aed3dd0a4f9d9682c0d4e806181
-[36mcloud-risk-portal      |[0m simulation - sessionID: 1654a967bda73605e4e69d9332991efb
-[36mcloud-risk-portal      |[0m simulation - sessionID: f4ade24af122940076427dfa4d076d4f
-[36mcloud-risk-portal      |[0m simulation - sessionID: eaf3ab2c7e8f34f982e77a3b7fdb783a
-[36mcloud-risk-portal      |[0m simulation - sessionID: 3f9ebe1db197418a96650d62bed9f3a3
-[36mcloud-risk-portal      |[0m simulation - sessionID: e93267bdcbc92ec55c37f3e425b70ebc
-[36mcloud-risk-portal      |[0m simulation - sessionID: fd8b4310b71fd668906e2e4e6b9aa679
-[36mcloud-risk-portal      |[0m simulation - sessionID: 857f2f76955f4dd75c153a7b0f8792d7
-[36mcloud-risk-portal      |[0m simulation - sessionID: e2f1291b9719a3b8256dde5980aa77a6
-[36mcloud-risk-portal      |[0m simulation - sessionID: 26d47c241cf390f432cd3f5b2ffbcdfc
-[36mcloud-risk-portal      |[0m simulation - sessionID: 3a737052646e1106c3cbb94cc651e6a2
-[36mcloud-risk-portal      |[0m simulation - sessionID: 16ff6ee1ee0da685d970fa89df29aec2
-[36mcloud-risk-portal      |[0m simulation - sessionID: 594168a645a1d78539f2caa8d41b778c
-[36mcloud-risk-portal      |[0m simulation - sessionID: 7288f791fce67d55505a7454ee2154d8
-[36mcloud-risk-portal      |[0m simulation - sessionID: b011f40ce56609731f9cd1ecc4c6966c
-[36mcloud-risk-portal      |[0m simulation - sessionID: c70e627786c446949b7f4eadb4a73c1f
-[36mcloud-risk-portal      |[0m simulation - sessionID: 48d05ae5e7a285b90843998e7591155f
-[36mcloud-risk-portal      |[0m simulation - sessionID: c30ce69d8dade15e721a24f3cbe1d349
-[36mcloud-risk-portal      |[0m simulation - sessionID: c0e38568c3957eb59e046074f6482a44
-[36mcloud-risk-portal      |[0m simulation - sessionID: d8258dce439d4ff6724304234000a03d
-[36mcloud-risk-portal      |[0m simulation - sessionID: a0eb4a3fca0e698ef7d4f6d9f2679260
-[36mcloud-risk-portal      |[0m simulation - sessionID: 7d5a865bfff9c724388d9e443c6891c0
-[36mcloud-risk-portal      |[0m simulation - sessionID: e77254cfa0255f9fb863f9102fc9194c
-[36mcloud-risk-portal      |[0m simulation - sessionID: 888e4f7df0f5c0022536b98a619d1e3c
-[36mcloud-risk-portal      |[0m simulation - sessionID: 216fb34c6c4c698cb0a06b9036380784
-[36mcloud-risk-portal      |[0m simulation - sessionID: 4feed50b84682e1bc5ee0ce1a82b7bdf
-[36mcloud-risk-portal      |[0m customer-portal - sessionID: 27422d1606447c23290b40b4672d17da
+[36mcloud-risk-portal      |[0m Server - new session - sessionSecret: 80ac44449ee570722384c30abcdf54cfe6c2fbaf39fe2b826e598969fd921836
 [33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
-[33mcustomer_graph_1       |[0m 2025-03-17 01:12:50.841+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
-[33mcustomer_graph_1       |[0m 2025-03-17 01:12:50.884+0000 INFO  Starting...
-[33mcustomer_graph_1       |[0m 2025-03-17 01:12:52.832+0000 INFO  This instance is ServerId{61717d7d} (61717d7d-7822-47c2-bcf8-dfb0a20aae09)
-[33mcustomer_graph_1       |[0m 2025-03-17 01:12:55.041+0000 INFO  ======== Neo4j 5.25.1 ========
-[33mcustomer_graph_1       |[0m 2025-03-17 01:12:59.291+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
-[33mcustomer_graph_1       |[0m 2025-03-17 01:12:59.360+0000 INFO  Bolt enabled on 0.0.0.0:7687.
-[33mcustomer_graph_1       |[0m 2025-03-17 01:13:00.643+0000 INFO  HTTP enabled on 0.0.0.0:7474.
-[33mcustomer_graph_1       |[0m 2025-03-17 01:13:00.645+0000 INFO  Remote interface available at http://localhost:7474/
-[33mcustomer_graph_1       |[0m 2025-03-17 01:13:00.650+0000 INFO  id: 2AED9AE976290B6291442943EABBA49E0413D5D7205BAD4E7A767D6E562D0DB7
-[33mcustomer_graph_1       |[0m 2025-03-17 01:13:00.651+0000 INFO  name: system
-[33mcustomer_graph_1       |[0m 2025-03-17 01:13:00.652+0000 INFO  creationDate: 2025-03-17T01:12:57.238Z
-[33mcustomer_graph_1       |[0m 2025-03-17 01:13:00.652+0000 INFO  Started.
-[33mcustomer_graph_1       |[0m 2025-03-17 05:13:32.087+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
-[33mcustomer_graph_1       |[0m 2025-03-17 20:24:29.105+0000 INFO  Network abort rate has normalized
-[33mcustomer_graph_1       |[0m 2025-03-17 20:28:51.247+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
-[33mcustomer_graph_1       |[0m 2025-03-17 21:01:45.519+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
-[33mcustomer_graph_1       |[0m 2025-03-17 21:01:45.519+0000 INFO  Network abort rate has normalized
+[33mcustomer_graph_1       |[0m 2025-03-18 12:17:06.857+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
+[33mcustomer_graph_1       |[0m 2025-03-18 12:17:06.904+0000 INFO  Starting...
+[33mcustomer_graph_1       |[0m 2025-03-18 12:17:08.980+0000 INFO  This instance is ServerId{61717d7d} (61717d7d-7822-47c2-bcf8-dfb0a20aae09)
+[33mcustomer_graph_1       |[0m 2025-03-18 12:17:14.828+0000 INFO  ======== Neo4j 5.25.1 ========
 [32mcustomer_portal_app_1  |[0m 
 [32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
 [32mcustomer_portal_app_1  |[0m 
