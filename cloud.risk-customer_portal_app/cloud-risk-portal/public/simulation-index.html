@@ -345,19 +345,28 @@
             max-height: 0;
         }
 
+
         .outage-table-container {
-            transition: max-height 0.3s ease-out;
-            overflow: hidden;
+            transition: all 0.3s ease-out;
             max-height: 600px;
             cursor: pointer;
-            overflow-y: auto; /* Adds vertical scrolling */
+            overflow: auto; /* Enable both vertical and horizontal scrolling */
             scrollbar-width: thin; /* For Firefox */
             scrollbar-color: #0984e3 #f0f0f0; /* For Firefox */
         }
         
+        /* Collapsed state */
+        .collapsed .outage-table-container {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0;
+            border: none;
+        }
+        
         /* Webkit scrollbar styling (Chrome, Safari, Edge) */
         .outage-table-container::-webkit-scrollbar {
-            width: 8px;
+            width: 8px;  /* Vertical scrollbar width */
+            height: 8px; /* Horizontal scrollbar height */
         }
         
         .outage-table-container::-webkit-scrollbar-track {
@@ -374,8 +383,15 @@
             background: #0773c5;
         }
         
-        .collapsed .outage-table-container {
-            max-height: 0;
+        /* Style the corner where scrollbars meet */
+        .outage-table-container::-webkit-scrollbar-corner {
+            background: #f0f0f0;
+        }
+        
+        /* Ensure content is visible when expanded */
+        .outage-table-container.expanded {
+            max-height: 600px;
+            overflow: auto;
         }
 
         .measure-your-cloud-risk-details-content {
