@@ -626,6 +626,40 @@ app.post('/customer-portal/register', async (req, res) => {
     }
 });
 
+// Registration route
+app.get('/customer-portal/upgrade', (req, res) => {
+    const userId = req.query.userId;
+    const companyName = req.query.companyName;
+
+    // Read the HTML file
+    let html = fs.readFileSync(path.join(__dirname, 'public', 'upgrade.html'), 'utf8');
+
+    // Replace the companyName placeholder with the actual company name
+    html = html.replace('{{companyName}}', companyName);
+
+    // Replace the userId placeholder with the actual user ID
+    html = html.replace('{{userId}}', userId);
+
+    res.send(html);
+});
+
+app.post('/customer-portal/upgrade', async (req, res) => {
+    const { userId, customer_type } = req.body;
+    console.log(`Upgrade request received for user ${userId} with customer_type: ${customer_type}`);
+    try {
+        // Now timestamp the request
+        const timestamp = new Date().toISOString();
+        await pool.query(
+            'UPDATE cloud_risk_portal.customers SET customer_type = $1, updated_at = $2 WHERE id = $3',
+            [customer_type, timestamp, userId]
+        );
+        res.redirect('/customer-portal/login');
+    } catch (error) {
+        console.error('Registration error:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
 // Logout route
 app.get('/customer-portal/logout', (req, res) => {
     req.session.destroy(err => {

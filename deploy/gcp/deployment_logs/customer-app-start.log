@@ -1,14 +1,4 @@
-Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_app_1, cloudrisk-customer_portal_app_customer_graph_1
-[36mcloud-risk-portal      |[0m 
-[36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
-[36mcloud-risk-portal      |[0m > node server.js
-[36mcloud-risk-portal      |[0m 
-[36mcloud-risk-portal      |[0m Server - new session - sessionSecret: 80ac44449ee570722384c30abcdf54cfe6c2fbaf39fe2b826e598969fd921836
-[33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
-[33mcustomer_graph_1       |[0m 2025-03-18 12:17:06.857+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
-[33mcustomer_graph_1       |[0m 2025-03-18 12:17:06.904+0000 INFO  Starting...
-[33mcustomer_graph_1       |[0m 2025-03-18 12:17:08.980+0000 INFO  This instance is ServerId{61717d7d} (61717d7d-7822-47c2-bcf8-dfb0a20aae09)
-[33mcustomer_graph_1       |[0m 2025-03-18 12:17:14.828+0000 INFO  ======== Neo4j 5.25.1 ========
+Attaching to cloudrisk-customer_portal_app_customer_portal_app_1, cloud-risk-portal, cloudrisk-customer_portal_app_customer_graph_1
 [32mcustomer_portal_app_1  |[0m 
 [32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
 [32mcustomer_portal_app_1  |[0m 
@@ -17,3 +7,103 @@ Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_ap
 [32mcustomer_portal_app_1  |[0m 
 [32mcustomer_portal_app_1  |[0m   URL: http://0.0.0.0:8185
 [32mcustomer_portal_app_1  |[0m 
+[33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
+[33mcustomer_graph_1       |[0m 2025-03-18 14:37:09.500+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
+[33mcustomer_graph_1       |[0m 2025-03-18 14:37:09.549+0000 INFO  Starting...
+[33mcustomer_graph_1       |[0m 2025-03-18 14:37:11.501+0000 INFO  This instance is ServerId{61717d7d} (61717d7d-7822-47c2-bcf8-dfb0a20aae09)
+[33mcustomer_graph_1       |[0m 2025-03-18 14:37:13.799+0000 INFO  ======== Neo4j 5.25.1 ========
+[33mcustomer_graph_1       |[0m 2025-03-18 14:37:20.634+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+[33mcustomer_graph_1       |[0m 2025-03-18 14:37:20.857+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+[33mcustomer_graph_1       |[0m 2025-03-18 14:37:23.790+0000 INFO  HTTP enabled on 0.0.0.0:7474.
+[33mcustomer_graph_1       |[0m 2025-03-18 14:37:23.792+0000 INFO  Remote interface available at http://localhost:7474/
+[33mcustomer_graph_1       |[0m 2025-03-18 14:37:23.798+0000 INFO  id: 2AED9AE976290B6291442943EABBA49E0413D5D7205BAD4E7A767D6E562D0DB7
+[33mcustomer_graph_1       |[0m 2025-03-18 14:37:23.801+0000 INFO  name: system
+[33mcustomer_graph_1       |[0m 2025-03-18 14:37:23.802+0000 INFO  creationDate: 2025-03-17T01:12:57.238Z
+[33mcustomer_graph_1       |[0m 2025-03-18 14:37:23.802+0000 INFO  Started.
+[36mcloud-risk-portal      |[0m 
+[36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
+[36mcloud-risk-portal      |[0m > node server.js
+[36mcloud-risk-portal      |[0m 
+[36mcloud-risk-portal      |[0m Server - new session - sessionSecret: 3a1984deb7f655d28b824b638cb887d5a97b93697b5900a6e129a5f3873c3580
+[36mcloud-risk-portal      |[0m simulation - sessionID: 306c83cabcf6c1acb63413102cfc0640
+[36mcloud-risk-portal      |[0m simulation - sessionID: 488239b1b67c03d15c9651faedfc3168
+[36mcloud-risk-portal      |[0m simulation - sessionID: 778f999a50484dbe8c080df8f60a50ab
+[36mcloud-risk-portal      |[0m simulation - sessionID: 54ae6e22957e2a2c78040c20a3f7111e
+[36mcloud-risk-portal      |[0m simulation - sessionID: 48e3bac09556b5f4df65daad4da98f8c
+[36mcloud-risk-portal      |[0m simulation - sessionID: aef7d23f04df0258d46e12d24959b423
+[36mcloud-risk-portal      |[0m simulation - sessionID: cac0c2bfa4ba40c8d0377e5399e097dd
+[36mcloud-risk-portal      |[0m simulation - sessionID: 6cf332a8acc08f222b8c98f79f90a4b6
+[36mcloud-risk-portal      |[0m simulation - sessionID: 6ea9c862df04389634ccd5a6362f9d0b
+[36mcloud-risk-portal      |[0m simulation - sessionID: f7d979e875865ee52d501807a59aa4ff
+[36mcloud-risk-portal      |[0m simulation - sessionID: 78bbb72e2f48c341baf58e1bc7545238
+[36mcloud-risk-portal      |[0m simulation - sessionID: 12d70b733eaec99b5f692076cfb37e26
+[36mcloud-risk-portal      |[0m simulation - sessionID: 0ef117d3f97479b2b5fc957ff4564745
+[36mcloud-risk-portal      |[0m simulation - sessionID: bfde1ce9eb59745eb5d891396c6957e8
+[36mcloud-risk-portal      |[0m simulation - sessionID: fda927f0dcd7d87eabd261a3b550af2f
+[36mcloud-risk-portal      |[0m simulation - sessionID: f8e77277660386973b1443ec20316330
+[36mcloud-risk-portal      |[0m simulation - sessionID: 282b8ff0fd7828d8852817996002da85
+[36mcloud-risk-portal      |[0m simulation - sessionID: dce0fa697b93783df7c1d16b2e7e2370
+[36mcloud-risk-portal      |[0m simulation - sessionID: ce0ce221674b0a6c26fa1869fa430f64
+[36mcloud-risk-portal      |[0m simulation - sessionID: 42f52bca03c4a25251fc0b978f767d9a
+[36mcloud-risk-portal      |[0m simulation - sessionID: 6f20add81639b814bc4b3e4c2c066a76
+[36mcloud-risk-portal      |[0m simulation - sessionID: 62d27ff082c549a7279e350b6f483c2c
+[36mcloud-risk-portal      |[0m simulation - sessionID: af2107b30166dd35c0815a4f872ce631
+[36mcloud-risk-portal      |[0m customer-portal - sessionID: 85cee0687cb50a3788a207cb20fb29a3
+[36mcloud-risk-portal      |[0m neo4j save - sessionId: b5b88135cb330606ef400d45443e5c66
+[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
+[36mcloud-risk-portal      |[0m Neo4j query executed successfully
+[36mcloud-risk-portal      |[0m customer-portal - sessionID: 85cee0687cb50a3788a207cb20fb29a3
+[36mcloud-risk-portal      |[0m simulation - sessionID: 3ea8118614512388d9497fac9cdc1078
+[36mcloud-risk-portal      |[0m simulation - sessionID: 67bd761daef345bbf8662f3218701877
+[36mcloud-risk-portal      |[0m simulation - sessionID: 4d068eafc70562d8f475c6eb432e8531
+[36mcloud-risk-portal      |[0m simulation - sessionID: 5d8672b4cfa832477c6eb5c9d0ad0205
+[36mcloud-risk-portal      |[0m simulation - sessionID: 83451ca6ef7ecef9167dbe7fa4d68d75
+[36mcloud-risk-portal      |[0m simulation - sessionID: b266f4e14b86946df6667178bc9ae167
+[36mcloud-risk-portal      |[0m simulation - sessionID: af182991547640915d2eaea0f7dea0de
+[36mcloud-risk-portal      |[0m simulation - sessionID: 9a7951df42ba8130081641473fb91b72
+[36mcloud-risk-portal      |[0m simulation - sessionID: 320e15484d01ebead7d35ed99403e831
+[36mcloud-risk-portal      |[0m simulation - sessionID: 125295e70fd42e62552957dc6adeb144
+[36mcloud-risk-portal      |[0m simulation - sessionID: 38abb583c04364bb0e6fa2498d52b79e
+[36mcloud-risk-portal      |[0m simulation - sessionID: bef95b9806c74238b5b72d7813c0ee5b
+[36mcloud-risk-portal      |[0m simulation - sessionID: 7adf009af342e227169ee793026f511d
+[36mcloud-risk-portal      |[0m simulation - sessionID: 08589d0ac3950e201c4f2c6969fa1f7f
+[36mcloud-risk-portal      |[0m simulation - sessionID: 5e8462db8d78254dd4ed6a1fcbbbaa77
+[36mcloud-risk-portal      |[0m simulation - sessionID: ca9785bc4dd6b2879f8de4f00e015e49
+[36mcloud-risk-portal      |[0m simulation - sessionID: 095cf2ea0155af09fcab60452b2577e9
+[36mcloud-risk-portal      |[0m simulation - sessionID: 4638dd8130302dc00a0b1f236e5942f3
+[36mcloud-risk-portal      |[0m simulation - sessionID: 4212b29037d1b4c2ff9df232a0b5faed
+[36mcloud-risk-portal      |[0m simulation - sessionID: 95d8fc4797af923bab2f2a7f34b10399
+[36mcloud-risk-portal      |[0m simulation - sessionID: 48751ecc1758d1785018996f3622591e
+[36mcloud-risk-portal      |[0m simulation - sessionID: f91f0b69c23ba9bf88003079eb0222c9
+[36mcloud-risk-portal      |[0m simulation - sessionID: 4c89ace2bdc49c6967ae2911933ccb5d
+[36mcloud-risk-portal      |[0m simulation - sessionID: 228068a78732e07beca862d46ddeb986
+[36mcloud-risk-portal      |[0m simulation - sessionID: 1d212d7fd7526eb58430f7c66020bf1c
+[36mcloud-risk-portal      |[0m simulation - sessionID: 60f891b104b89f537811f04651685219
+[36mcloud-risk-portal      |[0m simulation - sessionID: e151666928a5af1b317cba9435c448c9
+[36mcloud-risk-portal      |[0m simulation - sessionID: d2d159f59dc8506fb1fbaba337268225
+[36mcloud-risk-portal      |[0m customer-portal - sessionID: fa650c67354008696b4a0e3bed6bb224
+[36mcloud-risk-portal      |[0m neo4j save - sessionId: 26780eb7fea751ce81d48dfdded91342
+[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
+[36mcloud-risk-portal      |[0m Neo4j query executed successfully
+[36mcloud-risk-portal      |[0m neo4j save - sessionId: 26780eb7fea751ce81d48dfdded91342
+[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
+[36mcloud-risk-portal      |[0m Neo4j query executed successfully
+[36mcloud-risk-portal      |[0m simulation - sessionID: 4396e982a4aab4871b36b79f2dfca14b
+[36mcloud-risk-portal      |[0m simulation - sessionID: 42e94203dda908a3be7fa94d6bc8cd9a
+[36mcloud-risk-portal      |[0m simulation - sessionID: a94080d88b2bc13720e5c6e1d06191cb
+[36mcloud-risk-portal      |[0m simulation - sessionID: 8492a54f68109ef407f45e7e423c150c
+[36mcloud-risk-portal      |[0m simulation - sessionID: 9bb7293cd7ce0312ba3168b17e63defc
+[36mcloud-risk-portal      |[0m customer-portal - sessionID: 0eeda18bdfa710e52319a6f82db753e9
+[36mcloud-risk-portal      |[0m neo4j save - sessionId: f16ef095a735d46b51bce3a00c61efa4
+[36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
+[36mcloud-risk-portal      |[0m Neo4j query executed successfully
+[36mcloud-risk-portal      |[0m customer-portal - sessionID: 9ec8b14e63c82756eac333b9f2757c3b
+[36mcloud-risk-portal      |[0m simulation - sessionID: 4caf14be80ca6ba8976781ce1f9c30b3
+[36mcloud-risk-portal      |[0m simulation - sessionID: 955c8dc9f6d363ead83ac6dee62f25a7
+[36mcloud-risk-portal      |[0m simulation - sessionID: 66b34675d1766dded7f70166be1fd448
+[36mcloud-risk-portal      |[0m simulation - sessionID: 8f247afd7788b9850a8cac0ebed63525
+[36mcloud-risk-portal      |[0m simulation - sessionID: c528d8d2ca1b52039df83538e99122b6
+[36mcloud-risk-portal      |[0m simulation - sessionID: 3109be269bcae3c1eb84c097a56b62c3
+[36mcloud-risk-portal      |[0m simulation - sessionID: 004664ffcf9a8f46d67d044d70ebfdf0
+[36mcloud-risk-portal      |[0m simulation - sessionID: eb978c7a7f5212e9708047770a8992a2
+[36mcloud-risk-portal      |[0m simulation - sessionID: 462a5383b7a480d78051c6f916e8cad7
