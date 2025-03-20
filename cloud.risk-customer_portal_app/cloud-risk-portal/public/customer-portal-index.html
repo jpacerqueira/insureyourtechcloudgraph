@@ -523,7 +523,7 @@
         <input type="text" id="projectName" placeholder="Defaults to Company Name if blank">
         </div>
     </div>
-    </div>
+</div>
 
 <div class="container collapsed">
     <div class="collapsible-section" onclick="toggleSection(this)">
@@ -531,21 +531,23 @@
         <span class="collapse-icon"></span>
     </div>
     <div class="measure-your-cloud-risk-details-content">
-        <h4>Compare Cloud.Risk of your services to other cloud vendors</h4>
-    <!-- Buttons to add or remove pairs -->
-    <div class="controls">
-        <button onclick="clearSubmission()" style="background-color: #ff7675;">Clear Submission</button>
-        <button onclick="saveSubmission()" style="background-color: #00b894;">Save Submission</button>
-        <button onclick="loadLastSubmission()" style="background-color: #00b894;">Load Last Submission</button>
-    </div>
-    <!-- Container to hold dynamically generated variable pairs -->
-    <div id="variableContainer"></div>
+        <h4>Compare cloud services between multiple cloud vendors</h4>
+        <h4>Use our Premium or Freemium API submissions</h4>
+        <!-- Buttons to add or remove pairs -->
+        <div class="controls">
+            <button onclick="clearSubmission()" style="background-color: #ff7675;">Clear Submission</button>
+            <button onclick="saveSubmission()" style="background-color: #00b894;">Save Submission</button>
+            <button onclick="loadLastSubmission()" style="background-color: #00b894;">Load Last Submission</button>
+        </div>
+        <!-- Container to hold dynamically generated variable pairs -->
+        <div id="variableContainer"></div>
         <!-- Repeated Buttons to add or remove pairs -->
         <div class="controls">
             <button onclick="addVariablePair()" style="background-color: #0984e3;">+</button>
             <button onclick="removeVariablePair()" style="background-color: #0984e3;">-</button>
-            <button onclick="submitData(true)" style="background-color: #0984e3;">Submit Data</button>
-</div>
+            <button onclick="submitData(true,true)" style="background-color: #0984e3;">Premium</button>
+            <button onclick="submitData(true,false)" style="background-color: #0984e3;">Freemium</button>
+        </div>
     </div>
 </div>
 
@@ -811,7 +813,7 @@
     // Copy and modify the JavaScript from CloudRisk.Simulation.html
     // Update fetch calls to use API_BASE_URL
     
-    async function fetchCloudRiskData(service, region) {
+    async function fetchCloudRiskData(service, region, premium = false) {
         const API_BASE_URL = await fetchAPIBaseUrl();
         const customerId = window.ENV.userId; // Get from your environment
         try {
@@ -829,10 +831,19 @@
                 fetchOptions.rejectUnauthorized = false;
             }
 
-            const response = await fetch(
-                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/fetch/service/service_name/${encodeURIComponent(service)}/global_or_by_regions/${encodeURIComponent(region)}?customerId=${customerId}`,
-                fetchOptions
-            );
+            let response; // Declare response variable outside the if/else blocks
+            if (premium) {
+                response = await fetch(
+                    `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/fetch/service/service_name/${encodeURIComponent(service)}/global_or_by_regions/${encodeURIComponent(region)}?customerId=${customerId}`,
+                    fetchOptions
+                );
+            }
+            else {
+                response = await fetch(
+                    `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${encodeURIComponent(service)}/global_or_by_regions/${encodeURIComponent(region)}?customerId=${customerId}`,
+                    fetchOptions
+                );
+            }
             if (!response.ok) {
                 const error = await response.json();
                 if (response.status === 403) {
@@ -850,9 +861,9 @@
     }
     
     // Function to fetch outage data and render the chart
-    async function fetchOutageData(service) {
+    async function fetchOutageData(service, premium = false) {
         const API_BASE_URL = await fetchAPIBaseUrl();
-        const customerId = window.ENV.userId; // Get from your environment
+        const customerId = window.ENV.userId;
         try {
             const fetchOptions = {
                 method: 'GET',
@@ -863,15 +874,23 @@
                 mode: 'cors'
             };
             
-            // Add rejectUnauthorized: false for development environment
             if (window.ENV.isSSLBypassed) {
                 fetchOptions.rejectUnauthorized = false;
             }
 
-            const response = await fetch(
-                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/outages/service/${encodeURIComponent(service)}?customerId=${customerId}`,
-                fetchOptions
-            );
+            let response;
+            if (premium) {
+                response = await fetch(
+                    `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/outages/service/${encodeURIComponent(service)}?customerId=${customerId}`,
+                    fetchOptions
+                );
+            }
+            else {
+                response = await fetch(
+                    `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${encodeURIComponent(service)}?customerId=${customerId}`,
+                    fetchOptions
+                );
+            }
 
             // Handle different response status codes
             if (response.status === 404) {
@@ -1004,7 +1023,7 @@
 
 
     // Update submit function to handle metrics calculation and display
-    async function submitData(saveNeo4jData = false) {
+    async function submitData(saveNeo4jData = false, premium = false) {
         const companyName = document.getElementById("companyName").value.trim();
         const projectName = document.getElementById("projectName").value.trim() || companyName;
 
@@ -1023,7 +1042,7 @@
 
             if (vendor && service && region) {
                 try {
-                    const riskData = await fetchCloudRiskData(service, region);
+                    const riskData = await fetchCloudRiskData(service, region, premium);
                     selectedServices.push({
                         name: service,
                         vendor: vendor,
@@ -1159,7 +1178,7 @@
 
             if (vendor && service && region) {
                 try {
-                    const riskData = await fetchCloudRiskData(service, region);
+                    const riskData = await fetchCloudRiskData(service, region, premium);
                     customerMetrics.vendor.push(vendor);
                     customerMetrics.service.push(service);
                     customerMetrics.region.push(region);
@@ -1213,12 +1232,12 @@
                     vendorMetrics[vendor].annual_downtime_minutes.push(Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0);
                     vendorMetrics[vendor].expected_annual_service_minutes_down_by_sla_tier1.push(Number(riskData?.expected_annual_service_minutes_down_by_sla_tier1) || 0);
 
-                    await addServiceAnalysis(service, riskData, i);
+                    await addServiceAnalysis(service, riskData, i, premium);
 
-                    const outageData = await fetchOutageData(service);
+                    const outageData = await fetchOutageData(service, premium);
                     if (outageData && Array.isArray(outageData) && outageData.length > 0) {
                         renderOutageChart(outageData, service);
-                        const riskData = await fetchCloudRiskData(service, region);
+                        const riskData = await fetchCloudRiskData(service, region, premium);
                         await compareMaxExpectedDowntime(riskData, service);
                         await displayOutageData(service, outageData);
                     }
@@ -1647,7 +1666,7 @@
         });
     }
 
-    async function addServiceAnalysis(service, riskData, trioNumber) {
+    async function addServiceAnalysis(service, riskData, trioNumber, premium = false) {
         const servicesContainer = document.getElementById("services-analysis");
         
         // Get the monthly cost from the input
@@ -1793,7 +1812,7 @@
         servicesContainer.appendChild(serviceSection);
 
         // Update outage analysis
-        const outageData = await fetchOutageData(service);
+        const outageData = await fetchOutageData(service, premium);
         if (riskData.webscraper_annual_period_service_down_per_year_in_minutes > 0) {
             await updateOutageAnalysis(service, riskData, outageData,monthy_customer_service_spent); 
         }
@@ -2451,7 +2470,7 @@
                 });
 
                 // Submit the data automatically
-                await submitData();
+                await submitData(false,true);
             }
 
         } catch (error) {
