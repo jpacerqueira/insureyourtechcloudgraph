@@ -397,11 +397,44 @@
         .measure-your-cloud-risk-details-content {
             transition: max-height 0.3s ease-out;
             overflow: hidden;
-            max-height: 2500px;
+            max-height: 1600px;
+            overflow: auto; /* Enable both vertical and horizontal scrolling */
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: #0984e3 #f0f0f0; /* For Firefox - blue scrollbar */
         }
-        
+
         .collapsed .measure-your-cloud-risk-details-content {
             max-height: 0;
+        }
+
+        /* Webkit scrollbar styling (Chrome, Safari, Edge) */
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar {
+            width: 8px;  /* Vertical scrollbar width */
+            height: 8px; /* Horizontal scrollbar height */
+        }
+
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar-thumb {
+            background: #0984e3;
+            border-radius: 4px;
+        }
+
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar-thumb:hover {
+            background: #0773c5;
+        }
+
+        /* Style the corner where scrollbars meet */
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar-corner {
+            background: #f0f0f0;
+        }
+
+        /* Ensure content has minimum width to trigger horizontal scroll if needed */
+        #variableContainer {
+            min-width: min-content;
         }
 
         .cloud-risk-details-content {
