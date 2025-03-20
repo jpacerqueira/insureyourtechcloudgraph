@@ -397,11 +397,44 @@
         .measure-your-cloud-risk-details-content {
             transition: max-height 0.3s ease-out;
             overflow: hidden;
-            max-height: 2500px;
+            max-height: 1600px;
+            overflow: auto; /* Enable both vertical and horizontal scrolling */
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: #0984e3 #f0f0f0; /* For Firefox - blue scrollbar */
         }
-        
+
         .collapsed .measure-your-cloud-risk-details-content {
             max-height: 0;
+        }
+
+        /* Webkit scrollbar styling (Chrome, Safari, Edge) */
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar {
+            width: 8px;  /* Vertical scrollbar width */
+            height: 8px; /* Horizontal scrollbar height */
+        }
+
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar-thumb {
+            background: #0984e3;
+            border-radius: 4px;
+        }
+
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar-thumb:hover {
+            background: #0773c5;
+        }
+
+        /* Style the corner where scrollbars meet */
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar-corner {
+            background: #f0f0f0;
+        }
+
+        /* Ensure content has minimum width to trigger horizontal scroll if needed */
+        #variableContainer {
+            min-width: min-content;
         }
 
         .cloud-risk-details-content {
@@ -450,7 +483,8 @@
         <span class="collapse-icon"></span>
     </div>
     <div class="measure-your-cloud-risk-details-content">
-        <h4>Compare Cloud.Risk of your services to other cloud vendors</h4>
+        <h4>Compare cloud services between multiple cloud vendors</h4>
+        <h4>Use our Premium or Freemium API submissions</h4>
         <!-- Buttons to add or remove pairs -->
         <div class="controls">
             <button onclick="clearSubmission()" style="background-color: #ff7675;">Clear Submission</button>
@@ -463,7 +497,7 @@
         <div class="controls">
             <button onclick="addVariablePair()" style="background-color: #0984e3;">+</button>
             <button onclick="removeVariablePair()" style="background-color: #0984e3;">-</button>
-            <button onclick="submitData(true)" style="background-color: #0984e3;">Submit Data</button>
+            <button onclick="submitData(true)" style="background-color: #0984e3;">Freemium</button>
         </div>
     </div>
 </div>
@@ -471,7 +505,7 @@
 <div class="container" id="outageInformation">
     <h2>Outage Information</h2>
     <h4>Cloud.Risk uses webscrappers and GenAI to get outage information from the cloud vendors</h4>
-    <h4>The CloudRisk.Simulation Freemium tier is limited to Information from January 2022 until November 2024</h4>
+    <h4>The CloudRisk.Simulation Freemium tier is limited to Information from January 2024 until now</h4>
     <h4>Consider Upgrading to Premium for more accurate information</h4>
     <div id="outageChartContainer"></div>
     <div id="outageComparison"></div>
@@ -732,6 +766,7 @@
     
     async function fetchCloudRiskData(service, region) {
         const API_BASE_URL = await fetchAPIBaseUrl();
+        const customerId = window.ENV.userId; // Get from your environment
         try {
             const fetchOptions = {
                 method: 'GET',
@@ -748,7 +783,7 @@
             }
 
             const response = await fetch(
-                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${encodeURIComponent(service)}/global_or_by_regions/${encodeURIComponent(region)}`,
+                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${encodeURIComponent(service)}/global_or_by_regions/${encodeURIComponent(region)}?customerId=${customerId}`,
                 fetchOptions
             );
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -762,6 +797,7 @@
     // Function to fetch outage data and render the chart
     async function fetchOutageData(service) {
         const API_BASE_URL = await fetchAPIBaseUrl();
+        const customerId = window.ENV.userId; // Get from your environment
         try {
             const fetchOptions = {
                 method: 'GET',
@@ -778,7 +814,7 @@
             }
 
             const response = await fetch(
-                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${encodeURIComponent(service)}`,
+                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${encodeURIComponent(service)}?customerId=${customerId}`,
                 fetchOptions
             );
 
@@ -2310,7 +2346,7 @@
         const API_BASE_URL = await fetchAPIBaseUrl();
         
         try {
-            const response = await fetch(`${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/customers/fetch/customer/${userId}`);
+            const response = await fetch(`${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/customers/fetch/customer/${userId}?customerId=${userId}`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             
             const data = await response.json();

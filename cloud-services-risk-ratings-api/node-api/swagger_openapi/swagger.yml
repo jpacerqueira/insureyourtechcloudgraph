@@ -828,3 +828,30 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/CustomerSubmission'
+
+  parameters:
+    customerIdParam:
+      name: customerId
+      in: query
+      required: true
+      description: Customer ID for authentication and access control
+      schema:
+        type: string
+
+  responses:
+    PremiumRequired:
+      description: Premium subscription required
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: "Premium access required"
+              current_subscription:
+                type: string
+                example: "freemium"
+              details:
+                type: string
+                example: "This endpoint requires a premium subscription"

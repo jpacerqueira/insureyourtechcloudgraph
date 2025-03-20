@@ -396,11 +396,44 @@
         .measure-your-cloud-risk-details-content {
             transition: max-height 0.3s ease-out;
             overflow: hidden;
-            max-height: 2500px;
+            max-height: 1600px;
+            overflow: auto; /* Enable both vertical and horizontal scrolling */
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: #0984e3 #f0f0f0; /* For Firefox - blue scrollbar */
         }
-        
+
         .collapsed .measure-your-cloud-risk-details-content {
             max-height: 0;
+        }
+
+        /* Webkit scrollbar styling (Chrome, Safari, Edge) */
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar {
+            width: 8px;  /* Vertical scrollbar width */
+            height: 8px; /* Horizontal scrollbar height */
+        }
+
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar-thumb {
+            background: #0984e3;
+            border-radius: 4px;
+        }
+
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar-thumb:hover {
+            background: #0773c5;
+        }
+
+        /* Style the corner where scrollbars meet */
+        .measure-your-cloud-risk-details-content::-webkit-scrollbar-corner {
+            background: #f0f0f0;
+        }
+
+        /* Ensure content has minimum width to trigger horizontal scroll if needed */
+        #variableContainer {
+            min-width: min-content;
         }
 
         .cloud-risk-details-content {
@@ -411,6 +444,88 @@
 
         .collapsed .cloud-risk-details-content {
             max-height: 0;
+        }
+
+        /* Add this style section in your CSS */
+        .upgrade-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        /* Update modal styles */
+        .upgrade-modal-content {
+            position: relative;
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: #666; /* Add default text color for all content */
+        }
+
+        .upgrade-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .upgrade-modal-title {
+            color: #0984e3; /* Keep the title blue */
+            margin: 0;
+        }
+
+        .upgrade-close {
+            cursor: pointer;
+            font-size: 24px;
+            color: #666;
+        }
+
+        .upgrade-features {
+            margin: 20px 0;
+            padding: 0;
+            list-style: none;
+            color: #666; /* Ensure list items are gray */
+        }
+
+        .upgrade-features li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .upgrade-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #0984e3; /* Keep checkmark blue */
+        }
+
+        #upgradeMessage {
+            color: #666; /* Ensure message text is gray */
+        }
+
+        .upgrade-button {
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .upgrade-button:hover {
+            background-color: #0773c5;
         }
     </style>
 </head>
@@ -423,33 +538,34 @@
         <span class="collapse-icon"></span>
     </div>
     <div class="company-details-content">
-        <!-- Input fields for Company Name and Project Name -->
-        <div>
-            <label for="sessionID">sessionID</label>
-            <input type="text" id="sessionID" value="{{sessionID}}" readonly>
-        </div>
-        <div>
-            <label for="userId">userId</label>
-            <input type="text" id="userId" value="{{userId}}" readonly>
-        </div>
-        <div>
-            <label for="companyName">Company Name (required)</label>
-            <input type="text" id="companyName" required value="{{companyName}}">
-        </div>
-        <div>
-            <label for="projectName">Submission Project Name (optional)</label>
-            <input type="text" id="projectName" placeholder="Defaults to Company Name if blank">
+    <!-- Input fields for Company Name and Project Name -->
+    <div>
+        <label for="sessionID">sessionID</label>
+        <input type="text" id="sessionID" value="{{sessionID}}" readonly>
+    </div>
+    <div>
+        <label for="userId">userId</label>
+        <input type="text" id="userId" value="{{userId}}" readonly>
+    </div>
+    <div>
+        <label for="companyName">Company Name (required)</label>
+        <input type="text" id="companyName" required value="{{companyName}}">
+    </div>
+    <div>
+        <label for="projectName">Submission Project Name (optional)</label>
+        <input type="text" id="projectName" placeholder="Defaults to Company Name if blank">
         </div>
     </div>
 </div>
 
 <div class="container collapsed">
     <div class="collapsible-section" onclick="toggleSection(this)">
-        <h2>Measure your Cloud.Risk</h2>
+    <h2>Measure your Cloud.Risk</h2>
         <span class="collapse-icon"></span>
     </div>
     <div class="measure-your-cloud-risk-details-content">
-        <h4>Compare Cloud.Risk of your services to other cloud vendors</h4>
+        <h4>Compare cloud services between multiple cloud vendors</h4>
+        <h4>Use our Premium or Freemium API submissions</h4>
         <!-- Buttons to add or remove pairs -->
         <div class="controls">
             <button onclick="clearSubmission()" style="background-color: #ff7675;">Clear Submission</button>
@@ -462,7 +578,8 @@
         <div class="controls">
             <button onclick="addVariablePair()" style="background-color: #0984e3;">+</button>
             <button onclick="removeVariablePair()" style="background-color: #0984e3;">-</button>
-            <button onclick="submitData(true)" style="background-color: #0984e3;">Submit Data</button>
+            <button onclick="submitData(true,true)" style="background-color: #0984e3;">Premium</button>
+            <button onclick="submitData(true,false)" style="background-color: #0984e3;">Freemium</button>
         </div>
     </div>
 </div>
@@ -470,7 +587,7 @@
 <div class="container" id="outageInformation">
     <h2>Outage Information</h2>
     <h4>Cloud.Risk uses webscrappers and GenAI to get outage information from the cloud vendors</h4>
-    <h4>The CloudRisk.Simulation Freemium tier is limited to Information from January 2022 until November 2024</h4>
+    <h4>The CloudRisk.Simulation Freemium tier is limited to Information from January 2024 until now</h4>
     <h4>Consider Upgrading to Premium for more accurate information</h4>
     <div id="outageChartContainer"></div>
     <div id="outageComparison"></div>
@@ -498,16 +615,16 @@
             <div id="services-exceeding-sla_tier4">0</div>
         </div>
     </div>
-
+    
     <div id="outageTableContainer collapsed">
         <div class="collapsible-section" onclick="toggleSection(this)">
-            <h2>Outage Detailed Information</h2>
+        <h2>Outage Detailed Information</h2>
             <span class="collapse-icon"></span>
         </div>
         <div class="outage-table-container">
-            <h3>Webscrapper and GenAI Outage Information</h3>
-            <table id="outageTable">
-                <thead>
+        <h3>Webscrapper and GenAI Outage Information</h3>
+        <table id="outageTable">
+            <thead>
                 <tr>
                     <th title="Cloud service name">Service</th>
                     <th title="Cloud provider name">Cloud Provider</th>
@@ -524,9 +641,9 @@
                     <th title="Estimated credit back percentage">Estimated Credit Back (%)</th>
                     <th title="Source of outage report">Source Report</th>
                 </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+            </thead>
+            <tbody></tbody>
+        </table>
         </div>
     </div>
 </div>
@@ -729,8 +846,9 @@
     // Copy and modify the JavaScript from CloudRisk.Simulation.html
     // Update fetch calls to use API_BASE_URL
     
-    async function fetchCloudRiskData(service, region) {
+    async function fetchCloudRiskData(service, region, premium = false) {
         const API_BASE_URL = await fetchAPIBaseUrl();
+        const customerId = window.ENV.userId; // Get from your environment
         try {
             const fetchOptions = {
                 method: 'GET',
@@ -746,11 +864,28 @@
                 fetchOptions.rejectUnauthorized = false;
             }
 
-            const response = await fetch(
-                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/fetch/service/service_name/${encodeURIComponent(service)}/global_or_by_regions/${encodeURIComponent(region)}`,
-                fetchOptions
-            );
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            let response; // Declare response variable outside the if/else blocks
+            if (premium) {
+                response = await fetch(
+                    `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/fetch/service/service_name/${encodeURIComponent(service)}/global_or_by_regions/${encodeURIComponent(region)}?customerId=${customerId}`,
+                    fetchOptions
+                );
+            }
+            else {
+                response = await fetch(
+                    `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/fetch/service/service_name/${encodeURIComponent(service)}/global_or_by_regions/${encodeURIComponent(region)}?customerId=${customerId}`,
+                    fetchOptions
+                );
+            }
+            if (!response.ok) {
+                const error = await response.json();
+                if (response.status === 403) {
+                    // Handle premium access denied
+                    showUpgradePrompt(error.current_subscription);
+                    return null;
+                }
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }    
             return await response.json();
         } catch (error) {
             console.error('Error fetching cloud risk data:', error);
@@ -759,8 +894,9 @@
     }
     
     // Function to fetch outage data and render the chart
-    async function fetchOutageData(service) {
+    async function fetchOutageData(service, premium = false) {
         const API_BASE_URL = await fetchAPIBaseUrl();
+        const customerId = window.ENV.userId;
         try {
             const fetchOptions = {
                 method: 'GET',
@@ -771,15 +907,23 @@
                 mode: 'cors'
             };
             
-            // Add rejectUnauthorized: false for development environment
             if (window.ENV.isSSLBypassed) {
                 fetchOptions.rejectUnauthorized = false;
             }
 
-            const response = await fetch(
-                `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/outages/service/${encodeURIComponent(service)}`,
-                fetchOptions
-            );
+            let response;
+            if (premium) {
+                response = await fetch(
+                    `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/outages/service/${encodeURIComponent(service)}?customerId=${customerId}`,
+                    fetchOptions
+                );
+            }
+            else {
+                response = await fetch(
+                    `${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-freemium/freemium/outages/service/${encodeURIComponent(service)}?customerId=${customerId}`,
+                    fetchOptions
+                );
+            }
 
             // Handle different response status codes
             if (response.status === 404) {
@@ -912,7 +1056,7 @@
 
 
     // Update submit function to handle metrics calculation and display
-    async function submitData(saveNeo4jData = false) {
+    async function submitData(saveNeo4jData = false, premium = false) {
         const companyName = document.getElementById("companyName").value.trim();
         const projectName = document.getElementById("projectName").value.trim() || companyName;
 
@@ -931,7 +1075,7 @@
 
             if (vendor && service && region) {
                 try {
-                    const riskData = await fetchCloudRiskData(service, region);
+                    const riskData = await fetchCloudRiskData(service, region, premium);
                     selectedServices.push({
                         name: service,
                         vendor: vendor,
@@ -1067,7 +1211,7 @@
 
             if (vendor && service && region) {
                 try {
-                    const riskData = await fetchCloudRiskData(service, region);
+                    const riskData = await fetchCloudRiskData(service, region, premium);
                     customerMetrics.vendor.push(vendor);
                     customerMetrics.service.push(service);
                     customerMetrics.region.push(region);
@@ -1121,12 +1265,12 @@
                     vendorMetrics[vendor].annual_downtime_minutes.push(Number(riskData?.webscraper_annual_period_service_down_per_year_in_minutes) || 0);
                     vendorMetrics[vendor].expected_annual_service_minutes_down_by_sla_tier1.push(Number(riskData?.expected_annual_service_minutes_down_by_sla_tier1) || 0);
 
-                    await addServiceAnalysis(service, riskData, i);
+                    await addServiceAnalysis(service, riskData, i, premium);
 
-                    const outageData = await fetchOutageData(service);
+                    const outageData = await fetchOutageData(service, premium);
                     if (outageData && Array.isArray(outageData) && outageData.length > 0) {
                         renderOutageChart(outageData, service);
-                        const riskData = await fetchCloudRiskData(service, region);
+                        const riskData = await fetchCloudRiskData(service, region, premium);
                         await compareMaxExpectedDowntime(riskData, service);
                         await displayOutageData(service, outageData);
                     }
@@ -1555,7 +1699,7 @@
         });
     }
 
-    async function addServiceAnalysis(service, riskData, trioNumber) {
+    async function addServiceAnalysis(service, riskData, trioNumber, premium = false) {
         const servicesContainer = document.getElementById("services-analysis");
         
         // Get the monthly cost from the input
@@ -1701,7 +1845,7 @@
         servicesContainer.appendChild(serviceSection);
 
         // Update outage analysis
-        const outageData = await fetchOutageData(service);
+        const outageData = await fetchOutageData(service, premium);
         if (riskData.webscraper_annual_period_service_down_per_year_in_minutes > 0) {
             await updateOutageAnalysis(service, riskData, outageData,monthy_customer_service_spent); 
         }
@@ -2088,7 +2232,7 @@
                     0;
                 console.log('monthlyCustomerServiceSpent: '+monthlyCustomerServiceSpent);
                 console.log('costImpact: '+costImpact);
-
+                
                 // add percentage credit back
                 const percentageCreditBack = 
                     real_outage_duration > expectedDowntime_tier4 ? parseFloat(riskData.percentage_service_credit_back_tier4 || 0) :
@@ -2309,8 +2453,16 @@
         const API_BASE_URL = await fetchAPIBaseUrl();
         
         try {
-            const response = await fetch(`${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/customers/fetch/customer/${userId}`);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const response = await fetch(`${API_BASE_URL}/cloud-services-risk-ratings/risk-ratings-premium/premium/customers/fetch/customer/${userId}?customerId=${userId}`);
+            if (!response.ok) {
+                const error = await response.json();
+                if (response.status === 403) {
+                    // Handle premium access denied
+                    showUpgradePrompt(error.current_subscription);
+                    return null;
+                }
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             
             const data = await response.json();
             if (!data || !data.length || !data[0].submissions.length) {
@@ -2351,7 +2503,7 @@
                 });
 
                 // Submit the data automatically
-                await submitData();
+                await submitData(false,true);
             }
 
         } catch (error) {
@@ -2378,6 +2530,128 @@
 <script>
     function toggleSection(element) {
         element.parentElement.classList.toggle('collapsed');
+    }
+</script>
+
+<!-- Add this HTML structure -->
+<div id="upgradeModal" class="upgrade-modal">
+    <div class="upgrade-modal-content">
+        <div class="upgrade-modal-header">
+            <h2 class="upgrade-modal-title">Upgrade to Premium</h2>
+            <span class="upgrade-close">&times;</span>
+        </div>
+        <div id="upgradeMessage"></div>
+        <ul class="upgrade-features">
+            <li>Access to complete historical data</li>
+            <li>Detailed service analytics</li>
+            <li>Advanced risk assessment tools</li>
+            <li>Priority support</li>
+            <li>Custom reporting features</li>
+        </ul>
+        <button class="upgrade-button" onclick="handleUpgrade()">Upgrade Now</button>
+    </div>
+</div>
+
+<!-- Add this JavaScript code -->
+<script>
+    function showUpgradePrompt(currentSubscription) {
+        const modal = document.getElementById('upgradeModal');
+        const messageDiv = document.getElementById('upgradeMessage');
+        const closeBtn = document.querySelector('.upgrade-close');
+        
+        // Customize message based on current subscription
+        let message = '';
+        if (currentSubscription === 'freemium') {
+            message = `<p>Your current Freemium subscription has limited access. 
+                      Upgrade to Premium to unlock full features and data access.</p>`;
+        } else {
+            message = `<p>This feature requires a Premium subscription. 
+                      Upgrade now to access all premium features.</p>`;
+        }
+        
+        messageDiv.innerHTML = message;
+        modal.style.display = 'block';
+
+        // Close modal when clicking the X
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        };
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    }
+
+    function showErrorMessage(message) {
+        // Create a toast notification
+        const toast = document.createElement('div');
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff4757;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out;
+        `;
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        // Remove toast after 5 seconds
+        setTimeout(() => {
+            toast.style.animation = 'slideOut 0.3s ease-in';
+            setTimeout(() => toast.remove(), 300);
+        }, 5000);
+    }
+
+    function handleUpgrade() {
+        // Get current user info
+        const userId = window.ENV.userId;
+        const companyName = window.ENV.companyName;
+
+        // Redirect to upgrade page or show contact form
+        window.location.href = `/customer-portal/upgrade?userId=${userId}&companyName=${encodeURIComponent(companyName)}`;
+    }
+
+    // Add animations
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = `
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+        @keyframes slideOut {
+            from { transform: translateX(0); }
+            to { transform: translateX(100%); }
+        }
+    `;
+    document.head.appendChild(styleSheet);
+
+    // Update the fetchPremiumData function to use these features
+    async function fetchPremiumData(endpoint) {
+        const customerId = window.ENV.userId;
+        try {
+            const response = await fetch(`${endpoint}?customerId=${customerId}`);
+            if (!response.ok) {
+                const error = await response.json();
+                if (response.status === 403) {
+                    showUpgradePrompt(error.current_subscription);
+                    return null;
+                }
+                throw new Error(error.details || error.error);
+            }
+            return await response.json();
+        } catch (error) {
+            console.error('API Error:', error);
+            showErrorMessage(error.message);
+            return null;
+        }
     }
 </script>
 
