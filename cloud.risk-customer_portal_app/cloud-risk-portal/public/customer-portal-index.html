@@ -538,23 +538,26 @@
         <span class="collapse-icon"></span>
     </div>
     <div class="company-details-content">
-    <!-- Input fields for Company Name and Project Name -->
-    <div>
-        <label for="sessionID">sessionID</label>
-        <input type="text" id="sessionID" value="{{sessionID}}" readonly>
-    </div>
-    <div>
-        <label for="userId">userId</label>
-        <input type="text" id="userId" value="{{userId}}" readonly>
-    </div>
-    <div>
-        <label for="companyName">Company Name (required)</label>
-        <input type="text" id="companyName" required value="{{companyName}}">
-    </div>
-    <div>
-        <label for="projectName">Submission Project Name (optional)</label>
-        <input type="text" id="projectName" placeholder="Defaults to Company Name if blank">
+        <!-- Input fields for Company Name and Project Name -->
+        <div>
+            <label for="sessionID">sessionID</label>
+            <input type="text" id="sessionID" value="{{sessionID}}" readonly>
         </div>
+        <div>
+            <label for="userId">userId</label>
+            <input type="text" id="userId" value="{{userId}}" readonly>
+        </div>
+        <div>
+            <label for="companyName">Company Name (required)</label>
+            <input type="text" id="companyName" required value="{{companyName}}">
+        </div>
+        <div>
+            <label for="projectName">Submission Project Name (optional)</label>
+            <input type="text" id="projectName" placeholder="Defaults to Company Name if blank">
+        </div>
+    </div>
+    <div class="controls">
+        <button onclick="showUpgradePrompt('freemium')" style="margin-top: 10px; position: relative; left: 50%; transform: translateX(-50%); background-color: #0984e3;">Premium/Freemium Upgrade</button>
     </div>
 </div>
 
@@ -575,6 +578,7 @@
         <!-- Container to hold dynamically generated variable pairs -->
         <div id="variableContainer"></div>
         <!-- Repeated Buttons to add or remove pairs -->
+        <h4>Submission controls - Premium/Freemium API Submissions</h4>
         <div class="controls">
             <button onclick="addVariablePair()" style="background-color: #0984e3;">+</button>
             <button onclick="removeVariablePair()" style="background-color: #0984e3;">-</button>
