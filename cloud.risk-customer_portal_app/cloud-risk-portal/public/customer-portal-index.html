@@ -7,7 +7,7 @@
     <!-- Add these new font and icon libraries -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://insureyourtech.cloud&size=18">
+    <link rel="icon" type="image/x-icon" src="/images/favicon.ico" href="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://insureyourtech.cloud&size=18">
     <script>
         // Initialize ENV with default values
         window.ENV = window.ENV || {
@@ -234,11 +234,13 @@
 
         /* Add the following CSS for the Outage Information section */
         #cloudRisk {
-            height: 1600px;
+            min-height: 200px;
+            max-height: 1000px; /* Flexible maximum height */
             overflow-y: auto;
         }
         #outageInformation {
-            height: 1600px;
+            min-height: 200px;
+            max-height: 1600px; /* Flexible maximum height */
             overflow-y: auto;
         }
         #outageAnalysis {
@@ -293,6 +295,13 @@
         /* Add hover effect for better readability */
         #outageTable tbody tr:hover {
             background-color: #353b48;
+        }
+
+        /* Add these new styles while keeping existing ones */
+        #OutageGraphResults {
+            position: relative;
+            overflow: auto;
+            max-height: 1600px; /* Adjust height as needed */
         }
 
         /* Add tooltip styles */
@@ -393,6 +402,102 @@
             overflow: auto;
         }
 
+        .outage-graph-result-container {
+            transition: max-height 0.3s ease-out;
+            overflow: hidden;
+            max-height: 1600px;
+            overflow: auto; /* Enable both vertical and horizontal scrolling */
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: #0984e3 #f0f0f0; /* For Firefox - blue scrollbar */
+        }
+
+        /* Collapsed state */
+        .collapsed .outage-graph-result-container {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0;
+            border: none;
+        }
+        
+        /* Webkit scrollbar styling (Chrome, Safari, Edge) */
+        .outage-graph-result-container::-webkit-scrollbar {
+            width: 8px;  /* Vertical scrollbar width */
+            height: 8px; /* Horizontal scrollbar height */
+        }
+        
+        .outage-graph-result-container::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+        
+        .outage-graph-result-container::-webkit-scrollbar-thumb {
+            background: #0984e3;
+            border-radius: 4px;
+        }
+        
+        .outage-graph-result-container::-webkit-scrollbar-thumb:hover {
+            background: #0773c5;
+        }
+        
+        /* Style the corner where scrollbars meet */
+        .outage-graph-result-container::-webkit-scrollbar-corner {
+            background: #f0f0f0;
+        }
+        
+        /* Ensure content is visible when expanded */
+        .outage-graph-result-container.expanded {
+            max-height: 600px;
+            overflow: auto;
+        }
+
+        .outage-information-content {
+            transition: max-height 0.3s ease-out;
+            overflow: hidden;
+            max-height: 1600px;
+            overflow: auto; /* Enable both vertical and horizontal scrolling */
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: #0984e3 #f0f0f0; /* For Firefox - blue scrollbar */
+        }
+
+        /* Collapsed state */
+        .collapsed .outage-information-content {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0;
+            border: none;
+        }
+        
+        /* Webkit scrollbar styling (Chrome, Safari, Edge) */
+        .outage-information-content::-webkit-scrollbar {
+            width: 8px;  /* Vertical scrollbar width */
+            height: 8px; /* Horizontal scrollbar height */
+        }
+        
+        .outage-information-content::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+        
+        .outage-information-content::-webkit-scrollbar-thumb {
+            background: #0984e3;
+            border-radius: 4px;
+        }
+        
+        .outage-information-content::-webkit-scrollbar-thumb:hover {
+            background: #0773c5;
+        }
+        
+        /* Style the corner where scrollbars meet */
+        .outage-information-content::-webkit-scrollbar-corner {
+            background: #f0f0f0;
+        }
+        
+        /* Ensure content is visible when expanded */
+        .outage-information-content.expanded {
+            max-height: 600px;
+            overflow: auto;
+        }
+    
         .measure-your-cloud-risk-details-content {
             transition: max-height 0.3s ease-out;
             overflow: hidden;
@@ -538,34 +643,37 @@
         <span class="collapse-icon"></span>
     </div>
     <div class="company-details-content">
-    <!-- Input fields for Company Name and Project Name -->
-    <div>
-        <label for="sessionID">sessionID</label>
-        <input type="text" id="sessionID" value="{{sessionID}}" readonly>
-    </div>
-    <div>
-        <label for="userId">userId</label>
-        <input type="text" id="userId" value="{{userId}}" readonly>
-    </div>
-    <div>
-        <label for="companyName">Company Name (required)</label>
-        <input type="text" id="companyName" required value="{{companyName}}">
-    </div>
-    <div>
-        <label for="projectName">Submission Project Name (optional)</label>
-        <input type="text" id="projectName" placeholder="Defaults to Company Name if blank">
+        <!-- Input fields for Company Name and Project Name -->
+        <div>
+            <label for="sessionID">sessionID</label>
+            <input type="text" id="sessionID" value="{{sessionID}}" readonly>
         </div>
+        <div>
+            <label for="userId">userId</label>
+            <input type="text" id="userId" value="{{userId}}" readonly>
+        </div>
+        <div>
+            <label for="companyName">Company Name (required)</label>
+            <input type="text" id="companyName" required value="{{companyName}}">
+        </div>
+        <div>
+            <label for="projectName">Submission Project Name (optional)</label>
+            <input type="text" id="projectName" placeholder="Defaults to Company Name if blank">
+        </div>
+    </div>
+    <div class="controls">
+        <button onclick="showUpgradePrompt('freemium')" style="margin-top: 10px; position: center; left: 50%; transform: translateX(-5%); background-color: #0984e3;">Premium/Freemium Upgrade</button>
     </div>
 </div>
 
 <div class="container collapsed">
     <div class="collapsible-section" onclick="toggleSection(this)">
-    <h2>Measure your Cloud.Risk</h2>
+        <h2>Measure your Cloud.Risk</h2>
         <span class="collapse-icon"></span>
     </div>
     <div class="measure-your-cloud-risk-details-content">
         <h4>Compare cloud services between multiple cloud vendors</h4>
-        <h4>Use our Premium or Freemium API submissions</h4>
+        <h5>Add and Remove service pairs</h5>
         <!-- Buttons to add or remove pairs -->
         <div class="controls">
             <button onclick="clearSubmission()" style="background-color: #ff7675;">Clear Submission</button>
@@ -578,19 +686,24 @@
         <div class="controls">
             <button onclick="addVariablePair()" style="background-color: #0984e3;">+</button>
             <button onclick="removeVariablePair()" style="background-color: #0984e3;">-</button>
-            <button onclick="submitData(true,true)" style="background-color: #0984e3;">Premium</button>
-            <button onclick="submitData(true,false)" style="background-color: #0984e3;">Freemium</button>
+            <button onclick="submitData(true,true)" style="background-color: #0984e3;">Premium API</button>
+            <button onclick="submitData(true,false)" style="background-color: #0984e3;">Freemium API</button>
         </div>
     </div>
 </div>
 
-<div class="container" id="outageInformation">
-    <h2>Outage Information</h2>
-    <h4>Cloud.Risk uses webscrappers and GenAI to get outage information from the cloud vendors</h4>
-    <h4>The CloudRisk.Simulation Freemium tier is limited to Information from January 2024 until now</h4>
-    <h4>Consider Upgrading to Premium for more accurate information</h4>
-    <div id="outageChartContainer"></div>
-    <div id="outageComparison"></div>
+<div class="container" id="outageInformation collapsed">
+    <div class="collapsible-section" onclick="toggleSection(this)">
+        <h2>Outage Information</h2>
+        <span class="collapse-icon"></span>
+    </div>
+    <div class="outage-information-content">
+        <h4>Cloud.Risk uses webscrappers and GenAI to get outage information from the cloud vendors</h4>
+        <h4>The CloudRisk.Simulation Freemium tier is limited to Information from January 2024 until now</h4>
+        <h4>Consider Upgrading to Premium for more accurate information</h4>
+        <div id="outageChartContainer"></div>
+        <div id="outageComparison"></div>
+    </div>
 </div>
 
 <div class="container" id="outageAnalysis">
@@ -618,32 +731,32 @@
     
     <div id="outageTableContainer collapsed">
         <div class="collapsible-section" onclick="toggleSection(this)">
-        <h2>Outage Detailed Information</h2>
+            <h2>Outage Detailed Information</h2>
             <span class="collapse-icon"></span>
         </div>
         <div class="outage-table-container">
-        <h3>Webscrapper and GenAI Outage Information</h3>
-        <table id="outageTable">
-            <thead>
-                <tr>
-                    <th title="Cloud service name">Service</th>
-                    <th title="Cloud provider name">Cloud Provider</th>
-                    <th title="Affected regions">Regions</th>
-                    <th title="Affected availability zones">Availability Zones</th>
-                    <th title="Outage start time">Start Time</th>
-                    <th title="Outage end time">End Time</th>
-                    <th title="Duration in minutes">Duration (minutes)</th>
-                    <th title="Period of downtime">Downtime Period</th>
-                    <th title="Root cause of the outage">Root Cause</th>
-                    <th title="Current status">Status</th>
-                    <th title="Impact on Service Level Agreement">SLA Impact</th>
-                    <th title="Estimated credit back amount">Estimated Credit Back ($)</th>
-                    <th title="Estimated credit back percentage">Estimated Credit Back (%)</th>
-                    <th title="Source of outage report">Source Report</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+            <h3>Webscrapper and GenAI Outage Information</h3>
+            <table id="outageTable">
+                <thead>
+                    <tr>
+                        <th title="Cloud service name">Service</th>
+                        <th title="Cloud provider name">Cloud Provider</th>
+                        <th title="Affected regions">Regions</th>
+                        <th title="Affected availability zones">Availability Zones</th>
+                        <th title="Outage start time">Start Time</th>
+                        <th title="Outage end time">End Time</th>
+                        <th title="Duration in minutes">Duration (minutes)</th>
+                        <th title="Period of downtime">Downtime Period</th>
+                        <th title="Root cause of the outage">Root Cause</th>
+                        <th title="Current status">Status</th>
+                        <th title="Impact on Service Level Agreement">SLA Impact</th>
+                        <th title="Estimated credit back amount">Estimated Credit Back ($)</th>
+                        <th title="Estimated credit back percentage">Estimated Credit Back (%)</th>
+                        <th title="Source of outage report">Source Report</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
         </div>
     </div>
 </div>
@@ -656,9 +769,17 @@
         <span id="fixed-dots" style="font-size: 18px; font-weight: bold;">.</span>
         <span id="growing-dots" style="font-size: 18px; font-weight: bold;"></span>
         <img id="spinning-logo" src="/customer-portal/images/Logo-png-v5.png" alt="Cloud.Risk" style="width: 77px; height: 77px; margin-left: 15px; color: #0984e3;">
+    </div>  
+    <div id="OutageGraphResults collapsed">
+        <div class="collapsible-section" onclick="toggleSection(this)">
+            <h2>Metrics - CloudRiskGraph(™️)</h2>
+            <span class="collapse-icon"></span>
+        </div>
+        <div class="outage-graph-result-container">
+            <!-- Div to Display Submission Result -->
+            <div id="result"></div>
+        </div>
     </div>
-    <!-- Div to Display Submission Result -->
-    <div id="result"></div>
     <script>
         // Add this script to handle the loading animation
         document.addEventListener('DOMContentLoaded', function() {
