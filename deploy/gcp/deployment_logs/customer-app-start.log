@@ -1,9 +1,22 @@
-Attaching to cloudrisk-customer_portal_app_customer_portal_app_1, cloud-risk-portal, cloudrisk-customer_portal_app_customer_graph_1
+Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_app_1, cloudrisk-customer_portal_app_customer_graph_1
+[33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:04.507+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:04.551+0000 INFO  Starting...
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:06.712+0000 INFO  This instance is ServerId{61717d7d} (61717d7d-7822-47c2-bcf8-dfb0a20aae09)
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:09.099+0000 INFO  ======== Neo4j 5.25.1 ========
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:16.157+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:16.343+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.540+0000 INFO  HTTP enabled on 0.0.0.0:7474.
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.543+0000 INFO  Remote interface available at http://localhost:7474/
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.556+0000 INFO  id: 2AED9AE976290B6291442943EABBA49E0413D5D7205BAD4E7A767D6E562D0DB7
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.560+0000 INFO  name: system
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.565+0000 INFO  creationDate: 2025-03-17T01:12:57.238Z
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.565+0000 INFO  Started.
 [36mcloud-risk-portal      |[0m 
 [36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
 [36mcloud-risk-portal      |[0m > node server.js
 [36mcloud-risk-portal      |[0m 
-[36mcloud-risk-portal      |[0m Server - new session - sessionSecret: 5c3476d5b9d81c41a58ddb820204d4291a80487e1c2b146236d604c0770bdd6e
+[36mcloud-risk-portal      |[0m Server - new session - sessionSecret: 838334628d785b6ea5a46be5810a2f13ad1cfcb37abef931e39479486f7cb617
 [32mcustomer_portal_app_1  |[0m 
 [32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
 [32mcustomer_portal_app_1  |[0m 
