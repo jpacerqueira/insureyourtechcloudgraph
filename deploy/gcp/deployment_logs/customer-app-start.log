@@ -1,40 +1,4 @@
 Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_app_1, cloudrisk-customer_portal_app_customer_graph_1
-[33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
-[33mcustomer_graph_1       |[0m 2025-03-23 23:15:04.507+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
-[33mcustomer_graph_1       |[0m 2025-03-23 23:15:04.551+0000 INFO  Starting...
-[33mcustomer_graph_1       |[0m 2025-03-23 23:15:06.712+0000 INFO  This instance is ServerId{61717d7d} (61717d7d-7822-47c2-bcf8-dfb0a20aae09)
-[33mcustomer_graph_1       |[0m 2025-03-23 23:15:09.099+0000 INFO  ======== Neo4j 5.25.1 ========
-[33mcustomer_graph_1       |[0m 2025-03-23 23:15:16.157+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
-[33mcustomer_graph_1       |[0m 2025-03-23 23:15:16.343+0000 INFO  Bolt enabled on 0.0.0.0:7687.
-[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.540+0000 INFO  HTTP enabled on 0.0.0.0:7474.
-[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.543+0000 INFO  Remote interface available at http://localhost:7474/
-[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.556+0000 INFO  id: 2AED9AE976290B6291442943EABBA49E0413D5D7205BAD4E7A767D6E562D0DB7
-[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.560+0000 INFO  name: system
-[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.565+0000 INFO  creationDate: 2025-03-17T01:12:57.238Z
-[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.565+0000 INFO  Started.
-[33mcustomer_graph_1       |[0m 2025-03-24 02:33:30.038+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
-[33mcustomer_graph_1       |[0m 2025-03-24 04:16:00.863+0000 INFO  Network abort rate has normalized
-[33mcustomer_graph_1       |[0m 2025-03-24 17:26:58.485+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
-[33mcustomer_graph_1       |[0m 2025-03-24 19:40:26.894+0000 INFO  Network abort rate has normalized
-[33mcustomer_graph_1       |[0m 2025-03-24 22:04:24.629+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
-[33mcustomer_graph_1       |[0m 2025-03-25 09:49:04.486+0000 INFO  Network abort rate has normalized
-[33mcustomer_graph_1       |[0m 2025-03-25 12:12:00.560+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
-[33mcustomer_graph_1       |[0m 2025-03-26 00:02:31.423+0000 INFO  Network abort rate has normalized
-[33mcustomer_graph_1       |[0m 2025-03-26 00:02:31.426+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
-[33mcustomer_graph_1       |[0m 2025-03-28 01:35:07.953+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
-[33mcustomer_graph_1       |[0m 2025-03-28 01:35:07.953+0000 INFO  Network abort rate has normalized
-[33mcustomer_graph_1       |[0m 2025-03-31 00:02:12.274+0000 INFO  Network abort rate has normalized
-[33mcustomer_graph_1       |[0m 2025-03-31 00:02:12.274+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
-[33mcustomer_graph_1       |[0m 2025-03-31 12:46:47.474+0000 INFO  Network abort rate has normalized
-[33mcustomer_graph_1       |[0m 2025-03-31 12:51:58.767+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
-[32mcustomer_portal_app_1  |[0m 
-[32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
-[32mcustomer_portal_app_1  |[0m 
-[32mcustomer_portal_app_1  |[0m 
-[32mcustomer_portal_app_1  |[0m   You can now view your Streamlit app in your browser.
-[32mcustomer_portal_app_1  |[0m 
-[32mcustomer_portal_app_1  |[0m   URL: http://0.0.0.0:8185
-[32mcustomer_portal_app_1  |[0m 
 [36mcloud-risk-portal      |[0m 
 [36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
 [36mcloud-risk-portal      |[0m > node server.js
@@ -166,6 +130,14 @@ Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_ap
 [36mcloud-risk-portal      |[0m simulation - sessionID: cccc4a793f91e449f6a8c90676f8e820
 [36mcloud-risk-portal      |[0m simulation - sessionID: a94384b465d3ff11488c5218cb317c68
 [36mcloud-risk-portal      |[0m simulation - sessionID: b232c192f6aa8c54c1e0d6f1e58ef104
+[32mcustomer_portal_app_1  |[0m 
+[32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+[32mcustomer_portal_app_1  |[0m 
+[32mcustomer_portal_app_1  |[0m 
+[32mcustomer_portal_app_1  |[0m   You can now view your Streamlit app in your browser.
+[32mcustomer_portal_app_1  |[0m 
+[32mcustomer_portal_app_1  |[0m   URL: http://0.0.0.0:8185
+[32mcustomer_portal_app_1  |[0m 
 [36mcloud-risk-portal      |[0m simulation - sessionID: 76d1491ce4cde8e6b4a192e34ddfb08e
 [36mcloud-risk-portal      |[0m simulation - sessionID: fe81a6d97293464c66cf11fe9341b798
 [36mcloud-risk-portal      |[0m simulation - sessionID: d9eb3581d2ad7d51dd5c976302e79239
@@ -293,6 +265,34 @@ Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_ap
 [36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
 [36mcloud-risk-portal      |[0m Neo4j query executed successfully
 [36mcloud-risk-portal      |[0m save submission - sessionId: 13e22ef3e33e036f6b5f7845bc4577d3
+[33mcustomer_graph_1       |[0m Changed password for user 'neo4j'. IMPORTANT: this change will only take effect if performed before the database is started for the first time.
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:04.507+0000 INFO  Logging config in use: File '/var/lib/neo4j/conf/user-logs.xml'
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:04.551+0000 INFO  Starting...
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:06.712+0000 INFO  This instance is ServerId{61717d7d} (61717d7d-7822-47c2-bcf8-dfb0a20aae09)
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:09.099+0000 INFO  ======== Neo4j 5.25.1 ========
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:16.157+0000 INFO  Anonymous Usage Data is being sent to Neo4j, see https://neo4j.com/docs/usage-data/
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:16.343+0000 INFO  Bolt enabled on 0.0.0.0:7687.
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.540+0000 INFO  HTTP enabled on 0.0.0.0:7474.
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.543+0000 INFO  Remote interface available at http://localhost:7474/
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.556+0000 INFO  id: 2AED9AE976290B6291442943EABBA49E0413D5D7205BAD4E7A767D6E562D0DB7
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.560+0000 INFO  name: system
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.565+0000 INFO  creationDate: 2025-03-17T01:12:57.238Z
+[33mcustomer_graph_1       |[0m 2025-03-23 23:15:19.565+0000 INFO  Started.
+[33mcustomer_graph_1       |[0m 2025-03-24 02:33:30.038+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
+[33mcustomer_graph_1       |[0m 2025-03-24 04:16:00.863+0000 INFO  Network abort rate has normalized
+[33mcustomer_graph_1       |[0m 2025-03-24 17:26:58.485+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
+[33mcustomer_graph_1       |[0m 2025-03-24 19:40:26.894+0000 INFO  Network abort rate has normalized
+[33mcustomer_graph_1       |[0m 2025-03-24 22:04:24.629+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
+[33mcustomer_graph_1       |[0m 2025-03-25 09:49:04.486+0000 INFO  Network abort rate has normalized
+[33mcustomer_graph_1       |[0m 2025-03-25 12:12:00.560+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
+[33mcustomer_graph_1       |[0m 2025-03-26 00:02:31.423+0000 INFO  Network abort rate has normalized
+[33mcustomer_graph_1       |[0m 2025-03-26 00:02:31.426+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
+[33mcustomer_graph_1       |[0m 2025-03-28 01:35:07.953+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
+[33mcustomer_graph_1       |[0m 2025-03-28 01:35:07.953+0000 INFO  Network abort rate has normalized
+[33mcustomer_graph_1       |[0m 2025-03-31 00:02:12.274+0000 INFO  Network abort rate has normalized
+[33mcustomer_graph_1       |[0m 2025-03-31 00:02:12.274+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
+[33mcustomer_graph_1       |[0m 2025-03-31 12:46:47.474+0000 INFO  Network abort rate has normalized
+[33mcustomer_graph_1       |[0m 2025-03-31 12:51:58.767+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
 [36mcloud-risk-portal      |[0m Session_id not found in the database - creating new submission
 [36mcloud-risk-portal      |[0m neo4j save - sessionId: 945e2c9ce02faefee6d5d7f4734fd44b
 [36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
@@ -821,3 +821,29 @@ Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_ap
 [36mcloud-risk-portal      |[0m simulation - sessionID: b2c29334481fb17b4a0c9b17bfa5bc66
 [36mcloud-risk-portal      |[0m simulation - sessionID: c28d59dd5c01c52bdd8463dfe1f1b496
 [36mcloud-risk-portal      |[0m simulation - sessionID: 2f5a99b20d16fa525c631e3018c65a95
+[36mcloud-risk-portal      |[0m simulation - sessionID: a4f8d63a6d23a6cfd84f7323b5bcb726
+[36mcloud-risk-portal      |[0m simulation - sessionID: 5183421d46a44e6419125acacc77b2fb
+[36mcloud-risk-portal      |[0m simulation - sessionID: 075a84a451501dfe53541e46954e586b
+[36mcloud-risk-portal      |[0m simulation - sessionID: 8b9854c0d3081501123ffee291ba4177
+[36mcloud-risk-portal      |[0m simulation - sessionID: 1d82095c4eabff18f2c12547666e0055
+[36mcloud-risk-portal      |[0m simulation - sessionID: cbb5696eecb60dd225d719fbff44ab5e
+[36mcloud-risk-portal      |[0m simulation - sessionID: 462e798fe45824d508d1d57e2f441133
+[36mcloud-risk-portal      |[0m simulation - sessionID: 10ae0d8ab09253a6ed8623190b8a709d
+[36mcloud-risk-portal      |[0m simulation - sessionID: 0c1097086cc9f6bf3e98588976c2f6aa
+[36mcloud-risk-portal      |[0m simulation - sessionID: 42fc640409def07ba0de641da2c63b68
+[36mcloud-risk-portal      |[0m simulation - sessionID: 584d190b85cd08c72be30f83a319c3d1
+[36mcloud-risk-portal      |[0m simulation - sessionID: 661ef8f65f7dcb3ba45d2bc8a0c22610
+[36mcloud-risk-portal      |[0m simulation - sessionID: e8d3bff6b68bb08b9535de1d2f37bb43
+[36mcloud-risk-portal      |[0m customer-portal - sessionID: f09d7e42f87e7bff64f1adfe4a23652c
+[36mcloud-risk-portal      |[0m simulation - sessionID: cf1651e368a3658f78940b4454337ec1
+[36mcloud-risk-portal      |[0m simulation - sessionID: fe39e9279c8d8a728c8f2e85b5ce391c
+[36mcloud-risk-portal      |[0m simulation - sessionID: 48c4665d6bd1aacb70f03ff8fbc7afff
+[36mcloud-risk-portal      |[0m simulation - sessionID: 09c236bd7fbb3a4fef7d7e46d8f333de
+[36mcloud-risk-portal      |[0m simulation - sessionID: 6b8b047931f7eaf4c28075910c4bb29c
+[36mcloud-risk-portal      |[0m simulation - sessionID: f9339cd1157dfd1184b3a35e21c71b84
+[36mcloud-risk-portal      |[0m simulation - sessionID: e79278a2034e7148bbb4f0a1eec416cc
+[36mcloud-risk-portal      |[0m simulation - sessionID: 8a100e289f058e9f95dc9d919607e080
+[36mcloud-risk-portal      |[0m simulation - sessionID: 3b6a1dc0a23790fa2c2cc23ebdce0d2a
+[36mcloud-risk-portal      |[0m simulation - sessionID: fe7837db751df865cb87ea1687be444d
+[36mcloud-risk-portal      |[0m simulation - sessionID: ad98b01be6796a43c108a18f90df6c84
+[36mcloud-risk-portal      |[0m simulation - sessionID: 6759e756e959722c9128191136a7f0b2
