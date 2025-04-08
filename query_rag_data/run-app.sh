@@ -2,7 +2,7 @@
 
 # Set environment variables
 export POSTGRES_PASSWORD=password
-export POSTGRES_HOST=localhost
+export POSTGRES_HOST=0.0.0.0
 export POSTGRES_PORT=5432
 export POSTGRES_USER=postgres
 export POSTGRES_DB=cloud_risk_portal

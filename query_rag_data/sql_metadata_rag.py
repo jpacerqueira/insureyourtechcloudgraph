@@ -17,7 +17,7 @@ DB_PARAMS = {
     'dbname': 'cloud_risk_portal',
     'user': 'postgres',
     'password': os.getenv('POSTGRES_PASSWORD', 'postgres'),
-    'host': os.getenv('POSTGRES_HOST', 'localhost'),
+    'host': os.getenv('POSTGRES_HOST', '0.0.0.0'),
     'port': os.getenv('POSTGRES_PORT', '5432')
 }
 
