@@ -16,7 +16,7 @@ load_dotenv()
 DB_PARAMS = {
     'dbname': 'cloud_risk_portal',
     'user': 'postgres',
-    'password': os.getenv('POSTGRES_PASSWORD', 'postgres'),
+    'password': os.getenv('POSTGRES_PASSWORD', 'password'),
     'host': os.getenv('POSTGRES_HOST', '0.0.0.0'),
     'port': os.getenv('POSTGRES_PORT', '5432')
 }
