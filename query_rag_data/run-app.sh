@@ -7,6 +7,7 @@ export POSTGRES_PORT=5432
 export POSTGRES_USER=postgres
 export POSTGRES_DB=cloud_risk_portal
 export OLLAMA_HOST=http://localhost:11434
+export LLM=llama3.2
 
 # Build the Docker image
 echo "Building Docker image..."

@@ -19,8 +19,13 @@ RUN pip install --no-cache-dir -r sql_rag_requirements.txt
 COPY . ./querydata/
 COPY .env .
 
-# Pull the Llama 3.2 model
-RUN ollama pull llama3.2
+# Pull and run the Llama 3.2 model
+COPY run-ollama_llm.sh /app/run-ollama_llm.sh
+RUN chmod +x run-ollama_llm.sh
+EXPOSE 11434
+RUN chmod +x run-ollama_llm.sh \
+    && ./run-ollama_llm.sh \
+    && sleep 5
 
 # Expose the Streamlit port =8507
 EXPOSE 8507

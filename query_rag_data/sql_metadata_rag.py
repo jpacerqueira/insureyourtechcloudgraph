@@ -61,7 +61,7 @@ def create_rag_chain():
     vectorstore = FAISS.from_texts(texts, embeddings)
     
     # Create LLM
-    llm = Ollama(model="llama2")
+    llm = Ollama(model="llama3.2")
     
     # Create RAG chain
     qa_chain = RetrievalQA.from_chain_type(
