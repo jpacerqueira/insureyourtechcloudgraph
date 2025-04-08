@@ -1,11 +1,13 @@
 import streamlit as st
 import psycopg2
-from langchain.vectorstores import FAISS
+#from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain_ollama import OllamaEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
-from langchain.llms import Ollama
+#from langchain.llms import Ollama
+from langchain_community.llms import Ollama
 import os
 from dotenv import load_dotenv
 
