@@ -2,17 +2,17 @@
 
 # Set environment variables
 export POSTGRES_PASSWORD=password
-export POSTGRES_HOST=0.0.0.0
+export POSTGRES_HOST=postgres_rag_db
 export POSTGRES_PORT=5432
 export POSTGRES_USER=postgres
-export POSTGRES_DB=cloud_risk_portal
+export POSTGRES_DB=cloud_risk_portal_rag_data
 #export OLLAMA_HOST=http://ollama:11434
 export OLLAMA_HOST=http://0.0.0.0:11434
 export LLM=llama3.2
 export DBFILE=./init.sql
 
 # Setup docker network
-docker network create rag-network
+docker network create rag-network || true
 
 # Run the setup_postgres.sh script
 ./setup_postgres.sh $POSTGRES_USER $POSTGRES_PASSWORD $DBFILE

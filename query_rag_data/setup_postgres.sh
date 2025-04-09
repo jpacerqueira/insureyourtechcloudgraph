@@ -38,16 +38,16 @@ echo "Waiting for PostgreSQL to start..."
 sleep 10
 
 # Check if container is running
-if [ "$(docker ps -q -f name=postgres_db)" ]; then
+if [ "$(docker ps -q -f name=postgres_rag_db)" ]; then
     echo "PostgreSQL container is running successfully!"
     echo "Connection details:"
-    echo "Host: localhost"
+    echo "Host: postgres_rag_db"
     echo "Port: 5432"
     echo "Database: cloud_risk_portal_rag_data"
     echo "Username: $DB_USER"
     echo "Password: $DB_PASSWORD"
 else
     echo "Error: PostgreSQL container failed to start!"
-    docker logs postgres_db
+    docker logs postgres_rag_db
     exit 1
 fi 
