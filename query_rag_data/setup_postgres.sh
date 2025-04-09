@@ -31,7 +31,7 @@ docker run -d \
     -v "$(pwd)/$SQL_SCRIPT:/docker-entrypoint-initdb.d/init.sql" \
     -p 5432:5432 \
     --network rag-network \
-    postgres:16.4
+    postgres:17
 
 # Wait for PostgreSQL to be ready
 echo "Waiting for PostgreSQL to start..."
