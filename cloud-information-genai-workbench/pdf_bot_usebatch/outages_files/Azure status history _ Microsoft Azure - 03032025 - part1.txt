@@ -1,0 +1,88 @@
+Based on the provided text, I have identified the following public cloud services that were impacted by an outage:
+
+**Microsoft Azure**
+
+* Service: Virtual Machines
+* Region: Toronto Edge Point of Presence (TO)
+* Availability Zone: Not specified
+* Impact Date: 2025-03-03 16:22 UTC
+* Duration: 1 hour and 15 minutes
+* Root Cause: Memory issue on the line card, which led to a delay in overall response and mitigation processes
+* Downtime Period: 16:22 - 18:37 UTC (1 hour and 15 minutes)
+* Resolved Date: Not specified
+
+**Microsoft Azure**
+
+* Service: Storage
+* Region: Toronto Edge Point of Presence (TO)
+* Availability Zone: Not specified
+* Impact Date: 2025-03-03 16:22 UTC
+* Duration: 1 hour and 15 minutes
+* Root Cause: Memory issue on the line card, which led to a delay in overall response and mitigation processes
+* Downtime Period: 16:22 - 18:37 UTC (1 hour and 15 minutes)
+* Resolved Date: Not specified
+
+**Microsoft Azure**
+
+* Service: App Service
+* Region: Toronto Edge Point of Presence (TO)
+* Availability Zone: Not specified
+* Impact Date: 2025-03-03 16:22 UTC
+* Duration: 1 hour and 15 minutes
+* Root Cause: Memory issue on the line card, which led to a delay in overall response and mitigation processes
+* Downtime Period: 16:22 - 18:37 UTC (1 hour and 15 minutes)
+* Resolved Date: Not specified
+
+**Microsoft Azure**
+
+* Service: SQL Database
+* Region: Toronto Edge Point of Presence (TO)
+* Availability Zone: Not specified
+* Impact Date: 2025-03-03 16:22 UTC
+* Duration: 1 hour and 15 minutes
+* Root Cause: Memory issue on the line card, which led to a delay in overall response and mitigation processes
+* Downtime Period: 16:22 - 18:37 UTC (1 hour and 15 minutes)
+* Resolved Date: Not specified
+
+**Microsoft Azure**
+
+* Service: Azure Kubernetes Service
+* Region: Toronto Edge Point of Presence (TO)
+* Availability Zone: Not specified
+* Impact Date: 2025-03-03 16:22 UTC
+* Duration: 1 hour and 15 minutes
+* Root Cause: Memory issue on the line card, which led to a delay in overall response and mitigation processes
+* Downtime Period: 16:22 - 18:37 UTC (1 hour and 15 minutes)
+* Resolved Date: Not specified
+
+**Microsoft Azure**
+
+* Service: Azure Portal
+* Region: Toronto Edge Point of Presence (TO)
+* Availability Zone: Not specified
+* Impact Date: 2025-03-03 16:22 UTC
+* Duration: 1 hour and 15 minutes
+* Root Cause: Memory issue on the line card, which led to a delay in overall response and mitigation processes
+* Downtime Period: 16:22 - 18:37 UTC (1 hour and 15 minutes)
+* Resolved Date: Not specified
+
+**Summary**
+
+The outage affected Microsoft Azure services in the Toronto Edge Point of Presence (TO) region. The impact date was March 3, 2025, at 16:22 UTC, and the outage lasted for approximately 1 hour and 15 minutes.
+
+**Overall Summary**
+
+The outage impacted multiple services across different regions and availability zones within Microsoft Azure. The root cause was a memory issue on the line card, which led to a delay in overall response and mitigation processes. The outage started at 16:22 UTC and affected various services, including Virtual Machines, Storage, App Service, SQL Database, Azure Kubernetes Service, and Azure Portal.
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | Virtual Machines | TO | Not specified | 2025-03-03 16:22 UTC | 1 hour and 15 minutes | Memory issue on the line card | 16:22 - 18:37 UTC | Not specified |
+| Microsoft Azure | Storage | TO | Not specified | 2025-03-03 16:22 UTC | 1 hour and 15 minutes | Memory issue on the line card | 16:22 - 18:37 UTC | Not specified |
+| Microsoft Azure | App Service | TO | Not specified | 2025-03-03 16:22 UTC | 1 hour and 15 minutes | Memory issue on the line card | 16:22 - 18:37 UTC | Not specified |
+| Microsoft Azure | SQL Database | TO | Not specified | 2025-03-03 16:22 UTC | 1 hour and 15 minutes | Memory issue on the line card | 16:22 - 18:37 UTC | Not specified |
+| Microsoft Azure | Azure Kubernetes Service | TO | Not specified | 2025-03-03 16:22 UTC | 1 hour and 15 minutes | Memory issue on the line card | 16:22 - 18:37 UTC | Not specified |
+| Microsoft Azure | Azure Portal | TO | Not specified | 2025-03-03 16:22 UTC | 1 hour and 15 minutes | Memory issue on the line card | 16:22 - 18:37 UTC | Not specified |
+
+Note that the output table only includes services impacted by the outage within Microsoft Azure, as per the provided text.

@@ -1,0 +1,107 @@
+Here is the summary of the outage:
+
+**Summary**
+
+The outage affected Google Cloud Platform (GCP) services in the us-east5-c region.
+
+**Services Impacted**
+
+* AlloyDB for PostgreSQL
+* BigQuery
+* Cloud Bigtable
+* Cloud Composer
+* Cloud Dataflow
+* Cloud Filestore
+* Cloud Identity and Access Management
+* Cloud Interconnect
+* Cloud Kubernetes Engine
+* Persistent Disk
+
+The outage started on March 29, 2025, at 12:53 UTC and lasted for 6 hours and 19 minutes.
+
+**Root Cause**
+
+The root cause of the outage was a utility power outage in the zone and a subsequent failure of batteries within the uninterruptible power supply (UPS) system supporting a portion of the impacted zone.
+
+**Downtime Period**
+
+The downtime period started on March 29, 2025, at 12:53 UTC and ended on March 30, 2025, at 19:12 UTC.
+
+**Resolved Date**
+
+The outage was marked as resolved on March 30, 2025, at 17:30 UTC.
+
+Here is the breakdown of the services impacted by GCP:
+
+**GCP Services Impacted**
+
+* AlloyDB for PostgreSQL
+	+ Region: us-east5-c
+	+ Availability Zone: Not specified
+	+ Impact Date: March 29, 2025, 12:53 UTC
+	+ Duration: 6 hours and 19 minutes
+	+ Root Cause: Utility power outage in the zone and failure of batteries within the UPS system
+	+ Downtime Period: March 29, 2025, 12:53 UTC - March 30, 2025, 19:12 UTC
+* BigQuery
+	+ Region: us-east5-c
+	+ Availability Zone: Not specified
+	+ Impact Date: March 29, 2025, 12:53 UTC
+	+ Duration: 6 hours and 19 minutes
+	+ Root Cause: Utility power outage in the zone and failure of batteries within the UPS system
+	+ Downtime Period: March 29, 2025, 12:53 UTC - March 30, 2025, 19:12 UTC
+* Cloud Bigtable
+	+ Region: us-east5-c
+	+ Availability Zone: Not specified
+	+ Impact Date: March 29, 2025, 12:53 UTC
+	+ Duration: 6 hours and 19 minutes
+	+ Root Cause: Utility power outage in the zone and failure of batteries within the UPS system
+	+ Downtime Period: March 29, 2025, 12:53 UTC - March 30, 2025, 19:12 UTC
+* Cloud Composer
+	+ Region: us-east5-c
+	+ Availability Zone: Not specified
+	+ Impact Date: March 29, 2025, 12:53 UTC
+	+ Duration: 6 hours and 19 minutes
+	+ Root Cause: Utility power outage in the zone and failure of batteries within the UPS system
+	+ Downtime Period: March 29, 2025, 12:53 UTC - March 30, 2025, 19:12 UTC
+* Cloud Dataflow
+	+ Region: us-east5-c
+	+ Availability Zone: Not specified
+	+ Impact Date: March 29, 2025, 12:53 UTC
+	+ Duration: 6 hours and 19 minutes
+	+ Root Cause: Utility power outage in the zone and failure of batteries within the UPS system
+	+ Downtime Period: March 29, 2025, 12:53 UTC - March 30, 2025, 19:12 UTC
+* Cloud Filestore
+	+ Region: us-east5-c
+	+ Availability Zone: Not specified
+	+ Impact Date: March 29, 2025, 12:53 UTC
+	+ Duration: 6 hours and 19 minutes
+	+ Root Cause: Utility power outage in the zone and failure of batteries within the UPS system
+	+ Downtime Period: March 29, 2025, 12:53 UTC - March 30, 2025, 19:12 UTC
+* Cloud Identity and Access Management
+	+ Region: us-east5-c
+	+ Availability Zone: Not specified
+	+ Impact Date: March 29, 2025, 12:53 UTC
+	+ Duration: 6 hours and 19 minutes
+	+ Root Cause: Utility power outage in the zone and failure of batteries within the UPS system
+	+ Downtime Period: March 29, 2025, 12:53 UTC - March 30, 2025, 19:12 UTC
+* Cloud Interconnect
+	+ Region: us-east5-c
+	+ Availability Zone: Not specified
+	+ Impact Date: March 29, 2025, 12:53 UTC
+	+ Duration: 6 hours and 19 minutes
+	+ Root Cause: Utility power outage in the zone and failure of batteries within the UPS system
+	+ Downtime Period: March 29, 2025, 12:53 UTC - March 30, 2025, 19:12 UTC
+* Cloud Kubernetes Engine
+	+ Region: us-east5-c
+	+ Availability Zone: Not specified
+	+ Impact Date: March 29, 2025, 12:53 UTC
+	+ Duration: 6 hours and 19 minutes
+	+ Root Cause: Utility power outage in the zone and failure of batteries within the UPS system
+	+ Downtime Period: March 29, 2025, 12:53 UTC - March 30, 2025, 19:12 UTC
+* Persistent Disk
+	+ Region: us-east5-c
+	+ Availability Zone: Not specified
+	+ Impact Date: March 29, 2025, 12:53 UTC
+	+ Duration: 6 hours and 19 minutes
+	+ Root Cause: Utility power outage in the zone and failure of batteries within the UPS system
+	+ Downtime Period: March 29, 2025, 12:53 UTC - March 30, 2025, 19:12 UTC
