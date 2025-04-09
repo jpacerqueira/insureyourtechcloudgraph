@@ -1,11 +1,8 @@
 import streamlit as st
 import psycopg2
-#from langchain.llms import Ollama
-from langchain_community.llms import Ollama
-#from langchain.vectorstores import FAISS
+from langchain_ollama import OllamaLLM
 from langchain_community.vectorstores import FAISS
 from langchain_ollama import OllamaEmbeddings
-#from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
 import os
@@ -58,7 +55,6 @@ def create_rag_chain():
     texts = text_splitter.split_text(metadata_text)
     
     # Create embeddings
-    #embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     base_url = os.getenv('OLLAMA_HOST', 'http://ollama_rag:11434')
     embeddings = OllamaEmbeddings(base_url=base_url, model="llama3.2")
     
@@ -66,7 +62,7 @@ def create_rag_chain():
     vectorstore = FAISS.from_texts(texts, embeddings)
     
     # Create LLM with base_url configuration
-    llm = Ollama(model="llama3.2", base_url=base_url)
+    llm = OllamaLLM(model="llama3.2", base_url=base_url)
     
     # Create RAG chain
     qa_chain = RetrievalQA.from_chain_type(
@@ -93,9 +89,9 @@ def main():
     if user_question:
         with st.spinner("Thinking..."):
             try:
-                response = st.session_state.qa_chain.run(user_question)
+                response = st.session_state.qa_chain.invoke({"query": user_question})
                 st.write("Answer:")
-                st.write(response)
+                st.write(response["result"])
             except Exception as e:
                 st.error(f"An error occurred: {str(e)}")
     
