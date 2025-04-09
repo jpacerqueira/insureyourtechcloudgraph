@@ -11,7 +11,10 @@ export OLLAMA_HOST=http://0.0.0.0:11434
 export LLM=llama3.2
 export DBFILE=./init.sql
 
-# Setup docker network
+# Setup docker images and network
+docker stop sql-metadata-rag postgres_rag_db || true
+docker rm sql-metadata-rag postgres_rag_db|| true 
+docker network rm rag-network || true
 docker network create rag-network || true
 
 # Run the setup_postgres.sh script
