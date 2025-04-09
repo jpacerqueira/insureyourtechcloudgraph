@@ -11,7 +11,7 @@ export POSTGRES_USER=postgres
 export POSTGRES_DB=cloud_risk_portal_rag_data
 export OLLAMA_HOST=http://ollama_rag:11434
 export LLM=llama3.2
-export DBFILE=./init.sql
+export DBFILE=./init_postgresql.sql
 
 if [ "$OPER" = "1" ]; then
     # Only manage sql-metadata-rag container

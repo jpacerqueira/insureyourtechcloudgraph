@@ -3,7 +3,7 @@
 # Check if required parameters are provided
 if [ "$#" -ne 3 ]; then
     echo "Usage: $0 <username> <password> <sql_script_path>"
-    echo "Example: $0 postgres mypassword ./init.sql"
+    echo "Example: $0 postgres mypassword ./init_postgresql.sql"
     exit 1
 fi
 
