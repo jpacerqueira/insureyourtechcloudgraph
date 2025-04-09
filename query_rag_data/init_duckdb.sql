@@ -28,21 +28,21 @@ CREATE TABLE IF NOT EXISTS cloud_resources (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Insert sample data
-INSERT INTO risk_assessments (id, assessment_name, cloud_provider, risk_score, status)
+-- Insert sample data only if it doesn't exist
+INSERT OR IGNORE INTO risk_assessments (id, assessment_name, cloud_provider, risk_score, status)
 VALUES 
     (1, 'AWS Production Assessment', 'AWS', 75.5, 'completed'),
     (2, 'Azure Development Assessment', 'Azure', 60.0, 'in_progress'),
     (3, 'Azure Production Assessment', 'Azure', 85.0, 'completed');
 
-INSERT INTO security_findings (id, risk_assessment_id, finding_name, severity, description, status)
+INSERT OR IGNORE INTO security_findings (id, risk_assessment_id, finding_name, severity, description, status)
 VALUES 
     (1, 1, 'Public S3 Bucket', 'High', 'S3 bucket is publicly accessible', 'open'),
     (2, 1, 'Unencrypted EBS Volume', 'Medium', 'EBS volume is not encrypted', 'open'),
     (3, 2, 'Unencrypted AzureFS Volume', 'Medium', 'AzureFS volume is not encrypted', 'open'),
     (4, 3, 'Public Azure Storage', 'High', 'Azure Storage account is publicly accessible', 'open');
 
-INSERT INTO cloud_resources (id, resource_name, resource_type, cloud_provider, region)
+INSERT OR IGNORE INTO cloud_resources (id, resource_name, resource_type, cloud_provider, region)
 VALUES 
     (1, 'prod-database', 'RDS', 'AWS', 'us-east-1'),
     (2, 'dev-storage', 'Blob Storage', 'Azure', 'eastus'),
