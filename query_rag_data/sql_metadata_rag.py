@@ -1,13 +1,13 @@
 import streamlit as st
 import psycopg2
+#from langchain.llms import Ollama
+from langchain_ollama import Ollama
 #from langchain.vectorstores import FAISS
 from langchain_community.vectorstores import FAISS
 from langchain_ollama import OllamaEmbeddings
-from langchain_huggingface import HuggingFaceEmbeddings
+#from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
-#from langchain.llms import Ollama
-from langchain_community.llms import Ollama
 import os
 from dotenv import load_dotenv
 
@@ -59,7 +59,7 @@ def create_rag_chain():
     
     # Create embeddings
     #embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-    base_url = os.getenv('OLLAMA_HOST', 'http://0.0.0.0:11434')
+    base_url = os.getenv('OLLAMA_HOST', 'http://ollama_rag:11434')
     embeddings = OllamaEmbeddings(base_url=base_url, model="llama3.2")
     
     # Create vector store

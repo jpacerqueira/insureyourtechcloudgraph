@@ -8,11 +8,6 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Ollama
-#RUN curl -fsSL https://ollama.com/install.sh | sh
-#COPY install_ollama.sh /app/install_ollama.sh
-#RUN sh install_ollama.sh
-
 # Copy requirements and install Python dependencies
 COPY sql_rag_requirements.txt .
 RUN pip install --no-cache-dir -r sql_rag_requirements.txt
@@ -21,21 +16,11 @@ RUN pip install --no-cache-dir -r sql_rag_requirements.txt
 COPY . .
 COPY .env .
 
-# Pull and run the Llama 3.2 model
-#COPY run-ollama_llm.sh /app/run-ollama_llm.sh
-#RUN chmod +x run-ollama_llm.sh
-#EXPOSE 11434
-#RUN chmod +x run-ollama_llm.sh && ./run-ollama_llm.sh && sleep 5
-
-# Expose the Streamlit port =8507
+# Expose the Streamlit port
 EXPOSE 8507
 
 # Set environment variables
 ENV PYTHONPATH=/app
-
-# Start Ollama service and run the Streamlit app
-#CMD service ollama start && streamlit run sql_metadata_rag.py
-#CMD streamlit run sql_metadata_rag.py
 
 HEALTHCHECK CMD curl --fail http://localhost:8507/_stcore/health
 

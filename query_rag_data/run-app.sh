@@ -6,23 +6,38 @@ export POSTGRES_HOST=postgres_rag_db
 export POSTGRES_PORT=5432
 export POSTGRES_USER=postgres
 export POSTGRES_DB=cloud_risk_portal_rag_data
-#export OLLAMA_HOST=http://ollama:11434
-export OLLAMA_HOST=http://0.0.0.0:11434
+export OLLAMA_HOST=http://ollama_rag:11434
 export LLM=llama3.2
 export DBFILE=./init.sql
 
 # Setup docker images and network
-docker stop sql-metadata-rag postgres_rag_db || true
-docker rm sql-metadata-rag postgres_rag_db|| true 
+docker stop sql-metadata-rag ollama_rag postgres_rag_db || true
+docker rm sql-metadata-rag ollama_rag postgres_rag_db || true
 docker network rm rag-network || true
 docker network create rag-network || true
+
+# Start Ollama container
+echo "Starting Ollama container..."
+docker run -d \
+    --name ollama_rag \
+    -p 11434:11434 \
+    --network rag-network \
+    ollama/ollama:0.5.0-rc1-rocm
+
+# Wait for Ollama to be ready
+echo "Waiting for Ollama to start..."
+sleep 10
+
+# Pull the required model
+echo "Pulling LLM model..."
+docker exec ollama_rag ollama pull $LLM
 
 # Run the setup_postgres.sh script
 ./setup_postgres.sh $POSTGRES_USER $POSTGRES_PASSWORD $DBFILE
 
 # Build the Docker image
 echo "Building Docker image..."
-docker build -t sql-metadata-rag -f querydata.Docker .
+docker build -t sql-metadata-rag -f query_rag_data.Docker .
 
 # Check if the build was successful
 if [ $? -ne 0 ]; then
@@ -55,4 +70,4 @@ echo "Streamlit app is running at http://localhost:8507"
 
 # Show container logs
 echo "Showing container logs..."
-docker logs -f sql-metadata-rag 
+docker logs -f sql-metadata-rag

@@ -19,7 +19,8 @@ if [ ! -f "$SQL_SCRIPT" ]; then
 fi
 
 # Create a Docker volume for persistent data
-docker volume create postgres_rag_data
+docker volume rm postgres_rag_data || true
+docker volume create postgres_rag_data || true
 
 # Run PostgreSQL container
 docker run -d \
