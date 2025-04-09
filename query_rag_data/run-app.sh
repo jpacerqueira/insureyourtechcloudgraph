@@ -9,6 +9,10 @@ export POSTGRES_DB=cloud_risk_portal
 #export OLLAMA_HOST=http://ollama:11434
 export OLLAMA_HOST=http://0.0.0.0:11434
 export LLM=llama3.2
+export DBFILE=./init.sql
+
+# Run the setup_postgres.sh script
+./setup_postgres.sh $POSTGRES_USER $POSTGRES_PASSWORD $DBFILE
 
 # Build the Docker image
 echo "Building Docker image..."
