@@ -11,6 +11,9 @@ export OLLAMA_HOST=http://0.0.0.0:11434
 export LLM=llama3.2
 export DBFILE=./init.sql
 
+# Setup docker network
+docker network create rag-network
+
 # Run the setup_postgres.sh script
 ./setup_postgres.sh $POSTGRES_USER $POSTGRES_PASSWORD $DBFILE
 
@@ -35,6 +38,7 @@ docker run -d \
     -e POSTGRES_USER=$POSTGRES_USER \
     -e POSTGRES_DB=$POSTGRES_DB \
     -e OLLAMA_HOST=$OLLAMA_HOST \
+    --network rag-network \
     sql-metadata-rag
 
 # Check if the container started successfully

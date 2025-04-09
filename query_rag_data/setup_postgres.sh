@@ -30,6 +30,7 @@ docker run -d \
     -v postgres_rag_data:/var/lib/postgresql/data \
     -v "$(pwd)/$SQL_SCRIPT:/docker-entrypoint-initdb.d/init.sql" \
     -p 5432:5432 \
+    --network rag-network \
     postgres:16.4
 
 # Wait for PostgreSQL to be ready
