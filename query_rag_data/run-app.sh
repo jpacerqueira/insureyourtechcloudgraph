@@ -79,7 +79,12 @@ else
     docker exec ollama_rag ollama pull $LLM
     
     # Run the setup_postgres.sh script
+    echo "setup prostgresql"
     ./setup_postgres.sh $POSTGRES_USER $POSTGRES_PASSWORD $DBFILE
+    echo "setup duckdb"
+    ./setup_duckdb.sh
+    echi "setup trino"
+    ./setup_trino.sh
     
     # Build the Docker image
     echo "Building Docker image..."
