@@ -41,6 +41,7 @@ if [ "$OPER" = "1" ]; then
         -e POSTGRES_DB=$POSTGRES_DB \
         -e OLLAMA_HOST=$OLLAMA_HOST \
         --network rag-network \
+        --volume ./duckdb_data:/app/duckdb_data \
         sql-metadata-rag
     
     if [ $? -ne 0 ]; then
@@ -107,6 +108,7 @@ else
         -e POSTGRES_DB=$POSTGRES_DB \
         -e OLLAMA_HOST=$OLLAMA_HOST \
         --network rag-network \
+        --volume ./duckdb_data:/app/duckdb_data \
         sql-metadata-rag
     
     if [ $? -ne 0 ]; then
