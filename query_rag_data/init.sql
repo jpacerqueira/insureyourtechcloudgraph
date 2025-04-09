@@ -42,15 +42,20 @@ CREATE INDEX IF NOT EXISTS idx_cloud_resources_type ON cloud_risk_portal_rag_dat
 INSERT INTO cloud_risk_portal_rag_data.risk_assessments (assessment_name, cloud_provider, risk_score, status)
 VALUES 
     ('AWS Production Assessment', 'AWS', 75.5, 'completed'),
-    ('Azure Development Assessment', 'Azure', 60.0, 'in_progress');
+    ('Azure Development Assessment', 'Azure', 60.0, 'in_progress'),
+    ('Azure Production Assessment', 'Azure', 85.0, 'completed');
 
+-- Insert security findings with valid risk_assessment_id references
 INSERT INTO cloud_risk_portal_rag_data.security_findings (risk_assessment_id, finding_name, severity, description, status)
 VALUES 
     (1, 'Public S3 Bucket', 'High', 'S3 bucket is publicly accessible', 'open'),
-    (2, 'Unencrypted EBS Volume', 'Medium', 'EBS volume is not encrypted', 'open'),
-    (3, 'Unencrypted AzureFS Volume', 'Small', 'AzureFS volume is not encrypted', 'open');
+    (1, 'Unencrypted EBS Volume', 'Medium', 'EBS volume is not encrypted', 'open'),
+    (2, 'Unencrypted AzureFS Volume', 'Medium', 'AzureFS volume is not encrypted', 'open'),
+    (3, 'Public Azure Storage', 'High', 'Azure Storage account is publicly accessible', 'open');
 
+-- Insert cloud resources
 INSERT INTO cloud_risk_portal_rag_data.cloud_resources (resource_name, resource_type, cloud_provider, region)
 VALUES 
     ('prod-database', 'RDS', 'AWS', 'us-east-1'),
-    ('dev-storage', 'Blob Storage', 'Azure', 'eastus'); 
+    ('dev-storage', 'Blob Storage', 'Azure', 'eastus'),
+    ('prod-storage', 'Blob Storage', 'Azure', 'eastus'); 
