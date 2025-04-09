@@ -19,15 +19,15 @@ if [ ! -f "$SQL_SCRIPT" ]; then
 fi
 
 # Create a Docker volume for persistent data
-docker volume create postgres_data
+docker volume create postgres_rag_data
 
 # Run PostgreSQL container
 docker run -d \
-    --name postgres_db \
+    --name postgres_rag_db \
     -e POSTGRES_USER="$DB_USER" \
     -e POSTGRES_PASSWORD="$DB_PASSWORD" \
-    -e POSTGRES_DB="cloud_risk_portal" \
-    -v postgres_data:/var/lib/postgresql/data \
+    -e POSTGRES_DB="cloud_risk_portal_rag_data" \
+    -v postgres_rag_data:/var/lib/postgresql/data \
     -v "$(pwd)/$SQL_SCRIPT:/docker-entrypoint-initdb.d/init.sql" \
     -p 5432:5432 \
     postgres:16.4
@@ -42,7 +42,7 @@ if [ "$(docker ps -q -f name=postgres_db)" ]; then
     echo "Connection details:"
     echo "Host: localhost"
     echo "Port: 5432"
-    echo "Database: cloud_risk_portal"
+    echo "Database: cloud_risk_portal_rag_data"
     echo "Username: $DB_USER"
     echo "Password: $DB_PASSWORD"
 else

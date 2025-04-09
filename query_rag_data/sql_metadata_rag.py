@@ -16,7 +16,7 @@ load_dotenv()
 
 # Database connection parameters
 DB_PARAMS = {
-    'dbname': 'cloud_risk_portal',
+    'dbname': 'cloud_risk_portal_rag_data',
     'user': 'postgres',
     'password': os.getenv('POSTGRES_PASSWORD', 'password'),
     'host': os.getenv('POSTGRES_HOST', '0.0.0.0'),
@@ -88,7 +88,7 @@ def main():
     
     # User input
     user_question = st.text_input("Ask a question about the database schema:", 
-                                 placeholder="e.g., What tables are in the cloud_risk_portal schema?")
+                                 placeholder="e.g., What tables are in the cloud_risk_portal_rag_data schema?")
     
     if user_question:
         with st.spinner("Thinking..."):
