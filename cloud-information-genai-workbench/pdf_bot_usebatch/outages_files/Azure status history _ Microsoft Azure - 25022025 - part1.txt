@@ -1,0 +1,95 @@
+Based on the provided text, I have identified the following public cloud services that were impacted:
+
+**Microsoft Azure**
+
+* Service: DNS
+* Region: Global (no specific region mentioned)
+* Availability Zone: Global (no specific availability zone mentioned)
+* Impact Date: 2025-02-25 16:42 UTC
+* Duration: 1 hour and 33 minutes
+* Root Cause: Inadvertent removal of an intermediate DNS record and associated traffic manager used in the scenario.
+* Downtime Period: 1 hour and 33 minutes
+* Resolved Date: 2025-02-25 18:15 UTC
+
+**Microsoft Azure**
+
+* Service: Entra ID
+* Region: Global (no specific region mentioned)
+* Availability Zone: Global (no specific availability zone mentioned)
+* Impact Date: 2025-02-25 16:42 UTC
+* Duration: 1 hour and 33 minutes
+* Root Cause: DNS resolution failures when trying to access select Entra ID endpoints related to hybrid identity scenarios.
+* Downtime Period: 1 hour and 33 minutes
+* Resolved Date: 2025-02-25 18:15 UTC
+
+**Microsoft Azure**
+
+* Service: App Service
+* Region: Global (no specific region mentioned)
+* Availability Zone: Global (no specific availability zone mentioned)
+* Impact Date: 2025-02-25 17:40 UTC
+* Duration: 1 hour and 35 minutes
+* Root Cause: Identified and isolated the change that introduced the failure.
+* Downtime Period: 1 hour and 35 minutes
+* Resolved Date: 2025-02-25 18:75 UTC
+
+**Microsoft Azure**
+
+* Service: Status Page Banner
+* Region: Global (no specific region mentioned)
+* Availability Zone: Global (no specific availability zone mentioned)
+* Impact Date: 2025-02-25 19:16 UTC
+* Duration: 1 hour and 19 minutes
+* Root Cause: First notification posted to Azure Status page banner.
+* Downtime Period: 1 hour and 19 minutes
+* Resolved Date: 2025-02-25 20:35 UTC
+
+**Microsoft Azure**
+
+* Service: Hybrid Identity Connect
+* Region: Global (no specific region mentioned)
+* Availability Zone: Global (no specific availability zone mentioned)
+* Impact Date: 2025-02-25 22:35 UTC
+* Duration: 1 hour and 55 minutes
+* Root Cause: Subset of affected tenants still experiencing issues, manifesting as 403 Forbidden errors or timeouts.
+* Downtime Period: 2 hours and 50 minutes
+* Resolved Date: 2025-02-26 01:15 UTC
+
+**Microsoft Azure**
+
+* Service: Entra ID (again)
+* Region: Global (no specific region mentioned)
+* Availability Zone: Global (no specific availability zone mentioned)
+* Impact Date: 2025-02-25 22:35 UTC
+* Duration: 1 hour and 55 minutes
+* Root Cause: Subset of affected tenants still experiencing issues, manifesting as 403 Forbidden errors or timeouts.
+* Downtime Period: 2 hours and 50 minutes
+* Resolved Date: 2025-02-26 01:15 UTC
+
+**Summary**
+
+Cloud Provider: Microsoft Azure
+Services Impacted: DNS, Entra ID, App Service, Status Page Banner, Hybrid Identity Connect
+Regions Impacted: Global
+Availability Zones Impacted: Global
+Impact Dates: 2025-02-25
+Duration: 1 hour and 55 minutes (total)
+Root Cause: Inadvertent removal of an intermediate DNS record and associated traffic manager used in the scenario.
+Downtime Period: 2 hours and 50 minutes (total)
+
+**Overall Summary**
+
+The outage was caused by an incident involving Microsoft Azure services, including DNS, Entra ID, App Service, Status Page Banner, and Hybrid Identity Connect. The outage lasted for approximately 1 hour and 55 minutes, affecting a subset of affected tenants who experienced issues with authentication and authorization. The root cause of the outage was the inadvertent removal of an intermediate DNS record and associated traffic manager used in the scenario.
+
+**Output Table**
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Microsoft Azure | DNS | global | global | 2025-02-25 16:42 UTC | 1 hour and 33 minutes | Inadvertent removal of an intermediate DNS record and associated traffic manager used in the scenario. | 1 hour and 33 minutes | 2025-02-25 18:15 UTC |
+| Microsoft Azure | Entra ID | global | global | 2025-02-25 16:42 UTC | 1 hour and 33 minutes | DNS resolution failures when trying to access select Entra ID endpoints related to hybrid identity scenarios. | 1 hour and 33 minutes | 2025-02-25 18:15 UTC |
+| Microsoft Azure | App Service | global | global | 2025-02-25 17:40 UTC | 1 hour and 35 minutes | Identified and isolated the change that introduced the failure. | 1 hour and 35 minutes | 2025-02-25 18:75 UTC |
+| Microsoft Azure | Status Page Banner | global | global | 2025-02-25 19:16 UTC | 1 hour and 19 minutes | First notification posted to Azure Status page banner. | 1 hour and 19 minutes | 2025-02-25 20:35 UTC |
+| Microsoft Azure | Hybrid Identity Connect | global | global | 2025-02-25 22:35 UTC | 2 hours and 50 minutes | Subset of affected tenants still experiencing issues, manifesting as 403 Forbidden errors or timeouts. | 2 hours and 50 minutes | 2025-02-26 01:15 UTC |
+| Microsoft Azure | Entra ID (again) | global | global | 2025-02-25 22:35 UTC | 2 hours and 50 minutes | Subset of affected tenants still experiencing issues, manifesting as 403 Forbidden errors or timeouts. | 2 hours and 50 minutes | 2025-02-26 01:15 UTC |
+
+Note that the output table only includes services impacted by Microsoft Azure, as per the original text.
