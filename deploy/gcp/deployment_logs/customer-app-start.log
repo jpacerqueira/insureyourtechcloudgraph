@@ -29,14 +29,6 @@ Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_ap
 [33mcustomer_graph_1       |[0m 2025-03-31 12:51:58.767+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
 [33mcustomer_graph_1       |[0m 2025-04-08 13:30:44.775+0000 INFO  Network abort rate has normalized
 [33mcustomer_graph_1       |[0m 2025-04-08 13:30:44.778+0000 ERROR Increase in network aborts detected (more than 2 network related connection aborts over a period of 600000 ms) - This may indicate an issue with the network environment or an overload condition
-[32mcustomer_portal_app_1  |[0m 
-[32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
-[32mcustomer_portal_app_1  |[0m 
-[32mcustomer_portal_app_1  |[0m 
-[32mcustomer_portal_app_1  |[0m   You can now view your Streamlit app in your browser.
-[32mcustomer_portal_app_1  |[0m 
-[32mcustomer_portal_app_1  |[0m   URL: http://0.0.0.0:8185
-[32mcustomer_portal_app_1  |[0m 
 [36mcloud-risk-portal      |[0m 
 [36mcloud-risk-portal      |[0m > cloud-risk-portal@1.0.0 start
 [36mcloud-risk-portal      |[0m > node server.js
@@ -298,6 +290,14 @@ Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_ap
 [36mcloud-risk-portal      |[0m Session_id not found in the database - creating new submission
 [36mcloud-risk-portal      |[0m neo4j save - sessionId: 945e2c9ce02faefee6d5d7f4734fd44b
 [36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
+[32mcustomer_portal_app_1  |[0m 
+[32mcustomer_portal_app_1  |[0m Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+[32mcustomer_portal_app_1  |[0m 
+[32mcustomer_portal_app_1  |[0m 
+[32mcustomer_portal_app_1  |[0m   You can now view your Streamlit app in your browser.
+[32mcustomer_portal_app_1  |[0m 
+[32mcustomer_portal_app_1  |[0m   URL: http://0.0.0.0:8185
+[32mcustomer_portal_app_1  |[0m 
 [36mcloud-risk-portal      |[0m Neo4j query executed successfully
 [36mcloud-risk-portal      |[0m neo4j save - sessionId: 945e2c9ce02faefee6d5d7f4734fd44b
 [36mcloud-risk-portal      |[0m Previous Neo4j data deleted successfully
@@ -869,3 +869,19 @@ Attaching to cloud-risk-portal, cloudrisk-customer_portal_app_customer_portal_ap
 [36mcloud-risk-portal      |[0m simulation - sessionID: 651fbdcc935c77f69cf0c488f51a298d
 [36mcloud-risk-portal      |[0m simulation - sessionID: a25ccdb2b06ba4f9052064609c620509
 [36mcloud-risk-portal      |[0m simulation - sessionID: 8ae8a099d280957aad4cf65e846be70a
+[36mcloud-risk-portal      |[0m simulation - sessionID: aa8e41827750a0c9aa8d6eaed853aafd
+[36mcloud-risk-portal      |[0m simulation - sessionID: 8892c946b9dd8a497766ecaba0975b35
+[36mcloud-risk-portal      |[0m simulation - sessionID: e35df80f10e98418162fe3429d11199b
+[36mcloud-risk-portal      |[0m simulation - sessionID: 3d4ce1d3925756cd989ac006f0d0a415
+[36mcloud-risk-portal      |[0m simulation - sessionID: e20644fd484896df4d412a9308a789c5
+[36mcloud-risk-portal      |[0m customer-portal - sessionID: 6133e39327179184498b35ccbf251e6a
+[36mcloud-risk-portal      |[0m simulation - sessionID: 1a976b6bd1ed60a9cb698d490e636ab7
+[36mcloud-risk-portal      |[0m simulation - sessionID: 288542da910085b6ce6cad2a7363fafe
+[36mcloud-risk-portal      |[0m simulation - sessionID: 861aa8a962e52299965fa44a32d0d4cd
+[36mcloud-risk-portal      |[0m simulation - sessionID: b648d79e77ab54080987f26850ef3042
+[36mcloud-risk-portal      |[0m simulation - sessionID: afec9a3e28b326b71120ed31d34daf85
+[36mcloud-risk-portal      |[0m simulation - sessionID: 05a6b134f52cbb23f3884dd02ef334af
+[36mcloud-risk-portal      |[0m simulation - sessionID: 00b2443d4e58b3bfc8d06844ff20fd5d
+[36mcloud-risk-portal      |[0m simulation - sessionID: 18afeecbf890ca0d792ea5b5a0cc8a4a
+[36mcloud-risk-portal      |[0m simulation - sessionID: 0ae6564cc7193f4cd5216776d6c925d4
+[36mcloud-risk-portal      |[0m customer-portal - sessionID: 97fd6563d6a0c26c16b797d6c8971700

@@ -1,0 +1,50 @@
+The outage affected Google Cloud Platform (GCP) services.
+
+Here is the breakdown of the outage per service impacted:
+
+**Google Cloud Platform**
+
+* Service: Vertex AI Search
+* Region: Multi-region
+* Availability Zone:
+	+ Not specified
+* Impact Date: 2025-02-16 04:48 UTC
+* Duration: 1 hour and 21 minutes (01:21)
+* Root Cause: Not specified
+* Downtime Period: 07:49 UTC - 08:10 UTC (01 hour and 21 minutes)
+* Resolved Date: 2025-02-16 07:21 UTC
+
+**Google Cloud Platform**
+
+* Service: Recommendation AI
+* Region: Multi-region
+* Availability Zone:
+	+ Not specified
+* Impact Date: 2025-02-16 04:48 UTC
+* Duration: 1 hour and 21 minutes (01:21)
+* Root Cause: Not specified
+* Downtime Period: 07:49 UTC - 08:10 UTC (01 hour and 21 minutes)
+* Resolved Date: 2025-02-16 07:21 UTC
+
+Here is the summary of the outage:
+
+**Summary**
+
+* Cloud Providers impacted: Google Cloud Platform
+* Services impacted: Vertex AI Search, Recommendation AI
+* Regions impacted: Multi-region
+* Availability Zones impacted: Not specified
+* Impact Dates: 2025-02-16 04:48 UTC
+* Duration: 1 hour and 21 minutes (01:21)
+* Root Cause: Not specified
+* Downtime Period: 07:49 UTC - 08:10 UTC (01 hour and 21 minutes)
+* Resolved Date: 2025-02-16 07:21 UTC
+
+Here is the output table:
+
+| Cloud Provider | Service | Region | Availability Zone | Impact Date | Duration | Root Cause | Downtime Period | Resolved Date |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Google Cloud Platform | Vertex AI Search | multi-region |  | 2025-02-16 04:48 UTC | 1 hour and 21 minutes |  | 07:49 UTC - 08:10 UTC | 2025-02-16 07:21 UTC |
+| Google Cloud Platform | Recommendation AI | multi-region |  | 2025-02-16 04:48 UTC | 1 hour and 21 minutes |  | 07:49 UTC - 08:10 UTC | 2025-02-16 07:21 UTC |
+
+Note: The output table has been formatted with the specified variables, one per line.
